@@ -11,7 +11,7 @@ const TheFooter = () => {
   }, []);
 
   return (
-    <footer className="px-[5%] py-[20px] w-full h-[100px] bg-[#00293a] border-t-[1px] border-[#ffffff]">
+    <footer className="px-[5%] py-[20px] w-full h-[100px] bg-[#00293a] border-t-[1px] border-[#2cc384]">
       <div className="grid justify-items-center grid-rows-2 grid-cols-1">
         <span className="flex items-center w-auto text-[#5a7f8f] text-[1.25rem] font-['Insignia'] font-medium">
           <p>The rights to the HELLDIVERS2 game belong to</p>
