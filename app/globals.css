@@ -7,6 +7,11 @@
   src: url('./fonts/Insignia Regular.otf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Exo2';
+  src: url('./fonts/Exo2-VariableFont_wght.ttf') format('truetype');
+}
+
 * {
   margin: 0;
   padding: 0;

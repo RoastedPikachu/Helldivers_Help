@@ -4,15 +4,33 @@ import Link from "next/link";
 
 const TheHeader = () => {
   return (
-    <header className="flex items-center px-[5%] w-full h-[65px]">
-      <img src="/static/SkullIcon.svg" alt="" className="w-[40px] h-[40px]" />
+    <header className="relative flex justify-between items-center px-[5%] w-full h-[65px]">
+      <div className="flex items-center h-full">
+        <img src="/static/SkullIcon.svg" alt="" className="w-[40px] h-[40px]" />
 
-      <Link
-        href="/"
-        className="ml-[10px] text-[#ffffff] text-[2rem] font-['Insignia'] font-bold"
-      >
-        HELLDIVERS <b className="text-[#2cc384]">help</b>
-      </Link>
+        <Link
+          href="/"
+          className="ml-[10px] text-[#ffffff] text-[2rem] font-['Insignia'] font-bold"
+        >
+          HELLDIVERS <b className="text-[#2cc384]">help</b>
+        </Link>
+      </div>
+
+      <nav className="flex justify-between w-[20%]">
+        <Link
+          href="/war"
+          className="text-[#ffffff] text-[1.375rem] font-['Exo2'] font-bold"
+        >
+          ВОЙНА
+        </Link>
+
+        <Link
+          href="/manual"
+          className="text-[#ffffff] text-[1.375rem] font-['Exo2'] font-bold"
+        >
+          СПРАВОЧНИК
+        </Link>
+      </nav>
     </header>
   );
 };

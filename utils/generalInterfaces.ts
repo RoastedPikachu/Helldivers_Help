@@ -8,6 +8,7 @@ export interface Quote {
 export interface Stratagem {
   id: number;
   name: string;
+  image: string;
   keyCodes: number[];
   directions: number[];
 }

@@ -1,11 +1,12 @@
-import { Quote } from "@/utils/generalInterfaces";
+export function getRandomEntity<T extends { id: number }>(
+  quotes: T[],
+  currentEntity: T,
+): T {
+  let nextEntity = quotes[Math.floor(Math.random() * quotes.length)];
 
-export function getRandomQuote(quotes: Quote[], currentQuote: Quote): Quote {
-  let nextQuote = quotes[Math.floor(Math.random() * quotes.length)];
-
-  while (nextQuote.id === currentQuote.id) {
-    nextQuote = quotes[Math.floor(Math.random() * quotes.length)];
+  while (nextEntity.id === currentEntity.id) {
+    nextEntity = quotes[Math.floor(Math.random() * quotes.length)];
   }
 
-  return nextQuote;
+  return nextEntity;
 }
