@@ -6,9 +6,8 @@ import { getRandomEntity } from "@/utils/generalFunctions";
 
 import { quotes, stratagems } from "@/improvised_db";
 
-import TheHeader from "@/shared/TheHeader";
-import TheFooter from "@/shared/TheFooter";
-import { next } from "sucrase/dist/types/parser/tokenizer";
+import TheHeader from "@/widgets/TheHeader";
+import TheFooter from "@/widgets/TheFooter";
 
 export default function Home() {
   const [currentQuote, setCurrentQuote] = useState({} as Quote);
@@ -42,27 +41,28 @@ export default function Home() {
   const handleKeyPress = (() => {
     let currentIndex = 0;
 
-    const checkKeySequence = () => {
-      currentIndex = 0;
-    };
-
     return (event: any) => {
-      if (event.shiftKey) {
-        const targetKey = currentStratagem.keyCodes[currentIndex];
+      const targetKey = currentStratagem.keyCodes[currentIndex];
 
-        if (event.keyCode === targetKey) {
-          currentIndex++;
+      if (event.keyCode === targetKey) {
+        currentStratagem.directions[currentIndex].isPressed = true;
 
-          if (currentIndex === currentStratagem.keyCodes.length) {
-            checkKeySequence();
-          }
-        } else {
-          console.log("Incorrect key press. Restarting sequence.");
-          changeIsStratagemInputFail(true);
+        setCurrentStratagem({
+          ...currentStratagem,
+        });
+
+        currentIndex++;
+
+        if (currentIndex === currentStratagem.keyCodes.length) {
+          changeIsStratagemInputSuccessful(true);
         }
+      } else {
+        changeIsStratagemInputFail(true);
       }
     };
   })();
+
+  // TODO: Изменить логику создания и удаления event handler-a
 
   const handleStratagemTrainingStart = () => {
     changeIsStratagemTrainingStarted(true);
@@ -70,7 +70,12 @@ export default function Home() {
     document.addEventListener("keydown", handleKeyPress);
   };
 
+  // TODO: Пофиксить багу с 2 и далее вводом стратагемы
+
   const handleStratagemTrainingRestart = () => {
+    changeIsStratagemInputFail(false);
+    changeIsStratagemInputSuccessful(false);
+
     setCurrentStratagem(nextStratagem);
     setNextStratagem(getRandomEntity(stratagems, currentStratagem));
   };
@@ -123,17 +128,26 @@ export default function Home() {
 
             <div className="relative grid justify-items-center ml-[50px] w-[900px] h-auto">
               <div
-                className={`flex justify-center w-full bg-[#00293a] ${
-                  isStratagemInputFail ? "border-2 border-[#f44336]" : ""
+                className={`flex justify-center w-full h-[150px] bg-[#00293a] ${
+                  isStratagemInputFail
+                    ? "border-4 border-[#f44336]"
+                    : isStratagemInputSuccessful
+                    ? "border-4 border-[#66bb6a]"
+                    : ""
                 } rounded-[10px]`}
               >
                 <div className="relative flex items-center pl-[50px] pr-[10px] w-auto h-[150px]">
                   {currentStratagem.directions?.map((direction) => (
                     <img
-                      src="/static/ArrowIcon.svg"
+                      src={`${
+                        direction.isPressed
+                          ? "/static/generalIcons/PressedArrowIcon.svg"
+                          : "/static/generalIcons/ArrowIcon.svg"
+                      }`}
                       alt=""
+                      key={direction.id}
                       className={`mr-[40px] w-[65px] h-[60px] ${getTargetRotate(
-                        direction,
+                        direction.orientation,
                       )}`}
                     />
                   ))}
@@ -143,10 +157,11 @@ export default function Home() {
               <div className="relative flex items-center mt-[50px] pl-[50px] pr-[10px] w-auto h-[110px] bg-[#00293a] rounded-[10px] brightness-[0.25]">
                 {nextStratagem.directions?.map((direction) => (
                   <img
-                    src="/static/ArrowIcon.svg"
+                    src="/static/generalIcons/ArrowIcon.svg"
                     alt=""
+                    key={direction.id}
                     className={`mr-[40px] w-[55px] h-[50px] ${getTargetRotate(
-                      direction,
+                      direction.orientation,
                     )}`}
                   />
                 ))}
@@ -155,11 +170,11 @@ export default function Home() {
 
             {!isStratagemTrainingStarted ? (
               <button
-                onClick={() => handleStratagemTrainingStart}
+                onClick={handleStratagemTrainingStart}
                 className="flex justify-center items-center ml-[50px] w-[150px] h-[150px] bg-[#2cc384] rounded-[10px] outline-none"
               >
                 <img
-                  src="/static/StartIcon.svg"
+                  src="/static/generalIcons/StartIcon.svg"
                   alt=""
                   className="w-[75px] h-[75px]"
                 />
@@ -170,7 +185,7 @@ export default function Home() {
                 className="flex justify-center items-center ml-[50px] w-[150px] h-[150px] bg-[#2cc384] rounded-[10px] outline-none"
               >
                 <img
-                  src="/static/RestartIcon.svg"
+                  src="/static/generalIcons/RestartIcon.svg"
                   alt=""
                   className="w-[100px] h-[100px]"
                 />

@@ -1,14 +1,14 @@
 import React from "react";
 
-import TheHeader from "@/shared/TheHeader";
-import TheFooter from "@/shared/TheFooter";
+import TheHeader from "@/widgets/TheHeader";
+import TheFooter from "@/widgets/TheFooter";
 
 const Page = () => {
   return (
     <>
       <TheHeader />
 
-      <main className="w-full h-[850px]"></main>
+      <main className="w-full h-[calc(100vh-165px)]"></main>
 
       <TheFooter />
     </>
