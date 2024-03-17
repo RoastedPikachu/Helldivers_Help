@@ -38,31 +38,44 @@ export default function Home() {
     return rotationAngle;
   };
 
+  // TODO: Изменить логику сохранения изменений в стратагемах
+
   const handleKeyPress = (() => {
     let currentIndex = 0;
 
     return (event: any) => {
-      const targetKey = currentStratagem.keyCodes[currentIndex];
+      setCurrentStratagem((prevStratagem) => {
+        const targetKey = prevStratagem.keyCodes[currentIndex];
 
-      if (event.keyCode === targetKey) {
-        currentStratagem.directions[currentIndex].isPressed = true;
+        if (event.keyCode === targetKey) {
+          const updatedDirections = [...prevStratagem.directions];
+          updatedDirections[currentIndex].isPressed = true;
 
-        setCurrentStratagem({
-          ...currentStratagem,
-        });
+          currentIndex++;
 
-        currentIndex++;
+          if (currentIndex === prevStratagem.keyCodes.length) {
+            document.removeEventListener("keydown", handleKeyPress);
 
-        if (currentIndex === currentStratagem.keyCodes.length) {
-          changeIsStratagemInputSuccessful(true);
+            currentIndex = 0;
+
+            changeIsStratagemInputSuccessful(true);
+          }
+
+          return {
+            ...prevStratagem,
+            directions: updatedDirections,
+          };
         }
-      } else {
+        document.removeEventListener("keydown", handleKeyPress);
+
+        currentIndex = 0;
+
         changeIsStratagemInputFail(true);
-      }
+
+        return prevStratagem;
+      });
     };
   })();
-
-  // TODO: Изменить логику создания и удаления event handler-a
 
   const handleStratagemTrainingStart = () => {
     changeIsStratagemTrainingStarted(true);
@@ -70,14 +83,13 @@ export default function Home() {
     document.addEventListener("keydown", handleKeyPress);
   };
 
-  // TODO: Пофиксить багу с 2 и далее вводом стратагемы
-
   const handleStratagemTrainingRestart = () => {
     changeIsStratagemInputFail(false);
     changeIsStratagemInputSuccessful(false);
-
     setCurrentStratagem(nextStratagem);
     setNextStratagem(getRandomEntity(stratagems, currentStratagem));
+
+    document.addEventListener("keydown", handleKeyPress);
   };
 
   useEffect(() => {
