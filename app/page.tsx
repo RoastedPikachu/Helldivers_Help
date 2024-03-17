@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
+import Marquee from "react-fast-marquee";
+
 import { Quote, Stratagem } from "@/utils/generalInterfaces";
 import { getRandomEntity } from "@/utils/generalFunctions";
 
@@ -103,16 +105,13 @@ export default function Home() {
       <TheHeader />
 
       <main className="w-full h-[calc(100vh-165px)]">
-        <marquee
-          behavior="scroll"
+        <Marquee
           direction="left"
-          width="100%"
-          height="65"
-          bgcolor="#00293a"
-          className="flex items-center border-y-[1px] border-[#2cc384] text-[#2cc384] text-[1.75rem] font-['Exo2'] font-medium"
+          pauseOnHover={true}
+          className="flex items-center w-full h-[65px] border-y-[1px] bg-[#00293a] border-[#2cc384] text-[#2cc384] text-[1.75rem] font-['Exo2'] font-medium"
         >
           {currentQuote.text}
-        </marquee>
+        </Marquee>
 
         <section className="grid justify-items-center relative mt-[30px] w-full h-auto">
           <h2 className="text-[#ffffff] text-[2.5rem] text-center font-['Exo2'] font-bold">
