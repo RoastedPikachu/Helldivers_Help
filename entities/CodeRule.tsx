@@ -13,7 +13,7 @@ const CodeRule: React.FC<CodeRuleProps> = ({ id, text }) => {
         {id}.
       </p>
 
-      <p className="mt-[15px] text-[#ffffff] text-[1.375rem] font-['Exo2' font-medium]">
+      <p className="mt-[15px] text-[#ffffff] text-[1.375rem] font-['Exo2'] font-medium">
         {text}.
       </p>
     </div>

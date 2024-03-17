@@ -2,7 +2,8 @@ import React from "react";
 
 import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
-import CodeRule from "@/shared/CodeRule";
+
+import CodeRule from "@/entities/CodeRule";
 
 const Page = () => {
   const codeRules = [
@@ -41,7 +42,7 @@ const Page = () => {
     <>
       <TheHeader />
 
-      <main className="mt-[65px] px-[5%] pb-[65px] w-full h-auto">
+      <main className="mt-[65px] pb-[65px] px-[5%] w-full h-auto">
         <h2 className="text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold">
           КОДЕКС <b className="text-[#2cc388] font-bold">АДСКОГО ДЕСАНТНИКА</b>
         </h2>
