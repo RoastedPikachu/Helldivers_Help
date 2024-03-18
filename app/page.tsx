@@ -54,7 +54,7 @@ export default function Home() {
           {currentQuote.text}
         </marquee>
 
-        <section className="grid justify-items-center grid-rows-8 grid-cols-1 relative mt-[50px] w-full h-[400px]">
+        <section className="grid justify-items-center grid-rgrid-cols-1 relative mt-[50px] w-full h-[400px]">
           <h2 className="text-[#ffffff] text-[2.5rem] text-center font-['Exo2'] font-bold">
             Отработка стратагем
           </h2>
