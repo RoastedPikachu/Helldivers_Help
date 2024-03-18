@@ -1,18 +1,17 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
-import Marquee from "react-fast-marquee";
-
-import { Quote, Stratagem } from "@/utils/generalInterfaces";
+import { Stratagem } from "@/utils/generalInterfaces";
 import { getRandomEntity } from "@/utils/generalFunctions";
 
-import { quotes, stratagems } from "@/improvised_db";
+import { stratagems } from "@/improvised_db";
 
 import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
 
+import RunningLine from "@/shared/RunningLine";
+
 export default function Home() {
-  const [currentQuote, setCurrentQuote] = useState({} as Quote);
   const [currentStratagem, setCurrentStratagem] = useState({} as Stratagem);
   const [nextStratagem, setNextStratagem] = useState({} as Stratagem);
 
@@ -95,7 +94,6 @@ export default function Home() {
   };
 
   useEffect(() => {
-    setCurrentQuote(getRandomEntity(quotes, currentQuote));
     setCurrentStratagem(getRandomEntity(stratagems, currentStratagem));
     setNextStratagem(getRandomEntity(stratagems, currentStratagem));
   }, []);
@@ -104,16 +102,10 @@ export default function Home() {
     <>
       <TheHeader />
 
-      <main className="w-full h-[calc(100vh-165px)]">
-        <Marquee
-          direction="left"
-          pauseOnHover={true}
-          className="flex items-center w-full h-[65px] border-y-[1px] bg-[#00293a] border-[#2cc384] text-[#2cc384] text-[1.75rem] font-['Exo2'] font-medium"
-        >
-          {currentQuote.text}
-        </Marquee>
+      <RunningLine />
 
-        <section className="grid justify-items-center relative mt-[30px] w-full h-auto">
+      <main className="mt-[30px] w-full h-[calc(100vh-165px)]">
+        <section className="grid justify-items-center relative w-full h-auto">
           <h2 className="text-[#ffffff] text-[2.5rem] text-center font-['Exo2'] font-bold">
             Отработка стратагем
           </h2>

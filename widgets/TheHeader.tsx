@@ -20,7 +20,7 @@ const TheHeader = () => {
         </Link>
       </div>
 
-      <nav className="flex justify-between w-[20%]">
+      <nav className="grid items-center grid-row-1 grid-cols-3 w-auto">
         <Link
           href="/code"
           className="text-[#ffffff] text-[1.375rem] font-['Exo2'] font-bold"

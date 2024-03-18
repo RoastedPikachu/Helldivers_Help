@@ -4,6 +4,7 @@ import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
 
 import ManualSection from "@/entities/ManualSection";
+import RunningLine from "@/shared/RunningLine";
 
 const Page = () => {
   const manualSections = [
@@ -44,13 +45,15 @@ const Page = () => {
     <>
       <TheHeader />
 
-      <main className="mt-[65px] pb-[65px] px-[5%] w-full h-auto">
+      <RunningLine />
+
+      <main className="mt-[30px] pb-[65px] px-[5%] w-full h-auto">
         <h2 className="text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold">
           СПРАВОЧНИК{" "}
           <b className="text-[#2cc388] font-bold">АДСКОГО ДЕСАНТНИКА</b>
         </h2>
 
-        <p className="mt-[20px] w-[40%] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
+        <p className="mt-[20px] w-[80%] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
           Добро пожаловать в справочник по Helldivers 2! Приготовьтесь
           погрузиться в захватывающий мир глобальной войны с враждебными
           захватчиками: автоматонами и терминидами. В этом руководстве вы

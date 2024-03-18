@@ -1,6 +1,20 @@
-export interface Quote {
+export interface Tip {
   id: number;
   text: string;
+}
+
+export interface Level {
+  id: number;
+  xpRequired: number;
+  xpTotal: number;
+}
+
+export interface Rank {
+  id: number;
+  iconPath: string;
+  title: string;
+  fromLevel: number;
+  xpCount: number;
 }
 
 interface Direction {
