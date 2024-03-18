@@ -71,7 +71,7 @@ export const quotes = [
   },
   {
     id: 18,
-    text: "Провал миссии приведет к тому, что вы будете отправлены в Лагерь Демократии.",
+    text: "Не переживайте: если вы не выполните задачу, вас НЕ ОТПРАВЯТ в лагерь свободы. Это лишь слух, распространяемый диссидентами.",
   },
   {
     id: 19,
@@ -79,7 +79,7 @@ export const quotes = [
   },
   {
     id: 20,
-    text: "Не забывайте заполнять разрешение C-01 перед любым действием, которое может привести к появлению ребенка.",
+    text: "Не забывайте заполнять форму допуска C-01 перед каждым актом, потенциально способным привести к зачатию.",
   },
   {
     id: 21,
@@ -92,6 +92,106 @@ export const quotes = [
   {
     id: 23,
     text: "Когда возникают сомнения, отбросьте все мысли! Просто кричите «За демократию!» и отчаянно бросайтесь на трудности.",
+  },
+  {
+    id: 24,
+    text: "Если во время задания кто-то из отряда умирает, не забудьте подобрать образцы павшего товарища. Оплакивать беднягу будете потом!",
+  },
+  {
+    id: 25,
+    text: "Адскими Капсулами можно управлять [немного]. Попробуйте уронить их на врагов!",
+  },
+  {
+    id: 26,
+    text: "Огонь по своим — не лучшая идея.",
+  },
+  {
+    id: 27,
+    text: "Отсчет до детонации гранаты начинается с момента, когда вы заносите руку для броска. Подгадайте момент для взрыва в воздухе!",
+  },
+  {
+    id: 28,
+    text: "Если вы заметили, что боец отряда выражает симпатию врагу, сообщите об этом своему офицеру по демократии. Мыслепреступления убивают!",
+  },
+  {
+    id: 29,
+    text: "На Супер-Земле много праздников, но самый важный из них — 26 октября. День свободы!",
+  },
+  {
+    id: 30,
+    text: "Вы на задании в одиночестве и нуждаетесь в освободительном подкреплении? Используйте аварийный маячок, чтобы призвать товарища по Адскому Десанту.",
+  },
+  {
+    id: 31,
+    text: "Чем дольше длится задание, тем больше становится врагов.",
+  },
+  {
+    id: 32,
+    text: "Используйте стратагему перезарядки «Орла» в периоды боевого затишья, чтобы у вас всегда наготове были «орлиные удары».",
+  },
+  {
+    id: 33,
+    text: "Хотите показать, как решительно поддерживаете капитализм? Тратье медали в «Заслугах»!",
+  },
+  {
+    id: 34,
+    text: "Надоело промахиваться? Используйте режим от первого лица для стрельбы с дальних дистанций.",
+  },
+  {
+    id: 35,
+    text: "Пистолеты и пистолеты-пулеметы можно держать одной рукой, а в другой руке нести различные предметы.",
+  },
+  {
+    id: 36,
+    text: "Убивайте жуков, пока они не подобрались слишком близко. Ничто не защищает ваше личное пространство лучше летящих пуль.",
+  },
+  {
+    id: 37,
+    text: "Помните: СВОБОДА!",
+  },
+  {
+    id: 38,
+    text: "На заданиях постоянно попадаются неисследованные интересные места. Осматривайте их, ведь никогда не знаешь, что можно найти.",
+  },
+  {
+    id: 39,
+    text: "Если враги прут без остановки, найдите, откуда именно они лезут, и устройте облаву! Улей жуков? Уничтожить! Завод ботов? Уничтожить!",
+  },
+  {
+    id: 40,
+    text: "Не волнуйтесь, стимы не вызывают привыкания!* *Исследование оплачено «Фармадаром». «Фармадар» — доверьте нам свою жизнь.",
+  },
+  {
+    id: 41,
+    text: "Для театра военных действий все граждане одинаково важны, но Адские Десантники — самые важные.",
+  },
+  {
+    id: 42,
+    text: "Используйте стимы для заживления ран.",
+  },
+  {
+    id: 43,
+    text: "Содрать панцирь с жука можно различными способами — эксперементируйте, чтобы найти лучший!",
+  },
+  {
+    id: 44,
+    text: "Время нахождения суперэсминца на низкой орбите ограничено. Следите за таймером задания!",
+  },
+  {
+    id: 45,
+    text: "Редкие образцы доступны только на более сложных заданиях.",
+  },
+  {
+    id: 46,
+    text: "Тщательно подбирайте выкладку, чтобы ваш отряд был обеспечен всеми необходимыми ресурсами. От этого зависит судьба демократии!",
+  },
+  {
+    id: 47,
+    text: "Внимательно читайте эти советы. Мы их тщательно подобрали, чтобы повысить ваши шансы на успех.",
+  },
+  {
+    id: 48,
+    text: "У всех стратагем есть сильные и слабые свойства. Подбирайте стратагемы в сответствии с требованиями задания и составом отряда.",
   },
 ] as Quote[];
 
@@ -111,370 +211,1748 @@ export const stratagems = [
     name: "Пулемет",
     image: "/static/stratagems/MachineGunIcon.png",
     keyCodes: [83, 65, 83, 87, 68],
-    directions: [3, 4, 3, 1, 2],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 2,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 2,
     name: "Крупнокалиберная винтовка",
     image: "/static/stratagems/AntiMaterialRifleIcon.png",
     keyCodes: [83, 65, 68, 87, 83],
-    directions: [3, 4, 2, 1, 3],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 3,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 3,
     name: "Доблесть",
     image: "/static/stratagems/StalwartIcon.png",
     keyCodes: [83, 83, 65, 87, 68],
-    directions: [3, 3, 4, 1, 2],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 2,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 4,
     name: "Одноразовый бронебой",
     image: "/static/stratagems/ExpendableAntiTankIcon.png",
     keyCodes: [83, 65, 68, 68, 65],
-    directions: [3, 4, 2, 2, 4],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 4,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 5,
     name: "Огнемет",
     image: "/static/stratagems/FlamethrowerIcon.png",
     keyCodes: [83, 65, 87, 83, 87],
-    directions: [3, 4, 1, 3, 1],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 1,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 6,
     name: "Автопушка",
     image: "/static/stratagems/AutocannonIcon.png",
     keyCodes: [83, 65, 83, 87, 87, 68],
-    directions: [3, 4, 3, 1, 1, 2],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 6,
+        orientation: 2,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 7,
     name: "Рельсотрон",
     image: "/static/stratagems/RailgunIcon.png",
     keyCodes: [83, 68, 83, 87, 65, 68],
-    directions: [3, 2, 3, 1, 4, 2],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 6,
+        orientation: 2,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 8,
     name: "Копье",
     image: "/static/stratagems/SpearIcon.png",
     keyCodes: [83, 83, 87, 83, 83],
-    directions: [3, 3, 1, 3, 3],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 3,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 9,
     name: "Орбитальный залп Гатлинга",
     image: "/static/stratagems/OrbitalGatlingBarrageIcon.png",
     keyCodes: [68, 83, 65, 87, 87],
-    directions: [2, 3, 4, 1, 1],
+    directions: [
+      {
+        id: 1,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 1,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 10,
     name: "Орбитальная воздушная бомба",
     image: "/static/stratagems/OrbitalAirburstStrikeIcon.png",
     keyCodes: [68, 68, 68],
-    directions: [2, 2, 2],
+    directions: [
+      {
+        id: 1,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 2,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 11,
     name: "Орбитальный залп 120-мм ОФ",
     image: "/static/stratagems/Orbital120mmHEBarrageIcon.png",
     keyCodes: [68, 68, 83, 65, 68, 83],
-    directions: [2, 2, 3, 4, 2, 3],
+    directions: [
+      {
+        id: 1,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 6,
+        orientation: 3,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 12,
     name: "Орбитальный залп 380-мм ОФ",
     image: "/static/stratagems/Orbital380mmHEBarrageIcon.png",
     keyCodes: [68, 83, 87, 87, 65, 83, 83],
-    directions: [2, 3, 1, 1, 4, 3, 3],
+    directions: [
+      {
+        id: 1,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 6,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 7,
+        orientation: 3,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 13,
     name: "Орбитальный огневой вал",
     image: "/static/stratagems/OrbitalWalkingBarrageIcon.png",
     keyCodes: [68, 83, 68, 83, 68, 83],
-    directions: [2, 3, 2, 3, 2, 3],
+    directions: [
+      {
+        id: 1,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 6,
+        orientation: 3,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 14,
     name: "Орбитальный лазер",
     image: "/static/stratagems/OrbitalLaserIcon.png",
     keyCodes: [68, 83, 87, 68, 83],
-    directions: [2, 3, 1, 2, 3],
+    directions: [
+      {
+        id: 1,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 3,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 15,
     name: "Орбитальный рельсотронный залп",
     image: "/static/stratagems/OrbitalRailcannonStrikeIcon.png",
     keyCodes: [68, 87, 83, 83, 68],
-    directions: [2, 1, 3, 3, 2],
+    directions: [
+      {
+        id: 1,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 2,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 16,
     name: "Орел: бреющий полет",
     image: "/static/stratagems/EagleStrafingRunIcon.png",
     keyCodes: [87, 68, 68],
-    directions: [1, 2, 2],
+    directions: [
+      {
+        id: 1,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 2,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 17,
     name: "Орел: воздушный налет",
     image: "/static/stratagems/EagleAirstrikeIcon.png",
     keyCodes: [87, 68, 83, 68],
-    directions: [1, 2, 3, 2],
+    directions: [
+      {
+        id: 1,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 2,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 18,
     name: "Орел: кластерная бомба",
     image: "/static/stratagems/EagleClusterBombIcon.png",
     keyCodes: [87, 68, 83, 83, 68],
-    directions: [1, 2, 3, 3, 2],
+    directions: [
+      {
+        id: 1,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 2,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 19,
     name: "Реактивный ранец",
     image: "/static/stratagems/JumpPackIcon.png",
     keyCodes: [87, 68, 83, 87],
-    directions: [1, 2, 3, 1],
+    directions: [
+      {
+        id: 1,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 1,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 20,
     name: "Орел: дымовая завеса",
     image: "/static/stratagems/EagleSmokeStrikeIcon.png",
     keyCodes: [83, 87, 87, 83, 87],
-    directions: [3, 1, 1, 3, 1],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 1,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 21,
     name: "Орел: 110-мм ракетные блоки",
     image: "/static/stratagems/Eagle110mmRocketPodIcon.png",
     keyCodes: [87, 68, 87, 83],
-    directions: [1, 2, 1, 3],
+    directions: [
+      {
+        id: 1,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 3,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 22,
     name: "Орел: бомба [500 кг]",
     image: "/static/stratagems/Eagle500kgBombIcon.png",
     keyCodes: [87, 68, 87, 65],
-    directions: [1, 2, 1, 4],
+    directions: [
+      {
+        id: 1,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 4,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 23,
     name: "Орбитальный высокоточный удар",
     image: "/static/stratagems/OrbitalPrecisionStrikeIcon.png",
     keyCodes: [87, 68, 83, 83, 83],
-    directions: [1, 2, 3, 3, 3],
+    directions: [
+      {
+        id: 1,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 3,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 23,
     name: "Орбитальный газовый удар",
     image: "/static/stratagems/OrbitalGasStrikeIcon.png",
     keyCodes: [68, 68, 87],
-    directions: [2, 2, 1],
+    directions: [
+      {
+        id: 1,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 1,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 24,
     name: "Орбитальный эм-удар",
     image: "/static/stratagems/OrbitalEMSStrikeIcon.png",
     keyCodes: [68, 68, 83, 68],
-    directions: [2, 2, 3, 2],
+    directions: [
+      {
+        id: 1,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 3,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 25,
     name: "Орбитальная дымовая завеса",
     image: "/static/stratagems/OrbitalSmokeStrikeIcon.png",
     keyCodes: [68, 68, 65, 83],
-    directions: [2, 2, 4, 3],
+    directions: [
+      {
+        id: 1,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 3,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 26,
     name: "Огневая позиция: тяжелый пулемет",
     image: "/static/stratagems/HMGEmplacementIcon.png",
     keyCodes: [68, 68, 83, 87],
-    directions: [2, 2, 3, 1],
+    directions: [
+      {
+        id: 1,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 1,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 27,
     name: "Реле генератора щита",
     image: "/static/stratagems/ShieldGeneratorRelayIcon.png",
     keyCodes: [83, 87, 65, 68, 68, 65],
-    directions: [3, 1, 4, 2, 2, 4],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 6,
+        orientation: 4,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 28,
     name: "Тесла-башня",
     image: "/static/stratagems/TeslaTowerIcon.png",
     keyCodes: [83, 87, 65, 83, 68, 68],
-    directions: [3, 1, 4, 3, 2, 2],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 6,
+        orientation: 2,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 29,
     name: "Противопехотные мины",
     image: "/static/stratagems/AntiPersonnelMinefieldIcon.png",
     keyCodes: [83, 87, 68, 87, 65, 68],
-    directions: [3, 1, 2, 1, 4, 2],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 6,
+        orientation: 2,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 30,
     name: "Рюкзак: боеприпасы",
     image: "/static/stratagems/SupplyPackIcon.png",
     keyCodes: [83, 65, 87, 68],
-    directions: [3, 4, 1, 2],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 2,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 31,
     name: "Гранатомет",
     image: "/static/stratagems/GrenadeLauncherIcon.png",
     keyCodes: [83, 65, 83, 87, 87, 83],
-    directions: [3, 4, 3, 1, 1, 3],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 6,
+        orientation: 3,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 32,
     name: "Лазерная пушка",
     image: "/static/stratagems/LaserCannonIcon.png",
     keyCodes: [83, 65, 87, 65, 83],
-    directions: [3, 4, 1, 4, 3],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 3,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 33,
     name: "Зажигательные мины",
     image: "/static/stratagems/IncendiaryMinesIcon.png",
     keyCodes: [83, 65, 83, 87, 65],
-    directions: [3, 4, 3, 1, 4],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 4,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 34,
     name: "Аппарат: сторожевой пес",
     image: "/static/stratagems/GuardDogRoverIcon.png",
     keyCodes: [83, 65, 65, 83],
-    directions: [3, 4, 4, 3],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 3,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 35,
     name: "Рюкзак: баллистический щит",
     image: "/static/stratagems/BallisticShieldBackpackIcon.png",
     keyCodes: [83, 87, 65, 87, 68, 68],
-    directions: [3, 1, 4, 1, 2, 2],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 6,
+        orientation: 2,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 36,
     name: "Дуговой метатель",
     image: "/static/stratagems/ArcThrowerIcon.png",
     keyCodes: [83, 65, 87, 87, 68],
-    directions: [3, 4, 1, 1, 2],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 2,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 37,
     name: "Генератор щита",
     image: "/static/stratagems/ShieldGeneratorPackIcon.png",
     keyCodes: [83, 68, 87, 65, 84],
-    directions: [3, 2, 1, 4, 3],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 3,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 38,
     name: "Пулеметная турель",
     image: "/static/stratagems/MachineGunSentryIcon.png",
     keyCodes: [83, 87, 65, 68, 65, 68],
-    directions: [3, 1, 4, 2, 4, 2],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 6,
+        orientation: 2,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 39,
     name: "Турель Гатлинга",
     image: "/static/stratagems/GatlingSentryIcon.png",
     keyCodes: [83, 87, 68, 68, 87],
-    directions: [3, 1, 2, 2, 1],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 1,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 40,
     name: "Турель с минометом",
     image: "/static/stratagems/MortarSentryIcon.png",
     keyCodes: [83, 87, 68, 68, 83],
-    directions: [3, 1, 2, 2, 3],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 3,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 41,
     name: "Сторожевой пес",
     image: "/static/stratagems/GuardDogIcon.png",
     keyCodes: [83, 87, 65, 87, 68, 83],
-    directions: [3, 1, 4, 1, 2, 3],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 6,
+        orientation: 3,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 42,
     name: "Турель с автопушкой",
     image: "/static/stratagems/AutocannonSentryIcon.png",
     keyCodes: [83, 87, 68, 87, 65, 87],
-    directions: [3, 1, 2, 1, 4, 1],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 6,
+        orientation: 1,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 43,
     name: "Ракетная турель",
     image: "/static/stratagems/RocketSentryIcon.png",
     keyCodes: [83, 87, 68, 68, 65],
-    directions: [3, 1, 2, 2, 4],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 4,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 44,
     name: "Турель с эм-минометом",
     image: "/static/stratagems/EMSMortarSentryIcon.png",
     keyCodes: [83, 83, 87, 87, 65],
-    directions: [3, 3, 1, 1, 4],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 4,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 45,
     name: "Экзокостюм «патриот»",
     image: "/static/stratagems/PatriotExosuitIcon.png",
     keyCodes: [65, 83, 68, 87, 65, 83, 83],
-    directions: [4, 3, 2, 1, 4, 3, 3],
+    directions: [
+      {
+        id: 1,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 6,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 7,
+        orientation: 3,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 46,
     name: "Подкрепление",
     image: "/static/stratagems/ReinforceIcon.png",
     keyCodes: [87, 83, 68, 65, 87],
-    directions: [1, 3, 2, 4, 1],
+    directions: [
+      {
+        id: 1,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 1,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 47,
     name: "SOS маячок",
     image: "/static/stratagems/SOSBeaconIcon.png",
     keyCodes: [87, 83, 68, 87],
-    directions: [1, 3, 2, 1],
+    directions: [
+      {
+        id: 1,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 1,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 48,
     name: "Припасы",
     image: "/static/stratagems/ResupplyIcon.png",
     keyCodes: [83, 83, 87, 68],
-    directions: [3, 3, 1, 2],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 2,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 49,
     name: "Флаг Супер-Земли",
     image: "/static/stratagems/SuperEarthFlagIcon.png",
     keyCodes: [83, 87, 83, 87],
-    directions: [3, 1, 3, 1],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 1,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 50,
     name: "Загрузить данные",
     image: "/static/stratagems/UploadDataIcon.png",
     keyCodes: [65, 68, 83, 83, 83],
-    directions: [4, 2, 1, 1, 1],
+    directions: [
+      {
+        id: 1,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 1,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 51,
     name: "Адская бомба",
     image: "/static/stratagems/HellbombIcon.png",
     keyCodes: [83, 87, 65, 83, 87, 68, 83, 87],
-    directions: [3, 1, 4, 3, 1, 2, 3, 1],
+    directions: [
+      {
+        id: 1,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 4,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 5,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 6,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 7,
+        orientation: 3,
+        isPressed: false,
+      },
+      {
+        id: 8,
+        orientation: 1,
+        isPressed: false,
+      },
+    ],
   },
   {
     id: 52,
     name: "Артиллерия ВССЗ",
     image: "/static/stratagems/SEAFArtilleryIcon.png",
     keyCodes: [68, 87, 87, 83],
-    directions: [2, 1, 1, 3],
+    directions: [
+      {
+        id: 1,
+        orientation: 2,
+        isPressed: false,
+      },
+      {
+        id: 2,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 3,
+        orientation: 1,
+        isPressed: false,
+      },
+      {
+        id: 4,
+        orientation: 3,
+        isPressed: false,
+      },
+    ],
   },
 ] as Stratagem[];
