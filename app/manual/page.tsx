@@ -36,7 +36,7 @@ const Page = () => {
     },
     {
       id: 7,
-      link: "/",
+      link: "/terminids",
       title: "Терминиды",
     },
     {

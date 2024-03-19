@@ -95,17 +95,21 @@ const Page = () => {
         </h2>
 
         <p className="mt-[20px] w-[80%] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
-          Когда вы отправляетесь в битву, помните, что ваше мужество и
-          преданность будут отмечены. Благодаря вашему усердию и верности делу
-          Супер-Земли, вы получите повышение и почетные звания за ваши
-          героические подвиги в продвижении управляемой демократии.
+          Ресурсы — это топливо для повышения вашей личной эффективности в
+          борьбе за продвижение управляемой демократии, свободы и процветания по
+          всей галактике.
+        </p>
+
+        <p className="mt-[20px] w-[80%] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
+          Они позволяют улучшать корабль, покупать новое снаряжение и
+          вооружение, а также открывать боевой пропуск.
         </p>
 
         <section className="relative grid grid-cols-3 grid-rows-2 gap-y-[30px] gap-x-[30px] mt-[50px] w-full h-auto">
           {resources.map((resource) => (
             <Resource
-              id={resource.id}
               key={resource.id}
+              id={resource.id}
               iconPath={resource.iconPath}
               title={resource.title}
               handleResourceBlockClick={handleResourceBlockClick}
