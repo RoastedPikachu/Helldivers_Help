@@ -3,18 +3,29 @@ export interface Tip {
   text: string;
 }
 
-export interface Level {
-  id: number;
-  xpRequired: number;
-  xpTotal: number;
-}
-
 export interface Rank {
   id: number;
   iconPath: string;
   title: string;
   fromLevel: number;
   xpCount: number;
+}
+
+export interface Level {
+  id: number;
+  xpRequired: number;
+  xpTotal: number;
+}
+
+export interface IResource {
+  id: number;
+  iconPath: string;
+  title: string;
+  difficulties: string;
+  prices?: string[];
+  obtainingMethod: string;
+  applicationScope: string;
+  maxAmount: string;
 }
 
 interface Direction {

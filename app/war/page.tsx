@@ -10,9 +10,9 @@ const Page = () => {
     <>
       <TheHeader />
 
-      <main className="w-full h-[calc(100vh-165px)]">
-        <RunningLine />
-      </main>
+      <RunningLine />
+
+      <main className="w-full h-[calc(100vh-165px)]"></main>
 
       <TheFooter />
     </>

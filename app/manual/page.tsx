@@ -21,21 +21,36 @@ const Page = () => {
     },
     {
       id: 4,
+      link: "/resources",
+      title: "Ресурсы",
+    },
+    {
+      id: 5,
+      link: "/shipModules",
+      title: "Модули корабля",
+    },
+    {
+      id: 6,
       link: "/ranks",
       title: "Ранги",
     },
     {
-      id: 5,
+      id: 7,
       link: "/",
       title: "Терминиды",
     },
     {
-      id: 6,
+      id: 8,
       link: "/",
       title: "Автоматоны",
     },
     {
-      id: 7,
+      id: 9,
+      link: "/",
+      title: "Миссии",
+    },
+    {
+      id: 10,
       link: "/",
       title: "Планеты",
     },

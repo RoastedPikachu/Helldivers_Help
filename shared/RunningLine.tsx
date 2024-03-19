@@ -21,7 +21,7 @@ const RunningLine = () => {
       pauseOnHover={true}
       className="flex items-center w-full h-[65px] border-y-[1px] bg-[#00293a] border-[#2cc384] text-[#2cc384] text-[1.75rem] font-['Exo2'] font-medium"
     >
-      {currentTip.text}
+      {currentTip.text}&nbsp;
     </Marquee>
   );
 };

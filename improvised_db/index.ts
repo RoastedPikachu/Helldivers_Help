@@ -193,7 +193,134 @@ export const tips = [
     id: 48,
     text: "У всех стратагем есть сильные и слабые свойства. Подбирайте стратагемы в сответствии с требованиями задания и составом отряда. ",
   },
+  {
+    id: 49,
+    text: "Не паникуйте.",
+  },
+  {
+    id: 50,
+    text: "В качестве крайней меры вы можете отбиваться от врагов в ближнем бою. Помните: смерть лучше трусости.",
+  },
+  {
+    id: 51,
+    text: "У большинства врагов есть уязвимые и бронированные места. Обучающее руководство ВССЗ рекомендует целиться по уязвимым.",
+  },
+  {
+    id: 52,
+    text: "Пока есть время, гранаты с выдернутой чекой можно подбирать и отбрасывать в сторону!",
+  },
+  {
+    id: 53,
+    text: "Из бюджетных соображений Адские бомбы требуют ручного наведения. Но не стойте на месте, если только не хотите оказаться на стене мучеников.",
+  },
+  {
+    id: 54,
+    text: "Каждая фракция предлагает уникальные испытания. Сочетайте различное снаряжение и пробуйте новые тактики!",
+  },
+  {
+    id: 55,
+    text: "Собирайте медали и развивайте прогресс заслуги. Торопиться не нужно, заслуги можно завершать в любое время.",
+  },
+  {
+    id: 56,
+    text: "Сложность задания частично определяется типом врагов на территории. Убедитесь, что взяли подходящее вооружение!",
+  },
+  {
+    id: 57,
+    text: "Девять из десяти врачей считают, что ранение в области грудной клетки влечет смертельную кровопотерю, если его вовремя не заштопать.",
+  },
+  {
+    id: 58,
+    text: "Стрелять лучше по прямой. Огонь под углом может лишь задеть врага и даже срикошетить в членов вашего отряда.",
+  },
 ] as Tip[];
+
+export const ranks = [
+  {
+    id: 1,
+    iconPath: "/static/ranks/CadetIcon.svg",
+    title: "Кадет",
+    fromLevel: 0,
+    xpCount: 0,
+  },
+  {
+    id: 2,
+    iconPath: "/static/ranks/SpaceCadetIcon.svg",
+    title: "Космический кадет",
+    fromLevel: 5,
+    xpCount: 1600,
+  },
+  {
+    id: 3,
+    iconPath: "/static/ranks/SergeantIcon.svg",
+    title: "Сержант",
+    fromLevel: 10,
+    xpCount: 7100,
+  },
+  {
+    id: 4,
+    iconPath: "/static/ranks/MasterSergeantIcon.svg",
+    title: "Мастер-сержант",
+    fromLevel: 15,
+    xpCount: 14400,
+  },
+  {
+    id: 5,
+    iconPath: "/static/ranks/ChiefIcon.svg",
+    title: "Мичман",
+    fromLevel: 20,
+    xpCount: 23900,
+  },
+  {
+    id: 6,
+    iconPath: "/static/ranks/SpaceChiefPrimeIcon.svg",
+    title: "Главный космический мичман",
+    fromLevel: 25,
+    xpCount: 35900,
+  },
+  {
+    id: 7,
+    iconPath: "/static/ranks/DeathCaptainIcon.svg",
+    title: "Капитан смерть",
+    fromLevel: 30,
+    xpCount: 50400,
+  },
+  {
+    id: 8,
+    iconPath: "/static/ranks/MarshalIcon.svg",
+    title: "Маршал",
+    fromLevel: 35,
+    xpCount: 67400,
+  },
+  {
+    id: 9,
+    iconPath: "/static/ranks/StarMarshalIcon.svg",
+    title: "Космический маршал",
+    fromLevel: 40,
+    xpCount: 87000,
+  },
+  {
+    id: 10,
+    iconPath: "/static/ranks/AdmiralIcon.svg",
+    title: "Адмирал",
+    fromLevel: 45,
+    xpCount: 108900,
+  },
+  {
+    id: 11,
+    iconPath: "/static/ranks/SkullAdmiralIcon.svg",
+    title: "Адмирал Череп",
+    fromLevel: 50,
+    xpCount: 133400,
+  },
+  {
+    id: 12,
+    iconPath: "/static/ranks/SuperCitizenIcon.svg",
+    title: "Супер гражданин",
+    fromLevel: "Super Citizen издание",
+    xpCount: 0,
+  },
+] as Rank[];
 
 export const levels = [
   {
@@ -447,93 +574,6 @@ export const levels = [
     xpTotal: 133400,
   },
 ] as Level[];
-
-export const ranks = [
-  {
-    id: 1,
-    iconPath: "/static/ranks/CadetIcon.svg",
-    title: "Кадет",
-    fromLevel: 0,
-    xpCount: 0,
-  },
-  {
-    id: 2,
-    iconPath: "/static/ranks/SpaceCadetIcon.svg",
-    title: "Космический кадет",
-    fromLevel: 5,
-    xpCount: 1600,
-  },
-  {
-    id: 3,
-    iconPath: "/static/ranks/SergeantIcon.svg",
-    title: "Сержант",
-    fromLevel: 10,
-    xpCount: 7100,
-  },
-  {
-    id: 4,
-    iconPath: "/static/ranks/MasterSergeantIcon.svg",
-    title: "Мастер-сержант",
-    fromLevel: 15,
-    xpCount: 14400,
-  },
-  {
-    id: 5,
-    iconPath: "/static/ranks/ChiefIcon.svg",
-    title: "Мичман",
-    fromLevel: 20,
-    xpCount: 23900,
-  },
-  {
-    id: 6,
-    iconPath: "/static/ranks/SpaceChiefPrimeIcon.svg",
-    title: "Главный космический мичман",
-    fromLevel: 25,
-    xpCount: 35900,
-  },
-  {
-    id: 7,
-    iconPath: "/static/ranks/DeathCaptainIcon.svg",
-    title: "Капитан смерть",
-    fromLevel: 30,
-    xpCount: 50400,
-  },
-  {
-    id: 8,
-    iconPath: "/static/ranks/MarshalIcon.svg",
-    title: "Маршал",
-    fromLevel: 35,
-    xpCount: 67400,
-  },
-  {
-    id: 9,
-    iconPath: "/static/ranks/StarMarshalIcon.svg",
-    title: "Космический маршал",
-    fromLevel: 40,
-    xpCount: 87000,
-  },
-  {
-    id: 10,
-    iconPath: "/static/ranks/AdmiralIcon.svg",
-    title: "Адмирал",
-    fromLevel: 45,
-    xpCount: 108900,
-  },
-  {
-    id: 11,
-    iconPath: "/static/ranks/SkullAdmiralIcon.svg",
-    title: "Адмирал Череп",
-    fromLevel: 50,
-    xpCount: 133400,
-  },
-  {
-    id: 12,
-    iconPath: "/static/ranks/SuperCitizenIcon.svg",
-    title: "Супер гражданин",
-    fromLevel: "Super Citizen издание",
-    xpCount: 0,
-  },
-] as Rank[];
 
 /*
   С 1 по 8: стратагемы оружия поддержки;
