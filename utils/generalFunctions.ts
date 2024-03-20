@@ -10,3 +10,12 @@ export function getRandomEntity<T extends { id: number }>(
 
   return nextEntity;
 }
+
+export function replaceWhitespaces(string: string, requiredSymbol: string) {
+  const replacedString = string.replace(
+    /([А-Яа-я])\s([А-Яа-я])/g,
+    requiredSymbol,
+  );
+
+  return replacedString;
+}
