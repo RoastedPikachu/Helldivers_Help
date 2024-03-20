@@ -43,3 +43,13 @@ export interface Stratagem {
   keyCodes: number[];
   directions: Direction[];
 }
+
+export interface Enemy {
+  id: number;
+  iconPath: string;
+  imagePath: string;
+  dangerous: string;
+  tactics: string;
+  difficulties: string;
+  title: string;
+}
