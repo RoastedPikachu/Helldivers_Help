@@ -5,7 +5,7 @@ import TheFooter from "@/widgets/TheFooter";
 
 import RunningLine from "@/shared/RunningLine";
 
-import Terminid from "@/entities/Terminid";
+import EnemyType from "@/entities/EnemyType";
 
 const Page = () => {
   const terminids = [
@@ -22,7 +22,7 @@ const Page = () => {
     {
       id: 3,
       imagePath: "",
-      title: "Визгун",
+      title: "Крикун",
     },
     {
       id: 4,
@@ -72,7 +72,7 @@ const Page = () => {
 
       <RunningLine />
 
-      <main className="mt-[30px] pb-[65px] px-[5%] w-full h-auto">
+      <main className="mt-[30px] deskWide:ml-[calc((100%-1440px)/2)] pb-[65px] px-[5%] w-full max-w-[1440px] h-auto">
         <h2 className="text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold">
           ТЕРМИНИДЫ
         </h2>
@@ -99,10 +99,13 @@ const Page = () => {
 
         <section className="relative grid grid-cols-3 grid-rows-2 gap-y-[30px] gap-x-[30px] mt-[50px] w-full h-auto">
           {terminids.map((terminid) => (
-            <Terminid
+            <EnemyType
               key={terminid.id}
               id={terminid.id}
               imagePath={terminid.imagePath}
+              rootBlockStyles={"w-[300px] h-[170px]"}
+              fractionType={1}
+              imagePlugStyles={"mt-[15px] text-[6rem]"}
               title={terminid.title}
             />
           ))}

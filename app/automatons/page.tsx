@@ -5,7 +5,7 @@ import TheFooter from "@/widgets/TheFooter";
 
 import RunningLine from "@/shared/RunningLine";
 
-import Automaton from "@/entities/Automaton";
+import EnemyType from "@/entities/EnemyType";
 
 const Page = () => {
     const automatons = [
@@ -57,7 +57,7 @@ const Page = () => {
 
             <RunningLine />
 
-            <main className="mt-[30px] pb-[65px] px-[5%] w-full h-auto">
+            <main className="mt-[30px] deskWide:ml-[calc((100%-1440px)/2)] pb-[65px] px-[5%] w-full max-w-[1440px] h-auto">
                 <h2 className="text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold">
                     АВТОМАТОНЫ
                 </h2>
@@ -79,10 +79,13 @@ const Page = () => {
 
                 <section className="relative grid grid-cols-3 grid-rows-2 gap-y-[30px] gap-x-[30px] mt-[50px] w-full h-auto">
                     {automatons.map((automaton) => (
-                        <Automaton
+                        <EnemyType
                             key={automaton.id}
                             id={automaton.id}
                             imagePath={automaton.imagePath}
+                            rootBlockStyles={"w-full h-[300px]"}
+                            fractionType={2}
+                            imagePlugStyles={"mt-[70px] h-[230px] text-[7rem]"}
                             title={automaton.title}
                         />
                     ))}
