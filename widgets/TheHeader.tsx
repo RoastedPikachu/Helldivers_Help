@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const TheHeader = () => {
   return (
-    <header className="relative flex justify-between items-center px-[5%] w-full h-[65px]">
+    <header className="relative flex justify-between items-center deskWide:mx-[calc((100%-1440px)/2)] px-[5%] w-full max-w-[1440px] h-[65px]">
       <div className="flex items-center h-full">
         <img
           src="/static/generalIcons/SkullIcon.svg"

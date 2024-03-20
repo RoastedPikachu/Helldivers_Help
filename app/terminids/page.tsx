@@ -1,5 +1,7 @@
 import React from "react";
 
+import { enemyTypeStore } from "@/store/EnemyTypeStore";
+
 import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
 
@@ -8,64 +10,6 @@ import RunningLine from "@/shared/RunningLine";
 import EnemyType from "@/entities/EnemyType";
 
 const Page = () => {
-  const terminids = [
-    {
-      id: 1,
-      imagePath: "",
-      title: "Мусорщик",
-    },
-    {
-      id: 2,
-      imagePath: "/static/terminids/BileSpitterImage.png",
-      title: "Желчный плеватель",
-    },
-    {
-      id: 3,
-      imagePath: "",
-      title: "Крикун",
-    },
-    {
-      id: 4,
-      imagePath: "/static/terminids/HunterImage.png",
-      title: "Охотник",
-    },
-    {
-      id: 5,
-      imagePath: "/static/terminids/WarriorImage.png",
-      title: "Воин",
-    },
-    {
-      id: 6,
-      imagePath: "",
-      title: "Страж улья",
-    },
-    {
-      id: 7,
-      imagePath: "/static/terminids/StalkerImage.png",
-      title: "Сталкер",
-    },
-    {
-      id: 8,
-      imagePath: "/static/terminids/BroodCommanderImage.png",
-      title: "Командир роя",
-    },
-    {
-      id: 9,
-      imagePath: "/static/terminids/BileSpewerImage.png",
-      title: "Извергатель желчи",
-    },
-    {
-      id: 10,
-      imagePath: "/static/terminids/ChargerImage.png",
-      title: "Громила",
-    },
-    {
-      id: 11,
-      imagePath: "/static/terminids/BileTitanImage.png",
-      title: "Желчный титан",
-    },
-  ];
-
   return (
     <>
       <TheHeader />
@@ -98,11 +42,11 @@ const Page = () => {
         </p>
 
         <section className="relative grid grid-cols-3 grid-rows-2 gap-y-[30px] gap-x-[30px] mt-[50px] w-full h-auto">
-          {terminids.map((terminid) => (
+          {enemyTypeStore.terminids.map((terminid) => (
             <EnemyType
               key={terminid.id}
               id={terminid.id}
-              imagePath={terminid.imagePath}
+              iconPath={terminid.iconPath}
               rootBlockStyles={"w-[300px] h-[170px]"}
               fractionType={1}
               imagePlugStyles={"mt-[15px] text-[6rem]"}
