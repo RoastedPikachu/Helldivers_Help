@@ -1,25 +1,15 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-import { Stratagem } from "@/utils/generalInterfaces";
-import { getRandomEntity } from "@/utils/generalFunctions";
-
-import { stratagems } from "@/improvised_db";
+import {stratagemStore} from "@/store/StratagemStore";
 
 import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
 
 import RunningLine from "@/shared/RunningLine";
 
-export default function Home() {
-  const [currentStratagem, setCurrentStratagem] = useState({} as Stratagem);
-  const [nextStratagem, setNextStratagem] = useState({} as Stratagem);
 
-  const [isStratagemTrainingStarted, changeIsStratagemTrainingStarted] =
-    useState(false);
-  const [isStratagemInputFail, changeIsStratagemInputFail] = useState(false);
-  const [isStratagemInputSuccessful, changeIsStratagemInputSuccessful] =
-    useState(false);
+export default function Home() {
 
   const getTargetRotate = (direction: number) => {
     let rotationAngle = "";
@@ -39,72 +29,13 @@ export default function Home() {
     return rotationAngle;
   };
 
-  // TODO: Изменить логику сохранения изменений в стратагемах
-
-  const handleKeyPress = (() => {
-    let currentIndex = 0;
-
-    return (event: any) => {
-      setCurrentStratagem((prevStratagem) => {
-        const targetKey = prevStratagem.keyCodes[currentIndex];
-
-        if (event.keyCode === targetKey) {
-          const updatedDirections = [...prevStratagem.directions];
-          updatedDirections[currentIndex].isPressed = true;
-
-          currentIndex++;
-
-          if (currentIndex === prevStratagem.keyCodes.length) {
-            document.removeEventListener("keydown", handleKeyPress);
-
-            currentIndex = 0;
-
-            changeIsStratagemInputSuccessful(true);
-          }
-
-          return {
-            ...prevStratagem,
-            directions: updatedDirections,
-          };
-        }
-        document.removeEventListener("keydown", handleKeyPress);
-
-        currentIndex = 0;
-
-        changeIsStratagemInputFail(true);
-
-        return prevStratagem;
-      });
-    };
-  })();
-
-  const handleStratagemTrainingStart = () => {
-    changeIsStratagemTrainingStarted(true);
-
-    document.addEventListener("keydown", handleKeyPress);
-  };
-
-  const handleStratagemTrainingRestart = () => {
-    changeIsStratagemInputFail(false);
-    changeIsStratagemInputSuccessful(false);
-    setCurrentStratagem(nextStratagem);
-    setNextStratagem(getRandomEntity(stratagems, currentStratagem));
-
-    document.addEventListener("keydown", handleKeyPress);
-  };
-
-  useEffect(() => {
-    setCurrentStratagem(getRandomEntity(stratagems, currentStratagem));
-    setNextStratagem(getRandomEntity(stratagems, currentStratagem));
-  }, []);
-
   return (
     <>
       <TheHeader />
 
       <RunningLine />
 
-      <main className="mt-[30px] w-full h-[calc(100vh-165px)]">
+      <main className="mt-[30px] w-full h-auto">
         <section className="grid justify-items-center relative w-full h-auto">
           <h2 className="text-[#ffffff] text-[2.5rem] text-center font-['Exo2'] font-bold">
             Отработка стратагем
@@ -117,13 +48,13 @@ export default function Home() {
               {/*</p>*/}
 
               <img
-                src={`${currentStratagem.image}`}
+                src={`${stratagemStore.currentStratagem.image}`}
                 alt=""
                 className="w-[150px] h-[150px] bg-[#000000] rounded-[10px]"
               />
 
               <img
-                src={`${nextStratagem.image}`}
+                src={`${stratagemStore.nextStratagem.image}`}
                 alt=""
                 className="mt-[50px] mx-[20px] w-[110px] h-[110px] bg-[#000000] rounded-[10px] brightness-[0.25]"
               />
@@ -132,15 +63,15 @@ export default function Home() {
             <div className="relative grid justify-items-center ml-[50px] w-[900px] h-auto">
               <div
                 className={`flex justify-center w-full h-[150px] bg-[#00293a] ${
-                  isStratagemInputFail
+                  stratagemStore.isStratagemInputFail
                     ? "border-4 border-[#f44336]"
-                    : isStratagemInputSuccessful
+                    : stratagemStore.isStratagemInputSuccessful
                       ? "border-4 border-[#66bb6a]"
                       : ""
                 } rounded-[10px]`}
               >
                 <div className="relative flex items-center pl-[50px] pr-[10px] w-auto h-[150px]">
-                  {currentStratagem.directions?.map((direction) => (
+                  {stratagemStore.currentStratagem.directions?.map((direction) => (
                     <img
                       src={`${
                         direction.isPressed
@@ -158,7 +89,7 @@ export default function Home() {
               </div>
 
               <div className="relative flex items-center mt-[50px] pl-[50px] pr-[10px] w-auto h-[110px] bg-[#00293a] rounded-[10px] brightness-[0.25]">
-                {nextStratagem.directions?.map((direction) => (
+                {stratagemStore.nextStratagem.directions?.map((direction) => (
                   <img
                     src="/static/generalIcons/ArrowIcon.svg"
                     alt=""
@@ -171,9 +102,9 @@ export default function Home() {
               </div>
             </div>
 
-            {!isStratagemTrainingStarted ? (
+            {!stratagemStore.isStratagemTrainingStarted ? (
               <button
-                onClick={handleStratagemTrainingStart}
+                onClick={() => stratagemStore.handleStratagemTrainingStart()}
                 className="flex justify-center items-center ml-[50px] w-[150px] h-[150px] bg-[#2cc384] rounded-[10px] outline-none"
               >
                 <img
@@ -184,7 +115,7 @@ export default function Home() {
               </button>
             ) : (
               <button
-                onClick={handleStratagemTrainingRestart}
+                onClick={() => stratagemStore.handleStratagemTrainingRestart()}
                 className="flex justify-center items-center ml-[50px] w-[150px] h-[150px] bg-[#2cc384] rounded-[10px] outline-none"
               >
                 <img
