@@ -1,7 +1,7 @@
 import { makeAutoObservable } from "mobx"
 
 import { Stratagem } from "@/utils/generalInterfaces";
-import { getRandomEntity, handleStratagemKeyPress } from "@/utils/generalFunctions";
+import { getRandomEntity } from "@/utils/generalFunctions";
 
 /*
   С 1 по 8: стратагемы оружия поддержки;
@@ -1777,14 +1777,48 @@ class StratagemStore {
     constructor() {
         makeAutoObservable(this);
 
-        this.currentStratagem = getRandomEntity(stratagemStore.stratagems, this.currentStratagem);
-        this.nextStratagem = getRandomEntity(stratagemStore.stratagems, this.currentStratagem);
+        this.currentStratagem = getRandomEntity(this.stratagems, this.currentStratagem);
+        this.nextStratagem = getRandomEntity(this.stratagems, this.currentStratagem);
     }
+
+    handleStratagemKeyPress = (() => {
+        let currentIndex = 0;
+
+        return (event: any) => {
+            const targetKey = this.currentStratagem.keyCodes[currentIndex];
+
+            if (event.keyCode === targetKey) {
+                const updatedDirections = [...this.currentStratagem.directions];
+                updatedDirections[currentIndex].isPressed = true;
+
+                currentIndex++;
+
+                if (currentIndex === this.currentStratagem.keyCodes.length) {
+                    document.removeEventListener("keydown", this.handleStratagemKeyPress);
+
+                    currentIndex = 0;
+
+                    this.isStratagemInputSuccessful = true;
+                }
+
+                this.currentStratagem = {
+                    ...this.currentStratagem,
+                    directions: updatedDirections,
+                };
+            }
+            document.removeEventListener("keydown", this.handleStratagemKeyPress);
+
+            currentIndex = 0;
+
+            this.isStratagemInputFail = true;
+        }
+    })();
+
 
     handleStratagemTrainingStart() {
         this.isStratagemTrainingStarted = true;
 
-        document.addEventListener("keydown", handleStratagemKeyPress);
+        document.addEventListener("keydown", this.handleStratagemKeyPress);
     };
 
     handleStratagemTrainingRestart() {
@@ -1793,7 +1827,7 @@ class StratagemStore {
         this.currentStratagem = this.nextStratagem;
         this.nextStratagem = getRandomEntity(stratagemStore.stratagems, this.currentStratagem);
 
-        document.addEventListener("keydown", handleStratagemKeyPress);
+        document.addEventListener("keydown", this.handleStratagemKeyPress);
     };
 }
 
