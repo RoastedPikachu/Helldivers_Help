@@ -41,7 +41,7 @@ const Page = () => {
     },
     {
       id: 8,
-      link: "/",
+      link: "/automatons",
       title: "Автоматоны",
     },
     {
