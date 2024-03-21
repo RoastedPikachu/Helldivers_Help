@@ -11,11 +11,15 @@ export function getRandomEntity<T extends { id: number }>(
   return nextEntity;
 }
 
-export function replaceWhitespaces(string: string, requiredSymbol: string) {
-  const replacedString = string.replace(
-    /([А-Яа-я])\s([А-Яа-я])/g,
-    requiredSymbol,
-  );
-
-  return replacedString;
+export function getSpecificAutomatonImageScale(fractionType, id) {
+  if (fractionType === 2) {
+    switch (id) {
+      case 7:
+        return "scale-x-125";
+      case 8:
+        return "scale-x-100";
+      default:
+        return "scale-x-150";
+    }
+  }
 }

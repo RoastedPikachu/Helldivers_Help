@@ -53,3 +53,7 @@ export interface Enemy {
   difficulties: string;
   title: string;
 }
+
+export interface CurrentEnemy extends Enemy {
+  fractionType: number;
+}
