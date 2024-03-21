@@ -1,11 +1,11 @@
 export function getRandomEntity<T extends { id: number }>(
-  quotes: T[],
+  entities: T[],
   currentEntity: T,
 ): T {
-  let nextEntity = quotes[Math.floor(Math.random() * quotes.length)];
+  let nextEntity = entities[Math.floor(Math.random() * entities.length)];
 
   while (nextEntity.id === currentEntity.id) {
-    nextEntity = quotes[Math.floor(Math.random() * quotes.length)];
+    nextEntity = entities[Math.floor(Math.random() * entities.length)];
   }
 
   return nextEntity;

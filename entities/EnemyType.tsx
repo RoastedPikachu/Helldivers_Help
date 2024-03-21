@@ -25,9 +25,9 @@ const EnemyType: React.FC<EnemyTypeProps> = ({
   const getSpecificScale = () => {
     if (fractionType === 2) {
       switch (id) {
-        case 6:
-          return "scale-x-125";
         case 7:
+          return "scale-x-125";
+        case 8:
           return "scale-x-100";
         default:
           return "scale-x-150";

@@ -36,21 +36,26 @@ const Page = () => {
     },
     {
       id: 7,
+      link: "/achievements",
+      title: "Достижения",
+    },
+    {
+      id: 8,
       link: "/terminids",
       title: "Терминиды",
     },
     {
-      id: 8,
+      id: 9,
       link: "/automatons",
       title: "Автоматоны",
     },
     {
-      id: 9,
+      id: 10,
       link: "/",
       title: "Миссии",
     },
     {
-      id: 10,
+      id: 11,
       link: "/",
       title: "Планеты",
     },

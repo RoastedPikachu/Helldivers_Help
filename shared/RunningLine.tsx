@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 
 import Marquee from "react-fast-marquee";
 
-import { tips } from "@/improvised_db";
+import { tipsStore } from "@/store/TipsStore";
 
 import { Tip } from "@/utils/generalInterfaces";
 import { getRandomEntity } from "@/utils/generalFunctions";
@@ -12,7 +12,7 @@ const RunningLine = () => {
   const [currentTip, setCurrentTip] = useState({} as Tip);
 
   useEffect(() => {
-    setCurrentTip(getRandomEntity(tips, currentTip));
+    setCurrentTip(getRandomEntity(tipsStore.tips, currentTip));
   }, []);
 
   return (
