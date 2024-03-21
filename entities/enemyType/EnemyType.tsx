@@ -5,6 +5,8 @@ import Link from "next/link";
 
 import { replaceWhitespaces } from "@/utils/generalFunctions";
 
+import "./enemyType/EnemyType.css";
+
 interface EnemyTypeProps {
   id: number;
   iconPath: string;
@@ -44,10 +46,7 @@ const EnemyType: React.FC<EnemyTypeProps> = ({
   };
 
   return (
-    <Link
-      href={getSpecificEnemyTypeLink()}
-      className="grid justify-items-center px-[30px] py-[30px] w-full h-auto bg-[#00293a] border-2 border-[#2cc388] rounded-[10px] cursor-pointer"
-    >
+    <Link href={getSpecificEnemyTypeLink()} className="rootWidgetLink">
       {iconPath ? (
         <img
           src={`${iconPath}`}
