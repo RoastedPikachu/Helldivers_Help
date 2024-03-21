@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
 
-import Link from "next/link";
+import { enemyTypeStore } from "@/store/EnemyTypeStore";
 
-import { replaceWhitespaces } from "@/utils/generalFunctions";
+import { getSpecificAutomatonImageScale } from "@/utils/generalFunctions";
 
-import "./enemyType/EnemyType.css";
+import "./EnemyType.css";
 
 interface EnemyTypeProps {
   id: number;
@@ -24,34 +24,30 @@ const EnemyType: React.FC<EnemyTypeProps> = ({
   fractionType,
   title,
 }) => {
-  const getSpecificScale = () => {
-    if (fractionType === 2) {
-      switch (id) {
-        case 7:
-          return "scale-x-125";
-        case 8:
-          return "scale-x-100";
-        default:
-          return "scale-x-150";
-      }
+  const changeCurrentEnemyType = () => {
+    switch (fractionType) {
+      case 1:
+        enemyTypeStore.changeCurrentEnemyType({
+          ...enemyTypeStore.terminids[id - 1],
+          fractionType: fractionType,
+        });
+        break;
+      case 2:
+        enemyTypeStore.changeCurrentEnemyType({
+          ...enemyTypeStore.automatons[id - 1],
+          fractionType: fractionType,
+        });
+        break;
     }
-  };
-
-  const getSpecificEnemyTypeLink = () => {
-    if (fractionType === 1) {
-      return `/terminids/${replaceWhitespaces(title, "$1_$2")}?id=${id}`;
-    }
-
-    return `/automatons/${replaceWhitespaces(title, "$1_$2")}?id=${id}`;
   };
 
   return (
-    <Link href={getSpecificEnemyTypeLink()} className="rootWidgetLink">
+    <div onClick={() => changeCurrentEnemyType()} className="rootWidgetLink">
       {iconPath ? (
         <img
           src={`${iconPath}`}
           alt=""
-          className={`${rootBlockStyles} ${getSpecificScale()}`}
+          className={`${rootBlockStyles} ${getSpecificAutomatonImageScale(fractionType, id)}`}
         />
       ) : (
         <p
@@ -64,7 +60,7 @@ const EnemyType: React.FC<EnemyTypeProps> = ({
       <p className="mt-[20px] text-[#ffffff] text-[1.75rem] text-center font-['Exo2'] font-bold">
         {title}
       </p>
-    </Link>
+    </div>
   );
 };
 

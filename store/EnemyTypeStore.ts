@@ -1,8 +1,10 @@
 import { makeAutoObservable } from "mobx";
 
-import { Enemy } from "@/utils/generalInterfaces";
+import { CurrentEnemy, Enemy } from "@/utils/generalInterfaces";
 
 class EnemyTypeStore {
+  currentEnemyType = {} as CurrentEnemy;
+
   terminids = [
     {
       id: 1,
@@ -238,6 +240,14 @@ class EnemyTypeStore {
 
   constructor() {
     makeAutoObservable(this);
+  }
+
+  changeCurrentEnemyType(enemyType: CurrentEnemy) {
+    this.currentEnemyType = enemyType;
+  }
+
+  clearCurrentEnemyType() {
+    this.currentEnemyType = {} as CurrentEnemy;
   }
 }
 
