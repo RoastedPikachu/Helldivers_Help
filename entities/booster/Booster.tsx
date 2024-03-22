@@ -35,12 +35,18 @@ const Booster: React.FC<BoosterProps> = ({
       </div>
 
       <div className="flex items-center mt-[20px]">
-        <p className="secondaryText">{price}</p>
+        <p className="text-[#2cc388] text-[1.75rem] font-['Exo2'] font-semibold">
+          Стоимость:
+        </p>
+
+        <p className="ml-[20px] text-[#ffffff] text-[2rem] font-['Insignia'] font-bold">
+          {price}
+        </p>
 
         <img
           src="/static/resources/MedalIcon.svg"
           alt=""
-          className="ml-[10px] w-[50px] h-[50px]"
+          className="ml-[10px] w-[40px] h-[40px]"
         />
       </div>
     </div>

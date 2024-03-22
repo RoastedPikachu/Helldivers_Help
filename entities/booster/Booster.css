@@ -4,8 +4,8 @@
     hyphens: auto;
 }
 
-.secondaryText {
-    @apply text-[#ffffff] text-[1.375rem] font-['Exo2'] font-medium brightness-75;
-    overflow-wrap: break-word;
-    hyphens: auto;
-}
+/*.secondaryText {*/
+/*    @apply text-[#ffffff] text-[1.375rem] font-['Exo2'] font-medium brightness-75;*/
+/*    overflow-wrap: break-word;*/
+/*    hyphens: auto;*/
+/*}*/
