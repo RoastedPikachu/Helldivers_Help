@@ -16,7 +16,7 @@ const Page = () => {
     },
     {
       id: 3,
-      link: "/",
+      link: "/boosters",
       title: "Усилители",
     },
     {
