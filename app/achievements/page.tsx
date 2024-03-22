@@ -17,6 +17,16 @@ const Page = () => {
       <RunningLine />
 
       <main className="mt-[30px] deskWide:ml-[calc((100%-1440px)/2)] pb-[100px] px-[5%] w-full max-w-[1440px] h-auto">
+        <h2 className="text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold">
+          ДОСТИЖЕНИЯ
+        </h2>
+
+        <p className="mt-[20px] w-[80%] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
+          Для поощрения каждого десантника руководство Супер-Земли разработало
+          список достижений, за выполнение которых вы будете получать почет и
+          уважение от каждого жителя свободной и демократической галактики.
+        </p>
+
         <section className="relative grid grid-cols-2 grid-rows-19 gap-y-[30px] gap-x-[30px] mt-[50px] w-full h-auto">
           {achievementsStore.achievements.map((achievement) => (
             <Achievement

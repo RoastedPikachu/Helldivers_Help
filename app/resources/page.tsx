@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 
 import { IResource } from "@/utils/generalInterfaces";
+import { resources, medalsCountPerDifficulty } from "@/improvised_db/";
 
 import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
@@ -11,72 +12,6 @@ import Resource from "@/entities/Resource";
 import CurrentResourceInfo from "@/entities/CurrentResourceInfo";
 
 const Page = () => {
-  const resources = [
-    {
-      id: 1,
-      iconPath: "/static/resources/CommonSampleIcon.svg",
-      title: "Обычные образцы",
-      difficulties: "На всех сложностях",
-      obtainingMethod:
-        "Нахождение на точках интереса, аванпостах терминидов и автоматонов",
-      applicationScope: "Улучшение 1, 2 и 3 уровня модулей корабля",
-      maxAmount: "500 единиц",
-    },
-    {
-      id: 2,
-      iconPath: "/static/resources/RareSampleIcon.svg",
-      title: "Редкие образцы",
-      difficulties:
-        "Этот вид образцов встречается начиная с 4 уровня сложности",
-      obtainingMethod:
-        "Нахождение на точках интереса, аванпостах терминидов и автоматонов, также в дикой природе, в форме цветка",
-      applicationScope: "Улучшение 2 уровня модулей корабля",
-      maxAmount: "250 единиц",
-    },
-    {
-      id: 3,
-      iconPath: "/static/resources/UltraRareSampleIcon.svg",
-      title: "Очень редкие образцы",
-      difficulties:
-        "Этот вид образцов встречается начиная с 7 уровня сложности",
-      obtainingMethod: "Нахождение на точке интереса с камнем",
-      applicationScope: "Улучшение 3 уровня модулей корабля",
-      maxAmount: "100 единиц",
-    },
-    {
-      id: 4,
-      iconPath: "/static/resources/SuperCreditIcon.svg",
-      title: "Супер кредиты",
-      difficulties: "На всех сложностях",
-      prices: ["— $1.99", "— $4.99", "— $9.99", "— $19.99"],
-      obtainingMethod:
-        "Покупка внутриигровом магазине или нахождение на точках интереса",
-      applicationScope:
-        "Покупка предметов в супер-магазине или боевого пропуска",
-      maxAmount: "Зависит от размеров кошелька или вашего времени",
-    },
-    {
-      id: 5,
-      iconPath: "/static/resources/MedalIcon.svg",
-      title: "Медали",
-      difficulties: "На всех сложностях",
-      obtainingMethod:
-        "Завершение заданий, нахождение на точках интереса, выполнение приказов с Супер-Земли",
-      applicationScope: "Покупка содержимого боевого пропуска",
-      maxAmount: "250 единиц",
-    },
-    {
-      id: 6,
-      iconPath: "/static/resources/RequisitesIcon.svg",
-      title: "Реквизиты",
-      difficulties: "На всех сложностях",
-      obtainingMethod:
-        "Завершение заданий, успешная эвакуация с задания, нахождение на точках интереса",
-      applicationScope: "Покупка стратагем",
-      maxAmount: "50000 единиц",
-    },
-  ] as IResource[];
-
   const [currentResource, setCurrentResource] = useState({} as IResource);
 
   const handleResourceBlockClick = (id: number) => {
@@ -89,7 +24,7 @@ const Page = () => {
 
       <RunningLine />
 
-      <main className="mt-[30px] pb-[65px] px-[5%] w-full h-auto">
+      <main className="mt-[30px] pb-[100px] px-[5%] w-full h-auto">
         <h2 className="text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold">
           РЕСУРСЫ <b className="text-[#2cc388] font-bold">ГАЛАКТИКИ</b>
         </h2>
@@ -127,6 +62,42 @@ const Page = () => {
               applicationScope={currentResource.applicationScope}
               maxAmount={currentResource.maxAmount}
             />
+          )}
+
+          {currentResource.isDependsOnDifficulty && (
+            <section className="relative grid grid-cols-5 grid-rows-[9] mt-[50px] w-full h-auto">
+              <div className="grid grid-rows-1 grid-cols-5 col-span-5 w-full h-full">
+                <div className="flex justify-center items-center w-full h-[80px] bg-[#00293a] border-y-2 border-l-2 border-[#2cc388] rounded-tl-[10px]">
+                  <p className="text-[#2cc388] text-[1.75rem] font-['Exo2'] font-bold">
+                    Уровень
+                  </p>
+                </div>
+
+                <div className="flex justify-center items-center w-full h-[80px] bg-[#00293a] border-2 border-[#2cc388]">
+                  <p className="text-[#2cc388] text-[1.75rem] font-['Exo2'] font-bold">
+                    Первая миссия
+                  </p>
+                </div>
+
+                <div className="flex justify-center items-center w-full h-[80px] bg-[#00293a] border-y-2 border-[#2cc388]">
+                  <p className="text-[#2cc388] text-[1.75rem] font-['Exo2'] font-bold">
+                    Вторая миссия
+                  </p>
+                </div>
+
+                <div className="flex justify-center items-center w-full h-[80px] bg-[#00293a] border-2 border-[#2cc388]">
+                  <p className="text-[#2cc388] text-[1.75rem] font-['Exo2'] font-bold">
+                    Третья миссия
+                  </p>
+                </div>
+
+                <div className="flex justify-center items-center w-full h-[80px] bg-[#00293a] border-y-2 border-r-2 border-[#2cc388] rounded-tr-[10px]">
+                  <p className="text-[#2cc388] text-[1.75rem] font-['Exo2'] font-bold">
+                    Всего
+                  </p>
+                </div>
+              </div>
+            </section>
           )}
         </section>
       </main>
