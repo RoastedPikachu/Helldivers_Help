@@ -1,4 +1,4 @@
-import { Level, Rank } from "@/utils/generalInterfaces";
+import { IResource, Level, Rank } from "@/utils/generalInterfaces";
 
 export const ranks = [
   {
@@ -339,3 +339,147 @@ export const levels = [
     xpTotal: 133400,
   },
 ] as Level[];
+
+export const resources = [
+  {
+    id: 1,
+    iconPath: "/static/resources/CommonSampleIcon.svg",
+    title: "Обычные образцы",
+    difficulties: "На всех сложностях",
+    obtainingMethod:
+      "Нахождение на точках интереса, аванпостах терминидов и автоматонов",
+    applicationScope: "Улучшение 1, 2 и 3 уровня модулей корабля",
+    maxAmount: "500 единиц",
+    isDependsOnDifficulty: true,
+  },
+  {
+    id: 2,
+    iconPath: "/static/resources/RareSampleIcon.svg",
+    title: "Редкие образцы",
+    difficulties: "Этот вид образцов встречается начиная с 4 уровня сложности",
+    obtainingMethod:
+      "Нахождение на точках интереса, аванпостах терминидов и автоматонов, также в дикой природе, в форме цветка",
+    applicationScope: "Улучшение 2 уровня модулей корабля",
+    maxAmount: "250 единиц",
+    isDependsOnDifficulty: true,
+  },
+  {
+    id: 3,
+    iconPath: "/static/resources/UltraRareSampleIcon.svg",
+    title: "Очень редкие образцы",
+    difficulties: "Этот вид образцов встречается начиная с 7 уровня сложности",
+    obtainingMethod: "Нахождение на точке интереса с камнем",
+    applicationScope: "Улучшение 3 уровня модулей корабля",
+    maxAmount: "100 единиц",
+    isDependsOnDifficulty: true,
+  },
+  {
+    id: 4,
+    iconPath: "/static/resources/SuperCreditIcon.svg",
+    title: "Супер кредиты",
+    difficulties: "На всех сложностях",
+    prices: ["— $1.99", "— $4.99", "— $9.99", "— $19.99"],
+    obtainingMethod:
+      "Покупка внутриигровом магазине или нахождение на точках интереса",
+    applicationScope: "Покупка предметов в супер-магазине или боевого пропуска",
+    maxAmount: "Зависит от размеров кошелька или вашего времени",
+    isDependsOnDifficulty: false,
+  },
+  {
+    id: 5,
+    iconPath: "/static/resources/MedalIcon.svg",
+    title: "Медали",
+    difficulties: "На всех сложностях",
+    obtainingMethod:
+      "Завершение заданий, нахождение на точках интереса, выполнение приказов с Супер-Земли",
+    applicationScope: "Покупка содержимого боевого пропуска",
+    maxAmount: "250 единиц",
+    isDependsOnDifficulty: true,
+  },
+  {
+    id: 6,
+    iconPath: "/static/resources/RequisitesIcon.svg",
+    title: "Реквизиты",
+    difficulties: "На всех сложностях",
+    obtainingMethod:
+      "Завершение заданий, успешная эвакуация с задания, нахождение на точках интереса",
+    applicationScope: "Покупка стратагем",
+    maxAmount: "50000 единиц",
+    isDependsOnDifficulty: false,
+  },
+] as IResource[];
+
+export const medalsCountPerDifficulty = [
+  {
+    id: 1,
+    difficultyTitle: "Простейшая",
+    firstMissionCount: 1,
+    secondMissionCount: "-",
+    thirdMissionCount: "-",
+    totalCount: 1,
+  },
+  {
+    id: 2,
+    difficultyTitle: "Легкая",
+    firstMissionCount: 2,
+    secondMissionCount: "-",
+    thirdMissionCount: "-",
+    totalCount: 2,
+  },
+  {
+    id: 3,
+    difficultyTitle: "Средняя",
+    firstMissionCount: 2,
+    secondMissionCount: 4,
+    thirdMissionCount: "-",
+    totalCount: 6,
+  },
+  {
+    id: 4,
+    difficultyTitle: "Непростая",
+    firstMissionCount: 3,
+    secondMissionCount: 5,
+    thirdMissionCount: "-",
+    totalCount: 8,
+  },
+  {
+    id: 5,
+    difficultyTitle: "Высокая",
+    firstMissionCount: 4,
+    secondMissionCount: 6,
+    thirdMissionCount: 8,
+    totalCount: 18,
+  },
+  {
+    id: 6,
+    difficultyTitle: "Экстрим",
+    firstMissionCount: 5,
+    secondMissionCount: 7,
+    thirdMissionCount: 9,
+    totalCount: 21,
+  },
+  {
+    id: 7,
+    difficultyTitle: "Самоубийство",
+    firstMissionCount: 6,
+    secondMissionCount: 8,
+    thirdMissionCount: 10,
+    totalCount: 24,
+  },
+  {
+    id: 8,
+    difficultyTitle: "Невозможная",
+    firstMissionCount: 7,
+    secondMissionCount: 10,
+    thirdMissionCount: 12,
+    totalCount: 29,
+  },
+  {
+    id: 9,
+    difficultyTitle: "Прямо в ад",
+    firstMissionCount: 8,
+    secondMissionCount: 11,
+    thirdMissionCount: 14,
+    totalCount: 33,
+  },
+];
