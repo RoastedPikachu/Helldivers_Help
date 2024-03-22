@@ -57,3 +57,11 @@ export interface Enemy {
 export interface CurrentEnemy extends Enemy {
   fractionType: number;
 }
+
+export interface Achievement {
+  id: number;
+  iconPath: string;
+  title: string;
+  description: string;
+  accomplishmentWay: string;
+}
