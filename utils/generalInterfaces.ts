@@ -26,6 +26,7 @@ export interface IResource {
   obtainingMethod: string;
   applicationScope: string;
   maxAmount: string;
+  isDependsOnDifficulty: boolean;
 }
 
 interface Direction {
