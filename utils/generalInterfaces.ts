@@ -74,3 +74,8 @@ export interface Booster {
   effect: string;
   price: number;
 }
+
+export interface ResourceTableTitle {
+  id: number;
+  name: string;
+}
