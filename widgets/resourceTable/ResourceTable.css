@@ -1,0 +1,39 @@
+.rootTableSection {
+    @apply relative grid grid-rows-[9] mt-[50px] h-auto border-2 border-[#2cc388] rounded-[10px] overflow-hidden;
+}
+
+.topTableRow {
+    @apply flex items-center w-full h-full border-b-2 border-[#2cc388];
+}
+
+.topTableRow_Column {
+    @apply flex justify-center items-center w-full h-[80px] bg-[#00293a];
+}
+
+.topTableRow_Column_Title {
+    @apply text-[#2cc388] text-[1.75rem] font-['Exo2'] font-bold;
+}
+
+.tableRow {
+    @apply flex items-center w-full h-full;
+}
+
+.tableRow_Column {
+    @apply flex justify-center items-center w-full h-[80px] bg-[#00293a];
+}
+
+.tableRow_Column_Text {
+    @apply w-[80%] text-[#2cc388] text-[1.75rem] text-left font-['Insignia'];
+}
+
+.tableRow_MedalFirstColumn_Text {
+    @apply ml-[10%] w-[90%] text-[#2cc388] text-[1.75rem] text-left font-['Insignia'];
+}
+
+.tableRow_Column_Text_Count {
+    @apply text-[#2cc388] text-[1.75rem] font-['Insignia'] font-bold;
+}
+
+.tableRow_Column_Text_Bold {
+    @apply font-['Exo2'];
+}

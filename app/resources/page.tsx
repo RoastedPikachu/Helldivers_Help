@@ -1,13 +1,15 @@
 "use client";
 import React, { useState } from "react";
 
-import { IResource } from "@/utils/generalInterfaces";
-import { resources, medalsCountPerDifficulty } from "@/improvised_db/";
+import { IResource, ResourceTableTitle } from "@/utils/generalInterfaces";
+import { resources } from "@/improvised_db/";
 
 import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
+import ResourceTable from "@/widgets/resourceTable/ResourceTable";
 
 import RunningLine from "@/shared/RunningLine";
+
 import Resource from "@/entities/Resource";
 import CurrentResourceInfo from "@/entities/CurrentResourceInfo";
 
@@ -16,6 +18,44 @@ const Page = () => {
 
   const handleResourceBlockClick = (id: number) => {
     setCurrentResource(resources.find((resource) => resource.id === id)!);
+  };
+
+  const getSpecificResourceTitles = (): ResourceTableTitle[] | undefined => {
+    if (currentResource.id <= 3) {
+      return [
+        {
+          id: 1,
+          name: "Сложность",
+        },
+        {
+          id: 2,
+          name: "Количество",
+        },
+      ];
+    } else if (currentResource.id === 5) {
+      return [
+        {
+          id: 1,
+          name: "Сложность",
+        },
+        {
+          id: 2,
+          name: "1 Миссия",
+        },
+        {
+          id: 3,
+          name: "2 Миссия",
+        },
+        {
+          id: 4,
+          name: "3 Миссия",
+        },
+        {
+          id: 5,
+          name: "Всего",
+        },
+      ];
+    }
   };
 
   return (
@@ -65,39 +105,10 @@ const Page = () => {
           )}
 
           {currentResource.isDependsOnDifficulty && (
-            <section className="relative grid grid-cols-5 grid-rows-[9] mt-[50px] w-full h-auto">
-              <div className="grid grid-rows-1 grid-cols-5 col-span-5 w-full h-full">
-                <div className="flex justify-center items-center w-full h-[80px] bg-[#00293a] border-y-2 border-l-2 border-[#2cc388] rounded-tl-[10px]">
-                  <p className="text-[#2cc388] text-[1.75rem] font-['Exo2'] font-bold">
-                    Уровень
-                  </p>
-                </div>
-
-                <div className="flex justify-center items-center w-full h-[80px] bg-[#00293a] border-2 border-[#2cc388]">
-                  <p className="text-[#2cc388] text-[1.75rem] font-['Exo2'] font-bold">
-                    Первая миссия
-                  </p>
-                </div>
-
-                <div className="flex justify-center items-center w-full h-[80px] bg-[#00293a] border-y-2 border-[#2cc388]">
-                  <p className="text-[#2cc388] text-[1.75rem] font-['Exo2'] font-bold">
-                    Вторая миссия
-                  </p>
-                </div>
-
-                <div className="flex justify-center items-center w-full h-[80px] bg-[#00293a] border-2 border-[#2cc388]">
-                  <p className="text-[#2cc388] text-[1.75rem] font-['Exo2'] font-bold">
-                    Третья миссия
-                  </p>
-                </div>
-
-                <div className="flex justify-center items-center w-full h-[80px] bg-[#00293a] border-y-2 border-r-2 border-[#2cc388] rounded-tr-[10px]">
-                  <p className="text-[#2cc388] text-[1.75rem] font-['Exo2'] font-bold">
-                    Всего
-                  </p>
-                </div>
-              </div>
-            </section>
+            <ResourceTable
+              resourceId={currentResource.id}
+              titles={getSpecificResourceTitles()!}
+            />
           )}
         </section>
       </main>
