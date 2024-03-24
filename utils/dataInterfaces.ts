@@ -19,3 +19,11 @@ export type GalaxySectorsObject = {
 export type WeatherConditionsObject = {
   [key: string]: WeatherCondition;
 };
+
+export type FractionsObject = {
+  [key: number]: string;
+};
+
+export type GalaxySectorPathsObject = {
+  [key: string]: string;
+};
