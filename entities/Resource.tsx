@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 
+import Link from "next/link";
+
 interface ResourceProps {
   id: number;
   iconPath: string;
@@ -15,7 +17,8 @@ const Resource: React.FC<ResourceProps> = ({
   handleResourceBlockClick,
 }) => {
   return (
-    <div
+    <Link
+      href="/resources#ResourceInfo"
       onClick={() => handleResourceBlockClick(id)}
       className="flex items-center px-[30px] py-[30px] w-full h-auto bg-[#00293a] border-2 border-[#2cc388] rounded-[10px] cursor-pointer"
     >
@@ -24,7 +27,7 @@ const Resource: React.FC<ResourceProps> = ({
       <p className="ml-[20px] text-[#ffffff] text-[1.75rem] font-['Exo2'] font-bold">
         {title}
       </p>
-    </div>
+    </Link>
   );
 };
 

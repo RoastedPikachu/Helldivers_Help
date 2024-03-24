@@ -92,7 +92,7 @@ const Page = () => {
           ))}
         </section>
 
-        <section className="mt-[50px]">
+        <section id="ResourceInfo" className="mt-[50px]">
           {currentResource.id && (
             <CurrentResourceInfo
               title={currentResource.title}

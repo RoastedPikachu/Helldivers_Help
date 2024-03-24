@@ -17,6 +17,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 body {
   @apply bg-[#01212f]
 }

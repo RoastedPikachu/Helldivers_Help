@@ -359,7 +359,7 @@ export const resources = [
     difficulties: "Этот вид образцов встречается начиная с 4 уровня сложности",
     obtainingMethod:
       "Нахождение на точках интереса, аванпостах терминидов и автоматонов, также в дикой природе, в форме цветка",
-    applicationScope: "Улучшение 2 уровня модулей корабля",
+    applicationScope: "Улучшение 1, 2 и 3 уровня модулей корабля",
     maxAmount: "250 единиц",
     isDependsOnDifficulty: true,
   },
@@ -369,7 +369,7 @@ export const resources = [
     title: "Суперобразцы",
     difficulties: "Этот вид образцов встречается начиная с 7 уровня сложности",
     obtainingMethod: "Нахождение на точке интереса с камнем",
-    applicationScope: "Улучшение 3 уровня модулей корабля",
+    applicationScope: "Улучшение 2 и 3 уровня модулей корабля",
     maxAmount: "100 единиц",
     isDependsOnDifficulty: true,
   },
@@ -378,7 +378,7 @@ export const resources = [
     iconPath: "/static/resources/SuperCreditIcon.svg",
     title: "Супер кредиты",
     difficulties: "На всех сложностях",
-    prices: ["— $1.99", "— $4.99", "— $9.99", "— $19.99"],
+    prices: ["$1.99", "$4.99", "$9.99", "$19.99"],
     obtainingMethod:
       "Покупка внутриигровом магазине или нахождение на точках интереса",
     applicationScope: "Покупка предметов в супер-магазине или боевого пропуска",
