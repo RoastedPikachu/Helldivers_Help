@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const TheHeader = () => {
   return (
-    <header className="relative flex justify-between items-center deskWide:mx-[calc((100%-1440px)/2)] px-[5%] w-full max-w-[1440px] h-[65px]">
+    <header className="relative flex justify-between items-center deskWide:mx-[calc((100%-1440px)/2)] px-[5%] deskWide:px-0 w-full max-w-[1440px] h-[65px]">
       <div className="flex items-center h-full">
         <img
           src="/static/generalIcons/SkullIcon.svg"
@@ -20,7 +20,7 @@ const TheHeader = () => {
         </Link>
       </div>
 
-      <nav className="grid items-center grid-row-1 grid-cols-3 w-auto">
+      <nav className="grid items-center grid-row-1 grid-cols-2 w-auto">
         <Link
           href="/code"
           className="text-[#ffffff] text-[1.375rem] font-['Exo2'] font-bold"
@@ -33,13 +33,6 @@ const TheHeader = () => {
           className="text-[#ffffff] text-[1.375rem] font-['Exo2'] font-bold"
         >
           ВОЙНА
-        </Link>
-
-        <Link
-          href="/manual"
-          className="text-[#ffffff] text-[1.375rem] font-['Exo2'] font-bold"
-        >
-          СПРАВОЧНИК
         </Link>
       </nav>
     </header>
