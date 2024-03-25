@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 import { IResource, ResourceTableTitle } from "@/utils/generalInterfaces";
-import { resources } from "@/data/";
+import { resources } from "@/data/resources/";
 
 import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
