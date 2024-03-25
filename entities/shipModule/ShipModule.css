@@ -3,11 +3,29 @@
 }
 
 .swiper-button-prev {
-    top: 135px !important;
+    top: 150px !important;
     left: 30px !important;
 }
 
 .swiper-button-next {
-    top: 135px !important;
+    top: 150px !important;
     right: 30px !important;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffff;
+    border-radius: 0 7.5px 7.5px 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2cc388;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1c7f59;
 }
