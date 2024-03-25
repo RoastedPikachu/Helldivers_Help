@@ -14,7 +14,7 @@ const Page = () => {
 
       <RunningLine />
 
-      <main className="mt-[30px] pb-[65px] px-[5%] w-full h-auto">
+      <main className="mt-[30px] deskWide:ml-[calc((100%-1440px)/2)] pb-[100px] px-[5%] w-full max-w-[1440px] h-auto">
         <h2 className="text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold">
           МОДУЛИ <b className="text-[#2cc388] font-bold">КОРАБЛЯ</b>
         </h2>
@@ -26,7 +26,7 @@ const Page = () => {
           героические подвиги в продвижении управляемой демократии.
         </p>
 
-        <ShipModulesSection />
+        <ShipModulesSection/>
       </main>
 
       <TheFooter />
