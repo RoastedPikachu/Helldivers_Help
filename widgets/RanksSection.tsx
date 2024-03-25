@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ranks } from "@/improvised_db";
+import { ranks } from "@/data/ranks";
 
 import Rank from "@/entities/Rank";
 

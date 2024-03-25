@@ -1,0 +1,88 @@
+import { Rank } from "@/utils/generalInterfaces";
+
+export const ranks = [
+    {
+        id: 1,
+        iconPath: "/static/ranks/CadetIcon.svg",
+        title: "Кадет",
+        fromLevel: 0,
+        xpCount: 0,
+    },
+    {
+        id: 2,
+        iconPath: "/static/ranks/SpaceCadetIcon.svg",
+        title: "Космический кадет",
+        fromLevel: 5,
+        xpCount: 1600,
+    },
+    {
+        id: 3,
+        iconPath: "/static/ranks/SergeantIcon.svg",
+        title: "Сержант",
+        fromLevel: 10,
+        xpCount: 7100,
+    },
+    {
+        id: 4,
+        iconPath: "/static/ranks/MasterSergeantIcon.svg",
+        title: "Мастер-сержант",
+        fromLevel: 15,
+        xpCount: 14400,
+    },
+    {
+        id: 5,
+        iconPath: "/static/ranks/ChiefIcon.svg",
+        title: "Мичман",
+        fromLevel: 20,
+        xpCount: 23900,
+    },
+    {
+        id: 6,
+        iconPath: "/static/ranks/SpaceChiefPrimeIcon.svg",
+        title: "Главный космический мичман",
+        fromLevel: 25,
+        xpCount: 35900,
+    },
+    {
+        id: 7,
+        iconPath: "/static/ranks/DeathCaptainIcon.svg",
+        title: "Смертоносный капитан",
+        fromLevel: 30,
+        xpCount: 50400,
+    },
+    {
+        id: 8,
+        iconPath: "/static/ranks/MarshalIcon.svg",
+        title: "Маршал",
+        fromLevel: 35,
+        xpCount: 67400,
+    },
+    {
+        id: 9,
+        iconPath: "/static/ranks/StarMarshalIcon.svg",
+        title: "Космический маршал",
+        fromLevel: 40,
+        xpCount: 87000,
+    },
+    {
+        id: 10,
+        iconPath: "/static/ranks/AdmiralIcon.svg",
+        title: "Адмирал",
+        fromLevel: 45,
+        xpCount: 108900,
+    },
+    {
+        id: 11,
+        iconPath: "/static/ranks/SkullAdmiralIcon.svg",
+        title: "Адмирал Череп",
+        fromLevel: 50,
+        xpCount: 133400,
+    },
+    {
+        id: 12,
+        iconPath: "/static/ranks/SuperCitizenIcon.svg",
+        title: "Супер гражданин",
+        fromLevel: "Super Citizen издание",
+        xpCount: 0,
+    },
+] as Rank[];

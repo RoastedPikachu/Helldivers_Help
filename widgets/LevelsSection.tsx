@@ -1,6 +1,6 @@
 import React from "react";
 
-import { levels } from "@/improvised_db";
+import { levels } from "@/data/levels";
 
 import Level from "@/entities/Level";
 

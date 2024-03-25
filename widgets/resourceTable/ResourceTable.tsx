@@ -2,9 +2,11 @@
 import React from "react";
 
 import {
-  medalsCountPerDifficulty,
   samplesCountPerDifficulty,
-} from "@/improvised_db";
+} from "@/data/samples";
+import {
+  medalsCountPerDifficulty,
+} from "@/data/medals";
 
 import { ResourceTableTitle } from "@/utils/generalInterfaces";
 
@@ -89,7 +91,7 @@ const ResourceTable: React.FC<ResourceTableProps> = ({
               </div>
 
               <div className="tableRow_Column">
-                <p className="tableRow_Column_Text_Countb">
+                <p className="tableRow_Column_Text_Count">
                   {difficulty.thirdMissionCount}
                 </p>
               </div>
