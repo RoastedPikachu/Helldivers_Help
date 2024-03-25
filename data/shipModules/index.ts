@@ -40,8 +40,8 @@ export const shipModules = [
         superSampleCount: 5,
       },
     ],
-    improvementAffectedStratagems: [
-      [
+    improvementAffectedStratagems: {
+      firstLevel: [
         stratagemStore.stratagems[2],
         stratagemStore.stratagems[6],
         stratagemStore.stratagems[31],
@@ -50,7 +50,7 @@ export const shipModules = [
         stratagemStore.stratagems[4],
         stratagemStore.stratagems[1],
       ],
-      [
+      secondLevel: [
         stratagemStore.stratagems[2],
         stratagemStore.stratagems[5],
         stratagemStore.stratagems[6],
@@ -63,7 +63,7 @@ export const shipModules = [
         stratagemStore.stratagems[1],
         stratagemStore.stratagems[3],
       ],
-      [
+      thirdLevel: [
         stratagemStore.stratagems[36],
         stratagemStore.stratagems[40],
         stratagemStore.stratagems[34],
@@ -71,7 +71,7 @@ export const shipModules = [
         stratagemStore.stratagems[33],
         stratagemStore.stratagems[28],
       ],
-    ],
+    },
   },
   {
     id: 2,
@@ -110,8 +110,8 @@ export const shipModules = [
         superSampleCount: 10,
       },
     ],
-    improvementAffectedStratagems: [
-      [
+    improvementAffectedStratagems: {
+      firstLevel: [
         stratagemStore.stratagems[12],
         stratagemStore.stratagems[14],
         stratagemStore.stratagems[9],
@@ -119,13 +119,13 @@ export const shipModules = [
         stratagemStore.stratagems[11],
         stratagemStore.stratagems[10],
       ],
-      [
+      secondLevel: [
         stratagemStore.stratagems[8],
         stratagemStore.stratagems[12],
         stratagemStore.stratagems[11],
         stratagemStore.stratagems[10],
       ],
-      [
+      thirdLevel: [
         stratagemStore.stratagems[8],
         stratagemStore.stratagems[12],
         stratagemStore.stratagems[23],
@@ -138,7 +138,7 @@ export const shipModules = [
         stratagemStore.stratagems[11],
         stratagemStore.stratagems[10],
       ],
-    ],
+    },
   },
   {
     id: 3,
@@ -177,8 +177,8 @@ export const shipModules = [
         superSampleCount: 10,
       },
     ],
-    improvementAffectedStratagems: [
-      [
+    improvementAffectedStratagems: {
+      firstLevel: [
         stratagemStore.stratagems[21],
         stratagemStore.stratagems[16],
         stratagemStore.stratagems[15],
@@ -186,8 +186,8 @@ export const shipModules = [
         stratagemStore.stratagems[17],
         stratagemStore.stratagems[20],
       ],
-      [],
-      [
+      secondLevel: [],
+      thirdLevel: [
         stratagemStore.stratagems[21],
         stratagemStore.stratagems[16],
         stratagemStore.stratagems[15],
@@ -195,7 +195,7 @@ export const shipModules = [
         stratagemStore.stratagems[17],
         stratagemStore.stratagems[20],
       ],
-    ],
+    },
   },
   {
     id: 4,
@@ -234,8 +234,8 @@ export const shipModules = [
         superSampleCount: 10,
       },
     ],
-    improvementAffectedStratagems: [
-      [
+    improvementAffectedStratagems: {
+      firstLevel: [
         stratagemStore.stratagems[8],
         stratagemStore.stratagems[12],
         stratagemStore.stratagems[23],
@@ -248,9 +248,9 @@ export const shipModules = [
         stratagemStore.stratagems[11],
         stratagemStore.stratagems[10],
       ],
-      [],
-      [],
-    ],
+      secondLevel: [],
+      thirdLevel: [],
+    },
   },
   {
     id: 5,
@@ -291,8 +291,8 @@ export const shipModules = [
         superSampleCount: 10,
       },
     ],
-    improvementAffectedStratagems: [
-      [
+    improvementAffectedStratagems: {
+      firstLevel: [
         stratagemStore.stratagems[26],
         stratagemStore.stratagems[43],
         stratagemStore.stratagems[42],
@@ -305,7 +305,7 @@ export const shipModules = [
         stratagemStore.stratagems[32],
         stratagemStore.stratagems[25],
       ],
-      [
+      secondLevel: [
         stratagemStore.stratagems[43],
         stratagemStore.stratagems[42],
         stratagemStore.stratagems[38],
@@ -314,14 +314,14 @@ export const shipModules = [
         stratagemStore.stratagems[37],
         stratagemStore.stratagems[41],
       ],
-      [
+      thirdLevel: [
         stratagemStore.stratagems[26],
         stratagemStore.stratagems[27],
         stratagemStore.stratagems[28],
         stratagemStore.stratagems[32],
         stratagemStore.stratagems[25],
       ],
-    ],
+    },
   },
   {
     id: 6,
@@ -362,8 +362,8 @@ export const shipModules = [
         superSampleCount: 10,
       },
     ],
-    improvementAffectedStratagems: [
-      [
+    improvementAffectedStratagems: {
+      firstLevel: [
         stratagemStore.stratagems[43],
         stratagemStore.stratagems[42],
         stratagemStore.stratagems[38],
@@ -371,7 +371,7 @@ export const shipModules = [
         stratagemStore.stratagems[37],
         stratagemStore.stratagems[41],
       ],
-      [
+      secondLevel: [
         stratagemStore.stratagems[43],
         stratagemStore.stratagems[42],
         stratagemStore.stratagems[38],
@@ -379,7 +379,7 @@ export const shipModules = [
         stratagemStore.stratagems[37],
         stratagemStore.stratagems[41],
       ],
-      [
+      thirdLevel: [
         stratagemStore.stratagems[43],
         stratagemStore.stratagems[42],
         stratagemStore.stratagems[38],
@@ -387,6 +387,6 @@ export const shipModules = [
         stratagemStore.stratagems[37],
         stratagemStore.stratagems[41],
       ],
-    ],
+    },
   },
 ] as ShipModule[];

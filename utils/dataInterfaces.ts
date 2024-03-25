@@ -37,10 +37,6 @@ export interface ShipModule {
   improvementTitles: string[];
   improvementDescriptions: string[];
   improvementEffects: string[];
-  improvementPrices: {
-    commonSampleCount: number;
-    rareSampleCount?: number;
-    superSampleCount?: number;
-  };
-  improvementAffectedStratagems: Stratagem[] | [];
+  improvementPrices: any;
+  improvementAffectedStratagems: any;
 }
