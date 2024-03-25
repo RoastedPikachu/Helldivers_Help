@@ -1,0 +1,13 @@
+:root {
+    --swiper-navigation-color: #2cc388 !important;
+}
+
+.swiper-button-prev {
+    top: 135px !important;
+    left: 30px !important;
+}
+
+.swiper-button-next {
+    top: 135px !important;
+    right: 30px !important;
+}
