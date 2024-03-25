@@ -1,3 +1,5 @@
+import { Stratagem } from "@/utils/generalInterfaces";
+
 interface Biome {
   surface: string;
   description: string;
@@ -27,3 +29,18 @@ export type FractionsObject = {
 export type GalaxySectorPathsObject = {
   [key: string]: string;
 };
+
+export interface ShipModule {
+  id: number;
+  title: string;
+  levelImages: string[];
+  improvementTitles: string[];
+  improvementDescriptions: string[];
+  improvementEffects: string[];
+  improvementPrices: {
+    commonSampleCount: number;
+    rareSampleCount?: number;
+    superSampleCount?: number;
+  };
+  improvementAffectedStratagems: Stratagem[] | [];
+}
