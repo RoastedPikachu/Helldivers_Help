@@ -17,6 +17,13 @@ const ShipModulesSection = () => {
           key={shipModule.id}
           title={shipModule.title}
           levelImages={shipModule.levelImages}
+          improvementTitles={shipModule.improvementTitles}
+          improvementDescriptions={shipModule.improvementDescriptions}
+          improvementEffects={shipModule.improvementEffects}
+          improvementPrices={shipModule.improvementPrices}
+          improvementAffectedStratagems={
+            shipModule.improvementAffectedStratagems
+          }
         />
       ))}
     </section>
