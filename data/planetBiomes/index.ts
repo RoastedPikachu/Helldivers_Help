@@ -49,7 +49,7 @@ export const biomes: BiomesObject = {
   tundra: {
     surface: "тундра",
     description:
-      "A perenially chilly climate has allowed short, colourful shrubs to flourish across this planet's surface.",
+      "В вечно холодном климате планеты отлично себя чувствуют только невысоки разноцветные кустарники.",
   },
   swamp: {
     surface: "болото",
