@@ -62,40 +62,51 @@ const Page = () => {
   ];
 
   return (
-      <>
-        <TheHeader />
+    <>
+      <TheHeader />
 
-        <RunningLine />
+      <RunningLine />
 
-        <main className="mt-[30px] deskWide:ml-[calc((100%-1440px)/2)] pb-[100px] px-[5%] deskWide:px-0 w-full max-w-[1440px] h-auto">
-          <h2 className="text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold">
-            СПРАВОЧНИК{" "}
-            <b className="text-[#2cc388] font-bold">АДСКОГО ДЕСАНТНИКА</b>
-          </h2>
+      <main>
+        <div className="relative py-[20px] px-[30px] w-full h-[400px] bg-[url('/static/HelldiversBackgroundImage.png')] bg-no-repeat bg-cover border-2 border-[#2cc388] rounded-[10px]">
+          <h1 className="text-[#ffffff] text-[3rem] font-['Insignia'] font-bold brightness-125">
+            HELLDIVERS
+            <b className="text-[#2cc388] font-bold">.HELP</b>
+          </h1>
 
-          <p className="mt-[20px] w-[80%] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
-            Добро пожаловать в справочник по Helldivers 2! Приготовьтесь
-            погрузиться в захватывающий мир глобальной войны с враждебными
-            захватчиками: автоматонами и терминидами. В этом руководстве вы
-            найдете всю необходимую информацию, чтобы легче ориентироваться в
-            особенностях вашего снаряжения, противников и планет галактики и
-            выходить победителем из всех выполняемых вами миссий.
+          <p className="w-[35%] text-[#ffffff] text-[2rem] font-['Exo2'] font-semibold brightness-125">
+            Снаряжение, стратагемы, бестиарий и многое другое
           </p>
+        </div>
 
-          <section className="relative grid grid-cols-4 grid-rows-2 gap-y-[30px] gap-x-[30px] mt-[50px] w-full h-auto">
-            {manualSections.map((section) => (
-                <ManualSection
-                    key={section.id}
-                    id={section.id}
-                    link={section.link}
-                    title={section.title}
-                />
-            ))}
-          </section>
-        </main>
+        <h2 className="mt-[20px] text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold">
+          СПРАВОЧНИК{" "}
+          <b className="text-[#2cc388] font-bold">АДСКОГО ДЕСАНТНИКА</b>
+        </h2>
 
-        <TheFooter />
-      </>
+        <p className="mt-[20px] w-[80%] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
+          Добро пожаловать в справочник по Helldivers 2! Приготовьтесь
+          погрузиться в захватывающий мир глобальной войны с враждебными
+          захватчиками: автоматонами и терминидами. В этом руководстве вы
+          найдете всю необходимую информацию, чтобы легче ориентироваться в
+          особенностях вашего снаряжения, противников и планет галактики и
+          выходить победителем из всех выполняемых вами миссий.
+        </p>
+
+        <section className="relative grid grid-cols-4 grid-rows-2 gap-y-[30px] gap-x-[30px] mt-[50px] w-full h-auto">
+          {manualSections.map((section) => (
+            <ManualSection
+              key={section.id}
+              id={section.id}
+              link={section.link}
+              title={section.title}
+            />
+          ))}
+        </section>
+      </main>
+
+      <TheFooter />
+    </>
   );
 };
 

@@ -45,7 +45,7 @@ const Page = () => {
 
       <RunningLine />
 
-      <main className="mt-[30px] pb-[65px] px-[5%] w-full h-auto">
+      <main>
         <h2 className="text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold">
           КОДЕКС <b className="text-[#2cc388] font-bold">АДСКОГО ДЕСАНТНИКА</b>
         </h2>

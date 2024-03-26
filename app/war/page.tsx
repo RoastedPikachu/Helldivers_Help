@@ -12,7 +12,7 @@ const Page = () => {
 
       <RunningLine />
 
-      <main className="w-full h-[calc(100vh-165px)]"></main>
+      <main></main>
 
       <TheFooter />
     </>
