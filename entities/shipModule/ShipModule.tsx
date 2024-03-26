@@ -3,14 +3,13 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
-import { shipModulesStore } from "@/store/shipModules";
-
 import { Stratagem } from "@/utils/generalInterfaces";
+
+import Typewriter from "@/shared/Typewriter";
 
 import ShipModuleStratagem from "@/entities/ShipModuleStratagem";
 
 import "./ShipModule.css";
-import Typewriter from "@/shared/Typewriter";
 
 interface ShipModuleProps {
   id: number;
@@ -53,29 +52,28 @@ const ShipModule: React.FC<ShipModuleProps> = ({
     setCurrentSlideIndex(swiper?.activeIndex);
   };
   return (
-    <div className="relative mt-[30px] w-auto h-auto bg-[#00293a] border-2 border-[#2cc388] rounded-[10px]">
-      <div className="relative flex justify-between items-center px-[30px] w-full h-[80px] z-30">
-        <p className="text-[#2cc388] text-[1.75rem] font-['Exo2'] font-bold">
-          {title}
-        </p>
+    <div className="rootShipModuleBlock">
+      <div
+        className={`rootShipModuleBlock_Top ${isAdditionalInfoOpened ? "" : "z-30"}`}
+      >
+        <p className="rootShipModuleBlock_Top_Title">{title}</p>
 
         <button
           onClick={() => changeIsAdditionalInfoOpened((prev) => !prev)}
-          className="relative flex justify-center items-center w-[30px] h-[30px]"
+          className="rootShipModuleBlock_Top_Button"
         >
           <img
             src="/static/generalIcons/ArrowDownIcon.svg"
             alt=""
-            className={`w-full h-full duration-500 ease-in-out ${isAdditionalInfoOpened ? "rotate-180" : "rotate-0"}`}
+            className={`rootShipModuleBlock_Top_Button_Image ${isAdditionalInfoOpened ? "rotate-180" : "rotate-0"}`}
           />
         </button>
       </div>
 
-      {/*{isAdditionalInfoOpened && (*/}
       <div
-        className={`relative flex justify-between px-[30px] w-full h-auto duration-1000 ease-in-out ${isAdditionalInfoOpened ? "mt-0 opacity-1" : "mt-[-570px] opacity-0"}`}
+        className={`rootShipModuleBlock_Bottom ${isAdditionalInfoOpened ? "mt-0 opacity-1" : "mt-[-570px] opacity-0"}`}
       >
-        <div className="relative w-[60%] h-auto">
+        <div className="rootShipModuleBlock_Bottom_LeftBlock">
           <Swiper
             spaceBetween={50}
             slidesPerView={1}
@@ -84,35 +82,23 @@ const ShipModule: React.FC<ShipModuleProps> = ({
             modules={[Navigation]}
             navigation={true}
             onSlideChange={handleSlideChange}
-            className="w-full h-[300px]"
+            className="rootShipModuleBlock_Bottom_LeftBlock_Slider"
           >
             <SwiperSlide>
-              <img
-                src={`${levelImages[0]}`}
-                alt=""
-                className="h-full border-2 border-[#2cc388] rounded-[7.5px]"
-              />
+              <img src={`${levelImages[0]}`} alt="" className="slideImage" />
             </SwiperSlide>
 
             <SwiperSlide>
-              <img
-                src={`${levelImages[1]}`}
-                alt=""
-                className="h-full border-2 border-[#2cc388] rounded-[7.5px]"
-              />
+              <img src={`${levelImages[1]}`} alt="" className="slideImage" />
             </SwiperSlide>
 
             <SwiperSlide>
-              <img
-                src={`${levelImages[2]}`}
-                alt=""
-                className="h-full border-2 border-[#2cc388] rounded-[7.5px]"
-              />
+              <img src={`${levelImages[2]}`} alt="" className="slideImage" />
             </SwiperSlide>
           </Swiper>
 
-          <span className="flex justify-center items-center mt-[20px] w-full h-auto border-b-2 border-[#2cc388]">
-            <p className="w-full text-[#ffffff] text-[1.5rem] text-left font-['Exo2'] font-semibold">
+          <span className="rootShipModuleBlock_Bottom_LeftBlock_Level">
+            <p className="rootShipModuleBlock_Bottom_LeftBlock_Level_Title">
               {isAdditionalInfoOpened && (
                 <Typewriter
                   text={improvementTitles[currentSlideIndex]}
@@ -121,16 +107,16 @@ const ShipModule: React.FC<ShipModuleProps> = ({
               )}
             </p>
 
-            <p className="w-[160px] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-semibold">
-              <b className="mr-[10px] text-[#2cc388] text-[1.75rem] font-['Insignia']">
+            <p className="rootShipModuleBlock_Bottom_LeftBlock_Level_Number">
+              <b className="rootShipModuleBlock_Bottom_LeftBlock_Level_Number_Bold">
                 {currentSlideIndex + 1}
               </b>{" "}
               уровень
             </p>
           </span>
 
-          <div className="mt-[20px] pb-[25px] flex justify-between w-full h-auto">
-            <p className="w-[75%] text-[#ffffff] text-[1.25rem] font-['Exo2'] font-medium brightness-75">
+          <div className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo">
+            <p className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_Description">
               {isAdditionalInfoOpened && (
                 <Typewriter
                   text={improvementDescriptions[currentSlideIndex]}
@@ -139,43 +125,43 @@ const ShipModule: React.FC<ShipModuleProps> = ({
               )}
             </p>
 
-            <div className="grid justify-items-end grid-rows-3 grid-cols-1 gap-y-[10px] w-auto h-auto">
-              <div className="flex items-center">
-                <p className="text-[#ffffff] text-[2rem] text-left font-['Insignia'] font-bold">
+            <div className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer">
+              <div className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block">
+                <p className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block_Text">
                   {improvementPrices[currentSlideIndex].commonSampleCount}
                 </p>
 
                 <img
                   src="/static/resources/CommonSampleIcon.svg"
                   alt=""
-                  className="ml-[15px] w-[35px] h-[35px]"
+                  className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block_Image"
                 />
               </div>
 
               {improvementPrices[currentSlideIndex].rareSampleCount && (
-                <div className="flex items-center">
-                  <p className="text-[#ffffff] text-[2rem] text-left font-['Insignia'] font-bold">
+                <div className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block">
+                  <p className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block_Text">
                     {improvementPrices[currentSlideIndex].rareSampleCount}
                   </p>
 
                   <img
                     src="/static/resources/RareSampleIcon.svg"
                     alt=""
-                    className="ml-[15px] w-[35px] h-[35px]"
+                    className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block_Image"
                   />
                 </div>
               )}
 
               {improvementPrices[currentSlideIndex].superSampleCount && (
-                <div className="flex items-center">
-                  <p className="text-[#ffffff] text-[2rem] text-left font-['Insignia'] font-bold">
+                <div className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block">
+                  <p className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block_Text">
                     {improvementPrices[currentSlideIndex].superSampleCount}
                   </p>
 
                   <img
                     src="/static/resources/UltraRareSampleIcon.svg"
                     alt=""
-                    className="ml-[15px] w-[35px] h-[35px]"
+                    className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block_Image"
                   />
                 </div>
               )}
@@ -183,12 +169,12 @@ const ShipModule: React.FC<ShipModuleProps> = ({
           </div>
         </div>
 
-        <div className="relative w-[37.5%] h-auto">
-          <p className="mt-[-5px] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-semibold">
+        <div className="rootShipModuleBlock_Bottom_RightBlock">
+          <p className="rootShipModuleBlock_Bottom_RightBlock_EffectTitle">
             Эффект:
           </p>
 
-          <p className="h-[90px] text-[#ffffff] text-[1.25rem] font-['Exo2'] font-medium brightness-75">
+          <p className="rootShipModuleBlock_Bottom_RightBlock_EffectText">
             {isAdditionalInfoOpened && (
               <Typewriter
                 text={improvementEffects[currentSlideIndex]}
@@ -197,12 +183,12 @@ const ShipModule: React.FC<ShipModuleProps> = ({
             )}
           </p>
 
-          <div className="absolute bottom-[25px] right-0 w-full h-auto">
-            <p className="text-[#ffffff] text-[1.5rem] font-['Exo2'] font-semibold">
+          <div className="rootShipModuleBlock_Bottom_RightBlock_Stratagems">
+            <p className="rootShipModuleBlock_Bottom_RightBlock_StratagemsTitle">
               Затрагиваемые стратагемы:
             </p>
 
-            <div className="relative mt-[10px] pb-[20px] px-[20px] w-full h-[380px] border-2 border-[#2cc388] rounded-[10px] overflow-y-scroll">
+            <div className="rootShipModuleBlock_Bottom_RightBlock_StratagemsBlock">
               {getStratagems().map((stratagem: Stratagem) => (
                 <ShipModuleStratagem
                   key={stratagem.id}
@@ -214,7 +200,6 @@ const ShipModule: React.FC<ShipModuleProps> = ({
           </div>
         </div>
       </div>
-      {/*)}*/}
     </div>
   );
 };

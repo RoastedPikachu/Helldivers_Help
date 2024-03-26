@@ -29,3 +29,103 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #1c7f59;
 }
+
+.rootShipModuleBlock {
+    @apply relative mt-[30px] w-auto h-auto bg-[#00293a] border-2 border-[#2cc388] rounded-[10px];
+}
+
+.rootShipModuleBlock_Top {
+    @apply relative flex justify-between items-center px-[30px] w-full h-[80px];
+}
+
+.rootShipModuleBlock_Top_Title {
+    @apply text-[#2cc388] text-[1.75rem] font-['Exo2'] font-bold;
+}
+
+.rootShipModuleBlock_Top_Button {
+    @apply relative flex justify-center items-center w-[30px] h-[30px];
+}
+
+.rootShipModuleBlock_Top_Button_Image {
+    @apply w-full h-full duration-500 ease-in-out;
+}
+
+.rootShipModuleBlock_Bottom {
+    @apply relative flex justify-between px-[30px] w-full h-auto duration-1000 ease-in-out;
+}
+
+.rootShipModuleBlock_Bottom_LeftBlock {
+    @apply relative w-[60%] h-auto;
+}
+
+.rootShipModuleBlock_Bottom_LeftBlock_Slider {
+    @apply w-full h-[300px];
+}
+
+.slideImage {
+    @apply h-full border-2 border-[#2cc388] rounded-[7.5px];
+}
+
+.rootShipModuleBlock_Bottom_LeftBlock_Level {
+    @apply flex justify-center items-center mt-[20px] w-full h-auto border-b-2 border-[#2cc388];
+}
+
+.rootShipModuleBlock_Bottom_LeftBlock_Level_Title {
+    @apply w-full text-[#ffffff] text-[1.5rem] text-left font-['Exo2'] font-semibold;
+}
+
+.rootShipModuleBlock_Bottom_LeftBlock_Level_Number {
+    @apply w-[160px] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-semibold;
+}
+
+.rootShipModuleBlock_Bottom_LeftBlock_Level_Number_Bold {
+    @apply mr-[10px] text-[#2cc388] text-[1.75rem] font-['Insignia'];
+}
+
+.rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo {
+    @apply mt-[20px] pb-[25px] flex justify-between w-full h-auto;
+}
+
+.rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_Description {
+    @apply w-[75%] text-[#ffffff] text-[1.25rem] font-['Exo2'] font-medium brightness-75;
+}
+
+.rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer {
+    @apply grid justify-items-end grid-rows-3 grid-cols-1 gap-y-[10px] w-auto h-auto;
+}
+
+.rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block {
+    @apply flex items-center;
+}
+
+.rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block_Text {
+    @apply text-[#ffffff] text-[2rem] text-left font-['Insignia'] font-bold;
+}
+
+.rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block_Image {
+    @apply ml-[15px] w-[35px] h-[35px];
+}
+
+.rootShipModuleBlock_Bottom_RightBlock {
+    @apply relative w-[37.5%] h-auto;
+}
+
+.rootShipModuleBlock_Bottom_RightBlock_EffectTitle {
+    @apply mt-[-5px] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-semibold;
+}
+
+.rootShipModuleBlock_Bottom_RightBlock_EffectText {
+    @apply h-[90px] text-[#ffffff] text-[1.25rem] font-['Exo2'] font-medium brightness-75;
+}
+
+.rootShipModuleBlock_Bottom_RightBlock_Stratagems {
+    @apply absolute bottom-[25px] right-0 w-full h-auto z-30;
+}
+
+.rootShipModuleBlock_Bottom_RightBlock_StratagemsTitle {
+    @apply text-[#ffffff] text-[1.5rem] font-['Exo2'] font-semibold;
+}
+
+.rootShipModuleBlock_Bottom_RightBlock_StratagemsBlock {
+    @apply relative mt-[10px] pb-[20px] px-[20px] w-full h-[380px] border-2 border-[#2cc388] rounded-[10px] overflow-y-scroll;
+}
