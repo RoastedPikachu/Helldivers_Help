@@ -20,7 +20,7 @@ const TheHeader = () => {
         </Link>
       </div>
 
-      <nav className="grid items-center grid-row-1 grid-cols-2 w-auto">
+      <nav className="grid items-center grid-row-1 grid-cols-4 gap-x-[30px] w-auto">
         <Link
           href="/code"
           className="text-[#ffffff] text-[1.375rem] font-['Exo2'] font-bold"
@@ -33,6 +33,13 @@ const TheHeader = () => {
           className="text-[#ffffff] text-[1.375rem] font-['Exo2'] font-bold"
         >
           ВОЙНА
+        </Link>
+
+        <Link
+          href="/stratagemTraining"
+          className="col-span-2 text-[#ffffff] text-[1.375rem] font-['Exo2'] font-bold"
+        >
+          ТРЕНИРОВКА СТРАТАГЕМ
         </Link>
       </nav>
     </header>

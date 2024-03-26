@@ -3,13 +3,17 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
+import { shipModulesStore } from "@/store/shipModules";
+
 import { Stratagem } from "@/utils/generalInterfaces";
 
 import ShipModuleStratagem from "@/entities/ShipModuleStratagem";
 
 import "./ShipModule.css";
+import Typewriter from "@/shared/Typewriter";
 
 interface ShipModuleProps {
+  id: number;
   title: string;
   levelImages: string[];
   improvementTitles: string[];
@@ -20,6 +24,7 @@ interface ShipModuleProps {
 }
 
 const ShipModule: React.FC<ShipModuleProps> = ({
+  id,
   title,
   levelImages,
   improvementTitles,
@@ -29,6 +34,9 @@ const ShipModule: React.FC<ShipModuleProps> = ({
   improvementAffectedStratagems,
 }) => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+
+  const [isAdditionalInfoOpened, changeIsAdditionalInfoOpened] =
+    useState(false);
 
   const getStratagems = () => {
     switch (currentSlideIndex) {
@@ -45,22 +53,28 @@ const ShipModule: React.FC<ShipModuleProps> = ({
     setCurrentSlideIndex(swiper?.activeIndex);
   };
   return (
-    <div className="relative w-auto h-auto bg-[#00293a] border-2 border-[#2cc388] rounded-[10px]">
-      <div className="relative flex justify-between items-center px-[30px] w-full h-[80px]">
+    <div className="relative mt-[30px] w-auto h-auto bg-[#00293a] border-2 border-[#2cc388] rounded-[10px]">
+      <div className="relative flex justify-between items-center px-[30px] w-full h-[80px] z-30">
         <p className="text-[#2cc388] text-[1.75rem] font-['Exo2'] font-bold">
           {title}
         </p>
 
-        <button className="relative flex justify-center items-center w-[30px] h-[30px]">
+        <button
+          onClick={() => changeIsAdditionalInfoOpened((prev) => !prev)}
+          className="relative flex justify-center items-center w-[30px] h-[30px]"
+        >
           <img
             src="/static/generalIcons/ArrowDownIcon.svg"
             alt=""
-            className="w-full h-full duration-500 ease-in-out"
+            className={`w-full h-full duration-500 ease-in-out ${isAdditionalInfoOpened ? "rotate-180" : "rotate-0"}`}
           />
         </button>
       </div>
 
-      <div className="relative flex justify-between px-[30px] w-full h-auto">
+      {/*{isAdditionalInfoOpened && (*/}
+      <div
+        className={`relative flex justify-between px-[30px] w-full h-auto duration-1000 ease-in-out ${isAdditionalInfoOpened ? "mt-0 opacity-1" : "mt-[-570px] opacity-0"}`}
+      >
         <div className="relative w-[60%] h-auto">
           <Swiper
             spaceBetween={50}
@@ -99,7 +113,12 @@ const ShipModule: React.FC<ShipModuleProps> = ({
 
           <span className="flex justify-center items-center mt-[20px] w-full h-auto border-b-2 border-[#2cc388]">
             <p className="w-full text-[#ffffff] text-[1.5rem] text-left font-['Exo2'] font-semibold">
-              {improvementTitles[currentSlideIndex]}
+              {isAdditionalInfoOpened && (
+                <Typewriter
+                  text={improvementTitles[currentSlideIndex]}
+                  delay={60}
+                />
+              )}
             </p>
 
             <p className="w-[160px] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-semibold">
@@ -112,7 +131,12 @@ const ShipModule: React.FC<ShipModuleProps> = ({
 
           <div className="mt-[20px] pb-[25px] flex justify-between w-full h-auto">
             <p className="w-[75%] text-[#ffffff] text-[1.25rem] font-['Exo2'] font-medium brightness-75">
-              {improvementDescriptions[currentSlideIndex]}
+              {isAdditionalInfoOpened && (
+                <Typewriter
+                  text={improvementDescriptions[currentSlideIndex]}
+                  delay={20}
+                />
+              )}
             </p>
 
             <div className="grid justify-items-end grid-rows-3 grid-cols-1 gap-y-[10px] w-auto h-auto">
@@ -160,21 +184,37 @@ const ShipModule: React.FC<ShipModuleProps> = ({
         </div>
 
         <div className="relative w-[37.5%] h-auto">
-          <p className="text-[#ffffff] text-[1.25rem] font-['Exo2'] font-medium brightness-75">
-            {improvementEffects[currentSlideIndex]}
+          <p className="mt-[-5px] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-semibold">
+            Эффект:
           </p>
 
-          <div className="absolute bottom-[25px] right-0 pb-[20px] px-[20px] w-full h-[440px] border-2 border-[#2cc388] rounded-[10px] overflow-y-scroll">
-            {getStratagems().map((stratagem: Stratagem) => (
-              <ShipModuleStratagem
-                key={stratagem.id}
-                iconPath={stratagem.image}
-                name={stratagem.name}
+          <p className="h-[90px] text-[#ffffff] text-[1.25rem] font-['Exo2'] font-medium brightness-75">
+            {isAdditionalInfoOpened && (
+              <Typewriter
+                text={improvementEffects[currentSlideIndex]}
+                delay={40}
               />
-            ))}
+            )}
+          </p>
+
+          <div className="absolute bottom-[25px] right-0 w-full h-auto">
+            <p className="text-[#ffffff] text-[1.5rem] font-['Exo2'] font-semibold">
+              Затрагиваемые стратагемы:
+            </p>
+
+            <div className="relative mt-[10px] pb-[20px] px-[20px] w-full h-[380px] border-2 border-[#2cc388] rounded-[10px] overflow-y-scroll">
+              {getStratagems().map((stratagem: Stratagem) => (
+                <ShipModuleStratagem
+                  key={stratagem.id}
+                  iconPath={stratagem.image}
+                  name={stratagem.name}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
+      {/*)}*/}
     </div>
   );
 };
