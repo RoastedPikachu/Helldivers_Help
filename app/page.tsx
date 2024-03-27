@@ -8,7 +8,7 @@ import RunningLine from "@/shared/RunningLine";
 
 const Page = () => {
   const manualSections = [
-    { id: 1, link: "/", title: "Вооружение" },
+    { id: 1, link: "/weaponry", title: "Вооружение" },
     {
       id: 2,
       link: "/",
