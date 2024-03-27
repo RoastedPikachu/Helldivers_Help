@@ -10,29 +10,23 @@ interface WeaponProps {
   weaponType: number;
   imagePath: string;
   name: string;
+  handleChangeCurrentSlide: (id: number) => void;
 }
 
-const Weapon: React.FC<WeaponProps> = ({ id, weaponType, imagePath, name }) => {
-  const getCurrentWeapon = () => {
-    switch (weaponType) {
-      case 1:
-        return weaponsStore.primaryWeapons.find(
-          (primaryWeapon) => primaryWeapon.id === id,
-        );
-      case 2:
-        return weaponsStore.secondaryWeapons.find(
-          (secondaryWeapon) => secondaryWeapon.id === id,
-        );
-      case 3:
-        return weaponsStore.grenades.find((grenade) => grenade.id === id);
-    }
-  };
+const Weapon: React.FC<WeaponProps> = ({
+  id,
+  weaponType,
+  imagePath,
+  name,
+  handleChangeCurrentSlide,
+}) => {
+  const handleCurrentWeaponInfoChange = () => {
+    handleChangeCurrentSlide(id);
 
+    weaponsStore.changeCurrentWeaponInfo(id, weaponType);
+  };
   return (
-    <div
-      onClick={() => weaponsStore.changeCurrentWeapon(getCurrentWeapon()!)}
-      className="weaponWidget"
-    >
+    <div onClick={handleCurrentWeaponInfoChange} className="weaponWidget">
       <img
         src={imagePath}
         alt=""
