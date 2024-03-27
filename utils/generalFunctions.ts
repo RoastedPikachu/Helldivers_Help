@@ -1,3 +1,5 @@
+import { weaponsStore } from "@/store/WeaponsStore";
+
 export function getRandomEntity<T extends { id: number }>(
   entities: T[],
   currentEntity: T,
@@ -11,7 +13,10 @@ export function getRandomEntity<T extends { id: number }>(
   return nextEntity;
 }
 
-export function getSpecificAutomatonImageScale(fractionType, id) {
+export function getSpecificAutomatonImageScale(
+  fractionType: number,
+  id: number,
+) {
   if (fractionType === 2) {
     switch (id) {
       case 7:
