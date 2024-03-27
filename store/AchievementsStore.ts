@@ -1,6 +1,6 @@
 import { makeAutoObservable } from "mobx";
 
-import { Achievement } from "@/utils/generalInterfaces";
+import { Achievement } from "@/utils/storeInterfaces";
 
 class AchievementsStore {
   achievements = [

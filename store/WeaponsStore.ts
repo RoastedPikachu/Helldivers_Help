@@ -1,14 +1,19 @@
 import { makeAutoObservable } from "mobx";
 
-import { Grenade, PrimaryOrSecondaryWeapon } from "@/utils/generalInterfaces";
+import {
+  CurrentWeaponInfo,
+  Grenade,
+  PrimaryOrSecondaryWeapon,
+} from "@/utils/storeInterfaces";
 
 class WeaponsStore {
-  currentWeapon = {} as PrimaryOrSecondaryWeapon | Grenade;
+  currentWeaponInfo = {} as CurrentWeaponInfo;
 
   primaryWeapons = [
     {
       id: 1,
       imagePath: "/static/weaponry/primary/AR23Image.webp",
+      weaponType: 1,
       name: "AR-23 «Освободитель»",
       description:
         "Стандартная штурмовая винтовка ВССЗ, обладающая сбалансированной мощью, скорострельностью и весом, чтобы надежно поражать небольшие цели.",
@@ -25,6 +30,7 @@ class WeaponsStore {
     {
       id: 2,
       imagePath: "/static/weaponry/primary/AR23EImage.webp",
+      weaponType: 1,
       name: "AR-23Е «Взрывной освободитель»",
       description:
         "Модифицированная винтовка «Освободитель», оснащенная разрывными патронами и коллиматорным прицелом. Обладает повышенным уроном и отдачей.",
@@ -41,6 +47,7 @@ class WeaponsStore {
     {
       id: 3,
       imagePath: "/static/weaponry/primary/AR23PImage.webp",
+      weaponType: 1,
       name: "AR-23P «Пробойный освободитель»",
       description:
         "Модифицированная винтовка «Освободитель», оснащенная прицелом и бронебойными боеприпасами, способными уничтожать бронированные цели.",
@@ -57,6 +64,7 @@ class WeaponsStore {
     {
       id: 4,
       imagePath: "/static/weaponry/primary/R63CsDiligenceImage.webp",
+      weaponType: 1,
       name: "R-63 «Рвение»",
       description:
         "Крупнокалиберная марксманская винтовка. Обладает высоким уроном и точностью, но малой емкостью магазина и низкой скорострельностью.",
@@ -73,6 +81,7 @@ class WeaponsStore {
     {
       id: 5,
       imagePath: "/static/weaponry/primary/R63CsImage.webp",
+      weaponType: 1,
       name: "R-63 «Рвение антиснайпер»",
       description:
         "Модифицированная винтовка «Рвение», обладающая повышенным уроном, но сниженной скорострельностью. Выпускает по одной пуле за раз.",
@@ -89,6 +98,7 @@ class WeaponsStore {
     {
       id: 6,
       imagePath: "/static/weaponry/primary/Smg37Image.webp",
+      weaponType: 1,
       name: "SMG-37 «Защитник»",
       description:
         "Крупнокалиберный пистолет-пулемет с возможностью вести огонь одной рукой. Обладает относительно низкой скорострельностью.",
@@ -105,6 +115,7 @@ class WeaponsStore {
     {
       id: 7,
       imagePath: "/static/weaponry/primary/Mp98Image.webp",
+      weaponType: 1,
       name: "MP-98 «Рыцарь»",
       description:
         "Пистолет-пулемет с экстремально высоким темпом стрельбы и возможностью вести огонь одной рукой. Идеален для многозадачности.",
@@ -121,6 +132,7 @@ class WeaponsStore {
     {
       id: 8,
       imagePath: "/static/weaponry/primary/Sg8Image.webp",
+      weaponType: 1,
       name: "SG-8 «Каратель»",
       description:
         "Мощный помповый дробовик с двумя магазинами. Отличается ограниченной способностью пробивать броню. Идеален для малых и быстрых целей.",
@@ -137,6 +149,7 @@ class WeaponsStore {
     {
       id: 9,
       imagePath: "/static/weaponry/primary/Sg8SImage.webp",
+      weaponType: 1,
       name: "SG-8S «Крушила»",
       description:
         "Модифицированный дробовик «Каратель», стреляющий тяжелыми мощными пулями. Идеально подходит, чтобы пробивать большие дыры в больших целях.",
@@ -153,6 +166,7 @@ class WeaponsStore {
     {
       id: 10,
       imagePath: "/static/weaponry/primary/Sg8PImage.webp",
+      weaponType: 1,
       name: "SG-8P «Плазменный каратель»",
       description:
         "Модифицированный дробовик «Крушитель», стреляющий взрывающимися снарядами плазмы. Стреляйте аккуратно – взрывающаяся плазма может ранить ваших товарищей.",
@@ -169,6 +183,7 @@ class WeaponsStore {
     {
       id: 11,
       imagePath: "/static/weaponry/primary/Sg225Image.webp",
+      weaponType: 1,
       name: "SG-225 «Крушитель»",
       description:
         "Автоматический дробовик с высокой скорострельностью, идеально подходящий для устранения толп врагов. Требует частой перезарядки.",
@@ -185,6 +200,7 @@ class WeaponsStore {
     {
       id: 12,
       imagePath: "/static/weaponry/primary/Sg225IeImage.webp",
+      weaponType: 1,
       name: "SG-225IE «Зажигательный крушитель»",
       description:
         "Модифицированный дробовик «Крушитель», стреляющий зажигательными снарядами. Сильно нагревается, поэтому стреляет только очередями.",
@@ -201,6 +217,7 @@ class WeaponsStore {
     {
       id: 13,
       imagePath: "/static/weaponry/primary/Sg225SpImage.webp",
+      weaponType: 1,
       name: "SG-225SP «Крушитель ураган»",
       description:
         "Модифицированный дробовик «Крушитель», стреляющий плотным зарядом дроби, которая отлично справляется с небольшими целями.",
@@ -217,6 +234,7 @@ class WeaponsStore {
     {
       id: 14,
       imagePath: "/static/weaponry/primary/Jar5Image.webp",
+      weaponType: 1,
       name: "JAR-5 «Угнетатель»",
       description:
         "«Угнетатель» стреляет реактивными снарядами. Отличается высоким уроном, но низкой скорострельностью и малой емкостью магазина.",
@@ -233,6 +251,7 @@ class WeaponsStore {
     {
       id: 15,
       imagePath: "/static/weaponry/primary/Las5Image.webp",
+      weaponType: 1,
       name: "LAS-5 «Коса»",
       description:
         "Лазерная винтовка, стреляющая непрерывным лучом. Не требует перезарядки, но в случае перегрева нужно заменить радиатор.",
@@ -249,6 +268,7 @@ class WeaponsStore {
     {
       id: 16,
       imagePath: "/static/weaponry/primary/Las16Image.webp",
+      weaponType: 1,
       name: "LAS-16 «Серп»",
       description:
         "Лазерная винтовка, стреляющая короткими очередями. Не требует перезарядки, но в случае перегрева нужно заменить радиатор.",
@@ -265,6 +285,7 @@ class WeaponsStore {
     {
       id: 17,
       imagePath: "/static/weaponry/primary/Plas1Image.webp",
+      weaponType: 1,
       name: "PLAS-1 «Поджигатель»",
       description:
         "Плазменная винтовка, стреляющая зарядом перегретого газа, который взрывается при попадании. Не стойте в зоне взрыва.",
@@ -281,6 +302,7 @@ class WeaponsStore {
     {
       id: 18,
       imagePath: "/static/weaponry/primary/Arc12Image.webp",
+      weaponType: 1,
       name: "ARC-12 «Налетчик»",
       description:
         "Этот дробовик стреляет широким всплеском высоковольтного электричества, который вызывает дугу между всеми юнитами – вражескими или другими – в пределах досягаемости.",
@@ -300,6 +322,7 @@ class WeaponsStore {
     {
       id: 1,
       imagePath: "/static/weaponry/secondary/P2Image.webp",
+      weaponType: 2,
       name: "P-2 «Миротворец»",
       description:
         "Стандартный пистолет ВССЗ, отличающийся высокой скорострельностью, емким магазином и быстрой перезарядкой.",
@@ -316,6 +339,7 @@ class WeaponsStore {
     {
       id: 2,
       imagePath: "/static/weaponry/secondary/P19Image.webp",
+      weaponType: 2,
       name: "P-19 «Избавитель»",
       description:
         "Невероятно скорострельный автоматический пистолет, позволяющий разбираться с толпами врагов.",
@@ -332,6 +356,7 @@ class WeaponsStore {
     {
       id: 3,
       imagePath: "/static/weaponry/secondary/P4Image.webp",
+      weaponType: 2,
       name: "P-4 «Сенатор»",
       description:
         "Мощный револьвер, который можно перезаряжать по одному патрону. Надежное оружие, наносящее большой урон.s",
@@ -348,6 +373,7 @@ class WeaponsStore {
     {
       id: 4,
       imagePath: "/static/weaponry/secondary/Las7Image.webp",
+      weaponType: 2,
       name: "LAS-7 «Кинжал»",
       description:
         "Лазерный пистолет, стреляющий непрерывным лучом. Не требует боеприпасов, но может перегреться и потребовать замены батареек.",
@@ -367,6 +393,7 @@ class WeaponsStore {
     {
       id: 1,
       imagePath: "/static/weaponry/grenades/G12HighExplosiveImage.webp",
+      weaponType: 3,
       name: "G-12 «Фугасная»",
       description:
         "Фугасная граната, наносящая урон легко бронированным целям. При взрыве наносит большой урон по небольшой площади.",
@@ -379,6 +406,7 @@ class WeaponsStore {
     {
       id: 2,
       imagePath: "/static/weaponry/grenades/G6FragImage.webp",
+      weaponType: 3,
       name: "G-6 «Осколочная»",
       description:
         "Противопехотная осколочная граната. При взрыве наносит урон по большой площади.",
@@ -391,6 +419,7 @@ class WeaponsStore {
     {
       id: 3,
       imagePath: "/static/weaponry/grenades/G16ImpactImage.webp",
+      weaponType: 3,
       name: "G-16 «Ударная»",
       description:
         "Ударная граната, предназначенная для немедленного взрыва при контакте. Наносит концентрированный урон в небольшом радиусе, что очень эффективно против скоплений живой силы противника.",
@@ -403,6 +432,7 @@ class WeaponsStore {
     {
       id: 4,
       imagePath: "/static/weaponry/grenades/G10IncendiaryImage.webp",
+      weaponType: 3,
       name: "G-10 «Зажигательная»",
       description:
         "Зажигательная граната, разработанная для возгорания при детонации. Распространяет горящий материал на умеренную площадь, вызывая ожоги.",
@@ -415,6 +445,7 @@ class WeaponsStore {
     {
       id: 5,
       imagePath: "/static/weaponry/grenades/G3SmokeImage.webp",
+      weaponType: 3,
       name: "G-3 «Дымовая»",
       description:
         "Дымовая граната, разработанная для быстрого охвата и маскировки. При активации выпускает продолжительное облако, мешающее видимости и обеспечивающее стратегическое прикрытие для маневров и отступления.",
@@ -427,6 +458,7 @@ class WeaponsStore {
     {
       id: 6,
       imagePath: "/static/weaponry/grenades/G23StunImage.webp",
+      weaponType: 3,
       name: "G-23 «Оглушающая»",
       description: "Временно оглушает все цели в радиусе действия.",
       price: 20,
@@ -441,12 +473,12 @@ class WeaponsStore {
     makeAutoObservable(this);
   }
 
-  changeCurrentWeapon(weapon: PrimaryOrSecondaryWeapon | Grenade) {
-    this.currentWeapon = weapon;
+  changeCurrentWeaponInfo(id: number, weaponType: number) {
+    this.currentWeaponInfo = { id: id, weaponType: weaponType };
   }
 
-  clearCurrentWeapon() {
-    this.currentWeapon = {} as PrimaryOrSecondaryWeapon | Grenade;
+  clearCurrentWeaponInfo() {
+    this.currentWeaponInfo = {};
   }
 }
 

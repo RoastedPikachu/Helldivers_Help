@@ -1,6 +1,6 @@
 import { makeAutoObservable } from "mobx";
 
-import { Booster } from "@/utils/generalInterfaces";
+import { Booster } from "@/utils/storeInterfaces";
 
 class BoostersStore {
   boosters = [
