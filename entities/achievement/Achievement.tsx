@@ -17,24 +17,22 @@ const Achievement: React.FC<AchievementProps> = ({
   accomplishmentWay,
 }) => {
   return (
-    <div className="px-[30px] py-[30px] w-full h-auto bg-[#00293a] border-2 border-[#2cc388] rounded-[10px]">
-      <div className="flex">
-        <img
-          src={iconPath}
-          alt=""
-          className="w-[100px] h-[100px] rounded-[7.5px]"
-        />
+    <div className="achievementWidget">
+      <div className="achievementWidget_Top">
+        <img src={iconPath} alt="" className="achievementWidget_Top_Image" />
 
-        <span className="mt-[-10px] ml-[20px]">
-          <p className="text-[#ffffff] text-[1.75rem] font-['Exo2'] font-bold">
+        <span className="achievementWidget_Top_Image_TextWrapper">
+          <p className="achievementWidget_Top_Image_TextWrapper_Title">
             {title}
           </p>
 
-          <p className="mt-[10px] description">{description}</p>
+          <p className="achievementWidget_Top_Image_TextWrapper_Description">
+            {description}
+          </p>
         </span>
       </div>
 
-      <p className="mt-[20px] secondaryText">{accomplishmentWay}</p>
+      <p className="achievementWidget_Text">{accomplishmentWay}</p>
     </div>
   );
 };

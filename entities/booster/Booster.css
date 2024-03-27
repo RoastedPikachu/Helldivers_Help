@@ -1,11 +1,35 @@
-.description {
-    @apply text-[#2cc388] text-[1.125rem] font-['Exo2'] font-medium;
-    overflow-wrap: break-word;
-    hyphens: auto;
+.boosterWidget {
+    @apply relative px-[30px] py-[30px] w-full h-auto bg-[#00293a] border-2 border-[#2cc388] rounded-[10px];
 }
 
-/*.secondaryText {*/
-/*    @apply text-[#ffffff] text-[1.375rem] font-['Exo2'] font-medium brightness-75;*/
-/*    overflow-wrap: break-word;*/
-/*    hyphens: auto;*/
-/*}*/
+.boosterWidget_Top {
+    @apply flex items-center;
+}
+
+.boosterWidget_Top_Image {
+    @apply w-[80px] h-[80px] border-2 border-[#2cc388] rounded-[7.5px];
+}
+
+.boosterWidget_Top_Title {
+    @apply ml-[20px] text-[#ffffff] text-[1.75rem] font-['Exo2'] font-bold;
+}
+
+.boosterWidget_Effect {
+    @apply mt-[10px] pb-[50px] text-[#ffffff] text-[1.25rem] font-['Exo2'] font-medium brightness-75;
+}
+
+.boosterWidget_Bottom {
+    @apply absolute flex items-center bottom-[20px];
+}
+
+.boosterWidget_Bottom_Text {
+    @apply text-[#2cc388] text-[1.5rem] font-['Exo2'] font-semibold;
+}
+
+.boosterWidget_Bottom_Number {
+    @apply ml-[20px] text-[#ffffff] text-[1.75rem] font-['Insignia'] font-bold;
+}
+
+.boosterWidget_Bottom_Image {
+    @apply ml-[10px] w-[35px] h-[35px];
+}

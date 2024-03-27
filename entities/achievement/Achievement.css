@@ -1,11 +1,27 @@
-.description {
-    @apply text-[#2cc388] text-[1.125rem] font-['Exo2'] font-medium;
-    overflow-wrap: break-word;
-    hyphens: auto;
+.achievementWidget {
+    @apply px-[30px] py-[30px] w-full h-auto bg-[#00293a] border-2 border-[#2cc388] rounded-[10px];
 }
 
-.secondaryText {
-    @apply text-[#ffffff] text-[1.375rem] font-['Exo2'] font-medium brightness-75;
-    overflow-wrap: break-word;
-    hyphens: auto;
+.achievementWidget_Top {
+    @apply flex items-center;
+}
+
+.achievementWidget_Top_Image {
+    @apply w-[80px] h-[80px] rounded-[7.5px];
+}
+
+.achievementWidget_Top_Image_TextWrapper {
+    @apply ml-[20px];
+}
+
+.achievementWidget_Top_Image_TextWrapper_Title {
+    @apply text-[#ffffff] text-[1.75rem] font-['Exo2'] font-bold;
+}
+
+.achievementWidget_Top_Image_TextWrapper_Description {
+    @apply mt-[10px] text-[#2cc388] text-[1.125rem] font-['Exo2'] font-medium;
+}
+
+.achievementWidget_Text {
+    @apply mt-[20px] text-[#ffffff] text-[1.375rem] font-['Exo2'] font-medium brightness-75;
 }

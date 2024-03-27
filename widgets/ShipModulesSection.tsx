@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-import { shipModulesStore } from "@/store/shipModules";
+import { shipModulesStore } from "@/store/ShipModulesStore";
 
 import ShipModule from "@/entities/shipModule/ShipModule";
 

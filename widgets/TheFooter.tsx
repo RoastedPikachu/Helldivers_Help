@@ -40,7 +40,7 @@ const TheFooter = () => {
         </span>
 
         <img
-          src="/static/generalIcons/SkullIcon.svg"
+          src="/static/generalIcons/FooterSkullIcon.png"
           alt=""
           className="w-[75px] h-[75px]"
         />
