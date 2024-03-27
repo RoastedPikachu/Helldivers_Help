@@ -79,3 +79,28 @@ export interface ResourceTableTitle {
   id: number;
   name: string;
 }
+
+interface Weapon {
+  id: number;
+  imagePath: string;
+  name: string;
+  description: string;
+  price: number | string;
+  damage: number;
+}
+
+export interface PrimaryOrSecondaryWeapon extends Weapon {
+  magsCount: number;
+  roundsPerMag: number;
+  totalRounds: number;
+  recoil: number;
+  fireRate: number;
+  totalDamage: number;
+  dpm: number;
+}
+
+export interface Grenade extends Weapon {
+  fuseTime: number;
+  penetration: number;
+  radius: number;
+}
