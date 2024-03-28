@@ -11,7 +11,7 @@
 }
 
 .pageContentSection {
-    @apply relative grid grid-cols-1 grid-rows-[54] gap-y-[30px] gap-x-[30px] mt-[50px] w-full h-auto;
+    @apply relative grid grid-cols-1 grid-rows-[54] gap-y-[30px] gap-x-[30px] w-full h-auto;
 }
 
 .pageContentSection_Block {

@@ -1,9 +1,9 @@
 .planetWidget {
-    @apply relative px-[30px] pt-[20px] pb-[30px] w-full h-auto min-h-[120px] bg-[#00293a] border-2 border-[#2cc388] rounded-[10px] overflow-hidden cursor-pointer;
+    @apply relative px-[30px] pt-[20px] pb-[30px] w-full h-auto min-h-[120px] bg-[#00293a] border-2 border-[#2cc388] rounded-[10px] cursor-pointer;
 }
 
 .planetWidget_Image {
-    @apply absolute top-0 left-0 w-full h-full;
+    @apply absolute top-0 left-0 w-full h-full rounded-[7.5px];
 }
 
 .planetWidget_Title {
@@ -11,9 +11,13 @@
 }
 
 .planetWidget_WeatherConditions_Container {
-    @apply absolute flex items-center bottom-[10px] right-0 w-auto h-auto;
+    @apply absolute flex items-center bottom-[10px] right-0 w-auto h-auto cursor-pointer;
 }
 
-.planetWidget_WeatherConditions_Container_Image {
-    @apply mr-[20px] p-[2.5px] w-[45px] h-[45px] bg-[#ffffff] rounded-[7.5px];
+.planetWidget_WeatherConditions_Container_ImageWrapper {
+    @apply relative w-auto h-auto;
+}
+
+.planetWidget_WeatherConditions_Container_ImageWrapper_Image {
+    @apply mr-[20px] p-[2.5px] w-[45px] h-[45px] bg-[#ffffff] rounded-[7.5px] z-50;
 }
