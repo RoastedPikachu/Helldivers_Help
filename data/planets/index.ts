@@ -92,7 +92,7 @@ export const planets = {
   },
   11: {
     name: "Цербер IIIc",
-    sector: galaxySectors.Cancri,
+    sector: galaxySectors.cancri,
     biome: biomes.desert,
     weatherConditions: [
       weatherConditions.intenseHeat,
@@ -101,13 +101,13 @@ export const planets = {
   },
   12: {
     name: "Водопады процветания",
-    sector: galaxySectors.Cancri,
+    sector: galaxySectors.cancri,
     biome: biomes.rainForest,
     weatherConditions: [weatherConditions.ionStorms],
   },
   13: {
     name: "Окул VI",
-    sector: galaxySectors.Gothmar,
+    sector: galaxySectors.gothmar,
     biome: biomes.winter,
     weatherConditions: [
       weatherConditions.extremeCold,
@@ -116,13 +116,13 @@ export const planets = {
   },
   14: {
     name: "Залив мучеников",
-    sector: galaxySectors.Cantolus,
+    sector: galaxySectors.cantolus,
     biome: biomes.iceMoss,
     weatherConditions: [weatherConditions.extremeCold],
   },
   15: {
     name: "Пик свободы",
-    sector: galaxySectors.Cantolus,
+    sector: galaxySectors.cantolus,
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
   },
@@ -137,7 +137,7 @@ export const planets = {
   },
   17: {
     name: "Кельвинор",
-    sector: galaxySectors.Cantolus,
+    sector: galaxySectors.cantolus,
     biome: biomes.winter,
     weatherConditions: [
       weatherConditions.extremeCold,
@@ -146,7 +146,7 @@ export const planets = {
   },
   18: {
     name: "Призрак",
-    sector: galaxySectors.Idun,
+    sector: galaxySectors.idun,
     biome: null,
     weatherConditions: [
       weatherConditions.intenseHeat,
@@ -155,13 +155,13 @@ export const planets = {
   },
   19: {
     name: "Игла",
-    sector: galaxySectors.Kelvin,
+    sector: galaxySectors.kelvin,
     biome: biomes.iceMoss,
     weatherConditions: [weatherConditions.extremeCold],
   },
   20: {
     name: "Новая кируна",
-    sector: galaxySectors.Kelvin,
+    sector: galaxySectors.kelvin,
     biome: biomes.winter,
     weatherConditions: [
       weatherConditions.extremeCold,
@@ -170,13 +170,13 @@ export const planets = {
   },
   21: {
     name: "Форт правосудия",
-    sector: galaxySectors.Kelvin,
+    sector: galaxySectors.kelvin,
     biome: null,
     weatherConditions: [],
   },
   22: {
     name: "Зегемский рай",
-    sector: galaxySectors.Kelvin,
+    sector: galaxySectors.kelvin,
     biome: biomes.jungle,
     weatherConditions: [
       weatherConditions.volcanicActivity,
@@ -185,13 +185,13 @@ export const planets = {
   },
   23: {
     name: "Провидение",
-    sector: galaxySectors.Iptus,
+    sector: galaxySectors.iptus,
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
   },
   24: {
     name: "Примортия",
-    sector: galaxySectors.Iptus,
+    sector: galaxySectors.iptus,
     biome: biomes.jungle,
     weatherConditions: [
       weatherConditions.volcanicActivity,
@@ -251,13 +251,13 @@ export const planets = {
   },
   32: {
     name: "Форт безопасности",
-    sector: galaxySectors.Cancri,
+    sector: galaxySectors.cancri,
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
   },
   33: {
     name: "Сейшельский пляж",
-    sector: galaxySectors.Cancri,
+    sector: galaxySectors.cancri,
     biome: biomes.ethereal,
     weatherConditions: [],
   },
@@ -273,25 +273,25 @@ export const planets = {
   },
   35: {
     name: "Эффлувия",
-    sector: galaxySectors.Cancri,
+    sector: galaxySectors.cancri,
     biome: biomes.canyon,
     weatherConditions: [weatherConditions.tremors],
   },
   36: {
     name: "Солгаст",
-    sector: galaxySectors.Gothmar,
+    sector: galaxySectors.gothmar,
     biome: biomes.swamp,
     weatherConditions: [weatherConditions.thickFog],
   },
   37: {
     name: "Дилувия",
-    sector: galaxySectors.Gothmar,
+    sector: galaxySectors.gothmar,
     biome: null,
     weatherConditions: [],
   },
   38: {
     name: "Виридия-прайм",
-    sector: galaxySectors.Cantolus,
+    sector: galaxySectors.cantolus,
     biome: null,
     weatherConditions: [
       weatherConditions.intenseHeat,
@@ -300,7 +300,7 @@ export const planets = {
   },
   39: {
     name: "Обари",
-    sector: galaxySectors.Cantolus,
+    sector: galaxySectors.cantolus,
     biome: biomes.highlands,
     weatherConditions: [
       weatherConditions.thickFog,
@@ -309,7 +309,7 @@ export const planets = {
   },
   40: {
     name: "Мирадеш",
-    sector: galaxySectors.Idun,
+    sector: galaxySectors.idun,
     biome: biomes.desert,
     weatherConditions: [
       weatherConditions.intenseHeat,
@@ -318,13 +318,13 @@ export const planets = {
   },
   41: {
     name: "Атрама",
-    sector: galaxySectors.Idun,
+    sector: galaxySectors.idun,
     biome: biomes.rainForest,
     weatherConditions: [weatherConditions.ionStorms],
   },
   42: {
     name: "Эмерия",
-    sector: galaxySectors.Kelvin,
+    sector: galaxySectors.kelvin,
     biome: biomes.canyon,
     weatherConditions: [weatherConditions.tremors],
   },
@@ -360,13 +360,13 @@ export const planets = {
   },
   47: {
     name: "Кракабос",
-    sector: galaxySectors.Iptus,
+    sector: galaxySectors.iptus,
     biome: biomes.iceMoss,
     weatherConditions: [weatherConditions.extremeCold],
   },
   48: {
     name: "Иридика",
-    sector: galaxySectors.Iptus,
+    sector: galaxySectors.iptus,
     biome: biomes.ethereal,
     weatherConditions: [],
   },
@@ -420,25 +420,25 @@ export const planets = {
   },
   55: {
     name: "Юкория",
-    sector: galaxySectors.Morgon,
+    sector: galaxySectors.morgon,
     biome: biomes.iceMoss,
     weatherConditions: [weatherConditions.extremeCold],
   },
   56: {
     name: "Мириум",
-    sector: galaxySectors.Morgon,
+    sector: galaxySectors.morgon,
     biome: biomes.canyon,
     weatherConditions: [weatherConditions.tremors],
   },
   57: {
     name: "Керт II",
-    sector: galaxySectors.Rictus,
+    sector: galaxySectors.rictus,
     biome: null,
     weatherConditions: [],
   },
   58: {
     name: "Парш",
-    sector: galaxySectors.Rictus,
+    sector: galaxySectors.rictus,
     biome: biomes.winter,
     weatherConditions: [
       weatherConditions.extremeCold,
@@ -447,7 +447,7 @@ export const planets = {
   },
   59: {
     name: "Риф",
-    sector: galaxySectors.Saleria,
+    sector: galaxySectors.saleria,
     biome: biomes.highlands,
     weatherConditions: [
       weatherConditions.thickFog,
@@ -456,7 +456,7 @@ export const planets = {
   },
   60: {
     name: "Ирулта",
-    sector: galaxySectors.Saleria,
+    sector: galaxySectors.saleria,
     biome: biomes.jungle,
     weatherConditions: [
       weatherConditions.volcanicActivity,
@@ -465,19 +465,19 @@ export const planets = {
   },
   61: {
     name: "Эморат",
-    sector: galaxySectors.Meridian,
+    sector: galaxySectors.meridian,
     biome: null,
     weatherConditions: [],
   },
   62: {
     name: "Илдуна-прайм",
-    sector: galaxySectors.Meridian,
+    sector: galaxySectors.meridian,
     biome: null,
     weatherConditions: [],
   },
   63: {
     name: "Утроба",
-    sector: galaxySectors.Idun,
+    sector: galaxySectors.idun,
     biome: null,
     weatherConditions: [weatherConditions.intenseHeat],
   },
@@ -544,7 +544,7 @@ export const planets = {
   },
   71: {
     name: "Ратч",
-    sector: galaxySectors.Iptus,
+    sector: galaxySectors.iptus,
     biome: null,
     weatherConditions: [
       weatherConditions.intenseHeat,
@@ -553,7 +553,7 @@ export const planets = {
   },
   72: {
     name: "Юльхейм",
-    sector: galaxySectors.Nanos,
+    sector: galaxySectors.nanos,
     biome: biomes.winter,
     weatherConditions: [
       weatherConditions.extremeCold,
@@ -562,7 +562,7 @@ export const planets = {
   },
   73: {
     name: "Валгаард",
-    sector: galaxySectors.Iptus,
+    sector: galaxySectors.iptus,
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
   },
@@ -677,7 +677,7 @@ export const planets = {
   },
   88: {
     name: "Регнус",
-    sector: galaxySectors.Morgon,
+    sector: galaxySectors.morgon,
     biome: biomes.jungle,
     weatherConditions: [
       weatherConditions.volcanicActivity,
@@ -686,7 +686,7 @@ export const planets = {
   },
   89: {
     name: "Мог",
-    sector: galaxySectors.Morgon,
+    sector: galaxySectors.morgon,
     biome: biomes.winter,
     weatherConditions: [
       weatherConditions.extremeCold,
@@ -695,13 +695,13 @@ export const planets = {
   },
   90: {
     name: "Вальмокс",
-    sector: galaxySectors.Rictus,
+    sector: galaxySectors.rictus,
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
   },
   91: {
     name: "Иро",
-    sector: galaxySectors.Rictus,
+    sector: galaxySectors.rictus,
     biome: biomes.highlands,
     weatherConditions: [
       weatherConditions.thickFog,
@@ -710,7 +710,7 @@ export const planets = {
   },
   92: {
     name: "Графмер",
-    sector: galaxySectors.Rictus,
+    sector: galaxySectors.rictus,
     biome: biomes.iceMoss,
     weatherConditions: [weatherConditions.extremeCold],
   },
@@ -725,7 +725,7 @@ export const planets = {
   },
   94: {
     name: "Оазис",
-    sector: galaxySectors.Rictus,
+    sector: galaxySectors.rictus,
     biome: biomes.jungle,
     weatherConditions: [
       weatherConditions.volcanicActivity,
@@ -734,13 +734,13 @@ export const planets = {
   },
   95: {
     name: "Генезис-прайм",
-    sector: galaxySectors.Rictus,
+    sector: galaxySectors.rictus,
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
   },
   96: {
     name: "Аванпост 32",
-    sector: galaxySectors.Saleria,
+    sector: galaxySectors.saleria,
     biome: null,
     weatherConditions: [
       weatherConditions.intenseHeat,
@@ -749,7 +749,7 @@ export const planets = {
   },
   97: {
     name: "Калипсо",
-    sector: galaxySectors.Saleria,
+    sector: galaxySectors.saleria,
     biome: biomes.canyon,
     weatherConditions: [weatherConditions.tremors],
   },
@@ -782,13 +782,13 @@ export const planets = {
   },
   102: {
     name: "Хребет свободы",
-    sector: galaxySectors.Meridian,
+    sector: galaxySectors.meridian,
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
   },
   103: {
     name: "Болдрик-прайм",
-    sector: galaxySectors.Meridian,
+    sector: galaxySectors.meridian,
     biome: biomes.jungle,
     weatherConditions: [
       weatherConditions.volcanicActivity,
@@ -833,7 +833,7 @@ export const planets = {
   },
   109: {
     name: "Дольф",
-    sector: galaxySectors.Nanos,
+    sector: galaxySectors.nanos,
     biome: null,
     weatherConditions: [
       weatherConditions.extremeCold,
@@ -842,13 +842,13 @@ export const planets = {
   },
   110: {
     name: "Беквам III",
-    sector: galaxySectors.Nanos,
+    sector: galaxySectors.nanos,
     biome: null,
     weatherConditions: [],
   },
   111: {
     name: "Дума тюр",
-    sector: galaxySectors.Nanos,
+    sector: galaxySectors.nanos,
     biome: null,
     weatherConditions: [],
   },
@@ -1439,7 +1439,7 @@ export const planets = {
   },
   188: {
     name: "Клака 5",
-    sector: galaxySectors.Alstrad,
+    sector: galaxySectors.alstrad,
     biome: biomes.jungle,
     weatherConditions: [
       weatherConditions.volcanicActivity,
@@ -1448,7 +1448,7 @@ export const planets = {
   },
   189: {
     name: "Порт-кнет",
-    sector: galaxySectors.Alstrad,
+    sector: galaxySectors.alstrad,
     biome: biomes.desolate,
     weatherConditions: [
       weatherConditions.intenseHeat,
@@ -1457,7 +1457,7 @@ export const planets = {
   },
   190: {
     name: "Краз",
-    sector: galaxySectors.Alstrad,
+    sector: galaxySectors.alstrad,
     biome: biomes.canyon,
     weatherConditions: [weatherConditions.tremors],
   },
