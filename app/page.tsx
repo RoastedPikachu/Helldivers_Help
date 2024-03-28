@@ -56,7 +56,7 @@ const Page = () => {
     },
     {
       id: 11,
-      link: "/",
+      link: "/planets",
       title: "Планеты",
     },
   ];
