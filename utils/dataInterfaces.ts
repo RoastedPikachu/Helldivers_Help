@@ -3,11 +3,14 @@ import { Stratagem } from "@/utils/generalInterfaces";
 interface Biome {
   surface: string;
   description: string;
+  imagePath: string;
 }
 
 interface WeatherCondition {
+  id: number;
   name: string;
   description: string;
+  iconPath: string;
 }
 
 export type BiomesObject = {
