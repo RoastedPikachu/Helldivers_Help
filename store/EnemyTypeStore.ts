@@ -30,7 +30,7 @@ class EnemyTypeStore {
     },
     {
       id: 3,
-      iconPath: "",
+      iconPath: "/static/terminids/ShriekerImage.png",
       imagePath: "",
       dangerous:
         "Быстро передвигается в воздухе и атакует парами. Один удар может вас убить, так как приоритетной целью является голова.",
