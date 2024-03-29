@@ -32,18 +32,18 @@ const Page = () => {
             <div className="flex items-center mt-[20px]">
               <a
                 href="https://t.me/helldivers_help_support"
-                className="flex justify-center items-center p-[2.5px] w-[55px] h-[55px] border-2 border-[#2cc388] rounded-[7.5px]"
+                className="flex justify-center items-center p-[2.5px] w-[55px] mmedium:w-[50px] msmall:w-[45px] h-[55px] mmedium:h-[50px] msmall:h-[45px] border-2 border-[#2cc388] rounded-[7.5px]"
               >
                 <img
                   src="/static/generalLogos/TelegramLogo.svg"
                   alt=""
-                  className="w-[40px] h-[40px]"
+                  className="w-[40px] mmedium:w-[37.5px] msmall:w-[35px] h-[40px] mmedium:h-[37.5px] msmall:h-[35px]"
                 />
               </a>
 
               <a
                 href="https://boosty.to/helldivers.help"
-                className="flex justify-center items-center ml-[20px] p-[2.5px] w-[55px] h-[55px] bg-[#f06d2a] border-2 border-[#2cc388] rounded-[7.5px]"
+                className="flex justify-center items-center ml-[20px] p-[2.5px] w-[55px] mmedium:w-[50px] msmall:w-[45px] h-[55px] mmedium:h-[50px] msmall:h-[45px] bg-[#f06d2a] border-2 border-[#2cc388] rounded-[7.5px]"
               >
                 <img
                   src="/static/generalLogos/BoostyLogo.png"

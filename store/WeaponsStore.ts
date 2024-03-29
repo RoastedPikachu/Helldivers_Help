@@ -478,7 +478,7 @@ class WeaponsStore {
   }
 
   clearCurrentWeaponInfo() {
-    this.currentWeaponInfo = {};
+    this.currentWeaponInfo = {} as CurrentWeaponInfo;
   }
 }
 

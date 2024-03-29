@@ -40,16 +40,12 @@ export interface Grenade extends Weapon {
   radius: number;
 }
 
-export type CurrentWeaponInfo =
-  | {
-      id: number;
-      weaponType: number;
-    }
-  | {};
+export type CurrentWeaponInfo = {
+  id: number;
+  weaponType: number;
+};
 
-export type CurrentPlanetInfo =
-  | {
-      id: number;
-      sector: any;
-    }
-  | {};
+export type CurrentPlanetInfo = {
+  id: number;
+  sector: any;
+};

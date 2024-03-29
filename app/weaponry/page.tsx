@@ -43,6 +43,7 @@ const Page = observer(() => {
   const handleSlideChange = (swiper: any) => {
     setCurrentSlideIndex(swiper?.activeIndex);
   };
+
   return (
     <Observer>
       {() => (
@@ -93,23 +94,33 @@ const Page = observer(() => {
                         key={weapon.id}
                         className="pageSection_Block_SliderWrapper_Slider_Slide"
                       >
-                        <WeaponAdditionalInfoModalWindow
-                          imagePath={weapon.imagePath}
-                          name={weapon.name}
-                          description={weapon.description}
-                          price={weapon.price}
-                          damage={weapon.damage}
-                          magsCount={weapon.magsCount}
-                          roundsPerMag={weapon.roundsPerMag}
-                          totalRounds={weapon.totalRounds}
-                          recoil={weapon.recoil}
-                          fireRate={weapon.fireRate}
-                          totalDamage={weapon.totalDamage}
-                          dpm={weapon.dpm}
-                          fuseTime={weapon.fuseTime}
-                          penetration={weapon.penetration}
-                          radius={weapon.radius}
-                        />
+                        {"magsCount" in weapon ? (
+                          <WeaponAdditionalInfoModalWindow
+                            imagePath={weapon.imagePath}
+                            name={weapon.name}
+                            description={weapon.description}
+                            price={weapon.price}
+                            damage={weapon.damage}
+                            magsCount={weapon.magsCount}
+                            roundsPerMag={weapon.roundsPerMag}
+                            totalRounds={weapon.totalRounds}
+                            recoil={weapon.recoil}
+                            fireRate={weapon.fireRate}
+                            totalDamage={weapon.totalDamage}
+                            dpm={weapon.dpm}
+                          />
+                        ) : (
+                          <WeaponAdditionalInfoModalWindow
+                            imagePath={weapon.imagePath}
+                            name={weapon.name}
+                            description={weapon.description}
+                            price={weapon.price}
+                            damage={weapon.damage}
+                            fuseTime={weapon.fuseTime}
+                            penetration={weapon.penetration}
+                            radius={weapon.radius}
+                          />
+                        )}
                       </SwiperSlide>
                     ))}
                   </Swiper>

@@ -2288,7 +2288,7 @@ class PlanetsStore {
   }
 
   clearCurrentPlanetInfo() {
-    this.currentPlanetInfo = {};
+    this.currentPlanetInfo = {} as CurrentPlanetInfo;
   }
 }
 
