@@ -1,9 +1,9 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 
 import { observer, Observer } from "mobx-react-lite";
 
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
 import { weaponsStore } from "@/store/WeaponsStore";
@@ -13,8 +13,8 @@ import TheFooter from "@/widgets/TheFooter";
 
 import RunningLine from "@/shared/RunningLine";
 
-import Weapon from "@/entities/weapon/Weapon";
-import WeaponAdditionalInfoModalWindow from "@/entities/currentWeapon/WeaponAdditionalInfoModalWindow";
+import Weapon from "@/entities/weaponryPage/weapon/Weapon";
+import WeaponAdditionalInfoModalWindow from "@/entities/weaponryPage/weaponAdditionalInfoModalWindow/WeaponAdditionalInfoModalWindow";
 
 import "swiper/css";
 import "swiper/css/navigation";
