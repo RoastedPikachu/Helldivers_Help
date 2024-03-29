@@ -1,18 +1,9 @@
-"use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const TheFooter = () => {
-  const [currentYear, setCurrentYear] = useState(2000);
-
-  useEffect(() => {
-    const currentDate = new Date();
-
-    setCurrentYear(currentDate.getFullYear());
-  }, []);
-
   return (
-    <footer className="relative grid justify-items-center px-[5%] py-[20px] w-full h-auto bg-[#00293a] border-t-[1px] border-[#2cc384]">
-      <div className="flex justify-between items-center w-[1090px] h-auto">
+    <footer className="relative grid justify-items-center py-[20px] px-[5%] deskWide:px-[calc((100%-1440px)/2)] w-full h-auto bg-[#00293a] border-t-[1px] border-[#2cc384]">
+      <div className="flex justify-between items-center w-full h-auto">
         <span className="relative w-auto mt-[5px] text-[#5a7f8f] text-[1.25rem]">
           <h3 className="pb-[10px] text-[#ffffff] text-[1.375rem] font-['Exo2'] font-medium">
             ССЫЛКИ
@@ -25,24 +16,12 @@ const TheFooter = () => {
           >
             Чат поддержки
           </a>
-
-          {/*<p className="flex items-center mt-[10px]">*/}
-          {/*  <p className="font-['Exo2'] font-medium">Сайт создан</p>*/}
-
-          {/*  <a*/}
-          {/*    href="https://github.com/RoastedPikachu"*/}
-          {/*    target="_blank"*/}
-          {/*    className="mt-[2.5px] ml-[10px] text-[#2cc388] font-['Insignia']"*/}
-          {/*  >*/}
-          {/*    RoastedPikachu*/}
-          {/*  </a>*/}
-          {/*</p>*/}
         </span>
 
         <img
-          src="/static/generalIcons/FooterSkullIcon.png"
+          src="/static/generalLogos/HelldiversLogo.png"
           alt=""
-          className="w-[75px] h-[75px]"
+          className="w-[200px] h-[75px]"
         />
 
         <span className="relative w-auto mt-[5px] text-[#5a7f8f] text-[1.25rem]">
@@ -51,7 +30,7 @@ const TheFooter = () => {
           </h3>
 
           <a
-            href="https://boosty.to/korobkaboris"
+            href="https://boosty.to/helldivers.help"
             target="_blank"
             className="block w-full text-[#2cc388] text-right font-['Insignia']"
           >
