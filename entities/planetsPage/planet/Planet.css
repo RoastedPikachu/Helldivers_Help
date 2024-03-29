@@ -7,7 +7,7 @@
 }
 
 .planetWidget_Title {
-    @apply absolute bottom-[10px] left-[20px] px-[10px] w-auto h-auto bg-[#00000080] rounded-[7.5px] text-[#2cc388] text-[1.25rem] text-left font-['Exo2'] font-bold brightness-125;
+    @apply absolute bottom-[10px] left-[20px] px-[10px] w-auto max-w-[60%] h-auto bg-[#00000080] rounded-[7.5px] text-[#2cc388] text-[1.25rem] text-left font-['Exo2'] font-bold brightness-125;
 }
 
 .planetWidget_WeatherConditions_Container {

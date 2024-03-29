@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-import "./WeatherConditionAdditionalInfo.css";
+import "./WeatherConditionAdditionalInfoModalWindow.css";
 
 interface WeatherConditionAdditionalInfoProps {
   isVisible: boolean;
@@ -9,7 +9,7 @@ interface WeatherConditionAdditionalInfoProps {
   description: string;
 }
 
-const WeatherConditionAdditionalInfo: React.FC<
+const WeatherConditionAdditionalInfoModalWindow: React.FC<
   WeatherConditionAdditionalInfoProps
 > = ({ isVisible, name, description }) => {
   return (
@@ -23,4 +23,4 @@ const WeatherConditionAdditionalInfo: React.FC<
   );
 };
 
-export default WeatherConditionAdditionalInfo;
+export default WeatherConditionAdditionalInfoModalWindow;
