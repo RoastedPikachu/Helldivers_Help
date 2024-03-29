@@ -1,0 +1,15 @@
+.pageSection {
+    @apply relative w-full h-auto;
+}
+
+.pageSection_Block {
+    @apply relative w-full h-auto;
+}
+
+.pageSection_Block_Title {
+    @apply mt-[30px] text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold;
+}
+
+.pageSection_Block_Wrapper {
+    @apply grid grid-cols-1 w-full h-full;
+}

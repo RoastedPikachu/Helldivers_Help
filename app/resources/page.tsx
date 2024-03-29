@@ -80,7 +80,10 @@ const Page = () => {
           вооружение, а также открывать боевой пропуск.
         </p>
 
-        <section className="relative grid grid-cols-3 grid-rows-2 gap-y-[30px] gap-x-[30px] mt-[50px] w-full h-auto">
+        <section
+          id="ResourceInfo"
+          className="relative grid grid-cols-3 grid-rows-2 gap-y-[30px] gap-x-[30px] mt-[50px] w-full h-auto"
+        >
           {resources.map((resource) => (
             <Resource
               key={resource.id}
@@ -92,7 +95,7 @@ const Page = () => {
           ))}
         </section>
 
-        <section id="ResourceInfo" className="mt-[50px]">
+        <section className="mt-[50px]">
           {currentResource.id && (
             <CurrentResourceInfo
               title={currentResource.title}

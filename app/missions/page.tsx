@@ -1,9 +1,19 @@
 import React from "react";
 
+import {
+  automatonMissions,
+  generalMissions,
+  terminidMissions,
+} from "@/data/missions";
+
 import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
 
 import RunningLine from "@/shared/RunningLine";
+
+import Mission from "@/entities/mission/Mission";
+
+import "./Missions.css";
 
 const Page = () => {
   return (
@@ -32,6 +42,53 @@ const Page = () => {
           помнить, без Адских Десантников миссию не выполнить, поэтому вы —
           элита Супер-Земли.
         </p>
+
+        <section className="pageSection">
+          <div className="pageSection_Block">
+            <h3 className="pageSection_Block_Title">ОБЩИЕ</h3>
+
+            <div className="pageSection_Block_Wrapper">
+              {generalMissions.map((mission) => (
+                <Mission
+                  key={mission.id}
+                  imagePath={mission.imagePath}
+                  title={mission.title}
+                  description={mission.description}
+                />
+              ))}
+            </div>
+          </div>
+
+          <div className="pageSection_Block">
+            <h3 className="pageSection_Block_Title">ПРОТИВ ТЕРМИНИДОВ</h3>
+
+            <div className="pageSection_Block_Wrapper">
+              {terminidMissions.map((mission) => (
+                <Mission
+                  key={mission.id}
+                  imagePath={mission.imagePath}
+                  title={mission.title}
+                  description={mission.description}
+                />
+              ))}
+            </div>
+          </div>
+
+          <div className="pageSection_Block">
+            <h3 className="pageSection_Block_Title">ПРОТИВ АВТОМАТОНОВ</h3>
+
+            <div className="pageSection_Block_Wrapper">
+              {automatonMissions.map((mission) => (
+                <Mission
+                  key={mission.id}
+                  imagePath={mission.imagePath}
+                  title={mission.title}
+                  description={mission.description}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
 
       <TheFooter />
