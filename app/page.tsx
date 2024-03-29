@@ -1,12 +1,20 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
+
+import { useRouter } from "next/navigation";
+
+import { isMobileDevice } from "@/utils/generalFunctions";
 
 import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
 
-import ManualSection from "@/entities/ManualSection";
 import RunningLine from "@/shared/RunningLine";
 
+import ManualSection from "@/entities/ManualSection";
+
 const Page = () => {
+  const router = useRouter();
+
   const manualSections = [
     { id: 1, link: "/weaponry", title: "Вооружение" },
     {
@@ -61,6 +69,11 @@ const Page = () => {
     },
   ];
 
+  useEffect(() => {
+    if (isMobileDevice()) {
+      router.push("/mobilePageBlank");
+    }
+  }, []);
   return (
     <>
       <TheHeader />
