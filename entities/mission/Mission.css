@@ -1,0 +1,19 @@
+.rootShipModuleBlock {
+    @apply relative mt-[30px] w-auto h-auto bg-[#00293a] border-2 border-[#2cc388] rounded-[10px];
+}
+
+.rootShipModuleBlock_Top {
+    @apply relative flex justify-between items-center px-[30px] w-full h-[80px];
+}
+
+.rootShipModuleBlock_Top_Title {
+    @apply ml-[20px] text-[#2cc388] text-[1.75rem] font-['Exo2'] font-bold;
+}
+
+.rootShipModuleBlock_Top_Button {
+    @apply relative flex justify-center items-center w-[30px] h-[30px];
+}
+
+.rootShipModuleBlock_Top_Button_Image {
+    @apply w-full h-full duration-500 ease-in-out;
+}
