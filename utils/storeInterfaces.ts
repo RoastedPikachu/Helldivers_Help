@@ -46,3 +46,10 @@ export type CurrentWeaponInfo =
       weaponType: number;
     }
   | {};
+
+export type CurrentPlanetInfo =
+  | {
+      id: number;
+      sector: any;
+    }
+  | {};

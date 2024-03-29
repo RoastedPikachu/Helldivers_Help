@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 
+import "./WeatherConditionAdditionalInfo.css";
+
 interface WeatherConditionAdditionalInfoProps {
   isVisible: boolean;
   name: string;
