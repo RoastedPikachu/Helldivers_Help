@@ -43,3 +43,10 @@ export interface ShipModule {
   improvementPrices: any;
   improvementAffectedStratagems: any;
 }
+
+export interface Mission {
+  id: number;
+  imagePath: string;
+  title: string;
+  description: string;
+}
