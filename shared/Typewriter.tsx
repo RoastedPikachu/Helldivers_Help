@@ -24,7 +24,7 @@ const Typewriter: React.FC<TypewriterProps> = ({ text, delay }) => {
     }
   }, [currentIndex, delay, text]);
 
-  return <p>{currentText}</p>;
+  return <>{currentText}</>;
 };
 
 export default Typewriter;
