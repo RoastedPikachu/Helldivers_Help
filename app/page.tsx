@@ -19,8 +19,8 @@ const Page = () => {
     { id: 1, link: "/weaponry", title: "Вооружение" },
     {
       id: 2,
-      link: "/",
-      title: "Снаряжение",
+      link: "/armorKits",
+      title: "Броня",
     },
     {
       id: 3,
