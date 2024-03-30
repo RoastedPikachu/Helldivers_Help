@@ -15,7 +15,6 @@ const ShipModulesSection = () => {
       {shipModulesStore.shipModules.map((shipModule) => (
         <ShipModule
           key={shipModule.id}
-          id={shipModule.id}
           title={shipModule.title}
           levelImages={shipModule.levelImages}
           improvementTitles={shipModule.improvementTitles}

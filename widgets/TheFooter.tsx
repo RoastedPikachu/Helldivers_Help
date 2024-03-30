@@ -5,7 +5,7 @@ const TheFooter = () => {
     <footer className="relative grid justify-items-center py-[20px] px-[5%] deskWide:px-[calc((100%-1440px)/2)] w-full h-auto bg-[#00293a] border-t-[1px] border-[#2cc384]">
       <div className="flex justify-between items-center w-full h-auto">
         <span className="relative w-auto mt-[5px] text-[#5a7f8f] text-[1.25rem]">
-          <h3 className="pb-[10px] text-[#ffffff] text-[1.375rem] font-['Exo2'] font-medium">
+          <h3 className="mt-[-15px] pb-[10px] text-[#ffffff] text-[1.375rem] font-['Exo2'] font-medium">
             ССЫЛКИ
           </h3>
 
@@ -25,7 +25,7 @@ const TheFooter = () => {
         />
 
         <span className="relative w-auto mt-[5px] text-[#5a7f8f] text-[1.25rem]">
-          <h3 className="pb-[10px] text-[#ffffff] text-[1.375rem] text-right font-['Exo2'] font-medium">
+          <h3 className="mt-[-15px] pb-[10px] text-[#ffffff] text-[1.375rem] text-right font-['Exo2'] font-medium">
             ПОДДЕРЖАТЬ САЙТ
           </h3>
 
