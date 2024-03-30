@@ -1,3 +1,5 @@
+import { ArmorObtainingType, Bonus } from "@/utils/dataInterfaces";
+
 export interface Achievement {
   id: number;
   iconPath: string;
@@ -49,3 +51,18 @@ export type CurrentPlanetInfo = {
   id: number;
   sector: any;
 };
+
+export interface ArmorKit {
+  id: number;
+  imagePath: string;
+  type: string;
+  name: string;
+  obtainingType: ArmorObtainingType;
+  obtainingMethod: string;
+  description: string;
+  price: number;
+  armorRating: number;
+  speed: number;
+  staminaRegen: number;
+  bonus: Bonus;
+}

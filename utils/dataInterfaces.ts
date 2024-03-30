@@ -57,3 +57,13 @@ export interface Mission {
   level: string;
   targetMissionCompletionCount?: TargetCount[];
 }
+
+export interface ArmorObtainingType {
+  typeNumber: number;
+  name: string;
+}
+
+export interface Bonus {
+  name: string;
+  description: string;
+}
