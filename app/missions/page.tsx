@@ -23,18 +23,18 @@ const Page = () => {
       <RunningLine />
 
       <main>
-        <h2 className="text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold">
-          ТИПЫ <b className="text-[#2cc388] font-bold">МИССИЙ</b>
+        <h2 className="pageTitle">
+          ТИПЫ <b className="pageTitle_Bold">МИССИЙ</b>
         </h2>
 
-        <p className="mt-[20px] w-[80%] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
+        <p className="pageDescription">
           Миссии — это то, выполнением чего занимается каждый Адский Десантник.
           Это сама цель их существования, ведь выполнение миссии — помощь людям,
           дополнительные ресурсы для Супер-Земли и продвижение демократии в
           галактике.
         </p>
 
-        <p className="mt-[20px] w-[80%] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
+        <p className="pageDescription">
           Каждая миссия является задачей, которую надо выполнить. Она может
           таить в себе страшные трудности и опасных врагов, но также и полезные
           ресурсы. Вам придется заниматься большим количеством задач: спасением
@@ -54,6 +54,10 @@ const Page = () => {
                   imagePath={mission.imagePath}
                   title={mission.title}
                   description={mission.description}
+                  level={mission.level}
+                  targetMissionCompletionCount={
+                    mission.targetMissionCompletionCount
+                  }
                 />
               ))}
             </div>
@@ -69,6 +73,10 @@ const Page = () => {
                   imagePath={mission.imagePath}
                   title={mission.title}
                   description={mission.description}
+                  level={mission.level}
+                  targetMissionCompletionCount={
+                    mission.targetMissionCompletionCount
+                  }
                 />
               ))}
             </div>
@@ -84,6 +92,10 @@ const Page = () => {
                   imagePath={mission.imagePath}
                   title={mission.title}
                   description={mission.description}
+                  level={mission.level}
+                  targetMissionCompletionCount={
+                    mission.targetMissionCompletionCount
+                  }
                 />
               ))}
             </div>

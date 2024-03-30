@@ -1,3 +1,15 @@
+.pageTitle {
+    @apply text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold;
+}
+
+.pageTitle_Bold {
+    @apply text-[#2cc388] font-bold;
+}
+
+.pageDescription {
+    @apply mt-[20px] w-[80%] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75;
+}
+
 .pageSection {
     @apply relative w-full h-auto;
 }
@@ -11,5 +23,5 @@
 }
 
 .pageSection_Block_Wrapper {
-    @apply grid grid-cols-1 w-full h-full;
+    @apply relative grid grid-cols-1 w-full h-auto;
 }
