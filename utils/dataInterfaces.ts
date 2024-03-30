@@ -44,9 +44,16 @@ export interface ShipModule {
   improvementAffectedStratagems: any;
 }
 
+export interface TargetCount {
+  id: number;
+  value: number;
+}
+
 export interface Mission {
   id: number;
   imagePath: string;
   title: string;
   description: string;
+  level: string;
+  targetMissionCompletionCount?: TargetCount[];
 }
