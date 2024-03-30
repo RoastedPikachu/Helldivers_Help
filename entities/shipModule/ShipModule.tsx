@@ -12,7 +12,6 @@ import ShipModuleStratagem from "@/entities/ShipModuleStratagem";
 import "./ShipModule.css";
 
 interface ShipModuleProps {
-  id: number;
   title: string;
   levelImages: string[];
   improvementTitles: string[];
@@ -23,7 +22,6 @@ interface ShipModuleProps {
 }
 
 const ShipModule: React.FC<ShipModuleProps> = ({
-  id,
   title,
   levelImages,
   improvementTitles,

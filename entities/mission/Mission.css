@@ -1,12 +1,24 @@
 .rootShipModuleBlock {
-    @apply relative mt-[30px] w-auto h-auto bg-[#00293a] border-2 border-[#2cc388] rounded-[10px];
+    @apply relative mt-[30px] w-auto h-auto min-h-[85px] bg-[#00293a] border-2 border-[#2cc388] rounded-[10px];
 }
 
 .rootShipModuleBlock_Top {
     @apply relative flex justify-between items-center px-[30px] w-full h-[80px];
 }
 
-.rootShipModuleBlock_Top_Title {
+.rootShipModuleBlock_Top_Left {
+    @apply flex items-center;
+}
+
+.rootShipModuleBlock_Top_Left_ImageWrapper {
+    @apply flex justify-center items-center p-[2.5px] w-[55px] h-[55px] bg-[#000000] border-2 border-[#2cc388] rounded-[7.5px];
+}
+
+.rootShipModuleBlock_Top_Left_ImageWrapper_Image {
+    @apply w-[45px] h-[45px];
+}
+
+.rootShipModuleBlock_Top_Left_Title {
     @apply ml-[20px] text-[#2cc388] text-[1.75rem] font-['Exo2'] font-bold;
 }
 
@@ -16,4 +28,40 @@
 
 .rootShipModuleBlock_Top_Button_Image {
     @apply w-full h-full duration-500 ease-in-out;
+}
+
+.rootShipModuleBlock_Bottom {
+    @apply relative px-[30px] pb-[25px] h-auto duration-1000 ease-in-out;
+}
+
+.rootShipModuleBlock_Bottom_Description {
+    @apply w-[75%] text-[#ffffff] text-[1.25rem] font-['Exo2'] font-medium brightness-75;
+}
+
+.rootShipModuleBlock_Bottom_Text {
+    @apply mt-[10px] text-[#ffffff] text-[1.25rem] font-['Exo2'] font-semibold;
+}
+
+.rootShipModuleBlock_Bottom_Text_Bold {
+    @apply pr-[10px] text-[#2cc388] font-bold;
+}
+
+.rootShipModuleBlock_Bottom_Table {
+    @apply flex mt-[20px] w-auto h-auto;
+}
+
+.rootShipModuleBlock_Bottom_Table_Left {
+    @apply relative w-[30%];
+}
+
+.rootShipModuleBlock_Bottom_Table_Left_Text {
+    @apply py-[15px] px-[20px] border-l-2 border-[#2cc388] text-[#2cc388] text-[1.25rem] font-['Exo2'] font-bold;
+}
+
+.rootShipModuleBlock_Bottom_Table_Right_Difficulty {
+    @apply py-[15px] px-[20px] border-t-2 border-[#2cc388] text-[#2cc388] text-[1.5rem] text-center font-['Insignia'] font-bold;
+}
+
+.rootShipModuleBlock_Bottom_Table_Right_Count {
+    @apply py-[29px] px-[20px] h-[86px] border-b-2 border-[#2cc388] text-[#2cc388] text-[1.5rem] text-center font-['Insignia'] font-bold;
 }
