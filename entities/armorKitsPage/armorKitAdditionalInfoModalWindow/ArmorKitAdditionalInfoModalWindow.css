@@ -1,0 +1,95 @@
+.currentArmor_Modal {
+    @apply relative px-[20px] pt-[40px] pb-[35px] h-auto w-[80vw] max-w-[1152px] bg-[#00293a] border-2 border-[#2cc388] rounded-[10px] z-30;
+}
+
+.currentArmor_Modal_CloseButton {
+    @apply absolute top-[40px] right-[40px] w-[35px] h-[35px] z-40;
+}
+
+.currentArmor_Modal_CloseButton_Image {
+    @apply w-full h-full;
+}
+
+.currentArmor_Modal_Top {
+    @apply relative flex h-auto max-h-[410px];
+}
+
+.currentArmor_Modal_Top_ImageWrapper {
+    @apply relative flex justify-center items-center w-[250px] h-[410px] bg-cover bg-no-repeat border-2 border-[#2cc388] rounded-t-[7.5px] rounded-bl-[7.5px] overflow-hidden;
+}
+
+.currentArmor_Modal_Top_ImageWrapper_Image {
+    @apply w-full h-full;
+}
+
+.currentArmor_Modal_Top_TextBlock {
+    @apply relative mt-[-10px] pl-[40px] pb-[20px] w-[calc(100%-270px)] h-auto border-b-2 border-[#2cc388];
+}
+
+.currentArmor_Modal_Top_TextBlock_Title {
+    @apply text-[#ffffff] text-[2rem] font-['Exo2'] font-bold;
+}
+
+.currentArmor_Modal_Top_TextBlock_Characteristic {
+    @apply flex items-center mt-[10px] w-auto h-[36px];
+}
+
+.currentArmor_Modal_Top_TextBlock_Characteristic_Name {
+    @apply text-[#2cc388] text-[1.5rem] font-['Exo2'] font-bold;
+}
+
+.currentArmor_Modal_Top_TextBlock_Characteristic_Value {
+    @apply text-[#ffffff] text-[1.5rem] font-['Exo2'] font-bold;
+}
+
+.currentArmor_Modal_Top_TextBlock_Characteristic_Description {
+    @apply text-[#ffffff] text-[1.25rem] font-['Exo2'] font-bold brightness-75 w-[80%];
+}
+
+.currentArmor_Modal_Top_TextBlock_Characteristic_Price {
+    @apply flex items-center ml-[20px] mt-[2.5px];
+}
+
+.currentArmor_Modal_Top_TextBlock_Characteristic_Price_Text {
+    @apply text-[#ffffff] text-[1.75rem] font-['Insignia'] font-bold;
+}
+
+.currentArmor_Modal_Top_TextBlock_Characteristic_Price_Image {
+    @apply ml-[10px] w-[35px] h-[35px];
+}
+
+.currentArmor_Modal_Top_TextBlock_Characteristic_Text {
+    @apply ml-[20px] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-bold;
+}
+
+.currentArmor_Modal_Bottom {
+    @apply relative pr-[17.5px];
+}
+
+.currentArmor_Modal_Bottom_Top {
+    @apply mt-[20px] w-auto h-auto;
+}
+
+.currentArmor_Modal_Bottom_Top_Title {
+    @apply text-[#2cc388] text-[1.5rem] font-['Exo2'] font-bold;
+}
+
+.currentArmor_Modal_Bottom_Top_Text {
+    @apply mt-[10px] text-[#ffffff] text-[1.25rem] font-['Exo2'] font-bold brightness-75;
+}
+
+.currentArmor_Modal_Bottom_Bottom {
+    @apply flex justify-between items-center mt-[20px] w-auto h-auto;
+}
+
+.currentArmor_Modal_Bottom_Bottom_TextBlock {
+    @apply flex items-center h-[36px];
+}
+
+.currentArmor_Modal_Bottom_Bottom_TextBlock_Title {
+    @apply text-[#2cc388] text-[1.375rem] font-['Exo2'] font-bold;
+}
+
+.currentArmor_Modal_Bottom_Bottom_TextBlock_Text {
+    @apply mt-[2.5px] ml-[20px] text-[#ffffff] text-[1.75rem] font-['Insignia'] font-bold;
+}
