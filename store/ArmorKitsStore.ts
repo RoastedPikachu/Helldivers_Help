@@ -3,9 +3,12 @@ import { makeAutoObservable } from "mobx";
 import { obtainingType } from "@/data/armorObtainingTypes";
 import { armorBonuses } from "@/data/armorBonuses";
 
-import { ArmorKit } from "@/utils/storeInterfaces";
+import { ArmorKit, CurrentArmorInfo } from "@/utils/storeInterfaces";
+import { ArmorObtainingType } from "@/utils/dataInterfaces";
 
 class ArmorKitsStore {
+  currentArmorInfo = {} as CurrentArmorInfo;
+
   armorKits = [
     {
       id: 1,
@@ -23,7 +26,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.extraArmor,
     },
     {
-      id: 2,
+      id: 1,
       imagePath: "/static/armorSets/B08LightGunnerImage.webp",
       type: "Легкая броня",
       name: "B-08 «Легкий стрелок»",
@@ -38,7 +41,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.fortification,
     },
     {
-      id: 3,
+      id: 2,
       imagePath: "/static/armorSets/B24EnforcerImage.webp",
       type: "Средняя броня",
       name: "B-24 «Блюститель»",
@@ -53,7 +56,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.fortification,
     },
     {
-      id: 4,
+      id: 3,
       imagePath: "/static/armorSets/B27FortifiedCommandoImage.webp",
       type: "Тяжелая броня",
       name: "B-27 «Укрепленный коммандос»",
@@ -68,7 +71,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.extraArmor,
     },
     {
-      id: 5,
+      id: 1,
       imagePath: "/static/armorSets/Ce35TrenchEngineerImage.webp",
       type: "Средняя броня",
       name: "CE-35 «Траншейный инженер»",
@@ -84,7 +87,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.engineerKit,
     },
     {
-      id: 6,
+      id: 4,
       imagePath: "/static/armorSets/Ce67TitanImage.webp",
       type: "Легкая броня",
       name: "CE-67 «Титан»",
@@ -99,7 +102,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.engineerKit,
     },
     {
-      id: 7,
+      id: 5,
       imagePath: "/static/armorSets/Ce74BreakerImage.webp",
       type: "Легкая броня",
       name: "CE-74 «Выключатель»",
@@ -114,7 +117,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.engineerKit,
     },
     {
-      id: 8,
+      id: 6,
       imagePath: "/static/armorSets/Ce81JuggernautImage.webp",
       type: "Средняя броня",
       name: "CE-81 «Джаггернаут»",
@@ -129,7 +132,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.engineerKit,
     },
     {
-      id: 9,
+      id: 2,
       imagePath: "/static/armorSets/Сm09BonesnapperImage.webp",
       type: "Средняя броня",
       name: "CM-09 «Костолом»",
@@ -145,7 +148,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.medKit,
     },
     {
-      id: 10,
+      id: 3,
       imagePath: "/static/armorSets/Cm14PhysicianImage.webp",
       type: "Средняя броня",
       name: "CM-14 «Врач»",
@@ -161,7 +164,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.medKit,
     },
     {
-      id: 11,
+      id: 7,
       imagePath: "/static/armorSets/Cm17ButcherImage.webp",
       type: "Тяжелая броня",
       name: "CM-14 «Мясник»",
@@ -176,7 +179,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.medKit,
     },
     {
-      id: 12,
+      id: 8,
       imagePath: "/static/armorSets/Cm21TrenchParamedicImage.webp",
       type: "Легкая броня",
       name: "CM-21 «Траншейный фельдшер»",
@@ -191,7 +194,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.medKit,
     },
     {
-      id: 13,
+      id: 4,
       imagePath: "/static/armorSets/Dp11ChampionOfThePeopleImage.webp",
       type: "Средняя броня",
       name: "DP-11 «Защитник народа»",
@@ -207,7 +210,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.democracyProtects,
     },
     {
-      id: 14,
+      id: 5,
       imagePath: "/static/armorSets/Dp40HeroOfTheFederationImage.webp",
       type: "Средняя броня",
       name: "DP-40 «Герой федерации»",
@@ -223,7 +226,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.democracyProtects,
     },
     {
-      id: 15,
+      id: 1,
       imagePath: "/static/armorSets/Dp53SaviourOfTheFreeImage.webp",
       type: "Средняя броня",
       name: "DP-53 «Спаситель свободных»",
@@ -238,7 +241,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.democracyProtects,
     },
     {
-      id: 16,
+      id: 1,
       imagePath: "/static/armorSets/Ex00PrototypeXImage.webp",
       type: "Легкая броня",
       name: "EX-00 «Прототип X»",
@@ -253,7 +256,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.electricalCondult,
     },
     {
-      id: 17,
+      id: 2,
       imagePath: "/static/armorSets/Ex03Prototype3Image.webp",
       type: "Средняя броня",
       name: "EX-03 «Прототип 3»",
@@ -268,7 +271,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.electricalCondult,
     },
     {
-      id: 18,
+      id: 3,
       imagePath: "/static/armorSets/Ex16Prototype16Image.webp",
       type: "Средняя броня",
       name: "EX-16 «Прототип 16»",
@@ -283,7 +286,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.electricalCondult,
     },
     {
-      id: 19,
+      id: 6,
       imagePath: "/static/armorSets/Fs05MarksmanImage.webp",
       type: "Тяжелая броня",
       name: "FS-05 «Меткий стрелок»",
@@ -299,7 +302,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.fortification,
     },
     {
-      id: 20,
+      id: 9,
       imagePath: "/static/armorSets/Fs11ExecutionerImage.webp",
       type: "Тяжелая броня",
       name: "FS-11 «Палач»",
@@ -314,7 +317,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.fortification,
     },
     {
-      id: 21,
+      id: 7,
       imagePath: "/static/armorSets/Fs23BattleMasterImage.webp",
       type: "Тяжелая броня",
       name: "FS-23 «Воевода»",
@@ -330,7 +333,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.fortification,
     },
     {
-      id: 22,
+      id: 10,
       imagePath: "/static/armorSets/Fs34ExterminatorImage.webp",
       type: "Средняя броня",
       name: "FS-34 «Истребитель»",
@@ -345,7 +348,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.fortification,
     },
     {
-      id: 23,
+      id: 11,
       imagePath: "/static/armorSets/Fs38EradicatorImage.webp",
       type: "Легкая броня",
       name: "FS-38 «Искоренитель»",
@@ -360,7 +363,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.fortification,
     },
     {
-      id: 24,
+      id: 12,
       imagePath: "/static/armorSets/Fs61DreadnoughtImage.webp",
       type: "Тяжелая броня",
       name: "FS-61 «Дредноут»",
@@ -375,7 +378,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.servoAssisted,
     },
     {
-      id: 25,
+      id: 8,
       imagePath: "/static/armorSets/Sa04CombatTechnicianImage.webp",
       type: "Средняя броня",
       name: "SA-04 «Боевой техник»",
@@ -391,7 +394,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.scout,
     },
     {
-      id: 26,
+      id: 1,
       imagePath: "/static/armorSets/Sa12ServoAssistedImage.webp",
       type: "Средняя броня",
       name: "SA-12 «Сервоприводная»",
@@ -406,7 +409,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.servoAssisted,
     },
     {
-      id: 27,
+      id: 2,
       imagePath: "/static/armorSets/Sa25SteelTrooperImage.webp",
       type: "Средняя броня",
       name: "SA-25 «Стальной кавалерист»",
@@ -421,7 +424,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.servoAssisted,
     },
     {
-      id: 28,
+      id: 3,
       imagePath: "/static/armorSets/Sa32DynamoImage.webp",
       type: "Тяжелая броня",
       name: "SA-32 «Динамо»",
@@ -436,7 +439,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.servoAssisted,
     },
     {
-      id: 29,
+      id: 13,
       imagePath: "/static/armorSets/Sc15DroneMasterImage.webp",
       type: "Средняя броня",
       name: "SС-15 «Мастер дронов»",
@@ -451,7 +454,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.engineerKit,
     },
     {
-      id: 30,
+      id: 9,
       imagePath: "/static/armorSets/Sc30TrailblazerScoutImage.webp",
       type: "Легкая броня",
       name: "SС-30 «Следопыт»",
@@ -467,7 +470,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.scout,
     },
     {
-      id: 31,
+      id: 10,
       imagePath: "/static/armorSets/Sc34InfiltratorImage.webp",
       type: "Легкая броня",
       name: "SС-34 «Лазутчик»",
@@ -483,7 +486,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.scout,
     },
     {
-      id: 32,
+      id: 14,
       imagePath: "/static/armorSets/Sc37LegionnaireImage.webp",
       type: "Легкая броня",
       name: "SС-37 «Легионер»",
@@ -498,7 +501,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.servoAssisted,
     },
     {
-      id: 33,
+      id: 1,
       imagePath: "/static/armorSets/Tr7AmbassadorOfTheBrandImage.webp",
       type: "Средняя броня",
       name: "TR-7 «Представитель бренда»",
@@ -513,7 +516,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.extraArmor,
     },
     {
-      id: 34,
+      id: 2,
       imagePath: "/static/armorSets/Tr9CavalierOfDemocracyImage.webp",
       type: "Средняя броня",
       name: "TR-9 «Кавалер демократии»",
@@ -528,7 +531,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.democracyProtects,
     },
     {
-      id: 35,
+      id: 3,
       imagePath: "/static/armorSets/Tr62KnightImage.webp",
       type: "Тяжелая броня",
       name: "TR-62 «Рыцарь»",
@@ -543,7 +546,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.servoAssisted,
     },
     {
-      id: 36,
+      id: 1,
       imagePath: "/static/armorSets/Tr117AlphaCommanderImage.webp",
       type: "Средняя броня",
       name: "TR-117 «Альфа командир»",
@@ -561,6 +564,14 @@ class ArmorKitsStore {
 
   constructor() {
     makeAutoObservable(this);
+  }
+
+  changeCurrentArmorInfo(id: number, obtainingType: ArmorObtainingType) {
+    this.currentArmorInfo = { id: id, obtainingType: obtainingType };
+  }
+
+  clearCurrentArmorInfo() {
+    this.currentArmorInfo = {} as CurrentArmorInfo;
   }
 }
 
