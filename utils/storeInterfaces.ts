@@ -66,3 +66,8 @@ export interface ArmorKit {
   staminaRegen: number;
   bonus: Bonus;
 }
+
+export interface CurrentArmorInfo {
+  id: number;
+  obtainingType: ArmorObtainingType;
+}
