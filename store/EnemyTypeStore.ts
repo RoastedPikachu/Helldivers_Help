@@ -19,7 +19,7 @@ class EnemyTypeStore {
     },
     {
       id: 2,
-      iconPath: "/static/terminids/BileSpitterImage.png",
+      iconPath: "/static/Terminids/BileSpitterImage.png",
       imagePath: "",
       dangerous:
         "Может выстрелить кислотой на небольшом расстоянии и в большом количестве является хоть и не грозным, но неприятным противником.",
@@ -30,7 +30,7 @@ class EnemyTypeStore {
     },
     {
       id: 3,
-      iconPath: "/static/terminids/ShriekerImage.png",
+      iconPath: "/static/Terminids/ShriekerImage.png",
       imagePath: "",
       dangerous:
         "Быстро передвигается в воздухе и атакует парами. Один удар может вас убить, так как приоритетной целью является голова.",
@@ -50,7 +50,7 @@ class EnemyTypeStore {
     },
     {
       id: 5,
-      iconPath: "/static/terminids/HunterImage.png",
+      iconPath: "/static/Terminids/HunterImage.png",
       imagePath: "",
       dangerous:
         "Передвигается в составе организованных групп, очень проворный, может быстро сокращать дистанцию. Удар замедляет и может снести до четверти от всего здоровья.",
@@ -61,7 +61,7 @@ class EnemyTypeStore {
     },
     {
       id: 6,
-      iconPath: "/static/terminids/WarriorImage.png",
+      iconPath: "/static/Terminids/WarriorImage.png",
       imagePath: "",
       dangerous:
         "Самый обыкновенный противник, также может позвать своих сородичей отделать вашу свободолюбивую задницу. Единственная опасность, которую он представляет — замедление в продвижении управляемой демократии по всей галактике.",
@@ -81,7 +81,7 @@ class EnemyTypeStore {
     },
     {
       id: 8,
-      iconPath: "/static/terminids/StalkerImage.png",
+      iconPath: "/static/Terminids/StalkerImage.png",
       imagePath: "",
       dangerous:
         "Невидим, быстро двигается, имеет схожие атаки с обычными охотниками. Также может использовать свой язык, чтобы атаковать вас с небольшого расстояния. Намного опаснее группы охотников, так как может подкрасться к вам в разгар боя и проредить вашу команду.",
@@ -92,7 +92,7 @@ class EnemyTypeStore {
     },
     {
       id: 9,
-      iconPath: "/static/terminids/BroodCommanderImage.png",
+      iconPath: "/static/Terminids/BroodCommanderImage.png",
       imagePath: "",
       dangerous:
         "Довольно неплохо защищен броней, а также передвигается в составе своего роя. Помимо этого может вас контузить своим резким тараном.",
@@ -103,7 +103,7 @@ class EnemyTypeStore {
     },
     {
       id: 10,
-      iconPath: "/static/terminids/BileSpewerImage.png",
+      iconPath: "/static/Terminids/BileSpewerImage.png",
       imagePath: "",
       dangerous:
         "Его желчный снаряд или плевок желчью убивает вас, не давая шанса спастись. Также, если вы атаковали его брюхо — взрывается после смерти, нанося урон всем в округе.",
@@ -114,7 +114,7 @@ class EnemyTypeStore {
     },
     {
       id: 11,
-      iconPath: "/static/terminids/ChargerImage.png",
+      iconPath: "/static/Terminids/ChargerImage.png",
       imagePath: "",
       dangerous:
         "Его вожделенная мечта и цель — растоптать ваше героическое тело. Основная угроза исходит от его разбегов, но даже если при успешном уклонении, он может совершить боковой удар, который вас откинет.",
@@ -125,7 +125,7 @@ class EnemyTypeStore {
     },
     {
       id: 12,
-      iconPath: "/static/terminids/BileTitanImage.png",
+      iconPath: "/static/Terminids/BileTitanImage.png",
       imagePath: "",
       dangerous:
         "Это апогей эволюции терминидов. Этот ужасный, очень быстрый и бронированный монстр может стереть вас с лица планеты своим потоком желчи или просто растоптать вас своими конечностями.",
@@ -140,7 +140,7 @@ class EnemyTypeStore {
   automatons = [
     {
       id: 1,
-      iconPath: "/static/automatons/TrooperImage.png",
+      iconPath: "/static/Automatons/TrooperImage.png",
       imagePath: "",
       dangerous:
         "В зависимости от своей разновидности, может либо быстро подобраться к вам с помощью реактивного ранца, или же просто убить вас с 1 выстрела, если вооружен ракетницей. Также может кинуть в вас гранату или занять турель, с которой будет вести огонь по вам.",
@@ -151,7 +151,7 @@ class EnemyTypeStore {
     },
     {
       id: 2,
-      iconPath: "/static/automatons/ComissarImage.png",
+      iconPath: "/static/Automatons/ComissarImage.png",
       imagePath: "",
       dangerous: "Быстро сближается и атакует своим клинком.",
       tactics:
@@ -161,7 +161,7 @@ class EnemyTypeStore {
     },
     {
       id: 3,
-      iconPath: "/static/automatons/BerserkerImage.png",
+      iconPath: "/static/Automatons/BerserkerImage.png",
       imagePath: "",
       dangerous:
         "Вооружен бензопилами и старается как можно быстрее сократить до вас дистанцию. Очень быстрый, также любит группироваться с такими же, как он.",
@@ -172,7 +172,7 @@ class EnemyTypeStore {
     },
     {
       id: 4,
-      iconPath: "/static/automatons/ScoutStriderImage.png",
+      iconPath: "/static/Automatons/ScoutStriderImage.png",
       imagePath: "",
       dangerous:
         "Защищен броней, вооружен турелью и довольно быстр, на своем шагоходе",
@@ -183,7 +183,7 @@ class EnemyTypeStore {
     },
     {
       id: 5,
-      iconPath: "/static/automatons/DevastatorImage.png",
+      iconPath: "/static/Automatons/DevastatorImage.png",
       imagePath: "",
       dangerous:
         "Имеет огромную защиту, также в зависимости от варианта, может быть вооружен ракетницами, либо лазером и щитом.",
@@ -194,7 +194,7 @@ class EnemyTypeStore {
     },
     {
       id: 6,
-      iconPath: "/static/automatons/HulkImage.png",
+      iconPath: "/static/Automatons/HulkImage.png",
       imagePath: "",
       dangerous:
         "Существует 3 варианта вооружения: скорострельное ружье, огнемет или гранатомет. Также полностью покрыт броней. ",
@@ -205,7 +205,7 @@ class EnemyTypeStore {
     },
     {
       id: 7,
-      iconPath: "/static/automatons/TankImage.png",
+      iconPath: "/static/Automatons/TankImage.png",
       imagePath: "",
       dangerous:
         "Несмотря на свою крайнюю медлительность, очень смертоносен. Любое попадание из его пушки не дает вам шанса на выживание.",
@@ -216,7 +216,7 @@ class EnemyTypeStore {
     },
     {
       id: 8,
-      iconPath: "/static/automatons/DropshipImage.png",
+      iconPath: "/static/Automatons/DropshipImage.png",
       imagePath: "",
       dangerous:
         "Опасности не представляет, но может сбросить большое количество новых автоматонов, которые будут мешать вам выполнять задачу.",

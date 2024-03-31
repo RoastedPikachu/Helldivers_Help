@@ -24,14 +24,14 @@ const CurrentEnemyType: React.FC<CurrentEnemyTypeProps> = observer(
                 className="absolute top-[40px] right-[40px] w-[35px] h-[35px]"
               >
                 <img
-                  src="/static/generalIcons/CloseIcon.svg"
+                  src="/static/GeneralIcons/CloseIcon.svg"
                   alt=""
                   className="w-full h-full"
                 />
               </button>
 
               <div
-                className={`relative flex justify-center items-center w-[400px] h-[400px] ${enemyTypeStore.currentEnemyType.fractionType === 1 ? "bg-[url('/static/terminids/TerminidsBackgroundImage.png')]" : "bg-[url('/static/automatons/AutomatonsBackgroundImage.png')]"} bg-cover bg-no-repeat border-2 border-[#2cc388] rounded-[7.5px]`}
+                className={`relative flex justify-center items-center w-[400px] h-[400px] ${enemyTypeStore.currentEnemyType.fractionType === 1 ? "bg-[url('/static/Terminids/TerminidsBackgroundImage.png')]" : "bg-[url('/static/Automatons/AutomatonsBackgroundImage.png')]"} bg-cover bg-no-repeat border-2 border-[#2cc388] rounded-[7.5px]`}
               >
                 {enemyTypeStore.currentEnemyType.iconPath ? (
                   <img

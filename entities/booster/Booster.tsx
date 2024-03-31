@@ -32,7 +32,7 @@ const Booster: React.FC<BoosterProps> = ({
         <p className="boosterWidget_Bottom_Number">{price}</p>
 
         <img
-          src="/static/resources/MedalIcon.svg"
+          src="/static/Resources/MedalIcon.svg"
           alt=""
           className="boosterWidget_Bottom_Image"
         />

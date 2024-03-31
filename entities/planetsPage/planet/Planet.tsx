@@ -40,7 +40,7 @@ const Planet: React.FC<PlanetProps> = ({
         <img src={`${biome.imagePath}`} alt="" className="planetWidget_Image" />
       ) : (
         <img
-          src="/static/biomes/BlankImage.png"
+          src="/static/Biomes/BlankImage.png"
           alt=""
           className="planetWidget_Image"
         />

@@ -54,7 +54,7 @@ const Mission: React.FC<MissionProps> = ({
           className="rootShipModuleBlock_Top_Button"
         >
           <img
-            src="/static/generalIcons/ArrowDownIcon.svg"
+            src="/static/GeneralIcons/ArrowDownIcon.svg"
             alt=""
             className={`rootShipModuleBlock_Top_Button_Image ${isAdditionalInfoOpened ? "rotate-180" : "rotate-0"}`}
           />

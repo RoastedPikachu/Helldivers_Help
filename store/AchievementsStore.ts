@@ -6,21 +6,21 @@ class AchievementsStore {
   achievements = [
     {
       id: 1,
-      iconPath: "/static/achievements/TrainingIcon.jpg",
+      iconPath: "/static/Achievements/TrainingIcon.jpg",
       title: "Прямо профи",
       description: "Пройдите основное обучение.",
       accomplishmentWay: "Теперь ты Адский Десантник, поздравляю!",
     },
     {
       id: 2,
-      iconPath: "/static/achievements/BugStomperIcon.jpg",
+      iconPath: "/static/Achievements/BugStomperIcon.jpg",
       title: "Давитель жуков",
       description: "Сыграйте 1 задание против жуков.",
       accomplishmentWay: "Выполните 1 задание против терминидов. Смерть жукам!",
     },
     {
       id: 3,
-      iconPath: "/static/achievements/BotScrapperIcon.jpg",
+      iconPath: "/static/Achievements/BotScrapperIcon.jpg",
       title: "Сокрушитель ботов",
       description: "Сыграйте 1 задание против ботов.",
       accomplishmentWay:
@@ -28,14 +28,14 @@ class AchievementsStore {
     },
     {
       id: 4,
-      iconPath: "/static/achievements/NightIcon.jpg",
+      iconPath: "/static/Achievements/NightIcon.jpg",
       title: "Ночные гости",
       description: "Эвакуируйтесь с задания ночью.",
       accomplishmentWay: "Закончи любое задание на ночной стороне планеты.",
     },
     {
       id: 5,
-      iconPath: "/static/achievements/SpreadDemocracyIcon.jpg",
+      iconPath: "/static/Achievements/SpreadDemocracyIcon.jpg",
       title: "Распространитель демократии",
       description: "Убейте 150 врагов в ходе одного задания.",
       accomplishmentWay:
@@ -43,7 +43,7 @@ class AchievementsStore {
     },
     {
       id: 6,
-      iconPath: "/static/achievements/CountrysideDefenceIcon.jpg",
+      iconPath: "/static/Achievements/CountrysideDefenceIcon.jpg",
       title: "Эвакуатор окраин",
       description: "Сыграйте задание по обороне планеты.",
       accomplishmentWay:
@@ -51,7 +51,7 @@ class AchievementsStore {
     },
     {
       id: 7,
-      iconPath: "/static/achievements/CoolGuysDontLookIcon.jpg",
+      iconPath: "/static/Achievements/CoolGuysDontLookIcon.jpg",
       title: "Крутые парни не смотря-А-А-А-А!",
       description: "Пролетите минимум 25 метров на взрывной волне.",
       accomplishmentWay:
@@ -59,7 +59,7 @@ class AchievementsStore {
     },
     {
       id: 8,
-      iconPath: "/static/achievements/YoungLadIcon.jpg",
+      iconPath: "/static/Achievements/YoungLadIcon.jpg",
       title: "Крепкий молодой человек",
       description:
         "Наденьте на своего Адского Десантника новый плащ, броню и шлем.",
@@ -68,7 +68,7 @@ class AchievementsStore {
     },
     {
       id: 9,
-      iconPath: "/static/achievements/JobIsDoneIcon.jpg",
+      iconPath: "/static/Achievements/JobIsDoneIcon.jpg",
       title: "Все готово",
       description: "Выполните задание, но провалите эвакуацию.",
       accomplishmentWay:
@@ -76,7 +76,7 @@ class AchievementsStore {
     },
     {
       id: 10,
-      iconPath: "/static/achievements/LongArmIcon.jpg",
+      iconPath: "/static/Achievements/LongArmIcon.jpg",
       title: "Длинная рука правосудия",
       description: "Уничтожьте цель с расстояния более 100м",
       accomplishmentWay:
@@ -84,7 +84,7 @@ class AchievementsStore {
     },
     {
       id: 11,
-      iconPath: "/static/achievements/NickOfTimeIcon.jpg",
+      iconPath: "/static/Achievements/NickOfTimeIcon.jpg",
       title: "В последнюю секунду",
       description: "Эвакуируйтесь по достижении таймером нуля",
       accomplishmentWay:
@@ -92,7 +92,7 @@ class AchievementsStore {
     },
     {
       id: 12,
-      iconPath: "/static/achievements/HulkIcon.jpg",
+      iconPath: "/static/Achievements/HulkIcon.jpg",
       title: "Нет ничего важнее свободы",
       description: "Победите глыбу.",
       accomplishmentWay:
@@ -100,7 +100,7 @@ class AchievementsStore {
     },
     {
       id: 13,
-      iconPath: "/static/achievements/IllegalStalkingIcon.jpg",
+      iconPath: "/static/Achievements/IllegalStalkingIcon.jpg",
       title: "Не следи за мной",
       description: "Уничтожьте тактическую цель «гнездо следопытов».",
       accomplishmentWay:
@@ -108,7 +108,7 @@ class AchievementsStore {
     },
     {
       id: 14,
-      iconPath: "/static/achievements/EatThisIcon.jpg",
+      iconPath: "/static/Achievements/EatThisIcon.jpg",
       title: "Жри!",
       description: "Убейте жука-воина выстрелом из дробовика с 1 метра.",
       accomplishmentWay:
@@ -116,7 +116,7 @@ class AchievementsStore {
     },
     {
       id: 15,
-      iconPath: "/static/achievements/BileTitanIcon.jpg",
+      iconPath: "/static/Achievements/BileTitanIcon.jpg",
       title: "Чем они выше...",
       description: "Уничтожьте желчного титана.",
       accomplishmentWay:
@@ -124,7 +124,7 @@ class AchievementsStore {
     },
     {
       id: 16,
-      iconPath: "/static/achievements/DemocracyStemIcon.jpg",
+      iconPath: "/static/Achievements/DemocracyStemIcon.jpg",
       title: "Демократия все еще с тобой",
       description: "Исцелите другого игрока стимами.",
       accomplishmentWay:
@@ -132,7 +132,7 @@ class AchievementsStore {
     },
     {
       id: 17,
-      iconPath: "/static/achievements/TacticoolIcon.jpg",
+      iconPath: "/static/Achievements/TacticoolIcon.jpg",
       title: "Крутактика — это вам не это",
       description: "Выполните 10 тактических заданий.",
       accomplishmentWay:
@@ -140,7 +140,7 @@ class AchievementsStore {
     },
     {
       id: 18,
-      iconPath: "/static/achievements/ExtractamundoIcon.jpg",
+      iconPath: "/static/Achievements/ExtractamundoIcon.jpg",
       title: "Экстраэвакуация!",
       description: "Эвакуируйте весь отряд на сложности «Высокая» или выше.",
       accomplishmentWay:
@@ -148,7 +148,7 @@ class AchievementsStore {
     },
     {
       id: 19,
-      iconPath: "/static/achievements/HotPotatoIcon.jpg",
+      iconPath: "/static/Achievements/HotPotatoIcon.jpg",
       title: "Лови!",
       description: "Бросьте обратно готовую взорваться гранату.",
       accomplishmentWay:
@@ -156,7 +156,7 @@ class AchievementsStore {
     },
     {
       id: 20,
-      iconPath: "/static/achievements/GetSomeIcon.jpg",
+      iconPath: "/static/Achievements/GetSomeIcon.jpg",
       title: "Получайте!",
       description:
         "Выпустите как минимум 150 пуль за одну очередь, убив не менее 10 врагов.",
@@ -165,7 +165,7 @@ class AchievementsStore {
     },
     {
       id: 21,
-      iconPath: "/static/achievements/InjuriesIcon.jpg",
+      iconPath: "/static/Achievements/InjuriesIcon.jpg",
       title: "Что тебя не убивает...",
       description: "Все ваши конечности должны быть повреждены одновременно.",
       accomplishmentWay:
@@ -173,7 +173,7 @@ class AchievementsStore {
     },
     {
       id: 22,
-      iconPath: "/static/achievements/DemocracyPowerIcon.jpg",
+      iconPath: "/static/Achievements/DemocracyPowerIcon.jpg",
       title: "Сила демократии",
       description: "Убейте 25 врагов одной стратагемой.",
       accomplishmentWay:
@@ -181,7 +181,7 @@ class AchievementsStore {
     },
     {
       id: 23,
-      iconPath: "/static/achievements/PromoteSynergyIcon.jpg",
+      iconPath: "/static/Achievements/PromoteSynergyIcon.jpg",
       title: "Продвигай синергию",
       description: "Помогите товарищу перезарядить оружие.",
       accomplishmentWay:
@@ -189,7 +189,7 @@ class AchievementsStore {
     },
     {
       id: 24,
-      iconPath: "/static/achievements/QuantityScienceIcon.jpg",
+      iconPath: "/static/Achievements/QuantityScienceIcon.jpg",
       title: "Для науки важно количество",
       description: "Эвакуируйтесь с как минимум 15 обычными образцами.",
       accomplishmentWay:
@@ -197,7 +197,7 @@ class AchievementsStore {
     },
     {
       id: 25,
-      iconPath: "/static/achievements/SamplesFriendIcon.jpg",
+      iconPath: "/static/Achievements/SamplesFriendIcon.jpg",
       title: "Образцы — лучшие друзья десантников",
       description:
         "Эвакуируйте команду из задания с не менее чем 15 редкими образцами.",
@@ -206,7 +206,7 @@ class AchievementsStore {
     },
     {
       id: 26,
-      iconPath: "/static/achievements/FireKillIcon.jpg",
+      iconPath: "/static/Achievements/FireKillIcon.jpg",
       title: "Выжечь все огнем!",
       description: "Убейте 100 врагов огненным уроном в ходе одного задания.",
       accomplishmentWay:
@@ -214,7 +214,7 @@ class AchievementsStore {
     },
     {
       id: 27,
-      iconPath: "/static/achievements/HoldOnMyLiberTeaIcon.jpg",
+      iconPath: "/static/Achievements/HoldOnMyLiberTeaIcon.jpg",
       title: "Подержи мой чай свободы!",
       description:
         "С помощью реактивного ранца введите себя в состояние тряпичной куклы.",
@@ -223,7 +223,7 @@ class AchievementsStore {
     },
     {
       id: 28,
-      iconPath: "/static/achievements/StratagemsIcon.jpg",
+      iconPath: "/static/Achievements/StratagemsIcon.jpg",
       title: "Чтобы не сомневаться",
       description:
         "Одновременно вызовите 6 стратагем орбитальных бомбардировок по одной области.",
@@ -232,14 +232,14 @@ class AchievementsStore {
     },
     {
       id: 29,
-      iconPath: "/static/achievements/GreaterGodIcon.jpg",
+      iconPath: "/static/Achievements/GreaterGodIcon.jpg",
       title: "Ради высшего блага!",
       description: "Убейте 5000 врагов.",
       accomplishmentWay: "5000 Врагов? Супер-Земля будет гордиться тобой!",
     },
     {
       id: 30,
-      iconPath: "/static/achievements/PatriotIcon.jpg",
+      iconPath: "/static/Achievements/PatriotIcon.jpg",
       title: "Патриот",
       description: "Сыграйте как минимум 50 заданий.",
       accomplishmentWay:
@@ -247,14 +247,14 @@ class AchievementsStore {
     },
     {
       id: 31,
-      iconPath: "/static/achievements/DoingYourPartIcon.jpg",
+      iconPath: "/static/Achievements/DoingYourPartIcon.jpg",
       title: "Исполняю твой долг",
       description: "Выполните как минимум 100 заданий.",
       accomplishmentWay: "Да тебе памятник ставить надо!",
     },
     {
       id: 32,
-      iconPath: "/static/achievements/FullyOperationalIcon.jpg",
+      iconPath: "/static/Achievements/FullyOperationalIcon.jpg",
       title: "Полный функционал",
       description: "Доведите один модуль корабля до макс. уровня.",
       accomplishmentWay:
@@ -262,7 +262,7 @@ class AchievementsStore {
     },
     {
       id: 33,
-      iconPath: "/static/achievements/ShipItIcon.jpg",
+      iconPath: "/static/Achievements/ShipItIcon.jpg",
       title: "Займусь кораблем!",
       description: "Улучшите все модули корабля как минимум на 1 уровень.",
       accomplishmentWay:
@@ -270,7 +270,7 @@ class AchievementsStore {
     },
     {
       id: 34,
-      iconPath: "/static/achievements/HellDiveIcon.jpg",
+      iconPath: "/static/Achievements/HellDiveIcon.jpg",
       title: "Глубины ада",
       description:
         "Завершите задание на сложности «Экстрим» или выше, не допустив гибели ни одного из бойцов.",
@@ -279,7 +279,7 @@ class AchievementsStore {
     },
     {
       id: 35,
-      iconPath: "/static/achievements/DrawIcon.jpg",
+      iconPath: "/static/Achievements/DrawIcon.jpg",
       title: "Пусть будет ничья",
       description: "Отстрелите глыбе обе руки и эвакуируйтесь, пока он жив.",
       accomplishmentWay:
@@ -287,7 +287,7 @@ class AchievementsStore {
     },
     {
       id: 36,
-      iconPath: "/static/achievements/SuppliesIcon.jpg",
+      iconPath: "/static/Achievements/SuppliesIcon.jpg",
       title: "Смертельное снабжение!",
       description: "Убейте громилу капсулой «Пополнение запасов».",
       accomplishmentWay:
@@ -295,7 +295,7 @@ class AchievementsStore {
     },
     {
       id: 37,
-      iconPath: "/static/achievements/HoldMyPrimaryIcon.jpg",
+      iconPath: "/static/Achievements/HoldMyPrimaryIcon.jpg",
       title: "Подержи-ка пушку, я иду в атаку!",
       description:
         "Полностью пройдите задание на сложности Высокая или выше так, чтобы никто не выстрелил из основного оружия или оружия поддержки.",
@@ -304,7 +304,7 @@ class AchievementsStore {
     },
     {
       id: 38,
-      iconPath: "/static/achievements/360SecIcon.jpg",
+      iconPath: "/static/Achievements/360SecIcon.jpg",
       title: "Угнать за 360 секунд!",
       description:
         "Полностью пройдите блиц-задание на сложности Экстрим и эвакуируйтесь менее чем за 6 минут.",

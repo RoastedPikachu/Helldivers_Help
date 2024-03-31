@@ -27,7 +27,7 @@ const PlanetAdditionalInfoModalWindow: React.FC<PlanetAdditionalInfoModalWindowP
               className="currentPlanet_Modal_CloseButton"
             >
               <img
-                src="/static/generalIcons/CloseIcon.svg"
+                src="/static/GeneralIcons/CloseIcon.svg"
                 alt=""
                 className="currentPlanet_Modal_CloseButton_Image"
               />
@@ -36,7 +36,7 @@ const PlanetAdditionalInfoModalWindow: React.FC<PlanetAdditionalInfoModalWindowP
             <div className="currentPlanet_Modal_Top">
               <div className="currentPlanet_Modal_Top_ImageWrapper">
                 <img
-                  src={imagePath || "/static/biomes/BlankImage.png"}
+                  src={imagePath || "/static/Biomes/BlankImage.png"}
                   alt=""
                   className="currentPlanet_Modal_Top_ImageWrapper_Image"
                 />

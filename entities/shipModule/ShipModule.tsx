@@ -61,7 +61,7 @@ const ShipModule: React.FC<ShipModuleProps> = ({
           className="rootShipModuleBlock_Top_Button"
         >
           <img
-            src="/static/generalIcons/ArrowDownIcon.svg"
+            src="/static/GeneralIcons/ArrowDownIcon.svg"
             alt=""
             className={`rootShipModuleBlock_Top_Button_Image ${isAdditionalInfoOpened ? "rotate-180" : "rotate-0"}`}
           />
@@ -130,7 +130,7 @@ const ShipModule: React.FC<ShipModuleProps> = ({
                 </p>
 
                 <img
-                  src="/static/resources/CommonSampleIcon.svg"
+                  src="/static/Resources/CommonSampleIcon.svg"
                   alt=""
                   className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block_Image"
                 />
@@ -143,7 +143,7 @@ const ShipModule: React.FC<ShipModuleProps> = ({
                   </p>
 
                   <img
-                    src="/static/resources/RareSampleIcon.svg"
+                    src="/static/Resources/RareSampleIcon.svg"
                     alt=""
                     className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block_Image"
                   />
@@ -157,7 +157,7 @@ const ShipModule: React.FC<ShipModuleProps> = ({
                   </p>
 
                   <img
-                    src="/static/resources/UltraRareSampleIcon.svg"
+                    src="/static/Resources/UltraRareSampleIcon.svg"
                     alt=""
                     className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block_Image"
                   />

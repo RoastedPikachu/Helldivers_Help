@@ -7,7 +7,7 @@ const TheHeader = () => {
     <header className="relative flex justify-between items-center deskWide:mx-[calc((100%-1440px)/2)] px-[5%] deskWide:px-0 w-full max-w-[1440px] h-[65px]">
       <div className="flex items-center h-full">
         <img
-          src="/static/generalIcons/SkullIcon.svg"
+          src="/static/GeneralIcons/SkullIcon.svg"
           alt=""
           className="w-[40px] h-[40px]"
         />

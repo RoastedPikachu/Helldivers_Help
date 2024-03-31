@@ -19,7 +19,7 @@ const TheFooter = () => {
         </span>
 
         <img
-          src="/static/generalLogos/HelldiversLogo.png"
+          src="/static/GeneralLogos/HelldiversLogo.png"
           alt=""
           className="w-[200px] h-[75px]"
         />

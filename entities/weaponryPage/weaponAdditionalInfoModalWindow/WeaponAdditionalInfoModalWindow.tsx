@@ -55,7 +55,7 @@ const WeaponAdditionalInfoModa: React.FC<WeaponAdditionalInfoModaProps> =
                 className="currentWeapon_Modal_CloseButton"
               >
                 <img
-                  src="/static/generalIcons/CloseIcon.svg"
+                  src="/static/GeneralIcons/CloseIcon.svg"
                   alt=""
                   className="currentWeapon_Modal_CloseButton_Image"
                 />
@@ -86,7 +86,7 @@ const WeaponAdditionalInfoModa: React.FC<WeaponAdditionalInfoModaProps> =
                       </p>
 
                       <img
-                        src="/static/resources/MedalIcon.svg"
+                        src="/static/Resources/MedalIcon.svg"
                         alt=""
                         className="currentWeapon_Modal_Top_TextBlock_Characteristic_Price_Image"
                       />

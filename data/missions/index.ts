@@ -3,14 +3,14 @@ import { Mission } from "@/utils/dataInterfaces";
 export const generalMissions = [
   {
     id: 1,
-    imagePath: "/static/missions/BringDemocracyIcon.svg",
+    imagePath: "/static/Missions/BringDemocracyIcon.svg",
     title: "Несите демократию",
     description: "Поднимите флаг Супер-Земли как негасимый маяк свободы.",
     level: "1-2",
   },
   {
     id: 2,
-    imagePath: "/static/missions/StopIllegalTransmissionIcon.svg",
+    imagePath: "/static/Missions/StopIllegalTransmissionIcon.svg",
     title: "Остановите незаконную передачу",
     description:
       "Источник незаконной пропагандистской передачи был прослежен до этой точки.",
@@ -18,7 +18,7 @@ export const generalMissions = [
   },
   {
     id: 3,
-    imagePath: "/static/missions/UploadDataFromRescueCapsuleIcon.svg",
+    imagePath: "/static/Missions/UploadDataFromRescueCapsuleIcon.svg",
     title: "Загрузите данные из спасательной капсулы",
     description:
       "В спасательной капсуле, разбившейся в регионе, хранятся ценные данные.",
@@ -26,7 +26,7 @@ export const generalMissions = [
   },
   {
     id: 4,
-    imagePath: "/static/missions/PumpUpMBRFuelIcon.svg",
+    imagePath: "/static/Missions/PumpUpMBRFuelIcon.svg",
     title: "Закачайте топливо в МБР",
     description:
       "Эта заправочная станция отключена. Ее нужно активировать, чтобы запустить МБР.",
@@ -34,14 +34,14 @@ export const generalMissions = [
   },
   {
     id: 5,
-    imagePath: "/static/missions/UploadImportantDataIcon.svg",
+    imagePath: "/static/Missions/UploadImportantDataIcon.svg",
     title: "Добудьте ценные данные",
     description: "Добудьте и передайте ценные исследовательские данные.",
     level: "3-9",
   },
   {
     id: 6,
-    imagePath: "/static/missions/FastEvacuationIcon.svg",
+    imagePath: "/static/Missions/FastEvacuationIcon.svg",
     title: "Экстренная эвакуация",
     description:
       "Эвакуируйте гражданских, оказавшихся в ловушке в тылу автоматонов/терминидов.",
@@ -49,7 +49,7 @@ export const generalMissions = [
   },
   {
     id: 7,
-    imagePath: "/static/missions/SaveImportantPersonnelIcon.svg",
+    imagePath: "/static/Missions/SaveImportantPersonnelIcon.svg",
     title: "Спасите важный персонал",
     description: "Сопроводите и защитите ученых по пути к зоне эвакуации.",
     level: "1-9",
@@ -62,7 +62,7 @@ export const generalMissions = [
   },
   {
     id: 8,
-    imagePath: "/static/missions/MakeGeoReconIcon.svg",
+    imagePath: "/static/Missions/MakeGeoReconIcon.svg",
     title: "Выполните геологическую разведку",
     description:
       "Выполните геологическую разведку, чтобы найти ценные рудные жилы.",
@@ -70,7 +70,7 @@ export const generalMissions = [
   },
   {
     id: 9,
-    imagePath: "/static/missions/LaunchMBRIcon.svg",
+    imagePath: "/static/Missions/LaunchMBRIcon.svg",
     title: "Запустите МБР",
     description: "Подготовьте и запустите баллистические ракеты.",
     level: "3-9",
@@ -80,28 +80,28 @@ export const generalMissions = [
 export const terminidMissions = [
   {
     id: 1,
-    imagePath: "/static/missions/KillSwarmCommandersIcon.svg",
+    imagePath: "/static/Missions/KillSwarmCommandersIcon.svg",
     title: "Убейте командиров роя",
     description: "Выследите и устраните командира роя.",
     level: "1-2",
   },
   {
     id: 2,
-    imagePath: "/static/missions/KillChargersIcon.svg",
+    imagePath: "/static/Missions/KillChargersIcon.svg",
     title: "Убейте громилу",
     description: "Выследите и устраните громилу.",
     level: "3",
   },
   {
     id: 3,
-    imagePath: "/static/missions/KillBileTitansIcon.svg",
+    imagePath: "/static/Missions/KillBileTitansIcon.svg",
     title: "Убейте желчного титана",
     description: "Выследите и устраните желчного титана.",
     level: "4",
   },
   {
     id: 4,
-    imagePath: "/static/missions/KillTerminidsIcon.svg",
+    imagePath: "/static/Missions/KillTerminidsIcon.svg",
     title: "Уничтожьте рой терминидов",
     description: "Убейте терминидов, чтобы снизить их численность.",
     targetMissionCompletionCount: [
@@ -117,14 +117,14 @@ export const terminidMissions = [
   },
   {
     id: 5,
-    imagePath: "/static/missions/KillTerminidsIcon.svg",
+    imagePath: "/static/Missions/KillTerminidsIcon.svg",
     title: "Блиц: Найти и уничтожить",
     description: "Найдите и уничтожьте строения терминидов.",
     level: "3-9",
   },
   {
     id: 6,
-    imagePath: "/static/missions/ActivatePumpsIcon.svg",
+    imagePath: "/static/Missions/ActivatePumpsIcon.svg",
     title: "Активируйте насосы Э-710",
     description:
       "Насосы этого огромного хранилища Э-710 отключились и должны быть запущены заново.",
@@ -132,7 +132,7 @@ export const terminidMissions = [
   },
   {
     id: 7,
-    imagePath: "/static/missions/FuelIcon.svg",
+    imagePath: "/static/Missions/FuelIcon.svg",
     title: "Обезопасьте вывоз Э-710",
     description: "Позвольте Шаттлам собрать ценный Э-710.",
     level: "2-9",
@@ -142,21 +142,21 @@ export const terminidMissions = [
 export const automatonMissions = [
   {
     id: 1,
-    imagePath: "/static/missions/KillDevastatorsIcon.svg",
+    imagePath: "/static/Missions/KillDevastatorsIcon.svg",
     title: "Убейте разрушителей",
     description: "Найдите и уничтожьте автоматонов-разрушителей.",
     level: "1-2",
   },
   {
     id: 2,
-    imagePath: "/static/missions/KillHulksIcon.svg",
+    imagePath: "/static/Missions/KillHulksIcon.svg",
     title: "Убейте глыб",
     description: "Найдите и уничтожьте автоматонов-глыб.",
     level: "3",
   },
   {
     id: 3,
-    imagePath: "/static/missions/DestroySuppliesIcon.svg",
+    imagePath: "/static/Missions/DestroySuppliesIcon.svg",
     title: "Выведите из строя базы снабжения",
     description:
       "Проникните на территорию автоматонов и уничтожьте их запасы топлива и боекомплектов.",
@@ -164,14 +164,14 @@ export const automatonMissions = [
   },
   {
     id: 4,
-    imagePath: "/static/missions/DestroyAviabaseIcon.svg",
+    imagePath: "/static/Missions/DestroyAviabaseIcon.svg",
     title: "Выведите из строя авиабазу",
     description: "Выведите из строя авиабазу автоматонов в этом регионе.",
     level: "3-9",
   },
   {
     id: 5,
-    imagePath: "/static/missions/KillAutomatonsIcon.svg",
+    imagePath: "/static/Missions/KillAutomatonsIcon.svg",
     title: "Истребите силы автоматонов",
     description: "Уничтожьте автоматонов, чтобы снизить их численность.",
     level: "3-9",
@@ -187,7 +187,7 @@ export const automatonMissions = [
   },
   {
     id: 6,
-    imagePath: "/static/missions/KillAutomatonsIcon.svg",
+    imagePath: "/static/Missions/KillAutomatonsIcon.svg",
     title: "Блиц: Найти и уничтожить",
     description: "Найдите и уничтожьте изготовители автоматонов.",
     level: "3-9",

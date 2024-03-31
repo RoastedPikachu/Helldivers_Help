@@ -12,7 +12,7 @@ class WeaponsStore {
   primaryWeapons = [
     {
       id: 1,
-      imagePath: "/static/weaponry/primary/AR23Image.webp",
+      imagePath: "/static/Weaponry/primary/AR23Image.webp",
       weaponType: 1,
       name: "AR-23 «Освободитель»",
       description:
@@ -29,7 +29,7 @@ class WeaponsStore {
     },
     {
       id: 2,
-      imagePath: "/static/weaponry/primary/AR23EImage.webp",
+      imagePath: "/static/Weaponry/primary/AR23EImage.webp",
       weaponType: 1,
       name: "AR-23Е «Взрывной освободитель»",
       description:
@@ -46,7 +46,7 @@ class WeaponsStore {
     },
     {
       id: 3,
-      imagePath: "/static/weaponry/primary/AR23PImage.webp",
+      imagePath: "/static/Weaponry/primary/AR23PImage.webp",
       weaponType: 1,
       name: "AR-23P «Пробойный освободитель»",
       description:
@@ -63,7 +63,7 @@ class WeaponsStore {
     },
     {
       id: 4,
-      imagePath: "/static/weaponry/primary/R63CsDiligenceImage.webp",
+      imagePath: "/static/Weaponry/primary/R63CsDiligenceImage.webp",
       weaponType: 1,
       name: "R-63 «Рвение»",
       description:
@@ -80,7 +80,7 @@ class WeaponsStore {
     },
     {
       id: 5,
-      imagePath: "/static/weaponry/primary/R63CsImage.webp",
+      imagePath: "/static/Weaponry/primary/R63CsImage.webp",
       weaponType: 1,
       name: "R-63 «Рвение антиснайпер»",
       description:
@@ -97,7 +97,7 @@ class WeaponsStore {
     },
     {
       id: 6,
-      imagePath: "/static/weaponry/primary/Smg37Image.webp",
+      imagePath: "/static/Weaponry/primary/Smg37Image.webp",
       weaponType: 1,
       name: "SMG-37 «Защитник»",
       description:
@@ -114,7 +114,7 @@ class WeaponsStore {
     },
     {
       id: 7,
-      imagePath: "/static/weaponry/primary/Mp98Image.webp",
+      imagePath: "/static/Weaponry/primary/Mp98Image.webp",
       weaponType: 1,
       name: "MP-98 «Рыцарь»",
       description:
@@ -131,7 +131,7 @@ class WeaponsStore {
     },
     {
       id: 8,
-      imagePath: "/static/weaponry/primary/Sg8Image.webp",
+      imagePath: "/static/Weaponry/primary/Sg8Image.webp",
       weaponType: 1,
       name: "SG-8 «Каратель»",
       description:
@@ -148,7 +148,7 @@ class WeaponsStore {
     },
     {
       id: 9,
-      imagePath: "/static/weaponry/primary/Sg8SImage.webp",
+      imagePath: "/static/Weaponry/primary/Sg8SImage.webp",
       weaponType: 1,
       name: "SG-8S «Крушила»",
       description:
@@ -165,7 +165,7 @@ class WeaponsStore {
     },
     {
       id: 10,
-      imagePath: "/static/weaponry/primary/Sg8PImage.webp",
+      imagePath: "/static/Weaponry/primary/Sg8PImage.webp",
       weaponType: 1,
       name: "SG-8P «Плазменный каратель»",
       description:
@@ -182,7 +182,7 @@ class WeaponsStore {
     },
     {
       id: 11,
-      imagePath: "/static/weaponry/primary/Sg225Image.webp",
+      imagePath: "/static/Weaponry/primary/Sg225Image.webp",
       weaponType: 1,
       name: "SG-225 «Крушитель»",
       description:
@@ -199,7 +199,7 @@ class WeaponsStore {
     },
     {
       id: 12,
-      imagePath: "/static/weaponry/primary/Sg225IeImage.webp",
+      imagePath: "/static/Weaponry/primary/Sg225IeImage.webp",
       weaponType: 1,
       name: "SG-225IE «Зажигательный крушитель»",
       description:
@@ -216,7 +216,7 @@ class WeaponsStore {
     },
     {
       id: 13,
-      imagePath: "/static/weaponry/primary/Sg225SpImage.webp",
+      imagePath: "/static/Weaponry/primary/Sg225SpImage.webp",
       weaponType: 1,
       name: "SG-225SP «Крушитель ураган»",
       description:
@@ -233,7 +233,7 @@ class WeaponsStore {
     },
     {
       id: 14,
-      imagePath: "/static/weaponry/primary/Jar5Image.webp",
+      imagePath: "/static/Weaponry/primary/Jar5Image.webp",
       weaponType: 1,
       name: "JAR-5 «Угнетатель»",
       description:
@@ -250,7 +250,7 @@ class WeaponsStore {
     },
     {
       id: 15,
-      imagePath: "/static/weaponry/primary/Las5Image.webp",
+      imagePath: "/static/Weaponry/primary/Las5Image.webp",
       weaponType: 1,
       name: "LAS-5 «Коса»",
       description:
@@ -267,7 +267,7 @@ class WeaponsStore {
     },
     {
       id: 16,
-      imagePath: "/static/weaponry/primary/Las16Image.webp",
+      imagePath: "/static/Weaponry/primary/Las16Image.webp",
       weaponType: 1,
       name: "LAS-16 «Серп»",
       description:
@@ -284,7 +284,7 @@ class WeaponsStore {
     },
     {
       id: 17,
-      imagePath: "/static/weaponry/primary/Plas1Image.webp",
+      imagePath: "/static/Weaponry/primary/Plas1Image.webp",
       weaponType: 1,
       name: "PLAS-1 «Поджигатель»",
       description:
@@ -301,7 +301,7 @@ class WeaponsStore {
     },
     {
       id: 18,
-      imagePath: "/static/weaponry/primary/Arc12Image.webp",
+      imagePath: "/static/Weaponry/primary/Arc12Image.webp",
       weaponType: 1,
       name: "ARC-12 «Налетчик»",
       description:
@@ -321,7 +321,7 @@ class WeaponsStore {
   secondaryWeapons = [
     {
       id: 1,
-      imagePath: "/static/weaponry/secondary/P2Image.webp",
+      imagePath: "/static/Weaponry/secondary/P2Image.webp",
       weaponType: 2,
       name: "P-2 «Миротворец»",
       description:
@@ -338,7 +338,7 @@ class WeaponsStore {
     },
     {
       id: 2,
-      imagePath: "/static/weaponry/secondary/P19Image.webp",
+      imagePath: "/static/Weaponry/secondary/P19Image.webp",
       weaponType: 2,
       name: "P-19 «Избавитель»",
       description:
@@ -355,7 +355,7 @@ class WeaponsStore {
     },
     {
       id: 3,
-      imagePath: "/static/weaponry/secondary/P4Image.webp",
+      imagePath: "/static/Weaponry/secondary/P4Image.webp",
       weaponType: 2,
       name: "P-4 «Сенатор»",
       description:
@@ -372,7 +372,7 @@ class WeaponsStore {
     },
     {
       id: 4,
-      imagePath: "/static/weaponry/secondary/Las7Image.webp",
+      imagePath: "/static/Weaponry/secondary/Las7Image.webp",
       weaponType: 2,
       name: "LAS-7 «Кинжал»",
       description:
@@ -392,7 +392,7 @@ class WeaponsStore {
   grenades = [
     {
       id: 1,
-      imagePath: "/static/weaponry/grenades/G12HighExplosiveImage.webp",
+      imagePath: "/static/Weaponry/grenades/G12HighExplosiveImage.webp",
       weaponType: 3,
       name: "G-12 «Фугасная»",
       description:
@@ -405,7 +405,7 @@ class WeaponsStore {
     },
     {
       id: 2,
-      imagePath: "/static/weaponry/grenades/G6FragImage.webp",
+      imagePath: "/static/Weaponry/grenades/G6FragImage.webp",
       weaponType: 3,
       name: "G-6 «Осколочная»",
       description:
@@ -418,7 +418,7 @@ class WeaponsStore {
     },
     {
       id: 3,
-      imagePath: "/static/weaponry/grenades/G16ImpactImage.webp",
+      imagePath: "/static/Weaponry/grenades/G16ImpactImage.webp",
       weaponType: 3,
       name: "G-16 «Ударная»",
       description:
@@ -431,7 +431,7 @@ class WeaponsStore {
     },
     {
       id: 4,
-      imagePath: "/static/weaponry/grenades/G10IncendiaryImage.webp",
+      imagePath: "/static/Weaponry/grenades/G10IncendiaryImage.webp",
       weaponType: 3,
       name: "G-10 «Зажигательная»",
       description:
@@ -444,7 +444,7 @@ class WeaponsStore {
     },
     {
       id: 5,
-      imagePath: "/static/weaponry/grenades/G3SmokeImage.webp",
+      imagePath: "/static/Weaponry/grenades/G3SmokeImage.webp",
       weaponType: 3,
       name: "G-3 «Дымовая»",
       description:
@@ -457,7 +457,7 @@ class WeaponsStore {
     },
     {
       id: 6,
-      imagePath: "/static/weaponry/grenades/G23StunImage.webp",
+      imagePath: "/static/Weaponry/grenades/G23StunImage.webp",
       weaponType: 3,
       name: "G-23 «Оглушающая»",
       description: "Временно оглушает все цели в радиусе действия.",

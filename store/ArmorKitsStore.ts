@@ -12,7 +12,7 @@ class ArmorKitsStore {
   armorKits = [
     {
       id: 1,
-      imagePath: "/static/armorSets/B01TacticalImage.webp",
+      imagePath: "/static/ArmorKits/B01TacticalImage.webp",
       type: "Средняя броня",
       name: "B-01 «Тактик»",
       obtainingType: obtainingType["0"],
@@ -27,7 +27,7 @@ class ArmorKitsStore {
     },
     {
       id: 1,
-      imagePath: "/static/armorSets/B08LightGunnerImage.webp",
+      imagePath: "/static/ArmorKits/B08LightGunnerImage.webp",
       type: "Легкая броня",
       name: "B-08 «Легкий стрелок»",
       obtainingType: obtainingType["4"],
@@ -42,7 +42,7 @@ class ArmorKitsStore {
     },
     {
       id: 2,
-      imagePath: "/static/armorSets/B24EnforcerImage.webp",
+      imagePath: "/static/ArmorKits/B24EnforcerImage.webp",
       type: "Средняя броня",
       name: "B-24 «Блюститель»",
       obtainingType: obtainingType["4"],
@@ -57,7 +57,7 @@ class ArmorKitsStore {
     },
     {
       id: 3,
-      imagePath: "/static/armorSets/B27FortifiedCommandoImage.webp",
+      imagePath: "/static/ArmorKits/B27FortifiedCommandoImage.webp",
       type: "Тяжелая броня",
       name: "B-27 «Укрепленный коммандос»",
       obtainingType: obtainingType["4"],
@@ -72,7 +72,7 @@ class ArmorKitsStore {
     },
     {
       id: 1,
-      imagePath: "/static/armorSets/Ce35TrenchEngineerImage.webp",
+      imagePath: "/static/ArmorKits/Ce35TrenchEngineerImage.webp",
       type: "Средняя броня",
       name: "CE-35 «Траншейный инженер»",
       obtainingType: obtainingType["1"],
@@ -88,7 +88,7 @@ class ArmorKitsStore {
     },
     {
       id: 4,
-      imagePath: "/static/armorSets/Ce67TitanImage.webp",
+      imagePath: "/static/ArmorKits/Ce67TitanImage.webp",
       type: "Легкая броня",
       name: "CE-67 «Титан»",
       obtainingType: obtainingType["4"],
@@ -103,7 +103,7 @@ class ArmorKitsStore {
     },
     {
       id: 5,
-      imagePath: "/static/armorSets/Ce74BreakerImage.webp",
+      imagePath: "/static/ArmorKits/Ce74BreakerImage.webp",
       type: "Легкая броня",
       name: "CE-74 «Выключатель»",
       obtainingType: obtainingType["4"],
@@ -118,7 +118,7 @@ class ArmorKitsStore {
     },
     {
       id: 6,
-      imagePath: "/static/armorSets/Ce81JuggernautImage.webp",
+      imagePath: "/static/ArmorKits/Ce81JuggernautImage.webp",
       type: "Средняя броня",
       name: "CE-81 «Джаггернаут»",
       obtainingType: obtainingType["4"],
@@ -133,7 +133,7 @@ class ArmorKitsStore {
     },
     {
       id: 2,
-      imagePath: "/static/armorSets/Сm09BonesnapperImage.webp",
+      imagePath: "/static/ArmorKits/Сm09BonesnapperImage.webp",
       type: "Средняя броня",
       name: "CM-09 «Костолом»",
       obtainingType: obtainingType["1"],
@@ -149,7 +149,7 @@ class ArmorKitsStore {
     },
     {
       id: 3,
-      imagePath: "/static/armorSets/Cm14PhysicianImage.webp",
+      imagePath: "/static/ArmorKits/Cm14PhysicianImage.webp",
       type: "Средняя броня",
       name: "CM-14 «Врач»",
       obtainingType: obtainingType["1"],
@@ -165,7 +165,7 @@ class ArmorKitsStore {
     },
     {
       id: 7,
-      imagePath: "/static/armorSets/Cm17ButcherImage.webp",
+      imagePath: "/static/ArmorKits/Cm17ButcherImage.webp",
       type: "Тяжелая броня",
       name: "CM-14 «Мясник»",
       obtainingType: obtainingType["4"],
@@ -180,7 +180,7 @@ class ArmorKitsStore {
     },
     {
       id: 8,
-      imagePath: "/static/armorSets/Cm21TrenchParamedicImage.webp",
+      imagePath: "/static/ArmorKits/Cm21TrenchParamedicImage.webp",
       type: "Легкая броня",
       name: "CM-21 «Траншейный фельдшер»",
       obtainingType: obtainingType["4"],
@@ -195,7 +195,7 @@ class ArmorKitsStore {
     },
     {
       id: 4,
-      imagePath: "/static/armorSets/Dp11ChampionOfThePeopleImage.webp",
+      imagePath: "/static/ArmorKits/Dp11ChampionOfThePeopleImage.webp",
       type: "Средняя броня",
       name: "DP-11 «Защитник народа»",
       obtainingType: obtainingType["1"],
@@ -211,7 +211,7 @@ class ArmorKitsStore {
     },
     {
       id: 5,
-      imagePath: "/static/armorSets/Dp40HeroOfTheFederationImage.webp",
+      imagePath: "/static/ArmorKits/Dp40HeroOfTheFederationImage.webp",
       type: "Средняя броня",
       name: "DP-40 «Герой федерации»",
       obtainingType: obtainingType["1"],
@@ -227,7 +227,7 @@ class ArmorKitsStore {
     },
     {
       id: 1,
-      imagePath: "/static/armorSets/Dp53SaviourOfTheFreeImage.webp",
+      imagePath: "/static/ArmorKits/Dp53SaviourOfTheFreeImage.webp",
       type: "Средняя броня",
       name: "DP-53 «Спаситель свободных»",
       obtainingType: obtainingType["6"],
@@ -242,7 +242,7 @@ class ArmorKitsStore {
     },
     {
       id: 1,
-      imagePath: "/static/armorSets/Ex00PrototypeXImage.webp",
+      imagePath: "/static/ArmorKits/Ex00PrototypeXImage.webp",
       type: "Легкая броня",
       name: "EX-00 «Прототип X»",
       obtainingType: obtainingType["3"],
@@ -257,7 +257,7 @@ class ArmorKitsStore {
     },
     {
       id: 2,
-      imagePath: "/static/armorSets/Ex03Prototype3Image.webp",
+      imagePath: "/static/ArmorKits/Ex03Prototype3Image.webp",
       type: "Средняя броня",
       name: "EX-03 «Прототип 3»",
       obtainingType: obtainingType["3"],
@@ -272,7 +272,7 @@ class ArmorKitsStore {
     },
     {
       id: 3,
-      imagePath: "/static/armorSets/Ex16Prototype16Image.webp",
+      imagePath: "/static/ArmorKits/Ex16Prototype16Image.webp",
       type: "Средняя броня",
       name: "EX-16 «Прототип 16»",
       obtainingType: obtainingType["3"],
@@ -287,7 +287,7 @@ class ArmorKitsStore {
     },
     {
       id: 6,
-      imagePath: "/static/armorSets/Fs05MarksmanImage.webp",
+      imagePath: "/static/ArmorKits/Fs05MarksmanImage.webp",
       type: "Тяжелая броня",
       name: "FS-05 «Меткий стрелок»",
       obtainingType: obtainingType["1"],
@@ -303,7 +303,7 @@ class ArmorKitsStore {
     },
     {
       id: 9,
-      imagePath: "/static/armorSets/Fs11ExecutionerImage.webp",
+      imagePath: "/static/ArmorKits/Fs11ExecutionerImage.webp",
       type: "Тяжелая броня",
       name: "FS-11 «Палач»",
       obtainingType: obtainingType["4"],
@@ -318,7 +318,7 @@ class ArmorKitsStore {
     },
     {
       id: 7,
-      imagePath: "/static/armorSets/Fs23BattleMasterImage.webp",
+      imagePath: "/static/ArmorKits/Fs23BattleMasterImage.webp",
       type: "Тяжелая броня",
       name: "FS-23 «Воевода»",
       obtainingType: obtainingType["1"],
@@ -334,7 +334,7 @@ class ArmorKitsStore {
     },
     {
       id: 10,
-      imagePath: "/static/armorSets/Fs34ExterminatorImage.webp",
+      imagePath: "/static/ArmorKits/Fs34ExterminatorImage.webp",
       type: "Средняя броня",
       name: "FS-34 «Истребитель»",
       obtainingType: obtainingType["4"],
@@ -349,7 +349,7 @@ class ArmorKitsStore {
     },
     {
       id: 11,
-      imagePath: "/static/armorSets/Fs38EradicatorImage.webp",
+      imagePath: "/static/ArmorKits/Fs38EradicatorImage.webp",
       type: "Легкая броня",
       name: "FS-38 «Искоренитель»",
       obtainingType: obtainingType["4"],
@@ -364,7 +364,7 @@ class ArmorKitsStore {
     },
     {
       id: 12,
-      imagePath: "/static/armorSets/Fs61DreadnoughtImage.webp",
+      imagePath: "/static/ArmorKits/Fs61DreadnoughtImage.webp",
       type: "Тяжелая броня",
       name: "FS-61 «Дредноут»",
       obtainingType: obtainingType["4"],
@@ -379,7 +379,7 @@ class ArmorKitsStore {
     },
     {
       id: 8,
-      imagePath: "/static/armorSets/Sa04CombatTechnicianImage.webp",
+      imagePath: "/static/ArmorKits/Sa04CombatTechnicianImage.webp",
       type: "Средняя броня",
       name: "SA-04 «Боевой техник»",
       obtainingType: obtainingType["1"],
@@ -395,7 +395,7 @@ class ArmorKitsStore {
     },
     {
       id: 1,
-      imagePath: "/static/armorSets/Sa12ServoAssistedImage.webp",
+      imagePath: "/static/ArmorKits/Sa12ServoAssistedImage.webp",
       type: "Средняя броня",
       name: "SA-12 «Сервоприводная»",
       obtainingType: obtainingType["2"],
@@ -410,7 +410,7 @@ class ArmorKitsStore {
     },
     {
       id: 2,
-      imagePath: "/static/armorSets/Sa25SteelTrooperImage.webp",
+      imagePath: "/static/ArmorKits/Sa25SteelTrooperImage.webp",
       type: "Средняя броня",
       name: "SA-25 «Стальной кавалерист»",
       obtainingType: obtainingType["2"],
@@ -425,7 +425,7 @@ class ArmorKitsStore {
     },
     {
       id: 3,
-      imagePath: "/static/armorSets/Sa32DynamoImage.webp",
+      imagePath: "/static/ArmorKits/Sa32DynamoImage.webp",
       type: "Тяжелая броня",
       name: "SA-32 «Динамо»",
       obtainingType: obtainingType["2"],
@@ -440,7 +440,7 @@ class ArmorKitsStore {
     },
     {
       id: 13,
-      imagePath: "/static/armorSets/Sc15DroneMasterImage.webp",
+      imagePath: "/static/ArmorKits/Sc15DroneMasterImage.webp",
       type: "Средняя броня",
       name: "SС-15 «Мастер дронов»",
       obtainingType: obtainingType["4"],
@@ -455,7 +455,7 @@ class ArmorKitsStore {
     },
     {
       id: 9,
-      imagePath: "/static/armorSets/Sc30TrailblazerScoutImage.webp",
+      imagePath: "/static/ArmorKits/Sc30TrailblazerScoutImage.webp",
       type: "Легкая броня",
       name: "SС-30 «Следопыт»",
       obtainingType: obtainingType["1"],
@@ -471,7 +471,7 @@ class ArmorKitsStore {
     },
     {
       id: 10,
-      imagePath: "/static/armorSets/Sc34InfiltratorImage.webp",
+      imagePath: "/static/ArmorKits/Sc34InfiltratorImage.webp",
       type: "Легкая броня",
       name: "SС-34 «Лазутчик»",
       obtainingType: obtainingType["1"],
@@ -487,7 +487,7 @@ class ArmorKitsStore {
     },
     {
       id: 14,
-      imagePath: "/static/armorSets/Sc37LegionnaireImage.webp",
+      imagePath: "/static/ArmorKits/Sc37LegionnaireImage.webp",
       type: "Легкая броня",
       name: "SС-37 «Легионер»",
       obtainingType: obtainingType["4"],
@@ -502,7 +502,7 @@ class ArmorKitsStore {
     },
     {
       id: 1,
-      imagePath: "/static/armorSets/Tr7AmbassadorOfTheBrandImage.webp",
+      imagePath: "/static/ArmorKits/Tr7AmbassadorOfTheBrandImage.webp",
       type: "Средняя броня",
       name: "TR-7 «Представитель бренда»",
       obtainingType: obtainingType["5"],
@@ -517,7 +517,7 @@ class ArmorKitsStore {
     },
     {
       id: 2,
-      imagePath: "/static/armorSets/Tr9CavalierOfDemocracyImage.webp",
+      imagePath: "/static/ArmorKits/Tr9CavalierOfDemocracyImage.webp",
       type: "Средняя броня",
       name: "TR-9 «Кавалер демократии»",
       obtainingType: obtainingType["5"],
@@ -532,7 +532,7 @@ class ArmorKitsStore {
     },
     {
       id: 3,
-      imagePath: "/static/armorSets/Tr62KnightImage.webp",
+      imagePath: "/static/ArmorKits/Tr62KnightImage.webp",
       type: "Тяжелая броня",
       name: "TR-62 «Рыцарь»",
       obtainingType: obtainingType["5"],
@@ -547,7 +547,7 @@ class ArmorKitsStore {
     },
     {
       id: 1,
-      imagePath: "/static/armorSets/Tr117AlphaCommanderImage.webp",
+      imagePath: "/static/ArmorKits/Tr117AlphaCommanderImage.webp",
       type: "Средняя броня",
       name: "TR-117 «Альфа командир»",
       obtainingType: obtainingType["7"],

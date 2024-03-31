@@ -48,7 +48,7 @@ const ArmorKitAdditionalInfoModalWindow: React.FC<ArmorKitAdditionalInfoModalWin
                 className="currentArmor_Modal_CloseButton"
               >
                 <img
-                  src="/static/generalIcons/CloseIcon.svg"
+                  src="/static/GeneralIcons/CloseIcon.svg"
                   alt=""
                   className="currentArmor_Modal_CloseButton_Image"
                 />
@@ -84,14 +84,14 @@ const ArmorKitAdditionalInfoModalWindow: React.FC<ArmorKitAdditionalInfoModalWin
 
                       {price < 200 && price !== 0 ? (
                         <img
-                          src="/static/resources/MedalIcon.svg"
+                          src="/static/Resources/MedalIcon.svg"
                           alt=""
                           className="currentArmor_Modal_Top_TextBlock_Characteristic_Price_Image"
                         />
                       ) : (
                         price !== 0 && (
                           <img
-                            src="/static/resources/SuperCreditIcon.svg"
+                            src="/static/Resources/SuperCreditIcon.svg"
                             alt=""
                             className="currentArmor_Modal_Top_TextBlock_Characteristic_Price_Image"
                           />
