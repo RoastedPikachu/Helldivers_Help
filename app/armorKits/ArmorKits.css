@@ -1,3 +1,15 @@
+:root {
+    --swiper-navigation-color: #2cc388 !important;
+}
+
+.swiper-button-prev {
+    @apply !top-[300px] !left-[50px];
+}
+
+.swiper-button-next {
+    @apply !top-[300px] !right-[70px];
+}
+
 .pageTitle {
     @apply text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold;
 }
@@ -20,6 +32,22 @@
 
 .pageSection_Block_Title {
     @apply mt-[30px] text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold;
+}
+
+.pageSection_Block_SliderWrapper {
+    @apply fixed justify-center items-center top-0 left-0 w-screen h-screen z-30;
+}
+
+.pageSection_Block_SliderWrapper_DarkBackground {
+    @apply absolute w-screen h-screen bg-[#000000] opacity-45;
+}
+
+.pageSection_Block_SliderWrapper_Slider {
+    @apply relative flex justify-center items-center w-full h-auto z-30;
+}
+
+.pageSection_Block_SliderWrapper_Slider_Slide {
+    @apply relative flex justify-center items-center w-full h-full;
 }
 
 .pageSection_Block_ArmorKitsWrapper {
