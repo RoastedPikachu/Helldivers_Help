@@ -10,18 +10,6 @@
     @apply !top-[240px] !right-[70px];
 }
 
-.pageTitle {
-    @apply mt-[20px] text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold;
-}
-
-.pageTitle_Bold {
-    @apply text-[#2cc388] font-bold;
-}
-
-.pageDescription {
-    @apply mt-[20px] w-[80%] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75;
-}
-
 .pageContentSection {
     @apply relative grid grid-cols-1 grid-rows-[54] gap-y-[30px] gap-x-[30px] w-full h-auto;
 }

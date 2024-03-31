@@ -13,8 +13,6 @@ import RunningLine from "@/shared/RunningLine";
 
 import Mission from "@/entities/mission/Mission";
 
-import "./Missions.css";
-
 const Page = () => {
   return (
     <>

@@ -10,30 +10,6 @@
     @apply !top-[300px] !right-[70px];
 }
 
-.pageTitle {
-    @apply text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold;
-}
-
-.pageTitle_Bold {
-    @apply text-[#2cc388] font-bold;
-}
-
-.pageDescription {
-    @apply mt-[20px] w-[80%] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75;
-}
-
-.pageSection {
-    @apply relative w-full h-auto;
-}
-
-.pageSection_Block {
-    @apply relative w-full h-auto;
-}
-
-.pageSection_Block_Title {
-    @apply mt-[30px] text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold;
-}
-
 .pageSection_Block_SliderWrapper {
     @apply fixed justify-center items-center top-0 left-0 w-screen h-screen z-30;
 }

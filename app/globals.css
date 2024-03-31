@@ -29,4 +29,31 @@ main {
   @apply mt-[30px] deskWide:ml-[calc((100%-1440px)/2)] pb-[100px] px-[5%] deskWide:px-0 w-full max-w-[1440px] h-auto;
 }
 
+.pageTitle {
+  @apply text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold;
+}
+
+.pageTitle_Bold {
+  @apply text-[#2cc388] font-bold;
+}
+
+.pageDescription {
+  @apply mt-[20px] w-[80%] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75;
+}
+
+.pageSection {
+  @apply relative w-full h-auto;
+}
+
+.pageSection_Block {
+  @apply relative w-full h-auto;
+}
+
+.pageSection_Block_Title {
+  @apply mt-[20px] text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold;
+}
+
+.pageSection_Block_Wrapper {
+  @apply relative grid grid-cols-1 w-full h-auto;
+}
 

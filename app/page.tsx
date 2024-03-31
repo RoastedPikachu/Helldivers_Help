@@ -24,46 +24,51 @@ const Page = () => {
     },
     {
       id: 3,
+      link: "/stratagems",
+      title: "Стратагемы",
+    },
+    {
+      id: 4,
       link: "/boosters",
       title: "Усилители",
     },
     {
-      id: 4,
+      id: 5,
       link: "/resources",
       title: "Ресурсы",
     },
     {
-      id: 5,
+      id: 6,
       link: "/shipModules",
       title: "Модули корабля",
     },
     {
-      id: 6,
+      id: 7,
       link: "/ranks",
       title: "Ранги",
     },
     {
-      id: 7,
+      id: 8,
       link: "/achievements",
       title: "Достижения",
     },
     {
-      id: 8,
+      id: 9,
       link: "/terminids",
       title: "Терминиды",
     },
     {
-      id: 9,
+      id: 10,
       link: "/automatons",
       title: "Автоматоны",
     },
     {
-      id: 10,
+      id: 11,
       link: "/missions",
       title: "Миссии",
     },
     {
-      id: 11,
+      id: 12,
       link: "/planets",
       title: "Планеты",
     },
@@ -202,8 +207,8 @@ export default Page;
 //                     <img
 //                       src={`${
 //                         direction.isPressed
-//                           ? "/static/generalIcons/PressedArrowIcon.svg"
-//                           : "/static/generalIcons/ArrowIcon.svg"
+//                           ? "/static/GeneralIcons/PressedArrowIcon.svg"
+//                           : "/static/GeneralIcons/ArrowIcon.svg"
 //                       }`}
 //                       alt=""
 //                       key={direction.id}
@@ -218,7 +223,7 @@ export default Page;
 //               <div className="relative flex items-center mt-[50px] pl-[50px] pr-[10px] w-auto h-[110px] bg-[#00293a] rounded-[10px] brightness-[0.25]">
 //                 {stratagemStore.nextStratagem.directions?.map((direction) => (
 //                   <img
-//                     src="/static/generalIcons/ArrowIcon.svg"
+//                     src="/static/GeneralIcons/ArrowIcon.svg"
 //                     alt=""
 //                     key={direction.id}
 //                     className={`mr-[40px] w-[55px] h-[50px] ${getTargetRotate(
@@ -235,7 +240,7 @@ export default Page;
 //                 className="flex justify-center items-center ml-[50px] w-[150px] h-[150px] bg-[#2cc384] rounded-[10px] outline-none"
 //               >
 //                 <img
-//                   src="/static/generalIcons/StartIcon.svg"
+//                   src="/static/GeneralIcons/StartIcon.svg"
 //                   alt=""
 //                   className="w-[75px] h-[75px]"
 //                 />
@@ -246,7 +251,7 @@ export default Page;
 //                 className="flex justify-center items-center ml-[50px] w-[150px] h-[150px] bg-[#2cc384] rounded-[10px] outline-none"
 //               >
 //                 <img
-//                   src="/static/generalIcons/RestartIcon.svg"
+//                   src="/static/GeneralIcons/RestartIcon.svg"
 //                   alt=""
 //                   className="w-[100px] h-[100px]"
 //                 />

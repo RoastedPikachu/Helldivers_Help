@@ -6,7 +6,7 @@ const Page = () => {
       <section className="flex justify-center items-center w-screen h-screen">
         <div className="grid justify-items-center w-[80%]">
           <img
-            src="/static/generalIcons/SkullIcon.svg"
+            src="/GeneralIcons/SkullIcon.svg"
             alt=""
             className="w-[100px] mmedium:w-[90px] msmall:w-[80px] h-[100px] mmedium:h-[90px] msmall:h-[80px]"
           />
@@ -35,7 +35,7 @@ const Page = () => {
                 className="flex justify-center items-center p-[2.5px] w-[55px] mmedium:w-[50px] msmall:w-[45px] h-[55px] mmedium:h-[50px] msmall:h-[45px] border-2 border-[#2cc388] rounded-[7.5px]"
               >
                 <img
-                  src="/static/generalLogos/TelegramLogo.svg"
+                  src="/GeneralLogos/TelegramLogo.svg"
                   alt=""
                   className="w-[40px] mmedium:w-[37.5px] msmall:w-[35px] h-[40px] mmedium:h-[37.5px] msmall:h-[35px]"
                 />
@@ -45,11 +45,7 @@ const Page = () => {
                 href="https://boosty.to/helldivers.help"
                 className="flex justify-center items-center ml-[20px] p-[2.5px] w-[55px] mmedium:w-[50px] msmall:w-[45px] h-[55px] mmedium:h-[50px] msmall:h-[45px] bg-[#f06d2a] border-2 border-[#2cc388] rounded-[7.5px]"
               >
-                <img
-                  src="/static/generalLogos/BoostyLogo.png"
-                  alt=""
-                  className=""
-                />
+                <img src="/GeneralLogos/BoostyLogo.png" alt="" className="" />
               </a>
             </div>
           </div>
