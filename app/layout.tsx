@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: {
+    card: "summary_large_image",
     title: "Helldivers.help — Helldivers 2 помощник: Вики & другое",
     description:
       "Helldiver.help — это сайт-помощник каждому Адскому Десантнику, который сражается за продвижение демократии, свободы и процветания по всей галактике.",
