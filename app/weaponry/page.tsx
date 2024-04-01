@@ -28,7 +28,7 @@ const Page = observer(() => {
   const [swiper, setSwiper] = useState(null as any);
 
   const getTargetWeaponArray = () => {
-    switch (weaponsStore.currentWeaponInfo.weaponType) {
+    switch (weaponsStore.currentWeaponInfo.weaponType?.typeNumber) {
       case 1:
         return weaponsStore.primaryWeapons;
       case 2:
