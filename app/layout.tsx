@@ -19,17 +19,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Helldivers.help: Сайт-помощник Адским Десантникам и борцам за демократию"
-        />
-        <meta
-          property="og:description"
-          content="Полный справочник по всем планетам, вооружению, снаряжению, противникам и многому другому, что может встретить на пути Адский Десантник"
-        />
-        <meta property="og:image" content="/static/OpenGraphImage.png" />
-        <meta property="og:url" content="https://helldivers.help" />
+          <!-- Facebook Meta Tags -->
+          <meta property="og:url" content="https://helldivers.help"/>
+          <meta property="og:type" content="website"/>
+          <meta property="og:title" content="Helldivers.help — Helldivers 2 помощник: Вики & другое"/>
+          <meta property="og:description" content="Helldiver.help — это сайт-помощник каждому Адскому Десантнику, который сражается за продвижение демократии, свободы и процветания по всей галактике."/>
+          <meta property="og:image" content="https://opengraph.b-cdn.net/production/documents/34ee463e-310b-4544-998d-0b632ac9e76b.png?token=taqbWFqaZ-I9IW7-QkB8RGd4EFSE6V_ggg7wlfQfSRo&height=630&width=1200&expires=33247965426"/>
+
+          <!-- Twitter Meta Tags -->
+          <meta name="twitter:card" content="summary_large_image"/>
+          <meta property="twitter:domain" content="helldivers-help.vercel.app"/>
+          <meta property="twitter:url" content="https://helldivers-help.vercel.app"/>
+          <meta name="twitter:title" content="Helldivers.help — Helldivers 2 помощник: Вики & другое"/>
+          <meta name="twitter:description" content="Helldiver.help — это сайт-помощник каждому Адскому Десантнику, который сражается за продвижение демократии, свободы и процветания по всей галактике."/>
+          <meta name="twitter:image" content="https://opengraph.b-cdn.net/production/documents/34ee463e-310b-4544-998d-0b632ac9e76b.png?token=taqbWFqaZ-I9IW7-QkB8RGd4EFSE6V_ggg7wlfQfSRo&height=630&width=1200&expires=33247965426"/>
       </Head>
 
       <body className={inter.className}>{children}</body>
