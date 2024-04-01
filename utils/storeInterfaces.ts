@@ -19,7 +19,7 @@ export interface Booster {
 interface Weapon {
   id: number;
   imagePath: string;
-  weaponType: number;
+  weaponType: WeaponType;
   name: string;
   description: string;
   price: number | string;

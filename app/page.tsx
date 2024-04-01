@@ -13,6 +13,7 @@ import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 
 import ManualSection from "@/entities/ManualSection";
+import TheScrollToUpButton from "@/shared/TheScrollToUpButton";
 
 const Page = () => {
   const router = useRouter();
@@ -86,6 +87,8 @@ const Page = () => {
       <TheHeader />
 
       <RunningLine />
+
+      <TheScrollToUpButton />
 
       <main>
         <div className="relative mb-[40px] py-[20px] px-[30px] w-full h-[400px] bg-[url('/static/HelldiversBackgroundImage.png')] bg-no-repeat bg-cover border-2 border-[#2cc388] rounded-[10px]">

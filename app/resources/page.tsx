@@ -9,6 +9,7 @@ import TheFooter from "@/widgets/TheFooter";
 import ResourceTable from "@/widgets/resourceTable/ResourceTable";
 
 import RunningLine from "@/shared/RunningLine";
+import TheScrollToUpButton from "@/shared/TheScrollToUpButton";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 
@@ -65,6 +66,8 @@ const Page = () => {
       <TheHeader />
 
       <RunningLine />
+
+      <TheScrollToUpButton />
 
       <main>
         <ThePageTitle title={"ресурсы"} additionalTitle={"галактики"} />

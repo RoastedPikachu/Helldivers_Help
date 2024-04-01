@@ -6,6 +6,7 @@ import RanksSection from "@/widgets/RanksSection";
 import LevelsSection from "@/widgets/LevelsSection";
 
 import RunningLine from "@/shared/RunningLine";
+import TheScrollToUpButton from "@/shared/TheScrollToUpButton";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 
@@ -15,6 +16,8 @@ const Page = () => {
       <TheHeader />
 
       <RunningLine />
+
+      <TheScrollToUpButton />
 
       <main>
         <ThePageTitle title={"ранги"} additionalTitle={"адского десантника"} />

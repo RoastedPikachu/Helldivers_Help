@@ -9,6 +9,7 @@ import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
 
 import RunningLine from "@/shared/RunningLine";
+import TheScrollToUpButton from "@/shared/TheScrollToUpButton";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 
@@ -23,6 +24,8 @@ const Page = observer(() => {
           <TheHeader />
 
           <RunningLine />
+
+          <TheScrollToUpButton />
 
           <main>
             <ThePageTitle title={"терминиды"} additionalTitle={""} />

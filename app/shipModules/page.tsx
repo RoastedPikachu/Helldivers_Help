@@ -6,6 +6,7 @@ import TheFooter from "@/widgets/TheFooter";
 import ShipModulesSection from "@/widgets/ShipModulesSection";
 
 import RunningLine from "@/shared/RunningLine";
+import TheScrollToUpButton from "@/shared/TheScrollToUpButton";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 
@@ -15,6 +16,8 @@ const Page = () => {
       <TheHeader />
 
       <RunningLine />
+
+      <TheScrollToUpButton />
 
       <main>
         <ThePageTitle title={"модули"} additionalTitle={"корабля"} />
