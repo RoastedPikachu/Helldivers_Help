@@ -1,7 +1,3 @@
-:root {
-    --swiper-navigation-color: #2cc388 !important;
-}
-
 .swiper-button-prev {
     top: 150px !important;
     left: 30px !important;
@@ -31,7 +27,7 @@
 }
 
 .rootShipModuleBlock {
-    @apply relative mt-[30px] w-auto h-auto bg-[#00293a] border-2 border-[#2cc388] rounded-[10px];
+    @apply relative mt-[30px] w-auto h-auto bg-[#00293a] border-2 border-[--theme-color] rounded-[10px];
 }
 
 .rootShipModuleBlock_Top {
@@ -39,7 +35,7 @@
 }
 
 .rootShipModuleBlock_Top_Title {
-    @apply text-[#2cc388] text-[1.75rem] font-['Exo2'] font-bold;
+    @apply text-[--theme-color] text-[1.75rem] font-['Exo2'] font-bold;
 }
 
 .rootShipModuleBlock_Top_Button {
@@ -63,11 +59,11 @@
 }
 
 .slideImage {
-    @apply h-full border-2 border-[#2cc388] rounded-[7.5px];
+    @apply h-full border-2 border-[--theme-color] rounded-[7.5px];
 }
 
 .rootShipModuleBlock_Bottom_LeftBlock_Level {
-    @apply flex justify-center items-center mt-[20px] w-full h-auto border-b-2 border-[#2cc388];
+    @apply flex justify-center items-center mt-[20px] w-full h-auto border-b-2 border-[--theme-color];
 }
 
 .rootShipModuleBlock_Bottom_LeftBlock_Level_Title {
@@ -79,7 +75,7 @@
 }
 
 .rootShipModuleBlock_Bottom_LeftBlock_Level_Number_Bold {
-    @apply mr-[10px] text-[#2cc388] text-[1.75rem] font-['Insignia'];
+    @apply mr-[10px] text-[--theme-color] text-[1.75rem] font-['Insignia'];
 }
 
 .rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo {
@@ -127,5 +123,5 @@
 }
 
 .rootShipModuleBlock_Bottom_RightBlock_StratagemsBlock {
-    @apply relative mt-[10px] pb-[20px] px-[20px] w-full h-[380px] border-2 border-[#2cc388] rounded-[10px] overflow-y-scroll;
+    @apply relative mt-[10px] pb-[20px] px-[20px] w-full h-[380px] border-2 border-[--theme-color] rounded-[10px] overflow-y-scroll;
 }

@@ -14,6 +14,7 @@
 
 :root {
   --swiper-navigation-color: #2cc388 !important;
+  --theme-color: #2cc388;
 }
 
 * {
@@ -38,7 +39,7 @@ main {
 }
 
 .pageTitle_Bold {
-  @apply text-[#2cc388] font-bold;
+  @apply text-[--theme-color] font-bold;
 }
 
 .pageDescription {

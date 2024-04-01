@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
+import "./TheScrollToUpButton.css";
+
 const TheScrollToUpButton = () => {
   const [isScrollButtonShowed, changeIsScrollButtonShowed] = useState(false);
 
@@ -23,12 +25,12 @@ const TheScrollToUpButton = () => {
           behavior: "smooth",
         })
       }
-      className={`${isScrollButtonShowed ? "opacity-1" : "opacity-0 scroll-default"} fixed bottom-[170px] right-[15px] duration-[600ms] ease-in-out z-30`}
+      className={`${isScrollButtonShowed ? "opacity-1" : "opacity-0 scroll-default"} buttonWrapper`}
     >
       <img
         src="/static/GeneralIcons/ArrowDownIcon.svg"
-        alt=""
-        className="rotate-180 w-[40px] scale-y-[1.2]"
+        alt="Кнопка: Вернуться к верху страницы"
+        className="buttonImage"
       />
     </button>
   );

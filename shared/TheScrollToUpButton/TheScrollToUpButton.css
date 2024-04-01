@@ -1,0 +1,7 @@
+.buttonWrapper {
+    @apply fixed bottom-[170px] right-[15px] duration-[600ms] ease-in-out z-30;
+}
+
+.buttonImage {
+    @apply rotate-180 w-[40px] scale-y-[1.2];
+}

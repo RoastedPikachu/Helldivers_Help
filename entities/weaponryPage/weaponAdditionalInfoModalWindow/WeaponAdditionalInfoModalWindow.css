@@ -1,5 +1,5 @@
 .currentWeapon_Modal {
-    @apply relative px-[20px] pt-[40px] pb-[35px] h-auto w-[80vw] max-w-[1152px] bg-[#00293a] border-2 border-[#2cc388] rounded-[10px] z-30;
+    @apply relative px-[20px] pt-[40px] pb-[35px] h-auto w-[80vw] max-w-[1152px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] z-30;
 }
 
 .currentWeapon_Modal_CloseButton {
@@ -15,7 +15,7 @@
 }
 
 .currentWeapon_Modal_Top_ImageWrapper {
-    @apply relative flex justify-center items-center w-[400px] h-[292px] bg-cover bg-no-repeat border-2 border-[#2cc388] rounded-t-[7.5px] rounded-bl-[7.5px];
+    @apply relative flex justify-center items-center w-[400px] h-[292px] bg-cover bg-no-repeat border-2 border-[--theme-color] rounded-t-[7.5px] rounded-bl-[7.5px];
 }
 
 .currentWeapon_Modal_Top_ImageWrapper_Image {
@@ -23,7 +23,7 @@
 }
 
 .currentWeapon_Modal_Top_TextBlock {
-    @apply relative mt-[-10px] pl-[40px] pb-[20px] w-[calc(100%-420px)] h-auto border-b-2 border-[#2cc388];
+    @apply relative mt-[-10px] pl-[40px] pb-[20px] w-[calc(100%-420px)] h-auto border-b-2 border-[--theme-color];
 }
 
 .currentWeapon_Modal_Top_TextBlock_Title {
@@ -35,7 +35,7 @@
 }
 
 .currentWeapon_Modal_Top_TextBlock_Characteristic_Name {
-    @apply text-[#2cc388] text-[1.5rem] font-['Exo2'] font-bold;
+    @apply text-[--theme-color] text-[1.5rem] font-['Exo2'] font-bold;
 }
 
 .currentWeapon_Modal_Top_TextBlock_Characteristic_Price {
@@ -63,7 +63,7 @@
 }
 
 .currentWeapon_Modal_Bottom_Top_Title {
-    @apply text-[#2cc388] text-[1.5rem] font-['Exo2'] font-bold;
+    @apply text-[--theme-color] text-[1.5rem] font-['Exo2'] font-bold;
 }
 
 .currentWeapon_Modal_Bottom_Top_Text {
@@ -75,11 +75,11 @@
 }
 
 .currentWeapon_Modal_Bottom_Bottom_TextBlock {
-    @apply flex items-center h-[36px];
+    @apply flex items-center h-[36px];      
 }
 
 .currentWeapon_Modal_Bottom_Bottom_TextBlock_Title {
-    @apply text-[#2cc388] text-[1.375rem] font-['Exo2'] font-bold;
+    @apply text-[--theme-color] text-[1.375rem] font-['Exo2'] font-bold;
 }
 
 .currentWeapon_Modal_Bottom_Bottom_TextBlock_Text {

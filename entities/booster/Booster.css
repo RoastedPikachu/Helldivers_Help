@@ -1,5 +1,5 @@
 .boosterWidget {
-    @apply relative px-[30px] py-[30px] w-full h-auto bg-[#00293a] border-2 border-[#2cc388] rounded-[10px];
+    @apply relative px-[30px] py-[30px] w-full h-auto bg-[#00293a] border-2 border-[--theme-color] rounded-[10px];
 }
 
 .boosterWidget_Top {
@@ -7,7 +7,7 @@
 }
 
 .boosterWidget_Top_Image {
-    @apply w-[80px] h-[80px] border-2 border-[#2cc388] rounded-[7.5px];
+    @apply w-[80px] h-[80px] border-2 border-[--theme-color] rounded-[7.5px];
 }
 
 .boosterWidget_Top_Title {
@@ -23,7 +23,7 @@
 }
 
 .boosterWidget_Bottom_Text {
-    @apply text-[#2cc388] text-[1.5rem] font-['Exo2'] font-semibold;
+    @apply text-[--theme-color] text-[1.5rem] font-['Exo2'] font-semibold;
 }
 
 .boosterWidget_Bottom_Number {

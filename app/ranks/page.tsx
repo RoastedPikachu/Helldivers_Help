@@ -6,7 +6,7 @@ import RanksSection from "@/widgets/RanksSection";
 import LevelsSection from "@/widgets/LevelsSection";
 
 import RunningLine from "@/shared/RunningLine";
-import TheScrollToUpButton from "@/shared/TheScrollToUpButton";
+import TheScrollToUpButton from "@/shared/TheScrollToUpButton/TheScrollToUpButton";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 
