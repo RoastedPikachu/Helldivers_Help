@@ -9,6 +9,8 @@ import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
 
 import RunningLine from "@/shared/RunningLine";
+import ThePageTitle from "@/shared/ThePageTitle";
+import PageDescription from "@/shared/PageDescription";
 
 import EnemyType from "@/entities/enemyType/EnemyType";
 import CurrentEnemyType from "@/entities/CurrentEnemyType";
@@ -23,29 +25,25 @@ const Page = observer(() => {
           <RunningLine />
 
           <main>
-            <h2 className="text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold">
-              ТЕРМИНИДЫ
-            </h2>
+            <ThePageTitle title={"терминиды"} additionalTitle={""} />
 
-            <p className="mt-[20px] w-[80%] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
-              В битве с терминидами Адские Десантники должны быть готовы к
-              опасности в любой момент. Эти насекомоподобные создания: быстрые
-              охотники, свирепые воины, хитрые сталкеры, ужасные извергатели
-              желчи — каждый из них имеет свой набор смертоносных приемов.
-            </p>
+            <PageDescription
+              description={
+                "В битве с терминидами Адские Десантники должны быть готовы к опасности в любой момент. Эти насекомоподобные создания: быстрые охотники, свирепые воины, хитрые сталкеры, ужасные извергатели желчи — каждый из них имеет свой набор смертоносных приемов."
+              }
+            />
 
-            <p className="mt-[20px] w-[80%] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
-              Извергатели желчи и громилы представляют особую опасность, а
-              командиры роя и желчные титаны требуют мощного вооружения и
-              продуманной тактики для их убийства.
-            </p>
+            <PageDescription
+              description={
+                "Извергатели желчи и громилы представляют особую опасность, а командиры роя и желчные титаны требуют мощного вооружения и продуманной тактики для их убийства."
+              }
+            />
 
-            <p className="mt-[20px] w-[80%] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
-              Адские Десантники должны полагаться на свою подготовку, веру в
-              демократию, командную работу и технологичное снаряжение, чтобы
-              обеспечить победу Супер-Земли, выживание человечества и
-              продвижение управляемой демократии в этой бесконечной битве.
-            </p>
+            <PageDescription
+              description={
+                "Адские Десантники должны полагаться на свою подготовку, веру в демократию, командную работу и технологичное снаряжение, чтобы обеспечить победу Супер-Земли, выживание человечества и продвижение управляемой демократии в этой бесконечной битве."
+              }
+            />
 
             <section className="relative grid grid-cols-3 grid-rows-2 gap-y-[30px] gap-x-[30px] mt-[50px] w-full h-auto">
               {enemyTypeStore.terminids.map((terminid) => (
