@@ -8,10 +8,10 @@ export const biomes: BiomesObject = {
     imagePath: "/static/Biomes/RainforestImage.webp",
   },
   ethereal: {
-    surface: "эфирная",
+    surface: "неземная",
     description:
-      "This world teems with ethereal, boundless, and peculiar plant life that spreads silent and uninterrupted across its entire surface.",
-    imagePath: "/static/Biomes/BlankImage.png",
+      "Этот мир может похвастаться буквально потусторонней флорой, бесшумно простирающейся единым целым по всей поверхности планеты.",
+    imagePath: "/static/Biomes/EtherealImage.webp",
   },
   jungle: {
     surface: "джунгли",
@@ -22,8 +22,8 @@ export const biomes: BiomesObject = {
   moon: {
     surface: "луна",
     description:
-      "A rocky, lonely moon with extremely valuable mineral deposits underneath the surface.",
-    imagePath: "/static/Biomes/BlankImage.png",
+      "Одинокая каменистая луна, болгатая разнообразными залежами минералов.",
+    imagePath: "/static/Biomes/MoonImage.webp",
   },
   desert: {
     surface: "пустыня",
@@ -82,7 +82,13 @@ export const biomes: BiomesObject = {
   canyon: {
     surface: "каньон",
     description:
-      "This arid, rocky biome covering this world has driven the evolution of exceptionally efficient water usage in its various organisms.",
+      "Засушливый каменистый биом этой планеты заставил местных животных крайне эффективно использовать воду.",
     imagePath: "/static/Biomes/CanyonImage.webp",
+  },
+  newDesert: {
+    surface: "новый пустынный биом",
+    description:
+      "Раскаленная пустынная планета, на которой в безграничных морях песчаных дюн высятся редкие каменистые островки столовых гор.",
+    imagePath: "/static/Biomes/NewBiomeImage.webp",
   },
 };

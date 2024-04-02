@@ -28,7 +28,7 @@ class PlanetsStore {
       id: 1,
       name: "Клен Дахт II",
       sector: galaxySectors.altus,
-      biome: null,
+      biome: biomes.newDesert,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
@@ -48,7 +48,7 @@ class PlanetsStore {
       id: 3,
       name: "Вдовья гавань",
       sector: galaxySectors.altus,
-      biome: null,
+      biome: biomes.moon,
       weatherConditions: [
         weatherConditions.extremeCold,
         weatherConditions.meteorStorms,
@@ -345,7 +345,7 @@ class PlanetsStore {
       id: 4,
       name: "Виридия-прайм",
       sector: galaxySectors.cantolus,
-      biome: null,
+      biome: biomes.newDesert,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
@@ -406,7 +406,7 @@ class PlanetsStore {
       id: 3,
       name: "Мастия",
       sector: galaxySectors.marspira,
-      biome: null,
+      biome: biomes.newDesert,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
@@ -474,7 +474,7 @@ class PlanetsStore {
       id: 3,
       name: "Карамур",
       sector: galaxySectors.korpus,
-      biome: null,
+      biome: biomes.newDesert,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
@@ -556,7 +556,7 @@ class PlanetsStore {
       id: 4,
       name: "Утроба",
       sector: galaxySectors.idun,
-      biome: null,
+      biome: biomes.desolate,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.fireTornadoes,
@@ -587,7 +587,7 @@ class PlanetsStore {
       id: 4,
       name: "Курия",
       sector: galaxySectors.marspira,
-      biome: null,
+      biome: biomes.moon,
       weatherConditions: [
         weatherConditions.extremeCold,
         weatherConditions.meteorStorms,
@@ -634,7 +634,7 @@ class PlanetsStore {
       id: 5,
       name: "Ратч",
       sector: galaxySectors.iptus,
-      biome: null,
+      biome: biomes.newDesert,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
@@ -681,7 +681,7 @@ class PlanetsStore {
       id: 3,
       name: "Терек",
       sector: galaxySectors.orion,
-      biome: null,
+      biome: biomes.moon,
       weatherConditions: [
         weatherConditions.extremeCold,
         weatherConditions.meteorStorms,
@@ -757,7 +757,7 @@ class PlanetsStore {
       id: 6,
       name: "Морадеш",
       sector: galaxySectors.celeste,
-      biome: null,
+      biome: biomes.newDesert,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
@@ -767,7 +767,7 @@ class PlanetsStore {
       id: 2,
       name: "Расп",
       sector: galaxySectors.gallux,
-      biome: null,
+      biome: biomes.moon,
       weatherConditions: [
         weatherConditions.extremeCold,
         weatherConditions.meteorStorms,
@@ -855,7 +855,7 @@ class PlanetsStore {
       id: 3,
       name: "Аванпост 32",
       sector: galaxySectors.saleria,
-      biome: null,
+      biome: biomes.newDesert,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
@@ -961,7 +961,7 @@ class PlanetsStore {
       id: 2,
       name: "Дольф",
       sector: galaxySectors.nanos,
-      biome: null,
+      biome: biomes.moon,
       weatherConditions: [
         weatherConditions.extremeCold,
         weatherConditions.meteorStorms,
@@ -1279,7 +1279,7 @@ class PlanetsStore {
       id: 2,
       name: "Осупсам",
       sector: galaxySectors.tarragon,
-      biome: null,
+      biome: biomes.newDesert,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
@@ -1330,7 +1330,7 @@ class PlanetsStore {
       id: 1,
       name: "Дирген",
       sector: galaxySectors.severin,
-      biome: null,
+      biome: biomes.newDesert,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
@@ -1405,7 +1405,7 @@ class PlanetsStore {
       id: 2,
       name: "Клаорелл",
       sector: galaxySectors.tanis,
-      biome: null,
+      biome: biomes.moon,
       weatherConditions: [
         weatherConditions.extremeCold,
         weatherConditions.meteorStorms,
@@ -1549,7 +1549,7 @@ class PlanetsStore {
       id: 3,
       name: "Хальдус",
       sector: galaxySectors.ferris,
-      biome: null,
+      biome: biomes.moon,
       weatherConditions: [
         weatherConditions.extremeCold,
         weatherConditions.meteorStorms,
@@ -1586,7 +1586,7 @@ class PlanetsStore {
       id: 5,
       name: "Хезе-бэй",
       sector: galaxySectors.hanzo,
-      biome: null,
+      biome: biomes.newDesert,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
@@ -1626,7 +1626,7 @@ class PlanetsStore {
       id: 5,
       name: "Кейд",
       sector: galaxySectors.akira,
-      biome: null,
+      biome: biomes.newDesert,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
@@ -1680,7 +1680,7 @@ class PlanetsStore {
       id: 5,
       name: "Ластоф",
       sector: galaxySectors.theseus,
-      biome: null,
+      biome: biomes.newDesert,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
@@ -1707,7 +1707,7 @@ class PlanetsStore {
       id: 2,
       name: "Майя",
       sector: galaxySectors.severin,
-      biome: null,
+      biome: biomes.moon,
       weatherConditions: [
         weatherConditions.extremeCold,
         weatherConditions.meteorStorms,
@@ -1898,7 +1898,7 @@ class PlanetsStore {
       id: 6,
       name: "Факт-бэй",
       sector: galaxySectors.jinXi,
-      biome: null,
+      biome: biomes.newDesert,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
@@ -1945,7 +1945,7 @@ class PlanetsStore {
       id: 3,
       name: "Пропус",
       sector: galaxySectors.leo,
-      biome: null,
+      biome: biomes.newDesert,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
@@ -2006,7 +2006,7 @@ class PlanetsStore {
       id: 5,
       name: "Сетия",
       sector: galaxySectors.omega,
-      biome: null,
+      biome: biomes.newDesert,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
@@ -2217,7 +2217,7 @@ class PlanetsStore {
       id: 5,
       name: "Зания-прайм",
       sector: galaxySectors.gellert,
-      biome: null,
+      biome: biomes.newDesert,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
@@ -2247,7 +2247,7 @@ class PlanetsStore {
       id: 5,
       name: "Диаспора X",
       sector: galaxySectors.lestrade,
-      biome: null,
+      biome: biomes.newDesert,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
@@ -2267,7 +2267,7 @@ class PlanetsStore {
       id: 4,
       name: "Загон-прайм",
       sector: galaxySectors.mirin,
-      biome: null,
+      biome: biomes.newDesert,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
