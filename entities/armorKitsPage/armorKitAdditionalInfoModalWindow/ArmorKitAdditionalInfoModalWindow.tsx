@@ -10,7 +10,7 @@ import { Bonus } from "@/utils/dataInterfaces";
 import Typewriter from "@/shared/Typewriter";
 
 import "./ArmorKitAdditionalInfoModalWindow.css";
-import { obtainingType } from "@/data/armorObtainingTypes";
+import { obtainingType } from "@/data/obtainingTypes";
 
 interface ArmorKitAdditionalInfoModalWindowProps {
   imagePath: string;
