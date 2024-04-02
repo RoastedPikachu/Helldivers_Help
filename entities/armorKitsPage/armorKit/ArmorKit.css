@@ -1,5 +1,5 @@
 .armorKitWidget {
-    @apply relative flex justify-center w-full h-[450px] bg-[#00293a] border-2 border-[#2cc388] rounded-[10px] overflow-hidden cursor-pointer;
+    @apply relative flex justify-center w-full h-[450px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] overflow-hidden cursor-pointer;
 }
 
 .armorKitWidget_Text {

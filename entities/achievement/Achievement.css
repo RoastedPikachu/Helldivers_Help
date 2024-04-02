@@ -1,5 +1,5 @@
 .achievementWidget {
-    @apply px-[30px] py-[30px] w-full h-auto bg-[#00293a] border-2 border-[#2cc388] rounded-[10px];
+    @apply px-[30px] py-[30px] w-full h-auto bg-[#00293a] border-2 border-[--theme-color] rounded-[10px];
 }
 
 .achievementWidget_Top {
@@ -19,7 +19,7 @@
 }
 
 .achievementWidget_Top_Image_TextWrapper_Description {
-    @apply mt-[10px] text-[#2cc388] text-[1.125rem] font-['Exo2'] font-medium;
+    @apply mt-[10px] text-[--theme-color] text-[1.125rem] font-['Exo2'] font-medium;
 }
 
 .achievementWidget_Text {

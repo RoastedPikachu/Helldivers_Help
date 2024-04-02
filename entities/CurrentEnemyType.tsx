@@ -18,7 +18,7 @@ const CurrentEnemyType: React.FC<CurrentEnemyTypeProps> = observer(
           <div className="fixed flex justify-center items-center top-0 left-0 w-screen h-screen">
             <div className="absolute w-screen h-screen bg-[#000000] opacity-45"></div>
 
-            <div className="relative flex px-[20px] py-[40px] h-auto w-[80vw] bg-[#00293a] border-2 border-[#2cc388] rounded-[10px] z-30">
+            <div className="relative flex px-[20px] py-[40px] h-auto w-[80vw] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] z-30">
               <button
                 onClick={() => enemyTypeStore.clearCurrentEnemyType()}
                 className="absolute top-[40px] right-[40px] w-[35px] h-[35px]"
@@ -31,7 +31,7 @@ const CurrentEnemyType: React.FC<CurrentEnemyTypeProps> = observer(
               </button>
 
               <div
-                className={`relative flex justify-center items-center w-[400px] h-[400px] ${enemyTypeStore.currentEnemyType.fractionType === 1 ? "bg-[url('/static/Terminids/TerminidsBackgroundImage.png')]" : "bg-[url('/static/Automatons/AutomatonsBackgroundImage.png')]"} bg-cover bg-no-repeat border-2 border-[#2cc388] rounded-[7.5px]`}
+                className={`relative flex justify-center items-center w-[400px] h-[400px] ${enemyTypeStore.currentEnemyType.fractionType === 1 ? "bg-[url('/static/Terminids/TerminidsBackgroundImage.png')]" : "bg-[url('/static/Automatons/AutomatonsBackgroundImage.png')]"} bg-cover bg-no-repeat border-2 border-[--theme-color] rounded-[7.5px]`}
               >
                 {enemyTypeStore.currentEnemyType.iconPath ? (
                   <img
@@ -41,7 +41,7 @@ const CurrentEnemyType: React.FC<CurrentEnemyTypeProps> = observer(
                   />
                 ) : (
                   <p
-                    className={`text-[#2cc388] text-[10rem] text-center font-['Insignia'] font-bold`}
+                    className={`text-[--theme-color] text-[10rem] text-center font-['Insignia'] font-bold`}
                   >
                     ?
                   </p>
@@ -50,7 +50,7 @@ const CurrentEnemyType: React.FC<CurrentEnemyTypeProps> = observer(
 
               <div className="mt-[-10px] ml-[40px] w-[calc(100%-440px)] h-auto">
                 <h1 className="text-[#ffffff] text-[2rem] font-['Exo2'] font-bold">
-                  <b className="text-[#2cc388] font-bold">Терминид</b> —{" "}
+                  <b className="text-[--theme-color] font-bold">Терминид</b> —{" "}
                   {enemyTypeStore.currentEnemyType.title}
                 </h1>
 

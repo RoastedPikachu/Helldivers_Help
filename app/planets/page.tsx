@@ -14,6 +14,9 @@ import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
 
 import RunningLine from "@/shared/RunningLine";
+import TheScrollToUpButton from "@/shared/TheScrollToUpButton/TheScrollToUpButton";
+import ThePageTitle from "@/shared/ThePageTitle";
+import PageDescription from "@/shared/PageDescription";
 
 import Planet from "@/entities/planetsPage/planet/Planet";
 import PlanetAdditionalInfoModalWindow from "@/entities/planetsPage/planetAdditionalInfoModalWindow/PlanetAdditionalInfoModalWindow";
@@ -43,18 +46,16 @@ const Page = observer(() => {
 
           <RunningLine />
 
-          <main>
-            <h2 className="pageTitle">
-              ГЛОССАРИЙ <b className="pageTitle_Bold">ПЛАНЕТ</b>
-            </h2>
+          <TheScrollToUpButton />
 
-            <p className="pageDescription">
-              Глоссарий планет содержит информацию о мирах, вовлеченных в
-              галактический конфликт. Каждая планета имеет свои особенности,
-              проблемы и стратегическое значение. Изучите уникальные
-              характеристики этих небесных тел, чтобы лучше понять динамику
-              текущей борьбы за свободу, процветание и управляемую демократию.
-            </p>
+          <main>
+            <ThePageTitle title={"глоссарий"} additionalTitle={"планет"} />
+
+            <PageDescription
+              description={
+                "Глоссарий планет содержит информацию о мирах, вовлеченных в галактический конфликт. Каждая планета имеет свои особенности, проблемы и стратегическое значение. Изучите уникальные характеристики этих небесных тел, чтобы лучше понять динамику текущей борьбы за свободу, процветание и управляемую демократию."
+              }
+            />
 
             <section className="pageContentSection">
               <div

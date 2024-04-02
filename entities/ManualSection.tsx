@@ -12,8 +12,8 @@ interface ManualSectionProps {
 const ManualSection: React.FC<ManualSectionProps> = ({ id, link, title }) => {
   return (
     <Link href={link}>
-      <div className="px-[30px] pt-[20px] pb-[30px] w-full h-auto bg-[#00293a] border-2 border-[#2cc388] rounded-[10px] cursor-pointer">
-        <p className="text-[#2cc388] text-[2.5rem] font-['Exo2'] font-bold">
+      <div className="px-[30px] pt-[20px] pb-[30px] w-full h-auto bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] cursor-pointer">
+        <p className="text-[--theme-color] text-[2.5rem] font-['Exo2'] font-bold">
           {id}.
         </p>
 

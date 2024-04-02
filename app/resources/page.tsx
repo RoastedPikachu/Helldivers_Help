@@ -9,6 +9,9 @@ import TheFooter from "@/widgets/TheFooter";
 import ResourceTable from "@/widgets/resourceTable/ResourceTable";
 
 import RunningLine from "@/shared/RunningLine";
+import TheScrollToUpButton from "@/shared/TheScrollToUpButton/TheScrollToUpButton";
+import ThePageTitle from "@/shared/ThePageTitle";
+import PageDescription from "@/shared/PageDescription";
 
 import Resource from "@/entities/Resource";
 import CurrentResourceInfo from "@/entities/CurrentResourceInfo";
@@ -64,21 +67,22 @@ const Page = () => {
 
       <RunningLine />
 
+      <TheScrollToUpButton />
+
       <main>
-        <h2 className="text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold">
-          РЕСУРСЫ <b className="text-[#2cc388] font-bold">ГАЛАКТИКИ</b>
-        </h2>
+        <ThePageTitle title={"ресурсы"} additionalTitle={"галактики"} />
 
-        <p className="mt-[20px] w-[80%] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
-          Ресурсы — это топливо для повышения вашей личной эффективности в
-          борьбе за продвижение управляемой демократии, свободы и процветания по
-          всей галактике.
-        </p>
+        <PageDescription
+          description={
+            "Ресурсы — это топливо для повышения вашей личной эффективности в борьбе за продвижение управляемой демократии, свободы и процветания по всей галактике."
+          }
+        />
 
-        <p className="mt-[20px] w-[80%] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
-          Они позволяют улучшать корабль, покупать новое снаряжение и
-          вооружение, а также открывать боевой пропуск.
-        </p>
+        <PageDescription
+          description={
+            "Они позволяют улучшать корабль, покупать новое снаряжение и вооружение, а также открывать боевой пропуск."
+          }
+        />
 
         <section
           id="ResourceInfo"

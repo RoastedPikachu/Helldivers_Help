@@ -12,6 +12,11 @@
   src: url('./fonts/Exo2-VariableFont_wght.ttf') format('truetype');
 }
 
+:root {
+  --swiper-navigation-color: #2cc388 !important;
+  --theme-color: #2cc388;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -34,7 +39,7 @@ main {
 }
 
 .pageTitle_Bold {
-  @apply text-[#2cc388] font-bold;
+  @apply text-[--theme-color] font-bold;
 }
 
 .pageDescription {

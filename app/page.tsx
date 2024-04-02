@@ -9,6 +9,9 @@ import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
 
 import RunningLine from "@/shared/RunningLine";
+import TheScrollToUpButton from "@/shared/TheScrollToUpButton/TheScrollToUpButton";
+import ThePageTitle from "@/shared/ThePageTitle";
+import PageDescription from "@/shared/PageDescription";
 
 import ManualSection from "@/entities/ManualSection";
 
@@ -85,11 +88,13 @@ const Page = () => {
 
       <RunningLine />
 
+      <TheScrollToUpButton />
+
       <main>
-        <div className="relative py-[20px] px-[30px] w-full h-[400px] bg-[url('/static/HelldiversBackgroundImage.png')] bg-no-repeat bg-cover border-2 border-[#2cc388] rounded-[10px]">
+        <div className="relative mb-[40px] py-[20px] px-[30px] w-full h-[400px] bg-[url('/static/HelldiversBackgroundImage.png')] bg-no-repeat bg-cover border-2 border-[--theme-color] rounded-[10px]">
           <h1 className="text-[#ffffff] text-[3rem] font-['Insignia'] font-bold brightness-125">
             HELLDIVERS
-            <b className="text-[#2cc388] font-bold">.HELP</b>
+            <b className="text-[--theme-color] font-bold">.HELP</b>
           </h1>
 
           <p className="w-[35%] text-[#ffffff] text-[2rem] font-['Exo2'] font-semibold brightness-125">
@@ -97,19 +102,16 @@ const Page = () => {
           </p>
         </div>
 
-        <h2 className="mt-[20px] text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold">
-          СПРАВОЧНИК{" "}
-          <b className="text-[#2cc388] font-bold">АДСКОГО ДЕСАНТНИКА</b>
-        </h2>
+        <ThePageTitle
+          title={"справочник"}
+          additionalTitle={"адского десантника"}
+        />
 
-        <p className="mt-[20px] w-[80%] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
-          Добро пожаловать в справочник по Helldivers 2! Приготовьтесь
-          погрузиться в захватывающий мир глобальной войны с враждебными
-          захватчиками: автоматонами и терминидами. В этом руководстве вы
-          найдете всю необходимую информацию, чтобы легче ориентироваться в
-          особенностях вашего снаряжения, противников и планет галактики и
-          выходить победителем из всех выполняемых вами миссий.
-        </p>
+        <PageDescription
+          description={
+            "Добро пожаловать в справочник по Helldivers 2! Приготовьтесь погрузиться в захватывающий мир глобальной войны с враждебными захватчиками: автоматонами и терминидами. В этом руководстве вы найдете всю необходимую информацию, чтобы легче ориентироваться в особенностях вашего снаряжения, противников и планет галактики и выходить победителем из всех выполняемых вами миссий."
+          }
+        />
 
         <section className="relative grid grid-cols-4 grid-rows-2 gap-y-[30px] gap-x-[30px] mt-[50px] w-full h-auto">
           {manualSections.map((section) => (

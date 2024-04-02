@@ -12,6 +12,9 @@ import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
 
 import RunningLine from "@/shared/RunningLine";
+import TheScrollToUpButton from "@/shared/TheScrollToUpButton/TheScrollToUpButton";
+import ThePageTitle from "@/shared/ThePageTitle";
+import PageDescription from "@/shared/PageDescription";
 
 import Weapon from "@/entities/weaponryPage/weapon/Weapon";
 import WeaponAdditionalInfoModalWindow from "@/entities/weaponryPage/weaponAdditionalInfoModalWindow/WeaponAdditionalInfoModalWindow";
@@ -26,7 +29,7 @@ const Page = observer(() => {
   const [swiper, setSwiper] = useState(null as any);
 
   const getTargetWeaponArray = () => {
-    switch (weaponsStore.currentWeaponInfo.weaponType) {
+    switch (weaponsStore.currentWeaponInfo.weaponType?.typeNumber) {
       case 1:
         return weaponsStore.primaryWeapons;
       case 2:
@@ -52,24 +55,25 @@ const Page = observer(() => {
 
           <RunningLine />
 
+          <TheScrollToUpButton />
+
           <main>
-            <h2 className="pageTitle">
-              ВООРУЖЕНИЕ <b className="pageTitle_Bold">АДСКОГО ДЕСАНТНИКА</b>
-            </h2>
+            <ThePageTitle
+              title={"вооружение"}
+              additionalTitle={"адского десантника"}
+            />
 
-            <p className="mt-[20px] w-[80%] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
-              Вооружение — это ключ к успеху для любого Адского Десантника. От
-              дробовиков до энергетического оружия — все это инструменты,
-              которые помогут вам распространять управляемую демократию в
-              галактике.
-            </p>
+            <PageDescription
+              description={
+                "Вооружение — это ключ к успеху для любого Адского Десантника. От дробовиков до энергетического оружия — все это инструменты, которые помогут вам распространять управляемую демократию в галактике."
+              }
+            />
 
-            <p className="mt-[20px] w-[80%] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
-              Когда жуки начнут ползти, а машины — стрелять, не стойте в
-              стороне. Возьмите оружие, и покажите врагам Супер-Земли, на что
-              способны настоящие Адские Десантники. С демократией на вашей
-              стороне и вашими товарищами рядом, вы непобедимы!
-            </p>
+            <PageDescription
+              description={
+                "Когда жуки начнут ползти, а машины — стрелять, не стойте в стороне. Возьмите оружие, и покажите врагам Супер-Земли, на что способны настоящие Адские Десантники. С демократией на вашей стороне и вашими товарищами рядом, вы непобедимы!"
+              }
+            />
 
             <section className="pageSection">
               <div className="pageSection_Block">

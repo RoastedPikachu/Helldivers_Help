@@ -1,4 +1,4 @@
-import { ArmorObtainingType, Bonus } from "@/utils/dataInterfaces";
+import { ArmorObtainingType, Bonus, WeaponType } from "@/utils/dataInterfaces";
 
 export interface Achievement {
   id: number;
@@ -19,7 +19,7 @@ export interface Booster {
 interface Weapon {
   id: number;
   imagePath: string;
-  weaponType: number;
+  weaponType: WeaponType;
   name: string;
   description: string;
   price: number | string;
@@ -44,7 +44,7 @@ export interface Grenade extends Weapon {
 
 export type CurrentWeaponInfo = {
   id: number;
-  weaponType: number;
+  weaponType: WeaponType;
 };
 
 export type CurrentPlanetInfo = {

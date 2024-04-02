@@ -12,7 +12,7 @@ const TheFooter = () => {
           <a
             href="https://t.me/helldivers_help_support"
             target="_blank"
-            className="text-[#2cc388] font-['Exo2'] font-bold"
+            className="text-[--theme-color] font-['Exo2'] font-bold"
           >
             Чат поддержки
           </a>
@@ -32,7 +32,7 @@ const TheFooter = () => {
           <a
             href="https://boosty.to/helldivers.help"
             target="_blank"
-            className="block w-full text-[#2cc388] text-right font-['Insignia']"
+            className="block w-full text-[--theme-color] text-right font-['Insignia']"
           >
             Boosty
           </a>
@@ -40,7 +40,7 @@ const TheFooter = () => {
       </div>
 
       <span className="flex items-center mt-[15px] w-auto text-[#5a7f8f] text-[1.25rem] font-['Insignia'] font-medium">
-        <p>HELLDIVER.HELP is independent of </p>
+        <p>HELLDIVERS.HELP is independent of </p>
         <a
           href="https://www.arrowheadgamestudios.com/"
           target="_blank"

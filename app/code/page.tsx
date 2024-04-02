@@ -3,8 +3,12 @@ import React from "react";
 import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
 
-import CodeRule from "@/entities/CodeRule";
 import RunningLine from "@/shared/RunningLine";
+import TheScrollToUpButton from "@/shared/TheScrollToUpButton/TheScrollToUpButton";
+import ThePageTitle from "@/shared/ThePageTitle";
+import PageDescription from "@/shared/PageDescription";
+
+import CodeRule from "@/entities/CodeRule";
 
 const Page = () => {
   const codeRules = [
@@ -45,17 +49,16 @@ const Page = () => {
 
       <RunningLine />
 
-      <main>
-        <h2 className="text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold">
-          КОДЕКС <b className="text-[#2cc388] font-bold">АДСКОГО ДЕСАНТНИКА</b>
-        </h2>
+      <TheScrollToUpButton />
 
-        <p className="mt-[20px] w-[80%] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
-          Каждый адский десантник, перед тем, как приступить к обороне
-          управляемой демократии, должен ознакомиться со свободом правил,
-          составленным самым гениальным и демократическим руководством
-          Супер-Земли.
-        </p>
+      <main>
+        <ThePageTitle title={"кодекс"} additionalTitle={"адского десантника"} />
+
+        <PageDescription
+          description={
+            "Каждый адский десантник, перед тем, как приступить к обороне управляемой демократии, должен ознакомиться со свободом правил, составленным самым гениальным и демократическим руководством Супер-Земли."
+          }
+        />
 
         <section className="relative grid grid-cols-4 grid-rows-2 gap-y-[30px] gap-x-[30px] mt-[50px] w-full h-auto">
           {codeRules.map((rule) => (

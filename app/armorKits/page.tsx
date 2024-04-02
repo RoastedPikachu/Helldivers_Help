@@ -12,6 +12,9 @@ import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
 
 import RunningLine from "@/shared/RunningLine";
+import TheScrollToUpButton from "@/shared/TheScrollToUpButton/TheScrollToUpButton";
+import ThePageTitle from "@/shared/ThePageTitle";
+import PageDescription from "@/shared/PageDescription";
 
 import ArmorKit from "@/entities/armorKitsPage/armorKit/ArmorKit";
 import ArmorKitAdditionalInfoModalWindow from "@/entities/armorKitsPage/armorKitAdditionalInfoModalWindow/ArmorKitAdditionalInfoModalWindow";
@@ -34,18 +37,19 @@ const Page = observer(() => {
 
           <RunningLine />
 
-          <main>
-            <h2 className="pageTitle">
-              КОМЛЕКТЫ БРОНИ{" "}
-              <b className="pageTitle_Bold">АДСКОГО ДЕСАНТНИКА</b>
-            </h2>
+          <TheScrollToUpButton />
 
-            <p className="pageDescription">
-              Броня — это ключ к успеху для любого Адского Десантника. От
-              дробовиков до энергетического оружия — все это инструменты,
-              которые помогут вам распространять управляемую демократию в
-              галактике.
-            </p>
+          <main>
+            <ThePageTitle
+              title={"комплекты брони"}
+              additionalTitle={"адского десантника"}
+            />
+
+            <PageDescription
+              description={
+                "Броня — это ключ к успеху для любого Адского Десантника. От дробовиков до энергетического оружия — все это инструменты, которые помогут вам распространять управляемую демократию в галактике."
+              }
+            />
 
             <section className="pageSection">
               <div className="pageSection_Block">

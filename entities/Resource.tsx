@@ -20,7 +20,7 @@ const Resource: React.FC<ResourceProps> = ({
     <Link
       href="/resources#ResourceInfo"
       onClick={() => handleResourceBlockClick(id)}
-      className="flex items-center px-[30px] py-[30px] w-full h-auto bg-[#00293a] border-2 border-[#2cc388] rounded-[10px] cursor-pointer"
+      className="flex items-center px-[30px] py-[30px] w-full h-auto bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] cursor-pointer"
     >
       <img src={`${iconPath}`} alt="" className="w-[50px] h-[50px]" />
 

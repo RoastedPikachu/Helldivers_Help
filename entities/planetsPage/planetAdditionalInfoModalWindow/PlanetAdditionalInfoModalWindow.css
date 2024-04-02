@@ -1,5 +1,5 @@
 .currentPlanet_Modal {
-    @apply relative px-[20px] pt-[40px] pb-[35px] h-auto w-[80vw] max-w-[1152px] bg-[#00293a] border-2 border-[#2cc388] rounded-[10px] z-30;
+    @apply relative px-[20px] pt-[40px] pb-[35px] h-auto w-[80vw] max-w-[1152px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] z-30;
 }
 
 .currentPlanet_Modal_CloseButton {
@@ -15,7 +15,7 @@
 }
 
 .currentPlanet_Modal_Top_ImageWrapper {
-    @apply relative flex justify-center items-center w-[700px] h-[232px] bg-cover bg-no-repeat border-2 border-[#2cc388] rounded-t-[7.5px] rounded-bl-[7.5px];
+    @apply relative flex justify-center items-center w-[700px] h-[232px] bg-cover bg-no-repeat border-2 border-[--theme-color] rounded-t-[7.5px] rounded-bl-[7.5px];
 }
 
 .currentPlanet_Modal_Top_ImageWrapper_Image {
@@ -23,7 +23,7 @@
 }
 
 .currentPlanet_Modal_Top_TextBlock {
-    @apply relative mt-[-10px] pl-[40px] pb-[20px] w-[calc(100%-420px)] h-auto border-b-2 border-[#2cc388];
+    @apply relative mt-[-10px] pl-[40px] pb-[20px] w-[calc(100%-420px)] h-auto border-b-2 border-[--theme-color];
 }
 
 .currentPlanet_Modal_Top_TextBlock_Title {
@@ -35,7 +35,7 @@
 }
 
 .currentPlanet_Modal_Top_TextBlock_WeatherConditionsBlock_Image {
-    @apply p-[5px] w-[60px] h-[60px] bg-[#ffffff] border-2 border-[#2cc388] rounded-[7.5px];
+    @apply p-[5px] w-[60px] h-[60px] bg-[#ffffff] border-2 border-[--theme-color] rounded-[7.5px];
 }
 
 .currentPlanet_Modal_Top_TextBlock_WeatherConditionsBlock_Text {
@@ -51,7 +51,7 @@
 }
 
 .currentPlanet_Modal_Bottom_Title {
-    @apply text-[#2cc388] text-[1.5rem] font-['Exo2'] font-bold;
+    @apply text-[--theme-color] text-[1.5rem] font-['Exo2'] font-bold;
 }
 
 .currentPlanet_Modal_Bottom_Text {

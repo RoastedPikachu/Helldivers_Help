@@ -1,5 +1,5 @@
 .rootShipModuleBlock {
-    @apply relative mt-[30px] w-auto h-auto min-h-[85px] bg-[#00293a] border-2 border-[#2cc388] rounded-[10px];
+    @apply relative mt-[30px] w-auto h-auto min-h-[85px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px];
 }
 
 .rootShipModuleBlock_Top {
@@ -11,7 +11,7 @@
 }
 
 .rootShipModuleBlock_Top_Left_ImageWrapper {
-    @apply flex justify-center items-center p-[2.5px] w-[55px] h-[55px] bg-[#000000] border-2 border-[#2cc388] rounded-[7.5px];
+    @apply flex justify-center items-center p-[2.5px] w-[55px] h-[55px] bg-[#000000] border-2 border-[--theme-color] rounded-[7.5px];
 }
 
 .rootShipModuleBlock_Top_Left_ImageWrapper_Image {
@@ -19,7 +19,7 @@
 }
 
 .rootShipModuleBlock_Top_Left_Title {
-    @apply ml-[20px] text-[#2cc388] text-[1.75rem] font-['Exo2'] font-bold;
+    @apply ml-[20px] text-[--theme-color] text-[1.75rem] font-['Exo2'] font-bold;
 }
 
 .rootShipModuleBlock_Top_Button {
@@ -43,7 +43,7 @@
 }
 
 .rootShipModuleBlock_Bottom_Text_Bold {
-    @apply pr-[10px] text-[#2cc388] font-bold;
+    @apply pr-[10px] text-[--theme-color] font-bold;
 }
 
 .rootShipModuleBlock_Bottom_Table {
@@ -55,13 +55,13 @@
 }
 
 .rootShipModuleBlock_Bottom_Table_Left_Text {
-    @apply py-[15px] px-[20px] border-l-2 border-[#2cc388] text-[#2cc388] text-[1.25rem] font-['Exo2'] font-bold;
+    @apply py-[15px] px-[20px] border-l-2 border-[--theme-color] text-[--theme-color] text-[1.25rem] font-['Exo2'] font-bold;
 }
 
 .rootShipModuleBlock_Bottom_Table_Right_Difficulty {
-    @apply py-[15px] px-[20px] border-t-2 border-[#2cc388] text-[#2cc388] text-[1.5rem] text-center font-['Insignia'] font-bold;
+    @apply py-[15px] px-[20px] border-t-2 border-[--theme-color] text-[--theme-color] text-[1.5rem] text-center font-['Insignia'] font-bold;
 }
 
 .rootShipModuleBlock_Bottom_Table_Right_Count {
-    @apply py-[29px] px-[20px] h-[86px] border-b-2 border-[#2cc388] text-[#2cc388] text-[1.5rem] text-center font-['Insignia'] font-bold;
+    @apply py-[29px] px-[20px] h-[86px] border-b-2 border-[--theme-color] text-[--theme-color] text-[1.5rem] text-center font-['Insignia'] font-bold;
 }
