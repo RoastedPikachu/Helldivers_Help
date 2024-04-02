@@ -1,3 +1,5 @@
+import { StratagemType } from "@/utils/dataInterfaces";
+
 export interface Tip {
   id: number;
   text: string;
@@ -39,8 +41,12 @@ interface Direction {
 
 export interface Stratagem {
   id: number;
+  iconPath: string;
+  type: StratagemType;
   name: string;
-  image: string;
+  description: string;
+  price?: number;
+  obtainingLevel?: number;
   keyCodes: number[];
   directions: Direction[];
 }

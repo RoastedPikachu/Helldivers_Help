@@ -67,3 +67,8 @@ export interface Bonus {
   name: string;
   description: string;
 }
+
+export interface StratagemType {
+  name: string;
+  typeNumber: number;
+}
