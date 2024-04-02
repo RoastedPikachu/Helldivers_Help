@@ -2,6 +2,7 @@ import { makeAutoObservable } from "mobx";
 
 import { Stratagem } from "@/utils/generalInterfaces";
 import { getRandomEntity } from "@/utils/generalFunctions";
+import { stratagemTypes } from "@/data/stratagemTypes";
 
 /*
   С 1 по 8: стратагемы оружия поддержки;
@@ -24,8 +25,13 @@ class StratagemStore {
   stratagems = [
     {
       id: 1,
-      name: "Пулемет",
-      image: "/static/Stratagems/MachineGunIcon.png",
+      iconPath: "/static/Stratagems/MachineGunIcon.png",
+      type: stratagemTypes.supportWeapon,
+      name: "MG-43 «Пулемет»",
+      description:
+        "Стационарный пулемет. Обладает большой огневой мощью, но сильной отдачей и сниженной точностью.",
+      price: 0,
+      obtainingLevel: 0,
       keyCodes: [83, 65, 83, 87, 68],
       directions: [
         {
@@ -57,8 +63,13 @@ class StratagemStore {
     },
     {
       id: 2,
-      name: "Крупнокалиберная винтовка",
-      image: "/static/Stratagems/AntiMaterialRifleIcon.png",
+      iconPath: "/static/Stratagems/AntiMaterialRifleIcon.png",
+      type: stratagemTypes.supportWeapon,
+      name: "APW-1 «Крупнокалиберная винтовка»",
+      description:
+        "Крупнокалиберная снайперская винтовка, эффективно поражающая легкую бронированную технику на большом расстоянии. Используется только с прицелом.",
+      price: 5000,
+      obtainingLevel: 2,
       keyCodes: [83, 65, 68, 87, 83],
       directions: [
         {
@@ -90,8 +101,13 @@ class StratagemStore {
     },
     {
       id: 3,
-      name: "Доблесть",
-      image: "/static/Stratagems/StalwartIcon.png",
+      iconPath: "/static/Stratagems/StalwartIcon.png",
+      type: stratagemTypes.supportWeapon,
+      name: "M-105 «Доблесть»",
+      description:
+        "Компактный пулемет малого калибра. Меньшая огневая мощь по сравнению с тяжелыми пулеметами компенсируется удобством использования и быстротой перезарядки.",
+      price: 3500,
+      obtainingLevel: 2,
       keyCodes: [83, 83, 65, 87, 68],
       directions: [
         {
@@ -123,8 +139,51 @@ class StratagemStore {
     },
     {
       id: 4,
-      name: "Одноразовый бронебой",
-      image: "/static/Stratagems/ExpendableAntiTankIcon.png",
+      iconPath: "/static/Stratagems/ExpendableAntiTankIcon.png",
+      type: stratagemTypes.supportWeapon,
+      name: "EAT-17 «Одноразовый бронебой»",
+      description:
+        "Одноразовое оружие, предназначенное для повреждения бронированной техники. Выбрасывается после использования.",
+      price: 3000,
+      obtainingLevel: 3,
+      keyCodes: [83, 83, 65, 87, 68],
+      directions: [
+        {
+          id: 1,
+          orientation: 3,
+          isPressed: false,
+        },
+        {
+          id: 2,
+          orientation: 3,
+          isPressed: false,
+        },
+        {
+          id: 3,
+          orientation: 4,
+          isPressed: false,
+        },
+        {
+          id: 4,
+          orientation: 1,
+          isPressed: false,
+        },
+        {
+          id: 5,
+          orientation: 2,
+          isPressed: false,
+        },
+      ],
+    },
+    {
+      id: 5,
+      iconPath: "/static/Stratagems/RecoilnessRifleIcon.png",
+      type: stratagemTypes.supportWeapon,
+      name: "GR-8 «Безоткатная винтовка»",
+      description:
+        "Безоткатная винтовка, эффективно уничтожающая бронированную технику. В комплекте идет рюкзак поддержки для перезарядки.",
+      price: 6000,
+      obtainingLevel: 5,
       keyCodes: [83, 65, 68, 68, 65],
       directions: [
         {
@@ -155,9 +214,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 5,
-      name: "Огнемет",
-      image: "/static/Stratagems/FlamethrowerIcon.png",
+      id: 6,
+      iconPath: "/static/Stratagems/FlamethrowerIcon.png",
+      type: stratagemTypes.supportWeapon,
+      name: "FLAM-40 «Огнемет»",
+      description:
+        "Зажигательное оружие ближнего боя. Поджигает врагов, ландшафт и легковоспламеняющихся союзников.",
+      price: 6000,
+      obtainingLevel: 10,
       keyCodes: [83, 65, 87, 83, 87],
       directions: [
         {
@@ -188,9 +252,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 6,
-      name: "Автопушка",
-      image: "/static/Stratagems/AutocannonIcon.png",
+      id: 7,
+      iconPath: "/static/Stratagems/AutocannonIcon.png",
+      type: stratagemTypes.supportWeapon,
+      name: "AC-8 «Автопушка»",
+      description:
+        "Автоматическая пушка, эффективно уничтожающая легкую бронированную технику. Для перезарядки требуется прикладываемый рюкзак поддержки.",
+      price: 7000,
+      obtainingLevel: 10,
       keyCodes: [83, 65, 83, 87, 87, 68],
       directions: [
         {
@@ -226,9 +295,52 @@ class StratagemStore {
       ],
     },
     {
-      id: 7,
-      name: "Рельсотрон",
-      image: "/static/Stratagems/RailgunIcon.png",
+      id: 8,
+      iconPath: "/static/Stratagems/HeavyMachineGunIcon.png",
+      type: stratagemTypes.supportWeapon,
+      name: "MG-101 «Тяжелый пулемет»",
+      description:
+        "Очень мощный, Но сложный в обращении пулемет с сильной отдачей.",
+      price: 6000,
+      obtainingLevel: 16,
+      keyCodes: [83, 65, 87, 83, 83],
+      directions: [
+        {
+          id: 1,
+          orientation: 3,
+          isPressed: false,
+        },
+        {
+          id: 2,
+          orientation: 4,
+          isPressed: false,
+        },
+        {
+          id: 3,
+          orientation: 1,
+          isPressed: false,
+        },
+        {
+          id: 4,
+          orientation: 3,
+          isPressed: false,
+        },
+        {
+          id: 5,
+          orientation: 3,
+          isPressed: false,
+        },
+      ],
+    },
+    {
+      id: 9,
+      iconPath: "/static/Stratagems/RailgunIcon.png",
+      type: stratagemTypes.supportWeapon,
+      name: "RS-422 «Рельсотрон»",
+      description:
+        "Экспериментальное оружие, отличающееся высокой бронепробивной способностью. Требует зарядки между выстрелами, так что выбирайте цели с умом.",
+      price: 10000,
+      obtainingLevel: 20,
       keyCodes: [83, 68, 83, 87, 65, 68],
       directions: [
         {
@@ -264,9 +376,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 8,
-      name: "Копье",
-      image: "/static/Stratagems/SpearIcon.png",
+      id: 10,
+      iconPath: "/static/Stratagems/SpearIcon.png",
+      type: stratagemTypes.supportWeapon,
+      name: "FAF-14 «Копье»",
+      description:
+        "Противотанковая ракета с самонаведением, которую нужно навести на цель перед запуском. Эффективна против больших и бронированных целей.",
+      price: 9000,
+      obtainingLevel: 20,
       keyCodes: [83, 83, 87, 83, 83],
       directions: [
         {
@@ -297,9 +414,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 9,
+      id: 1,
+      iconPath: "/static/Stratagems/OrbitalGatlingBarrageIcon.png",
+      type: stratagemTypes.orbital,
       name: "Орбитальный залп Гатлинга",
-      image: "/static/Stratagems/OrbitalGatlingBarrageIcon.png",
+      description:
+        "Залп фугасных снарядов из скорострельных вращающихся автопушек эсминца.",
+      price: 1500,
+      obtainingLevel: 2,
       keyCodes: [68, 83, 65, 87, 87],
       directions: [
         {
@@ -330,9 +452,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 10,
+      id: 2,
+      iconPath: "/static/Stratagems/OrbitalAirburstStrikeIcon.png",
+      type: stratagemTypes.orbital,
       name: "Орбитальная воздушная бомба",
-      image: "/static/Stratagems/OrbitalAirburstStrikeIcon.png",
+      description:
+        "Взрывающийся в воздухе снаряд, обрушивающий на землю град смертоносной шрапнели. Неэффективен против тяжелой брони.",
+      price: 4000,
+      obtainingLevel: 5,
       keyCodes: [68, 68, 68],
       directions: [
         {
@@ -353,9 +480,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 11,
+      id: 3,
+      iconPath: "/static/Stratagems/Orbital120mmHEBarrageIcon.png",
+      type: stratagemTypes.orbital,
       name: "Орбитальный залп 120-мм ОФ",
-      image: "/static/Stratagems/Orbital120mmHEBarrageIcon.png",
+      description:
+        "Высокоточный артиллерийский залп по небольшой площади, идеально подходящий для уничтожения сконцентрированных сил врага.",
+      price: 4000,
+      obtainingLevel: 5,
       keyCodes: [68, 68, 83, 65, 68, 83],
       directions: [
         {
@@ -391,9 +523,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 12,
+      id: 4,
+      iconPath: "/static/Stratagems/Orbital380mmHEBarrageIcon.png",
+      type: stratagemTypes.orbital,
       name: "Орбитальный залп 380-мм ОФ",
-      image: "/static/Stratagems/Orbital380mmHEBarrageIcon.png",
+      description:
+        "Долгий залп, причиняющий огромные разрушения на большой площади. Рекомендуется уведомить союзников.",
+      price: 7500,
+      obtainingLevel: 8,
       keyCodes: [68, 83, 87, 87, 65, 83, 83],
       directions: [
         {
@@ -434,9 +571,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 13,
+      id: 5,
+      iconPath: "/static/Stratagems/OrbitalWalkingBarrageIcon.png",
+      type: stratagemTypes.orbital,
       name: "Орбитальный огневой вал",
-      image: "/static/Stratagems/OrbitalWalkingBarrageIcon.png",
+      description:
+        "Артиллерийский удар по линии, которая последовательно сдвигается, выдавливая врагов из укрытий и позволяя продвигаться вперед.",
+      price: 7500,
+      obtainingLevel: 10,
       keyCodes: [68, 83, 68, 83, 68, 83],
       directions: [
         {
@@ -472,9 +614,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 14,
+      id: 6,
+      iconPath: "/static/Stratagems/OrbitalLaserIcon.png",
+      type: stratagemTypes.orbital,
       name: "Орбитальный лазер",
-      image: "/static/Stratagems/OrbitalLaserIcon.png",
+      description:
+        "Выстрел из лазерной пушки эсминца по выбранной зоне, испаряющий все цели в области действия.",
+      price: 10000,
+      obtainingLevel: 15,
       keyCodes: [68, 83, 87, 68, 83],
       directions: [
         {
@@ -505,9 +652,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 15,
+      id: 7,
+      iconPath: "/static/Stratagems/OrbitalRailcannonStrikeIcon.png",
+      type: stratagemTypes.orbital,
       name: "Орбитальный рельсотронный залп",
-      image: "/static/Stratagems/OrbitalRailcannonStrikeIcon.png",
+      description:
+        "Высокоскоростной снаряд рельсотрона выпускается по крупнейшей цели рядом с маяком. Прицеливание выполняется автоматически.",
+      price: 10000,
+      obtainingLevel: 20,
       keyCodes: [68, 87, 83, 83, 68],
       directions: [
         {
@@ -538,9 +690,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 16,
+      id: 1,
+      iconPath: "/static/Stratagems/EagleStrafingRunIcon.png",
+      type: stratagemTypes.hangar,
       name: "Орел: бреющий полет",
-      image: "/static/Stratagems/EagleStrafingRunIcon.png",
+      description:
+        "Атака на бреющем полете для зачистки малых целей. Может быть выполнена практически моментально.",
+      price: 1500,
+      obtainingLevel: 2,
       keyCodes: [87, 68, 68],
       directions: [
         {
@@ -561,9 +718,13 @@ class StratagemStore {
       ],
     },
     {
-      id: 17,
+      id: 2,
+      iconPath: "/static/Stratagems/EagleAirstrikeIcon.png",
+      type: stratagemTypes.hangar,
       name: "Орел: воздушный налет",
-      image: "/static/Stratagems/EagleAirstrikeIcon.png",
+      description: "Неприцельная бомбардировка, создающая вал взрывов.",
+      price: 4000,
+      obtainingLevel: 2,
       keyCodes: [87, 68, 83, 68],
       directions: [
         {
@@ -589,9 +750,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 18,
+      id: 3,
+      iconPath: "/static/Stratagems/EagleClusterBombIcon.png",
+      type: stratagemTypes.hangar,
       name: "Орел: кластерная бомба",
-      image: "/static/Stratagems/EagleClusterBombIcon.png",
+      description:
+        "Прицельный удар с воздуха, недостаточно мощный, чтобы уничтожить постройки, но отлично справляющийся с малыми целями.",
+      price: 4000,
+      obtainingLevel: 3,
       keyCodes: [87, 68, 83, 83, 68],
       directions: [
         {
@@ -622,9 +788,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 19,
-      name: "Реактивный ранец",
-      image: "/static/Stratagems/JumpPackIcon.png",
+      id: 4,
+      iconPath: "/static/Stratagems/EagleNapalmAirstrikeIcon.png",
+      type: stratagemTypes.hangar,
+      name: "Орел: авиаудар напалмом",
+      description:
+        "Бомбардировка напалмом, создающая стену пламени, которая не позволит врагу продвинуться вперед.",
+      price: 5000,
+      obtainingLevel: 5,
       keyCodes: [87, 68, 83, 87],
       directions: [
         {
@@ -650,9 +821,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 20,
-      name: "Орел: дымовая завеса",
-      image: "/static/Stratagems/EagleSmokeStrikeIcon.png",
+      id: 5,
+      iconPath: "/static/Stratagems/JumpPackIcon.png",
+      type: stratagemTypes.hangar,
+      name: "LIFT-850 «Реактивный ранец»",
+      description:
+        "Позволяет пользователю прыгать выше, чем допускает «гравитация» и «безопасность». Требует зарядки перед использованием.",
+      price: 6000,
+      obtainingLevel: 8,
       keyCodes: [83, 87, 87, 83, 87],
       directions: [
         {
@@ -683,9 +859,52 @@ class StratagemStore {
       ],
     },
     {
-      id: 21,
+      id: 6,
+      iconPath: "/static/Stratagems/EagleSmokeStrikeIcon.png",
+      type: stratagemTypes.hangar,
+      name: "Орел: дымовая завеса",
+      description:
+        "Бомбардировка дымовыми гранатами, создающая плотную дымовую завесу, которая блокирует врагу обзор.",
+      price: 4000,
+      obtainingLevel: 8,
+      keyCodes: [83, 87, 87, 83, 87],
+      directions: [
+        {
+          id: 1,
+          orientation: 3,
+          isPressed: false,
+        },
+        {
+          id: 2,
+          orientation: 1,
+          isPressed: false,
+        },
+        {
+          id: 3,
+          orientation: 1,
+          isPressed: false,
+        },
+        {
+          id: 4,
+          orientation: 3,
+          isPressed: false,
+        },
+        {
+          id: 5,
+          orientation: 1,
+          isPressed: false,
+        },
+      ],
+    },
+    {
+      id: 7,
+      iconPath: "/static/Stratagems/Eagle110mmRocketPodIcon.png",
+      type: stratagemTypes.hangar,
       name: "Орел: 110-мм ракетные блоки",
-      image: "/static/Stratagems/Eagle110mmRocketPodIcon.png",
+      description:
+        "Залп из ракетных блоков, выпускаемый пилотом «Орла» по крупнейшей цели рядом с маяком стратагемы.",
+      price: 7500,
+      obtainingLevel: 10,
       keyCodes: [87, 68, 87, 83],
       directions: [
         {
@@ -711,9 +930,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 22,
+      id: 8,
+      iconPath: "/static/Stratagems/Eagle500kgBombIcon.png",
+      type: stratagemTypes.hangar,
       name: "Орел: бомба [500 кг]",
-      image: "/static/Stratagems/Eagle500kgBombIcon.png",
+      description:
+        "Большая бомба, способная уничтожить практически любую цель в точке взрыва. Не забудьте покинуть зону удара.",
+      price: 10000,
+      obtainingLevel: 15,
       keyCodes: [87, 68, 87, 65],
       directions: [
         {
@@ -739,9 +963,13 @@ class StratagemStore {
       ],
     },
     {
-      id: 23,
+      id: 1,
+      iconPath: "/static/Stratagems/OrbitalPrecisionStrikeIcon.png",
+      type: stratagemTypes.bridge,
       name: "Орбитальный высокоточный удар",
-      image: "/static/Stratagems/OrbitalPrecisionStrikeIcon.png",
+      description: "Один меткий выстрел из пушки «АТЛАС» эсминца",
+      price: 0,
+      obtainingLevel: 0,
       keyCodes: [87, 68, 83, 83, 83],
       directions: [
         {
@@ -772,9 +1000,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 23,
+      id: 2,
+      iconPath: "/static/Stratagems/OrbitalGasStrikeIcon.png",
+      type: stratagemTypes.bridge,
       name: "Орбитальный газовый удар",
-      image: "/static/Stratagems/OrbitalGasStrikeIcon.png",
+      description:
+        "Снаряд, выпускающий облако едкого газа, наносящего урон как органическим, так и механическим существам.",
+      price: 4000,
+      obtainingLevel: 3,
       keyCodes: [68, 68, 87],
       directions: [
         {
@@ -795,9 +1028,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 24,
+      id: 3,
+      iconPath: "/static/Stratagems/OrbitalEMSStrikeIcon.png",
+      type: stratagemTypes.bridge,
       name: "Орбитальный эм-удар",
-      image: "/static/Stratagems/OrbitalEMSStrikeIcon.png",
+      description:
+        "«Несмертельное оружие», предназначенное для изменения поведения врага. Снаряд на время оглушает все цели в зоне удара.",
+      price: 6000,
+      obtainingLevel: 4,
       keyCodes: [68, 68, 83, 68],
       directions: [
         {
@@ -823,9 +1061,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 25,
+      id: 4,
+      iconPath: "/static/Stratagems/OrbitalSmokeStrikeIcon.png",
+      type: stratagemTypes.bridge,
       name: "Орбитальная дымовая завеса",
-      image: "/static/Stratagems/OrbitalSmokeStrikeIcon.png",
+      description:
+        "Создает большое облако плотного дыма, перекрывающего целям обзор.",
+      price: 4000,
+      obtainingLevel: 8,
       keyCodes: [68, 68, 65, 83],
       directions: [
         {
@@ -851,9 +1094,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 26,
-      name: "Огневая позиция: тяжелый пулемет",
-      image: "/static/Stratagems/HMGEmplacementIcon.png",
+      id: 5,
+      iconPath: "/static/Stratagems/HMGEmplacementIcon.png",
+      type: stratagemTypes.bridge,
+      name: "E/MG-101 «Огневая позиция: тяжелый пулемет»",
+      description:
+        "Укомплектованное укрепление, крайне эффективно уничтожающее легкобронированные цели. Медленно поворачивается, размещайте его с трудом.",
+      price: 10000,
+      obtainingLevel: 10,
       keyCodes: [68, 68, 83, 87],
       directions: [
         {
@@ -879,9 +1127,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 27,
-      name: "Реле генератора щита",
-      image: "/static/Stratagems/ShieldGeneratorRelayIcon.png",
+      id: 6,
+      iconPath: "/static/Stratagems/ShieldGeneratorRelayIcon.png",
+      type: stratagemTypes.bridge,
+      name: "FX-12 «Реле генератора щита»",
+      description:
+        "Стационарный энергетический щит, обеспечивающий защиту от снарядов. Время действия ограничено.",
+      price: 9000,
+      obtainingLevel: 10,
       keyCodes: [83, 87, 65, 68, 68, 65],
       directions: [
         {
@@ -917,9 +1170,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 28,
-      name: "Тесла-башня",
-      image: "/static/Stratagems/TeslaTowerIcon.png",
+      id: 7,
+      iconPath: "/static/Stratagems/TeslaTowerIcon.png",
+      type: stratagemTypes.bridge,
+      name: "A/ARC-3 «Тесла-башня»",
+      description:
+        "Турель, выпускающая электрические разряды по целям на близкой дистанции. Чтобы не попасть под огонь по своим, лягте на землю.",
+      price: 8000,
+      obtainingLevel: 15,
       keyCodes: [83, 87, 65, 83, 68, 68],
       directions: [
         {
@@ -955,9 +1213,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 29,
-      name: "Противопехотные мины",
-      image: "/static/Stratagems/AntiPersonnelMinefieldIcon.png",
+      id: 1,
+      iconPath: "/static/Stratagems/AntiPersonnelMinefieldIcon.png",
+      type: stratagemTypes.engineeringBay,
+      name: "MD-6 «Противопехотные мины»",
+      description:
+        "Размещает оборонительное противопехотное минное поле, задерживающее наступление врага.",
+      price: 1500,
+      obtainingLevel: 2,
       keyCodes: [83, 87, 68, 87, 65, 68],
       directions: [
         {
@@ -993,9 +1256,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 30,
-      name: "Рюкзак: боеприпасы",
-      image: "/static/Stratagems/SupplyPackIcon.png",
+      id: 2,
+      iconPath: "/static/Stratagems/SupplyPackIcon.png",
+      type: stratagemTypes.engineeringBay,
+      name: "B-1 «Рюкзак: боеприпасы»",
+      description:
+        "Ящики с боеприпасами, а также рюкзак, позволяющий пользователю раздавать их другим Адским Десантникам.",
+      price: 4000,
+      obtainingLevel: 3,
       keyCodes: [83, 65, 87, 68],
       directions: [
         {
@@ -1021,9 +1289,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 31,
-      name: "Гранатомет",
-      image: "/static/Stratagems/GrenadeLauncherIcon.png",
+      id: 3,
+      iconPath: "/static/Stratagems/GrenadeLauncherIcon.png",
+      type: stratagemTypes.engineeringBay,
+      name: "GL-21 «Гранатомет»",
+      description:
+        "Гранатомет, эффективно поражающий бронированную пехоту. Не предназначен для уничтожения бронированной техники или укреплений.",
+      price: 6000,
+      obtainingLevel: 4,
       keyCodes: [83, 65, 83, 87, 87, 83],
       directions: [
         {
@@ -1059,9 +1332,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 32,
-      name: "Лазерная пушка",
-      image: "/static/Stratagems/LaserCannonIcon.png",
+      id: 4,
+      iconPath: "/static/Stratagems/LaserCannonIcon.png",
+      type: stratagemTypes.engineeringBay,
+      name: "LAS-98 «Лазерная пушка»",
+      description:
+        "Лазерное оружие, стреляющее непрерывным лучом. Не требует перезарядки, но в случае перегрева нужно заменить радиатор.",
+      price: 4000,
+      obtainingLevel: 5,
       keyCodes: [83, 65, 87, 65, 83],
       directions: [
         {
@@ -1092,9 +1370,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 33,
-      name: "Зажигательные мины",
-      image: "/static/Stratagems/IncendiaryMinesIcon.png",
+      id: 5,
+      iconPath: "/static/Stratagems/IncendiaryMinesIcon.png",
+      type: stratagemTypes.engineeringBay,
+      name: "MD-14 «Зажигательные мины»",
+      description:
+        "Размещает оборонительное зажигательное минное поле, при активации поджигающее цели и ландшафт.",
+      price: 4000,
+      obtainingLevel: 8,
       keyCodes: [83, 65, 83, 87, 65],
       directions: [
         {
@@ -1125,9 +1408,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 34,
-      name: "Аппарат: сторожевой пес",
-      image: "/static/Stratagems/GuardDogRoverIcon.png",
+      id: 6,
+      iconPath: "/static/Stratagems/GuardDogRoverIcon.png",
+      type: stratagemTypes.engineeringBay,
+      name: "AX/LAS-5 «Аппарат: сторожевой пес»",
+      description:
+        "Автономный дрон, оснащенный лазерной винтовкой и обеспечивающий всестороннее прикрытие. Возвращается в рюкзак для перезарядки.",
+      price: 7500,
+      obtainingLevel: 10,
       keyCodes: [83, 65, 65, 83],
       directions: [
         {
@@ -1153,9 +1441,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 35,
-      name: "Рюкзак: баллистический щит",
-      image: "/static/Stratagems/BallisticShieldBackpackIcon.png",
+      id: 7,
+      iconPath: "/static/Stratagems/BallisticShieldBackpackIcon.png",
+      type: stratagemTypes.engineeringBay,
+      name: "SH-20 «Рюкзак: баллистический щит»",
+      description:
+        "Рюкзак, который можно использовать в качестве одноручного баллистического щита. Защищает от снарядов малого калибра.",
+      price: 6000,
+      obtainingLevel: 12,
       keyCodes: [83, 87, 65, 87, 68, 68],
       directions: [
         {
@@ -1191,9 +1484,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 36,
-      name: "Дуговой метатель",
-      image: "/static/Stratagems/ArcThrowerIcon.png",
+      id: 8,
+      iconPath: "/static/Stratagems/ArcThrowerIcon.png",
+      type: stratagemTypes.engineeringBay,
+      name: "ARC-3 «Дуговой метатель»",
+      description:
+        "Выстреливает электрическую дугу на близком расстоянии. Заряжается для стрельбы молниями, способными поразить несколько целей.",
+      price: 7000,
+      obtainingLevel: 15,
       keyCodes: [83, 65, 87, 87, 68],
       directions: [
         {
@@ -1224,9 +1522,52 @@ class StratagemStore {
       ],
     },
     {
-      id: 37,
-      name: "Генератор щита",
-      image: "/static/Stratagems/ShieldGeneratorPackIcon.png",
+      id: 8,
+      iconPath: "/static/Stratagems/QuasarCannonIcon.png",
+      type: stratagemTypes.engineeringBay,
+      name: "LAS-99 Пушка «Квазар»",
+      description:
+        "Заряжается и выпускает мощный взрывающийся сгусток энергии. После выстрела долго перезаряжается.",
+      price: 7500,
+      obtainingLevel: 18,
+      keyCodes: [83, 83, 87, 65, 68],
+      directions: [
+        {
+          id: 1,
+          orientation: 3,
+          isPressed: false,
+        },
+        {
+          id: 2,
+          orientation: 3,
+          isPressed: false,
+        },
+        {
+          id: 3,
+          orientation: 1,
+          isPressed: false,
+        },
+        {
+          id: 4,
+          orientation: 4,
+          isPressed: false,
+        },
+        {
+          id: 5,
+          orientation: 2,
+          isPressed: false,
+        },
+      ],
+    },
+    {
+      id: 9,
+      iconPath: "/static/Stratagems/ShieldGeneratorPackIcon.png",
+      type: stratagemTypes.engineeringBay,
+      name: "SH-32 «Генератор щита»",
+      description:
+        "Окружает пользователя сферическим щитом, который блокирует высокоскоростные снаряды. Время действия ограничено.",
+      price: 10000,
+      obtainingLevel: 20,
       keyCodes: [83, 68, 87, 65, 84],
       directions: [
         {
@@ -1257,9 +1598,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 38,
-      name: "Пулеметная турель",
-      image: "/static/Stratagems/MachineGunSentryIcon.png",
+      id: 1,
+      iconPath: "/static/Stratagems/MachineGunSentryIcon.png",
+      type: stratagemTypes.roboticsWorkshop,
+      name: "A/MG-43 «Пулеметная турель»",
+      description:
+        "Маневренная автоматическая пулеметная турель. Будет вести огонь по целям, даже если на линии стрельбы будут Адские Десантники.",
+      price: 1500,
+      obtainingLevel: 2,
       keyCodes: [83, 87, 65, 68, 65, 68],
       directions: [
         {
@@ -1295,9 +1641,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 39,
-      name: "Турель Гатлинга",
-      image: "/static/Stratagems/GatlingSentryIcon.png",
+      id: 2,
+      iconPath: "/static/Stratagems/GatlingSentryIcon.png",
+      type: stratagemTypes.roboticsWorkshop,
+      name: "A/G-16 «Турель Гатлинга»",
+      description:
+        "Автоматическая турель, обладающая крайне высокой скорострельностью. Внимание: не имеет системы распознавания «свой-чужой».",
+      price: 4000,
+      obtainingLevel: 5,
       keyCodes: [83, 87, 68, 68, 87],
       directions: [
         {
@@ -1328,9 +1679,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 40,
-      name: "Турель с минометом",
-      image: "/static/Stratagems/MortarSentryIcon.png",
+      id: 3,
+      iconPath: "/static/Stratagems/MortarSentryIcon.png",
+      type: stratagemTypes.roboticsWorkshop,
+      name: "A/M-12 «Турель с минометом»",
+      description:
+        "Турель, выпускающая мощные снаряды по высокой дуге. Эффективна на большом расстоянии и может поражать цели за укрытиями.",
+      price: 7000,
+      obtainingLevel: 8,
       keyCodes: [83, 87, 68, 68, 83],
       directions: [
         {
@@ -1361,9 +1717,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 41,
-      name: "Сторожевой пес",
-      image: "/static/Stratagems/GuardDogIcon.png",
+      id: 4,
+      iconPath: "/static/Stratagems/GuardDogIcon.png",
+      type: stratagemTypes.roboticsWorkshop,
+      name: "AX/AR-23 «Сторожевой пес»",
+      description:
+        "Автономный дрон, оснащенный штурмовой винтовкой «Освободитель» и обеспечивающий всестороннее прикрытие. Возвращается в рюкзак для перезарядки.",
+      price: 7500,
+      obtainingLevel: 10,
       keyCodes: [83, 87, 65, 87, 68, 83],
       directions: [
         {
@@ -1399,9 +1760,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 42,
-      name: "Турель с автопушкой",
-      image: "/static/Stratagems/AutocannonSentryIcon.png",
+      id: 5,
+      iconPath: "/static/Stratagems/AutocannonSentryIcon.png",
+      type: stratagemTypes.roboticsWorkshop,
+      name: "A/AC-8 «Турель с автопушкой»",
+      description:
+        "Автоматическая пушка-турель посылает противотанковые снаряды на большое расстояние. Сниженная маневренность компенсируется дальностью и мощью стрельбы.",
+      price: 6000,
+      obtainingLevel: 13,
       keyCodes: [83, 87, 68, 87, 65, 87],
       directions: [
         {
@@ -1437,9 +1803,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 43,
-      name: "Ракетная турель",
-      image: "/static/Stratagems/RocketSentryIcon.png",
+      id: 6,
+      iconPath: "/static/Stratagems/RocketSentryIcon.png",
+      type: stratagemTypes.roboticsWorkshop,
+      name: "A/MLS-4X «Ракетная турель»",
+      description:
+        "Мощная автоматическая турель, эффективно поражающая бронированные цели. В основном целится в крупных врагов.",
+      price: 7500,
+      obtainingLevel: 15,
       keyCodes: [83, 87, 68, 68, 65],
       directions: [
         {
@@ -1470,9 +1841,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 44,
-      name: "Турель с эм-минометом",
-      image: "/static/Stratagems/EMSMortarSentryIcon.png",
+      id: 7,
+      iconPath: "/static/Stratagems/EMSMortarSentryIcon.png",
+      type: stratagemTypes.roboticsWorkshop,
+      name: "A/M-23 «Турель с эм-минометом»",
+      description:
+        "Турель разбрасывает генераторы статического поля, замедляющие продвижение врага.",
+      price: 8000,
+      obtainingLevel: 20,
       keyCodes: [83, 83, 87, 87, 65],
       directions: [
         {
@@ -1503,9 +1879,14 @@ class StratagemStore {
       ],
     },
     {
-      id: 45,
-      name: "Экзокостюм «патриот»",
-      image: "/static/Stratagems/PatriotExosuitIcon.png",
+      id: 8,
+      iconPath: "/static/Stratagems/PatriotExosuitIcon.png",
+      type: stratagemTypes.roboticsWorkshop,
+      name: "EXO-45 Экзокостюм «патриот»",
+      description:
+        "Тяжелобронированный экзокостюм, оснащенный гранатометом и тяжелым пулеметом.",
+      price: 20000,
+      obtainingLevel: 25,
       keyCodes: [65, 83, 68, 87, 65, 83, 83],
       directions: [
         {
@@ -1546,9 +1927,11 @@ class StratagemStore {
       ],
     },
     {
-      id: 46,
+      id: 1,
+      iconPath: "/static/Stratagems/ReinforceIcon.png",
+      type: stratagemTypes.mission,
       name: "Подкрепление",
-      image: "/static/Stratagems/ReinforceIcon.png",
+      description: "",
       keyCodes: [87, 83, 68, 65, 87],
       directions: [
         {
@@ -1579,9 +1962,11 @@ class StratagemStore {
       ],
     },
     {
-      id: 47,
+      id: 2,
+      iconPath: "/static/Stratagems/SOSBeaconIcon.png",
+      type: stratagemTypes.mission,
       name: "SOS маячок",
-      image: "/static/Stratagems/SOSBeaconIcon.png",
+      description: "",
       keyCodes: [87, 83, 68, 87],
       directions: [
         {
@@ -1607,9 +1992,11 @@ class StratagemStore {
       ],
     },
     {
-      id: 48,
+      id: 3,
+      iconPath: "/static/Stratagems/ResupplyIcon.png",
+      type: stratagemTypes.mission,
       name: "Припасы",
-      image: "/static/Stratagems/ResupplyIcon.png",
+      description: "",
       keyCodes: [83, 83, 87, 68],
       directions: [
         {
@@ -1635,9 +2022,11 @@ class StratagemStore {
       ],
     },
     {
-      id: 49,
+      id: 4,
+      iconPath: "/static/Stratagems/SuperEarthFlagIcon.png",
+      type: stratagemTypes.mission,
       name: "Флаг Супер-Земли",
-      image: "/static/Stratagems/SuperEarthFlagIcon.png",
+      description: "",
       keyCodes: [83, 87, 83, 87],
       directions: [
         {
@@ -1663,9 +2052,11 @@ class StratagemStore {
       ],
     },
     {
-      id: 50,
+      id: 5,
+      iconPath: "/static/Stratagems/UploadDataIcon.png",
+      type: stratagemTypes.mission,
       name: "Загрузить данные",
-      image: "/static/Stratagems/UploadDataIcon.png",
+      description: "",
       keyCodes: [65, 68, 83, 83, 83],
       directions: [
         {
@@ -1696,9 +2087,46 @@ class StratagemStore {
       ],
     },
     {
-      id: 51,
+      id: 6,
+      iconPath: "/static/Stratagems/UploadDataIcon.png",
+      type: stratagemTypes.mission,
+      name: "Доставка диска",
+      description: "",
+      keyCodes: [83, 83, 83, 87, 87],
+      directions: [
+        {
+          id: 1,
+          orientation: 3,
+          isPressed: false,
+        },
+        {
+          id: 2,
+          orientation: 3,
+          isPressed: false,
+        },
+        {
+          id: 3,
+          orientation: 3,
+          isPressed: false,
+        },
+        {
+          id: 4,
+          orientation: 1,
+          isPressed: false,
+        },
+        {
+          id: 5,
+          orientation: 1,
+          isPressed: false,
+        },
+      ],
+    },
+    {
+      id: 7,
+      iconPath: "/static/Stratagems/HellbombIcon.png",
+      type: stratagemTypes.mission,
       name: "Адская бомба",
-      image: "/static/Stratagems/HellbombIcon.png",
+      description: "",
       keyCodes: [83, 87, 65, 83, 87, 68, 83, 87],
       directions: [
         {
@@ -1744,9 +2172,11 @@ class StratagemStore {
       ],
     },
     {
-      id: 52,
+      id: 8,
+      iconPath: "/static/Stratagems/SEAFArtilleryIcon.png",
+      type: stratagemTypes.mission,
       name: "Артиллерия ВССЗ",
-      image: "/static/Stratagems/SEAFArtilleryIcon.png",
+      description: "",
       keyCodes: [68, 87, 87, 83],
       directions: [
         {
@@ -1766,6 +2196,46 @@ class StratagemStore {
         },
         {
           id: 4,
+          orientation: 3,
+          isPressed: false,
+        },
+      ],
+    },
+    {
+      id: 9,
+      iconPath: "/static/Stratagems/SeismicProbeIcon.png",
+      type: stratagemTypes.mission,
+      name: "Сейсмический зонд",
+      description: "",
+      keyCodes: [87, 87, 65, 68, 83, 83],
+      directions: [
+        {
+          id: 1,
+          orientation: 1,
+          isPressed: false,
+        },
+        {
+          id: 2,
+          orientation: 1,
+          isPressed: false,
+        },
+        {
+          id: 3,
+          orientation: 4,
+          isPressed: false,
+        },
+        {
+          id: 4,
+          orientation: 2,
+          isPressed: false,
+        },
+        {
+          id: 5,
+          orientation: 3,
+          isPressed: false,
+        },
+        {
+          id: 6,
           orientation: 3,
           isPressed: false,
         },

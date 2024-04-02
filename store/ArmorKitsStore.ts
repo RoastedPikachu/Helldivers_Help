@@ -1,7 +1,7 @@
 import { makeAutoObservable } from "mobx";
 
-import { obtainingType } from "@/data/armorObtainingTypes";
-import { armorBonuses } from "@/data/armorBonuses";
+import { obtainingType } from "@/data/armor/obtainingTypes";
+import { armorBonuses } from "@/data/armor/bonuses";
 
 import { ArmorKit, CurrentArmorInfo } from "@/utils/storeInterfaces";
 import { ArmorObtainingType } from "@/utils/dataInterfaces";
