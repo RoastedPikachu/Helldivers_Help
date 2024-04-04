@@ -190,7 +190,7 @@ const ShipModule: React.FC<ShipModuleProps> = ({
               {getStratagems().map((stratagem: Stratagem) => (
                 <ShipModuleStratagem
                   key={stratagem.id}
-                  iconPath={stratagem.image}
+                  iconPath={stratagem.iconPath}
                   name={stratagem.name}
                 />
               ))}

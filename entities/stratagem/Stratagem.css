@@ -1,27 +1,71 @@
-.rootShipModuleBlock {
+.rootStratagemBlock {
     @apply relative mt-[30px] w-auto h-auto min-h-[85px] bg-[#00293a] border-2 border-[#2cc388] rounded-[10px];
 }
 
-.rootShipModuleBlock_Top {
+.rootStratagemBlock_Top {
     @apply relative flex justify-between items-center px-[30px] w-full h-[80px];
 }
 
-.rootShipModuleBlock_Top_Left {
+.rootStratagemBlock_Top_Left {
     @apply flex items-center;
 }
 
-.rootShipModuleBlock_Top_Left_ImageWrapper_Image {
+.rootStratagemBlock_Top_Left_ImageWrapper_Image {
     @apply relative w-[55px] h-[50px] bg-[#000000] rounded-[5px] overflow-hidden;
 }
 
-.rootShipModuleBlock_Top_Left_Title {
+.rootStratagemBlock_Top_Left_Title {
     @apply ml-[20px] text-[#2cc388] text-[1.75rem] font-['Exo2'] font-bold;
 }
 
-.rootShipModuleBlock_Top_Button {
+.rootStratagemBlock_Top_Button {
     @apply relative flex justify-center items-center w-[30px] h-[30px];
 }
 
-.rootShipModuleBlock_Top_Button_Image {
+.rootStratagemBlock_Top_Button_Image {
     @apply w-full h-full duration-500 ease-in-out;
+}
+
+.rootStratagemBlock_Bottom {
+    @apply relative px-[30px] pb-[25px] h-auto duration-1000 ease-in-out;
+}
+
+.rootStratagemBlock_Bottom_Top {
+    @apply relative flex mt-[20px] mb-[20px] w-full h-[282px] deskWide:h-[320px];
+}
+
+.rootStratagemBlock_Bottom_Top_Left {
+    @apply relative w-[800px] deskWide:w-[910px] h-full z-30;
+}
+
+.rootStratagemBlock_Bottom_Top_Left_Video {
+    @apply w-full h-full border-2 border-[#2cc388] rounded-[10px];
+}
+
+.rootStratagemBlock_Bottom_Top_Left_Video_Button {
+    @apply absolute flex justify-center items-center right-[20px] bottom-[20px] w-[55px] h-[55px] bg-[#01212f] border-2 border-[#2cc388] rounded-[50%];
+}
+
+.rootStratagemBlock_Bottom_Top_Left_Video_Button_Pause {
+    @apply w-[30px] h-[30px];
+}
+
+.rootStratagemBlock_Bottom_Top_Left_Video_Button_Play {
+    @apply ml-[5px] w-[30px] h-[30px];
+}
+
+.rootStratagemBlock_Bottom_Top_Right {
+    @apply ml-[40px];
+}
+
+.rootStratagemBlock_Bottom_Top_Right_Text {
+    @apply mt-[10px] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-semibold;
+}
+
+.rootStratagemBlock_Bottom_Top_Right_Text_Bold {
+    @apply pr-[10px] text-[--theme-color] font-bold;
+}
+
+.rootStratagemBlock_Bottom_Description {
+    @apply w-[75%] min-h-[30px] text-[#ffffff] text-[1.25rem] font-['Exo2'] font-medium brightness-75;
 }
