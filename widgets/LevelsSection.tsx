@@ -6,7 +6,7 @@ import Level from "@/entities/Level";
 
 const LevelsSection = () => {
   return (
-    <section className="relative grid grid-cols-3 grid-rows-[51] mt-[50px] w-[80%] h-auto">
+    <section className="relative grid grid-cols-3 mt-[50px] w-[80%] h-auto">
       <div className="grid grid-rows-1 grid-cols-3 col-span-3 w-full h-full">
         <div className="flex justify-center items-center w-full h-[80px] bg-[#00293a] border-y-2 border-l-2 border-[--theme-color] rounded-tl-[10px]">
           <p className="text-[--theme-color] text-[1.75rem] font-['Exo2'] font-bold">
