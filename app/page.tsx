@@ -132,37 +132,6 @@ const Page = () => {
 
 export default Page;
 
-// "use client";
-// import React from "react";
-//
-// import {stratagemStore} from "@/store/StratagemStore";
-//
-// import TheHeader from "@/widgets/TheHeader";
-// import TheFooter from "@/widgets/TheFooter";
-//
-// import RunningLine from "@/shared/RunningLine";
-//
-//
-// export default function Home() {
-//
-//   const getTargetRotate = (direction: number) => {
-//     let rotationAngle = "";
-//
-//     switch (direction) {
-//       case 2:
-//         rotationAngle = "rotate-90";
-//         break;
-//       case 3:
-//         rotationAngle = "rotate-180";
-//         break;
-//       case 4:
-//         rotationAngle = "rotate-[270deg]";
-//         break;
-//     }
-//
-//     return rotationAngle;
-//   };
-//
 //   return (
 //     <>
 //       <TheHeader />
