@@ -42,11 +42,16 @@ interface Direction {
 export interface Stratagem {
   id: number;
   iconPath: string;
+  videoPath?: string;
+  videoPreviewPath?: string;
   type: StratagemType;
   name: string;
   description: string;
   price?: number;
   obtainingLevel?: number;
+  callTime?: number;
+  useCount?: number;
+  reloadTime?: number;
   keyCodes: number[];
   directions: Direction[];
 }
