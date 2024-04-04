@@ -8,6 +8,7 @@ import RunningLine from "@/shared/RunningLine";
 import "./Stratagems.css";
 import Stratagem from "@/entities/stratagem/Stratagem";
 import { stratagemStore } from "@/store/StratagemStore";
+import TheScrollToUpButton from "@/shared/TheScrollToUpButton/TheScrollToUpButton";
 
 const Page = () => {
   return (
@@ -15,6 +16,8 @@ const Page = () => {
       <TheHeader />
 
       <RunningLine />
+
+      <TheScrollToUpButton />
 
       <main>
         <h2 className="pageTitle">СТРАТАГЕМЫ</h2>
@@ -41,22 +44,6 @@ const Page = () => {
 
         <section className="pageSection">
           <div className="pageSection_Block">
-            <h3 className="pageSection_Block_Title">ОБЩИЕ</h3>
-
-            <div className="pageSection_Block_Wrapper">
-              {stratagemStore.stratagems
-                .filter((stratagem) => stratagem.type.typeNumber === 6)
-                .map((stratagem) => (
-                  <Stratagem
-                    key={stratagem.id}
-                    iconPath={stratagem.iconPath}
-                    title={stratagem.name}
-                  />
-                ))}
-            </div>
-          </div>
-
-          <div className="pageSection_Block">
             <h3 className="pageSection_Block_Title">ОРУЖИЕ ПОДДЕРЖКИ</h3>
 
             <div className="pageSection_Block_Wrapper">
@@ -66,7 +53,15 @@ const Page = () => {
                   <Stratagem
                     key={stratagem.id}
                     iconPath={stratagem.iconPath}
-                    title={stratagem.name}
+                    videoPath={stratagem.videoPath}
+                    videoPreviewPath={stratagem.videoPreviewPath}
+                    name={stratagem.name}
+                    description={stratagem.description}
+                    price={stratagem.price}
+                    obtainingLevel={stratagem.obtainingLevel}
+                    callTime={stratagem.callTime}
+                    useCount={stratagem.useCount}
+                    reloadTime={stratagem.reloadTime}
                   />
                 ))}
             </div>
@@ -82,7 +77,15 @@ const Page = () => {
                   <Stratagem
                     key={stratagem.id}
                     iconPath={stratagem.iconPath}
-                    title={stratagem.name}
+                    videoPath={stratagem.videoPath}
+                    videoPreviewPath={stratagem.videoPreviewPath}
+                    name={stratagem.name}
+                    description={stratagem.description}
+                    price={stratagem.price}
+                    obtainingLevel={stratagem.obtainingLevel}
+                    callTime={stratagem.callTime}
+                    useCount={stratagem.useCount}
+                    reloadTime={stratagem.reloadTime}
                   />
                 ))}
             </div>
@@ -98,7 +101,15 @@ const Page = () => {
                   <Stratagem
                     key={stratagem.id}
                     iconPath={stratagem.iconPath}
-                    title={stratagem.name}
+                    videoPath={stratagem.videoPath}
+                    videoPreviewPath={stratagem.videoPreviewPath}
+                    name={stratagem.name}
+                    description={stratagem.description}
+                    price={stratagem.price}
+                    obtainingLevel={stratagem.obtainingLevel}
+                    callTime={stratagem.callTime}
+                    useCount={stratagem.useCount}
+                    reloadTime={stratagem.reloadTime}
                   />
                 ))}
             </div>
@@ -114,7 +125,15 @@ const Page = () => {
                   <Stratagem
                     key={stratagem.id}
                     iconPath={stratagem.iconPath}
-                    title={stratagem.name}
+                    videoPath={stratagem.videoPath}
+                    videoPreviewPath={stratagem.videoPreviewPath}
+                    name={stratagem.name}
+                    description={stratagem.description}
+                    price={stratagem.price}
+                    obtainingLevel={stratagem.obtainingLevel}
+                    callTime={stratagem.callTime}
+                    useCount={stratagem.useCount}
+                    reloadTime={stratagem.reloadTime}
                   />
                 ))}
             </div>
@@ -130,7 +149,15 @@ const Page = () => {
                   <Stratagem
                     key={stratagem.id}
                     iconPath={stratagem.iconPath}
-                    title={stratagem.name}
+                    videoPath={stratagem.videoPath}
+                    videoPreviewPath={stratagem.videoPreviewPath}
+                    name={stratagem.name}
+                    description={stratagem.description}
+                    price={stratagem.price}
+                    obtainingLevel={stratagem.obtainingLevel}
+                    callTime={stratagem.callTime}
+                    useCount={stratagem.useCount}
+                    reloadTime={stratagem.reloadTime}
                   />
                 ))}
             </div>
@@ -146,7 +173,39 @@ const Page = () => {
                   <Stratagem
                     key={stratagem.id}
                     iconPath={stratagem.iconPath}
-                    title={stratagem.name}
+                    videoPath={stratagem.videoPath}
+                    videoPreviewPath={stratagem.videoPreviewPath}
+                    name={stratagem.name}
+                    description={stratagem.description}
+                    price={stratagem.price}
+                    obtainingLevel={stratagem.obtainingLevel}
+                    callTime={stratagem.callTime}
+                    useCount={stratagem.useCount}
+                    reloadTime={stratagem.reloadTime}
+                  />
+                ))}
+            </div>
+          </div>
+
+          <div className="pageSection_Block">
+            <h3 className="pageSection_Block_Title">ОБЩИЕ</h3>
+
+            <div className="pageSection_Block_Wrapper">
+              {stratagemStore.stratagems
+                .filter((stratagem) => stratagem.type.typeNumber === 6)
+                .map((stratagem) => (
+                  <Stratagem
+                    key={stratagem.id}
+                    iconPath={stratagem.iconPath}
+                    videoPath={stratagem.videoPath}
+                    videoPreviewPath={stratagem.videoPreviewPath}
+                    name={stratagem.name}
+                    description={stratagem.description}
+                    price={stratagem.price}
+                    obtainingLevel={stratagem.obtainingLevel}
+                    callTime={stratagem.callTime}
+                    useCount={stratagem.useCount}
+                    reloadTime={stratagem.reloadTime}
                   />
                 ))}
             </div>
