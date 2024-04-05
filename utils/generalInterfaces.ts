@@ -31,7 +31,7 @@ export interface IResource {
   isDependsOnDifficulty: boolean;
 }
 
-interface Direction {
+export interface Direction {
   id: number;
   orientation: number;
   isPressed: boolean;
