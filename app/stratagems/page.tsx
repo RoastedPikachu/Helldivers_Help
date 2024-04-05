@@ -1,14 +1,17 @@
+"use client";
 import React from "react";
+
+import { stratagemStore } from "@/store/StratagemStore";
 
 import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
 
 import RunningLine from "@/shared/RunningLine";
+import TheScrollToUpButton from "@/shared/TheScrollToUpButton/TheScrollToUpButton";
+
+import Stratagem from "@/entities/stratagem/Stratagem";
 
 import "./Stratagems.css";
-import Stratagem from "@/entities/stratagem/Stratagem";
-import { stratagemStore } from "@/store/StratagemStore";
-import TheScrollToUpButton from "@/shared/TheScrollToUpButton/TheScrollToUpButton";
 
 const Page = () => {
   return (
@@ -62,6 +65,7 @@ const Page = () => {
                     callTime={stratagem.callTime}
                     useCount={stratagem.useCount}
                     reloadTime={stratagem.reloadTime}
+                    directions={stratagem.directions}
                   />
                 ))}
             </div>
@@ -86,6 +90,7 @@ const Page = () => {
                     callTime={stratagem.callTime}
                     useCount={stratagem.useCount}
                     reloadTime={stratagem.reloadTime}
+                    directions={stratagem.directions}
                   />
                 ))}
             </div>
@@ -110,6 +115,7 @@ const Page = () => {
                     callTime={stratagem.callTime}
                     useCount={stratagem.useCount}
                     reloadTime={stratagem.reloadTime}
+                    directions={stratagem.directions}
                   />
                 ))}
             </div>
@@ -134,6 +140,7 @@ const Page = () => {
                     callTime={stratagem.callTime}
                     useCount={stratagem.useCount}
                     reloadTime={stratagem.reloadTime}
+                    directions={stratagem.directions}
                   />
                 ))}
             </div>
@@ -158,6 +165,7 @@ const Page = () => {
                     callTime={stratagem.callTime}
                     useCount={stratagem.useCount}
                     reloadTime={stratagem.reloadTime}
+                    directions={stratagem.directions}
                   />
                 ))}
             </div>
@@ -182,6 +190,7 @@ const Page = () => {
                     callTime={stratagem.callTime}
                     useCount={stratagem.useCount}
                     reloadTime={stratagem.reloadTime}
+                    directions={stratagem.directions}
                   />
                 ))}
             </div>
@@ -206,6 +215,7 @@ const Page = () => {
                     callTime={stratagem.callTime}
                     useCount={stratagem.useCount}
                     reloadTime={stratagem.reloadTime}
+                    directions={stratagem.directions}
                   />
                 ))}
             </div>
