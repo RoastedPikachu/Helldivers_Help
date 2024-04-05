@@ -46,14 +46,14 @@ export const biomes: BiomesObject = {
   iceMoss: {
     surface: "ледяной мох",
     description:
-      "Ice and moss-covered rock can be found across most of the surface of this planet.",
-    imagePath: "/static/Biomes/BlankImage.png",
+      "Большую часть поверхности этой планеты покрывают лед и мшистые камни.",
+    imagePath: "/static/Biomes/IceMossImage.webp",
   },
   iceMossSpecial: {
     surface: "специальный ледяной мох",
     description:
-      "Ice and moss-covered rock can be found across most of the surface of this planet.",
-    imagePath: "/static/Biomes/BlankImage.png",
+      "Большую часть поверхности этой планеты покрывают лед и мшистые камни.",
+    imagePath: "/static/Biomes/IceMossSpecialImage.webp",
   },
   tundra: {
     surface: "тундра",
