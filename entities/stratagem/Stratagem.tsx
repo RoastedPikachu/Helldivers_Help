@@ -3,6 +3,8 @@ import React, { useState, useRef } from "react";
 
 import "./Stratagem.css";
 import Typewriter from "@/shared/Typewriter";
+import { Direction } from "@/utils/generalInterfaces";
+import LoadingSpinner from "@/shared/LoadingSpinner/LoadingSpinner";
 
 interface StratagemProps {
   iconPath: string;
@@ -15,6 +17,7 @@ interface StratagemProps {
   callTime: number | undefined;
   useCount: number | undefined;
   reloadTime: number | undefined;
+  directions: Direction[];
 }
 
 const Stratagem: React.FC<StratagemProps> = ({
@@ -28,9 +31,12 @@ const Stratagem: React.FC<StratagemProps> = ({
   callTime,
   useCount,
   reloadTime,
+  directions,
 }) => {
   const [isAdditionalInfoOpened, changeIsAdditionalInfoOpened] =
     useState(false);
+  const [isVideoLoading, setIsVideoLoading] = useState(false);
+
   const [playButtonClicksCount, setPlayButtonClicksCount] = useState(1);
 
   const videoRef = useRef<HTMLVideoElement>();
@@ -51,6 +57,24 @@ const Stratagem: React.FC<StratagemProps> = ({
 
   const pauseVideo = () => {
     videoRef.current && videoRef.current.pause();
+  };
+
+  const getTargetRotate = (direction: number) => {
+    let rotationAngle = "";
+
+    switch (direction) {
+      case 2:
+        rotationAngle = "rotate-90";
+        break;
+      case 3:
+        rotationAngle = "rotate-180";
+        break;
+      case 4:
+        rotationAngle = "rotate-[270deg]";
+        break;
+    }
+
+    return rotationAngle;
   };
   return (
     <div className="rootStratagemBlock">
@@ -85,35 +109,56 @@ const Stratagem: React.FC<StratagemProps> = ({
         {videoPath && videoPreviewPath && (
           <div className="rootStratagemBlock_Bottom_Top">
             <div className="rootStratagemBlock_Bottom_Top_Left">
-              <video
-                poster={`${videoPreviewPath}`}
-                src={`${videoPath}`}
-                preload="none"
-                playsInline
-                loop
-                // @ts-ignore
-                ref={videoRef}
-                className="rootStratagemBlock_Bottom_Top_Left_Video"
-              ></video>
+              <div className="rootStratagemBlock_Bottom_Top_Left_VideoWrapper">
+                <video
+                  poster={`${videoPreviewPath}`}
+                  src={`${videoPath}`}
+                  preload="none"
+                  playsInline
+                  loop
+                  onLoadStart={() => setIsVideoLoading(true)}
+                  onCanPlay={() => setIsVideoLoading(false)}
+                  // @ts-ignore
+                  ref={videoRef}
+                  className="rootStratagemBlock_Bottom_Top_Left_VideoWrapper_Video"
+                ></video>
 
-              <button
-                onClick={handlePlayButtonClick}
-                className="rootStratagemBlock_Bottom_Top_Left_Video_Button"
-              >
-                {playButtonClicksCount % 2 === 0 ? (
-                  <img
-                    src="/static/GeneralIcons/PauseVideoIcon.svg"
-                    alt=""
-                    className="rootStratagemBlock_Bottom_Top_Left_Video_Button_Pause"
-                  />
-                ) : (
-                  <img
-                    src="/static/GeneralIcons/PlayVideoIcon.svg"
-                    alt=""
-                    className="rootStratagemBlock_Bottom_Top_Left_Video_Button_Play"
-                  />
-                )}
-              </button>
+                <button
+                  onClick={handlePlayButtonClick}
+                  className="rootStratagemBlock_Bottom_Top_Left_VideoWrapper_Video_Button"
+                >
+                  {playButtonClicksCount % 2 === 0 ? (
+                    isVideoLoading ? (
+                      <LoadingSpinner />
+                    ) : (
+                      <img
+                        src="/static/GeneralIcons/PauseVideoIcon.svg"
+                        alt=""
+                        className="rootStratagemBlock_Bottom_Top_Left_VideoWrapper_Video_Button_Pause"
+                      />
+                    )
+                  ) : (
+                    <img
+                      src="/static/GeneralIcons/PlayVideoIcon.svg"
+                      alt=""
+                      className="rootStratagemBlock_Bottom_Top_Left_VideoWrapper_Video_Button_Play"
+                    />
+                  )}
+                </button>
+              </div>
+
+              <div className="rootStratagemBlock_Bottom_Top_Left_ArrowsWrapper">
+                <div className="rootStratagemBlock_Bottom_Top_Left_ArrowsWrapper_Block">
+                  {directions.map((direction) => (
+                    <img
+                      key={direction.id}
+                      src="/static/GeneralIcons/ArrowIcon.svg"
+                      alt=""
+                      className={`rootStratagemBlock_Bottom_Top_Left_ArrowsWrapper_Block_Arrow ${getTargetRotate(direction.orientation)}`}
+                    />
+                  ))}
+                </div>
+              </div>
             </div>
 
             <div className="rootStratagemBlock_Bottom_Top_Right">
@@ -124,12 +169,20 @@ const Stratagem: React.FC<StratagemProps> = ({
                 {obtainingLevel} уровне
               </p>
 
-              <p className="rootStratagemBlock_Bottom_Top_Right_Text">
-                <b className="rootStratagemBlock_Bottom_Top_Right_Text_Bold">
-                  Цена:{" "}
-                </b>
-                {price}
-              </p>
+              <div className="flex items-center">
+                <p className="rootStratagemBlock_Bottom_Top_Right_Text">
+                  <b className="rootStratagemBlock_Bottom_Top_Right_Text_Bold">
+                    Цена:{" "}
+                  </b>
+                  {price}
+                </p>
+
+                <img
+                  src="/static/Resources/RequisitesIcon.svg"
+                  alt=""
+                  className="mt-[10px] ml-[5px] w-[27.5px] h-[27.5px]"
+                />
+              </div>
 
               <p className="rootStratagemBlock_Bottom_Top_Right_Text">
                 <b className="rootStratagemBlock_Bottom_Top_Right_Text_Bold">
