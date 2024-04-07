@@ -1,0 +1,7 @@
+.blankText {
+    @apply w-[45%] h-[25px] bg-[#00405a] rounded-[5px];
+}
+
+.blankBlock {
+    @apply mt-[10px] w-[450px] h-[295px] bg-[#00405a] rounded-[10px];
+}
