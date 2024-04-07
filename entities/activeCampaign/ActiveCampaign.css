@@ -1,0 +1,67 @@
+.rootActiveCampaignWidget {
+   @apply relative w-[450px] h-[295px] bg-[#00293a] border-2 border-[#2cc388] rounded-[10px] overflow-hidden;
+}
+
+.rootActiveCampaignWidget_Top {
+    @apply flex items-center px-[20px] w-full h-[50px] bg-[#000000];
+}
+
+.rootActiveCampaignWidget_Top_Icon {
+    @apply w-[40px] h-[30px];
+}
+
+.rootActiveCampaignWidget_Top_Title {
+    @apply ml-[10px] text-[#2cc388] text-[1.5rem] font-['Exo2'] font-bold;
+}
+
+.rootActiveCampaignWidget_Center {
+    @apply relative w-full h-[150px];
+}
+
+.rootActiveCampaignWidget_Center_Image {
+    @apply w-full h-full;
+}
+
+.rootActiveCampaignWidget_Center_WeatherConditions_Block {
+    @apply absolute flex items-center bottom-[10px] right-0 w-auto h-auto;
+}
+
+.rootActiveCampaignWidget_Center_WeatherConditions_Block_ImageWrapper {
+    @apply relative w-auto h-auto;
+}
+
+.rootActiveCampaignWidget_Center_WeatherConditions_Block_ImageWrapper_Image {
+    @apply mr-[20px] p-[2.5px] w-[45px] h-[45px] bg-[#ffffff] rounded-[7.5px] z-50;
+}
+
+.rootActiveCampaignWidget_Liberation {
+    @apply relative flex w-full h-[40px] bg-[#000000] border-2 border-[#000000];
+}
+
+.rootActiveCampaignWidget_Liberation_Wrapper {
+    @apply flex py-[2px] px-[2px] w-full h-full border-2;
+}
+
+.rootActiveCampaignWidget_Liberation_Wrapper_Left {
+    @apply h-full bg-[#3db8fe];
+}
+
+.rootActiveCampaignWidget_Liberation_Wrapper_Right {
+    @apply h-full;
+}
+
+.rootActiveCampaignWidget_Bottom {
+    @apply relative w-full h-[50px] bg-[#000000] border-2 border-[#000000] rounded-b-[7.5px];
+}
+
+.rootActiveCampaignWidget_Bottom_Wrapper {
+    @apply flex items-center px-[20px] w-full h-full border-2 border-[#ffffff] rounded-b-[5px];
+}
+
+.rootActiveCampaignWidget_Bottom_Wrapper_Icon {
+    @apply w-[25px] h-[25px];
+}
+
+.rootActiveCampaignWidget_Bottom_Wrapper_NumberText {
+    @apply ml-[10px] text-[#ffe702] text-[1.375rem] font-['Insignia'] font-bold;
+}
