@@ -7,7 +7,7 @@ const ActiveCampaignBlank = () => {
     <div>
       <p className="blankText"></p>
 
-      <div className="blankBlock "></div>
+      <div className="blankBlock"></div>
     </div>
   );
 };

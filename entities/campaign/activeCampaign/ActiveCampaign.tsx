@@ -137,6 +137,18 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
           </div>
         </div>
 
+        <div className="rootActiveCampaignWidget_Percentage">
+          <div className="rootActiveCampaignWidget_Percentage_Wrapper">
+            <p className="rootActiveCampaignWidget_Percentage_Wrapper_NumberText">
+              {percentage.toFixed(3)}%
+            </p>
+
+            <p className="rootActiveCampaignWidget_Percentage_Wrapper_Text">
+              Освобождено
+            </p>
+          </div>
+        </div>
+
         <div className="rootActiveCampaignWidget_Bottom">
           <div className="rootActiveCampaignWidget_Bottom_Wrapper justify-between">
             <div className="flex items-center">
