@@ -10,6 +10,7 @@ interface ActiveCampaignProps {
   fraction: string;
   percentage: number;
   playersCount: number;
+  planetRegenArray: any[];
   isDefense: boolean;
 }
 
@@ -18,9 +19,12 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
   fraction,
   percentage,
   playersCount,
+  planetRegenArray,
   isDefense,
 }) => {
   const [targetCampaignPlanet, setTargetCampaignPlanet] = useState({} as any);
+
+  const [regenPerHour, setRegenPerHour] = useState(0);
 
   const getEnemyIcon = () => {
     if (fraction.toLowerCase() == "terminids") {
@@ -34,6 +38,13 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
       return "border-[#ffc000]";
     }
     return "border-[#ff6161]";
+  };
+
+  const getEnemyTextColor = () => {
+    if (fraction.toLowerCase() == "terminids") {
+      return "text-[#ffc000]";
+    }
+    return "text-[#ff6161]";
   };
 
   const getEnemyBgColor = () => {
@@ -51,76 +62,115 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
   };
 
   useEffect(() => {
-    setTargetCampaignPlanet(
-      Object.values(planetsStore.planets)[planetIndex + 1],
+    setRegenPerHour(
+      +(
+        ((planetRegenArray.find((planet) => planet.index === planetIndex)
+          ?.regenPerSecond *
+          3600) /
+          1000000) *
+        100
+      ).toFixed(1),
     );
+
+    setTargetCampaignPlanet({
+      ...Object.values(planetsStore.planets)[planetIndex + 1],
+      regenPerHour: regenPerHour,
+    });
   }, []);
   return (
-    <div className="rootActiveCampaignWidget">
-      <div className="rootActiveCampaignWidget_Top">
-        <img
-          src={`${getEnemyIcon()}`}
-          alt=""
-          className="rootActiveCampaignWidget_Top_Icon"
-        />
+    <div>
+      <h3 className="widgetStatus">{isDefense ? "Оборона" : "Освобождение"}</h3>
 
-        <h4 className="rootActiveCampaignWidget_Top_Title">
-          {targetCampaignPlanet.name?.toUpperCase()}
-        </h4>
-      </div>
-
-      <div className="rootActiveCampaignWidget_Center">
-        <img
-          src={`${targetCampaignPlanet.biome?.imagePath}`}
-          alt=""
-          className="rootActiveCampaignWidget_Center_Image"
-        />
-
-        <div className="rootActiveCampaignWidget_Center_WeatherConditions_Block">
-          {targetCampaignPlanet.weatherConditions?.map(
-            (weatherCondition: any) => (
-              <div
-                key={weatherCondition.id}
-                className="rootActiveCampaignWidget_Center_WeatherConditions_Block_ImageWrapper"
-              >
-                <img
-                  src={`${weatherCondition.iconPath}`}
-                  alt=""
-                  className="rootActiveCampaignWidget_Center_WeatherConditions_Block_ImageWrapper_Image"
-                />
-              </div>
-            ),
-          )}
-        </div>
-      </div>
-
-      <div className="rootActiveCampaignWidget_Liberation">
-        <div
-          className={`rootActiveCampaignWidget_Liberation_Wrapper ${getEnemyBorderColor()}`}
-        >
-          <div
-            style={{ width: `${getLiberationWidth(false)}%` }}
-            className="rootActiveCampaignWidget_Liberation_Wrapper_Left"
-          ></div>
-
-          <div
-            style={{ width: `${getLiberationWidth(true)}%` }}
-            className={`rootActiveCampaignWidget_Liberation_Wrapper_Right ${getEnemyBgColor()}`}
-          ></div>
-        </div>
-      </div>
-
-      <div className="rootActiveCampaignWidget_Bottom">
-        <div className="rootActiveCampaignWidget_Bottom_Wrapper">
+      <div className={`rootActiveCampaignWidget ${getEnemyBorderColor()}`}>
+        <div className="rootActiveCampaignWidget_Top">
           <img
-            src="/static/GeneralIcons/HelldiverIcon.png"
+            src={`${getEnemyIcon()}`}
             alt=""
-            className="rootActiveCampaignWidget_Bottom_Wrapper_Icon"
+            className="rootActiveCampaignWidget_Top_Icon"
           />
 
-          <p className="rootActiveCampaignWidget_Bottom_Wrapper_NumberText">
-            {playersCount}
-          </p>
+          <h4
+            className={`rootActiveCampaignWidget_Top_Title ${getEnemyTextColor()}`}
+          >
+            {targetCampaignPlanet.name?.toUpperCase()}
+          </h4>
+        </div>
+
+        <div className="rootActiveCampaignWidget_Center">
+          <img
+            src={`${targetCampaignPlanet.biome?.imagePath}`}
+            alt=""
+            className="rootActiveCampaignWidget_Center_Image"
+          />
+
+          <div className="rootActiveCampaignWidget_Center_WeatherConditions_Block">
+            {targetCampaignPlanet.weatherConditions?.map(
+              (weatherCondition: any) => (
+                <div
+                  key={weatherCondition.id}
+                  className="rootActiveCampaignWidget_Center_WeatherConditions_Block_ImageWrapper"
+                >
+                  <img
+                    src={`${weatherCondition.iconPath}`}
+                    alt=""
+                    className="rootActiveCampaignWidget_Center_WeatherConditions_Block_ImageWrapper_Image"
+                  />
+                </div>
+              ),
+            )}
+          </div>
+        </div>
+
+        <div className="rootActiveCampaignWidget_Liberation">
+          <div
+            className={`rootActiveCampaignWidget_Liberation_Wrapper ${getEnemyBorderColor()}`}
+          >
+            <div
+              style={{ width: `${getLiberationWidth(false)}%` }}
+              className="rootActiveCampaignWidget_Liberation_Wrapper_Left"
+            ></div>
+
+            <div
+              style={{ width: `${getLiberationWidth(true)}%` }}
+              className={`rootActiveCampaignWidget_Liberation_Wrapper_Right ${getEnemyBgColor()}`}
+            ></div>
+          </div>
+        </div>
+
+        <div className="rootActiveCampaignWidget_Bottom">
+          <div className="rootActiveCampaignWidget_Bottom_Wrapper justify-between">
+            <div className="flex items-center">
+              <img
+                src="/static/GeneralIcons/HelldiverIcon.png"
+                alt=""
+                className="rootActiveCampaignWidget_Bottom_Wrapper_Icon"
+              />
+
+              <p className="rootActiveCampaignWidget_Bottom_Wrapper_NumberText text-[#ffe702]">
+                {playersCount}
+              </p>
+            </div>
+
+            <div className="flex items-center">
+              <img
+                src={`${getEnemyIcon()}`}
+                alt=""
+                className="rootActiveCampaignWidget_Bottom_Wrapper_Icon"
+              />
+
+              <p
+                className={`rootActiveCampaignWidget_Bottom_Wrapper_NumberText ${getEnemyTextColor()}`}
+              >
+                -{" "}
+                {isNaN(regenPerHour)
+                  ? 0
+                  : regenPerHour % 1 === 0
+                    ? `${regenPerHour}.0`
+                    : regenPerHour}
+                %
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
