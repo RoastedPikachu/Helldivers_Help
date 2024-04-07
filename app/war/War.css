@@ -19,5 +19,5 @@
 }
 
 .activeEfforts {
-    @apply grid grid-cols-1 gap-y-[30px];
+    @apply grid grid-cols-1 gap-y-[30px] mt-[25px];
 }

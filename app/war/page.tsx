@@ -8,10 +8,15 @@ import TheFooter from "@/widgets/TheFooter";
 
 import RunningLine from "@/shared/RunningLine";
 import ThePageTitle from "@/shared/ThePageTitle";
+
 import ActiveCampaign from "@/entities/activeCampaign/ActiveCampaign";
+import ActiveCampaignsError from "@/entities/activeCampaignsError/ActiveCampaignsError";
+
+import "./War.css";
 
 const Page = () => {
   const [activeCampaigns, setActiveCampaigns] = useState([] as any[]);
+  const [planetRegenArray, setPlanetRegenArray] = useState([] as any);
 
   const getActiveCampaigns = () => {
     let result = [] as any[];
@@ -30,10 +35,23 @@ const Page = () => {
     return result;
   };
 
+  const getPlanetRegen = () => {
+    axios
+      .get("https://helldiverstrainingmanual.com/api/v1/war/status")
+      .then((response) => {
+        setPlanetRegenArray(response.data.planetStatus);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   useEffect(() => {
     getActiveCampaigns();
+    getPlanetRegen();
 
     let campaignInterval = setInterval(() => getActiveCampaigns(), 5000) as any;
+    let planetRegenInterval = setInterval(() => getPlanetRegen(), 15000) as any;
 
     return () => {
       campaignInterval = null;
@@ -64,19 +82,26 @@ const Page = () => {
           </div>
         </section>
 
-        <section className="activeEfforts">
+        <section>
           <ThePageTitle title={"активные сражения"} additionalTitle={""} />
 
-          {activeCampaigns.length &&
-            activeCampaigns.map((activeCampaign) => (
-              <ActiveCampaign
-                planetIndex={activeCampaign.planetIndex}
-                fraction={activeCampaign.faction}
-                percentage={activeCampaign.percentage}
-                playersCount={activeCampaign.players}
-                isDefense={activeCampaign.defense}
-              />
-            ))}
+          <div className="activeEfforts">
+            {activeCampaigns.length ? (
+              activeCampaigns.map((activeCampaign) => (
+                <ActiveCampaign
+                  key={activeCampaign.planetIndex}
+                  planetIndex={activeCampaign.planetIndex}
+                  fraction={activeCampaign.faction}
+                  percentage={activeCampaign.percentage}
+                  playersCount={activeCampaign.players}
+                  planetRegenArray={planetRegenArray}
+                  isDefense={activeCampaign.defense}
+                />
+              ))
+            ) : (
+              <ActiveCampaignsError />
+            )}
+          </div>
         </section>
       </main>
 
