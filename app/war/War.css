@@ -1,5 +1,5 @@
 .galaxyMap {
-    @apply relative w-[calc(100%-480px)] h-auto;
+    @apply relative w-[calc(100%-450px)] h-auto;
 }
 
 .galaxyMap_Wrapper {
@@ -19,5 +19,5 @@
 }
 
 .activeEfforts {
-    @apply grid grid-cols-1 gap-y-[30px] mt-[25px];
+    @apply grid grid-cols-1 gap-y-[30px] mt-[25px] ml-[30px] w-[450px];
 }

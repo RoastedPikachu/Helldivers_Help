@@ -9,14 +9,19 @@ import TheFooter from "@/widgets/TheFooter";
 import RunningLine from "@/shared/RunningLine";
 import ThePageTitle from "@/shared/ThePageTitle";
 
-import ActiveCampaign from "@/entities/activeCampaign/ActiveCampaign";
-import ActiveCampaignsError from "@/entities/activeCampaignsError/ActiveCampaignsError";
+import ActiveCampaign from "@/entities/campaign/activeCampaign/ActiveCampaign";
+import ActiveCampaignsError from "@/entities/campaign/activeCampaignsError/ActiveCampaignsError";
+import ActiveCampaignBlank from "@/entities/campaign/activeCampaignBlank/ActiveCampaignBlank";
 
 import "./War.css";
 
 const Page = () => {
   const [activeCampaigns, setActiveCampaigns] = useState([] as any[]);
   const [planetRegenArray, setPlanetRegenArray] = useState([] as any);
+
+  const [isRequestError, changeIsRequestError] = useState(false);
+  const [isActiveCampaignsLoaded, changeIsActiveCampaignsLoaded] =
+    useState(false);
 
   const getActiveCampaigns = () => {
     let result = [] as any[];
@@ -27,8 +32,10 @@ const Page = () => {
         result = response.data;
 
         setActiveCampaigns(response.data);
+        changeIsActiveCampaignsLoaded(!!response.data.length);
       })
       .catch((error) => {
+        changeIsRequestError(true);
         console.log(error);
       });
 
@@ -42,9 +49,14 @@ const Page = () => {
         setPlanetRegenArray(response.data.planetStatus);
       })
       .catch((error) => {
+        changeIsRequestError(true);
         console.log(error);
       });
   };
+
+  useEffect(() => {
+    console.log(isRequestError);
+  }, [isRequestError]);
 
   useEffect(() => {
     getActiveCampaigns();
@@ -86,21 +98,23 @@ const Page = () => {
           <ThePageTitle title={"активные сражения"} additionalTitle={""} />
 
           <div className="activeEfforts">
-            {activeCampaigns.length ? (
-              activeCampaigns.map((activeCampaign) => (
-                <ActiveCampaign
-                  key={activeCampaign.planetIndex}
-                  planetIndex={activeCampaign.planetIndex}
-                  fraction={activeCampaign.faction}
-                  percentage={activeCampaign.percentage}
-                  playersCount={activeCampaign.players}
-                  planetRegenArray={planetRegenArray}
-                  isDefense={activeCampaign.defense}
-                />
-              ))
-            ) : (
-              <ActiveCampaignsError />
-            )}
+            {isRequestError && <ActiveCampaignsError />}
+
+            {isActiveCampaignsLoaded
+              ? activeCampaigns.map((activeCampaign) => (
+                  <ActiveCampaign
+                    key={activeCampaign.planetIndex}
+                    planetIndex={activeCampaign.planetIndex}
+                    fraction={activeCampaign.faction}
+                    percentage={activeCampaign.percentage}
+                    playersCount={activeCampaign.players}
+                    planetRegenArray={planetRegenArray}
+                    isDefense={activeCampaign.defense}
+                  />
+                ))
+              : [{ id: 1 }, { id: 2 }, { id: 3 }].map((blank) => (
+                  <ActiveCampaignBlank key={blank.id} />
+                ))}
           </div>
         </section>
       </main>
