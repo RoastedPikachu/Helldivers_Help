@@ -1,0 +1,11 @@
+.rootWidget {
+    @apply relative w-[450px] h-[220px] bg-[#00293a] border-4 border-[#f44336] rounded-[10px] overflow-hidden;
+}
+
+.rootWidget_Top {
+    @apply py-[15px] px-[20px] bg-[#a20b00] text-[#ffffff] text-[1.75rem] font-['Exo2'] font-bold;
+}
+
+.rootWidget_Bottom {
+    @apply mt-[20px] px-[20px] text-[#ffffff] text-[1.25rem] font-['Exo2'] font-medium brightness-75;
+}
