@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 
 import axios from "axios";
 
+import { Order } from "@/utils/componentInterfaces";
+
 import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
 
@@ -10,18 +12,25 @@ import RunningLine from "@/shared/RunningLine";
 import ThePageTitle from "@/shared/ThePageTitle";
 
 import ActiveCampaign from "@/entities/campaign/activeCampaign/ActiveCampaign";
-import ActiveCampaignsError from "@/entities/campaign/activeCampaignsError/ActiveCampaignsError";
+import ActiveCampaignError from "@/entities/campaign/activeCampaignError/ActiveCampaignError";
 import ActiveCampaignBlank from "@/entities/campaign/activeCampaignBlank/ActiveCampaignBlank";
+
+import MajorOrder from "@/entities/orders/majorOrder/MajorOrder";
+import MajorOrderError from "@/entities/orders/majorOrderError/MajorOrderError";
+import MajorOrderBlank from "@/entities/orders/majorOrderBlank/MajorOrderBlank";
+import NoMajorOrder from "@/entities/orders/noMajorOrder/NoMajorOrder";
 
 import "./War.css";
 
 const Page = () => {
   const [activeCampaigns, setActiveCampaigns] = useState([] as any[]);
   const [planetRegenArray, setPlanetRegenArray] = useState([] as any);
+  const [order, setOrder] = useState({} as Order);
 
   const [isRequestError, changeIsRequestError] = useState(false);
   const [isActiveCampaignsLoaded, changeIsActiveCampaignsLoaded] =
     useState(false);
+  const [isMajorOrderLoaded, changeIsMajorOrderLoaded] = useState(false);
 
   const getActiveCampaigns = () => {
     let result = [] as any[];
@@ -31,11 +40,13 @@ const Page = () => {
       .then((response) => {
         result = response.data;
 
+        changeIsRequestError(false);
         setActiveCampaigns(response.data);
-        changeIsActiveCampaignsLoaded(!!response.data.length);
+        changeIsActiveCampaignsLoaded(true);
       })
       .catch((error) => {
         changeIsRequestError(true);
+        changeIsActiveCampaignsLoaded(false);
         console.log(error);
       });
 
@@ -48,25 +59,45 @@ const Page = () => {
       .then((response) => {
         setPlanetRegenArray(response.data.planetStatus);
       })
-      .catch((error) => {
+      .catch(() => {
         changeIsRequestError(true);
-        console.log(error);
       });
   };
 
-  useEffect(() => {
-    console.log(isRequestError);
-  }, [isRequestError]);
+  const getMajorOrder = () => {
+    axios
+      .get("https://helldiverstrainingmanual.com/api/v1/war/major-orders")
+      .then((response) => {
+        changeIsRequestError(false);
+        changeIsMajorOrderLoaded(true);
+
+        setOrder({
+          title: response.data[0].setting.taskDescription,
+          expiresIn: response.data[0].expiresIn / 60 / 60,
+          description: response.data[0].setting.overrideBrief,
+          completedPlanets: response.data[0].progress,
+          targetPlanets: [
+            ...response.data[0].setting.tasks.map(
+              (task: any) => task.values[2],
+            ),
+          ],
+          reward: response.data[0].setting.reward.amount,
+        });
+      })
+      .catch(() => changeIsRequestError(true));
+  };
 
   useEffect(() => {
     getActiveCampaigns();
     getPlanetRegen();
+    getMajorOrder();
 
     let campaignInterval = setInterval(() => getActiveCampaigns(), 5000) as any;
     let planetRegenInterval = setInterval(() => getPlanetRegen(), 15000) as any;
 
     return () => {
       campaignInterval = null;
+      planetRegenInterval = null;
     };
   }, []);
   return (
@@ -92,13 +123,32 @@ const Page = () => {
               />
             </div>
           </div>
+
+          <ThePageTitle title={"главный приказ"} additionalTitle={""} />
+
+          {isRequestError && <MajorOrderError />}
+
+          {isMajorOrderLoaded && order.title && (
+            <MajorOrder
+              title={order.title}
+              expiresIn={order.expiresIn}
+              description={order.description}
+              targetPlanets={order.targetPlanets}
+              completedPlanets={order.completedPlanets}
+              reward={order.reward}
+            />
+          )}
+
+          {!isMajorOrderLoaded && <MajorOrderBlank />}
+
+          {isMajorOrderLoaded && !order.title && <NoMajorOrder />}
         </section>
 
-        <section>
+        <section className="ml-[30px]">
           <ThePageTitle title={"активные сражения"} additionalTitle={""} />
 
           <div className="activeEfforts">
-            {isRequestError && <ActiveCampaignsError />}
+            {isRequestError && <ActiveCampaignError />}
 
             {isActiveCampaignsLoaded
               ? activeCampaigns.map((activeCampaign) => (
@@ -112,7 +162,8 @@ const Page = () => {
                     isDefense={activeCampaign.defense}
                   />
                 ))
-              : [{ id: 1 }, { id: 2 }, { id: 3 }].map((blank) => (
+              : !isRequestError &&
+                [{ id: 1 }, { id: 2 }, { id: 3 }].map((blank) => (
                   <ActiveCampaignBlank key={blank.id} />
                 ))}
           </div>
