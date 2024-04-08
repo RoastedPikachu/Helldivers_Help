@@ -1,0 +1,55 @@
+.rootMajorOrderWidget {
+    @apply relative mt-[30px] w-full h-auto bg-[#000000] border-2 border-[#2cc388] rounded-[10px] overflow-hidden;
+}
+
+.rootMajorOrderWidget_Top {
+    @apply flex justify-between items-center pt-[15px] pb-[10px] px-[20px] w-full h-[65px] bg-[#2cc388];
+}
+
+.rootMajorOrderWidget_Top_Title {
+    @apply text-[#ffffff] text-[2rem] font-['Exo2'] font-bold;
+}
+
+.rootMajorOrderWidget_Top_TimeLeft {
+    @apply text-[#ffffff] text-[2rem] font-['Exo2'] font-bold;
+}
+
+.rootMajorOrderWidget_Description {
+    @apply mt-[20px] px-[20px] text-[#2cc388] text-[1.25rem] font-['Exo2'] font-medium;
+}
+
+.rootMajorOrderWidget_PlanetsBlock {
+    @apply grid grid-cols-2 gap-y-[20px] mt-[30px] mx-[20px] h-[100px];
+}
+
+.rootMajorOrderWidget_PlanetsBlock_TextWrapper {
+    @apply relative flex justify-between items-center px-[30px] h-[40px] border-l-4;
+}
+
+.rootMajorOrderWidget_PlanetsBlock_TextWrapper_Block {
+    @apply absolute ml-[-30px] w-full h-full brightness-[0.5];
+}
+
+.rootMajorOrderWidget_PlanetsBlock_TextWrapper_Block_PlanetName {
+    @apply text-[#ffffff] text-[1.5rem] font-['Exo2'] font-bold z-30;
+}
+
+.rootMajorOrderWidget_PlanetsBlock_TextWrapper_Block_BoolText {
+    @apply text-[1.125rem] font-['Exo2'] font-semibold z-30 brightness-75;
+}
+
+.rootMajorOrderWidget_Bottom {
+    @apply flex items-center mt-[20px] mx-[calc((100%-280px)/2)] w-[260px] h-[70px];
+}
+
+.rootMajorOrderWidget_Bottom_LeftText {
+    @apply text-[#ffffff] text-[1.5rem] font-['Exo2'] font-bold;
+}
+
+.rootMajorOrderWidget_Bottom_NumberText {
+    @apply ml-[10px] text-[#ffe702] text-[2rem] font-['Insignia'] font-bold;
+}
+
+.rootMajorOrderWidget_Bottom_RightText {
+    @apply ml-[10px] text-[#ffe702] text-[1.5rem] font-['Exo2'] font-bold;
+}
