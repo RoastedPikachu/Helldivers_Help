@@ -1,0 +1,7 @@
+.rootNoMajorOrderWidget {
+    @apply flex justify-center items-center mt-[30px] py-[15px] px-[20px] w-full h-[300px] bg-[#000000] border-2 border-[#2cc388] rounded-[10px];
+}
+
+.rootNoMajorOrderWidget_Text {
+    @apply text-[#2cc388] text-[2rem] font-['Exo2'] font-bold;
+}
