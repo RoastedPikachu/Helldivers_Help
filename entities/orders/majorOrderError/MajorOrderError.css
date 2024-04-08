@@ -1,0 +1,19 @@
+.rootMajorOrderErrorWidget {
+    @apply relative mt-[30px] w-full h-auto min-h-[300px] bg-[#00293a] border-4 border-[#f44336] rounded-[10px] overflow-hidden;
+}
+
+.rootMajorOrderErrorWidget_Title {
+    @apply py-[15px] px-[20px] bg-[#a20b00] text-[#ffffff] text-[1.75rem] font-['Exo2'] font-bold;
+}
+
+.rootMajorOrderErrorWidget_Description {
+    @apply mt-[20px] px-[20px] text-[#ffffff] text-[1.25rem] font-['Exo2'] font-medium brightness-75;
+}
+
+.rootMajorOrderErrorWidget_ErrorsBlock {
+    @apply flex items-center mt-[30px] px-[20px] w-full bg-[#a20b00];
+}
+
+.rootMajorOrderErrorWidget_ErrorsBlock_Text {
+    @apply text-[#ffffff] text-[1.75rem] text-center font-['Exo2'] font-bold;
+}
