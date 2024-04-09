@@ -12,6 +12,7 @@ interface ActiveCampaignProps {
   playersCount: number;
   planetRegenArray: any[];
   isDefense: boolean;
+  expiresIn: Date;
 }
 
 const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
@@ -21,6 +22,7 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
   playersCount,
   planetRegenArray,
   isDefense,
+  expiresIn,
 }) => {
   const [targetCampaignPlanet, setTargetCampaignPlanet] = useState({} as any);
 
@@ -55,21 +57,24 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
   };
 
   const getLiberationWidth = (isEnemy: boolean) => {
+    // console.log(expiresIn ? expiresIn : " ");
     if (isEnemy) {
-      return 100 - percentage;
+      return isDefense ? 24 - timeLeft * 4.2 : 100 - percentage;
     }
     return percentage;
   };
 
   useEffect(() => {
     setRegenPerHour(
-      +(
-        ((planetRegenArray.find((planet) => planet.index === planetIndex)
-          ?.regenPerSecond *
-          3600) /
-          1000000) *
-        100
-      ).toFixed(1),
+      isDefense
+        ? 4.2
+        : +(
+            ((planetRegenArray.find((planet) => planet.index === planetIndex)
+              ?.regenPerSecond *
+              3600) /
+              1000000) *
+            100
+          ).toFixed(1),
     );
 
     setTargetCampaignPlanet({
@@ -123,17 +128,32 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
 
         <div className="rootActiveCampaignWidget_Liberation">
           <div
-            className={`rootActiveCampaignWidget_Liberation_Wrapper ${getEnemyBorderColor()}`}
+            className={`rootActiveCampaignWidget_Liberation_Wrapper ${isDefense ? "" : "flex"} ${getEnemyBorderColor()}`}
           >
-            <div
-              style={{ width: `${getLiberationWidth(false)}%` }}
-              className="rootActiveCampaignWidget_Liberation_Wrapper_Left"
-            ></div>
+            {!isDefense ? (
+              <>
+                <div
+                  style={{ width: `${getLiberationWidth(false)}%` }}
+                  className="rootActiveCampaignWidget_Liberation_Wrapper_Left"
+                ></div>
 
-            <div
-              style={{ width: `${getLiberationWidth(true)}%` }}
-              className={`rootActiveCampaignWidget_Liberation_Wrapper_Right ${getEnemyBgColor()}`}
-            ></div>
+                <div
+                  style={{ width: `${getLiberationWidth(true)}%` }}
+                  className={`rootActiveCampaignWidget_Liberation_Wrapper_Right ${getEnemyBgColor()}`}
+                ></div>
+              </>
+            ) : (
+              <>
+                <div
+                  style={{ width: `${getLiberationWidth(false)}%` }}
+                  className="w-full h-[14px] bg-[#3db8fe]"
+                ></div>
+                <div
+                  style={{ width: `${getLiberationWidth(true)}%` }}
+                  className={`w-full h-[14px] ${getEnemyBgColor()}`}
+                ></div>
+              </>
+            )}
           </div>
         </div>
 
@@ -144,7 +164,7 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
             </p>
 
             <p className="rootActiveCampaignWidget_Percentage_Wrapper_Text">
-              Освобождено
+              {isDefense ? "Защищено" : "Освобождено"}
             </p>
           </div>
         </div>
@@ -173,7 +193,7 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
               <p
                 className={`rootActiveCampaignWidget_Bottom_Wrapper_NumberText ${getEnemyTextColor()}`}
               >
-                -
+                {isDefense ? "" : "- "}
                 {isNaN(regenPerHour)
                   ? 0
                   : regenPerHour % 1 === 0

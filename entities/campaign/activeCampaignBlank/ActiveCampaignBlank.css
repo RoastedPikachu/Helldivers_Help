@@ -3,5 +3,5 @@
 }
 
 .blankBlock {
-    @apply mt-[10px] w-[450px] h-[295px] bg-[#00405a] rounded-[10px];
+    @apply mt-[10px] w-[450px] h-[340px] bg-[#00405a] rounded-[10px];
 }

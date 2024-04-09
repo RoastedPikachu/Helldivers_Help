@@ -43,7 +43,7 @@
 }
 
 .rootActiveCampaignWidget_Liberation_Wrapper {
-    @apply flex py-[2px] px-[2px] w-full h-full border-2;
+    @apply py-[2px] px-[2px] w-full h-full border-2;
 }
 
 .rootActiveCampaignWidget_Liberation_Wrapper_Left {
