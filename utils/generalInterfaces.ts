@@ -60,14 +60,16 @@ export interface Enemy {
   id: number;
   iconPath: string;
   imagePath: string;
+  fraction: string;
   dangerous: string;
   tactics: string;
   difficulties: string;
   title: string;
 }
 
-export interface CurrentEnemy extends Enemy {
-  fractionType: number;
+export interface CurrentEnemy {
+  id: number;
+  fraction: string;
 }
 
 export interface ResourceTableTitle {
