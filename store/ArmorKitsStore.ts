@@ -44,7 +44,7 @@ class ArmorKitsStore {
       id: 2,
       imagePath: "/static/ArmorKits/B24EnforcerImage.webp",
       type: "Средняя броня",
-      name: "B-24 «Блюститель»",
+      name: "B-24 «Вышибала»",
       obtainingType: obtainingType["4"],
       obtainingMethod: "Покупается в Супермагазине",
       description:
@@ -105,7 +105,7 @@ class ArmorKitsStore {
       id: 5,
       imagePath: "/static/ArmorKits/Ce74BreakerImage.webp",
       type: "Легкая броня",
-      name: "CE-74 «Выключатель»",
+      name: "CE-74 «Крушитель»",
       obtainingType: obtainingType["4"],
       obtainingMethod: "Покупается в Супермагазине",
       description:

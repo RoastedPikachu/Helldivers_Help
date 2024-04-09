@@ -1,6 +1,7 @@
 import { makeAutoObservable } from "mobx";
 
 import { CurrentEnemy, Enemy } from "@/utils/generalInterfaces";
+import { fractions } from "@/data/fractions";
 
 class EnemyTypeStore {
   currentEnemyType = {} as CurrentEnemy;
@@ -10,6 +11,7 @@ class EnemyTypeStore {
       id: 1,
       iconPath: "",
       imagePath: "",
+      fraction: fractions["2"],
       dangerous:
         "Очень быстро двигаются, также могут призывать своих сородичей, что и является основной целью их бренной жизни. В основном являются не угрозой, а раздражителем.",
       tactics:
@@ -21,6 +23,7 @@ class EnemyTypeStore {
       id: 2,
       iconPath: "/static/Terminids/BileSpitterImage.png",
       imagePath: "",
+      fraction: fractions["2"],
       dangerous:
         "Может выстрелить кислотой на небольшом расстоянии и в большом количестве является хоть и не грозным, но неприятным противником.",
       tactics:
@@ -32,6 +35,7 @@ class EnemyTypeStore {
       id: 3,
       iconPath: "/static/Terminids/ShriekerImage.png",
       imagePath: "",
+      fraction: fractions["2"],
       dangerous:
         "Быстро передвигается в воздухе и атакует парами. Один удар может вас убить, так как приоритетной целью является голова.",
       tactics:
@@ -43,6 +47,7 @@ class EnemyTypeStore {
       id: 4,
       iconPath: "",
       imagePath: "",
+      fraction: fractions["2"],
       dangerous: "",
       tactics: "",
       difficulties: "",
@@ -52,6 +57,7 @@ class EnemyTypeStore {
       id: 5,
       iconPath: "/static/Terminids/HunterImage.png",
       imagePath: "",
+      fraction: fractions["2"],
       dangerous:
         "Передвигается в составе организованных групп, очень проворный, может быстро сокращать дистанцию. Удар замедляет и может снести до четверти от всего здоровья.",
       tactics:
@@ -63,6 +69,7 @@ class EnemyTypeStore {
       id: 6,
       iconPath: "/static/Terminids/WarriorImage.png",
       imagePath: "",
+      fraction: fractions["2"],
       dangerous:
         "Самый обыкновенный противник, также может позвать своих сородичей отделать вашу свободолюбивую задницу. Единственная опасность, которую он представляет — замедление в продвижении управляемой демократии по всей галактике.",
       tactics:
@@ -74,6 +81,7 @@ class EnemyTypeStore {
       id: 7,
       iconPath: "",
       imagePath: "",
+      fraction: fractions["2"],
       dangerous: "",
       tactics: "",
       difficulties: "",
@@ -83,6 +91,7 @@ class EnemyTypeStore {
       id: 8,
       iconPath: "/static/Terminids/StalkerImage.png",
       imagePath: "",
+      fraction: fractions["2"],
       dangerous:
         "Невидим, быстро двигается, имеет схожие атаки с обычными охотниками. Также может использовать свой язык, чтобы атаковать вас с небольшого расстояния. Намного опаснее группы охотников, так как может подкрасться к вам в разгар боя и проредить вашу команду.",
       tactics:
@@ -94,6 +103,7 @@ class EnemyTypeStore {
       id: 9,
       iconPath: "/static/Terminids/BroodCommanderImage.png",
       imagePath: "",
+      fraction: fractions["2"],
       dangerous:
         "Довольно неплохо защищен броней, а также передвигается в составе своего роя. Помимо этого может вас контузить своим резким тараном.",
       tactics:
@@ -105,6 +115,7 @@ class EnemyTypeStore {
       id: 10,
       iconPath: "/static/Terminids/BileSpewerImage.png",
       imagePath: "",
+      fraction: fractions["2"],
       dangerous:
         "Его желчный снаряд или плевок желчью убивает вас, не давая шанса спастись. Также, если вы атаковали его брюхо — взрывается после смерти, нанося урон всем в округе.",
       tactics:
@@ -116,6 +127,7 @@ class EnemyTypeStore {
       id: 11,
       iconPath: "/static/Terminids/ChargerImage.png",
       imagePath: "",
+      fraction: fractions["2"],
       dangerous:
         "Его вожделенная мечта и цель — растоптать ваше героическое тело. Основная угроза исходит от его разбегов, но даже если при успешном уклонении, он может совершить боковой удар, который вас откинет.",
       tactics:
@@ -127,6 +139,7 @@ class EnemyTypeStore {
       id: 12,
       iconPath: "/static/Terminids/BileTitanImage.png",
       imagePath: "",
+      fraction: fractions["2"],
       dangerous:
         "Это апогей эволюции терминидов. Этот ужасный, очень быстрый и бронированный монстр может стереть вас с лица планеты своим потоком желчи или просто растоптать вас своими конечностями.",
       tactics:
@@ -142,6 +155,7 @@ class EnemyTypeStore {
       id: 1,
       iconPath: "/static/Automatons/TrooperImage.png",
       imagePath: "",
+      fraction: fractions["3"],
       dangerous:
         "В зависимости от своей разновидности, может либо быстро подобраться к вам с помощью реактивного ранца, или же просто убить вас с 1 выстрела, если вооружен ракетницей. Также может кинуть в вас гранату или занять турель, с которой будет вести огонь по вам.",
       tactics:
@@ -153,6 +167,7 @@ class EnemyTypeStore {
       id: 2,
       iconPath: "/static/Automatons/ComissarImage.png",
       imagePath: "",
+      fraction: fractions["3"],
       dangerous: "Быстро сближается и атакует своим клинком.",
       tactics:
         "Просто стреляйте ему в голову и даже группа комиссаров будет вам не страшна.",
@@ -163,6 +178,7 @@ class EnemyTypeStore {
       id: 3,
       iconPath: "/static/Automatons/BerserkerImage.png",
       imagePath: "",
+      fraction: fractions["3"],
       dangerous:
         "Вооружен бензопилами и старается как можно быстрее сократить до вас дистанцию. Очень быстрый, также любит группироваться с такими же, как он.",
       tactics:
@@ -174,6 +190,7 @@ class EnemyTypeStore {
       id: 4,
       iconPath: "/static/Automatons/ScoutStriderImage.png",
       imagePath: "",
+      fraction: fractions["3"],
       dangerous:
         "Защищен броней, вооружен турелью и довольно быстр, на своем шагоходе",
       tactics:
@@ -185,6 +202,7 @@ class EnemyTypeStore {
       id: 5,
       iconPath: "/static/Automatons/DevastatorImage.png",
       imagePath: "",
+      fraction: fractions["3"],
       dangerous:
         "Имеет огромную защиту, также в зависимости от варианта, может быть вооружен ракетницами, либо лазером и щитом.",
       tactics:
@@ -196,6 +214,7 @@ class EnemyTypeStore {
       id: 6,
       iconPath: "/static/Automatons/HulkImage.png",
       imagePath: "",
+      fraction: fractions["3"],
       dangerous:
         "Существует 3 варианта вооружения: скорострельное ружье, огнемет или гранатомет. Также полностью покрыт броней. ",
       tactics:
@@ -207,6 +226,7 @@ class EnemyTypeStore {
       id: 7,
       iconPath: "/static/Automatons/TankImage.png",
       imagePath: "",
+      fraction: fractions["3"],
       dangerous:
         "Несмотря на свою крайнюю медлительность, очень смертоносен. Любое попадание из его пушки не дает вам шанса на выживание.",
       tactics:
@@ -218,6 +238,7 @@ class EnemyTypeStore {
       id: 8,
       iconPath: "/static/Automatons/DropshipImage.png",
       imagePath: "",
+      fraction: fractions["3"],
       dangerous:
         "Опасности не представляет, но может сбросить большое количество новых автоматонов, которые будут мешать вам выполнять задачу.",
       tactics:
@@ -229,6 +250,7 @@ class EnemyTypeStore {
       id: 9,
       iconPath: "",
       imagePath: "",
+      fraction: fractions["3"],
       dangerous:
         "Фактически это стационарный танк со всеми присущими ему чертами.",
       tactics:
@@ -242,8 +264,11 @@ class EnemyTypeStore {
     makeAutoObservable(this);
   }
 
-  changeCurrentEnemyType(enemyType: CurrentEnemy) {
-    this.currentEnemyType = enemyType;
+  changeCurrentEnemyType(id: number, fraction: string) {
+    this.currentEnemyType = {
+      id: id,
+      fraction: fraction,
+    };
   }
 
   clearCurrentEnemyType() {

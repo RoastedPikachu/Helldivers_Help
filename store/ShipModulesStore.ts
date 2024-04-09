@@ -10,9 +10,9 @@ class ShipModulesStore {
       id: 1,
       title: "Административный центр патриотизма",
       levelImages: [
-        "/static/ShipModules/PatrioticAdministrationCenterLvl1.jpg",
-        "/static/ShipModules/PatrioticAdministrationCenterLvl2.jpg",
-        "/static/ShipModules/PatrioticAdministrationCenterLvl3.jpg",
+        "/static/ShipModules/PatrioticAdministrationCenterLvl1.webp",
+        "/static/ShipModules/PatrioticAdministrationCenterLvl2.webp",
+        "/static/ShipModules/PatrioticAdministrationCenterLvl3.webp",
       ],
       improvementTitles: [
         "Лицензия на благотворительность",
@@ -80,9 +80,9 @@ class ShipModulesStore {
       id: 2,
       title: "Орбитальные пушки",
       levelImages: [
-        "/static/ShipModules/OrbitalCannonLvl1.jpg",
-        "/static/ShipModules/OrbitalCannonLvl2.jpg",
-        "/static/ShipModules/OrbitalCannonLvl3.jpg",
+        "/static/ShipModules/OrbitalCannonLvl1.webp",
+        "/static/ShipModules/OrbitalCannonLvl2.webp",
+        "/static/ShipModules/OrbitalCannonLvl3.webp",
       ],
       improvementTitles: [
         "Взрывная шрапнель",
@@ -147,9 +147,9 @@ class ShipModulesStore {
       id: 3,
       title: "Ангар",
       levelImages: [
-        "/static/ShipModules/HangarLvl1.jpg",
-        "/static/ShipModules/HangarLvl2.jpg",
-        "/static/ShipModules/HangarLvl3.jpg",
+        "/static/ShipModules/HangarLvl1.webp",
+        "/static/ShipModules/HangarLvl2.webp",
+        "/static/ShipModules/HangarLvl3.webp",
       ],
       improvementTitles: [
         "Жидкостная вентиляция кабины",
@@ -204,9 +204,9 @@ class ShipModulesStore {
       id: 4,
       title: "Мостик",
       levelImages: [
-        "/static/ShipModules/BridgeLvl1.jpg",
-        "/static/ShipModules/BridgeLvl2.jpg",
-        "/static/ShipModules/BridgeLvl3.jpg",
+        "/static/ShipModules/BridgeLvl1.webp",
+        "/static/ShipModules/BridgeLvl2.webp",
+        "/static/ShipModules/BridgeLvl3.webp",
       ],
       improvementTitles: [
         "Обновление программ прицеливания",
@@ -259,9 +259,9 @@ class ShipModulesStore {
       id: 5,
       title: "Инженерный отсек",
       levelImages: [
-        "/static/ShipModules/EngineerBayLvl1.jpg",
-        "/static/ShipModules/EngineerBayLvl2.jpg",
-        "/static/ShipModules/EngineerBayLvl3.jpg",
+        "/static/ShipModules/EngineerBayLvl1.webp",
+        "/static/ShipModules/EngineerBayLvl2.webp",
+        "/static/ShipModules/EngineerBayLvl3.webp",
       ],
       improvementTitles: [
         "Искусственное дополнение",
@@ -330,9 +330,9 @@ class ShipModulesStore {
       id: 6,
       title: "Роботехнический цех",
       levelImages: [
-        "/static/ShipModules/RoboticsWorkshopLvl1.jpg",
-        "/static/ShipModules/RoboticsWorkshopLvl2.jpg",
-        "/static/ShipModules/RoboticsWorkshopLvl3.jpg",
+        "/static/ShipModules/RoboticsWorkshopLvl1.webp",
+        "/static/ShipModules/RoboticsWorkshopLvl2.webp",
+        "/static/ShipModules/RoboticsWorkshopLvl3.webp",
       ],
       improvementTitles: [
         "Динамическое отслеживание",

@@ -27,7 +27,7 @@ class StratagemStore {
       id: 1,
       iconPath: "/static/Stratagems/MachineGunIcon.png",
       videoPath: "/static/StratagemVideos/MachineGunVideo.mp4",
-      videoPreviewPath: "/static/StratagemVideoPreviews/MachineGunPreview.jpg",
+      videoPreviewPath: "/static/StratagemVideoPreviews/MachineGunPreview.webp",
       type: stratagemTypes.supportWeapon,
       name: "MG-43 «Пулемет»",
       description:
@@ -71,7 +71,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/AntiMaterialRifleIcon.png",
       videoPath: "/static/StratagemVideos/AntiMaterialRifleVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/AntiMaterialRiflePreview.jpg",
+        "/static/StratagemVideoPreviews/AntiMaterialRiflePreview.webp",
       type: stratagemTypes.supportWeapon,
       name: "APW-1 «Крупнокалиберная винтовка»",
       description:
@@ -114,7 +114,7 @@ class StratagemStore {
       id: 3,
       iconPath: "/static/Stratagems/StalwartIcon.png",
       videoPath: "/static/StratagemVideos/StalwartVideo.mp4",
-      videoPreviewPath: "/static/StratagemVideoPreviews/StalwartPreview.jpg",
+      videoPreviewPath: "/static/StratagemVideoPreviews/StalwartPreview.webp",
       type: stratagemTypes.supportWeapon,
       name: "M-105 «Доблесть»",
       description:
@@ -163,7 +163,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/ExpendableAntiTankIcon.png",
       videoPath: "/static/StratagemVideos/ExpendableAntiTankVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/ExpendableAntiTankPreview.jpg",
+        "/static/StratagemVideoPreviews/ExpendableAntiTankPreview.webp",
       type: stratagemTypes.supportWeapon,
       name: "EAT-17 «Одноразовый бронебой»",
       description:
@@ -207,7 +207,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/RecoilnessRifleIcon.png",
       videoPath: "/static/StratagemVideos/RecoilnessRifleVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/RecoilnessRiflePreview.jpg",
+        "/static/StratagemVideoPreviews/RecoilnessRiflePreview.webp",
       type: stratagemTypes.supportWeapon,
       name: "GR-8 «Безоткатная винтовка»",
       description:
@@ -251,7 +251,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/FlamethrowerIcon.png",
       videoPath: "/static/StratagemVideos/FlamethrowerVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/FlamethrowerPreview.jpg",
+        "/static/StratagemVideoPreviews/FlamethrowerPreview.webp",
       type: stratagemTypes.supportWeapon,
       name: "FLAM-40 «Огнемет»",
       description:
@@ -294,7 +294,7 @@ class StratagemStore {
       id: 7,
       iconPath: "/static/Stratagems/AutocannonIcon.png",
       videoPath: "/static/StratagemVideos/AutocannonVideo.mp4",
-      videoPreviewPath: "/static/StratagemVideoPreviews/AutocannonPreview.jpg",
+      videoPreviewPath: "/static/StratagemVideoPreviews/AutocannonPreview.webp",
       type: stratagemTypes.supportWeapon,
       name: "AC-8 «Автопушка»",
       description:
@@ -343,7 +343,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/HeavyMachineGunIcon.png",
       videoPath: "/static/StratagemVideos/HeavyMachineGunVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/HeavyMachineGunPreview.jpg",
+        "/static/StratagemVideoPreviews/HeavyMachineGunPreview.webp",
       type: stratagemTypes.supportWeapon,
       name: "MG-101 «Тяжелый пулемет»",
       description:
@@ -386,7 +386,7 @@ class StratagemStore {
       id: 9,
       iconPath: "/static/Stratagems/RailgunIcon.png",
       videoPath: "/static/StratagemVideos/RailgunVideo.mp4",
-      videoPreviewPath: "/static/StratagemVideoPreviews/RailgunPreview.jpg",
+      videoPreviewPath: "/static/StratagemVideoPreviews/RailgunPreview.webp",
       type: stratagemTypes.supportWeapon,
       name: "RS-422 «Рельсотрон»",
       description:
@@ -434,7 +434,7 @@ class StratagemStore {
       id: 10,
       iconPath: "/static/Stratagems/SpearIcon.png",
       videoPath: "/static/StratagemVideos/SpearVideo.mp4",
-      videoPreviewPath: "/static/StratagemVideoPreviews/SpearPreview.jpg",
+      videoPreviewPath: "/static/StratagemVideoPreviews/SpearPreview.webp",
       type: stratagemTypes.supportWeapon,
       name: "FAF-14 «Копье»",
       description:
@@ -478,7 +478,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/OrbitalGatlingBarrageIcon.png",
       videoPath: "/static/StratagemVideos/OrbitalGatlingBarrageVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/OrbitalGatlingBarragePreview.jpg",
+        "/static/StratagemVideoPreviews/OrbitalGatlingBarragePreview.webp",
       type: stratagemTypes.orbital,
       name: "Орбитальный залп Гатлинга",
       description:
@@ -522,7 +522,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/OrbitalAirburstStrikeIcon.png",
       videoPath: "/static/StratagemVideos/OrbitalAirburstStrikeVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/OrbitalAirburstStrikePreview.jpg",
+        "/static/StratagemVideoPreviews/OrbitalAirburstStrikePreview.webp",
       type: stratagemTypes.orbital,
       name: "Орбитальная воздушная бомба",
       description:
@@ -556,7 +556,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/Orbital120mmHEBarrageIcon.png",
       videoPath: "/static/StratagemVideos/Orbital120mmHEBarrageVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/Orbital120mmHEBarragePreview.jpg",
+        "/static/StratagemVideoPreviews/Orbital120mmHEBarragePreview.webp",
       type: stratagemTypes.orbital,
       name: "Орбитальный залп 120-мм ОФ",
       description:
@@ -605,7 +605,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/Orbital380mmHEBarrageIcon.png",
       videoPath: "/static/StratagemVideos/Orbital380mmHEBarrageVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/Orbital380mmHEBarragePreview.jpg",
+        "/static/StratagemVideoPreviews/Orbital380mmHEBarragePreview.webp",
       type: stratagemTypes.orbital,
       name: "Орбитальный залп 380-мм ОФ",
       description:
@@ -659,7 +659,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/OrbitalWalkingBarrageIcon.png",
       videoPath: "/static/StratagemVideos/OrbitalWalkingBarrageVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/OrbitalWalkingBarragePreview.jpg",
+        "/static/StratagemVideoPreviews/OrbitalWalkingBarragePreview.webp",
       type: stratagemTypes.orbital,
       name: "Орбитальный огневой вал",
       description:
@@ -708,7 +708,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/OrbitalLaserIcon.png",
       videoPath: "/static/StratagemVideos/OrbitalLaserVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/OrbitalLaserPreview.jpg",
+        "/static/StratagemVideoPreviews/OrbitalLaserPreview.webp",
       type: stratagemTypes.orbital,
       name: "Орбитальный лазер",
       description:
@@ -752,7 +752,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/OrbitalRailcannonStrikeIcon.png",
       videoPath: "/static/StratagemVideos/OrbitalRailcannonStrikeVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/OrbitalRailcannonStrikePreview.jpg",
+        "/static/StratagemVideoPreviews/OrbitalRailcannonStrikePreview.webp",
       type: stratagemTypes.orbital,
       name: "Орбитальный рельсотронный залп",
       description:
@@ -796,7 +796,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/EagleStrafingRunIcon.png",
       videoPath: "/static/StratagemVideos/EagleStrafingRunVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/EagleStrafingRunPreview.jpg",
+        "/static/StratagemVideoPreviews/EagleStrafingRunPreview.webp",
       type: stratagemTypes.hangar,
       name: "Орел: бреющий полет",
       description:
@@ -830,7 +830,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/EagleAirstrikeIcon.png",
       videoPath: "/static/StratagemVideos/EagleAirstrikeVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/EagleAirstrikePreview.jpg",
+        "/static/StratagemVideoPreviews/EagleAirstrikePreview.webp",
       type: stratagemTypes.hangar,
       name: "Орел: воздушный налет",
       description: "Неприцельная бомбардировка, создающая вал взрывов.",
@@ -868,7 +868,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/EagleClusterBombIcon.png",
       videoPath: "/static/StratagemVideos/EagleClusterBombVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/EagleClusterBombPreview.jpg",
+        "/static/StratagemVideoPreviews/EagleClusterBombPreview.webp",
       type: stratagemTypes.hangar,
       name: "Орел: кластерная бомба",
       description:
@@ -912,7 +912,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/EagleNapalmAirstrikeIcon.png",
       videoPath: "/static/StratagemVideos/EagleNapalmAirstrikeVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/EagleNapalmAirstrikePreview.jpg",
+        "/static/StratagemVideoPreviews/EagleNapalmAirstrikePreview.webp",
       type: stratagemTypes.hangar,
       name: "Орел: авиаудар напалмом",
       description:
@@ -950,7 +950,7 @@ class StratagemStore {
       id: 5,
       iconPath: "/static/Stratagems/JumpPackIcon.png",
       videoPath: "/static/StratagemVideos/JumpPackVideo.mp4",
-      videoPreviewPath: "/static/StratagemVideoPreviews/JumpPackPreview.jpg",
+      videoPreviewPath: "/static/StratagemVideoPreviews/JumpPackPreview.webp",
       type: stratagemTypes.hangar,
       name: "LIFT-850 «Реактивный ранец»",
       description:
@@ -994,7 +994,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/EagleSmokeStrikeIcon.png",
       videoPath: "/static/StratagemVideos/EagleSmokeStrikeVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/EagleSmokeStrikePreview.jpg",
+        "/static/StratagemVideoPreviews/EagleSmokeStrikePreview.webp",
       type: stratagemTypes.hangar,
       name: "Орел: дымовая завеса",
       description:
@@ -1033,7 +1033,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/Eagle110mmRocketPodIcon.png",
       videoPath: "/static/StratagemVideos/Eagle110mmRocketPodVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/Eagle110mmRocketPodPreview.jpg",
+        "/static/StratagemVideoPreviews/Eagle110mmRocketPodPreview.webp",
       type: stratagemTypes.hangar,
       name: "Орел: 110-мм ракетные блоки",
       description:
@@ -1072,7 +1072,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/Eagle500kgBombIcon.png",
       videoPath: "/static/StratagemVideos/Eagle500kgBombVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/Eagle500kgBombPreview.jpg",
+        "/static/StratagemVideoPreviews/Eagle500kgBombPreview.webp",
       type: stratagemTypes.hangar,
       name: "Орел: бомба [500 кг]",
       description:
@@ -1116,7 +1116,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/OrbitalPrecisionStrikeIcon.png",
       videoPath: "/static/StratagemVideos/OrbitalPrecisionStrikeVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/OrbitalPrecisionStrikePreview.jpg",
+        "/static/StratagemVideoPreviews/OrbitalPrecisionStrikePreview.webp",
       type: stratagemTypes.bridge,
       name: "Орбитальный высокоточный удар",
       description: "Один меткий выстрел из пушки «АТЛАС» эсминца",
@@ -1149,7 +1149,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/OrbitalGasStrikeIcon.png",
       videoPath: "/static/StratagemVideos/OrbitalGasStrikeVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/OrbitalGasStrikePreview.jpg",
+        "/static/StratagemVideoPreviews/OrbitalGasStrikePreview.webp",
       type: stratagemTypes.bridge,
       name: "Орбитальный газовый удар",
       description:
@@ -1188,7 +1188,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/OrbitalEMSStrikeIcon.png",
       videoPath: "/static/StratagemVideos/OrbitalEMSStrikeVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/OrbitalEMSStrikePreview.jpg",
+        "/static/StratagemVideoPreviews/OrbitalEMSStrikePreview.webp",
       type: stratagemTypes.bridge,
       name: "Орбитальный эм-удар",
       description:
@@ -1227,7 +1227,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/OrbitalSmokeStrikeIcon.png",
       videoPath: "/static/StratagemVideos/OrbitalSmokeStrikeVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/OrbitalSmokeStrikePreview.jpg",
+        "/static/StratagemVideoPreviews/OrbitalSmokeStrikePreview.webp",
       type: stratagemTypes.bridge,
       name: "Орбитальная дымовая завеса",
       description:
@@ -1266,7 +1266,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/HMGEmplacementIcon.png",
       videoPath: "/static/StratagemVideos/HMGEmplacementVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/HMGEmplacementPreview.jpg",
+        "/static/StratagemVideoPreviews/HMGEmplacementPreview.webp",
       type: stratagemTypes.bridge,
       name: "E/MG-101 «Огневая позиция: тяжелый пулемет»",
       description:
@@ -1315,7 +1315,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/ShieldGeneratorRelayIcon.png",
       videoPath: "/static/StratagemVideos/ShieldGeneratorRelayVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/ShieldGeneratorRelayPreview.jpg",
+        "/static/StratagemVideoPreviews/ShieldGeneratorRelayPreview.webp",
       type: stratagemTypes.bridge,
       name: "FX-12 «Реле генератора щита»",
       description:
@@ -1363,7 +1363,7 @@ class StratagemStore {
       id: 7,
       iconPath: "/static/Stratagems/TeslaTowerIcon.png",
       videoPath: "/static/StratagemVideos/TeslaTowerVideo.mp4",
-      videoPreviewPath: "/static/StratagemVideoPreviews/TeslaTowerPreview.jpg",
+      videoPreviewPath: "/static/StratagemVideoPreviews/TeslaTowerPreview.webp",
       type: stratagemTypes.bridge,
       name: "A/ARC-3 «Тесла-башня»",
       description:
@@ -1412,7 +1412,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/AntiPersonnelMinefieldIcon.png",
       videoPath: "/static/StratagemVideos/AntiPersonnelMinefieldVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/AntiPersonnelMinefieldPreview.jpg",
+        "/static/StratagemVideoPreviews/AntiPersonnelMinefieldPreview.webp",
       type: stratagemTypes.engineeringBay,
       name: "MD-6 «Противопехотные мины»",
       description:
@@ -1450,7 +1450,7 @@ class StratagemStore {
       id: 2,
       iconPath: "/static/Stratagems/SupplyPackIcon.png",
       videoPath: "/static/StratagemVideos/SupplyPackVideo.mp4",
-      videoPreviewPath: "/static/StratagemVideoPreviews/SupplyPackPreview.jpg",
+      videoPreviewPath: "/static/StratagemVideoPreviews/SupplyPackPreview.webp",
       type: stratagemTypes.engineeringBay,
       name: "B-1 «Рюкзак: боеприпасы»",
       description:
@@ -1499,7 +1499,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/GrenadeLauncherIcon.png",
       videoPath: "/static/StratagemVideos/GrenadeLauncherVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/GrenadeLauncherPreview.jpg",
+        "/static/StratagemVideoPreviews/GrenadeLauncherPreview.webp",
       type: stratagemTypes.engineeringBay,
       name: "GL-21 «Гранатомет»",
       description:
@@ -1542,7 +1542,8 @@ class StratagemStore {
       id: 4,
       iconPath: "/static/Stratagems/LaserCannonIcon.png",
       videoPath: "/static/StratagemVideos/LaserCannonVideo.mp4",
-      videoPreviewPath: "/static/StratagemVideoPreviews/LaserCannonPreview.jpg",
+      videoPreviewPath:
+        "/static/StratagemVideoPreviews/LaserCannonPreview.webp",
       type: stratagemTypes.engineeringBay,
       name: "LAS-98 «Лазерная пушка»",
       description:
@@ -1586,7 +1587,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/IncendiaryMinesIcon.png",
       videoPath: "/static/StratagemVideos/IncendiaryMinesVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/IncendiaryMinesPreview.jpg",
+        "/static/StratagemVideoPreviews/IncendiaryMinesPreview.webp",
       type: stratagemTypes.engineeringBay,
       name: "MD-14 «Зажигательные мины»",
       description:
@@ -1625,7 +1626,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/GuardDogRoverIcon.png",
       videoPath: "/static/StratagemVideos/GuardDogRoverVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/GuardDogRoverPreview.jpg",
+        "/static/StratagemVideoPreviews/GuardDogRoverPreview.webp",
       type: stratagemTypes.engineeringBay,
       name: "AX/LAS-5 «Аппарат: сторожевой пес»",
       description:
@@ -1674,7 +1675,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/BallisticShieldBackpackIcon.png",
       videoPath: "/static/StratagemVideos/BallisticShieldBackpackVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/BallisticShieldBackpackPreview.jpg",
+        "/static/StratagemVideoPreviews/BallisticShieldBackpackPreview.webp",
       type: stratagemTypes.engineeringBay,
       name: "SH-20 «Рюкзак: баллистический щит»",
       description:
@@ -1717,7 +1718,7 @@ class StratagemStore {
       id: 8,
       iconPath: "/static/Stratagems/ArcThrowerIcon.png",
       videoPath: "/static/StratagemVideos/ArcThrowerVideo.mp4",
-      videoPreviewPath: "/static/StratagemVideoPreviews/ArcThrowerPreview.jpg",
+      videoPreviewPath: "/static/StratagemVideoPreviews/ArcThrowerPreview.webp",
       type: stratagemTypes.engineeringBay,
       name: "ARC-3 «Дуговой метатель»",
       description:
@@ -1761,7 +1762,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/QuasarCannonIcon.png",
       videoPath: "/static/StratagemVideos/QuasarCannonVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/QuasarCannonPreview.jpg",
+        "/static/StratagemVideoPreviews/QuasarCannonPreview.webp",
       type: stratagemTypes.engineeringBay,
       name: "LAS-99 Пушка «Квазар»",
       description:
@@ -1805,7 +1806,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/ShieldGeneratorPackIcon.png",
       videoPath: "/static/StratagemVideos/ShieldGeneratorPackVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/ShieldGeneratorPackPreview.jpg",
+        "/static/StratagemVideoPreviews/ShieldGeneratorPackPreview.webp",
       type: stratagemTypes.engineeringBay,
       name: "SH-32 «Генератор щита»",
       description:
@@ -1854,7 +1855,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/MachineGunSentryIcon.png",
       videoPath: "/static/StratagemVideos/MachineGunSentryVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/MachineGunSentryPreview.jpg",
+        "/static/StratagemVideoPreviews/MachineGunSentryPreview.webp",
       type: stratagemTypes.roboticsWorkshop,
       name: "A/MG-43 «Пулеметная турель»",
       description:
@@ -1898,7 +1899,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/GatlingSentryIcon.png",
       videoPath: "/static/StratagemVideos/GatlingSentryVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/GatlingSentryPreview.jpg",
+        "/static/StratagemVideoPreviews/GatlingSentryPreview.webp",
       type: stratagemTypes.roboticsWorkshop,
       name: "A/G-16 «Турель Гатлинга»",
       description:
@@ -1937,7 +1938,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/MortarSentryIcon.png",
       videoPath: "/static/StratagemVideos/MortarSentryVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/MortarSentryPreview.jpg",
+        "/static/StratagemVideoPreviews/MortarSentryPreview.webp",
       type: stratagemTypes.roboticsWorkshop,
       name: "A/M-12 «Турель с минометом»",
       description:
@@ -1980,7 +1981,7 @@ class StratagemStore {
       id: 4,
       iconPath: "/static/Stratagems/GuardDogIcon.png",
       videoPath: "/static/StratagemVideos/GuardDogVideo.mp4",
-      videoPreviewPath: "/static/StratagemVideoPreviews/GuardDogPreview.jpg",
+      videoPreviewPath: "/static/StratagemVideoPreviews/GuardDogPreview.webp",
       type: stratagemTypes.roboticsWorkshop,
       name: "AX/AR-23 «Сторожевой пес»",
       description:
@@ -2029,7 +2030,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/AutocannonSentryIcon.png",
       videoPath: "/static/StratagemVideos/AutocannonSentryVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/AutocannonSentryPreview.jpg",
+        "/static/StratagemVideoPreviews/AutocannonSentryPreview.webp",
       type: stratagemTypes.roboticsWorkshop,
       name: "A/AC-8 «Турель с автопушкой»",
       description:
@@ -2078,7 +2079,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/RocketSentryIcon.png",
       videoPath: "/static/StratagemVideos/RocketSentryVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/RocketSentryPreview.jpg",
+        "/static/StratagemVideoPreviews/RocketSentryPreview.webp",
       type: stratagemTypes.roboticsWorkshop,
       name: "A/MLS-4X «Ракетная турель»",
       description:
@@ -2122,7 +2123,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/EMSMortarSentryIcon.png",
       videoPath: "/static/StratagemVideos/EMSMortarSentryVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/EMSMortarSentryPreview.jpg",
+        "/static/StratagemVideoPreviews/EMSMortarSentryPreview.webp",
       type: stratagemTypes.roboticsWorkshop,
       name: "A/M-23 «Турель с эм-минометом»",
       description:
@@ -2166,7 +2167,7 @@ class StratagemStore {
       iconPath: "/static/Stratagems/PatriotExosuitIcon.png",
       videoPath: "/static/StratagemVideos/PatriotExosuitVideo.mp4",
       videoPreviewPath:
-        "/static/StratagemVideoPreviews/PatriotExosuitPreview.jpg",
+        "/static/StratagemVideoPreviews/PatriotExosuitPreview.webp",
       type: stratagemTypes.roboticsWorkshop,
       name: "EXO-45 Экзокостюм «патриот»",
       description:
