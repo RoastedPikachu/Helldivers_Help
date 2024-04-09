@@ -11,9 +11,10 @@ interface EnemyTypeProps {
   id: number;
   iconPath: string;
   rootBlockStyles: string;
-  fractionType: number;
+  fraction: string;
   imagePlugStyles: string;
   title: string;
+  handleCurrentSlideChange: (id: number) => void;
 }
 
 const EnemyType: React.FC<EnemyTypeProps> = ({
@@ -21,33 +22,25 @@ const EnemyType: React.FC<EnemyTypeProps> = ({
   iconPath,
   rootBlockStyles,
   imagePlugStyles,
-  fractionType,
+  fraction,
   title,
+  handleCurrentSlideChange,
 }) => {
-  const changeCurrentEnemyType = () => {
-    switch (fractionType) {
-      case 1:
-        enemyTypeStore.changeCurrentEnemyType({
-          ...enemyTypeStore.terminids[id - 1],
-          fractionType: fractionType,
-        });
-        break;
-      case 2:
-        enemyTypeStore.changeCurrentEnemyType({
-          ...enemyTypeStore.automatons[id - 1],
-          fractionType: fractionType,
-        });
-        break;
-    }
-  };
+  const handleCurrentEnemyTypeChange = () => {
+    handleCurrentSlideChange(id);
 
+    enemyTypeStore.changeCurrentEnemyType(id, fraction);
+  };
   return (
-    <div onClick={() => changeCurrentEnemyType()} className="rootWidgetLink">
+    <div
+      onClick={() => handleCurrentEnemyTypeChange()}
+      className="rootWidgetLink"
+    >
       {iconPath ? (
         <img
           src={`${iconPath}`}
           alt=""
-          className={`${rootBlockStyles} ${getSpecificAutomatonImageScale(fractionType, id)}`}
+          className={`${rootBlockStyles} ${getSpecificAutomatonImageScale(fraction, id)}`}
         />
       ) : (
         <p
