@@ -58,9 +58,9 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
 
   const getLiberationWidth = (isEnemy: boolean) => {
     // console.log(expiresIn ? expiresIn : " ");
-    if (isEnemy) {
-      return isDefense ? 24 - timeLeft * 4.2 : 100 - percentage;
-    }
+    // if (isEnemy) {
+    //   return isDefense ? 24 - timeLeft * 4.2 : 100 - percentage;
+    // }
     return percentage;
   };
 

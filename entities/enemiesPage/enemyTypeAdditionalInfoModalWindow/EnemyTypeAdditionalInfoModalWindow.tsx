@@ -12,7 +12,6 @@ import { getSpecificAutomatonImageScale } from "@/utils/generalFunctions";
 import "./EnemyTypeAdditionalInfoModalWindow.css";
 
 interface EnemyTypeAdditionalInfoModalWindowProps {
-  rootBlockStyles: string;
   id: number;
   fraction: string;
   iconPath: string;
