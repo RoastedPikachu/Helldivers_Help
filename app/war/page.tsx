@@ -40,6 +40,16 @@ const Page = () => {
       .then((response) => {
         result = response.data;
 
+        // result.forEach((planet) => {
+        //   if (planet.defense) {
+        //     const currentDate = new Date();
+        //
+        //     planet.expiresIn = new Date(
+        //       currentDate.getTime() + 24 * 60 * 60 * 1000,
+        //     );
+        //   }
+        // });
+
         changeIsRequestError(false);
         setActiveCampaigns(response.data);
         changeIsActiveCampaignsLoaded(true);
@@ -47,7 +57,6 @@ const Page = () => {
       .catch((error) => {
         changeIsRequestError(true);
         changeIsActiveCampaignsLoaded(false);
-        console.log(error);
       });
 
     return result;
@@ -71,20 +80,28 @@ const Page = () => {
         changeIsRequestError(false);
         changeIsMajorOrderLoaded(true);
 
+        const orderPlanets =
+          response.data[0].setting.tasks[0].values[2] !== 0
+            ? [
+                ...response.data[0].setting.tasks.map(
+                  (task: any) => task.values[2],
+                ),
+              ]
+            : [];
+
         setOrder({
           title: response.data[0].setting.taskDescription,
           expiresIn: response.data[0].expiresIn / 60 / 60,
           description: response.data[0].setting.overrideBrief,
           completedPlanets: response.data[0].progress,
-          targetPlanets: [
-            ...response.data[0].setting.tasks.map(
-              (task: any) => task.values[2],
-            ),
-          ],
+          targetPlanets: orderPlanets,
           reward: response.data[0].setting.reward.amount,
         });
       })
-      .catch(() => changeIsRequestError(true));
+      .catch(() => {
+        changeIsMajorOrderLoaded(false);
+        changeIsRequestError(true);
+      });
   };
 
   useEffect(() => {
@@ -94,10 +111,12 @@ const Page = () => {
 
     let campaignInterval = setInterval(() => getActiveCampaigns(), 5000) as any;
     let planetRegenInterval = setInterval(() => getPlanetRegen(), 15000) as any;
+    let majorOrderInterval = setInterval(() => getMajorOrder(), 15000) as any;
 
     return () => {
       campaignInterval = null;
       planetRegenInterval = null;
+      majorOrderInterval = null;
     };
   }, []);
   return (
@@ -160,6 +179,7 @@ const Page = () => {
                     playersCount={activeCampaign.players}
                     planetRegenArray={planetRegenArray}
                     isDefense={activeCampaign.defense}
+                    expiresIn={activeCampaign?.expiresIn}
                   />
                 ))
               : !isRequestError &&
