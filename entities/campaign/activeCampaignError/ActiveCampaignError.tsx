@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 
-import "./ActiveCampaignsError.css";
+import "./ActiveCampaignError.css";
 
-const ActiveCampaignsError = () => {
+const ActiveCampaignError = () => {
   return (
     <div className="rootWidget">
       <h3 className="rootWidget_Top">
@@ -17,4 +17,4 @@ const ActiveCampaignsError = () => {
   );
 };
 
-export default ActiveCampaignsError;
+export default ActiveCampaignError;

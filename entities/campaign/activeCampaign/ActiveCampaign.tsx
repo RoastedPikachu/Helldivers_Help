@@ -173,7 +173,7 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
               <p
                 className={`rootActiveCampaignWidget_Bottom_Wrapper_NumberText ${getEnemyTextColor()}`}
               >
-                -{" "}
+                -
                 {isNaN(regenPerHour)
                   ? 0
                   : regenPerHour % 1 === 0
