@@ -91,4 +91,16 @@ export const biomes: BiomesObject = {
       "Раскаленная пустынная планета, на которой в безграничных морях песчаных дюн высятся редкие каменистые островки столовых гор.",
     imagePath: "/static/Biomes/NewBiomeImage.webp",
   },
+  toxic: {
+    surface: "токсичный биом",
+    description:
+      "Плотные ядовитые пары пробиваются из недр планеты и покрывают поверхность зеленоватым туманом.",
+    imagePath: "/static/Biomes/ToxicImage.webp",
+  },
+  superEarth: {
+    surface: "супер-земля",
+    description:
+      "Наша планета Земля, только более свободная, демократичная и процветающая.",
+    imagePath: "/static/Biomes/SuperEarthImage.webp",
+  },
 };

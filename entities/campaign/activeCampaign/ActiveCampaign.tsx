@@ -1,9 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
+import { biomes } from "@/data/planetBiomes";
+
 import { planetsStore } from "@/store/PlanetsStore";
 
 import "./ActiveCampaign.css";
+import { BiomesObject } from "@/utils/dataInterfaces";
 
 interface ActiveCampaignProps {
   planetIndex: number;
@@ -25,8 +28,6 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
   expiresIn,
 }) => {
   const [targetCampaignPlanet, setTargetCampaignPlanet] = useState({} as any);
-
-  const [regenPerHour, setRegenPerHour] = useState(0);
 
   const getEnemyIcon = () => {
     if (fraction.toLowerCase() == "terminids") {
@@ -65,17 +66,15 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
   };
 
   useEffect(() => {
-    setRegenPerHour(
-      isDefense
-        ? 4.2
-        : +(
-            ((planetRegenArray.find((planet) => planet.index === planetIndex)
-              ?.regenPerSecond *
-              3600) /
-              1000000) *
-            100
-          ).toFixed(1),
-    );
+    const regenPerHour = isDefense
+      ? 4.2
+      : +(
+          ((planetRegenArray.find((planet) => planet.index === planetIndex)
+            ?.regenPerSecond *
+            3600) /
+            1000000) *
+          100
+        ).toFixed(1);
 
     setTargetCampaignPlanet({
       ...Object.values(planetsStore.planets)[planetIndex + 1],
@@ -194,11 +193,11 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
                 className={`rootActiveCampaignWidget_Bottom_Wrapper_NumberText ${getEnemyTextColor()}`}
               >
                 {isDefense ? "" : "- "}
-                {isNaN(regenPerHour)
+                {isNaN(targetCampaignPlanet.regenPerHour)
                   ? 0
-                  : regenPerHour % 1 === 0
-                    ? `${regenPerHour}.0`
-                    : regenPerHour}
+                  : targetCampaignPlanet.regenPerHour % 1 === 0
+                    ? `${targetCampaignPlanet.regenPerHour}.0`
+                    : targetCampaignPlanet.regenPerHour}
                 %
               </p>
             </div>

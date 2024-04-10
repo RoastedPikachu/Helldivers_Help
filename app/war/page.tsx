@@ -50,6 +50,8 @@ const Page = () => {
         //   }
         // });
 
+        console.log(result);
+
         changeIsRequestError(false);
         setActiveCampaigns(response.data);
         changeIsActiveCampaignsLoaded(true);
@@ -75,10 +77,19 @@ const Page = () => {
 
   const getMajorOrder = () => {
     axios
-      .get("https://helldiverstrainingmanual.com/api/v1/war/major-orders")
+      .get(
+        "https://helldivers-2-dotnet.fly.dev/raw/api/v2/Assignment/War/801",
+        {
+          headers: {
+            "Accept-Language": "ru-RU",
+          },
+        },
+      )
       .then((response) => {
         changeIsRequestError(false);
         changeIsMajorOrderLoaded(true);
+
+        console.log(response);
 
         const orderPlanets =
           response.data[0].setting.tasks[0].values[2] !== 0
@@ -111,12 +122,10 @@ const Page = () => {
 
     let campaignInterval = setInterval(() => getActiveCampaigns(), 5000) as any;
     let planetRegenInterval = setInterval(() => getPlanetRegen(), 15000) as any;
-    let majorOrderInterval = setInterval(() => getMajorOrder(), 15000) as any;
 
     return () => {
       campaignInterval = null;
       planetRegenInterval = null;
-      majorOrderInterval = null;
     };
   }, []);
   return (
