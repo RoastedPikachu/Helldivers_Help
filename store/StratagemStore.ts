@@ -345,7 +345,7 @@ class StratagemStore {
       videoPreviewPath:
         "/static/StratagemVideoPreviews/HeavyMachineGunPreview.webp",
       type: stratagemTypes.supportWeapon,
-      name: "MG-101 «Тяжелый пулемет»",
+      name: "MG-206 «Тяжелый пулемет»",
       description:
         "Очень мощный, Но сложный в обращении пулемет с сильной отдачей.",
       price: 6000,
@@ -1325,7 +1325,7 @@ class StratagemStore {
       callTime: 0,
       useCount: 0,
       reloadTime: 90,
-      keyCodes: [83, 87, 65, 83, 68, 68],
+      keyCodes: [83, 83, 65, 68, 65, 68],
       directions: [
         {
           id: 1,
@@ -1334,7 +1334,7 @@ class StratagemStore {
         },
         {
           id: 2,
-          orientation: 1,
+          orientation: 3,
           isPressed: false,
         },
         {
@@ -1344,12 +1344,12 @@ class StratagemStore {
         },
         {
           id: 4,
-          orientation: 3,
+          orientation: 2,
           isPressed: false,
         },
         {
           id: 5,
-          orientation: 2,
+          orientation: 4,
           isPressed: false,
         },
         {
@@ -1685,7 +1685,7 @@ class StratagemStore {
       callTime: 5,
       useCount: 0,
       reloadTime: 300,
-      keyCodes: [83, 65, 87, 87, 68],
+      keyCodes: [83, 65, 83, 83, 87, 65],
       directions: [
         {
           id: 1,
@@ -1699,17 +1699,22 @@ class StratagemStore {
         },
         {
           id: 3,
-          orientation: 1,
+          orientation: 3,
           isPressed: false,
         },
         {
           id: 4,
-          orientation: 1,
+          orientation: 3,
           isPressed: false,
         },
         {
           id: 5,
-          orientation: 2,
+          orientation: 1,
+          isPressed: false,
+        },
+        {
+          id: 6,
+          orientation: 4,
           isPressed: false,
         },
       ],
@@ -1728,7 +1733,7 @@ class StratagemStore {
       callTime: 3,
       useCount: 0,
       reloadTime: 480,
-      keyCodes: [83, 68, 87, 65, 83],
+      keyCodes: [83, 68, 83, 87, 65, 65],
       directions: [
         {
           id: 1,
@@ -1742,17 +1747,22 @@ class StratagemStore {
         },
         {
           id: 3,
-          orientation: 1,
+          orientation: 3,
           isPressed: false,
         },
         {
           id: 4,
-          orientation: 4,
+          orientation: 1,
           isPressed: false,
         },
         {
           id: 5,
-          orientation: 3,
+          orientation: 4,
+          isPressed: false,
+        },
+        {
+          id: 6,
+          orientation: 4,
           isPressed: false,
         },
       ],
@@ -2133,7 +2143,7 @@ class StratagemStore {
       callTime: 0,
       useCount: 0,
       reloadTime: 180,
-      keyCodes: [83, 83, 87, 87, 65],
+      keyCodes: [83, 87, 68, 83, 68],
       directions: [
         {
           id: 1,
@@ -2142,22 +2152,22 @@ class StratagemStore {
         },
         {
           id: 2,
-          orientation: 3,
+          orientation: 1,
           isPressed: false,
         },
         {
           id: 3,
-          orientation: 1,
+          orientation: 2,
           isPressed: false,
         },
         {
           id: 4,
-          orientation: 1,
+          orientation: 3,
           isPressed: false,
         },
         {
           id: 5,
-          orientation: 4,
+          orientation: 2,
           isPressed: false,
         },
       ],
