@@ -14,7 +14,7 @@ class PlanetsStore {
       id: 1,
       name: "Супер-Земля",
       sector: galaxySectors.sol,
-      biome: null,
+      biome: biomes.superEarth,
       weatherConditions: [],
     },
     1: {
@@ -92,7 +92,7 @@ class PlanetsStore {
       id: 2,
       name: "Дерроуспорт",
       sector: galaxySectors.barnard,
-      biome: null,
+      biome: biomes.toxic,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
@@ -180,7 +180,7 @@ class PlanetsStore {
       id: 1,
       name: "Призрак",
       sector: galaxySectors.idun,
-      biome: null,
+      biome: biomes.toxic,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
@@ -464,7 +464,7 @@ class PlanetsStore {
       id: 5,
       name: "Слиф",
       sector: galaxySectors.celeste,
-      biome: null,
+      biome: biomes.toxic,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
@@ -671,7 +671,7 @@ class PlanetsStore {
       id: 1,
       name: "Эскер",
       sector: galaxySectors.falstaff,
-      biome: null,
+      biome: biomes.toxic,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
@@ -747,7 +747,7 @@ class PlanetsStore {
       id: 1,
       name: "Скааш",
       sector: galaxySectors.ursa,
-      biome: null,
+      biome: biomes.toxic,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
@@ -985,7 +985,7 @@ class PlanetsStore {
       id: 1,
       name: "Колодцы вернена",
       sector: galaxySectors.hydra,
-      biome: null,
+      biome: biomes.toxic,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
@@ -1056,7 +1056,7 @@ class PlanetsStore {
       id: 4,
       name: "Станция «Уилфорд»",
       sector: galaxySectors.arturion,
-      biome: null,
+      biome: biomes.toxic,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
@@ -1126,7 +1126,7 @@ class PlanetsStore {
       id: 2,
       name: "Дарий II",
       sector: galaxySectors.borgus,
-      biome: null,
+      biome: biomes.toxic,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
@@ -1269,7 +1269,7 @@ class PlanetsStore {
       id: 4,
       name: "Ботейн",
       sector: galaxySectors.guang,
-      biome: null,
+      biome: biomes.toxic,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
@@ -1364,7 +1364,7 @@ class PlanetsStore {
       id: 1,
       name: "Чарбол-VII",
       sector: galaxySectors.andromeda,
-      biome: null,
+      biome: biomes.toxic,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
@@ -1398,8 +1398,11 @@ class PlanetsStore {
       id: 3,
       name: "Хорт-бэй",
       sector: galaxySectors.lacaille,
-      biome: biomes.rainForest,
-      weatherConditions: [weatherConditions.ionStorms],
+      biome: biomes.toxic,
+      weatherConditions: [
+        weatherConditions.intenseHeat,
+        weatherConditions.acidStorms,
+      ],
     },
     162: {
       id: 2,
@@ -1690,7 +1693,7 @@ class PlanetsStore {
       id: 1,
       name: "Ленг II",
       sector: galaxySectors.quintus,
-      biome: null,
+      biome: biomes.toxic,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
@@ -1788,7 +1791,7 @@ class PlanetsStore {
       id: 3,
       name: "Мерак",
       sector: galaxySectors.valdis,
-      biome: null,
+      biome: biomes.toxic,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
@@ -1982,7 +1985,7 @@ class PlanetsStore {
       id: 5,
       name: "Рирга-бэй",
       sector: galaxySectors.rigel,
-      biome: null,
+      biome: biomes.toxic,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
@@ -2016,7 +2019,7 @@ class PlanetsStore {
       id: 1,
       name: "Шете",
       sector: galaxySectors.xiTauri,
-      biome: null,
+      biome: biomes.toxic,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
@@ -2149,7 +2152,7 @@ class PlanetsStore {
       id: 2,
       name: "Васат",
       sector: galaxySectors.ymir,
-      biome: null,
+      biome: biomes.toxic,
       weatherConditions: [
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
