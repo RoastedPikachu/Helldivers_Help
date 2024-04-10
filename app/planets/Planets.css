@@ -1,11 +1,3 @@
-.swiper-button-prev {
-    @apply !top-[240px] !left-[50px];
-}
-
-.swiper-button-next {
-    @apply !top-[240px] !right-[70px];
-}
-
 .pageContentSection {
     @apply relative grid grid-cols-1 grid-rows-[54] gap-y-[30px] gap-x-[30px] w-full h-auto;
 }
@@ -16,22 +8,6 @@
 
 .pageContentSection_Block_Title {
     @apply mt-[20px] text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold;;
-}
-
-.pageContentSection_Block_SliderWrapper {
-    @apply fixed justify-center items-center top-0 left-0 w-screen h-screen z-30;
-}
-
-.pageContentSection_Block_SliderWrapper_DarkBackground {
-    @apply absolute w-screen h-screen bg-[#000000] opacity-45;
-}
-
-.pageContentSection_Block_SliderWrapper_Slider {
-    @apply relative flex justify-center items-center w-full h-auto z-30;
-}
-
-.pageContentSection_Block_SliderWrapper_Slider_Slide {
-    @apply relative flex justify-center items-center w-full h-full;
 }
 
 .pageContentSection_Block_PlanetWrapper {

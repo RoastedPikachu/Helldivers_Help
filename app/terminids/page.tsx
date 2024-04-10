@@ -24,7 +24,7 @@ import EnemyTypeAdditionalInfoModalWindow from "@/entities/enemiesPage/enemyType
 import "swiper/css";
 import "swiper/css/navigation";
 
-import "./Terminids.css";
+import "@/app/modalsSlider.css";
 
 const Page = observer(() => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
@@ -79,9 +79,9 @@ const Page = observer(() => {
 
             <section className="pageSection">
               <div
-                className={`pageSection_Block_SliderWrapper ${enemyTypeStore.currentEnemyType.id ? "flex" : "hidden"}`}
+                className={`pageContentSection_Block_SliderWrapper ${enemyTypeStore.currentEnemyType.id ? "flex" : "hidden"}`}
               >
-                <div className="pageSection_Block_SliderWrapper_DarkBackground"></div>
+                <div className="pageContentSection_Block_SliderWrapper_DarkBackground"></div>
 
                 <Swiper
                   spaceBetween={150}
@@ -92,12 +92,12 @@ const Page = observer(() => {
                   navigation={true}
                   onSwiper={(swiper) => setSwiper(swiper)}
                   onSlideChange={handleSlideChange}
-                  className="pageSection_Block_SliderWrapper_Slider"
+                  className="pageContentSection_Block_SliderWrapper_Slider"
                 >
                   {getTargetEnemyTypeArray()?.map((enemy) => (
                     <SwiperSlide
                       key={enemy.id}
-                      className="pageSection_Block_SliderWrapper_Slider_Slide"
+                      className="pageContentSection_Block_SliderWrapper_Slider_Slide"
                     >
                       <EnemyTypeAdditionalInfoModalWindow
                         id={enemy.id}

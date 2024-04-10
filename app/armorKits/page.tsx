@@ -54,9 +54,9 @@ const Page = observer(() => {
             <section className="pageSection">
               <div className="pageSection_Block">
                 <div
-                  className={`pageSection_Block_SliderWrapper ${armorStore.currentArmorInfo.id ? "flex" : "hidden"}`}
+                  className={`pageContentSection_Block_SliderWrapper ${armorStore.currentArmorInfo.id ? "flex" : "hidden"}`}
                 >
-                  <div className="pageSection_Block_SliderWrapper_DarkBackground"></div>
+                  <div className="pageContentSection_Block_SliderWrapper_DarkBackground"></div>
 
                   <Swiper
                     spaceBetween={150}
@@ -66,7 +66,7 @@ const Page = observer(() => {
                     modules={[Navigation]}
                     navigation={true}
                     onSwiper={(swiper) => setSwiper(swiper)}
-                    className="pageSection_Block_SliderWrapper_Slider"
+                    className="pageContentSection_Block_SliderWrapper_Slider"
                   >
                     {armorStore.armorKits
                       .filter(
@@ -77,7 +77,7 @@ const Page = observer(() => {
                       .map((armorKit) => (
                         <SwiperSlide
                           key={armorKit.id}
-                          className="pageSection_Block_SliderWrapper_Slider_Slide"
+                          className="pageContentSection_Block_SliderWrapper_Slider_Slide"
                         >
                           <ArmorKitAdditionalInfoModalWindow
                             imagePath={armorKit.imagePath}

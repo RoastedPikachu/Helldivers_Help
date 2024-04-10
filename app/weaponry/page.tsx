@@ -78,9 +78,9 @@ const Page = observer(() => {
             <section className="pageSection">
               <div className="pageSection_Block">
                 <div
-                  className={`pageSection_Block_SliderWrapper ${weaponsStore.currentWeaponInfo.id ? "flex" : "hidden"}`}
+                  className={`pageContentSection_Block_SliderWrapper ${weaponsStore.currentWeaponInfo.id ? "flex" : "hidden"}`}
                 >
-                  <div className="pageSection_Block_SliderWrapper_DarkBackground"></div>
+                  <div className="pageContentSection_Block_SliderWrapper_DarkBackground"></div>
 
                   <Swiper
                     spaceBetween={150}
@@ -91,12 +91,12 @@ const Page = observer(() => {
                     navigation={true}
                     onSwiper={(swiper) => setSwiper(swiper)}
                     onSlideChange={handleSlideChange}
-                    className="pageSection_Block_SliderWrapper_Slider"
+                    className="pageContentSection_Block_SliderWrapper_Slider"
                   >
                     {getTargetWeaponArray()?.map((weapon) => (
                       <SwiperSlide
                         key={weapon.id}
-                        className="pageSection_Block_SliderWrapper_Slider_Slide"
+                        className="pageContentSection_Block_SliderWrapper_Slider_Slide"
                       >
                         {"magsCount" in weapon ? (
                           <WeaponAdditionalInfoModalWindow

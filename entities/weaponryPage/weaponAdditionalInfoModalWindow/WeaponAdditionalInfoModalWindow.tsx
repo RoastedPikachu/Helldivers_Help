@@ -49,15 +49,15 @@ const WeaponAdditionalInfoModa: React.FC<WeaponAdditionalInfoModaProps> =
       return (
         <Observer>
           {() => (
-            <div className="currentWeapon_Modal">
+            <div className="sliderModal">
               <button
                 onClick={() => weaponsStore.clearCurrentWeaponInfo()}
-                className="currentWeapon_Modal_CloseButton"
+                className="sliderModal_CloseButton"
               >
                 <img
                   src="/static/GeneralIcons/CloseIcon.svg"
                   alt=""
-                  className="currentWeapon_Modal_CloseButton_Image"
+                  className="sliderModal_Modal_CloseButton_Icon"
                 />
               </button>
 

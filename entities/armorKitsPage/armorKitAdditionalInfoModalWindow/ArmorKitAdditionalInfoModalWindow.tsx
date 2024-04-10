@@ -41,15 +41,15 @@ const ArmorKitAdditionalInfoModalWindow: React.FC<ArmorKitAdditionalInfoModalWin
       return (
         <Observer>
           {() => (
-            <div className="currentArmor_Modal">
+            <div className="sliderModal">
               <button
                 onClick={() => armorStore.clearCurrentArmorInfo()}
-                className="currentArmor_Modal_CloseButton"
+                className="sliderModal_CloseButton"
               >
                 <img
                   src="/static/GeneralIcons/CloseIcon.svg"
                   alt=""
-                  className="currentArmor_Modal_CloseButton_Image"
+                  className="sliderModal_CloseButton_Icon"
                 />
               </button>
 

@@ -1,15 +1,3 @@
-.currentWeapon_Modal {
-    @apply relative px-[20px] pt-[40px] pb-[35px] h-auto w-[80vw] max-w-[1152px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] z-30;
-}
-
-.currentWeapon_Modal_CloseButton {
-    @apply absolute top-[40px] right-[40px] w-[35px] h-[35px] z-40;
-}
-
-.currentWeapon_Modal_CloseButton_Image {
-    @apply w-full h-full;
-}
-
 .currentWeapon_Modal_Top {
     @apply relative flex;
 }
