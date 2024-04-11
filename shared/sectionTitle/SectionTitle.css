@@ -1,0 +1,3 @@
+.sectionTitle {
+    @apply mt-[30px] text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold;
+}
