@@ -53,9 +53,8 @@ const Page = observer(() => {
             />
 
             <section className="pageContentSection">
-              <ModalSlider
-                currentEntityId={planetsStore.currentPlanetInfo.id}
-                children={getTargetPlanetArray()?.map((planet) => (
+              <ModalSlider currentEntityId={planetsStore.currentPlanetInfo.id}>
+                {getTargetPlanetArray()?.map((planet) => (
                   <SwiperSlide
                     key={planet.id}
                     className="pageContentSection_Block_SliderWrapper_Slider_Slide"
@@ -68,7 +67,7 @@ const Page = observer(() => {
                     />
                   </SwiperSlide>
                 ))}
-              />
+              </ModalSlider>
 
               {Object.values(galaxySectors).map((value, i) => (
                 <div key={i} className="pageContentSection_Block">

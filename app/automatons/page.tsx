@@ -66,9 +66,8 @@ const Page = observer(() => {
             />
 
             <section className="pageSection">
-              <ModalSlider
-                currentEntityId={enemyTypeStore.currentEnemyType.id}
-                children={getTargetEnemyTypeArray()?.map((enemy) => (
+              <ModalSlider currentEntityId={enemyTypeStore.currentEnemyType.id}>
+                {getTargetEnemyTypeArray()?.map((enemy) => (
                   <SwiperSlide
                     key={enemy.id}
                     className="pageContentSection_Block_SliderWrapper_Slider_Slide"
@@ -84,7 +83,7 @@ const Page = observer(() => {
                     />
                   </SwiperSlide>
                 ))}
-              />
+              </ModalSlider>
 
               {enemyTypeStore.automatons.map((automaton) => (
                 <EnemyType

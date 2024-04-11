@@ -1,10 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 
 import { observer, Observer } from "mobx-react-lite";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { SwiperSlide } from "swiper/react";
 
 import { weaponsStore } from "@/store/WeaponsStore";
 
@@ -65,9 +64,8 @@ const Page = observer(() => {
               }
             />
 
-            <ModalSlider
-              currentEntityId={weaponsStore.currentWeaponInfo.id}
-              children={getSpecificWeaponArray(
+            <ModalSlider currentEntityId={weaponsStore.currentWeaponInfo.id}>
+              {getSpecificWeaponArray(
                 weaponsStore.currentWeaponInfo.weaponType?.typeNumber!,
               )?.map((weapon) => (
                 <SwiperSlide
@@ -103,7 +101,7 @@ const Page = observer(() => {
                   )}
                 </SwiperSlide>
               ))}
-            />
+            </ModalSlider>
 
             <WeaponSection
               title={"ОСНОВНОЕ"}
