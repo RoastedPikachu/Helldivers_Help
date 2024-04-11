@@ -1,10 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 
 import { observer, Observer } from "mobx-react-lite";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { SwiperSlide } from "swiper/react";
 
 import { fractions } from "@/data/fractions";
 
@@ -12,6 +11,7 @@ import { enemyTypeStore } from "@/store/EnemyTypeStore";
 
 import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
+import ModalSlider from "@/widgets/modalSlider/ModalSlider";
 
 import RunningLine from "@/shared/RunningLine";
 import TheScrollToUpButton from "@/shared/TheScrollToUpButton/TheScrollToUpButton";
@@ -27,18 +27,6 @@ import "swiper/css/navigation";
 import "@/app/modalsSlider.css";
 
 const Page = observer(() => {
-  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-
-  const [swiper, setSwiper] = useState(null as any);
-
-  const handleCurrentSlideChange = (id: number) => {
-    swiper.slideTo(id - 1);
-  };
-
-  const handleSlideChange = (swiper: any) => {
-    setCurrentSlideIndex(swiper?.activeIndex);
-  };
-
   const getTargetEnemyTypeArray = () => {
     if (enemyTypeStore.currentEnemyType.fraction === fractions["2"]) {
       return enemyTypeStore.terminids;
@@ -78,40 +66,25 @@ const Page = observer(() => {
             />
 
             <section className="pageSection">
-              <div
-                className={`pageContentSection_Block_SliderWrapper ${enemyTypeStore.currentEnemyType.id ? "flex" : "hidden"}`}
-              >
-                <div className="pageContentSection_Block_SliderWrapper_DarkBackground"></div>
-
-                <Swiper
-                  spaceBetween={150}
-                  slidesPerView={1}
-                  loop={true}
-                  centeredSlides={false}
-                  modules={[Navigation]}
-                  navigation={true}
-                  onSwiper={(swiper) => setSwiper(swiper)}
-                  onSlideChange={handleSlideChange}
-                  className="pageContentSection_Block_SliderWrapper_Slider"
-                >
-                  {getTargetEnemyTypeArray()?.map((enemy) => (
-                    <SwiperSlide
-                      key={enemy.id}
-                      className="pageContentSection_Block_SliderWrapper_Slider_Slide"
-                    >
-                      <EnemyTypeAdditionalInfoModalWindow
-                        id={enemy.id}
-                        fraction={enemy.fraction}
-                        iconPath={enemy.iconPath}
-                        title={enemy.title}
-                        dangerous={enemy.dangerous}
-                        tactics={enemy.tactics}
-                        difficulties={enemy.difficulties}
-                      />
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              </div>
+              <ModalSlider
+                currentEntityId={enemyTypeStore.currentEnemyType.id}
+                children={getTargetEnemyTypeArray()?.map((enemy) => (
+                  <SwiperSlide
+                    key={enemy.id}
+                    className="pageContentSection_Block_SliderWrapper_Slider_Slide"
+                  >
+                    <EnemyTypeAdditionalInfoModalWindow
+                      id={enemy.id}
+                      fraction={enemy.fraction}
+                      iconPath={enemy.iconPath}
+                      title={enemy.title}
+                      dangerous={enemy.dangerous}
+                      tactics={enemy.tactics}
+                      difficulties={enemy.difficulties}
+                    />
+                  </SwiperSlide>
+                ))}
+              />
 
               {enemyTypeStore.automatons.map((automaton) => (
                 <EnemyType
@@ -122,7 +95,6 @@ const Page = observer(() => {
                   fraction={automaton.fraction}
                   imagePlugStyles={"mt-[70px] h-[230px] text-[7rem]"}
                   title={automaton.title}
-                  handleCurrentSlideChange={handleCurrentSlideChange}
                 />
               ))}
             </section>

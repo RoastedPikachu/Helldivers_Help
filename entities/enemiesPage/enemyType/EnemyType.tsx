@@ -2,6 +2,7 @@
 import React from "react";
 
 import { enemyTypeStore } from "@/store/EnemyTypeStore";
+import { slidersStore } from "@/store/SlidersStore";
 
 import { getSpecificAutomatonImageScale } from "@/utils/generalFunctions";
 
@@ -14,7 +15,6 @@ interface EnemyTypeProps {
   fraction: string;
   imagePlugStyles: string;
   title: string;
-  handleCurrentSlideChange: (id: number) => void;
 }
 
 const EnemyType: React.FC<EnemyTypeProps> = ({
@@ -24,10 +24,9 @@ const EnemyType: React.FC<EnemyTypeProps> = ({
   imagePlugStyles,
   fraction,
   title,
-  handleCurrentSlideChange,
 }) => {
   const handleCurrentEnemyTypeChange = () => {
-    handleCurrentSlideChange(id);
+    slidersStore.handleCurrentSlideChange(id);
 
     enemyTypeStore.changeCurrentEnemyType(id, fraction);
   };

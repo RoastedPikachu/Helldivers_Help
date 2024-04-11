@@ -2,6 +2,7 @@
 import React from "react";
 
 import { armorStore } from "@/store/ArmorKitsStore";
+import { slidersStore } from "@/store/SlidersStore";
 
 import { ArmorObtainingType } from "@/utils/dataInterfaces";
 
@@ -12,7 +13,6 @@ interface ArmorKitProps {
   obtainingType: ArmorObtainingType;
   imagePath: string;
   name: string;
-  handleChangeCurrentSlide: (id: number) => void;
 }
 
 const ArmorKit: React.FC<ArmorKitProps> = ({
@@ -20,10 +20,9 @@ const ArmorKit: React.FC<ArmorKitProps> = ({
   obtainingType,
   imagePath,
   name,
-  handleChangeCurrentSlide,
 }) => {
   const handleCurrentArmorInfoChange = () => {
-    handleChangeCurrentSlide(id);
+    slidersStore.handleCurrentSlideChange(id);
 
     armorStore.changeCurrentArmorInfo(id, obtainingType);
   };

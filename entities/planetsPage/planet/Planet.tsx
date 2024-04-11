@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 
 import { planetsStore } from "@/store/PlanetsStore";
+import { slidersStore } from "@/store/SlidersStore";
 
 import WeatherConditionAdditionalInfoModalWindow from "@/entities/planetsPage/weatherConditionAdditionalInfo/WeatherConditionAdditionalInfoModalWindow";
 
@@ -13,7 +14,6 @@ interface PlanetProps {
   biome: any;
   weatherConditions: any;
   sector: any;
-  handleChangeCurrentSlide: (id: number) => void;
 }
 
 const Planet: React.FC<PlanetProps> = ({
@@ -22,12 +22,11 @@ const Planet: React.FC<PlanetProps> = ({
   biome,
   weatherConditions,
   sector,
-  handleChangeCurrentSlide,
 }) => {
   const [targetWeatherConditionId, setTargetWeatherConditionId] = useState(0);
 
   const handleCurrentPlanetInfoChange = () => {
-    handleChangeCurrentSlide(id);
+    slidersStore.handleCurrentSlideChange(id);
 
     planetsStore.changeCurrentPlanetInfo(id, sector);
   };

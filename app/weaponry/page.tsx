@@ -10,28 +10,24 @@ import { weaponsStore } from "@/store/WeaponsStore";
 
 import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
+import ModalSlider from "@/widgets/modalSlider/ModalSlider";
+import WeaponSection from "@/widgets/weaponSection/WeaponSection";
 
 import RunningLine from "@/shared/RunningLine";
 import TheScrollToUpButton from "@/shared/TheScrollToUpButton/TheScrollToUpButton";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 
-import Weapon from "@/entities/weaponryPage/weapon/Weapon";
 import WeaponAdditionalInfoModalWindow from "@/entities/weaponryPage/weaponAdditionalInfoModalWindow/WeaponAdditionalInfoModalWindow";
 
 import "swiper/css";
 import "swiper/css/navigation";
 
 import "./Weaponry.css";
-import WeaponSection from "@/widgets/weaponSection/WeaponSection";
 
 const Page = observer(() => {
-  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-
-  const [swiper, setSwiper] = useState(null as any);
-
-  const getTargetWeaponArray = () => {
-    switch (weaponsStore.currentWeaponInfo.weaponType?.typeNumber) {
+  const getSpecificWeaponArray = (weaponType: number) => {
+    switch (weaponType) {
       case 1:
         return weaponsStore.primaryWeapons;
       case 2:
@@ -39,14 +35,6 @@ const Page = observer(() => {
       case 3:
         return weaponsStore.grenades;
     }
-  };
-
-  const handleCurrentSlideChange = (id: number) => {
-    swiper.slideTo(id - 1);
-  };
-
-  const handleSlideChange = (swiper: any) => {
-    setCurrentSlideIndex(swiper?.activeIndex);
   };
 
   return (
@@ -77,64 +65,63 @@ const Page = observer(() => {
               }
             />
 
-            <div
-              className={`pageContentSection_Block_SliderWrapper ${weaponsStore.currentWeaponInfo.id ? "flex" : "hidden"}`}
-            >
-              <div className="pageContentSection_Block_SliderWrapper_DarkBackground"></div>
+            <ModalSlider
+              currentEntityId={weaponsStore.currentWeaponInfo.id}
+              children={getSpecificWeaponArray(
+                weaponsStore.currentWeaponInfo.weaponType?.typeNumber!,
+              )?.map((weapon) => (
+                <SwiperSlide
+                  key={weapon.id}
+                  className="pageContentSection_Block_SliderWrapper_Slider_Slide"
+                >
+                  {"magsCount" in weapon ? (
+                    <WeaponAdditionalInfoModalWindow
+                      imagePath={weapon.imagePath}
+                      name={weapon.name}
+                      description={weapon.description}
+                      price={weapon.price}
+                      damage={weapon.damage}
+                      magsCount={weapon.magsCount}
+                      roundsPerMag={weapon.roundsPerMag}
+                      totalRounds={weapon.totalRounds}
+                      recoil={weapon.recoil}
+                      fireRate={weapon.fireRate}
+                      totalDamage={weapon.totalDamage}
+                      dpm={weapon.dpm}
+                    />
+                  ) : (
+                    <WeaponAdditionalInfoModalWindow
+                      imagePath={weapon.imagePath}
+                      name={weapon.name}
+                      description={weapon.description}
+                      price={weapon.price}
+                      damage={weapon.damage}
+                      fuseTime={weapon.fuseTime}
+                      penetration={weapon.penetration}
+                      radius={weapon.radius}
+                    />
+                  )}
+                </SwiperSlide>
+              ))}
+            />
 
-              <Swiper
-                spaceBetween={150}
-                slidesPerView={1}
-                loop={true}
-                centeredSlides={false}
-                modules={[Navigation]}
-                navigation={true}
-                onSwiper={(swiper) => setSwiper(swiper)}
-                onSlideChange={handleSlideChange}
-                className="pageContentSection_Block_SliderWrapper_Slider"
-              >
-                {getTargetWeaponArray()?.map((weapon) => (
-                  <SwiperSlide
-                    key={weapon.id}
-                    className="pageContentSection_Block_SliderWrapper_Slider_Slide"
-                  >
-                    {"magsCount" in weapon ? (
-                      <WeaponAdditionalInfoModalWindow
-                        imagePath={weapon.imagePath}
-                        name={weapon.name}
-                        description={weapon.description}
-                        price={weapon.price}
-                        damage={weapon.damage}
-                        magsCount={weapon.magsCount}
-                        roundsPerMag={weapon.roundsPerMag}
-                        totalRounds={weapon.totalRounds}
-                        recoil={weapon.recoil}
-                        fireRate={weapon.fireRate}
-                        totalDamage={weapon.totalDamage}
-                        dpm={weapon.dpm}
-                      />
-                    ) : (
-                      <WeaponAdditionalInfoModalWindow
-                        imagePath={weapon.imagePath}
-                        name={weapon.name}
-                        description={weapon.description}
-                        price={weapon.price}
-                        damage={weapon.damage}
-                        fuseTime={weapon.fuseTime}
-                        penetration={weapon.penetration}
-                        radius={weapon.radius}
-                      />
-                    )}
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
+            <WeaponSection
+              title={"ОСНОВНОЕ"}
+              gridStyles={"grid-cols-3"}
+              weaponArray={getSpecificWeaponArray(1)}
+            />
 
-            <WeaponSection title={"ОСНОВНОЕ"} gridStyles={"grid-cols-3"} weaponType={1} handleCurrentSlideChange={handleCurrentSlideChange}/>
+            <WeaponSection
+              title={"ВТОРИЧНОЕ"}
+              gridStyles={"grid-cols-3"}
+              weaponArray={getSpecificWeaponArray(2)}
+            />
 
-            <WeaponSection title={"ВТОРИЧНОЕ"} gridStyles={"grid-cols-3"} weaponType={2} handleCurrentSlideChange={handleCurrentSlideChange}/>
-
-            <WeaponSection title={"ГРАНАТЫ"} gridStyles={"grid-cols-4"} weaponType={3} handleCurrentSlideChange={handleCurrentSlideChange}/>
+            <WeaponSection
+              title={"ГРАНАТЫ"}
+              gridStyles={"grid-cols-4"}
+              weaponArray={getSpecificWeaponArray(3)}
+            />
           </main>
 
           <TheFooter />

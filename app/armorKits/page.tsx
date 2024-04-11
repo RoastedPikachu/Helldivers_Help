@@ -1,15 +1,15 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 
 import { observer, Observer } from "mobx-react-lite";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { SwiperSlide } from "swiper/react";
 
 import { armorStore } from "@/store/ArmorKitsStore";
 
 import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
+import ModalSlider from "@/widgets/modalSlider/ModalSlider";
 
 import RunningLine from "@/shared/RunningLine";
 import TheScrollToUpButton from "@/shared/TheScrollToUpButton/TheScrollToUpButton";
@@ -21,14 +21,10 @@ import ArmorKitAdditionalInfoModalWindow from "@/entities/armorKitsPage/armorKit
 
 import "swiper/css";
 import "swiper/css/navigation";
+
 import "./ArmorKits.css";
 
 const Page = observer(() => {
-  const [swiper, setSwiper] = useState(null as any);
-
-  const handleChangeCurrentSlide = (id: number) => {
-    swiper.slideTo(id - 1);
-  };
   return (
     <Observer>
       {() => (
@@ -53,48 +49,34 @@ const Page = observer(() => {
 
             <section className="pageSection">
               <div className="pageSection_Block">
-                <div
-                  className={`pageContentSection_Block_SliderWrapper ${armorStore.currentArmorInfo.id ? "flex" : "hidden"}`}
-                >
-                  <div className="pageContentSection_Block_SliderWrapper_DarkBackground"></div>
-
-                  <Swiper
-                    spaceBetween={150}
-                    slidesPerView={1}
-                    loop={true}
-                    centeredSlides={false}
-                    modules={[Navigation]}
-                    navigation={true}
-                    onSwiper={(swiper) => setSwiper(swiper)}
-                    className="pageContentSection_Block_SliderWrapper_Slider"
-                  >
-                    {armorStore.armorKits
-                      .filter(
-                        (armorKit) =>
-                          armorKit.obtainingType.typeNumber ===
-                          armorStore.currentArmorInfo.obtainingType?.typeNumber,
-                      )
-                      .map((armorKit) => (
-                        <SwiperSlide
-                          key={armorKit.id}
-                          className="pageContentSection_Block_SliderWrapper_Slider_Slide"
-                        >
-                          <ArmorKitAdditionalInfoModalWindow
-                            imagePath={armorKit.imagePath}
-                            type={armorKit.type}
-                            name={armorKit.name}
-                            obtainingMethod={armorKit.obtainingMethod}
-                            description={armorKit.description}
-                            price={armorKit.price}
-                            armorRating={armorKit.armorRating}
-                            speed={armorKit.speed}
-                            staminaRegen={armorKit.staminaRegen}
-                            bonus={armorKit.bonus}
-                          />
-                        </SwiperSlide>
-                      ))}
-                  </Swiper>
-                </div>
+                <ModalSlider
+                  currentEntityId={armorStore.currentArmorInfo.id}
+                  children={armorStore.armorKits
+                    .filter(
+                      (armorKit) =>
+                        armorKit.obtainingType.typeNumber ===
+                        armorStore.currentArmorInfo.obtainingType?.typeNumber,
+                    )
+                    .map((armorKit) => (
+                      <SwiperSlide
+                        key={armorKit.id}
+                        className="pageContentSection_Block_SliderWrapper_Slider_Slide"
+                      >
+                        <ArmorKitAdditionalInfoModalWindow
+                          imagePath={armorKit.imagePath}
+                          type={armorKit.type}
+                          name={armorKit.name}
+                          obtainingMethod={armorKit.obtainingMethod}
+                          description={armorKit.description}
+                          price={armorKit.price}
+                          armorRating={armorKit.armorRating}
+                          speed={armorKit.speed}
+                          staminaRegen={armorKit.staminaRegen}
+                          bonus={armorKit.bonus}
+                        />
+                      </SwiperSlide>
+                    ))}
+                />
 
                 <h3 className="pageSection_Block_Title">ОБУЧЕНИЕ</h3>
 
@@ -110,7 +92,6 @@ const Page = observer(() => {
                         obtainingType={armorKit.obtainingType}
                         imagePath={armorKit.imagePath}
                         name={armorKit.name}
-                        handleChangeCurrentSlide={handleChangeCurrentSlide}
                       />
                     ))}
                 </div>
@@ -133,7 +114,6 @@ const Page = observer(() => {
                         obtainingType={armorKit.obtainingType}
                         imagePath={armorKit.imagePath}
                         name={armorKit.name}
-                        handleChangeCurrentSlide={handleChangeCurrentSlide}
                       />
                     ))}
                 </div>
@@ -156,7 +136,6 @@ const Page = observer(() => {
                         obtainingType={armorKit.obtainingType}
                         imagePath={armorKit.imagePath}
                         name={armorKit.name}
-                        handleChangeCurrentSlide={handleChangeCurrentSlide}
                       />
                     ))}
                 </div>
@@ -179,7 +158,6 @@ const Page = observer(() => {
                         obtainingType={armorKit.obtainingType}
                         imagePath={armorKit.imagePath}
                         name={armorKit.name}
-                        handleChangeCurrentSlide={handleChangeCurrentSlide}
                       />
                     ))}
                 </div>
@@ -200,7 +178,6 @@ const Page = observer(() => {
                         obtainingType={armorKit.obtainingType}
                         imagePath={armorKit.imagePath}
                         name={armorKit.name}
-                        handleChangeCurrentSlide={handleChangeCurrentSlide}
                       />
                     ))}
                 </div>
@@ -221,7 +198,6 @@ const Page = observer(() => {
                         obtainingType={armorKit.obtainingType}
                         imagePath={armorKit.imagePath}
                         name={armorKit.name}
-                        handleChangeCurrentSlide={handleChangeCurrentSlide}
                       />
                     ))}
                 </div>
@@ -244,7 +220,6 @@ const Page = observer(() => {
                         obtainingType={armorKit.obtainingType}
                         imagePath={armorKit.imagePath}
                         name={armorKit.name}
-                        handleChangeCurrentSlide={handleChangeCurrentSlide}
                       />
                     ))}
                 </div>
@@ -265,7 +240,6 @@ const Page = observer(() => {
                         obtainingType={armorKit.obtainingType}
                         imagePath={armorKit.imagePath}
                         name={armorKit.name}
-                        handleChangeCurrentSlide={handleChangeCurrentSlide}
                       />
                     ))}
                 </div>
