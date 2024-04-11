@@ -12,7 +12,7 @@ interface WeaponProps {
   weaponType: WeaponType;
   imagePath: string;
   name: string;
-  handleChangeCurrentSlide: (id: number) => void;
+  handleCurrentSlideChange: (id: number) => void;
 }
 
 const Weapon: React.FC<WeaponProps> = ({
@@ -20,10 +20,10 @@ const Weapon: React.FC<WeaponProps> = ({
   weaponType,
   imagePath,
   name,
-  handleChangeCurrentSlide,
+  handleCurrentSlideChange,
 }) => {
   const handleCurrentWeaponInfoChange = () => {
-    handleChangeCurrentSlide(id);
+    handleCurrentSlideChange(id);
 
     weaponsStore.changeCurrentWeaponInfo(id, weaponType);
   };

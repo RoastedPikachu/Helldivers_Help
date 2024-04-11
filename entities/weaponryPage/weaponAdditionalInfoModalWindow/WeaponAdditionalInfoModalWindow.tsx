@@ -8,6 +8,7 @@ import { weaponsStore } from "@/store/WeaponsStore";
 import Typewriter from "@/shared/Typewriter";
 
 import "./WeaponAdditionalInfoModalWindow.css";
+import "@/app/modalsSlider.css";
 
 interface WeaponAdditionalInfoModaProps {
   imagePath: string;

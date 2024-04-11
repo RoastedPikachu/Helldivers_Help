@@ -6,6 +6,18 @@
     @apply !top-[300px] !right-[65px];
 }
 
+.sliderModal {
+    @apply relative px-[20px] pt-[40px] pb-[35px] h-auto ml-[10vw] w-[80vw] max-w-[1152px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] z-30;
+}
+
+.sliderModal_CloseButton {
+    @apply absolute top-[40px] right-[40px] w-[35px] h-[35px] cursor-pointer z-30;
+}
+
+.sliderModal_CloseButton_Icon {
+    @apply w-full h-full;
+}
+
 .pageSection {
     @apply relative grid grid-cols-3 grid-rows-2 gap-y-[30px] gap-x-[30px] mt-[50px] w-full h-auto;
 }

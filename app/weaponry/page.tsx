@@ -21,7 +21,9 @@ import WeaponAdditionalInfoModalWindow from "@/entities/weaponryPage/weaponAddit
 
 import "swiper/css";
 import "swiper/css/navigation";
+
 import "./Weaponry.css";
+import WeaponSection from "@/widgets/weaponSection/WeaponSection";
 
 const Page = observer(() => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
@@ -39,7 +41,7 @@ const Page = observer(() => {
     }
   };
 
-  const handleChangeCurrentSlide = (id: number) => {
+  const handleCurrentSlideChange = (id: number) => {
     swiper.slideTo(id - 1);
   };
 
@@ -75,111 +77,64 @@ const Page = observer(() => {
               }
             />
 
-            <section className="pageSection">
-              <div className="pageSection_Block">
-                <div
-                  className={`pageContentSection_Block_SliderWrapper ${weaponsStore.currentWeaponInfo.id ? "flex" : "hidden"}`}
-                >
-                  <div className="pageContentSection_Block_SliderWrapper_DarkBackground"></div>
+            <div
+              className={`pageContentSection_Block_SliderWrapper ${weaponsStore.currentWeaponInfo.id ? "flex" : "hidden"}`}
+            >
+              <div className="pageContentSection_Block_SliderWrapper_DarkBackground"></div>
 
-                  <Swiper
-                    spaceBetween={150}
-                    slidesPerView={1}
-                    loop={true}
-                    centeredSlides={false}
-                    modules={[Navigation]}
-                    navigation={true}
-                    onSwiper={(swiper) => setSwiper(swiper)}
-                    onSlideChange={handleSlideChange}
-                    className="pageContentSection_Block_SliderWrapper_Slider"
+              <Swiper
+                spaceBetween={150}
+                slidesPerView={1}
+                loop={true}
+                centeredSlides={false}
+                modules={[Navigation]}
+                navigation={true}
+                onSwiper={(swiper) => setSwiper(swiper)}
+                onSlideChange={handleSlideChange}
+                className="pageContentSection_Block_SliderWrapper_Slider"
+              >
+                {getTargetWeaponArray()?.map((weapon) => (
+                  <SwiperSlide
+                    key={weapon.id}
+                    className="pageContentSection_Block_SliderWrapper_Slider_Slide"
                   >
-                    {getTargetWeaponArray()?.map((weapon) => (
-                      <SwiperSlide
-                        key={weapon.id}
-                        className="pageContentSection_Block_SliderWrapper_Slider_Slide"
-                      >
-                        {"magsCount" in weapon ? (
-                          <WeaponAdditionalInfoModalWindow
-                            imagePath={weapon.imagePath}
-                            name={weapon.name}
-                            description={weapon.description}
-                            price={weapon.price}
-                            damage={weapon.damage}
-                            magsCount={weapon.magsCount}
-                            roundsPerMag={weapon.roundsPerMag}
-                            totalRounds={weapon.totalRounds}
-                            recoil={weapon.recoil}
-                            fireRate={weapon.fireRate}
-                            totalDamage={weapon.totalDamage}
-                            dpm={weapon.dpm}
-                          />
-                        ) : (
-                          <WeaponAdditionalInfoModalWindow
-                            imagePath={weapon.imagePath}
-                            name={weapon.name}
-                            description={weapon.description}
-                            price={weapon.price}
-                            damage={weapon.damage}
-                            fuseTime={weapon.fuseTime}
-                            penetration={weapon.penetration}
-                            radius={weapon.radius}
-                          />
-                        )}
-                      </SwiperSlide>
-                    ))}
-                  </Swiper>
-                </div>
+                    {"magsCount" in weapon ? (
+                      <WeaponAdditionalInfoModalWindow
+                        imagePath={weapon.imagePath}
+                        name={weapon.name}
+                        description={weapon.description}
+                        price={weapon.price}
+                        damage={weapon.damage}
+                        magsCount={weapon.magsCount}
+                        roundsPerMag={weapon.roundsPerMag}
+                        totalRounds={weapon.totalRounds}
+                        recoil={weapon.recoil}
+                        fireRate={weapon.fireRate}
+                        totalDamage={weapon.totalDamage}
+                        dpm={weapon.dpm}
+                      />
+                    ) : (
+                      <WeaponAdditionalInfoModalWindow
+                        imagePath={weapon.imagePath}
+                        name={weapon.name}
+                        description={weapon.description}
+                        price={weapon.price}
+                        damage={weapon.damage}
+                        fuseTime={weapon.fuseTime}
+                        penetration={weapon.penetration}
+                        radius={weapon.radius}
+                      />
+                    )}
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
 
-                <h3 className="pageSection_Block_Title">ОСНОВНОЕ</h3>
+            <WeaponSection title={"ОСНОВНОЕ"} gridStyles={"grid-cols-3"} weaponType={1} handleCurrentSlideChange={handleCurrentSlideChange}/>
 
-                <div className="pageSection_Block_PrimaryWeaponWrapper">
-                  {weaponsStore.primaryWeapons.map((primaryWeapon) => (
-                    <Weapon
-                      key={primaryWeapon.id}
-                      id={primaryWeapon.id}
-                      weaponType={primaryWeapon.weaponType}
-                      imagePath={primaryWeapon.imagePath}
-                      name={primaryWeapon.name}
-                      handleChangeCurrentSlide={handleChangeCurrentSlide}
-                    />
-                  ))}
-                </div>
-              </div>
+            <WeaponSection title={"ВТОРИЧНОЕ"} gridStyles={"grid-cols-3"} weaponType={2} handleCurrentSlideChange={handleCurrentSlideChange}/>
 
-              <div className="pageSection_Block">
-                <h3 className="pageSection_Block_Title">ВТОРИЧНОЕ</h3>
-
-                <div className="pageSection_Block_SecondaryWeaponWrapper">
-                  {weaponsStore.secondaryWeapons.map((secondaryWeapon) => (
-                    <Weapon
-                      key={secondaryWeapon.id}
-                      id={secondaryWeapon.id}
-                      weaponType={secondaryWeapon.weaponType}
-                      imagePath={secondaryWeapon.imagePath}
-                      name={secondaryWeapon.name}
-                      handleChangeCurrentSlide={handleChangeCurrentSlide}
-                    />
-                  ))}
-                </div>
-              </div>
-
-              <div className="pageSection_Block">
-                <h3 className="pageSection_Block_Title">ГРАНАТЫ</h3>
-
-                <div className="pageSection_Block_GrenadesWrapper">
-                  {weaponsStore.grenades.map((grenade) => (
-                    <Weapon
-                      key={grenade.id}
-                      id={grenade.id}
-                      weaponType={grenade.weaponType}
-                      imagePath={grenade.imagePath}
-                      name={grenade.name}
-                      handleChangeCurrentSlide={handleChangeCurrentSlide}
-                    />
-                  ))}
-                </div>
-              </div>
-            </section>
+            <WeaponSection title={"ГРАНАТЫ"} gridStyles={"grid-cols-4"} weaponType={3} handleCurrentSlideChange={handleCurrentSlideChange}/>
           </main>
 
           <TheFooter />
