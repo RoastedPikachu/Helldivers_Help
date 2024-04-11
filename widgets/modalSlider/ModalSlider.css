@@ -1,0 +1,11 @@
+.sliderWrapper {
+    @apply fixed justify-center items-center top-0 left-0 w-screen h-screen z-30;
+}
+
+.sliderWrapper_DarkBackground {
+    @apply absolute w-screen h-screen bg-[#000000] opacity-45;
+}
+
+.sliderWrapper_Slider {
+    @apply relative flex justify-center items-center w-full h-auto z-30;
+}
