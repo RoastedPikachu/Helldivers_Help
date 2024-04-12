@@ -58,8 +58,8 @@ export const biomes: BiomesObject = {
   tundra: {
     surface: "тундра",
     description:
-      "В вечно холодном климате планеты отлично себя чувствуют только невысоки разноцветные кустарники.",
-    imagePath: "/static/Biomes/BlankImage.png",
+      "В вечно холодном климате планеты отлично себя чувствуют только невысокие разноцветные кустарники.",
+    imagePath: "/static/Biomes/TundraImage.webp",
   },
   swamp: {
     surface: "болото",

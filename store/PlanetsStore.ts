@@ -112,7 +112,7 @@ class PlanetsStore {
       id: 4,
       name: "Мидасбург",
       sector: galaxySectors.barnard,
-      biome: null,
+      biome: biomes.tundra,
       weatherConditions: [],
     },
     12: {
@@ -275,7 +275,7 @@ class PlanetsStore {
       id: 2,
       name: "Горн",
       sector: galaxySectors.korpus,
-      biome: null,
+      biome: biomes.tundra,
       weatherConditions: [],
     },
     31: {
@@ -338,7 +338,7 @@ class PlanetsStore {
       id: 3,
       name: "Дилувия",
       sector: galaxySectors.gothmar,
-      biome: null,
+      biome: biomes.tundra,
       weatherConditions: [],
     },
     39: {
@@ -505,7 +505,7 @@ class PlanetsStore {
       id: 1,
       name: "Керт II",
       sector: galaxySectors.rictus,
-      biome: null,
+      biome: biomes.tundra,
       weatherConditions: [],
     },
     59: {
@@ -549,7 +549,7 @@ class PlanetsStore {
       id: 2,
       name: "Илдуна-прайм",
       sector: galaxySectors.meridian,
-      biome: null,
+      biome: biomes.tundra,
       weatherConditions: [],
     },
     64: {
@@ -607,7 +607,7 @@ class PlanetsStore {
       id: 2,
       name: "Шелт",
       sector: galaxySectors.talus,
-      biome: null,
+      biome: biomes.tundra,
       weatherConditions: [],
     },
     70: {
@@ -978,7 +978,7 @@ class PlanetsStore {
       id: 4,
       name: "Дума тюр",
       sector: galaxySectors.nanos,
-      biome: null,
+      biome: biomes.tundra,
       weatherConditions: [],
     },
     113: {
@@ -1242,7 +1242,7 @@ class PlanetsStore {
       id: 3,
       name: "Эндар",
       sector: galaxySectors.akira,
-      biome: null,
+      biome: biomes.tundra,
       weatherConditions: [],
     },
     144: {
@@ -1296,7 +1296,7 @@ class PlanetsStore {
       id: 4,
       name: "Бунда II",
       sector: galaxySectors.tarragon,
-      biome: null,
+      biome: biomes.tundra,
       weatherConditions: [],
     },
     150: {
@@ -1374,7 +1374,7 @@ class PlanetsStore {
       id: 2,
       name: "Харон-прайм",
       sector: galaxySectors.andromeda,
-      biome: null,
+      biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
     },
     159: {
@@ -1494,7 +1494,7 @@ class PlanetsStore {
       id: 2,
       name: "Гакрукс",
       sector: galaxySectors.jinXi,
-      biome: null,
+      biome: biomes.tundra,
       weatherConditions: [],
     },
     173: {
@@ -1747,7 +1747,7 @@ class PlanetsStore {
       id: 4,
       name: "Мартале",
       sector: galaxySectors.andromeda,
-      biome: null,
+      biome: biomes.tundra,
       weatherConditions: [],
     },
     201: {
@@ -1958,7 +1958,7 @@ class PlanetsStore {
       id: 4,
       name: "Рас-альгети",
       sector: galaxySectors.leo,
-      biome: null,
+      biome: biomes.tundra,
       weatherConditions: [],
     },
     225: {
