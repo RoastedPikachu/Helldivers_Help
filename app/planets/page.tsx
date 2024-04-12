@@ -55,10 +55,7 @@ const Page = observer(() => {
             <section className="pageContentSection">
               <ModalSlider currentEntityId={planetsStore.currentPlanetInfo.id}>
                 {getTargetPlanetArray()?.map((planet) => (
-                  <SwiperSlide
-                    key={planet.id}
-                    className="pageContentSection_Block_SliderWrapper_Slider_Slide"
-                  >
+                  <SwiperSlide key={planet.id}>
                     <PlanetAdditionalInfoModalWindow
                       imagePath={planet.biome?.imagePath}
                       name={planet.name}

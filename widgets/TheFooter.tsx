@@ -14,7 +14,7 @@ const TheFooter = () => {
             target="_blank"
             className="text-[--theme-color] font-['Exo2'] font-bold"
           >
-            Чат поддержки
+            Группа сайта
           </a>
         </span>
 

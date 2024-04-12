@@ -22,6 +22,7 @@ import ArmorKitAdditionalInfoModalWindow from "@/entities/armorKitsPage/armorKit
 import "swiper/css";
 import "swiper/css/navigation";
 
+import "@/app/modalsSlider.css";
 import "./ArmorKits.css";
 
 const Page = observer(() => {
@@ -55,10 +56,7 @@ const Page = observer(() => {
                     armorStore.currentArmorInfo.obtainingType?.typeNumber,
                 )
                 .map((armorKit) => (
-                  <SwiperSlide
-                    key={armorKit.id}
-                    className="pageContentSection_Block_SliderWrapper_Slider_Slide"
-                  >
+                  <SwiperSlide key={armorKit.id}>
                     <ArmorKitAdditionalInfoModalWindow
                       imagePath={armorKit.imagePath}
                       type={armorKit.type}

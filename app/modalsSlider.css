@@ -7,7 +7,7 @@
 }
 
 .sliderModal {
-    @apply relative px-[20px] pt-[40px] pb-[35px] h-auto ml-[10vw] w-[80vw] max-w-[1152px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] z-30;
+    @apply relative px-[20px] pt-[40px] pb-[35px] h-auto w-[80vw] max-w-[1152px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] z-30;
 }
 
 .sliderModal_CloseButton {

@@ -27,7 +27,7 @@ const EnemyTypeAdditionalInfoModalWindow: React.FC<EnemyTypeAdditionalInfoModalW
       return (
         <Observer>
           {() => (
-            <div className="sliderModal">
+            <div className="sliderModal flex">
               <button
                 onClick={() => enemyTypeStore.clearCurrentEnemyType()}
                 className="sliderModal_CloseButton"

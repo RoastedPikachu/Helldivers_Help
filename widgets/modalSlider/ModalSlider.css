@@ -1,3 +1,7 @@
+.swiper-slide {
+    @apply !flex justify-center items-center;
+}
+
 .sliderWrapper {
     @apply fixed justify-center items-center top-0 left-0 w-screen h-screen z-30;
 }

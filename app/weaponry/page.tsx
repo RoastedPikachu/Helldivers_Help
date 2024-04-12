@@ -68,10 +68,7 @@ const Page = observer(() => {
               {getSpecificWeaponArray(
                 weaponsStore.currentWeaponInfo.weaponType?.typeNumber!,
               )?.map((weapon) => (
-                <SwiperSlide
-                  key={weapon.id}
-                  className="pageContentSection_Block_SliderWrapper_Slider_Slide"
-                >
+                <SwiperSlide key={weapon.id}>
                   {"magsCount" in weapon ? (
                     <WeaponAdditionalInfoModalWindow
                       imagePath={weapon.imagePath}
@@ -106,19 +103,19 @@ const Page = observer(() => {
             <WeaponSection
               title={"ОСНОВНОЕ"}
               gridStyles={"grid-cols-3"}
-              weaponArray={getSpecificWeaponArray(1)}
+              weaponArray={getSpecificWeaponArray(1)!}
             />
 
             <WeaponSection
               title={"ВТОРИЧНОЕ"}
               gridStyles={"grid-cols-3"}
-              weaponArray={getSpecificWeaponArray(2)}
+              weaponArray={getSpecificWeaponArray(2)!}
             />
 
             <WeaponSection
               title={"ГРАНАТЫ"}
               gridStyles={"grid-cols-4"}
-              weaponArray={getSpecificWeaponArray(3)}
+              weaponArray={getSpecificWeaponArray(3)!}
             />
           </main>
 

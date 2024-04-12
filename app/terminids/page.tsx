@@ -68,10 +68,7 @@ const Page = observer(() => {
             <section className="pageSection">
               <ModalSlider currentEntityId={enemyTypeStore.currentEnemyType.id}>
                 {getTargetEnemyTypeArray()?.map((enemy) => (
-                  <SwiperSlide
-                    key={enemy.id}
-                    className="pageContentSection_Block_SliderWrapper_Slider_Slide"
-                  >
+                  <SwiperSlide key={enemy.id}>
                     <EnemyTypeAdditionalInfoModalWindow
                       id={enemy.id}
                       fraction={enemy.fraction}
