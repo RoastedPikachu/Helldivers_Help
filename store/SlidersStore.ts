@@ -1,7 +1,7 @@
 import { makeAutoObservable } from "mobx";
 
 class SlidersStore {
-  swiper;
+  swiper: any;
 
   constructor() {
     makeAutoObservable(this);
