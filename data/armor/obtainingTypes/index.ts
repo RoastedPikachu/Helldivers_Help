@@ -18,19 +18,23 @@ export const obtainingType: { [key: number]: ArmorObtainingType } = {
     typeNumber: 3,
   },
   4: {
-    name: "Супермагазин",
+    name: "Боевой пропуск «Демократический подрыв»",
     typeNumber: 4,
   },
   5: {
-    name: "Предзаказ",
+    name: "Супермагазин",
     typeNumber: 5,
   },
   6: {
-    name: "Super-Citizen издание",
+    name: "Предзаказ",
     typeNumber: 6,
   },
   7: {
-    name: "Twitch drops",
+    name: "Super-Citizen издание",
     typeNumber: 7,
+  },
+  8: {
+    name: "Twitch drops",
+    typeNumber: 8,
   },
 };
