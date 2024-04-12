@@ -104,30 +104,37 @@ const Page = observer(() => {
             />
 
             <ArmorKitsSection
-              title={"СУПЕРМАГАЗИН"}
+              title={"БОЕВОЙ ПРОПУСК «ДЕМОКРАТИЧЕСКИЙ ПОДРЫВ»"}
               armorKitsArray={armorStore.armorKits.filter(
                 (armorKit) => armorKit.obtainingType.typeNumber === 4,
               )}
             />
 
             <ArmorKitsSection
-              title={"ПРЕДЗАКАЗ"}
+              title={"СУПЕРМАГАЗИН"}
               armorKitsArray={armorStore.armorKits.filter(
                 (armorKit) => armorKit.obtainingType.typeNumber === 5,
               )}
             />
 
             <ArmorKitsSection
-              title={"ИЗДАНИЕ SUPER CITIZEN"}
+              title={"ПРЕДЗАКАЗ"}
               armorKitsArray={armorStore.armorKits.filter(
                 (armorKit) => armorKit.obtainingType.typeNumber === 6,
               )}
             />
 
             <ArmorKitsSection
-              title={"TWITCH DROPS"}
+              title={"ИЗДАНИЕ SUPER CITIZEN"}
               armorKitsArray={armorStore.armorKits.filter(
                 (armorKit) => armorKit.obtainingType.typeNumber === 7,
+              )}
+            />
+
+            <ArmorKitsSection
+              title={"TWITCH DROPS"}
+              armorKitsArray={armorStore.armorKits.filter(
+                (armorKit) => armorKit.obtainingType.typeNumber === 8,
               )}
             />
           </main>
