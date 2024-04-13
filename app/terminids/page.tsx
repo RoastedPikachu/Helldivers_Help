@@ -73,6 +73,7 @@ const Page = observer(() => {
                       id={enemy.id}
                       fraction={enemy.fraction}
                       iconPath={enemy.iconPath}
+                      imageStyleScale={enemy.imageStyleScale}
                       title={enemy.title}
                       dangerous={enemy.dangerous}
                       tactics={enemy.tactics}
@@ -87,7 +88,7 @@ const Page = observer(() => {
                   key={terminid.id}
                   id={terminid.id}
                   iconPath={terminid.iconPath}
-                  rootBlockStyles={"w-[300px] h-[170px]"}
+                  imageStyleScale={terminid.imageStyleScale}
                   fraction={fractions["2"]}
                   imagePlugStyles={"mt-[15px] text-[6rem]"}
                   title={terminid.title}

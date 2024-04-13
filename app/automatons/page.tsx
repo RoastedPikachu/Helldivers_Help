@@ -76,6 +76,7 @@ const Page = observer(() => {
                       id={enemy.id}
                       fraction={enemy.fraction}
                       iconPath={enemy.iconPath}
+                      imageStyleScale={enemy.imageStyleScale}
                       title={enemy.title}
                       dangerous={enemy.dangerous}
                       tactics={enemy.tactics}
@@ -90,7 +91,7 @@ const Page = observer(() => {
                   key={automaton.id}
                   id={automaton.id}
                   iconPath={automaton.iconPath}
-                  rootBlockStyles={"w-full h-[300px]"}
+                  imageStyleScale={automaton.imageStyleScale}
                   fraction={automaton.fraction}
                   imagePlugStyles={"mt-[70px] h-[230px] text-[7rem]"}
                   title={automaton.title}

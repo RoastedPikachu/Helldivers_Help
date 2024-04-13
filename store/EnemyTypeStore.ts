@@ -9,8 +9,8 @@ class EnemyTypeStore {
   terminids = [
     {
       id: 1,
-      iconPath: "",
-      imagePath: "",
+      iconPath: "/static/Terminids/ScavengerImage.webp",
+      imageStyleScale: "scaleY(0.6)",
       fraction: fractions["2"],
       dangerous:
         "Очень быстро двигаются, также могут призывать своих сородичей, что и является основной целью их бренной жизни. В основном являются не угрозой, а раздражителем.",
@@ -21,8 +21,8 @@ class EnemyTypeStore {
     },
     {
       id: 2,
-      iconPath: "/static/Terminids/BileSpitterImage.png",
-      imagePath: "",
+      iconPath: "/static/Terminids/BileSpitterImage.webp",
+      imageStyleScale: "scaleX(2.25)",
       fraction: fractions["2"],
       dangerous:
         "Может выстрелить кислотой на небольшом расстоянии и в большом количестве является хоть и не грозным, но неприятным противником.",
@@ -33,8 +33,8 @@ class EnemyTypeStore {
     },
     {
       id: 3,
-      iconPath: "/static/Terminids/ShriekerImage.png",
-      imagePath: "",
+      iconPath: "/static/Terminids/ShriekerImage.webp",
+      imageStyleScale: "scaleY(0.8) scaleX(1.5)",
       fraction: fractions["2"],
       dangerous:
         "Быстро передвигается в воздухе и атакует парами. Один удар может вас убить, так как приоритетной целью является голова.",
@@ -45,8 +45,8 @@ class EnemyTypeStore {
     },
     {
       id: 4,
-      iconPath: "",
-      imagePath: "",
+      iconPath: "/static/Terminids/PouncerImage.webp",
+      imageStyleScale: "scaleX(2)",
       fraction: fractions["2"],
       dangerous: "",
       tactics: "",
@@ -55,8 +55,8 @@ class EnemyTypeStore {
     },
     {
       id: 5,
-      iconPath: "/static/Terminids/HunterImage.png",
-      imagePath: "",
+      iconPath: "/static/Terminids/HunterImage.webp",
+      imageStyleScale: "scaleX(3)",
       fraction: fractions["2"],
       dangerous:
         "Передвигается в составе организованных групп, очень проворный, может быстро сокращать дистанцию. Удар замедляет и может снести до четверти от всего здоровья.",
@@ -67,8 +67,8 @@ class EnemyTypeStore {
     },
     {
       id: 6,
-      iconPath: "/static/Terminids/WarriorImage.png",
-      imagePath: "",
+      iconPath: "/static/Terminids/WarriorImage.webp",
+      imageStyleScale: "scaleX(2.5)",
       fraction: fractions["2"],
       dangerous:
         "Самый обыкновенный противник, также может позвать своих сородичей отделать вашу свободолюбивую задницу. Единственная опасность, которую он представляет — замедление в продвижении управляемой демократии по всей галактике.",
@@ -79,8 +79,8 @@ class EnemyTypeStore {
     },
     {
       id: 7,
-      iconPath: "",
-      imagePath: "",
+      iconPath: "/static/Terminids/HiveGuardImage.webp",
+      imageStyleScale: "scaleY(0.8) scaleX(1.25)",
       fraction: fractions["2"],
       dangerous: "",
       tactics: "",
@@ -89,8 +89,8 @@ class EnemyTypeStore {
     },
     {
       id: 8,
-      iconPath: "/static/Terminids/StalkerImage.png",
-      imagePath: "",
+      iconPath: "/static/Terminids/StalkerImage.webp",
+      imageStyleScale: "scaleX(2.5)",
       fraction: fractions["2"],
       dangerous:
         "Невидим, быстро двигается, имеет схожие атаки с обычными охотниками. Также может использовать свой язык, чтобы атаковать вас с небольшого расстояния. Намного опаснее группы охотников, так как может подкрасться к вам в разгар боя и проредить вашу команду.",
@@ -101,8 +101,8 @@ class EnemyTypeStore {
     },
     {
       id: 9,
-      iconPath: "/static/Terminids/BroodCommanderImage.png",
-      imagePath: "",
+      iconPath: "/static/Terminids/BroodCommanderImage.webp",
+      imageStyleScale: "scaleX(2.5)",
       fraction: fractions["2"],
       dangerous:
         "Довольно неплохо защищен броней, а также передвигается в составе своего роя. Помимо этого может вас контузить своим резким тараном.",
@@ -113,8 +113,8 @@ class EnemyTypeStore {
     },
     {
       id: 10,
-      iconPath: "/static/Terminids/BileSpewerImage.png",
-      imagePath: "",
+      iconPath: "/static/Terminids/BileSpewerImage.webp",
+      imageStyleScale: "scaleX(2.25)",
       fraction: fractions["2"],
       dangerous:
         "Его желчный снаряд или плевок желчью убивает вас, не давая шанса спастись. Также, если вы атаковали его брюхо — взрывается после смерти, нанося урон всем в округе.",
@@ -125,8 +125,8 @@ class EnemyTypeStore {
     },
     {
       id: 11,
-      iconPath: "/static/Terminids/ChargerImage.png",
-      imagePath: "",
+      iconPath: "/static/Terminids/ChargerImage.webp",
+      imageStyleScale: "scaleX(2.5)",
       fraction: fractions["2"],
       dangerous:
         "Его вожделенная мечта и цель — растоптать ваше героическое тело. Основная угроза исходит от его разбегов, но даже если при успешном уклонении, он может совершить боковой удар, который вас откинет.",
@@ -137,8 +137,8 @@ class EnemyTypeStore {
     },
     {
       id: 12,
-      iconPath: "/static/Terminids/BileTitanImage.png",
-      imagePath: "",
+      iconPath: "/static/Terminids/BileTitanImage.webp",
+      imageStyleScale: "scaleX(2.5)",
       fraction: fractions["2"],
       dangerous:
         "Это апогей эволюции терминидов. Этот ужасный, очень быстрый и бронированный монстр может стереть вас с лица планеты своим потоком желчи или просто растоптать вас своими конечностями.",
@@ -153,8 +153,8 @@ class EnemyTypeStore {
   automatons = [
     {
       id: 1,
-      iconPath: "/static/Automatons/TrooperImage.png",
-      imagePath: "",
+      iconPath: "/static/Automatons/TrooperImage.webp",
+      imageStyleScale: "scaleX(3.5)",
       fraction: fractions["3"],
       dangerous:
         "В зависимости от своей разновидности, может либо быстро подобраться к вам с помощью реактивного ранца, или же просто убить вас с 1 выстрела, если вооружен ракетницей. Также может кинуть в вас гранату или занять турель, с которой будет вести огонь по вам.",
@@ -165,8 +165,8 @@ class EnemyTypeStore {
     },
     {
       id: 2,
-      iconPath: "/static/Automatons/ComissarImage.png",
-      imagePath: "",
+      iconPath: "/static/Automatons/ComissarImage.webp",
+      imageStyleScale: "scaleX(3.5)",
       fraction: fractions["3"],
       dangerous: "Быстро сближается и атакует своим клинком.",
       tactics:
@@ -176,8 +176,8 @@ class EnemyTypeStore {
     },
     {
       id: 3,
-      iconPath: "/static/Automatons/BerserkerImage.png",
-      imagePath: "",
+      iconPath: "/static/Automatons/BerserkerImage.webp",
+      imageStyleScale: "scaleY(1.2) scaleX(3.5)",
       fraction: fractions["3"],
       dangerous:
         "Вооружен бензопилами и старается как можно быстрее сократить до вас дистанцию. Очень быстрый, также любит группироваться с такими же, как он.",
@@ -188,8 +188,8 @@ class EnemyTypeStore {
     },
     {
       id: 4,
-      iconPath: "/static/Automatons/ScoutStriderImage.png",
-      imagePath: "",
+      iconPath: "/static/Automatons/ScoutStriderImage.webp",
+      imageStyleScale: "scaleX(3)",
       fraction: fractions["3"],
       dangerous:
         "Защищен броней, вооружен турелью и довольно быстр, на своем шагоходе",
@@ -200,8 +200,8 @@ class EnemyTypeStore {
     },
     {
       id: 5,
-      iconPath: "/static/Automatons/DevastatorImage.png",
-      imagePath: "",
+      iconPath: "/static/Automatons/DevastatorImage.webp",
+      imageStyleScale: "scaleX(3)",
       fraction: fractions["3"],
       dangerous:
         "Имеет огромную защиту, также в зависимости от варианта, может быть вооружен ракетницами, либо лазером и щитом.",
@@ -212,8 +212,8 @@ class EnemyTypeStore {
     },
     {
       id: 6,
-      iconPath: "/static/Automatons/HulkImage.png",
-      imagePath: "",
+      iconPath: "/static/Automatons/HulkImage.webp",
+      imageStyleScale: "scaleX(3)",
       fraction: fractions["3"],
       dangerous:
         "Существует 3 варианта вооружения: скорострельное ружье, огнемет или гранатомет. Также полностью покрыт броней. ",
@@ -224,8 +224,8 @@ class EnemyTypeStore {
     },
     {
       id: 7,
-      iconPath: "/static/Automatons/TankImage.png",
-      imagePath: "",
+      iconPath: "/static/Automatons/TankImage.webp",
+      imageStyleScale: "scaleX(2.5)",
       fraction: fractions["3"],
       dangerous:
         "Несмотря на свою крайнюю медлительность, очень смертоносен. Любое попадание из его пушки не дает вам шанса на выживание.",
@@ -236,8 +236,20 @@ class EnemyTypeStore {
     },
     {
       id: 8,
-      iconPath: "/static/Automatons/DropshipImage.png",
-      imagePath: "",
+      iconPath: "/static/Automatons/FactoryStriderImage.webp",
+      imageStyleScale: "scaleY(0.8) scaleX(3)",
+      fraction: fractions["3"],
+      dangerous:
+        "Несмотря на свою крайнюю медлительность, очень смертоносен. Любое попадание из его пушки не дает вам шанса на выживание.",
+      tactics:
+        "Используйте кого-нибудь из команды в качестве приманки, а сами переключите огонь на вентиляционное отверстие сзади башни. Альтернативой может быть вызов мощной стратагемы.",
+      difficulties: "Встречается, начиная с 5 сложности.",
+      title: "Заводской шатун",
+    },
+    {
+      id: 9,
+      iconPath: "/static/Automatons/DropshipImage.webp",
+      imageStyleScale: "scaleX(2)",
       fraction: fractions["3"],
       dangerous:
         "Опасности не представляет, но может сбросить большое количество новых автоматонов, которые будут мешать вам выполнять задачу.",
@@ -247,16 +259,16 @@ class EnemyTypeStore {
       title: "Десантный корабль",
     },
     {
-      id: 9,
-      iconPath: "",
-      imagePath: "",
+      id: 10,
+      iconPath: "/static/Automatons/GunshipImage.webp",
+      imageStyleScale: "scaleY(0.75) scaleX(2.25)",
       fraction: fractions["3"],
       dangerous:
         "Фактически это стационарный танк со всеми присущими ему чертами.",
       tactics:
         "Можете подойди в упор и стрелять в вентиляционное отверстие или же просто вызвать авиаудар. Главное не попадайте под ее линию огня, потому что даже 1 выстрел прекратит ваше существование.",
       difficulties: "Встречается, начиная с 3 сложности.",
-      title: "Сторожевая башня",
+      title: "Боевой корабль",
     },
   ] as Enemy[];
 
