@@ -7,7 +7,10 @@ import { fractions } from "@/data/fractions";
 
 import { enemyTypeStore } from "@/store/EnemyTypeStore";
 
-import { getSpecificAutomatonImageScale } from "@/utils/generalFunctions";
+import {
+  getSpecificAutomatonStyle,
+  getSpecificTerminidStyle,
+} from "@/utils/enemyTypeFunctions";
 
 import "./EnemyTypeAdditionalInfoModalWindow.css";
 
@@ -15,6 +18,7 @@ interface EnemyTypeAdditionalInfoModalWindowProps {
   id: number;
   fraction: string;
   iconPath: string;
+  imageStyleScale: string;
   title: string;
   dangerous: string;
   tactics: string;
@@ -23,7 +27,16 @@ interface EnemyTypeAdditionalInfoModalWindowProps {
 
 const EnemyTypeAdditionalInfoModalWindow: React.FC<EnemyTypeAdditionalInfoModalWindowProps> =
   observer(
-    ({ id, fraction, iconPath, title, dangerous, tactics, difficulties }) => {
+    ({
+      id,
+      fraction,
+      iconPath,
+      imageStyleScale,
+      title,
+      dangerous,
+      tactics,
+      difficulties,
+    }) => {
       return (
         <Observer>
           {() => (
@@ -40,13 +53,14 @@ const EnemyTypeAdditionalInfoModalWindow: React.FC<EnemyTypeAdditionalInfoModalW
               </button>
 
               <div
-                className={`sliderModal_Left ${fraction === fractions["2"] ? "bg-[url('/static/Terminids/TerminidsBackgroundImage.png')]" : "bg-[url('/static/Automatons/AutomatonsBackgroundImage.png')]"}`}
+                className={`sliderModal_Left overflow-hidden ${fraction === fractions["2"] ? "bg-[url('/static/Terminids/TerminidsBackgroundImage.webp')]" : "bg-[url('/static/Automatons/AutomatonsBackgroundImage.webp')]"}`}
               >
                 {iconPath ? (
                   <img
                     src={iconPath}
                     alt=""
-                    className={`${getSpecificAutomatonImageScale(fraction, id)}`}
+                    style={{ transform: imageStyleScale }}
+                    className={`w-[200px] h-[300px] ${fraction === "Автоматоны" ? getSpecificAutomatonStyle(id) : getSpecificTerminidStyle(id)}`}
                   />
                 ) : (
                   <p className="sliderModal_Left_BlankText">?</p>

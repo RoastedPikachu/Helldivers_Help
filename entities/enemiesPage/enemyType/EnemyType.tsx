@@ -4,14 +4,17 @@ import React from "react";
 import { enemyTypeStore } from "@/store/EnemyTypeStore";
 import { slidersStore } from "@/store/SlidersStore";
 
-import { getSpecificAutomatonImageScale } from "@/utils/generalFunctions";
+import {
+  getSpecificAutomatonStyle,
+  getSpecificTerminidStyle,
+} from "@/utils/enemyTypeFunctions";
 
 import "./EnemyType.css";
 
 interface EnemyTypeProps {
   id: number;
   iconPath: string;
-  rootBlockStyles: string;
+  imageStyleScale: string;
   fraction: string;
   imagePlugStyles: string;
   title: string;
@@ -20,7 +23,7 @@ interface EnemyTypeProps {
 const EnemyType: React.FC<EnemyTypeProps> = ({
   id,
   iconPath,
-  rootBlockStyles,
+  imageStyleScale,
   imagePlugStyles,
   fraction,
   title,
@@ -39,7 +42,8 @@ const EnemyType: React.FC<EnemyTypeProps> = ({
         <img
           src={`${iconPath}`}
           alt=""
-          className={`${rootBlockStyles} ${getSpecificAutomatonImageScale(fraction, id)}`}
+          style={{ transform: imageStyleScale }}
+          className={`w-[200px] h-[300px] ${fraction === "Автоматоны" ? getSpecificAutomatonStyle(id) : getSpecificTerminidStyle(id)}`}
         />
       ) : (
         <p
