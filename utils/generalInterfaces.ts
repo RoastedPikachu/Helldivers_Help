@@ -59,7 +59,7 @@ export interface Stratagem {
 export interface Enemy {
   id: number;
   iconPath: string;
-  imagePath: string;
+  imageStyleScale: string;
   fraction: string;
   dangerous: string;
   tactics: string;
