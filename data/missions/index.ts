@@ -75,6 +75,14 @@ export const generalMissions = [
     description: "Подготовьте и запустите баллистические ракеты.",
     level: "3-9",
   },
+  {
+    id: 10,
+    imagePath: "/static/Missions/EvacuateHighValueIcon.svg",
+    title: "Эвакуируйте приоритетные материалы",
+    description:
+      "Начните эвакуацию с поверхности планеты крайне ценных материалов и обороняйте площадку до ее завершения.",
+    level: "3-9",
+  },
 ] as Mission[];
 
 export const terminidMissions = [
