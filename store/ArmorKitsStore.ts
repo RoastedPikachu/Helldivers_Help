@@ -167,11 +167,11 @@ class ArmorKitsStore {
       id: 7,
       imagePath: "/static/ArmorKits/Cm17ButcherImage.webp",
       type: "Тяжелая броня",
-      name: "CM-14 «Мясник»",
+      name: "CM-17 «Мясник»",
       obtainingType: obtainingType["5"],
       obtainingMethod: "Покупается в Супермагазине",
       description:
-        "Броня, которую часто носят фронтовые хирурги, умеющие как собирать тела воедино, так и разбирать их на части.",
+        "Броня популярна у фронтовых хирургов, которые как искусно собирают тела, так и разбирают их по кусочкам.",
       price: 375,
       armorRating: 150,
       speed: 450,

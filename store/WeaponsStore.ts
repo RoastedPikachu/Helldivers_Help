@@ -102,10 +102,10 @@ class WeaponsStore {
       id: 6,
       imagePath: "/static/Weaponry/primary/Br14Image.webp",
       weaponType: weaponTypes.primary,
-      name: "BR-14 «Арбитр»",
+      name: "BR-14 «Эксперт»",
       description:
         "Точная, бронебойная винтовка BR-14 Adjudicator выносит справедливые приговоры врагам среднего размера, хотя ограниченный магазин ограничивает ее эффективность против больших групп.",
-      price: 0,
+      price: 20,
       damage: 80,
       magsCount: 0,
       roundsPerMag: 15,
@@ -275,7 +275,7 @@ class WeaponsStore {
       name: "CB-9 «Взрывной арбалет»",
       description:
         "Стреляет мощными взрывающимися зарядами, которые наносят максимальный урон при прямом попадании. При прицеливании необходимо учитывать силу тяжести.",
-      price: 0,
+      price: 80,
       damage: 150,
       magsCount: 0,
       roundsPerMag: 5,
@@ -292,7 +292,7 @@ class WeaponsStore {
       name: "R-36 «Извергатель»",
       description:
         "Стреляет мощными взрывающимися зарядами, которые наносят максимальный урон при прямом попадании. При прицеливании необходимо учитывать силу тяжести.",
-      price: 0,
+      price: 60,
       damage: 230,
       magsCount: 0,
       roundsPerMag: 5,
@@ -445,7 +445,7 @@ class WeaponsStore {
       id: 5,
       imagePath: "/static/Weaponry/secondary/Gp31Image.webp",
       weaponType: weaponTypes.secondary,
-      name: "GP-31 «Гранатный пистолет»",
+      name: "GP-31 «Пистолет-гранатомет»",
       description:
         "Пистолет, стреляющий гранатами. Его необходимо перезаряжать между выстрелами.",
       price: 0,

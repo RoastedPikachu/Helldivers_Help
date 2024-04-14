@@ -15,7 +15,7 @@ import { stratagemTypes } from "@/data/stratagemTypes";
 */
 
 class StratagemStore {
-  isStratagemTrainingStarted = false;
+  // isStratagemTrainingStarted = false;
   isStratagemInputFail = false;
   isStratagemInputSuccessful = false;
 
