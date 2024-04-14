@@ -2242,6 +2242,8 @@ class StratagemStore {
           },
         ],
       },
+    ],
+    general: [
       {
         id: 1,
         iconPath: "/static/Stratagems/ReinforceIcon.png",
