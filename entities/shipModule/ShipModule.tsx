@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -31,6 +31,7 @@ const ShipModule: React.FC<ShipModuleProps> = ({
   improvementAffectedStratagems,
 }) => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  const [currentSlideStratagems, setCurrentSlideStratagems] = useState([]);
 
   const [isAdditionalInfoOpened, changeIsAdditionalInfoOpened] =
     useState(false);
@@ -38,17 +39,31 @@ const ShipModule: React.FC<ShipModuleProps> = ({
   const getStratagems = () => {
     switch (currentSlideIndex) {
       case 0:
-        return improvementAffectedStratagems.firstLevel;
+        setCurrentSlideStratagems(improvementAffectedStratagems.firstLevel);
+        break;
       case 1:
-        return improvementAffectedStratagems.secondLevel;
+        setCurrentSlideStratagems(improvementAffectedStratagems.secondLevel);
+        break;
       case 2:
-        return improvementAffectedStratagems.thirdLevel;
+        setCurrentSlideStratagems(improvementAffectedStratagems.thirdLevel);
+        break;
+      case 3:
+        setCurrentSlideStratagems(improvementAffectedStratagems.fourthLevel);
+        break;
     }
   };
 
   const handleSlideChange = (swiper: any) => {
     setCurrentSlideIndex(swiper?.activeIndex);
   };
+
+  useEffect(() => {
+    getStratagems();
+  }, [currentSlideIndex]);
+
+  useEffect(() => {
+    getStratagems();
+  }, []);
   return (
     <div className="rootShipModuleBlock">
       <div
@@ -92,6 +107,10 @@ const ShipModule: React.FC<ShipModuleProps> = ({
 
             <SwiperSlide>
               <img src={`${levelImages[2]}`} alt="" className="slideImage" />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <img src={`${levelImages[3]}`} alt="" className="slideImage" />
             </SwiperSlide>
           </Swiper>
 
@@ -187,9 +206,9 @@ const ShipModule: React.FC<ShipModuleProps> = ({
             </p>
 
             <div className="rootShipModuleBlock_Bottom_RightBlock_StratagemsBlock">
-              {getStratagems().map((stratagem: Stratagem) => (
+              {currentSlideStratagems.map((stratagem: Stratagem, index) => (
                 <ShipModuleStratagem
-                  key={stratagem.id}
+                  key={index + 1}
                   iconPath={stratagem.iconPath}
                   name={stratagem.name}
                 />
