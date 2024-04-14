@@ -1,4 +1,4 @@
-import { Stratagem } from "@/utils/generalInterfaces";
+// import { Stratagem } from "@/utils/generalInterfaces";
 
 interface Biome {
   surface: string;
@@ -40,7 +40,7 @@ export interface ShipModule {
   improvementTitles: string[];
   improvementDescriptions: string[];
   improvementEffects: string[];
-  improvementPrices: any;
+  improvementPrices: any[];
   improvementAffectedStratagems: any;
 }
 
