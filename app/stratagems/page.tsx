@@ -50,9 +50,8 @@ const Page = () => {
             <h3 className="pageSection_Block_Title">ОРУЖИЕ ПОДДЕРЖКИ</h3>
 
             <div className="pageSection_Block_Wrapper">
-              {stratagemStore.stratagems
-                .filter((stratagem) => stratagem.type.typeNumber === 0)
-                .map((stratagem) => (
+              {stratagemStore.stratagems.patrioticAdministrationCenter.map(
+                (stratagem) => (
                   <Stratagem
                     key={stratagem.id}
                     iconPath={stratagem.iconPath}
@@ -67,7 +66,8 @@ const Page = () => {
                     reloadTime={stratagem.reloadTime}
                     directions={stratagem.directions}
                   />
-                ))}
+                ),
+              )}
             </div>
           </div>
 
@@ -75,24 +75,22 @@ const Page = () => {
             <h3 className="pageSection_Block_Title">ОРБИТАЛЬНЫЕ</h3>
 
             <div className="pageSection_Block_Wrapper">
-              {stratagemStore.stratagems
-                .filter((stratagem) => stratagem.type.typeNumber === 1)
-                .map((stratagem) => (
-                  <Stratagem
-                    key={stratagem.id}
-                    iconPath={stratagem.iconPath}
-                    videoPath={stratagem.videoPath}
-                    videoPreviewPath={stratagem.videoPreviewPath}
-                    name={stratagem.name}
-                    description={stratagem.description}
-                    price={stratagem.price}
-                    obtainingLevel={stratagem.obtainingLevel}
-                    callTime={stratagem.callTime}
-                    useCount={stratagem.useCount}
-                    reloadTime={stratagem.reloadTime}
-                    directions={stratagem.directions}
-                  />
-                ))}
+              {stratagemStore.stratagems.orbitalCannon.map((stratagem) => (
+                <Stratagem
+                  key={stratagem.id}
+                  iconPath={stratagem.iconPath}
+                  videoPath={stratagem.videoPath}
+                  videoPreviewPath={stratagem.videoPreviewPath}
+                  name={stratagem.name}
+                  description={stratagem.description}
+                  price={stratagem.price}
+                  obtainingLevel={stratagem.obtainingLevel}
+                  callTime={stratagem.callTime}
+                  useCount={stratagem.useCount}
+                  reloadTime={stratagem.reloadTime}
+                  directions={stratagem.directions}
+                />
+              ))}
             </div>
           </div>
 
@@ -100,24 +98,22 @@ const Page = () => {
             <h3 className="pageSection_Block_Title">АНГАР</h3>
 
             <div className="pageSection_Block_Wrapper">
-              {stratagemStore.stratagems
-                .filter((stratagem) => stratagem.type.typeNumber === 2)
-                .map((stratagem) => (
-                  <Stratagem
-                    key={stratagem.id}
-                    iconPath={stratagem.iconPath}
-                    videoPath={stratagem.videoPath}
-                    videoPreviewPath={stratagem.videoPreviewPath}
-                    name={stratagem.name}
-                    description={stratagem.description}
-                    price={stratagem.price}
-                    obtainingLevel={stratagem.obtainingLevel}
-                    callTime={stratagem.callTime}
-                    useCount={stratagem.useCount}
-                    reloadTime={stratagem.reloadTime}
-                    directions={stratagem.directions}
-                  />
-                ))}
+              {stratagemStore.stratagems.hangar.map((stratagem) => (
+                <Stratagem
+                  key={stratagem.id}
+                  iconPath={stratagem.iconPath}
+                  videoPath={stratagem.videoPath}
+                  videoPreviewPath={stratagem.videoPreviewPath}
+                  name={stratagem.name}
+                  description={stratagem.description}
+                  price={stratagem.price}
+                  obtainingLevel={stratagem.obtainingLevel}
+                  callTime={stratagem.callTime}
+                  useCount={stratagem.useCount}
+                  reloadTime={stratagem.reloadTime}
+                  directions={stratagem.directions}
+                />
+              ))}
             </div>
           </div>
 
@@ -125,24 +121,22 @@ const Page = () => {
             <h3 className="pageSection_Block_Title">КАПИТАНСКИЙ МОСТИК</h3>
 
             <div className="pageSection_Block_Wrapper">
-              {stratagemStore.stratagems
-                .filter((stratagem) => stratagem.type.typeNumber === 3)
-                .map((stratagem) => (
-                  <Stratagem
-                    key={stratagem.id}
-                    iconPath={stratagem.iconPath}
-                    videoPath={stratagem.videoPath}
-                    videoPreviewPath={stratagem.videoPreviewPath}
-                    name={stratagem.name}
-                    description={stratagem.description}
-                    price={stratagem.price}
-                    obtainingLevel={stratagem.obtainingLevel}
-                    callTime={stratagem.callTime}
-                    useCount={stratagem.useCount}
-                    reloadTime={stratagem.reloadTime}
-                    directions={stratagem.directions}
-                  />
-                ))}
+              {stratagemStore.stratagems.bridge.map((stratagem) => (
+                <Stratagem
+                  key={stratagem.id}
+                  iconPath={stratagem.iconPath}
+                  videoPath={stratagem.videoPath}
+                  videoPreviewPath={stratagem.videoPreviewPath}
+                  name={stratagem.name}
+                  description={stratagem.description}
+                  price={stratagem.price}
+                  obtainingLevel={stratagem.obtainingLevel}
+                  callTime={stratagem.callTime}
+                  useCount={stratagem.useCount}
+                  reloadTime={stratagem.reloadTime}
+                  directions={stratagem.directions}
+                />
+              ))}
             </div>
           </div>
 
@@ -150,24 +144,22 @@ const Page = () => {
             <h3 className="pageSection_Block_Title">ИНЖЕНЕРНЫЙ ОТСЕК</h3>
 
             <div className="pageSection_Block_Wrapper">
-              {stratagemStore.stratagems
-                .filter((stratagem) => stratagem.type.typeNumber === 4)
-                .map((stratagem) => (
-                  <Stratagem
-                    key={stratagem.id}
-                    iconPath={stratagem.iconPath}
-                    videoPath={stratagem.videoPath}
-                    videoPreviewPath={stratagem.videoPreviewPath}
-                    name={stratagem.name}
-                    description={stratagem.description}
-                    price={stratagem.price}
-                    obtainingLevel={stratagem.obtainingLevel}
-                    callTime={stratagem.callTime}
-                    useCount={stratagem.useCount}
-                    reloadTime={stratagem.reloadTime}
-                    directions={stratagem.directions}
-                  />
-                ))}
+              {stratagemStore.stratagems.engineerBay.map((stratagem) => (
+                <Stratagem
+                  key={stratagem.id}
+                  iconPath={stratagem.iconPath}
+                  videoPath={stratagem.videoPath}
+                  videoPreviewPath={stratagem.videoPreviewPath}
+                  name={stratagem.name}
+                  description={stratagem.description}
+                  price={stratagem.price}
+                  obtainingLevel={stratagem.obtainingLevel}
+                  callTime={stratagem.callTime}
+                  useCount={stratagem.useCount}
+                  reloadTime={stratagem.reloadTime}
+                  directions={stratagem.directions}
+                />
+              ))}
             </div>
           </div>
 
@@ -175,24 +167,22 @@ const Page = () => {
             <h3 className="pageSection_Block_Title">МАСТЕРСКАЯ РОБОТОВ</h3>
 
             <div className="pageSection_Block_Wrapper">
-              {stratagemStore.stratagems
-                .filter((stratagem) => stratagem.type.typeNumber === 5)
-                .map((stratagem) => (
-                  <Stratagem
-                    key={stratagem.id}
-                    iconPath={stratagem.iconPath}
-                    videoPath={stratagem.videoPath}
-                    videoPreviewPath={stratagem.videoPreviewPath}
-                    name={stratagem.name}
-                    description={stratagem.description}
-                    price={stratagem.price}
-                    obtainingLevel={stratagem.obtainingLevel}
-                    callTime={stratagem.callTime}
-                    useCount={stratagem.useCount}
-                    reloadTime={stratagem.reloadTime}
-                    directions={stratagem.directions}
-                  />
-                ))}
+              {stratagemStore.stratagems.roboticsWorkshop.map((stratagem) => (
+                <Stratagem
+                  key={stratagem.id}
+                  iconPath={stratagem.iconPath}
+                  videoPath={stratagem.videoPath}
+                  videoPreviewPath={stratagem.videoPreviewPath}
+                  name={stratagem.name}
+                  description={stratagem.description}
+                  price={stratagem.price}
+                  obtainingLevel={stratagem.obtainingLevel}
+                  callTime={stratagem.callTime}
+                  useCount={stratagem.useCount}
+                  reloadTime={stratagem.reloadTime}
+                  directions={stratagem.directions}
+                />
+              ))}
             </div>
           </div>
 
@@ -200,24 +190,15 @@ const Page = () => {
             <h3 className="pageSection_Block_Title">ОБЩИЕ</h3>
 
             <div className="pageSection_Block_Wrapper">
-              {stratagemStore.stratagems
-                .filter((stratagem) => stratagem.type.typeNumber === 6)
-                .map((stratagem) => (
-                  <Stratagem
-                    key={stratagem.id}
-                    iconPath={stratagem.iconPath}
-                    videoPath={stratagem.videoPath}
-                    videoPreviewPath={stratagem.videoPreviewPath}
-                    name={stratagem.name}
-                    description={stratagem.description}
-                    price={stratagem.price}
-                    obtainingLevel={stratagem.obtainingLevel}
-                    callTime={stratagem.callTime}
-                    useCount={stratagem.useCount}
-                    reloadTime={stratagem.reloadTime}
-                    directions={stratagem.directions}
-                  />
-                ))}
+              {stratagemStore.stratagems.general.map((stratagem) => (
+                <Stratagem
+                  key={stratagem.id}
+                  iconPath={stratagem.iconPath}
+                  name={stratagem.name}
+                  description={stratagem.description}
+                  directions={stratagem.directions}
+                />
+              ))}
             </div>
           </div>
         </section>

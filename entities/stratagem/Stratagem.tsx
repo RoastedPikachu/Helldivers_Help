@@ -8,15 +8,15 @@ import LoadingSpinner from "@/shared/LoadingSpinner/LoadingSpinner";
 
 interface StratagemProps {
   iconPath: string;
-  videoPath: string | undefined;
-  videoPreviewPath: string | undefined;
+  videoPath?: string | undefined;
+  videoPreviewPath?: string | undefined;
   name: string;
   description: string;
-  price: number | undefined;
-  obtainingLevel: number | undefined;
-  callTime: number | undefined;
-  useCount: number | undefined;
-  reloadTime: number | undefined;
+  price?: number | undefined;
+  obtainingLevel?: number | undefined;
+  callTime?: number | undefined;
+  useCount?: number | undefined;
+  reloadTime?: number | undefined;
   directions: Direction[];
 }
 
