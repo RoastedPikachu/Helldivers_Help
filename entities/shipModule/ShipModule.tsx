@@ -182,6 +182,20 @@ const ShipModule: React.FC<ShipModuleProps> = ({
                   />
                 </div>
               )}
+
+              {improvementPrices[currentSlideIndex].requisites && (
+                <div className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block">
+                  <p className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block_Text">
+                    {improvementPrices[currentSlideIndex].requisites}
+                  </p>
+
+                  <img
+                    src="/static/Resources/RequisitesIcon.svg"
+                    alt=""
+                    className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block_Image"
+                  />
+                </div>
+              )}
             </div>
           </div>
         </div>

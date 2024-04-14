@@ -143,7 +143,7 @@ export const ranks = [
   },
   {
     id: 21,
-    iconPath: "",
+    iconPath: "/static/Ranks/SuperPrivateIcon.svg",
     title: "Супер рядовой",
     fromLevel: 150,
     xpCount: 1148400,
