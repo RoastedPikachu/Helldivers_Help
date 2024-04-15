@@ -33,7 +33,7 @@ export interface PrimaryOrSecondaryWeapon extends Weapon {
   recoil: number;
   fireRate: number;
   totalDamage: number;
-  dpm: number;
+  dps: number;
 }
 
 export interface Grenade extends Weapon {
