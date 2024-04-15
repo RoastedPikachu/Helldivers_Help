@@ -1,11 +1,11 @@
 import React from "react";
 
-import SectionTitle from "@/shared/sectionTitle/SectionTitle";
+import SectionTitle from "@/shared/SectionTitle/SectionTitle";
 
 import "@/app/pageSections.css";
 
 interface EntitySectionProps {
-  title: string;
+  title?: string;
   gridStyles: string;
   children: any;
 }
@@ -16,12 +16,18 @@ const EntitySection: React.FC<EntitySectionProps> = ({
   children,
 }) => {
   return (
-    <section>
-      <SectionTitle text={title} />
+    <section className={`${title ? "" : `pageGridSection ${gridStyles}`}`}>
+      {title ? (
+        <>
+          <SectionTitle text={title} />
 
-      <div className={`pageSectionContentWrapper ${gridStyles}`}>
-        {children}
-      </div>
+          <div className={`pageSectionContentWrapper ${gridStyles}`}>
+            {children}
+          </div>
+        </>
+      ) : (
+        <>{children}</>
+      )}
     </section>
   );
 };
