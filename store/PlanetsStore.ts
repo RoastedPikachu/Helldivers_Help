@@ -207,7 +207,7 @@ class PlanetsStore {
       id: 3,
       name: "Форт правосудия",
       sector: galaxySectors.kelvin,
-      biome: null,
+      biome: biomes.tundra,
       weatherConditions: [],
     },
     23: {
@@ -542,7 +542,7 @@ class PlanetsStore {
       id: 1,
       name: "Эморат",
       sector: galaxySectors.meridian,
-      biome: null,
+      biome: biomes.ethereal,
       weatherConditions: [],
     },
     63: {
@@ -733,7 +733,7 @@ class PlanetsStore {
       id: 1,
       name: "Урсика XI",
       sector: galaxySectors.borgus,
-      biome: null,
+      biome: biomes.ethereal,
       weatherConditions: [],
     },
     84: {
@@ -804,7 +804,7 @@ class PlanetsStore {
       id: 3,
       name: "Вальмокс",
       sector: galaxySectors.rictus,
-      biome: biomes.crimsonMoor,
+      biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
     },
     92: {
@@ -930,7 +930,7 @@ class PlanetsStore {
       id: 2,
       name: "Купер",
       sector: galaxySectors.theseus,
-      biome: biomes.crimsonMoor,
+      biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
     },
     107: {
@@ -971,7 +971,7 @@ class PlanetsStore {
       id: 3,
       name: "Беквам III",
       sector: galaxySectors.nanos,
-      biome: null,
+      biome: biomes.ethereal,
       weatherConditions: [],
     },
     112: {
@@ -1083,7 +1083,7 @@ class PlanetsStore {
       id: 3,
       name: "Сокорро III",
       sector: galaxySectors.falstaff,
-      biome: null,
+      biome: biomes.ethereal,
       weatherConditions: [],
     },
     125: {
@@ -1177,7 +1177,7 @@ class PlanetsStore {
       id: 4,
       name: "Акубенс-прайм",
       sector: galaxySectors.gallux,
-      biome: null,
+      biome: biomes.ethereal,
       weatherConditions: [],
     },
     136: {
@@ -1218,7 +1218,7 @@ class PlanetsStore {
       id: 4,
       name: "Аламак VII",
       sector: galaxySectors.hanzo,
-      biome: null,
+      biome: biomes.ethereal,
       weatherConditions: [],
     },
     141: {
@@ -1811,7 +1811,7 @@ class PlanetsStore {
       id: 2,
       name: "Минхир",
       sector: galaxySectors.gellert,
-      biome: biomes.crimsonMoor,
+      biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
     },
     208: {
