@@ -22,7 +22,7 @@ interface WeaponAdditionalInfoModaProps {
   recoil?: number;
   fireRate?: number;
   totalDamage?: number;
-  dpm?: number;
+  dps?: number;
   fuseTime?: number;
   penetration?: number;
   radius?: number;
@@ -42,7 +42,7 @@ const WeaponAdditionalInfoModa: React.FC<WeaponAdditionalInfoModaProps> =
       recoil,
       fireRate,
       totalDamage,
-      dpm,
+      dps,
       fuseTime,
       penetration,
       radius,
@@ -241,11 +241,11 @@ const WeaponAdditionalInfoModa: React.FC<WeaponAdditionalInfoModaProps> =
 
                     <div className="currentWeapon_Modal_Bottom_Bottom_TextBlock">
                       <p className="currentWeapon_Modal_Bottom_Bottom_TextBlock_Title">
-                        УРОН В МИНУТУ:
+                        УРОН В СЕКУНДУ:
                       </p>
 
                       <p className="currentWeapon_Modal_Bottom_Bottom_TextBlock_Text">
-                        {dpm}
+                        {dps}
                       </p>
                     </div>
                   </div>

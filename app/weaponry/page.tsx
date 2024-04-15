@@ -82,7 +82,7 @@ const Page = observer(() => {
                       recoil={weapon.recoil}
                       fireRate={weapon.fireRate}
                       totalDamage={weapon.totalDamage}
-                      dpm={weapon.dpm}
+                      dps={weapon.dps}
                     />
                   ) : (
                     <WeaponAdditionalInfoModalWindow
