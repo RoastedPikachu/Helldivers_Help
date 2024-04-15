@@ -1,5 +1,5 @@
 .rootShipModuleBlock {
-    @apply relative mt-[30px] w-auto h-auto min-h-[85px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px];
+    @apply relative w-auto h-auto min-h-[85px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px];
 }
 
 .rootShipModuleBlock_Top {
@@ -23,7 +23,7 @@
 }
 
 .rootShipModuleBlock_Top_Button {
-    @apply relative flex justify-center items-center w-[30px] h-[30px];
+    @apply relative flex justify-center items-center w-[30px] h-[30px] z-30;
 }
 
 .rootShipModuleBlock_Top_Button_Image {
