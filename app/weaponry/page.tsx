@@ -10,7 +10,6 @@ import { weaponsStore } from "@/store/WeaponsStore";
 import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
 import ModalSlider from "@/widgets/modalSlider/ModalSlider";
-import WeaponSection from "@/widgets/weaponSection/WeaponSection";
 
 import RunningLine from "@/shared/RunningLine";
 import TheScrollToUpButton from "@/shared/TheScrollToUpButton/TheScrollToUpButton";
@@ -23,6 +22,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import "./Weaponry.css";
+import EntitySection from "@/widgets/EntitySection";
+import Weapon from "@/entities/weaponryPage/weapon/Weapon";
 
 const Page = observer(() => {
   const getSpecificWeaponArray = (weaponType: number) => {
@@ -100,23 +101,41 @@ const Page = observer(() => {
               ))}
             </ModalSlider>
 
-            <WeaponSection
-              title={"ОСНОВНОЕ"}
-              gridStyles={"grid-cols-3"}
-              weaponArray={getSpecificWeaponArray(1)!}
-            />
+            <EntitySection title={"ОСНОВНОЕ"} gridStyles={"grid-cols-3"}>
+              {getSpecificWeaponArray(1)?.map((primaryWeapon) => (
+                <Weapon
+                  key={primaryWeapon.id}
+                  id={primaryWeapon.id}
+                  weaponType={primaryWeapon.weaponType}
+                  imagePath={primaryWeapon.imagePath}
+                  name={primaryWeapon.name}
+                />
+              ))}
+            </EntitySection>
 
-            <WeaponSection
-              title={"ВТОРИЧНОЕ"}
-              gridStyles={"grid-cols-3"}
-              weaponArray={getSpecificWeaponArray(2)!}
-            />
+            <EntitySection title={"ВТОРИЧНОЕ"} gridStyles={"grid-cols-3"}>
+              {getSpecificWeaponArray(2)?.map((primaryWeapon) => (
+                <Weapon
+                  key={primaryWeapon.id}
+                  id={primaryWeapon.id}
+                  weaponType={primaryWeapon.weaponType}
+                  imagePath={primaryWeapon.imagePath}
+                  name={primaryWeapon.name}
+                />
+              ))}
+            </EntitySection>
 
-            <WeaponSection
-              title={"ГРАНАТЫ"}
-              gridStyles={"grid-cols-4"}
-              weaponArray={getSpecificWeaponArray(3)!}
-            />
+            <EntitySection title={"ГРАНАТЫ"} gridStyles={"grid-cols-4"}>
+              {getSpecificWeaponArray(3)?.map((primaryWeapon) => (
+                <Weapon
+                  key={primaryWeapon.id}
+                  id={primaryWeapon.id}
+                  weaponType={primaryWeapon.weaponType}
+                  imagePath={primaryWeapon.imagePath}
+                  name={primaryWeapon.name}
+                />
+              ))}
+            </EntitySection>
           </main>
 
           <TheFooter />
