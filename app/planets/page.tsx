@@ -12,6 +12,7 @@ import { galaxySectors } from "@/data/galaxySectors";
 import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
 import ModalSlider from "@/widgets/modalSlider/ModalSlider";
+import EntitySection from "@/widgets/EntitySection";
 
 import RunningLine from "@/shared/RunningLine";
 import TheScrollToUpButton from "@/shared/TheScrollToUpButton/TheScrollToUpButton";
@@ -24,7 +25,7 @@ import PlanetAdditionalInfoModalWindow from "@/entities/planetsPage/planetAdditi
 import "swiper/css";
 import "swiper/css/navigation";
 
-import "./Planets.css";
+import "@/app/modalsSlider.css";
 
 const Page = observer(() => {
   const getTargetPlanetArray = () => {
@@ -52,41 +53,35 @@ const Page = observer(() => {
               }
             />
 
-            <section className="pageContentSection">
-              <ModalSlider currentEntityId={planetsStore.currentPlanetInfo.id}>
-                {getTargetPlanetArray()?.map((planet) => (
-                  <SwiperSlide key={planet.id}>
-                    <PlanetAdditionalInfoModalWindow
-                      imagePath={planet.biome?.imagePath}
-                      name={planet.name}
-                      weatherConditions={planet.weatherConditions}
-                      biomeDescription={planet.biome?.description}
-                    />
-                  </SwiperSlide>
-                ))}
-              </ModalSlider>
-
-              {Object.values(galaxySectors).map((value, i) => (
-                <div key={i} className="pageContentSection_Block">
-                  <h3 className="pageContentSection_Block_Title">{value}</h3>
-
-                  <div className="pageContentSection_Block_PlanetWrapper">
-                    {Object.values(planetsStore.planets)
-                      .filter((planetValue) => planetValue.sector === value)
-                      .map((planet) => (
-                        <Planet
-                          key={planet.id}
-                          id={planet.id}
-                          name={planet.name}
-                          biome={planet.biome}
-                          weatherConditions={planet.weatherConditions}
-                          sector={planet.sector}
-                        />
-                      ))}
-                  </div>
-                </div>
+            <ModalSlider currentEntityId={planetsStore.currentPlanetInfo.id}>
+              {getTargetPlanetArray()?.map((planet) => (
+                <SwiperSlide key={planet.id}>
+                  <PlanetAdditionalInfoModalWindow
+                    imagePath={planet.biome?.imagePath}
+                    name={planet.name}
+                    weatherConditions={planet.weatherConditions}
+                    biomeDescription={planet.biome?.description}
+                  />
+                </SwiperSlide>
               ))}
-            </section>
+            </ModalSlider>
+
+            {Object.values(galaxySectors).map((value, i) => (
+              <EntitySection key={i} title={value} gridStyles={"grid-cols-3"}>
+                {Object.values(planetsStore.planets)
+                  .filter((planetValue) => planetValue.sector === value)
+                  .map((planet) => (
+                    <Planet
+                      key={planet.id}
+                      id={planet.id}
+                      name={planet.name}
+                      biome={planet.biome}
+                      weatherConditions={planet.weatherConditions}
+                      sector={planet.sector}
+                    />
+                  ))}
+              </EntitySection>
+            ))}
           </main>
 
           <TheFooter />

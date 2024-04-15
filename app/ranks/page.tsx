@@ -1,14 +1,18 @@
 import React from "react";
 
+import { ranks } from "@/data/ranks";
+
 import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
-import RanksSection from "@/widgets/RanksSection";
+import EntitySection from "@/widgets/EntitySection";
 import LevelsSection from "@/widgets/LevelsSection";
 
 import RunningLine from "@/shared/RunningLine";
 import TheScrollToUpButton from "@/shared/TheScrollToUpButton/TheScrollToUpButton";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
+
+import Rank from "@/entities/Rank";
 
 const Page = () => {
   return (
@@ -34,7 +38,17 @@ const Page = () => {
           }
         />
 
-        <RanksSection />
+        <EntitySection gridStyles={"grid-cols-1"}>
+          {ranks.map((rank) => (
+            <Rank
+              key={rank.id}
+              iconPath={rank.iconPath}
+              title={rank.title}
+              fromLevel={rank.fromLevel}
+              xpCount={rank.xpCount}
+            />
+          ))}
+        </EntitySection>
 
         <LevelsSection />
       </main>

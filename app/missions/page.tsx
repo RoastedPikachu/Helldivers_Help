@@ -8,6 +8,7 @@ import {
 
 import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
+import EntitySection from "@/widgets/EntitySection";
 
 import RunningLine from "@/shared/RunningLine";
 import TheScrollToUpButton from "@/shared/TheScrollToUpButton/TheScrollToUpButton";
@@ -40,64 +41,50 @@ const Page = () => {
           }
         />
 
-        <section className="pageSection">
-          <div className="pageSection_Block">
-            <h3 className="pageSection_Block_Title">ОБЩИЕ</h3>
+        <EntitySection title={"ОБЩИЕ"} gridStyles={"grid-cols-1"}>
+          {generalMissions.map((mission) => (
+            <Mission
+              key={mission.id}
+              imagePath={mission.imagePath}
+              title={mission.title}
+              description={mission.description}
+              level={mission.level}
+              targetMissionCompletionCount={
+                mission.targetMissionCompletionCount
+              }
+            />
+          ))}
+        </EntitySection>
 
-            <div className="pageSection_Block_Wrapper">
-              {generalMissions.map((mission) => (
-                <Mission
-                  key={mission.id}
-                  imagePath={mission.imagePath}
-                  title={mission.title}
-                  description={mission.description}
-                  level={mission.level}
-                  targetMissionCompletionCount={
-                    mission.targetMissionCompletionCount
-                  }
-                />
-              ))}
-            </div>
-          </div>
+        <EntitySection title={"ПРОТИВ ТЕРМИНИДОВ"} gridStyles={"grid-cols-1"}>
+          {terminidMissions.map((mission) => (
+            <Mission
+              key={mission.id}
+              imagePath={mission.imagePath}
+              title={mission.title}
+              description={mission.description}
+              level={mission.level}
+              targetMissionCompletionCount={
+                mission.targetMissionCompletionCount
+              }
+            />
+          ))}
+        </EntitySection>
 
-          <div className="pageSection_Block">
-            <h3 className="pageSection_Block_Title">ПРОТИВ ТЕРМИНИДОВ</h3>
-
-            <div className="pageSection_Block_Wrapper">
-              {terminidMissions.map((mission) => (
-                <Mission
-                  key={mission.id}
-                  imagePath={mission.imagePath}
-                  title={mission.title}
-                  description={mission.description}
-                  level={mission.level}
-                  targetMissionCompletionCount={
-                    mission.targetMissionCompletionCount
-                  }
-                />
-              ))}
-            </div>
-          </div>
-
-          <div className="pageSection_Block">
-            <h3 className="pageSection_Block_Title">ПРОТИВ АВТОМАТОНОВ</h3>
-
-            <div className="pageSection_Block_Wrapper">
-              {automatonMissions.map((mission) => (
-                <Mission
-                  key={mission.id}
-                  imagePath={mission.imagePath}
-                  title={mission.title}
-                  description={mission.description}
-                  level={mission.level}
-                  targetMissionCompletionCount={
-                    mission.targetMissionCompletionCount
-                  }
-                />
-              ))}
-            </div>
-          </div>
-        </section>
+        <EntitySection title={"ПРОТИВ АВТОМАТОНОВ"} gridStyles={"grid-cols-1"}>
+          {automatonMissions.map((mission) => (
+            <Mission
+              key={mission.id}
+              imagePath={mission.imagePath}
+              title={mission.title}
+              description={mission.description}
+              level={mission.level}
+              targetMissionCompletionCount={
+                mission.targetMissionCompletionCount
+              }
+            />
+          ))}
+        </EntitySection>
       </main>
 
       <TheFooter />

@@ -10,20 +10,20 @@ import { armorStore } from "@/store/ArmorKitsStore";
 import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
 import ModalSlider from "@/widgets/modalSlider/ModalSlider";
-import ArmorKitsSection from "@/widgets/armorKitsSection/ArmorKitsSection";
+import EntitySection from "@/widgets/EntitySection";
 
 import RunningLine from "@/shared/RunningLine";
 import TheScrollToUpButton from "@/shared/TheScrollToUpButton/TheScrollToUpButton";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 
+import ArmorKit from "@/entities/armorKitsPage/armorKit/ArmorKit";
 import ArmorKitAdditionalInfoModalWindow from "@/entities/armorKitsPage/armorKitAdditionalInfoModalWindow/ArmorKitAdditionalInfoModalWindow";
 
 import "swiper/css";
 import "swiper/css/navigation";
 
 import "@/app/modalsSlider.css";
-import "./ArmorKits.css";
 
 const Page = observer(() => {
   return (
@@ -73,68 +73,146 @@ const Page = observer(() => {
                 ))}
             </ModalSlider>
 
-            <ArmorKitsSection
-              title={"ОБУЧЕНИЕ"}
-              armorKitsArray={armorStore.armorKits.filter(
-                (armorKit) => armorKit.obtainingType.typeNumber === 0,
-              )}
-            />
+            <EntitySection title={"ОБУЧЕНИЕ"} gridStyles={"grid-cols-5"}>
+              {armorStore.armorKits
+                .filter((armorKit) => armorKit.obtainingType.typeNumber === 0)
+                .map((armorKit) => (
+                  <ArmorKit
+                    key={armorKit.id}
+                    id={armorKit.id}
+                    obtainingType={armorKit.obtainingType}
+                    imagePath={armorKit.imagePath}
+                    name={armorKit.name}
+                  />
+                ))}
+            </EntitySection>
 
-            <ArmorKitsSection
+            <EntitySection
               title={"БОЕВОЙ ПРОПУСК «АДСКИЕ ДЕСАНТНИКИ, В БОЙ!»"}
-              armorKitsArray={armorStore.armorKits.filter(
-                (armorKit) => armorKit.obtainingType.typeNumber === 1,
-              )}
-            />
+              gridStyles={"grid-cols-5"}
+            >
+              {armorStore.armorKits
+                .filter((armorKit) => armorKit.obtainingType.typeNumber === 1)
+                .map((armorKit) => (
+                  <ArmorKit
+                    key={armorKit.id}
+                    id={armorKit.id}
+                    obtainingType={armorKit.obtainingType}
+                    imagePath={armorKit.imagePath}
+                    name={armorKit.name}
+                  />
+                ))}
+            </EntitySection>
 
-            <ArmorKitsSection
+            <EntitySection
               title={"БОЕВОЙ ПРОПУСК «ЗАКАЛЕННЫЕ ВЕТЕРАНЫ»"}
-              armorKitsArray={armorStore.armorKits.filter(
-                (armorKit) => armorKit.obtainingType.typeNumber === 2,
-              )}
-            />
+              gridStyles={"grid-cols-5"}
+            >
+              {armorStore.armorKits
+                .filter((armorKit) => armorKit.obtainingType.typeNumber === 2)
+                .map((armorKit) => (
+                  <ArmorKit
+                    key={armorKit.id}
+                    id={armorKit.id}
+                    obtainingType={armorKit.obtainingType}
+                    imagePath={armorKit.imagePath}
+                    name={armorKit.name}
+                  />
+                ))}
+            </EntitySection>
 
-            <ArmorKitsSection
+            <EntitySection
               title={"БОЕВОЙ ПРОПУСК «НА ОСТРИЕ»"}
-              armorKitsArray={armorStore.armorKits.filter(
-                (armorKit) => armorKit.obtainingType.typeNumber === 3,
-              )}
-            />
+              gridStyles={"grid-cols-5"}
+            >
+              {armorStore.armorKits
+                .filter((armorKit) => armorKit.obtainingType.typeNumber === 3)
+                .map((armorKit) => (
+                  <ArmorKit
+                    key={armorKit.id}
+                    id={armorKit.id}
+                    obtainingType={armorKit.obtainingType}
+                    imagePath={armorKit.imagePath}
+                    name={armorKit.name}
+                  />
+                ))}
+            </EntitySection>
 
-            <ArmorKitsSection
+            <EntitySection
               title={"БОЕВОЙ ПРОПУСК «ДЕМОКРАТИЧЕСКИЙ ПОДРЫВ»"}
-              armorKitsArray={armorStore.armorKits.filter(
-                (armorKit) => armorKit.obtainingType.typeNumber === 4,
-              )}
-            />
+              gridStyles={"grid-cols-5"}
+            >
+              {armorStore.armorKits
+                .filter((armorKit) => armorKit.obtainingType.typeNumber === 4)
+                .map((armorKit) => (
+                  <ArmorKit
+                    key={armorKit.id}
+                    id={armorKit.id}
+                    obtainingType={armorKit.obtainingType}
+                    imagePath={armorKit.imagePath}
+                    name={armorKit.name}
+                  />
+                ))}
+            </EntitySection>
 
-            <ArmorKitsSection
-              title={"СУПЕРМАГАЗИН"}
-              armorKitsArray={armorStore.armorKits.filter(
-                (armorKit) => armorKit.obtainingType.typeNumber === 5,
-              )}
-            />
+            <EntitySection title={"СУПЕРМАГАЗИН"} gridStyles={"grid-cols-5"}>
+              {armorStore.armorKits
+                .filter((armorKit) => armorKit.obtainingType.typeNumber === 5)
+                .map((armorKit) => (
+                  <ArmorKit
+                    key={armorKit.id}
+                    id={armorKit.id}
+                    obtainingType={armorKit.obtainingType}
+                    imagePath={armorKit.imagePath}
+                    name={armorKit.name}
+                  />
+                ))}
+            </EntitySection>
 
-            <ArmorKitsSection
-              title={"ПРЕДЗАКАЗ"}
-              armorKitsArray={armorStore.armorKits.filter(
-                (armorKit) => armorKit.obtainingType.typeNumber === 6,
-              )}
-            />
+            <EntitySection title={"ПРЕДЗАКАЗ"} gridStyles={"grid-cols-5"}>
+              {armorStore.armorKits
+                .filter((armorKit) => armorKit.obtainingType.typeNumber === 6)
+                .map((armorKit) => (
+                  <ArmorKit
+                    key={armorKit.id}
+                    id={armorKit.id}
+                    obtainingType={armorKit.obtainingType}
+                    imagePath={armorKit.imagePath}
+                    name={armorKit.name}
+                  />
+                ))}
+            </EntitySection>
 
-            <ArmorKitsSection
+            <EntitySection
               title={"ИЗДАНИЕ SUPER CITIZEN"}
-              armorKitsArray={armorStore.armorKits.filter(
-                (armorKit) => armorKit.obtainingType.typeNumber === 7,
-              )}
-            />
+              gridStyles={"grid-cols-5"}
+            >
+              {armorStore.armorKits
+                .filter((armorKit) => armorKit.obtainingType.typeNumber === 7)
+                .map((armorKit) => (
+                  <ArmorKit
+                    key={armorKit.id}
+                    id={armorKit.id}
+                    obtainingType={armorKit.obtainingType}
+                    imagePath={armorKit.imagePath}
+                    name={armorKit.name}
+                  />
+                ))}
+            </EntitySection>
 
-            <ArmorKitsSection
-              title={"TWITCH DROPS"}
-              armorKitsArray={armorStore.armorKits.filter(
-                (armorKit) => armorKit.obtainingType.typeNumber === 8,
-              )}
-            />
+            <EntitySection title={"TWITCH DROPS"} gridStyles={"grid-cols-5"}>
+              {armorStore.armorKits
+                .filter((armorKit) => armorKit.obtainingType.typeNumber === 8)
+                .map((armorKit) => (
+                  <ArmorKit
+                    key={armorKit.id}
+                    id={armorKit.id}
+                    obtainingType={armorKit.obtainingType}
+                    imagePath={armorKit.imagePath}
+                    name={armorKit.name}
+                  />
+                ))}
+            </EntitySection>
           </main>
 
           <TheFooter />

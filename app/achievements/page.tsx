@@ -4,6 +4,7 @@ import { achievementsStore } from "@/store/AchievementsStore";
 
 import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
+import EntitySection from "@/widgets/EntitySection";
 
 import RunningLine from "@/shared/RunningLine";
 import TheScrollToUpButton from "@/shared/TheScrollToUpButton/TheScrollToUpButton";
@@ -30,7 +31,7 @@ const Page = () => {
           }
         />
 
-        <section className="relative grid grid-cols-2 grid-rows-19 gap-y-[30px] gap-x-[30px] mt-[50px] w-full h-auto">
+        <EntitySection gridStyles={"mt-[50px]! grid-cols-2"}>
           {achievementsStore.achievements.map((achievement) => (
             <Achievement
               key={achievement.id}
@@ -40,7 +41,7 @@ const Page = () => {
               accomplishmentWay={achievement.accomplishmentWay}
             />
           ))}
-        </section>
+        </EntitySection>
       </main>
 
       <TheFooter />
