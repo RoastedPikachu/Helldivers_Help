@@ -1,3 +1,0 @@
-.armorCardsWrapper {
-    @apply relative grid grid-cols-5 gap-y-[30px] gap-x-[30px] mt-[20px] w-full h-auto;
-}
