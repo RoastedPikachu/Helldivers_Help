@@ -27,7 +27,7 @@
 }
 
 .rootShipModuleBlock {
-    @apply relative mt-[30px] w-auto h-auto bg-[#00293a] border-2 border-[--theme-color] rounded-[10px];
+    @apply relative w-auto h-auto min-h-[80px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px];
 }
 
 .rootShipModuleBlock_Top {

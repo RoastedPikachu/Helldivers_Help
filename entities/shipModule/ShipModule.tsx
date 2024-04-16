@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -84,7 +85,7 @@ const ShipModule: React.FC<ShipModuleProps> = ({
       </div>
 
       <div
-        className={`rootShipModuleBlock_Bottom ${isAdditionalInfoOpened ? "mt-0 opacity-1" : "mt-[-570px] opacity-0"}`}
+        className={`rootShipModuleBlock_Bottom ${isAdditionalInfoOpened ? "mt-0 opacity-1" : `mt-[-630px] opacity-0`}`}
       >
         <div className="rootShipModuleBlock_Bottom_LeftBlock">
           <Swiper
