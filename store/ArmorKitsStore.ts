@@ -316,6 +316,21 @@ class ArmorKitsStore {
       bonus: armorBonuses.engineerKit,
     },
     {
+      id: 3,
+      imagePath: "/static/ArmorKits/Fs55DevastatorImage.webp",
+      type: "Тяжелая броня",
+      name: "FS-55 «Разрушитель»",
+      obtainingType: obtainingType["4"],
+      obtainingMethod: "Покупается в боевом пропуске «Демократический подрыв»",
+      description:
+        "Содержит множество небольших карманов, позволяющих пользователю равномерно распределить вес боеприпасов, образцов и прохладных камней.",
+      price: 112,
+      armorRating: 150,
+      speed: 450,
+      staminaRegen: 50,
+      bonus: armorBonuses.fortification,
+    },
+    {
       id: 6,
       imagePath: "/static/ArmorKits/Fs05MarksmanImage.webp",
       type: "Тяжелая броня",
