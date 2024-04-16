@@ -1,14 +1,21 @@
+"use client";
 import React from "react";
+
+import { shipModulesStore } from "@/store/ShipModulesStore";
 
 import TheHeader from "@/widgets/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
-
-import ShipModulesSection from "@/widgets/ShipModulesSection";
+import EntitySection from "@/widgets/EntitySection";
 
 import RunningLine from "@/shared/RunningLine";
 import TheScrollToUpButton from "@/shared/TheScrollToUpButton/TheScrollToUpButton";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
+
+import ShipModule from "@/entities/shipModule/ShipModule";
+
+import "swiper/css";
+import "swiper/css/navigation";
 
 const Page = () => {
   return (
@@ -34,7 +41,22 @@ const Page = () => {
           }
         />
 
-        <ShipModulesSection />
+        <EntitySection gridStyles={"grid-cols-1"}>
+          {shipModulesStore.shipModules.map((shipModule) => (
+            <ShipModule
+              key={shipModule.id}
+              title={shipModule.title}
+              levelImages={shipModule.levelImages}
+              improvementTitles={shipModule.improvementTitles}
+              improvementDescriptions={shipModule.improvementDescriptions}
+              improvementEffects={shipModule.improvementEffects}
+              improvementPrices={shipModule.improvementPrices}
+              improvementAffectedStratagems={
+                shipModule.improvementAffectedStratagems
+              }
+            />
+          ))}
+        </EntitySection>
       </main>
 
       <TheFooter />
