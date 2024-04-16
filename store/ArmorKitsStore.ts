@@ -165,6 +165,21 @@ class ArmorKitsStore {
     },
     {
       id: 7,
+      imagePath: "/static/ArmorKits/Cm10ClinicianImage.webp",
+      type: "Средняя броня",
+      name: "CM-10 «Клиницист»",
+      obtainingType: obtainingType["5"],
+      obtainingMethod: "Покупается в Супермагазине",
+      description:
+        "Запатентованная технология обратного шва снижает риск попадания телесных жидкостей внутрь бронм.",
+      price: 375,
+      armorRating: 100,
+      speed: 500,
+      staminaRegen: 100,
+      bonus: armorBonuses.medKit,
+    },
+    {
+      id: 8,
       imagePath: "/static/ArmorKits/Cm17ButcherImage.webp",
       type: "Тяжелая броня",
       name: "CM-17 «Мясник»",
@@ -179,7 +194,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.medKit,
     },
     {
-      id: 8,
+      id: 9,
       imagePath: "/static/ArmorKits/Cm21TrenchParamedicImage.webp",
       type: "Легкая броня",
       name: "CM-21 «Траншейный фельдшер»",
@@ -298,7 +313,7 @@ class ArmorKitsStore {
       armorRating: 100,
       speed: 500,
       staminaRegen: 100,
-      bonus: armorBonuses.servoAssisted,
+      bonus: armorBonuses.engineerKit,
     },
     {
       id: 2,
@@ -347,7 +362,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.fortification,
     },
     {
-      id: 9,
+      id: 10,
       imagePath: "/static/ArmorKits/Fs11ExecutionerImage.webp",
       type: "Тяжелая броня",
       name: "FS-11 «Палач»",
@@ -378,7 +393,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.fortification,
     },
     {
-      id: 10,
+      id: 11,
       imagePath: "/static/ArmorKits/Fs34ExterminatorImage.webp",
       type: "Средняя броня",
       name: "FS-34 «Истребитель»",
@@ -393,7 +408,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.fortification,
     },
     {
-      id: 11,
+      id: 12,
       imagePath: "/static/ArmorKits/Fs38EradicatorImage.webp",
       type: "Легкая броня",
       name: "FS-38 «Искоренитель»",
@@ -408,7 +423,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.fortification,
     },
     {
-      id: 12,
+      id: 13,
       imagePath: "/static/ArmorKits/Fs61DreadnoughtImage.webp",
       type: "Тяжелая броня",
       name: "FS-61 «Дредноут»",
@@ -484,7 +499,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.servoAssisted,
     },
     {
-      id: 13,
+      id: 14,
       imagePath: "/static/ArmorKits/Sc15DroneMasterImage.webp",
       type: "Средняя броня",
       name: "SС-15 «Мастер дронов»",
@@ -531,7 +546,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.scout,
     },
     {
-      id: 14,
+      id: 15,
       imagePath: "/static/ArmorKits/Sc37LegionnaireImage.webp",
       type: "Легкая броня",
       name: "SС-37 «Легионер»",
