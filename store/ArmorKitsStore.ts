@@ -409,6 +409,21 @@ class ArmorKitsStore {
     },
     {
       id: 12,
+      imagePath: "/static/ArmorKits/Fs37RavagerImage.webp",
+      type: "Легкая броня",
+      name: "FS-37 «Разоритель»",
+      obtainingType: obtainingType["5"],
+      obtainingMethod: "Покупается в Супермагазине",
+      description:
+        "Содержит множество маленьких карманов, позволяющих равномерно распределить вес боеприпасов, образцов и симпатичных камешков.",
+      price: 375,
+      armorRating: 50,
+      speed: 550,
+      staminaRegen: 125,
+      bonus: armorBonuses.engineerKit,
+    },
+    {
+      id: 13,
       imagePath: "/static/ArmorKits/Fs38EradicatorImage.webp",
       type: "Легкая броня",
       name: "FS-38 «Искоренитель»",
@@ -423,7 +438,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.fortification,
     },
     {
-      id: 13,
+      id: 14,
       imagePath: "/static/ArmorKits/Fs61DreadnoughtImage.webp",
       type: "Тяжелая броня",
       name: "FS-61 «Дредноут»",
@@ -499,7 +514,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.servoAssisted,
     },
     {
-      id: 14,
+      id: 15,
       imagePath: "/static/ArmorKits/Sc15DroneMasterImage.webp",
       type: "Средняя броня",
       name: "SС-15 «Мастер дронов»",
@@ -546,7 +561,7 @@ class ArmorKitsStore {
       bonus: armorBonuses.scout,
     },
     {
-      id: 15,
+      id: 16,
       imagePath: "/static/ArmorKits/Sc37LegionnaireImage.webp",
       type: "Легкая броня",
       name: "SС-37 «Легионер»",
