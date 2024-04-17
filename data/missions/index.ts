@@ -164,6 +164,13 @@ export const automatonMissions = [
   },
   {
     id: 3,
+    imagePath: "/static/Missions/.svg",
+    title: "Уничтожьте шатун-завод автоматонов",
+    description: "Найдите и уничтожьте шатун-завод автоматонов.",
+    level: "4",
+  },
+  {
+    id: 4,
     imagePath: "/static/Missions/DestroySuppliesIcon.svg",
     title: "Выведите из строя базы снабжения",
     description:
@@ -171,14 +178,22 @@ export const automatonMissions = [
     level: "1-9",
   },
   {
-    id: 4,
+    id: 5,
     imagePath: "/static/Missions/DestroyAviabaseIcon.svg",
     title: "Выведите из строя авиабазу",
     description: "Выведите из строя авиабазу автоматонов в этом регионе.",
     level: "3-9",
   },
   {
-    id: 5,
+    id: 6,
+    imagePath: "/static/Missions/DestroyCommandBunkersIcon.svg",
+    title: "Уничтожьте командные бункеры",
+    description:
+      "Отрежьте ботов от их информационной сети, уничтожив командные бункеры.",
+    level: "3-9",
+  },
+  {
+    id: 7,
     imagePath: "/static/Missions/KillAutomatonsIcon.svg",
     title: "Истребите силы автоматонов",
     description: "Уничтожьте автоматонов, чтобы снизить их численность.",
@@ -194,7 +209,7 @@ export const automatonMissions = [
     ],
   },
   {
-    id: 6,
+    id: 8,
     imagePath: "/static/Missions/KillAutomatonsIcon.svg",
     title: "Блиц: Найти и уничтожить",
     description: "Найдите и уничтожьте изготовители автоматонов.",
