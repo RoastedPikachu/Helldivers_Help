@@ -2,39 +2,39 @@ import { ArmorObtainingType } from "@/utils/dataInterfaces";
 
 export const obtainingType: { [key: number]: ArmorObtainingType } = {
   0: {
-    name: "Обучение",
+    name: "tutorial",
     typeNumber: 0,
   },
   1: {
-    name: "Боевой пропуск «Адские Десантники, в бой!»",
+    name: "helldiversMobilize",
     typeNumber: 1,
   },
   2: {
-    name: "Боевой пропуск «Закаленные ветераны»",
+    name: "steeledVeterans",
     typeNumber: 2,
   },
   3: {
-    name: "Боевой пропуск «На острие»",
+    name: "cuttingEdge",
     typeNumber: 3,
   },
   4: {
-    name: "Боевой пропуск «Демократический подрыв»",
+    name: "democraticDetonation",
     typeNumber: 4,
   },
   5: {
-    name: "Супермагазин",
+    name: "superstore",
     typeNumber: 5,
   },
   6: {
-    name: "Предзаказ",
+    name: "preOrder",
     typeNumber: 6,
   },
   7: {
-    name: "Super-Citizen издание",
+    name: "superCitizen",
     typeNumber: 7,
   },
   8: {
-    name: "Twitch drops",
+    name: "twitchDrops",
     typeNumber: 8,
   },
 };
