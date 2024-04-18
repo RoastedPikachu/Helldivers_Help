@@ -7,15 +7,23 @@
 }
 
 .rootActiveCampaignWidget_Top {
-    @apply flex items-center px-[20px] w-full h-[50px] bg-[#000000];
+    @apply flex justify-between items-center px-[20px] w-full h-[50px] bg-[#000000];
 }
 
-.rootActiveCampaignWidget_Top_Icon {
+.rootActiveCampaignWidget_Top_Left {
+    @apply flex;
+}
+
+.rootActiveCampaignWidget_Top_Left_Icon {
     @apply w-[40px] h-[30px];
 }
 
-.rootActiveCampaignWidget_Top_Title {
+.rootActiveCampaignWidget_Top_Left_Title {
     @apply ml-[10px] text-[1.5rem] font-['Exo2'] font-bold;
+}
+
+.rootActiveCampaignWidget_Top_TimeLeft {
+    @apply text-[1.375rem] font-['Insignia'] font-bold;
 }
 
 .rootActiveCampaignWidget_Center {

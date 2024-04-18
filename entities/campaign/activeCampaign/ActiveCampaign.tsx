@@ -1,12 +1,11 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
-import { biomes } from "@/data/planetBiomes";
-
 import { planetsStore } from "@/store/PlanetsStore";
 
+import { timeFromNow } from "@/utils/timeFunctions";
+
 import "./ActiveCampaign.css";
-import { BiomesObject } from "@/utils/dataInterfaces";
 
 interface ActiveCampaignProps {
   planetIndex: number;
@@ -58,10 +57,24 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
   };
 
   const getLiberationWidth = (isEnemy: boolean) => {
-    // console.log(expiresIn ? expiresIn : " ");
-    // if (isEnemy) {
-    //   return isDefense ? 24 - timeLeft * 4.2 : 100 - percentage;
-    // }
+    if (isEnemy) {
+      if (isDefense) {
+        const expiresInPartsArray = timeFromNow(expiresIn).split(":");
+
+        if (!isNaN(targetCampaignPlanet.regenPerHour)) {
+          return (
+            ((24 * 60 -
+              (Number(expiresInPartsArray[0]) * 60 +
+                Number(expiresInPartsArray[1]))) /
+              60) *
+            targetCampaignPlanet.regenPerHour
+          );
+        }
+      } else {
+        return 100 - percentage;
+      }
+    }
+
     return percentage;
   };
 
@@ -87,17 +100,27 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
 
       <div className={`rootActiveCampaignWidget ${getEnemyBorderColor()}`}>
         <div className="rootActiveCampaignWidget_Top">
-          <img
-            src={`${getEnemyIcon()}`}
-            alt=""
-            className="rootActiveCampaignWidget_Top_Icon"
-          />
+          <div className="rootActiveCampaignWidget_Top_Left">
+            <img
+              src={`${getEnemyIcon()}`}
+              alt=""
+              className="rootActiveCampaignWidget_Top_Left_Icon"
+            />
 
-          <h4
-            className={`rootActiveCampaignWidget_Top_Title ${getEnemyTextColor()}`}
-          >
-            {targetCampaignPlanet.name?.toUpperCase()}
-          </h4>
+            <h4
+              className={`rootActiveCampaignWidget_Top_Left_Title ${getEnemyTextColor()}`}
+            >
+              {targetCampaignPlanet.name?.toUpperCase()}
+            </h4>
+          </div>
+
+          {expiresIn && (
+            <p
+              className={`rootActiveCampaignWidget_Top_TimeLeft ${getEnemyTextColor()}`}
+            >
+              {timeFromNow(expiresIn)}
+            </p>
+          )}
         </div>
 
         <div className="rootActiveCampaignWidget_Center">
