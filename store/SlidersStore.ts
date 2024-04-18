@@ -12,6 +12,7 @@ class SlidersStore {
   };
 
   handleCurrentSlideChange = (id: number) => {
+    console.log(id);
     this.swiper.slideTo(id - 1);
   };
 }
