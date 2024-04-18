@@ -20,9 +20,9 @@ interface EnemyTypeAdditionalInfoModalWindowProps {
   iconPath: string;
   imageStyleScale: string;
   title: string;
-  dangerous: string;
+  description: string;
   tactics: string;
-  difficulties: string;
+  notes: string;
 }
 
 const EnemyTypeAdditionalInfoModalWindow: React.FC<EnemyTypeAdditionalInfoModalWindowProps> =
@@ -33,14 +33,14 @@ const EnemyTypeAdditionalInfoModalWindow: React.FC<EnemyTypeAdditionalInfoModalW
       iconPath,
       imageStyleScale,
       title,
-      dangerous,
+      description,
       tactics,
-      difficulties,
+      notes,
     }) => {
       return (
         <Observer>
           {() => (
-            <div className="sliderModal flex">
+            <div className="sliderModal">
               <button
                 onClick={() => enemyTypeStore.clearCurrentEnemyType()}
                 className="sliderModal_CloseButton"
@@ -52,49 +52,57 @@ const EnemyTypeAdditionalInfoModalWindow: React.FC<EnemyTypeAdditionalInfoModalW
                 />
               </button>
 
-              <div
-                className={`sliderModal_Left overflow-hidden ${fraction === fractions["2"] ? "bg-[url('/static/Terminids/TerminidsBackgroundImage.webp')]" : "bg-[url('/static/Automatons/AutomatonsBackgroundImage.webp')]"}`}
-              >
-                {iconPath ? (
-                  <img
-                    src={iconPath}
-                    alt=""
-                    style={{ transform: imageStyleScale }}
-                    className={`w-[200px] h-[300px] ${fraction === "Автоматоны" ? getSpecificAutomatonStyle(id) : getSpecificTerminidStyle(id)}`}
-                  />
-                ) : (
-                  <p className="sliderModal_Left_BlankText">?</p>
-                )}
+              <div className="flex">
+                <div
+                  className={`sliderModal_Left overflow-hidden ${fraction === fractions["2"] ? "bg-[url('/static/Terminids/TerminidsBackgroundImage.webp')]" : "bg-[url('/static/Automatons/AutomatonsBackgroundImage.webp')]"}`}
+                >
+                  {iconPath ? (
+                    <img
+                      src={iconPath}
+                      alt=""
+                      style={{ transform: imageStyleScale }}
+                      className={`w-[200px] h-[300px] ${fraction === "Автоматоны" ? getSpecificAutomatonStyle(id) : getSpecificTerminidStyle(id)}`}
+                    />
+                  ) : (
+                    <p className="sliderModal_Left_BlankText">?</p>
+                  )}
+                </div>
+
+                <div className="sliderModal_Right">
+                  <h3 className="sliderModal_Right_Title">
+                    <b className="sliderModal_Right_Title_Bold">
+                      {fraction === "Терминиды" ? "Терминид" : "Автоматон"}
+                    </b>{" "}
+                    — {title}
+                  </h3>
+
+                  <span>
+                    <h4 className="sliderModal_Right_SecondaryTitle">
+                      Описание
+                    </h4>
+
+                    <p className="sliderModal_Right_Text">{description}</p>
+                  </span>
+
+                  {tactics && (
+                    <span>
+                      <h4 className="sliderModal_Right_SecondaryTitle">
+                        Тактика
+                      </h4>
+
+                      <p className="sliderModal_Right_Text">{tactics}</p>
+                    </span>
+                  )}
+                </div>
               </div>
 
-              <div className="sliderModal_Right">
-                <h3 className="sliderModal_Right_Title">
-                  <b className="sliderModal_Right_Title_Bold">Терминид</b> —{" "}
-                  {title}
-                </h3>
-
+              {notes && (
                 <span>
-                  <h4 className="sliderModal_Right_SecondaryTitle">
-                    Опасность
-                  </h4>
+                  <h4 className="sliderModal_Right_SecondaryTitle">Заметки</h4>
 
-                  <p className="sliderModal_Right_Text">{dangerous}</p>
+                  <p className="sliderModal_Right_Text">{notes}</p>
                 </span>
-
-                <span>
-                  <h4 className="sliderModal_Right_SecondaryTitle">Тактика</h4>
-
-                  <p className="sliderModal_Right_Text">{tactics}</p>
-                </span>
-
-                <span>
-                  <h4 className="sliderModal_Right_SecondaryTitle">
-                    Где встречается
-                  </h4>
-
-                  <p className="sliderModal_Right_Text">{difficulties}</p>
-                </span>
-              </div>
+              )}
             </div>
           )}
         </Observer>
