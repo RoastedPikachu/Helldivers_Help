@@ -1,3 +1,7 @@
+.swiper-wrapper {
+    @apply items-center;
+}
+
 .swiper-button-prev {
     @apply !top-[50%] !left-[50px];
 }

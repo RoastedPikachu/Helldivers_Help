@@ -75,9 +75,9 @@ const Page = observer(() => {
                       iconPath={enemy.iconPath}
                       imageStyleScale={enemy.imageStyleScale}
                       title={enemy.title}
-                      dangerous={enemy.dangerous}
+                      description={enemy.description}
                       tactics={enemy.tactics}
-                      difficulties={enemy.difficulties}
+                      notes={enemy.notes}
                     />
                   </SwiperSlide>
                 ))}
