@@ -9,7 +9,7 @@ export const getSpecificAutomatonStyle = (id: number) => {
 
 export const getSpecificTerminidStyle = (id: number) => {
   switch (id) {
-    case 4:
-      return "mt-[-30px] mb-[30px] ml-[50px]";
+    case 3:
+      return "mt-[-20px]";
   }
 };

@@ -60,11 +60,11 @@ export interface Enemy {
   id: number;
   iconPath: string;
   imageStyleScale: string;
-  fraction: string;
-  dangerous: string;
-  tactics: string;
-  difficulties: string;
   title: string;
+  fraction: string;
+  description: string;
+  tactics: string;
+  notes: string;
 }
 
 export interface CurrentEnemy {
