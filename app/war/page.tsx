@@ -40,18 +40,6 @@ const Page = () => {
       .then((response) => {
         result = response.data;
 
-        // result.forEach((planet) => {
-        //   if (planet.defense) {
-        //     const currentDate = new Date();
-        //
-        //     planet.expiresIn = new Date(
-        //       currentDate.getTime() + 24 * 60 * 60 * 1000,
-        //     );
-        //   }
-        // });
-
-        console.log(result);
-
         changeIsRequestError(false);
         setActiveCampaigns(response.data);
         changeIsActiveCampaignsLoaded(true);
@@ -188,7 +176,7 @@ const Page = () => {
                     playersCount={activeCampaign.players}
                     planetRegenArray={planetRegenArray}
                     isDefense={activeCampaign.defense}
-                    expiresIn={activeCampaign?.expiresIn}
+                    expiresIn={activeCampaign?.expireDateTime}
                   />
                 ))
               : !isRequestError &&
