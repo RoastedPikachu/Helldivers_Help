@@ -81,7 +81,7 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
   };
 
   const getHelldiversRegen = () => {
-    return playersCount * impactMultiplier * 0.003 - 0.08;
+    return Number(playersCount * impactMultiplier * 0.003 - 0.08);
   };
 
   useEffect(() => {
