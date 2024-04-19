@@ -86,10 +86,14 @@
     @apply flex items-center px-[20px] w-full h-full border-2 border-[#ffffff] rounded-b-[5px];
 }
 
-.rootActiveCampaignWidget_Bottom_Wrapper_Icon {
+.rootActiveCampaignWidget_Bottom_Wrapper_Block {
+    @apply flex items-center;
+}
+
+.rootActiveCampaignWidget_Bottom_Wrapper_Block_Icon {
     @apply w-[25px] h-[25px];
 }
 
-.rootActiveCampaignWidget_Bottom_Wrapper_NumberText {
+.rootActiveCampaignWidget_Bottom_Wrapper_Block_NumberText {
     @apply ml-[10px] text-[1.375rem] font-['Insignia'] font-bold;
 }

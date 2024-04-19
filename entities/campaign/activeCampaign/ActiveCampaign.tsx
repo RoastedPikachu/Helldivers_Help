@@ -10,21 +10,23 @@ import "./ActiveCampaign.css";
 interface ActiveCampaignProps {
   planetIndex: number;
   fraction: string;
+  isDefense: boolean;
+  expiresIn: Date;
   percentage: number;
   playersCount: number;
   planetRegenArray: any[];
-  isDefense: boolean;
-  expiresIn: Date;
+  impactMultiplier: number;
 }
 
 const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
   planetIndex,
   fraction,
+  isDefense,
+  expiresIn,
   percentage,
   playersCount,
   planetRegenArray,
-  isDefense,
-  expiresIn,
+  impactMultiplier,
 }) => {
   const [targetCampaignPlanet, setTargetCampaignPlanet] = useState({} as any);
 
@@ -78,7 +80,16 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
     return percentage;
   };
 
+  const getHelldiversRegen = () => {
+    return playersCount * impactMultiplier * 0.003 - 0.08;
+  };
+
   useEffect(() => {
+    console.log(
+      planetRegenArray.find((planet) => planet.index === planetIndex)
+        ?.regenPerSecond,
+    );
+
     const regenPerHour = isDefense
       ? 4.2
       : +(
@@ -193,27 +204,42 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
 
         <div className="rootActiveCampaignWidget_Bottom">
           <div className="rootActiveCampaignWidget_Bottom_Wrapper justify-between">
-            <div className="flex items-center">
+            <div className="rootActiveCampaignWidget_Bottom_Wrapper_Block">
               <img
                 src="/static/GeneralIcons/HelldiverIcon.png"
                 alt=""
-                className="rootActiveCampaignWidget_Bottom_Wrapper_Icon"
+                className="rootActiveCampaignWidget_Bottom_Wrapper_Block_Icon"
               />
 
-              <p className="rootActiveCampaignWidget_Bottom_Wrapper_NumberText text-[#ffe702]">
+              <p className="rootActiveCampaignWidget_Bottom_Wrapper_Block_NumberText text-[#ffe702]">
                 {playersCount}
               </p>
             </div>
 
-            <div className="flex items-center">
+            <div className="rootActiveCampaignWidget_Bottom_Wrapper_Block">
+              <img
+                src="/static/GeneralIcons/SuperEarthIcon.png"
+                alt=""
+                className="rootActiveCampaignWidget_Bottom_Wrapper_Block_Icon"
+              />
+
+              <p className="rootActiveCampaignWidget_Bottom_Wrapper_Block_NumberText text-[#46b7f8]">
+                {getHelldiversRegen().toFixed(3) > 1
+                  ? getHelldiversRegen().toFixed(3)
+                  : "< 1.000"}
+                %
+              </p>
+            </div>
+
+            <div className="rootActiveCampaignWidget_Bottom_Wrapper_Block">
               <img
                 src={`${getEnemyIcon()}`}
                 alt=""
-                className="rootActiveCampaignWidget_Bottom_Wrapper_Icon"
+                className="rootActiveCampaignWidget_Bottom_Wrapper_Block_Icon"
               />
 
               <p
-                className={`rootActiveCampaignWidget_Bottom_Wrapper_NumberText ${getEnemyTextColor()}`}
+                className={`rootActiveCampaignWidget_Bottom_Wrapper_Block_NumberText ${getEnemyTextColor()}`}
               >
                 {isDefense ? "" : "- "}
                 {isNaN(targetCampaignPlanet.regenPerHour)
