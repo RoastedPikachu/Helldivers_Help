@@ -27,6 +27,8 @@ const Page = () => {
   const [planetRegenArray, setPlanetRegenArray] = useState([] as any);
   const [order, setOrder] = useState({} as Order);
 
+  const [impactMultiplier, setImpactMultiplier] = useState(0);
+
   const [isRequestError, changeIsRequestError] = useState(false);
   const [isActiveCampaignsLoaded, changeIsActiveCampaignsLoaded] =
     useState(false);
@@ -56,6 +58,7 @@ const Page = () => {
     axios
       .get("https://helldiverstrainingmanual.com/api/v1/war/status")
       .then((response) => {
+        setImpactMultiplier(response.data.impactMultiplier);
         setPlanetRegenArray(response.data.planetStatus);
       })
       .catch(() => {
@@ -108,8 +111,8 @@ const Page = () => {
     getPlanetRegen();
     getMajorOrder();
 
-    let campaignInterval = setInterval(() => getActiveCampaigns(), 5000) as any;
-    let planetRegenInterval = setInterval(() => getPlanetRegen(), 15000) as any;
+    let campaignInterval = setInterval(() => getActiveCampaigns(), 2500) as any;
+    let planetRegenInterval = setInterval(() => getPlanetRegen(), 60000) as any;
 
     return () => {
       campaignInterval = null;
@@ -157,26 +160,29 @@ const Page = () => {
 
           {!isMajorOrderLoaded && <MajorOrderBlank />}
 
-          {isMajorOrderLoaded && !order.title && <NoMajorOrder />}
+          {!isMajorOrderLoaded && !order.title && <NoMajorOrder />}
         </section>
 
         <section className="ml-[30px]">
           <ThePageTitle title={"активные сражения"} additionalTitle={""} />
 
           <div className="activeEfforts">
-            {isRequestError && <ActiveCampaignError />}
+            {!isActiveCampaignsLoaded && isRequestError && (
+              <ActiveCampaignError />
+            )}
 
-            {isActiveCampaignsLoaded
+            {isActiveCampaignsLoaded && !isRequestError
               ? activeCampaigns.map((activeCampaign) => (
                   <ActiveCampaign
                     key={activeCampaign.planetIndex}
                     planetIndex={activeCampaign.planetIndex}
                     fraction={activeCampaign.faction}
+                    isDefense={activeCampaign.defense}
+                    expiresIn={activeCampaign?.expireDateTime}
                     percentage={activeCampaign.percentage}
                     playersCount={activeCampaign.players}
                     planetRegenArray={planetRegenArray}
-                    isDefense={activeCampaign.defense}
-                    expiresIn={activeCampaign?.expireDateTime}
+                    impactMultiplier={impactMultiplier}
                   />
                 ))
               : !isRequestError &&
