@@ -103,4 +103,10 @@ export const biomes: BiomesObject = {
       "Наша планета Земля, только более свободная, демократичная и процветающая.",
     imagePath: "/static/Biomes/SuperEarthImage.webp",
   },
+  cyberstan: {
+    surface: "киберстан",
+    description:
+      "Когда-то бывший оплотом киборгов-предателей, Новый Киберстан теперь находится под властью Легиона Автоматонов.",
+    imagePath: "/static/Biomes/CyberstanImage.webp",
+  },
 };

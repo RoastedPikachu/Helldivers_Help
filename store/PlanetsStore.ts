@@ -2287,8 +2287,8 @@ class PlanetsStore {
       id: 6,
       name: "Киберстан",
       sector: galaxySectors.valdis,
-      biome: biomes.canyon,
-      weatherConditions: [weatherConditions.tremors],
+      biome: biomes.cyberstan,
+      weatherConditions: [weatherConditions.extremeCold],
     },
   };
 
