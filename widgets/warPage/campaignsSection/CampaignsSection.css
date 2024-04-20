@@ -1,0 +1,7 @@
+.campaignsSection {
+    @apply mt-[-20px] ml-[30px];
+}
+
+.campaignsSection_ActiveCampaigns {
+    @apply grid grid-cols-1 gap-y-[30px] mt-[30px] w-[450px];
+}
