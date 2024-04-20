@@ -224,9 +224,9 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
               />
 
               <p className="rootActiveCampaignWidget_Bottom_Wrapper_Block_NumberText text-[#46b7f8]">
-                {getHelldiversRegen().toFixed(3) > 1
+                {Number(getHelldiversRegen().toFixed(3)) > 0.5
                   ? getHelldiversRegen().toFixed(3)
-                  : "< 1.000"}
+                  : "< 0.500"}
                 %
               </p>
             </div>
