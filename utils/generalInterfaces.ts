@@ -65,11 +65,7 @@ export interface Enemy {
   description: string;
   tactics: string;
   notes: string;
-}
-
-export interface CurrentEnemy {
-  id: number;
-  fraction: string;
+  types: string;
 }
 
 export interface ResourceTableTitle {
