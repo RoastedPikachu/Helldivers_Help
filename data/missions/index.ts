@@ -164,7 +164,7 @@ export const automatonMissions = [
   },
   {
     id: 3,
-    imagePath: "/static/Missions/.svg",
+    imagePath: "/static/Missions/KillFactoryStriderIcon.svg",
     title: "Уничтожьте шатун-завод автоматонов",
     description: "Найдите и уничтожьте шатун-завод автоматонов.",
     level: "4",
