@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 
 import { fractions } from "@/data/fractions";
@@ -17,6 +16,10 @@ import Enemy from "@/entities/enemiesPage/enemy/Enemy";
 
 import "@/app/pageSections.css";
 import "./EnemyPage.css";
+
+export function generateStaticParams() {
+  return [{ fractionName: "terminids" }, { fractionName: "automatons" }];
+}
 
 const Page: React.FC<{ params: any }> = ({ params }) => {
   const getEnemyPageTitle = () => {
