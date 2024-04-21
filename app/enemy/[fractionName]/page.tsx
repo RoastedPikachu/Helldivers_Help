@@ -3,17 +3,17 @@ import React from "react";
 
 import { fractions } from "@/data/fractions";
 
-import { enemyTypeStore } from "@/store/EnemiesStore";
+import { enemiesStore } from "@/store/EnemiesStore";
 
-import TheHeader from "@/widgets/TheHeader";
+import TheHeader from "@/widgets/header/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
 
 import RunningLine from "@/shared/RunningLine";
-import TheScrollToUpButton from "@/shared/TheScrollToUpButton/TheScrollToUpButton";
+import TheScrollToUpButton from "@/shared/theScrollToUpButton/TheScrollToUpButton";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 
-import Enemy from "@/entities/enemiesPage/enemyType/Enemy";
+import Enemy from "@/entities/enemiesPage/enemy/Enemy";
 
 import "@/app/pageSections.css";
 import "./EnemyPage.css";
@@ -77,7 +77,7 @@ const Page: React.FC<{ params: any }> = ({ params }) => {
 
         <section className="pageGridSection grid-cols-3">
           {params.fractionName === "terminids"
-            ? enemyTypeStore.terminids.map((terminid) => (
+            ? enemiesStore.terminids.map((terminid) => (
                 <Enemy
                   key={terminid.id}
                   id={terminid.id}
@@ -88,7 +88,7 @@ const Page: React.FC<{ params: any }> = ({ params }) => {
                   title={terminid.title}
                 />
               ))
-            : enemyTypeStore.automatons.map((automaton) => (
+            : enemiesStore.automatons.map((automaton) => (
                 <Enemy
                   key={automaton.id}
                   id={automaton.id}
