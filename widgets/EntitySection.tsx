@@ -1,6 +1,6 @@
 import React from "react";
 
-import SectionTitle from "@/shared/SectionTitle/SectionTitle";
+import SectionTitle from "@/shared/sectionTitle/SectionTitle";
 
 import "@/app/pageSections.css";
 

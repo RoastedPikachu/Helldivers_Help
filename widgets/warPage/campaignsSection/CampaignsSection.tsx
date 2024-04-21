@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import axios from "axios";
 
-import SectionTitle from "@/shared/SectionTitle/SectionTitle";
+import SectionTitle from "@/shared/sectionTitle/SectionTitle";
 
 import ActiveCampaignError from "@/entities/campaign/activeCampaignError/ActiveCampaignError";
 import ActiveCampaign from "@/entities/campaign/activeCampaign/ActiveCampaign";
@@ -69,7 +69,7 @@ const CampaignsSection = () => {
     let campaignInterval = setInterval(() => getActiveCampaigns(), 1000) as any;
     let planetsAdditionalDataInterval = setInterval(
       () => getPlanetsAdditionalData(),
-      60000,
+      1000,
     ) as any;
 
     return () => {

@@ -1,0 +1,27 @@
+header {
+    @apply relative flex justify-between items-center deskWide:mx-[calc((100%-1440px)/2)] px-[5%] deskWide:px-0 w-full max-w-[1440px] h-[65px];
+}
+
+.headerLogoLink {
+    @apply flex items-center h-full outline-none;
+}
+
+.headerLogoLink_Icon {
+    @apply w-[40px] h-[40px];
+}
+
+.headerLogoLink_Text {
+    @apply ml-[10px] text-[#ffffff] text-[2rem] font-['Insignia'] font-bold;
+}
+
+.headerLogoLink_Text_Bold {
+    @apply text-[#2cc384];
+}
+
+.headerNavBlock {
+    @apply grid items-center grid-cols-4 gap-x-[30px] w-auto;
+}
+
+.headerNavBlock_Link {
+    @apply text-[#ffffff] text-[1.375rem] text-center font-['Exo2'] font-bold outline-none;
+}

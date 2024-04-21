@@ -5,7 +5,7 @@ import axios from "axios";
 
 import { Order } from "@/utils/componentInterfaces";
 
-import SectionTitle from "@/shared/SectionTitle/SectionTitle";
+import SectionTitle from "@/shared/sectionTitle/SectionTitle";
 
 import MajorOrderError from "@/entities/orders/majorOrderError/MajorOrderError";
 import MajorOrder from "@/entities/orders/majorOrder/MajorOrder";
