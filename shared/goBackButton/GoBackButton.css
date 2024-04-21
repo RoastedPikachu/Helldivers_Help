@@ -1,0 +1,7 @@
+.buttonLink {
+    @apply absolute top-[150px] left-[15px];
+}
+
+.buttonLink_Icon {
+    @apply mt-[5px] deskWide:mt-0 w-[40px] deskWide:w-[50px] h-[40px] deskWide:h-[50px];
+}
