@@ -7,7 +7,7 @@
 }
 
 .rootMajorOrderWidget_Top_Title {
-    @apply text-[#ffffff] text-[2rem] font-['Exo2'] font-bold;
+    @apply max-w-[680px] text-[#ffffff] text-[2rem] font-['Exo2'] font-bold overflow-hidden overflow-ellipsis;
 }
 
 .rootMajorOrderWidget_Top_TimeLeft {

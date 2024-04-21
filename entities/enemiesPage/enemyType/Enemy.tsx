@@ -3,14 +3,15 @@ import React from "react";
 
 import Link from "next/link";
 
-import { enemyTypeStore } from "@/store/EnemiesStore";
+import { enemiesStore } from "@/store/EnemiesStore";
 
 import {
   getSpecificAutomatonStyle,
   getSpecificTerminidStyle,
 } from "@/utils/enemyTypeFunctions";
+import { toSlug } from "@/utils/generalFunctions";
 
-import "./EnemyType.css";
+import "./Enemy.css";
 
 interface EnemyTypeProps {
   id: number;
@@ -21,7 +22,7 @@ interface EnemyTypeProps {
   title: string;
 }
 
-const EnemyType: React.FC<EnemyTypeProps> = ({
+const Enemy: React.FC<EnemyTypeProps> = ({
   id,
   iconPath,
   imageStyleScale,
@@ -34,11 +35,17 @@ const EnemyType: React.FC<EnemyTypeProps> = ({
   };
 
   const handleCurrentEnemyTypeChange = () => {
-    enemyTypeStore.changeCurrentEnemyType(id, fraction);
+    fraction === "Терминиды"
+      ? enemiesStore.changeCurrentEnemy(
+          enemiesStore.terminids.find((enemy) => enemy.id === id)!,
+        )
+      : enemiesStore.changeCurrentEnemy(
+          enemiesStore.automatons.find((enemy) => enemy.id === id)!,
+        );
   };
   return (
     <Link
-      href={`/enemy/${getEnemyFraction()}/${title}`}
+      href={`/enemy/${getEnemyFraction()}/${toSlug(title)}`}
       onClick={() => handleCurrentEnemyTypeChange()}
       className="rootWidgetLink"
     >
@@ -64,4 +71,4 @@ const EnemyType: React.FC<EnemyTypeProps> = ({
   );
 };
 
-export default EnemyType;
+export default Enemy;

@@ -4,7 +4,7 @@ import React, { useState, useRef } from "react";
 import "./Stratagem.css";
 import Typewriter from "@/shared/Typewriter";
 import { Direction } from "@/utils/generalInterfaces";
-import LoadingSpinner from "@/shared/LoadingSpinner/LoadingSpinner";
+import LoadingSpinner from "@/shared/loadingSpinner/LoadingSpinner";
 
 interface StratagemProps {
   iconPath: string;
