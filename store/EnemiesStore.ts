@@ -3,8 +3,8 @@ import { makeAutoObservable } from "mobx";
 import { CurrentEnemy, Enemy } from "@/utils/generalInterfaces";
 import { fractions } from "@/data/fractions";
 
-class EnemyTypeStore {
-  currentEnemyType = {} as CurrentEnemy;
+class EnemiesStore {
+  currentEnemyType = {} as Enemy;
 
   terminids = [
     {
@@ -307,16 +307,13 @@ class EnemyTypeStore {
     makeAutoObservable(this);
   }
 
-  changeCurrentEnemyType(id: number, fraction: string) {
-    this.currentEnemyType = {
-      id: id,
-      fraction: fraction,
-    };
+  changeCurrentEnemy(enemy: Enemy) {
+    this.currentEnemyType = enemy;
   }
 
-  clearCurrentEnemyType() {
-    this.currentEnemyType = {} as CurrentEnemy;
+  clearCurrentEnemy() {
+    this.currentEnemyType = {} as Enemy;
   }
 }
 
-export const enemyTypeStore = new EnemyTypeStore();
+export const enemyTypeStore = new EnemiesStore();

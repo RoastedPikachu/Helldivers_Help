@@ -1,8 +1,9 @@
 "use client";
 import React from "react";
 
-import { enemyTypeStore } from "@/store/EnemyTypeStore";
-import { slidersStore } from "@/store/SlidersStore";
+import Link from "next/link";
+
+import { enemyTypeStore } from "@/store/EnemiesStore";
 
 import {
   getSpecificAutomatonStyle,
@@ -28,13 +29,16 @@ const EnemyType: React.FC<EnemyTypeProps> = ({
   fraction,
   title,
 }) => {
-  const handleCurrentEnemyTypeChange = () => {
-    slidersStore.handleCurrentSlideChange(id);
+  const getEnemyFraction = () => {
+    return fraction === "Терминиды" ? "terminids" : "automatons";
+  };
 
+  const handleCurrentEnemyTypeChange = () => {
     enemyTypeStore.changeCurrentEnemyType(id, fraction);
   };
   return (
-    <div
+    <Link
+      href={`/enemy/${getEnemyFraction()}/${title}`}
       onClick={() => handleCurrentEnemyTypeChange()}
       className="rootWidgetLink"
     >
@@ -56,7 +60,7 @@ const EnemyType: React.FC<EnemyTypeProps> = ({
       <p className="mt-[20px] text-[#ffffff] text-[1.75rem] text-center font-['Exo2'] font-bold">
         {title}
       </p>
-    </div>
+    </Link>
   );
 };
 

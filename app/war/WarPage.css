@@ -17,7 +17,3 @@
 .galaxyMap_Wrapper_BlankBlock_Icon {
     @apply ml-[40px] w-[54px] h-[54px];
 }
-
-.activeEfforts {
-    @apply grid grid-cols-1 gap-y-[30px] mt-[30px] w-[450px];
-}

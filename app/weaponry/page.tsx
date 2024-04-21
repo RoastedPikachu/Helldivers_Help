@@ -21,7 +21,7 @@ import WeaponAdditionalInfoModalWindow from "@/entities/weaponryPage/weaponAddit
 import "swiper/css";
 import "swiper/css/navigation";
 
-import "./Weaponry.css";
+import "./WeaponryPage.css";
 import EntitySection from "@/widgets/EntitySection";
 import Weapon from "@/entities/weaponryPage/weapon/Weapon";
 

@@ -57,12 +57,12 @@ const Page = () => {
     },
     {
       id: 9,
-      link: "/terminids",
+      link: "/enemy/terminids",
       title: "Терминиды",
     },
     {
       id: 10,
-      link: "/automatons",
+      link: "/enemy/automatons",
       title: "Автоматоны",
     },
     {

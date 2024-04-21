@@ -9,7 +9,7 @@ import CampaignsSection from "@/widgets/warPage/campaignsSection/CampaignsSectio
 import RunningLine from "@/shared/RunningLine";
 import ThePageTitle from "@/shared/ThePageTitle";
 
-import "./War.css";
+import "./WarPage.css";
 
 const Page = () => {
   return (
