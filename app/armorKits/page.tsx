@@ -7,13 +7,13 @@ import { SwiperSlide } from "swiper/react";
 
 import { armorStore } from "@/store/ArmorKitsStore";
 
-import TheHeader from "@/widgets/TheHeader";
+import TheHeader from "@/widgets/header/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
 import ModalSlider from "@/widgets/modalSlider/ModalSlider";
 import EntitySection from "@/widgets/EntitySection";
 
 import RunningLine from "@/shared/RunningLine";
-import TheScrollToUpButton from "@/shared/TheScrollToUpButton/TheScrollToUpButton";
+import TheScrollToUpButton from "@/shared/theScrollToUpButton/TheScrollToUpButton";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 

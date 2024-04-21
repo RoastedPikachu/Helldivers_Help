@@ -3,12 +3,12 @@ import React from "react";
 
 import { shipModulesStore } from "@/store/ShipModulesStore";
 
-import TheHeader from "@/widgets/TheHeader";
+import TheHeader from "@/widgets/header/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
 import EntitySection from "@/widgets/EntitySection";
 
 import RunningLine from "@/shared/RunningLine";
-import TheScrollToUpButton from "@/shared/TheScrollToUpButton/TheScrollToUpButton";
+import TheScrollToUpButton from "@/shared/theScrollToUpButton/TheScrollToUpButton";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 

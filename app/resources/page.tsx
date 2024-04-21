@@ -4,12 +4,12 @@ import React, { useState } from "react";
 import { IResource, ResourceTableTitle } from "@/utils/generalInterfaces";
 import { resources } from "@/data/resources/";
 
-import TheHeader from "@/widgets/TheHeader";
+import TheHeader from "@/widgets/header/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
 import ResourceTable from "@/widgets/resourceTable/ResourceTable";
 
 import RunningLine from "@/shared/RunningLine";
-import TheScrollToUpButton from "@/shared/TheScrollToUpButton/TheScrollToUpButton";
+import TheScrollToUpButton from "@/shared/theScrollToUpButton/TheScrollToUpButton";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 

@@ -3,11 +3,11 @@ import React from "react";
 
 import { stratagemStore } from "@/store/StratagemStore";
 
-import TheHeader from "@/widgets/TheHeader";
+import TheHeader from "@/widgets/header/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
 
 import RunningLine from "@/shared/RunningLine";
-import TheScrollToUpButton from "@/shared/TheScrollToUpButton/TheScrollToUpButton";
+import TheScrollToUpButton from "@/shared/theScrollToUpButton/TheScrollToUpButton";
 
 import Stratagem from "@/entities/stratagem/Stratagem";
 

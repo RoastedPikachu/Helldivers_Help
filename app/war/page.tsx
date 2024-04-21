@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-import TheHeader from "@/widgets/TheHeader";
+import TheHeader from "@/widgets/header/TheHeader";
 import TheFooter from "@/widgets/TheFooter";
 import MajorOrderSection from "@/widgets/warPage/majorOrderSection/MajorOrderSection";
 import CampaignsSection from "@/widgets/warPage/campaignsSection/CampaignsSection";
