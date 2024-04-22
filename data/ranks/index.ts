@@ -88,7 +88,7 @@ export const ranks = [
   {
     id: 13,
     iconPath: "/static/Ranks/AdmirableAdmiralIcon.svg",
-    title: "Замечательный адмирал",
+    title: "Несравненный адмирал",
     fromLevel: 70,
     xpCount: 256400,
   },
