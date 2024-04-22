@@ -5,16 +5,17 @@ import "./WeatherConditionAdditionalInfoModalWindow.css";
 
 interface WeatherConditionAdditionalInfoProps {
   isVisible: boolean;
+  borderStyle: string;
   name: string;
   description: string;
 }
 
 const WeatherConditionAdditionalInfoModalWindow: React.FC<
   WeatherConditionAdditionalInfoProps
-> = ({ isVisible, name, description }) => {
+> = ({ isVisible, borderStyle, name, description }) => {
   return (
     <div
-      className={`${isVisible ? "top-[50px] opacity-100 z-30" : "top-[65px] opacity-0 cursor-default"} weatherConditionAdditionalInfoWindow`}
+      className={`weatherConditionAdditionalInfoWindow ${isVisible ? "top-[50px] opacity-100 z-30" : "top-[65px] opacity-0 cursor-default"} ${borderStyle}`}
     >
       <h3 className="weatherConditionAdditionalInfoWindow_Title">{name}</h3>
 

@@ -65,6 +65,7 @@ const Planet: React.FC<PlanetProps> = ({
 
             <WeatherConditionAdditionalInfoModalWindow
               isVisible={targetWeatherConditionId === weatherCondition.id}
+              borderStyle={"border-[--theme-color]"}
               name={weatherCondition.name}
               description={weatherCondition.description}
             />

@@ -1,5 +1,5 @@
 .weatherConditionAdditionalInfoWindow {
-    @apply absolute right-[20px] py-[15px] px-[20px] w-[200px] h-auto bg-[#00293a] border-2 border-[--theme-color] rounded-[7.5px] duration-[400ms] ease-in-out;
+    @apply absolute right-[20px] py-[15px] px-[20px] w-[200px] h-auto bg-[#00293a] border-2 rounded-[7.5px] duration-[400ms] ease-in-out;
 }
 
 .weatherConditionAdditionalInfoWindow_Title {

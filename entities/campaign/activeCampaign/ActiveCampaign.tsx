@@ -6,6 +6,7 @@ import { planetsStore } from "@/store/PlanetsStore";
 import { timeFromNow } from "@/utils/timeFunctions";
 
 import "./ActiveCampaign.css";
+import WeatherConditionAdditionalInfoModalWindow from "@/entities/planetsPage/weatherConditionAdditionalInfo/WeatherConditionAdditionalInfoModalWindow";
 
 interface ActiveCampaignProps {
   planetIndex: number;
@@ -29,6 +30,7 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
   impactMultiplier,
 }) => {
   const [targetCampaignPlanet, setTargetCampaignPlanet] = useState({} as any);
+  const [targetWeatherConditionId, setTargetWeatherConditionId] = useState(0);
 
   const getEnemyIcon = () => {
     if (fraction.toLowerCase() == "terminids") {
@@ -161,7 +163,18 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
                   <img
                     src={`${weatherCondition.iconPath}`}
                     alt=""
+                    onMouseEnter={() =>
+                      setTargetWeatherConditionId(weatherCondition.id)
+                    }
+                    onMouseLeave={() => setTargetWeatherConditionId(0)}
                     className="rootActiveCampaignWidget_Center_WeatherConditions_Block_ImageWrapper_Image"
+                  />
+
+                  <WeatherConditionAdditionalInfoModalWindow
+                    isVisible={targetWeatherConditionId === weatherCondition.id}
+                    borderStyle={getEnemyBorderColor()}
+                    name={weatherCondition.name}
+                    description={weatherCondition.description}
                   />
                 </div>
               ),
