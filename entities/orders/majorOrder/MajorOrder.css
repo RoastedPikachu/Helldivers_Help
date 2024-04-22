@@ -47,7 +47,7 @@
 }
 
 .rootMajorOrderWidget_Bottom {
-    @apply flex items-center my-[20px] mx-[20px] px-[calc((100%-280px)/2)] w-[calc(100%-40px)] h-[60px] bg-[url('/static/MajorOrderRewardBackgroundImage.png')];
+    @apply flex items-center my-[20px] mx-[20px] px-[calc((100%-280px)/2)] w-[calc(100%-40px)] h-[60px] bg-[url('/static/MajorOrderRewardBackgroundImage.png')] bg-cover bg-no-repeat;
 }
 
 .rootMajorOrderWidget_Bottom_LeftText {

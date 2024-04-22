@@ -40,6 +40,13 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
     return "/static/GeneralIcons/AutomatonsIcon.svg";
   };
 
+  const getEnemyColor = () => {
+    if (fraction.toLowerCase() == "terminids") {
+      return "#ffc000";
+    }
+    return "#ff6161";
+  };
+
   const getEnemyBorderColor = () => {
     if (fraction.toLowerCase() == "terminids") {
       return "border-[#ffc000]";
@@ -229,19 +236,54 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
 
         <div className="rootActiveCampaignWidget_Percentage">
           <div className="rootActiveCampaignWidget_Percentage_Wrapper">
-            <span className="flex items-center">
-              <p className="rootActiveCampaignWidget_Percentage_Wrapper_NumberText">
+            <span className="rootActiveCampaignWidget_Percentage_Wrapper_Left">
+              <p className="rootActiveCampaignWidget_Percentage_Wrapper_Left_NumberText">
                 {percentage.toFixed(3)}%
               </p>
 
-              <p className="rootActiveCampaignWidget_Percentage_Wrapper_Text">
+              <p className="rootActiveCampaignWidget_Percentage_Wrapper_Left_Text">
                 {isDefense ? "Защищено" : "Освобождено"}
               </p>
             </span>
 
-            <p className="rootActiveCampaignWidget_Percentage_Wrapper_Text">
-              {getLiberationPerHourPercent()}% / ч.
-            </p>
+            <div className="rootActiveCampaignWidget_Percentage_Wrapper_Right">
+              <svg
+                width="64"
+                height="64"
+                viewBox="0 0 64 64"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className={`rootActiveCampaignWidget_Percentage_Wrapper_Right_Icon ${
+                  Number(getHelldiversRegen().toFixed(3)) >
+                  targetCampaignPlanet.regenPerHour
+                    ? "rotate-180"
+                    : ""
+                }`}
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M24.2899 33.2453V10H4L18.6087 33.2453H24.2899ZM39.7101 10H60L45.3913 33.2453H39.7101V10ZM28.3478 10H35.6522V37.3962H42.9565L32.4058 54L21.0435 37.3962H28.3478"
+                  fill={
+                    Number(getHelldiversRegen().toFixed(3)) >
+                    targetCampaignPlanet.regenPerHour
+                      ? "#46b7f8"
+                      : getEnemyColor()
+                  }
+                />
+              </svg>
+
+              <p
+                className={`rootActiveCampaignWidget_Percentage_Wrapper_Right_Text ${
+                  Number(getHelldiversRegen().toFixed(3)) >
+                  targetCampaignPlanet.regenPerHour
+                    ? "text-[#46b7f8]"
+                    : getEnemyTextColor()
+                }`}
+              >
+                {getLiberationPerHourPercent()}% / ч.
+              </p>
+            </div>
           </div>
         </div>
 
