@@ -3,5 +3,5 @@
 }
 
 .campaignsSection_ActiveCampaigns {
-    @apply grid grid-cols-1 gap-y-[30px] mt-[30px] w-[450px];
+    @apply grid grid-cols-1 gap-y-[30px] mt-[25px] w-[450px];
 }

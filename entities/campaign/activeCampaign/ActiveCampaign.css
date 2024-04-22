@@ -1,9 +1,5 @@
-.widgetStatus {
-    @apply text-[#ffffff] text-[1.5rem] font-['Exo2'] font-semibold;
-}
-
 .rootActiveCampaignWidget {
-   @apply relative mt-[5px] w-[450px] h-auto bg-[#00293a] border-2 rounded-[10px] overflow-hidden;
+   @apply relative w-[450px] h-auto bg-[#00293a] border-2 rounded-[10px] overflow-hidden;
 }
 
 .rootActiveCampaignWidget_Top {
@@ -27,7 +23,19 @@
 }
 
 .rootActiveCampaignWidget_Center {
-    @apply relative w-full h-[150px];
+    @apply relative w-full h-[185px];
+}
+
+.rootActiveCampaignWidget_Center_Status {
+    @apply absolute flex justify-center items-center px-[20px] w-full h-[35px] bg-[#00000073];
+}
+
+.rootActiveCampaignWidget_Center_Status_Icon {
+    @apply w-[20px] h-[20px];
+}
+
+.rootActiveCampaignWidget_Center_Status_Text {
+    @apply mt-[-1.5px] ml-[10px] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-semibold;
 }
 
 .rootActiveCampaignWidget_Center_Image {

@@ -83,13 +83,13 @@ const CampaignsSection = () => {
 
       {isActiveCampaignsReceiveError && <ActiveCampaignError />}
 
-      {!isActiveCampaignsLoaded &&
-        !isActiveCampaignsReceiveError &&
-        [1, 2, 3].map((blank, index) => (
-          <ActiveCampaignBlank key={index + 1} />
-        ))}
-
       <div className="campaignsSection_ActiveCampaigns">
+        {!isActiveCampaignsLoaded &&
+          !isActiveCampaignsReceiveError &&
+          [1, 2, 3].map((blank, index) => (
+            <ActiveCampaignBlank key={index + 1} />
+          ))}
+
         {isActiveCampaignsLoaded &&
           !isActiveCampaignsReceiveError &&
           activeCampaigns.map((activeCampaign) => (

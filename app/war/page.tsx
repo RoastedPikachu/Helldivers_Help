@@ -7,7 +7,7 @@ import MajorOrderSection from "@/widgets/warPage/majorOrderSection/MajorOrderSec
 import CampaignsSection from "@/widgets/warPage/campaignsSection/CampaignsSection";
 
 import RunningLine from "@/shared/RunningLine";
-import ThePageTitle from "@/shared/ThePageTitle";
+import SectionTitle from "@/shared/sectionTitle/SectionTitle";
 
 import "./WarPage.css";
 
@@ -20,7 +20,7 @@ const Page = () => {
 
       <main className="flex justify-between">
         <aside className="galaxyMap">
-          <ThePageTitle title={"карта галактики"} additionalTitle={""} />
+          <SectionTitle text={"КАРТА ГАЛАКТИКИ"} />
 
           <div className="galaxyMap_Wrapper">
             <div className="galaxyMap_Wrapper_BlankBlock">

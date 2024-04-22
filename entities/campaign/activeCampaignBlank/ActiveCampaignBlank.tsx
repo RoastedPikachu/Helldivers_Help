@@ -3,13 +3,7 @@ import React from "react";
 import "./ActiveCampaignBlank.css";
 
 const ActiveCampaignBlank = () => {
-  return (
-    <div>
-      <p className="blankText"></p>
-
-      <div className="blankBlock"></div>
-    </div>
-  );
+  return <div className="blankBlock"></div>;
 };
 
 export default ActiveCampaignBlank;

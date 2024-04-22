@@ -107,8 +107,6 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
   }, []);
   return (
     <div>
-      <h3 className="widgetStatus">{isDefense ? "Оборона" : "Освобождение"}</h3>
-
       <div className={`rootActiveCampaignWidget ${getEnemyBorderColor()}`}>
         <div className="rootActiveCampaignWidget_Top">
           <div className="rootActiveCampaignWidget_Top_Left">
@@ -135,6 +133,18 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
         </div>
 
         <div className="rootActiveCampaignWidget_Center">
+          <div className="rootActiveCampaignWidget_Center_Status">
+            <img
+              src={`/static/GeneralIcons/${isDefense ? "DefendIcon.svg" : "AttackIcon.svg"}`}
+              alt=""
+              className="rootActiveCampaignWidget_Center_Status_Icon"
+            />
+
+            <h3 className="rootActiveCampaignWidget_Center_Status_Text">
+              {isDefense ? "Оборона" : "Освобождение"}
+            </h3>
+          </div>
+
           <img
             src={`${targetCampaignPlanet.biome?.imagePath}`}
             alt=""

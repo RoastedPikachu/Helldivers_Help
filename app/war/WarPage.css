@@ -1,9 +1,9 @@
 .galaxyMap {
-    @apply relative w-[calc(100%-450px)] h-auto;
+    @apply relative mt-[-20px] w-[calc(100%-450px)] h-auto;
 }
 
 .galaxyMap_Wrapper {
-    @apply flex justify-center items-center mt-[30px] mb-[20px] w-full h-[600px] bg-[#000000] border-2 border-[#2cc388] rounded-[10px];
+    @apply flex justify-center items-center mt-[25px] mb-[20px] w-full h-[600px] bg-[#000000] border-2 border-[#2cc388] rounded-[10px];
 }
 
 .galaxyMap_Wrapper_BlankBlock {
