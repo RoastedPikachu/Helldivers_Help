@@ -72,7 +72,7 @@ const MajorOrderSection = () => {
   }, []);
   return (
     <section className="majorOrderSection">
-      <SectionTitle text={"ГЛАВНЫЙ ПРИКАЗ"} />
+      <SectionTitle text={"ПРИКАЗЫ"} />
 
       {isMajorOrderReceiveError && <MajorOrderError />}
 

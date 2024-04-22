@@ -3,7 +3,7 @@
 }
 
 .rootActiveCampaignWidget_Top {
-    @apply flex justify-between items-center px-[20px] w-full h-[50px] bg-[#000000] rounded-[10px];
+    @apply flex justify-between items-center px-[20px] w-full h-[50px] bg-[#000000] rounded-t-[10px];
 }
 
 .rootActiveCampaignWidget_Top_Left {

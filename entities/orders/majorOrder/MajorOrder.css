@@ -7,7 +7,7 @@
 }
 
 .rootMajorOrderWidget_Top_Title {
-    @apply max-w-[680px] text-[#ffffff] text-[2rem] font-['Exo2'] font-bold overflow-hidden overflow-ellipsis;
+    @apply text-[#ffffff] text-[2rem] font-['Exo2'] font-bold;
 }
 
 .rootMajorOrderWidget_Top_TimeLeft {
@@ -16,6 +16,14 @@
 
 .rootMajorOrderWidget_Description {
     @apply mt-[20px] px-[20px] text-[#2cc388] text-[1.25rem] font-['Exo2'] font-medium;
+}
+
+.rootMajorOrderWidget_TaskTitle {
+    @apply mt-[20px] mx-[20px] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-bold;
+}
+
+.rootMajorOrderWidget_TaskDescription {
+    @apply mt-[10px] mx-[20px] text-[#2cc388] text-[1.25rem] font-['Exo2'] font-medium;
 }
 
 .rootMajorOrderWidget_PlanetsBlock {
@@ -39,7 +47,7 @@
 }
 
 .rootMajorOrderWidget_Bottom {
-    @apply flex items-center mt-[20px] mx-[calc((100%-280px)/2)] w-[260px] h-[70px];
+    @apply flex items-center my-[20px] mx-[20px] px-[calc((100%-280px)/2)] w-[calc(100%-40px)] h-[60px] bg-[url('/static/MajorOrderRewardBackgroundImage.png')];
 }
 
 .rootMajorOrderWidget_Bottom_LeftText {

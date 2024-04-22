@@ -27,7 +27,7 @@ const MajorOrder: React.FC<MajorOrderProps> = ({
       {title && (
         <div className="rootMajorOrderWidget">
           <div className="rootMajorOrderWidget_Top">
-            <h3 className="rootMajorOrderWidget_Top_Title">{title}</h3>
+            <h3 className="rootMajorOrderWidget_Top_Title">Главный приказ</h3>
 
             <p className="rootMajorOrderWidget_Top_TimeLeft">
               {Math.floor(expiresIn / 24)}д {Math.floor(expiresIn % 24)}ч
@@ -35,6 +35,10 @@ const MajorOrder: React.FC<MajorOrderProps> = ({
           </div>
 
           <p className="rootMajorOrderWidget_Description">{description}</p>
+
+          <h4 className="rootMajorOrderWidget_TaskTitle">Задача:</h4>
+
+          <p className="rootMajorOrderWidget_TaskDescription">{title}</p>
 
           {targetPlanets.length && (
             <div className="rootMajorOrderWidget_PlanetsBlock">

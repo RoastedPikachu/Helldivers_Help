@@ -5,8 +5,9 @@ import { planetsStore } from "@/store/PlanetsStore";
 
 import { timeFromNow } from "@/utils/timeFunctions";
 
-import "./ActiveCampaign.css";
 import WeatherConditionAdditionalInfoModalWindow from "@/entities/planetsPage/weatherConditionAdditionalInfo/WeatherConditionAdditionalInfoModalWindow";
+
+import "./ActiveCampaign.css";
 
 interface ActiveCampaignProps {
   planetIndex: number;
