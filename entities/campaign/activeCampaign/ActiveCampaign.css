@@ -75,7 +75,7 @@
 }
 
 .rootActiveCampaignWidget_Percentage_Wrapper {
-    @apply flex items-center px-[20px] w-full h-full border-2 border-[#ffffff];
+    @apply flex justify-between items-center px-[20px] w-full h-full border-2 border-[#ffffff];
 }
 
 .rootActiveCampaignWidget_Percentage_Wrapper_NumberText {

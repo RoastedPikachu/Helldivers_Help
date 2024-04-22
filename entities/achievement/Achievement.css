@@ -15,7 +15,7 @@
 }
 
 .achievementWidget_Top_Image_TextWrapper_Title {
-    @apply text-[#ffffff] text-[1.75rem] font-['Exo2'] font-bold;
+    @apply text-[#ffffff] text-[1.5rem] font-['Exo2'] font-bold;
 }
 
 .achievementWidget_Top_Image_TextWrapper_Description {

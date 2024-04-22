@@ -11,6 +11,7 @@ import TheScrollToUpButton from "@/shared/theScrollToUpButton/TheScrollToUpButto
 
 import Stratagem from "@/entities/stratagem/Stratagem";
 
+import "@/app/pageSections.css";
 import "./StratagemsPage.css";
 
 const Page = () => {

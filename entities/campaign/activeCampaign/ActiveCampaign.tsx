@@ -83,17 +83,22 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
     return percentage;
   };
 
+  const getLiberationPerHourPercent = () => {
+    const liberationSymbol =
+      Number(getHelldiversRegen().toFixed(3)) >
+      targetCampaignPlanet.regenPerHour
+        ? "+"
+        : "";
+
+    return `${liberationSymbol}${(Number(getHelldiversRegen().toFixed(3)) - targetCampaignPlanet.regenPerHour).toFixed(3)}`;
+  };
+
   const getHelldiversRegen = () => {
     return Number(playersCount * impactMultiplier * 0.003 - 0.08);
   };
 
-  useEffect(() => {
-    console.log(
-      planetRegenArray.find((planet) => planet.index === planetIndex)
-        ?.regenPerSecond,
-    );
-
-    const regenPerHour = isDefense
+  const getPlanetRegenPerHourPercent = () => {
+    const planetRegenPerHourPercent = isDefense
       ? 4.2
       : +(
           ((planetRegenArray.find((planet) => planet.index === planetIndex)
@@ -103,10 +108,16 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
           100
         ).toFixed(1);
 
-    setTargetCampaignPlanet({
-      ...Object.values(planetsStore.planets)[planetIndex + 1],
-      regenPerHour: regenPerHour,
-    });
+    return !isNaN(planetRegenPerHourPercent) ? planetRegenPerHourPercent : NaN;
+  };
+
+  useEffect(() => {
+    if (!isNaN(getPlanetRegenPerHourPercent())) {
+      setTargetCampaignPlanet({
+        ...Object.values(planetsStore.planets)[planetIndex + 1],
+        regenPerHour: getPlanetRegenPerHourPercent(),
+      });
+    }
   }, []);
   return (
     <div>
@@ -216,12 +227,18 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
 
         <div className="rootActiveCampaignWidget_Percentage">
           <div className="rootActiveCampaignWidget_Percentage_Wrapper">
-            <p className="rootActiveCampaignWidget_Percentage_Wrapper_NumberText">
-              {percentage.toFixed(3)}%
-            </p>
+            <span className="flex items-center">
+              <p className="rootActiveCampaignWidget_Percentage_Wrapper_NumberText">
+                {percentage.toFixed(3)}%
+              </p>
+
+              <p className="rootActiveCampaignWidget_Percentage_Wrapper_Text">
+                {isDefense ? "Защищено" : "Освобождено"}
+              </p>
+            </span>
 
             <p className="rootActiveCampaignWidget_Percentage_Wrapper_Text">
-              {isDefense ? "Защищено" : "Освобождено"}
+              {getLiberationPerHourPercent()}% / ч.
             </p>
           </div>
         </div>

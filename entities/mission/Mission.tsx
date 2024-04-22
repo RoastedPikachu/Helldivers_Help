@@ -81,7 +81,7 @@ const Mission: React.FC<MissionProps> = ({
               </p>
 
               <p className="rootShipModuleBlock_Bottom_Table_Left_Text border-b-2 rounded-bl-[10px]">
-                Кол-во противников, которое необходимо уничтожить
+                Кол-во целей для завершения миссии
               </p>
             </div>
 
