@@ -22,7 +22,7 @@ const CurrentResourceInfo: React.FC<TargetResourceInfoProps> = ({
   return (
     <div className="px-[20px] border-l-2 border-[--theme-color]">
       <h3 className="text-[#ffffff] text-[2rem] font-['Exo2'] font-bold">
-        <Typewriter text={title} delay={80} />
+        <Typewriter text={title} delay={60} />
       </h3>
 
       {!prices?.length ? (
@@ -30,51 +30,55 @@ const CurrentResourceInfo: React.FC<TargetResourceInfoProps> = ({
           <b className="text-[--theme-color] brightness-125">
             На каких сложностях встречается:
           </b>{" "}
-          <Typewriter text={difficulties} delay={80} />
+          <Typewriter text={difficulties} delay={20} />
         </p>
       ) : (
         <>
           <p className="mt-[20px] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
-            <b className="text-[--theme-color] brightness-125">150 кредитов:</b>
-            <Typewriter text={prices[0]} delay={80} />
-          </p>
-
-          <p className="mt-[20px] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
-            <b className="text-[--theme-color] brightness-125">375 кредитов:</b>
-            <Typewriter text={prices[1]} delay={80} />
+            <b className="text-[--theme-color] brightness-125">
+              150 кредитов:{" "}
+            </b>
+            <Typewriter text={prices[0]} delay={40} />
           </p>
 
           <p className="mt-[20px] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
             <b className="text-[--theme-color] brightness-125">
-              1000 кредитов:
+              375 кредитов:{" "}
             </b>
-            <Typewriter text={prices[2]} delay={80} />
+            <Typewriter text={prices[1]} delay={40} />
           </p>
 
           <p className="mt-[20px] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
             <b className="text-[--theme-color] brightness-125">
-              2100 кредитов:
+              1000 кредитов:{" "}
             </b>
-            <Typewriter text={prices[3]} delay={80} />
+            <Typewriter text={prices[2]} delay={40} />
+          </p>
+
+          <p className="mt-[20px] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
+            <b className="text-[--theme-color] brightness-125">
+              2100 кредитов:{" "}
+            </b>
+            <Typewriter text={prices[3]} delay={40} />
           </p>
         </>
       )}
 
       <p className="mt-[20px] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
         <b className="text-[--theme-color] brightness-125">Способ получения:</b>{" "}
-        <Typewriter text={obtainingMethod} delay={60} />
+        <Typewriter text={obtainingMethod} delay={20} />
       </p>
 
       <p className="mt-[20px] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
         <b className="text-[--theme-color] brightness-125">Сфера применения:</b>{" "}
-        <Typewriter text={applicationScope} delay={80} />
+        <Typewriter text={applicationScope} delay={20} />
       </p>
 
       <p className="mt-[20px] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium brightness-75">
         <b className="text-[--theme-color] brightness-125">
           Какое максимальное значение ресурса на корабле:
         </b>{" "}
-        <Typewriter text={maxAmount} delay={80} />
+        <Typewriter text={maxAmount} delay={40} />
       </p>
     </div>
   );

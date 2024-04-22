@@ -46,7 +46,7 @@ const Page = () => {
           процветания в галактике.
         </p>
 
-        <section className="pageSection">
+        <section className="pageSection grid-cols-1">
           <div className="pageSection_Block">
             <h3 className="pageSection_Block_Title">ОРУЖИЕ ПОДДЕРЖКИ</h3>
 

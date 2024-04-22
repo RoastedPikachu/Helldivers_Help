@@ -15,7 +15,7 @@ const WeatherConditionAdditionalInfoModalWindow: React.FC<
 > = ({ isVisible, borderStyle, name, description }) => {
   return (
     <div
-      className={`weatherConditionAdditionalInfoWindow ${isVisible ? "top-[50px] opacity-100 z-30" : "top-[65px] opacity-0 cursor-default"} ${borderStyle}`}
+      className={`weatherConditionAdditionalInfoWindow ${isVisible ? "top-[50px] opacity-100 z-30" : "top-[65px] opacity-0 z-[-1] cursor-default"} ${borderStyle}`}
     >
       <h3 className="weatherConditionAdditionalInfoWindow_Title">{name}</h3>
 

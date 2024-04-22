@@ -7,8 +7,6 @@ import { armorStore } from "@/store/ArmorKitsStore";
 
 import { Bonus } from "@/utils/dataInterfaces";
 
-import Typewriter from "@/shared/Typewriter";
-
 import "./ArmorKitAdditionalInfoModalWindow.css";
 
 interface ArmorKitAdditionalInfoModalWindowProps {
@@ -132,7 +130,7 @@ const ArmorKitAdditionalInfoModalWindow: React.FC<ArmorKitAdditionalInfoModalWin
                   </h3>
 
                   <p className="currentArmor_Modal_Bottom_Top_Text">
-                    <Typewriter text={description} delay={20} />
+                    {description}
                   </p>
                 </div>
 

@@ -5,8 +5,6 @@ import { observer, Observer } from "mobx-react-lite";
 
 import { weaponsStore } from "@/store/WeaponsStore";
 
-import Typewriter from "@/shared/Typewriter";
-
 import "./WeaponAdditionalInfoModalWindow.css";
 import "@/app/modalsSlider.css";
 
@@ -82,15 +80,19 @@ const WeaponAdditionalInfoModa: React.FC<WeaponAdditionalInfoModaProps> =
                     </p>
 
                     <div className="currentWeapon_Modal_Top_TextBlock_Characteristic_Price">
-                      <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Price_Text">
+                      <p
+                        className={`currentWeapon_Modal_Top_TextBlock_Characteristic_Price_Text ${typeof price !== "string" ? "font-['Insignia']" : "mt-[-4px] font-['Exo2']"}`}
+                      >
                         {price}
                       </p>
 
-                      <img
-                        src="/static/Resources/MedalIcon.svg"
-                        alt=""
-                        className="currentWeapon_Modal_Top_TextBlock_Characteristic_Price_Image"
-                      />
+                      {typeof price !== "string" && (
+                        <img
+                          src="/static/Resources/MedalIcon.svg"
+                          alt=""
+                          className="currentWeapon_Modal_Top_TextBlock_Characteristic_Price_Image"
+                        />
+                      )}
                     </div>
                   </div>
 
@@ -185,7 +187,7 @@ const WeaponAdditionalInfoModa: React.FC<WeaponAdditionalInfoModaProps> =
                   </h3>
 
                   <p className="currentWeapon_Modal_Bottom_Top_Text">
-                    <Typewriter text={description} delay={20} />
+                    {description}
                   </p>
                 </div>
 

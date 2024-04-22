@@ -31,7 +31,7 @@
 }
 
 .currentWeapon_Modal_Top_TextBlock_Characteristic_Price_Text {
-    @apply text-[#ffffff] text-[1.75rem] font-['Insignia'] font-bold;
+    @apply text-[#ffffff] text-[1.75rem] font-bold;
 }
 
 .currentWeapon_Modal_Top_TextBlock_Characteristic_Price_Image {

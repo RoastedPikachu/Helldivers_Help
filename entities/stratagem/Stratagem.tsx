@@ -1,10 +1,11 @@
 "use client";
 import React, { useState, useRef } from "react";
 
-import "./Stratagem.css";
-import Typewriter from "@/shared/Typewriter";
 import { Direction } from "@/utils/generalInterfaces";
+
 import LoadingSpinner from "@/shared/loadingSpinner/LoadingSpinner";
+
+import "./Stratagem.css";
 
 interface StratagemProps {
   iconPath: string;
@@ -104,7 +105,7 @@ const Stratagem: React.FC<StratagemProps> = ({
       </div>
 
       <div
-        className={`rootStratagemBlock_Bottom ${isAdditionalInfoOpened ? "opacity-1" : videoPath && videoPreviewPath ? "mt-[-475px] opacity-0" : "mt-[-70px] opacity-0"}`}
+        className={`rootStratagemBlock_Bottom ${isAdditionalInfoOpened ? "opacity-1" : videoPath && videoPreviewPath ? "mt-[-485px] opacity-0 z-[-1]" : "mt-[-70px] opacity-0 z-[-1]"}`}
       >
         {videoPath && videoPreviewPath && (
           <div className="rootStratagemBlock_Bottom_Top">
@@ -208,11 +209,7 @@ const Stratagem: React.FC<StratagemProps> = ({
           </div>
         )}
 
-        <p className="rootStratagemBlock_Bottom_Description">
-          {isAdditionalInfoOpened && (
-            <Typewriter text={description} delay={30} />
-          )}
-        </p>
+        <p className="rootStratagemBlock_Bottom_Description">{description}</p>
       </div>
     </div>
   );

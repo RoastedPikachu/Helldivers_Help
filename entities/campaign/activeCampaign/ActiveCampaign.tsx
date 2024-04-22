@@ -112,6 +112,8 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
   };
 
   useEffect(() => {
+    console.log(!isNaN(getPlanetRegenPerHourPercent()));
+
     if (!isNaN(getPlanetRegenPerHourPercent())) {
       setTargetCampaignPlanet({
         ...Object.values(planetsStore.planets)[planetIndex + 1],
