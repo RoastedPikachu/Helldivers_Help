@@ -1,0 +1,28 @@
+.contentBlock {
+    @apply relative grid justify-items-center grid-rows-6 grid-cols-1 gap-y-[10px] w-auto h-auto;
+}
+
+.contentBlock_Title {
+    @apply row-span-3 text-[#2cc388] text-[10rem] text-center font-['Exo2'] font-bold;
+}
+
+.contentBlock_Bottom {
+    @apply grid justify-items-center grid-rows-3 row-span-3 h-[200px];
+}
+
+.contentBlock_Bottom_Title {
+    @apply text-[#ffffff] text-[2rem] text-center font-['Exo2'] font-bold;
+}
+
+.contentBlock_Bottom_Title_Bold {
+    @apply text-[#2cc388] text-[2.5rem] font-['Insignia'];
+}
+
+.contentBlock_Bottom_Text {
+    @apply text-[#ffffff] text-[1.375rem] text-center font-['Exo2'] font-medium;
+}
+
+.contentBlock_Bottom_LinkButton {
+    @apply flex justify-center items-center w-[350px] h-[55px] bg-[#2cc388] rounded-[10px] text-[#ffffff] text-[1.5rem] font-semibold outline-none;
+}
+
