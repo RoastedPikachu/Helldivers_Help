@@ -3,6 +3,7 @@ export interface Order {
   expiresIn: number;
   description: string;
   completedPlanets: number[];
+  targetCount: number;
   targetPlanets: number[];
   reward: number;
 }
