@@ -463,7 +463,7 @@ class WeaponsStore {
   grenades = [
     {
       id: 1,
-      imagePath: "/static/Weaponry/grenades/HEImage.webp",
+      imagePath: "/static/Weaponry/grenades/HighGrenadeImage.webp",
       weaponType: weaponTypes.grenade,
       name: "G-12 «Фугасная»",
       description:
