@@ -36,27 +36,24 @@ const MajorOrderSection = () => {
         changeMajorOrderReceiveErrorStatus(false);
         changeMajorOrderLoadStatus(true);
 
-        console.log(response);
+        const data = response.data[0];
 
         const orderPlanets =
-          response.data[0].setting.tasks[0].values[2] !== 0
-            ? [
-                ...response.data[0].setting.tasks.map(
-                  (task: any) => task.values[2],
-                ),
-              ]
+          data.setting.tasks[0].values[2] !== 0
+            ? [...data.setting.tasks.map((task: any) => task.values[2])]
             : [];
 
         setMajorOrder({
-          title: response.data[0].setting.taskDescription,
-          expiresIn: response.data[0].expiresIn / 60 / 60,
-          description: response.data[0].setting.overrideBrief,
-          completedPlanets: response.data[0].progress,
+          title: data.setting.taskDescription,
+          expiresIn: data.expiresIn / 60 / 60,
+          description: data.setting.overrideBrief,
           targetPlanets: orderPlanets,
-          reward: response.data[0].setting.reward.amount,
+          targetCount: data.setting.tasks[0].values[0],
+          completedPlanets: data.progress,
+          reward: data.setting.reward.amount,
         });
       })
-      .catch(() => {
+      .catch((error) => {
         changeMajorOrderReceiveErrorStatus(true);
       });
   };
@@ -88,6 +85,7 @@ const MajorOrderSection = () => {
           expiresIn={majorOrder.expiresIn}
           description={majorOrder.description}
           targetPlanets={majorOrder.targetPlanets}
+          targetCount={majorOrder.targetCount}
           completedPlanets={majorOrder.completedPlanets}
           reward={majorOrder.reward}
         />
