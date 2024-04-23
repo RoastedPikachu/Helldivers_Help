@@ -17,7 +17,7 @@ export const biomes: BiomesObject = {
     surface: "джунгли",
     description:
       "Эта богатая жизнью планета покрыта глубокими океанами, густыми лесами и роскошными лугами.",
-    imagePath: "/static/Biomes/JungleImage.webp",
+    imagePath: "/static/Biomes/VietnamImage.webp",
   },
   moon: {
     surface: "луна",

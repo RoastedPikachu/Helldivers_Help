@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import { Direction } from "@/utils/generalInterfaces";
 
@@ -77,6 +77,13 @@ const Stratagem: React.FC<StratagemProps> = ({
 
     return rotationAngle;
   };
+
+  useEffect(() => {
+    if (!isAdditionalInfoOpened) {
+      setPlayButtonClicksCount(3);
+      pauseVideo();
+    }
+  }, [isAdditionalInfoOpened]);
   return (
     <div className="rootStratagemBlock">
       <div
@@ -105,7 +112,7 @@ const Stratagem: React.FC<StratagemProps> = ({
       </div>
 
       <div
-        className={`rootStratagemBlock_Bottom ${isAdditionalInfoOpened ? "opacity-1" : videoPath && videoPreviewPath ? "mt-[-485px] opacity-0 z-[-1]" : "mt-[-70px] opacity-0 z-[-1]"}`}
+        className={`rootStratagemBlock_Bottom ${isAdditionalInfoOpened ? "opacity-1" : videoPath && videoPreviewPath ? "mt-[-505px] opacity-0 z-[-1]" : "mt-[-70px] opacity-0 z-[-1]"}`}
       >
         {videoPath && videoPreviewPath && (
           <div className="rootStratagemBlock_Bottom_Top">

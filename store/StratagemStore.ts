@@ -114,7 +114,7 @@ class StratagemStore {
       },
       {
         id: 3,
-        iconPath: "/static/Stratagems/StalwartIcon.png",
+        iconPath: "/static/Stratagems/LightMachineGunIcon.png",
         videoPath: "/static/StratagemVideos/StalwartVideo.mp4",
         videoPreviewPath: "/static/StratagemVideoPreviews/StalwartPreview.webp",
         type: stratagemTypes.supportWeapon,

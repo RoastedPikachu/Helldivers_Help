@@ -448,22 +448,22 @@ class WeaponsStore {
       name: "GP-31 «Пистолет-гранатомет»",
       description:
         "Пистолет, стреляющий гранатами. Его необходимо перезаряжать между выстрелами.",
-      price: 0,
+      price: 60,
       damage: 600,
-      magsCount: Infinity,
+      magsCount: 8,
       roundsPerMag: 1,
-      totalRounds: Infinity,
+      totalRounds: 8,
       recoil: 43,
       fireRate: 900,
-      totalDamage: Infinity,
-      dps: 9000,
+      totalDamage: 4800,
+      dps: 734,
     },
   ] as PrimaryOrSecondaryWeapon[];
 
   grenades = [
     {
       id: 1,
-      imagePath: "/static/Weaponry/grenades/HighExplosiveImage.webp",
+      imagePath: "/static/Weaponry/grenades/HEImage.webp",
       weaponType: weaponTypes.grenade,
       name: "G-12 «Фугасная»",
       description:
