@@ -46,8 +46,16 @@
     @apply text-[1.125rem] font-['Exo2'] font-semibold z-30 brightness-75;
 }
 
+.rootMajorOrderWidget_LiberationProgress {
+    @apply relative mx-[20px] py-[2px] px-[2px] w-[calc(100%-40px)] h-[34px] border-2 border-[#2cc388];
+}
+
+.rootMajorOrderWidget_LiberationProgress_ProgressBar {
+    @apply h-full bg-[#3db8fe];
+}
+
 .rootMajorOrderWidget_Bottom {
-    @apply flex items-center my-[20px] mx-[20px] px-[calc((100%-280px)/2)] w-[calc(100%-40px)] h-[60px] bg-[url('/static/MajorOrderRewardBackgroundImage.png')] bg-cover bg-no-repeat;
+    @apply flex items-center mt-[30px] mb-[20px] mx-[20px] px-[calc((100%-280px)/2)] w-[calc(100%-40px)] h-[60px] bg-[url('/static/MajorOrderRewardBackgroundImage.png')] bg-cover bg-no-repeat;
 }
 
 .rootMajorOrderWidget_Bottom_LeftText {

@@ -15,14 +15,24 @@ const MajorOrderError = () => {
       </p>
 
       <div className="rootMajorOrderErrorWidget_ErrorsBlock justify-around">
-        {[{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }].map((item) => (
-          <p className="rootMajorOrderErrorWidget_ErrorsBlock_Text">Ошибка!</p>
+        {[1, 2, 3, 4, 5].map((item, index) => (
+          <p
+            key={index + 1}
+            className="rootMajorOrderErrorWidget_ErrorsBlock_Text"
+          >
+            Ошибка!
+          </p>
         ))}
       </div>
 
       <div className="rootMajorOrderErrorWidget_ErrorsBlock justify-evenly">
-        {[{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }].map((item) => (
-          <p className="rootMajorOrderErrorWidget_ErrorsBlock_Text">Ошибка!</p>
+        {[1, 2, 3, 4, 5].map((item, index) => (
+          <p
+            key={index + 1}
+            className="rootMajorOrderErrorWidget_ErrorsBlock_Text"
+          >
+            Ошибка!
+          </p>
         ))}
       </div>
     </div>

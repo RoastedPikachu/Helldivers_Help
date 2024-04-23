@@ -10,6 +10,7 @@ interface MajorOrderProps {
   expiresIn: number;
   description: string;
   targetPlanets: any[];
+  targetCount: number;
   completedPlanets: number[];
   reward: number;
 }
@@ -19,9 +20,14 @@ const MajorOrder: React.FC<MajorOrderProps> = ({
   expiresIn,
   description,
   targetPlanets,
+  targetCount,
   completedPlanets,
   reward,
 }) => {
+  const getProgressWidth = () => {
+    return (completedPlanets[0] / targetCount) * 100;
+  };
+
   return (
     <>
       {title && (
@@ -65,6 +71,15 @@ const MajorOrder: React.FC<MajorOrderProps> = ({
                   </p>
                 </div>
               ))}
+            </div>
+          )}
+
+          {targetCount && !targetPlanets.length && (
+            <div className="rootMajorOrderWidget_LiberationProgress">
+              <div
+                style={{ width: `${getProgressWidth()}%` }}
+                className="rootMajorOrderWidget_LiberationProgress_ProgressBar"
+              ></div>
             </div>
           )}
 
