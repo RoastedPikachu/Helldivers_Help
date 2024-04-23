@@ -32,7 +32,7 @@ class WeaponsStore {
     },
     {
       id: 2,
-      imagePath: "/static/Weaponry/primary/AR23EImage.webp",
+      imagePath: "/static/Weaponry/primary/LibConcImage.webp",
       weaponType: weaponTypes.primary,
       name: "AR-23Е «Взрывной освободитель»",
       description:
@@ -49,7 +49,7 @@ class WeaponsStore {
     },
     {
       id: 3,
-      imagePath: "/static/Weaponry/primary/AR23PImage.webp",
+      imagePath: "/static/Weaponry/primary/LibPenImage.webp",
       weaponType: weaponTypes.primary,
       name: "AR-23P «Пробойный освободитель»",
       description:
@@ -463,7 +463,7 @@ class WeaponsStore {
   grenades = [
     {
       id: 1,
-      imagePath: "/static/Weaponry/grenades/G12HighExplosiveImage.webp",
+      imagePath: "/static/Weaponry/grenades/HighExplosiveImage.webp",
       weaponType: weaponTypes.grenade,
       name: "G-12 «Фугасная»",
       description:
