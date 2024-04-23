@@ -33,6 +33,8 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
   const [targetCampaignPlanet, setTargetCampaignPlanet] = useState({} as any);
   const [targetWeatherConditionId, setTargetWeatherConditionId] = useState(0);
 
+  const [regenPerHour, setRegenPerHour] = useState(0);
+
   const getEnemyIcon = () => {
     if (fraction.toLowerCase() == "terminids") {
       return "/static/GeneralIcons/TerminidsIcon.svg";
@@ -73,13 +75,13 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
       if (isDefense) {
         const expiresInPartsArray = timeFromNow(expiresIn).split(":");
 
-        if (!isNaN(targetCampaignPlanet.regenPerHour)) {
+        if (!isNaN(regenPerHour)) {
           return (
             ((24 * 60 -
               (Number(expiresInPartsArray[0]) * 60 +
                 Number(expiresInPartsArray[1]))) /
               60) *
-            targetCampaignPlanet.regenPerHour
+            regenPerHour
           );
         }
       } else {
@@ -92,12 +94,9 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
 
   const getLiberationPerHourPercent = () => {
     const liberationSymbol =
-      Number(getHelldiversRegen().toFixed(3)) >
-      targetCampaignPlanet.regenPerHour
-        ? "+"
-        : "";
+      Number(getHelldiversRegen().toFixed(3)) > regenPerHour ? "+" : "";
 
-    return `${liberationSymbol}${(Number(getHelldiversRegen().toFixed(3)) - targetCampaignPlanet.regenPerHour).toFixed(3)}`;
+    return `${liberationSymbol}${(Number(getHelldiversRegen().toFixed(3)) - regenPerHour).toFixed(3)}`;
   };
 
   const getHelldiversRegen = () => {
@@ -118,14 +117,25 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
     return !isNaN(planetRegenPerHourPercent) ? planetRegenPerHourPercent : NaN;
   };
 
+  const getSpecificRegenPerHourString = () => {
+    const percent = isNaN(regenPerHour)
+      ? 0
+      : regenPerHour % 1 === 0
+        ? `${regenPerHour}.0`
+        : regenPerHour;
+
+    const symbol = isDefense || percent == 0 ? "" : "- ";
+
+    return symbol + percent;
+  };
+
   useEffect(() => {
-    console.log(!isNaN(getPlanetRegenPerHourPercent()));
+    setTargetCampaignPlanet({
+      ...Object.values(planetsStore.planets)[planetIndex + 1],
+    });
 
     if (!isNaN(getPlanetRegenPerHourPercent())) {
-      setTargetCampaignPlanet({
-        ...Object.values(planetsStore.planets)[planetIndex + 1],
-        regenPerHour: getPlanetRegenPerHourPercent(),
-      });
+      setRegenPerHour(getPlanetRegenPerHourPercent());
     }
   }, []);
   return (
@@ -254,19 +264,17 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 className={`rootActiveCampaignWidget_Percentage_Wrapper_Right_Icon ${
-                  Number(getHelldiversRegen().toFixed(3)) >
-                  targetCampaignPlanet.regenPerHour
+                  Number(getHelldiversRegen().toFixed(3)) > regenPerHour
                     ? "rotate-180"
                     : ""
                 }`}
               >
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M24.2899 33.2453V10H4L18.6087 33.2453H24.2899ZM39.7101 10H60L45.3913 33.2453H39.7101V10ZM28.3478 10H35.6522V37.3962H42.9565L32.4058 54L21.0435 37.3962H28.3478"
                   fill={
-                    Number(getHelldiversRegen().toFixed(3)) >
-                    targetCampaignPlanet.regenPerHour
+                    Number(getHelldiversRegen().toFixed(3)) > regenPerHour
                       ? "#46b7f8"
                       : getEnemyColor()
                   }
@@ -275,8 +283,7 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
 
               <p
                 className={`rootActiveCampaignWidget_Percentage_Wrapper_Right_Text ${
-                  Number(getHelldiversRegen().toFixed(3)) >
-                  targetCampaignPlanet.regenPerHour
+                  Number(getHelldiversRegen().toFixed(3)) > regenPerHour
                     ? "text-[#46b7f8]"
                     : getEnemyTextColor()
                 }`}
@@ -326,13 +333,7 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
               <p
                 className={`rootActiveCampaignWidget_Bottom_Wrapper_Block_NumberText ${getEnemyTextColor()}`}
               >
-                {isDefense ? "" : "- "}
-                {isNaN(targetCampaignPlanet.regenPerHour)
-                  ? 0
-                  : targetCampaignPlanet.regenPerHour % 1 === 0
-                    ? `${targetCampaignPlanet.regenPerHour}.0`
-                    : targetCampaignPlanet.regenPerHour}
-                %
+                {getSpecificRegenPerHourString()}%
               </p>
             </div>
           </div>
