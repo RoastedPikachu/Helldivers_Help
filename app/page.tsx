@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { isMobileDevice } from "@/utils/generalFunctions";
 
 import TheHeader from "@/widgets/header/TheHeader";
-import TheFooter from "@/widgets/TheFooter";
+import TheFooter from "@/widgets/footer/TheFooter";
 
 import RunningLine from "@/shared/RunningLine";
 import TheScrollToUpButton from "@/shared/theScrollToUpButton/TheScrollToUpButton";

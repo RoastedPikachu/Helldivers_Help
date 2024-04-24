@@ -5,7 +5,7 @@ import { IResource, ResourceTableTitle } from "@/utils/generalInterfaces";
 import { resources } from "@/data/resources/";
 
 import TheHeader from "@/widgets/header/TheHeader";
-import TheFooter from "@/widgets/TheFooter";
+import TheFooter from "@/widgets/footer/TheFooter";
 import ResourceTable from "@/widgets/resourceTable/ResourceTable";
 
 import RunningLine from "@/shared/RunningLine";

@@ -4,7 +4,7 @@ import React from "react";
 import { observer, Observer } from "mobx-react-lite";
 
 import TheHeader from "@/widgets/header/TheHeader";
-import TheFooter from "@/widgets/TheFooter";
+import TheFooter from "@/widgets/footer/TheFooter";
 
 import RunningLine from "@/shared/RunningLine";
 import TheScrollToUpButton from "@/shared/theScrollToUpButton/TheScrollToUpButton";

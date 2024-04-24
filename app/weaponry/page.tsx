@@ -8,7 +8,7 @@ import { SwiperSlide } from "swiper/react";
 import { weaponsStore } from "@/store/WeaponsStore";
 
 import TheHeader from "@/widgets/header/TheHeader";
-import TheFooter from "@/widgets/TheFooter";
+import TheFooter from "@/widgets/footer/TheFooter";
 import ModalSlider from "@/widgets/modalSlider/ModalSlider";
 
 import RunningLine from "@/shared/RunningLine";

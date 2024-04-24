@@ -3,7 +3,7 @@ import React from "react";
 import { ranks } from "@/data/ranks";
 
 import TheHeader from "@/widgets/header/TheHeader";
-import TheFooter from "@/widgets/TheFooter";
+import TheFooter from "@/widgets/footer/TheFooter";
 import EntitySection from "@/widgets/EntitySection";
 import LevelsSection from "@/widgets/LevelsSection";
 

@@ -33,8 +33,8 @@ const EnemyAdditionalInfoNavigation = observer(() => {
 
   const handleCurrentEnemyChange = (isNextEnemy: boolean) => {
     isNextEnemy
-      ? enemiesStore.changeCurrentEnemy(getNextEnemy())
-      : enemiesStore.changeCurrentEnemy(getPreviousEnemy());
+      ? enemiesStore.changeCurrentEnemy(getNextEnemy()!)
+      : enemiesStore.changeCurrentEnemy(getPreviousEnemy()!);
   };
   return (
     <Observer>
