@@ -15,6 +15,7 @@ class EnemiesStore {
       iconPath: "/static/Terminids/ScavengerImage.webp",
       imageStyleScale: "scaleY(0.6)",
       title: "Мусорщик",
+      engTitle: "Scavenger",
       fraction: fractions["2"],
       description:
         "Мусорщик — это юная разновидность Воина, и он считается самым низшим звеном в пищевой цепочке терминидов, поэтому его можно найти на любой планете и с любой трудностью.",
@@ -30,6 +31,7 @@ class EnemiesStore {
       iconPath: "/static/Terminids/BileSpitterImage.webp",
       imageStyleScale: "scaleX(2.25)",
       title: "Желчный плеватель",
+      engTitle: "Bile Spitter",
       fraction: fractions["2"],
       description:
         "Одна из разновидностей мусорщика. Желчный плеватель — это подростковая разновидность желчного блевуна. Они появляются в небольших количествах во время патрулирования, атакуя с помощью когтей и желчного плевка.",
@@ -44,6 +46,7 @@ class EnemiesStore {
       iconPath: "/static/Terminids/PouncerImage.webp",
       imageStyleScale: "scaleY(0.8) scaleX(1.5)",
       title: "Прыгун",
+      engTitle: "Pouncer",
       fraction: fractions["2"],
       description:
         "Одна из разновидностей мусорщика. Прыгун является юной особью крикуна или охотника. Может преодолевать огромное расстояние за один прыжок благодаря своим крыльям.",
@@ -57,6 +60,7 @@ class EnemiesStore {
       iconPath: "/static/Terminids/ShriekerImage.webp",
       imageStyleScale: "scaleY(0.8) scaleX(1.5)",
       title: "Крикун",
+      engTitle: "Shrieker",
       fraction: fractions["2"],
       description:
         "Крикуны — это летающие терминиды среднего размера с большим размахом крыльев. Обычно они летают большими группами и используют тактику пикирования, чтобы убить Адского Десантника.",
@@ -70,6 +74,7 @@ class EnemiesStore {
       iconPath: "/static/Terminids/HunterImage.webp",
       imageStyleScale: "scaleX(3)",
       title: "Охотник",
+      engTitle: "Hunter",
       fraction: fractions["2"],
       description:
         "Охотники — подросшие прыгуны. С годами они не изменили свою тактику нападению и по прежнему пытаются как можно быстрее сократить дистанцию, обойти Адского Десантника с флангов и вцепится в него своими хищными когтями.",
@@ -84,6 +89,7 @@ class EnemiesStore {
       iconPath: "/static/Terminids/WarriorImage.webp",
       imageStyleScale: "scaleX(2.5)",
       title: "Воин",
+      engTitle: "Warrior",
       fraction: fractions["2"],
       description:
         "Воин является эволюцией мусорщика. Он передвигается с обычной скоростью и может атаковать только своими острыми когтями.",
@@ -99,6 +105,7 @@ class EnemiesStore {
       iconPath: "/static/Terminids/BileWarriorImage.webp",
       imageStyleScale: "scaleY(1.25) scaleX(3.5)",
       title: "Желчный Воин",
+      engTitle: "Bile Warrior",
       fraction: fractions["2"],
       description:
         "Желчный воин является одним из видов обычных войнов, который впоследствии эволюционирует в желчного титана. Их можно легко распознать по зеленому желчному мешку на их животе.",
@@ -112,6 +119,7 @@ class EnemiesStore {
       iconPath: "/static/Terminids/HiveGuardImage.webp",
       imageStyleScale: "scaleY(1.5) scaleX(-2)",
       title: "Страж улья",
+      engTitle: "Hive Guard",
       fraction: fractions["2"],
       description:
         "Страж улья — промежуточная стадия эволюции война и командира роя/громилы. В отличии от война передняя часть, а также голова стража улья защищена хитиновыми щитками, которыми он защищается от особо плотного огня Адских Десантников.",
@@ -126,6 +134,7 @@ class EnemiesStore {
       iconPath: "/static/Terminids/StalkerImage.webp",
       imageStyleScale: "scaleX(2.5)",
       title: "Следопыт",
+      engTitle: "Stalker",
       fraction: fractions["2"],
       description:
         "Следопыт — это мутировшая версия охотника. По неофициальным источникам мутация произошла в виду вмешательства ученых Супер-Земли в ДНК охотников. Неизвестно имели ли данные особи камуфляж изначально или же это еще одна мутация.",
@@ -140,6 +149,7 @@ class EnemiesStore {
       iconPath: "/static/Terminids/BroodCommanderImage.webp",
       imageStyleScale: "scaleX(2.5)",
       title: "Командир роя",
+      engTitle: "Brood Commander",
       fraction: fractions["2"],
       description:
         "Командир роя является генетической мутированным воином. Во время экспериментов по выведению лидерского генома после Первой галактической войны этот геном стал еще сильнее, а особи которые его имели обрели возможность управлять оставшимися группами терминидов. Теперь они и их подчиненные дают отпор своим поработителям.",
@@ -154,6 +164,7 @@ class EnemiesStore {
       iconPath: "/static/Terminids/NursingSpewerImage.webp",
       imageStyleScale: "scaleY(1.5) scaleX(2.25)",
       title: "Кормящий блевун",
+      engTitle: "Nursing Spewer",
       fraction: fractions["2"],
       description:
         "Кормящий блевун является слабозащищенной взрослой самкой терминида с брюшком полным яиц. Их очень легко идентифицировать по светло-оранжевому цвету брюшка.",
@@ -168,6 +179,7 @@ class EnemiesStore {
       iconPath: "/static/Terminids/BileSpewerImage.webp",
       imageStyleScale: "scaleX(2.25)",
       title: "Желчный блевун",
+      engTitle: "Bile Spewer",
       fraction: fractions["2"],
       description:
         "Желчный блевун является последней стадией эволюции кормящего блевуна. Он обзавелся хитиновыми панцирями, защищающими верх и переднюю часть.",
@@ -181,6 +193,7 @@ class EnemiesStore {
       iconPath: "/static/Terminids/ChargerImage.webp",
       imageStyleScale: "scaleX(2.5)",
       title: "Громила",
+      engTitle: "Charger",
       fraction: fractions["2"],
       description:
         "Громила — это очень большой и бронированный терминид. Нельзя точно сказать какое место он занимает в иерархии терминидов, но очевидно, что он несет большую опасность вашему отряду.",
@@ -194,6 +207,7 @@ class EnemiesStore {
       iconPath: "/static/Terminids/BileTitanImage.webp",
       imageStyleScale: "scaleX(2.5)",
       title: "Желчный титан",
+      engTitle: "Bile Titan",
       fraction: fractions["2"],
       description:
         "Желчный титан — это финал эволюции желчного война. Его тело почти полностью защищено хитиновым панцирем, а его гигантские лапы вместе с смертоносной желчью несут уничтожение каждому противнику. Несмотря на свои размеры перемещается с огромной скоростью и может очень быстро нагнать Адского Десантника.",
@@ -211,6 +225,7 @@ class EnemiesStore {
       iconPath: "/static/Automatons/TrooperImage.webp",
       imageStyleScale: "scaleX(3.5)",
       title: "Кавалерист",
+      engTitle: "Trooper",
       fraction: fractions["3"],
       description:
         "Кавалерист является основной боевой единицей автоматонов. Они могут быть вооружены штурмовыми винтовками, энергетическими лезвиями, пулеметами, ракетницами, пистолетами, скорострельными пушками.",
@@ -226,6 +241,7 @@ class EnemiesStore {
       iconPath: "/static/Automatons/ComissarImage.webp",
       imageStyleScale: "scaleX(3.5)",
       title: "Комиссар",
+      engTitle: "Comissar",
       fraction: fractions["3"],
       description:
         "Комиссар — это самый трусливый и неразумный боец автоматонов. Он оснащен примитивной командной программой и более быстрой способностью обрабатывать данные.",
@@ -240,6 +256,7 @@ class EnemiesStore {
       iconPath: "/static/Automatons/BerserkerImage.webp",
       imageStyleScale: "scaleY(1.2) scaleX(3.5)",
       title: "Берсерк",
+      engTitle: "Berserker",
       fraction: fractions["3"],
       description:
         "Берсерк — это автоматон, который абсолютно лишен модуля, который хоть как-то бы отвечал за рассчет. Единственная программа, которая движит им — сократить расстояние между пилами и Адским Десантником.",
@@ -254,6 +271,7 @@ class EnemiesStore {
       iconPath: "/static/Automatons/ScoutStriderImage.webp",
       imageStyleScale: "scaleX(3)",
       title: "Шатун-разведчик",
+      engTitle: "Scout Strider",
       fraction: fractions["3"],
       description:
         "Это шагоход с турелью, который управляется не особо умным автоматоном.",
@@ -268,6 +286,7 @@ class EnemiesStore {
       iconPath: "/static/Automatons/DevastatorImage.webp",
       imageStyleScale: "scaleX(3)",
       title: "Разрушитель",
+      engTitle: "Devastator",
       fraction: fractions["3"],
       description:
         "Разрушитель является более тяжелой и бронированной версией берсерка с более совершенным вооружением. Тоталитарное правительство автоматонов снабжает данные боевые единицы пушками, пулеметами, щитами, ракетницами.",
@@ -283,6 +302,7 @@ class EnemiesStore {
       iconPath: "/static/Automatons/HulkImage.webp",
       imageStyleScale: "scaleX(3)",
       title: "Глыба",
+      engTitle: "Hulk",
       fraction: fractions["3"],
       description:
         "Венец программной оптимизации, способный уничтожить половину отряда Адских Десантников. Сразу на заводе к нему приваривается одна из следующих установок: циркулярная пила, ракетная установка, автопушка, огнемет.",
@@ -298,6 +318,7 @@ class EnemiesStore {
       iconPath: "/static/Automatons/TankImage.webp",
       imageStyleScale: "scaleX(2.375)",
       title: "Танк",
+      engTitle: "Tank",
       fraction: fractions["3"],
       description:
         "Танк является медлительным, неповоротливым, тяжелым и крайне бронированным механическим монстром. Автоматоны смогли создать только только 2 вида танков: с автопушками и с обычной лазерной пушкой.",
@@ -313,6 +334,7 @@ class EnemiesStore {
       iconPath: "/static/Automatons/FactoryStriderImage.webp",
       imageStyleScale: "scaleY(0.8) scaleX(3)",
       title: "Шатун-завод",
+      engTitle: "Factory Strider",
       fraction: fractions["3"],
       description:
         "Шатун-завод — это гигантский тяжеловооруженный стальной гигант. Он является самым главным оружием захвата планет автоматонами, так как помимо оказания боевой поддержки занимается созданием новых боевых единиц.",
@@ -327,6 +349,7 @@ class EnemiesStore {
       iconPath: "/static/Automatons/DropshipImage.webp",
       imageStyleScale: "scaleX(1.875)",
       title: "Десантный корабль",
+      engTitle: "Dropship",
       fraction: fractions["3"],
       description:
         "Десантный корабль является транспортом нашествия автоматонов. Он доставляет огромный отряды туда, куда необходимо, а также сразу направляется в место вызова подкреплений.",
@@ -341,6 +364,7 @@ class EnemiesStore {
       iconPath: "/static/Automatons/GunshipImage.webp",
       imageStyleScale: "scaleY(0.625) scaleX(1.875)",
       title: "Боевой корабль",
+      engTitle: "Gunship",
       fraction: fractions["3"],
       description:
         "Боевой корабль это воздушный флагман автоматонов. Его ракеты и лазерные снаряды несут существенную угрозу, а мощные двигатели позволяют быстро перемещаться в атмосфере планеты.",
