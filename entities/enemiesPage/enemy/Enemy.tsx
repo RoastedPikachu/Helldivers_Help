@@ -20,6 +20,7 @@ interface EnemyTypeProps {
   fraction: string;
   imagePlugStyles: string;
   title: string;
+  engTitle: string;
 }
 
 const Enemy: React.FC<EnemyTypeProps> = ({
@@ -29,6 +30,7 @@ const Enemy: React.FC<EnemyTypeProps> = ({
   imagePlugStyles,
   fraction,
   title,
+  engTitle,
 }) => {
   const getEnemyFraction = () => {
     return fraction === "Терминиды" ? "terminids" : "automatons";
@@ -45,7 +47,7 @@ const Enemy: React.FC<EnemyTypeProps> = ({
   };
   return (
     <Link
-      href={`/enemy/${getEnemyFraction()}/${toSlug(title)}`}
+      href={`/enemy/${getEnemyFraction()}/${toSlug(engTitle)}`}
       onClick={() => handleCurrentEnemyTypeChange()}
       className="rootWidgetLink"
     >

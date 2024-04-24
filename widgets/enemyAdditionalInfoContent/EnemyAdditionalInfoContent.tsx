@@ -16,8 +16,6 @@ import "./EnemyAdditionalInfoContent.css";
 
 const EnemyAdditionalInfoContent = observer(() => {
   const getEnemyFractionPageLink = () => {
-    console.log(enemiesStore.currentEnemy.fraction);
-
     return enemiesStore.currentEnemy.fraction === "Терминиды"
       ? "/enemy/terminids"
       : "/enemy/automatons";
@@ -34,10 +32,6 @@ const EnemyAdditionalInfoContent = observer(() => {
       ? enemiesStore.terminids.find((enemy) => enemy.id + 1)
       : enemiesStore.automatons.find((enemy) => enemy.id + 1);
   };
-
-  useEffect(() => {
-    console.log(enemiesStore.currentEnemy.fraction);
-  }, []);
   return (
     <Observer>
       {() => (

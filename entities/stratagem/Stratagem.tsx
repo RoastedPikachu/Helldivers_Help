@@ -112,7 +112,7 @@ const Stratagem: React.FC<StratagemProps> = ({
       </div>
 
       <div
-        className={`rootStratagemBlock_Bottom ${isAdditionalInfoOpened ? "opacity-1" : videoPath && videoPreviewPath ? "mt-[-505px] opacity-0 z-[-1]" : "mt-[-70px] opacity-0 z-[-1]"}`}
+        className={`rootStratagemBlock_Bottom ${isAdditionalInfoOpened ? "opacity-1" : videoPath && videoPreviewPath ? "mt-[-515px] opacity-0 z-[-1]" : "mt-[-70px] opacity-0 z-[-1]"}`}
       >
         {videoPath && videoPreviewPath && (
           <div className="rootStratagemBlock_Bottom_Top">

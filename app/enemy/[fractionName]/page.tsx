@@ -89,6 +89,7 @@ const Page: React.FC<{ params: any }> = ({ params }) => {
                   fraction={fractions["2"]}
                   imagePlugStyles={"mt-[15px] text-[6rem]"}
                   title={terminid.title}
+                  engTitle={terminid.engTitle}
                 />
               ))
             : enemiesStore.automatons.map((automaton) => (
@@ -100,6 +101,7 @@ const Page: React.FC<{ params: any }> = ({ params }) => {
                   fraction={automaton.fraction}
                   imagePlugStyles={"mt-[70px] h-[230px] text-[7rem]"}
                   title={automaton.title}
+                  engTitle={automaton.engTitle}
                 />
               ))}
         </section>

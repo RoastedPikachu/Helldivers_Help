@@ -15,14 +15,9 @@ import "./EnemyAdditionalInfo.css";
 export function generateStaticParams() {
   const enemies = [...enemiesStore.terminids, ...enemiesStore.automatons];
 
-  const fixedEnemies = enemies.map((enemy) => ({
-    fraction: enemy.fraction,
-    title: toSlug(enemy.title),
-  }));
-
-  return fixedEnemies.map((enemy) => ({
+  return enemies.map((enemy) => ({
     fractionName: enemy.fraction === "Терминиды" ? "terminids" : "automatons",
-    enemyName: encodeURIComponent(enemy.title),
+    enemyName: toSlug(enemy.engTitle),
   }));
 }
 
