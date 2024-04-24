@@ -61,6 +61,7 @@ export interface Enemy {
   iconPath: string;
   imageStyleScale: string;
   title: string;
+  engTitle: string;
   fraction: string;
   description: string;
   tactics: string;
