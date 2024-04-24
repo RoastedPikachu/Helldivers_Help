@@ -42,7 +42,7 @@ const EnemyAdditionalInfoNavigation = observer(() => {
       {() => (
         <div className="navBlock">
           <Link
-            href={`${getEnemyFractionPageLink()}/${toSlug(getPreviousEnemy().title)}`}
+            href={`${getEnemyFractionPageLink()}/${toSlug(getPreviousEnemy().engTitle)}`}
             onClick={() => handleCurrentEnemyChange(false)}
             className="navBlock_buttonEnemyLink"
           >
@@ -54,7 +54,7 @@ const EnemyAdditionalInfoNavigation = observer(() => {
           </Link>
 
           <Link
-            href={`${getEnemyFractionPageLink()}/${toSlug(getNextEnemy().title)}`}
+            href={`${getEnemyFractionPageLink()}/${toSlug(getNextEnemy().engTitle)}`}
             onClick={() => handleCurrentEnemyChange(true)}
             className="navBlock_buttonEnemyLink"
           >

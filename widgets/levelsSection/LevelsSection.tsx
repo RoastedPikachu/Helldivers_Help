@@ -22,11 +22,12 @@ const LevelsSection = () => {
   };
 
   const getCurrentLevelXpTotal = () => {
-    return levels.find((level) => level.id === parseInt(currentLevel))?.xpTotal;
+    return levels.find((level) => level.id === parseInt(currentLevel))
+      ?.xpTotal!;
   };
 
   const getTargetLevelXpTotal = () => {
-    return levels.find((level) => level.id === parseInt(targetLevel))?.xpTotal;
+    return levels.find((level) => level.id === parseInt(targetLevel))?.xpTotal!;
   };
 
   return (
