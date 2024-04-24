@@ -1,11 +1,11 @@
 .navBlock {
-    @apply col-span-3 flex justify-between items-center mt-[50px];
+    @apply col-span-3 flex justify-between items-center mt-[50px] h-[55px];
 }
 
 .navBlock_buttonEnemyLink {
-    @apply flex items-center py-[10px] px-[30px] bg-[#00293a] border-2 border-[#2cc388] rounded-[10px];
+    @apply flex items-center py-[7.5px] px-[25px] bg-[#00293a] border-2 border-[#2cc388] rounded-[10px];
 }
 
 .navBlock_buttonEnemyLink_Text {
-  @apply text-[#2cc388] text-[1.5rem] font-['Exo2'] font-semibold;
+  @apply text-[#2cc388] text-[1.375rem] font-['Exo2'] font-semibold;
 }

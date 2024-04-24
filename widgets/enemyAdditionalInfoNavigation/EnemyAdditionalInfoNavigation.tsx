@@ -9,32 +9,33 @@ import { enemiesStore } from "@/store/EnemiesStore";
 import { getEnemyFractionPageLink, toSlug } from "@/utils/generalFunctions";
 
 import "./EnemyAdditionalInfoNavigation.css";
+import { Enemy } from "@/utils/generalInterfaces";
 
 const EnemyAdditionalInfoNavigation = observer(() => {
-  const getPreviousEnemy = () => {
+  const getPreviousEnemy = (): Enemy => {
     if (enemiesStore.currentEnemy.fraction === "Терминиды") {
-      return enemiesStore.terminids.at(enemiesStore.currentEnemy.id - 2);
+      return enemiesStore.terminids.at(enemiesStore.currentEnemy.id - 2)!;
     } else {
-      return enemiesStore.automatons.at(enemiesStore.currentEnemy.id - 2);
+      return enemiesStore.automatons.at(enemiesStore.currentEnemy.id - 2)!;
     }
   };
 
-  const getNextEnemy = () => {
+  const getNextEnemy = (): Enemy => {
     if (enemiesStore.currentEnemy.fraction === "Терминиды") {
       return enemiesStore.currentEnemy.id === enemiesStore.terminids.length
-        ? enemiesStore.terminids[0]
-        : enemiesStore.terminids[enemiesStore.currentEnemy.id];
+        ? enemiesStore.terminids[0]!
+        : enemiesStore.terminids[enemiesStore.currentEnemy.id]!;
     } else {
       return enemiesStore.currentEnemy.id === enemiesStore.automatons.length
-        ? enemiesStore.automatons[0]
-        : enemiesStore.automatons[enemiesStore.currentEnemy.id];
+        ? enemiesStore.automatons[0]!
+        : enemiesStore.automatons[enemiesStore.currentEnemy.id]!;
     }
   };
 
   const handleCurrentEnemyChange = (isNextEnemy: boolean) => {
     isNextEnemy
-      ? enemiesStore.changeCurrentEnemy(getNextEnemy()!)
-      : enemiesStore.changeCurrentEnemy(getPreviousEnemy()!);
+      ? enemiesStore.changeCurrentEnemy(getNextEnemy())
+      : enemiesStore.changeCurrentEnemy(getPreviousEnemy());
   };
   return (
     <Observer>
@@ -55,9 +56,9 @@ const EnemyAdditionalInfoNavigation = observer(() => {
           <Link
             href={`${getEnemyFractionPageLink()}/${toSlug(getNextEnemy().title)}`}
             onClick={() => handleCurrentEnemyChange(true)}
-            className="buttonEnemyLink"
+            className="navBlock_buttonEnemyLink"
           >
-            <p className="buttonEnemyLink_Text mr-[10px]">
+            <p className="navBlock_buttonEnemyLink_Text mr-[10px]">
               {getNextEnemy().title}
             </p>
 
