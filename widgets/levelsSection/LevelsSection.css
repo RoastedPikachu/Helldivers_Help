@@ -1,0 +1,37 @@
+input::-webkit-calendar-picker-indicator {
+    margin-top: -10px;
+    color: #2cc388;
+    opacity: 100;
+}
+
+.levelsSection {
+    @apply relative mt-[30px] w-full;
+}
+
+form {
+    @apply relative flex justify-around items-center mt-[20px] h-[80px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px];
+}
+
+.formInputBlock {
+    @apply relative w-[400px] h-[50px];
+}
+
+.formInputBlock_Input {
+    @apply pl-[30px] w-full h-full bg-[#07212f] border-2 border-[--theme-color] rounded-[7.5px] text-[#ffffff] text-[1.5rem] text-center font-['Exo2'] font-bold outline-none;
+}
+
+.formInputBlock_ClearButton {
+    @apply absolute top-[18px] right-[35px] w-[18px] h-[18px] outline-none;
+}
+
+.formInputBlock_ClearButton_Icon {
+    @apply w-full h-full;
+}
+
+.formResultBlock {
+    @apply flex justify-center items-center w-[400px] h-[50px] bg-[#07212f] border-2 border-[#2cc388] rounded-[7.5px];
+}
+
+.formResultBlock_Text {
+    @apply text-[#ffffff] text-[1.5rem] font-['Exo2'] font-bold;
+}
