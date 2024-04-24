@@ -17,7 +17,7 @@ export function generateStaticParams() {
 
   return enemies.map((enemy) => ({
     fractionName: enemy.fraction === "Терминиды" ? "terminids" : "automatons",
-    enemyName: toSlug(enemy.engTitle),
+    enemyName: toSlug(enemy?.engTitle),
   }));
 }
 
