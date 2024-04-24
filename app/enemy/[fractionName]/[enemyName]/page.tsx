@@ -33,7 +33,7 @@ const Page: React.FC<{ params: any }> = ({ params }) => {
 
       <RunningLine />
 
-      <main className="flex">
+      <main className="grid grid-cols-3">
         <EnemyAdditionalInfoContent />
       </main>
 

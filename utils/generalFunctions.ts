@@ -1,3 +1,5 @@
+import { enemiesStore } from "@/store/EnemiesStore";
+
 export function getRandomEntity<T extends { id: number }>(
   entities: T[],
   currentEntity: T,
@@ -18,3 +20,9 @@ export function isMobileDevice() {
 export function toSlug(string = "") {
   return string.toLowerCase().replaceAll(" ", "-");
 }
+
+export const getEnemyFractionPageLink = () => {
+  return enemiesStore.currentEnemy.fraction === "Терминиды"
+    ? "/enemy/terminids"
+    : "/enemy/automatons";
+};

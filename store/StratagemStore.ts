@@ -387,7 +387,7 @@ class StratagemStore {
       },
       {
         id: 9,
-        iconPath: "/static/Stratagems/RailgunIcon.png",
+        iconPath: "/static/Stratagems/RelsaGunIcon.png",
         videoPath: "/static/StratagemVideos/RailgunVideo.mp4",
         videoPreviewPath: "/static/StratagemVideoPreviews/RailgunPreview.webp",
         type: stratagemTypes.supportWeapon,
