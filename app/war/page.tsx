@@ -2,7 +2,7 @@
 import React from "react";
 
 import TheHeader from "@/widgets/header/TheHeader";
-import TheFooter from "@/widgets/TheFooter";
+import TheFooter from "@/widgets/footer/TheFooter";
 import MajorOrderSection from "@/widgets/warPage/majorOrderSection/MajorOrderSection";
 import CampaignsSection from "@/widgets/warPage/campaignsSection/CampaignsSection";
 

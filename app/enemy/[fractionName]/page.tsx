@@ -5,7 +5,7 @@ import { fractions } from "@/data/fractions";
 import { enemiesStore } from "@/store/EnemiesStore";
 
 import TheHeader from "@/widgets/header/TheHeader";
-import TheFooter from "@/widgets/TheFooter";
+import TheFooter from "@/widgets/footer/TheFooter";
 
 import RunningLine from "@/shared/RunningLine";
 import TheScrollToUpButton from "@/shared/theScrollToUpButton/TheScrollToUpButton";

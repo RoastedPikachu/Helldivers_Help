@@ -5,7 +5,7 @@ import { enemiesStore } from "@/store/EnemiesStore";
 import { toSlug } from "@/utils/generalFunctions";
 
 import TheHeader from "@/widgets/header/TheHeader";
-import TheFooter from "@/widgets/TheFooter";
+import TheFooter from "@/widgets/footer/TheFooter";
 import EnemyAdditionalInfoContent from "@/widgets/enemyAdditionalInfoContent/EnemyAdditionalInfoContent";
 
 import RunningLine from "@/shared/RunningLine";
@@ -28,7 +28,7 @@ const Page: React.FC<{ params: any }> = ({ params }) => {
 
       <RunningLine />
 
-      <main className="flex">
+      <main className="grid grid-cols-3">
         <EnemyAdditionalInfoContent />
       </main>
 

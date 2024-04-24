@@ -1,5 +1,5 @@
 .pageEnemyInfoSection {
-    @apply w-[calc(100%-500px)] h-auto;
+    @apply col-span-2 w-[100%] h-auto;
 }
 
 .pageEnemyInfoSection_Title {
@@ -22,7 +22,7 @@
 }
 
 .pageEnemyAside {
-    @apply mt-[80px] ml-[100px];
+    @apply flex justify-end mt-[80px];
 }
 
 .pageEnemyAside_ImageWrapper {

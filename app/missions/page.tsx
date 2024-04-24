@@ -7,7 +7,7 @@ import {
 } from "@/data/missions";
 
 import TheHeader from "@/widgets/header/TheHeader";
-import TheFooter from "@/widgets/TheFooter";
+import TheFooter from "@/widgets/footer/TheFooter";
 import EntitySection from "@/widgets/EntitySection";
 
 import RunningLine from "@/shared/RunningLine";

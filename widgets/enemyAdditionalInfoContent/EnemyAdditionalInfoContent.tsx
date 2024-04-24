@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 
 import { Observer, observer } from "mobx-react-lite";
 
@@ -9,29 +9,15 @@ import {
   getSpecificAutomatonStyle,
   getSpecificTerminidStyle,
 } from "@/utils/enemyTypeFunctions";
+import { getEnemyFractionPageLink } from "@/utils/generalFunctions";
+
+import EnemyAdditionalInfoNavigation from "@/widgets/enemyAdditionalInfoNavigation/EnemyAdditionalInfoNavigation";
 
 import GoBackButton from "@/shared/goBackButton/GoBackButton";
 
 import "./EnemyAdditionalInfoContent.css";
 
 const EnemyAdditionalInfoContent = observer(() => {
-  const getEnemyFractionPageLink = () => {
-    return enemiesStore.currentEnemy.fraction === "Терминиды"
-      ? "/enemy/terminids"
-      : "/enemy/automatons";
-  };
-
-  const getPreviousTitle = () => {
-    return enemiesStore.currentEnemy.fraction === "Терминиды"
-      ? enemiesStore.terminids.find((enemy) => enemy.id - 1)
-      : enemiesStore.automatons.find((enemy) => enemy.id - 1);
-  };
-
-  const getNextEnemyTitle = () => {
-    return enemiesStore.currentEnemy.fraction === "Терминиды"
-      ? enemiesStore.terminids.find((enemy) => enemy.id + 1)
-      : enemiesStore.automatons.find((enemy) => enemy.id + 1);
-  };
   return (
     <Observer>
       {() => (
@@ -103,6 +89,8 @@ const EnemyAdditionalInfoContent = observer(() => {
               />
             </div>
           </aside>
+
+          <EnemyAdditionalInfoNavigation />
         </>
       )}
     </Observer>

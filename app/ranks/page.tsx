@@ -3,9 +3,9 @@ import React from "react";
 import { ranks } from "@/data/ranks";
 
 import TheHeader from "@/widgets/header/TheHeader";
-import TheFooter from "@/widgets/TheFooter";
+import TheFooter from "@/widgets/footer/TheFooter";
 import EntitySection from "@/widgets/EntitySection";
-import LevelsSection from "@/widgets/LevelsSection";
+import LevelsSection from "@/widgets/levelsSection/LevelsSection";
 
 import RunningLine from "@/shared/RunningLine";
 import TheScrollToUpButton from "@/shared/theScrollToUpButton/TheScrollToUpButton";
@@ -13,6 +13,7 @@ import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 
 import Rank from "@/entities/Rank";
+import SectionTitle from "@/shared/sectionTitle/SectionTitle";
 
 const Page = () => {
   return (
@@ -24,7 +25,10 @@ const Page = () => {
       <TheScrollToUpButton />
 
       <main>
-        <ThePageTitle title={"ранги"} additionalTitle={"адского десантника"} />
+        <ThePageTitle
+          title={"прогрессия"}
+          additionalTitle={"адского десантника"}
+        />
 
         <PageDescription
           description={
@@ -38,7 +42,9 @@ const Page = () => {
           }
         />
 
-        <EntitySection gridStyles={"grid-cols-1"}>
+        <LevelsSection />
+
+        <EntitySection title={"РАНГИ"} gridStyles={"grid-cols-1"}>
           {ranks.map((rank) => (
             <Rank
               key={rank.id}
@@ -49,8 +55,6 @@ const Page = () => {
             />
           ))}
         </EntitySection>
-
-        <LevelsSection />
       </main>
 
       <TheFooter />
