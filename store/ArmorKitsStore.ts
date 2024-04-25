@@ -648,7 +648,7 @@ class ArmorKitsStore {
         obtainingType: obtainingType["8"],
         obtainingMethod: "Helldivers2 Twitch-drops",
         description:
-          "Для воинов, которые сильны и уверены в том, что им вообще не нужны никакие заверения.",
+          "Для столь сильных и уверенных в себе воинов, что им не требуется какая-либо поддержка.",
         price: 0,
         armorRating: 100,
         speed: 500,

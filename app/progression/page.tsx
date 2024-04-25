@@ -13,7 +13,6 @@ import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 
 import Rank from "@/entities/Rank";
-import SectionTitle from "@/shared/sectionTitle/SectionTitle";
 
 const Page = () => {
   return (

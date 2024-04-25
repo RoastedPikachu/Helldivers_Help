@@ -8,6 +8,7 @@ const nextConfig = {
             "helldivers-help.vercel.app",
         ]
     },
+    trailingSlash: true,
 };
 
 export default nextConfig;

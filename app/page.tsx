@@ -47,8 +47,8 @@ const Page = () => {
     },
     {
       id: 7,
-      link: "/ranks",
-      title: "Ранги",
+      link: "/progression",
+      title: "Прогрессия",
     },
     {
       id: 8,

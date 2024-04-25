@@ -16,10 +16,10 @@
 # next.js
 /.next/
 /docs/
-/docs/
 
 # production
 /build
+.htaccess
 
 # misc
 .DS_Store
