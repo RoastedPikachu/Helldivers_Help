@@ -38,20 +38,24 @@ const MajorOrderSection = () => {
 
         const data = response.data[0];
 
-        const orderPlanets =
-          data.setting.tasks[0].values[2] !== 0
-            ? [...data.setting.tasks.map((task: any) => task.values[2])]
-            : [];
+        if (data == undefined) {
+          changeMajorOrderExistenceStatus(true);
+        } else {
+          const orderPlanets =
+            data.setting.tasks[0].values[2] !== 0
+              ? [...data.setting.tasks.map((task: any) => task.values[2])]
+              : [];
 
-        setMajorOrder({
-          title: data.setting.taskDescription,
-          expiresIn: data.expiresIn / 60 / 60,
-          description: data.setting.overrideBrief,
-          targetPlanets: orderPlanets,
-          targetCount: data.setting.tasks[0].values[0],
-          completedPlanets: data.progress,
-          reward: data.setting.reward.amount,
-        });
+          setMajorOrder({
+            title: data.setting.taskDescription,
+            expiresIn: data.expiresIn / 60 / 60,
+            description: data.setting.overrideBrief,
+            targetPlanets: orderPlanets,
+            targetCount: data.setting.tasks[0].values[0],
+            completedPlanets: data.progress,
+            reward: data.setting.reward.amount,
+          });
+        }
       })
       .catch((error) => {
         changeMajorOrderReceiveErrorStatus(true);
