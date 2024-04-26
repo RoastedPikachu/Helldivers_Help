@@ -33,6 +33,8 @@ const Page = observer(() => {
       case 2:
         return weaponsStore.secondaryWeapons;
       case 3:
+        return weaponsStore.supportWeapons;
+      case 4:
         return weaponsStore.grenades;
     }
   };
@@ -125,8 +127,20 @@ const Page = observer(() => {
               ))}
             </EntitySection>
 
-            <EntitySection title={"ГРАНАТЫ"} gridStyles={"grid-cols-4"}>
+            <EntitySection title={"ВСПОМОГАТЕЛЬНОЕ"} gridStyles={"grid-cols-3"}>
               {getSpecificWeaponArray(3)?.map((primaryWeapon) => (
+                <Weapon
+                  key={primaryWeapon.id}
+                  id={primaryWeapon.id}
+                  weaponType={primaryWeapon.weaponType}
+                  imagePath={primaryWeapon.imagePath}
+                  name={primaryWeapon.name}
+                />
+              ))}
+            </EntitySection>
+
+            <EntitySection title={"ГРАНАТЫ"} gridStyles={"grid-cols-4"}>
+              {getSpecificWeaponArray(4)?.map((primaryWeapon) => (
                 <Weapon
                   key={primaryWeapon.id}
                   id={primaryWeapon.id}

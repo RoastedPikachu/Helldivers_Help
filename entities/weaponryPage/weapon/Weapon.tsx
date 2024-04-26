@@ -27,7 +27,7 @@ const Weapon: React.FC<WeaponProps> = ({ id, weaponType, imagePath, name }) => {
       <img
         src={imagePath}
         alt=""
-        className={`${weaponType.typeNumber !== 3 ? "w-[400px] h-[160px]" : "w-[200px] h-[150px] scale-[0.9]"}`}
+        className={`${weaponType.typeNumber !== 4 ? "w-[400px] h-[160px]" : "w-[200px] h-[150px] scale-[0.9]"}`}
       />
 
       <p className="weaponWidget_Text">{name}</p>
