@@ -350,7 +350,7 @@ class StratagemStore {
         type: stratagemTypes.supportWeapon,
         name: "MG-206 «Тяжелый пулемет»",
         description:
-          "Очень мощный, Но сложный в обращении пулемет с сильной отдачей.",
+          "Очень мощный, но сложный в обращении пулемет с сильной отдачей.",
         price: 6000,
         obtainingLevel: 16,
         callTime: 3,
