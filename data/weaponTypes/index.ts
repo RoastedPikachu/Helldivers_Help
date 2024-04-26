@@ -9,8 +9,12 @@ export const weaponTypes: { [key: string]: WeaponType } = {
     name: "Вторичное",
     typeNumber: 2,
   },
+  support: {
+    name: "Вспомогательное",
+    typeNumber: 3,
+  },
   grenade: {
     name: "Граната",
-    typeNumber: 3,
+    typeNumber: 4,
   },
 };
