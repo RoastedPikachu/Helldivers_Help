@@ -1,8 +1,9 @@
 import React from "react";
 
 import {
-  automatonMissions,
   generalMissions,
+  secondaryMissions,
+  automatonMissions,
   terminidMissions,
 } from "@/data/missions";
 
@@ -52,6 +53,19 @@ const Page = () => {
               targetMissionCompletionCount={
                 mission.targetMissionCompletionCount
               }
+            />
+          ))}
+        </EntitySection>
+
+        <EntitySection title={"ВТОРОСТЕПЕННЫЕ"} gridStyles={"grid-cols-1"}>
+          {secondaryMissions.map((mission) => (
+            <Mission
+              key={mission.id}
+              imagePath={mission.imagePath}
+              title={mission.title}
+              description={mission.description}
+              effect={mission.effect}
+              rewardEffect={mission.rewardEffect}
             />
           ))}
         </EntitySection>
