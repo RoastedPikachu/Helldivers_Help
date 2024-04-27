@@ -1,4 +1,4 @@
-import { Mission } from "@/utils/dataInterfaces";
+import { Mission, SecondaryMission } from "@/utils/dataInterfaces";
 
 export const generalMissions = [
   {
@@ -84,6 +84,119 @@ export const generalMissions = [
     level: "3-9",
   },
 ] as Mission[];
+
+export const secondaryMissions = [
+  {
+    id: 1,
+    imagePath: "/static/Missions/DestroyStalkerLiarIcon.svg",
+    title: "Уничтожить Гнездо Следопытов",
+
+    effect: "Периодически спавнит следопытов.",
+    rewardEffect: "Прекращает спавнить следопытов.",
+  },
+  {
+    id: 2,
+    imagePath: "/static/Missions/DestroySporeSpewerIcon.svg",
+    title: "Уничтожить Рассеиватель спор",
+    effect: "Ухудшает обзор генерируя густой туман.",
+    rewardEffect: "Прекращает генерировать густой туман, ухудшающий видимость.",
+  },
+  {
+    id: 3,
+    imagePath: "/static/Missions/DestroyShriekerNestIcon.svg",
+    title: "Уничтожить Гнездо Крикунов",
+    effect:
+      "Если Адский Десантник находится на расстоянии менее 130 метров от гнезда, то спавнит крикунов.",
+    rewardEffect: "Прекращает спавнить крикунов.",
+  },
+  {
+    id: 4,
+    imagePath: "/static/Missions/UploadDataFromEscapePodIcon.svg",
+    title: "Загрузить данные спасательной капсулы",
+    effect: "Отсутствует.",
+    rewardEffect: "Отсутствует.",
+  },
+  {
+    id: 5,
+    imagePath: "/static/Missions/TerminateIllegalBroadcastIcon.svg",
+    title: "Остановить незаконную передачу",
+    effect: "Отсутствует.",
+    rewardEffect: "Отсутствует.",
+  },
+  {
+    id: 6,
+    imagePath: "/static/Missions/DestroyRogueResearchStationIcon.svg",
+    title: "Уничтожить неуправляемую научную станцию",
+    effect: "Отсутствует.",
+    rewardEffect: "Отсутствует.",
+  },
+  {
+    id: 7,
+    imagePath: "/static/Missions/ActivateSeafArtilleryIcon.svg",
+    title: "Артиллерия ВССЗ",
+    effect: "Отсутствует.",
+    rewardEffect:
+      "У Адских Десантников появляется возможность воспользоваться заряженными снарядами в формате 5 стратагем.",
+  },
+  {
+    id: 8,
+    imagePath: "/static/Missions/ActivateRadarStationIcon.svg",
+    title: "Радарная станция",
+    effect: "Отсутствует.",
+    rewardEffect:
+      "Делает видимыми на карте все места интереса и второстепенные миссии.",
+  },
+  {
+    id: 9,
+    imagePath: "/static/Missions/ActivateSeafSamSiteIcon.svg",
+    title: "Активировать ЗРК",
+    effect: "Отсутствует.",
+    rewardEffect:
+      "После активации начнет обстреливать все десантные корабли автоматонов в радиусе своего действия.",
+  },
+  {
+    id: 10,
+    imagePath: "/static/Missions/DestroyMortarEmplacementIcon.svg",
+    title: "Уничтожить Минометную точку",
+    effect:
+      "Обстреливает всех Адских Десантников в радиусе от 20 до 150 метров от своего расположения.",
+    rewardEffect: "В виду уничтожения обстрелы прекращаются.",
+  },
+  {
+    id: 11,
+    imagePath: "/static/Missions/DestroyAntiAirEmplacementIcon.svg",
+    title: "Уничтожить огневую точку ПВО",
+    effect: "В радиусе 150 метров делает недоступными все стратагемы «Орла».",
+    rewardEffect:
+      "После ее уничтожения стратагемы «Орла» вновь становятся доступны.",
+  },
+  {
+    id: 12,
+    imagePath: "/static/Missions/DisableStratagemJammerIcon.svg",
+    title: "Уничтожить Глушилку стратагем",
+    effect:
+      "В радиусе 150 метров от этого сооружения все стратагемы становятся недоступны.",
+    rewardEffect:
+      "После деактивации и самоуничтожения стратагемы становятся вновь доступны.",
+  },
+  {
+    id: 13,
+    imagePath: "/static/Missions/DestroyDetectorTowerIcon.svg",
+    title: "Уничтожить Сторожевую башню",
+    effect:
+      "При обнаружении Адского Десантника в радиусе своего действия вызывает десантные корабли.",
+    rewardEffect:
+      "В виду своего уничтожения вызов подкрепления автоматонов становится недоступным.",
+  },
+  {
+    id: 14,
+    imagePath: "/static/Missions/DestroyGunshipFacilityIcon.svg",
+    title: "Уничтожить Завод Боевых кораблей",
+    effect: "Периодически выпускает боевые корабли.",
+    rewardEffect:
+      "После уничтожения прекращает производить новые боевые корабли.",
+  },
+] as SecondaryMission[];
 
 export const terminidMissions = [
   {
