@@ -58,6 +58,15 @@ export interface Mission {
   targetMissionCompletionCount?: TargetCount[];
 }
 
+export interface SecondaryMission {
+  id: number;
+  imagePath: string;
+  title: string;
+  description: string;
+  effect: string;
+  rewardEffect: string;
+}
+
 export interface WeaponType {
   name: string;
   typeNumber: number;
