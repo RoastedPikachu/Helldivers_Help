@@ -8,8 +8,10 @@ import "./Mission.css";
 interface MissionProps {
   imagePath: string;
   title: string;
-  level: string;
   description: string;
+  level?: string;
+  effect?: string;
+  rewardEffect?: string;
   targetMissionCompletionCount?: TargetCount[];
 }
 
@@ -18,6 +20,8 @@ const Mission: React.FC<MissionProps> = ({
   title,
   description,
   level,
+  effect,
+  rewardEffect,
   targetMissionCompletionCount,
 }) => {
   const [isAdditionalInfoOpened, changeIsAdditionalInfoOpened] =
@@ -62,16 +66,38 @@ const Mission: React.FC<MissionProps> = ({
       </div>
 
       <div
-        className={`rootShipModuleBlock_Bottom ${isAdditionalInfoOpened ? "mt-[10px] opacity-1" : `${targetMissionCompletionCount?.length ? "mt-[-300px]" : "mt-[-100px]"} ml-[-400px] opacity-0`}`}
+        className={`rootShipModuleBlock_Bottom ${isAdditionalInfoOpened ? "mt-[10px] opacity-1" : `${targetMissionCompletionCount?.length ? "mt-[-300px]" : "mt-[-150px]"} ml-[-400px] opacity-0`}`}
       >
-        <p className="rootShipModuleBlock_Bottom_Description">{description}</p>
+        {description && (
+          <>
+            <p className="rootShipModuleBlock_Bottom_Description">
+              {description}
+            </p>
 
-        <p className="rootShipModuleBlock_Bottom_Text">
-          <b className="rootShipModuleBlock_Bottom_Text_Bold">
-            Встречается на:{" "}
-          </b>
-          {level} сложности
-        </p>
+            <p className="rootShipModuleBlock_Bottom_Text">
+              <b className="rootShipModuleBlock_Bottom_Text_Bold">
+                Встречается на:{" "}
+              </b>
+              {level} сложности
+            </p>
+          </>
+        )}
+
+        {effect && (
+          <>
+            <p className="rootShipModuleBlock_Bottom_Text">
+              <b className="rootShipModuleBlock_Bottom_Text_Bold">Эффект: </b>
+              {effect}
+            </p>
+
+            <p className="rootShipModuleBlock_Bottom_Text">
+              <b className="rootShipModuleBlock_Bottom_Text_Bold">
+                Эффект от выполнения:{" "}
+              </b>
+              {rewardEffect}
+            </p>
+          </>
+        )}
 
         {targetMissionCompletionCount?.length && (
           <div className="rootShipModuleBlock_Bottom_Table">
