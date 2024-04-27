@@ -546,7 +546,7 @@ class WeaponsStore {
       dps: null,
     },
     {
-      id: 6,
+      id: 7,
       imagePath: "/static/Weaponry/support/Gr8Image.png",
       weaponType: weaponTypes.support,
       name: "GR-8 «Безоткатная винтовка»",
@@ -560,7 +560,7 @@ class WeaponsStore {
       dps: null,
     },
     {
-      id: 7,
+      id: 8,
       imagePath: "/static/Weaponry/support/Gl21Image.png",
       weaponType: weaponTypes.support,
       name: "GL-21 «Гранатомет»",
@@ -574,7 +574,7 @@ class WeaponsStore {
       dps: null,
     },
     {
-      id: 8,
+      id: 9,
       imagePath: "/static/Weaponry/support/Ac8Image.png",
       weaponType: weaponTypes.support,
       name: "AC-8 «Автопушка»",
@@ -588,7 +588,7 @@ class WeaponsStore {
       dps: 960,
     },
     {
-      id: 9,
+      id: 10,
       imagePath: "/static/Weaponry/support/Faf14Image.png",
       weaponType: weaponTypes.support,
       name: "FAF-14 «Копье»",
@@ -602,7 +602,7 @@ class WeaponsStore {
       dps: null,
     },
     {
-      id: 10,
+      id: 11,
       imagePath: "/static/Weaponry/support/Las99Image.png",
       weaponType: weaponTypes.support,
       name: "LAS-99 Пушка «Квазар»",
@@ -616,7 +616,7 @@ class WeaponsStore {
       dps: null,
     },
     {
-      id: 11,
+      id: 12,
       imagePath: "/static/Weaponry/support/Flam40Image.png",
       weaponType: weaponTypes.support,
       name: "FLAM-40 «Огнемет»",
@@ -630,7 +630,7 @@ class WeaponsStore {
       dps: null,
     },
     {
-      id: 12,
+      id: 13,
       imagePath: "/static/Weaponry/support/Las98Image.png",
       weaponType: weaponTypes.support,
       name: "LAS-98 «Лазерная пушка»",
@@ -644,7 +644,7 @@ class WeaponsStore {
       dps: null,
     },
     {
-      id: 13,
+      id: 14,
       imagePath: "/static/Weaponry/support/Arc3Image.png",
       weaponType: weaponTypes.support,
       name: "ARC-3 «Дуговой метатель»",
