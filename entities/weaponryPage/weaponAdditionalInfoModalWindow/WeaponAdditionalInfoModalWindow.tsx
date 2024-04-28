@@ -45,6 +45,27 @@ const WeaponAdditionalInfoModa: React.FC<WeaponAdditionalInfoModaProps> =
       penetration,
       radius,
     }) => {
+      const getPriceIcon = () => {
+        if (typeof price === "string" || price === 0) {
+          return "";
+        } else if (price < 200) {
+          return (
+            <img
+              src="/static/Resources/MedalIcon.svg"
+              alt=""
+              className="currentWeapon_Modal_Top_TextBlock_Characteristic_Price_Image"
+            />
+          );
+        } else {
+          return (
+            <img
+              src="/static/Resources/RequisitesIcon.svg"
+              alt=""
+              className="currentWeapon_Modal_Top_TextBlock_Characteristic_Price_Image"
+            />
+          );
+        }
+      };
       return (
         <Observer>
           {() => (
@@ -86,13 +107,7 @@ const WeaponAdditionalInfoModa: React.FC<WeaponAdditionalInfoModaProps> =
                         {price}
                       </p>
 
-                      {typeof price !== "string" && (
-                        <img
-                          src="/static/Resources/MedalIcon.svg"
-                          alt=""
-                          className="currentWeapon_Modal_Top_TextBlock_Characteristic_Price_Image"
-                        />
-                      )}
+                      {getPriceIcon()}
                     </div>
                   </div>
 

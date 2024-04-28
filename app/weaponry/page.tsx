@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 
 import { observer, Observer } from "mobx-react-lite";
 
@@ -24,8 +24,58 @@ import "swiper/css/navigation";
 import "./WeaponryPage.css";
 import EntitySection from "@/widgets/EntitySection";
 import Weapon from "@/entities/weaponryPage/weapon/Weapon";
+import axios from "axios";
 
 const Page = observer(() => {
+  const getTargetWeaponProps = (weapon: any) => {
+    switch (weaponsStore.currentWeaponInfo.weaponType?.typeNumber!) {
+      case 1:
+      case 2:
+        return (
+          <WeaponAdditionalInfoModalWindow
+            imagePath={weapon.imagePath}
+            name={weapon.name}
+            description={weapon.description}
+            price={weapon.price}
+            damage={weapon.damage}
+            magsCount={weapon.magsCount}
+            roundsPerMag={weapon.roundsPerMag}
+            totalRounds={weapon.totalRounds}
+            recoil={weapon.recoil}
+            fireRate={weapon.fireRate}
+            totalDamage={weapon.totalDamage}
+            dps={weapon.dps}
+          />
+        );
+      case 3:
+        return (
+          <WeaponAdditionalInfoModalWindow
+            imagePath={weapon.imagePath}
+            name={weapon.name}
+            description={weapon.description}
+            price={weapon.price}
+            damage={weapon.damage}
+            magsCount={weapon.magsCount}
+            roundsPerMag={weapon.roundsPerMag}
+            totalRounds={weapon.totalRounds}
+          />
+        );
+      case 4:
+        return (
+          <WeaponAdditionalInfoModalWindow
+            imagePath={weapon.imagePath}
+            name={weapon.name}
+            description={weapon.description}
+            price={weapon.price}
+            damage={weapon.damage}
+            fuseTime={weapon.fuseTime}
+            penetration={weapon.penetration}
+            radius={weapon.radius}
+          />
+        );
+    }
+  };
+
   const getSpecificWeaponArray = (weaponType: number) => {
     switch (weaponType) {
       case 1:
@@ -72,36 +122,19 @@ const Page = observer(() => {
                 weaponsStore.currentWeaponInfo.weaponType?.typeNumber!,
               )?.map((weapon) => (
                 <SwiperSlide key={weapon.id}>
-                  {"magsCount" in weapon ? (
-                    <WeaponAdditionalInfoModalWindow
-                      imagePath={weapon.imagePath}
-                      name={weapon.name}
-                      description={weapon.description}
-                      price={weapon.price}
-                      damage={weapon.damage}
-                      magsCount={weapon.magsCount}
-                      roundsPerMag={weapon.roundsPerMag}
-                      totalRounds={weapon.totalRounds}
-                      recoil={weapon.recoil}
-                      fireRate={weapon.fireRate}
-                      totalDamage={weapon.totalDamage}
-                      dps={weapon.dps}
-                    />
-                  ) : (
-                    <WeaponAdditionalInfoModalWindow
-                      imagePath={weapon.imagePath}
-                      name={weapon.name}
-                      description={weapon.description}
-                      price={weapon.price}
-                      damage={weapon.damage}
-                      fuseTime={weapon.fuseTime}
-                      penetration={weapon.penetration}
-                      radius={weapon.radius}
-                    />
-                  )}
+                  {getTargetWeaponProps(weapon)}
                 </SwiperSlide>
               ))}
             </ModalSlider>
+
+            {/*{directions.map((direction) => (*/}
+            {/*    <img*/}
+            {/*        key={direction.id}*/}
+            {/*        src="/static/GeneralIcons/ArrowIcon.svg"*/}
+            {/*        alt=""*/}
+            {/*        className={`rootStratagemBlock_Bottom_Top_Left_ArrowsWrapper_Block_Arrow ${getTargetRotate(direction.orientation)}`}*/}
+            {/*    />*/}
+            {/*))}*/}
 
             <EntitySection title={"ОСНОВНОЕ"} gridStyles={"grid-cols-3"}>
               {getSpecificWeaponArray(1)?.map((primaryWeapon) => (
