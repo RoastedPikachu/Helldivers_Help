@@ -25,10 +25,12 @@ const MajorOrderSection = () => {
   const getMajorOrder = () => {
     axios
       .get(
-        "https://helldivers-2-dotnet.fly.dev/raw/api/v2/Assignment/War/801",
+        "https://api.helldivers2.dev/raw/api/v2/Assignment/War/801",
         {
           headers: {
             "Accept-Language": "ru-RU",
+            "X-Super-Client": "Helldivers Help",
+            "X-Super-Contact": "gh/RoastedPikachu"
           },
         },
       )
