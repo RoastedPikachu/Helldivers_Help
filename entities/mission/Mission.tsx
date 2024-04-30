@@ -66,7 +66,7 @@ const Mission: React.FC<MissionProps> = ({
       </div>
 
       <div
-        className={`rootShipModuleBlock_Bottom ${isAdditionalInfoOpened ? "mt-[10px] opacity-1" : `${targetMissionCompletionCount?.length ? "mt-[-300px]" : "mt-[-150px]"} ml-[-400px] opacity-0`}`}
+        className={`rootShipModuleBlock_Bottom ${isAdditionalInfoOpened ? "mt-[10px] opacity-1" : `${targetMissionCompletionCount?.length ? "mt-[-600px]" : "mt-[-150px]"} ml-[-400px] opacity-0`}`}
       >
         {description && (
           <>
@@ -100,32 +100,33 @@ const Mission: React.FC<MissionProps> = ({
         )}
 
         {targetMissionCompletionCount?.length && (
-          <div className="rootShipModuleBlock_Bottom_Table">
-            <div className="rootShipModuleBlock_Bottom_Table_Left">
-              <p className="rootShipModuleBlock_Bottom_Table_Left_Text border-t-2 rounded-tl-[10px]">
-                Сложность
-              </p>
+          <div className="rootShipModuleBlock_Bottom_TableBlock">
+            <table className="rootShipModuleBlock_Bottom_TableBlock_Table">
+              <thead>
+                <tr className="rootShipModuleBlock_Bottom_TableBlock_Table_TopRow">
+                  <th className="rootShipModuleBlock_Bottom_TableBlock_Table_TopRow_Column pl-[20px]">
+                    Сложность
+                  </th>
+                  <th className="rootShipModuleBlock_Bottom_TableBlock_Table_TopRow_Column">
+                    Кол-во целей для завершения миссии
+                  </th>
+                </tr>
+              </thead>
 
-              <p className="rootShipModuleBlock_Bottom_Table_Left_Text border-b-2 rounded-bl-[10px]">
-                Кол-во целей для завершения миссии
-              </p>
-            </div>
+              <tbody className="rootShipModuleBlock_Bottom_TableBlock_Table_Body">
+                {targetMissionCompletionCount?.map((count, index) => (
+                  <tr key={count.id}>
+                    <td className="rootShipModuleBlock_Bottom_TableBlock_Table_Body_Column">
+                      {getSpecificId(count.id, index)}
+                    </td>
 
-            {targetMissionCompletionCount?.map((count, index) => (
-              <div key={count.id}>
-                <p
-                  className={`rootShipModuleBlock_Bottom_Table_Right_Difficulty ${index === targetMissionCompletionCount.length - 1 ? "border-r-2 rounded-tr-[7.5px]" : ""}`}
-                >
-                  {getSpecificId(count.id, index)}
-                </p>
-
-                <p
-                  className={`rootShipModuleBlock_Bottom_Table_Right_Count ${index === targetMissionCompletionCount.length - 1 ? "border-r-2 rounded-br-[7.5px]" : ""}`}
-                >
-                  {count.value}
-                </p>
-              </div>
-            ))}
+                    <td className="rootShipModuleBlock_Bottom_TableBlock_Table_Body_Column">
+                      {count.value}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         )}
       </div>
