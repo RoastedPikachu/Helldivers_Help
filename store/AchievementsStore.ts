@@ -232,13 +232,21 @@ class AchievementsStore {
     },
     {
       id: 29,
-      iconPath: "/static/Achievements/GreaterGodIcon.webp",
-      title: "Ради высшего блага!",
-      description: "Убейте 5000 врагов.",
-      accomplishmentWay: "5000 Врагов? Супер-Земля будет гордиться тобой!",
+      iconPath: "/static/Achievements/SuperEarthHeroIcon.webp",
+      title: "Образец для Супер-Земли",
+      description: "Получите все призы для Helldivers 2",
+      accomplishmentWay:
+        "Боец, да ты легенда! Можешь ходить по барам Супер-Земли с высоко поднятой головой.",
     },
     {
       id: 30,
+      iconPath: "/static/Achievements/GreaterGodIcon.webp",
+      title: "Ради высшего блага!",
+      description: "Убейте 5000 врагов.",
+      accomplishmentWay: "5000 Врагов? Супер-Земля гордится тобой!",
+    },
+    {
+      id: 31,
       iconPath: "/static/Achievements/PatriotIcon.webp",
       title: "Патриот",
       description: "Сыграйте как минимум 50 заданий.",
@@ -246,14 +254,14 @@ class AchievementsStore {
         "Каждая задача приближает победу управляемой демократии!",
     },
     {
-      id: 31,
+      id: 32,
       iconPath: "/static/Achievements/DoingYourPartIcon.webp",
       title: "Исполняю твой долг",
       description: "Выполните как минимум 100 заданий.",
       accomplishmentWay: "Да тебе памятник ставить надо!",
     },
     {
-      id: 32,
+      id: 33,
       iconPath: "/static/Achievements/FullyOperationalIcon.webp",
       title: "Полный функционал",
       description: "Доведите один модуль корабля до макс. уровня.",
@@ -261,7 +269,7 @@ class AchievementsStore {
         "Чтобы получить достижение вам будет необходимо: 10 суперобразцов, 160-200 обычных образцов, 100-120 редких образцов.",
     },
     {
-      id: 33,
+      id: 34,
       iconPath: "/static/Achievements/ShipItIcon.webp",
       title: "Займусь кораблем!",
       description: "Улучшите все модули корабля как минимум на 1 уровень.",
@@ -269,7 +277,7 @@ class AchievementsStore {
         "Для получения достижения потребуется 400 обычных образцов.",
     },
     {
-      id: 34,
+      id: 35,
       iconPath: "/static/Achievements/HellDiveIcon.webp",
       title: "Глубины ада",
       description:
@@ -278,7 +286,7 @@ class AchievementsStore {
         "Выполняйте это в коротких миссиях против терминидов. Не забывай про стимы, боец!",
     },
     {
-      id: 35,
+      id: 36,
       iconPath: "/static/Achievements/DrawIcon.webp",
       title: "Пусть будет ничья",
       description: "Отстрелите глыбе обе руки и эвакуируйтесь, пока он жив.",
@@ -286,7 +294,7 @@ class AchievementsStore {
         "Глыба встречается, начиная с 4 сложности, просто отстрелите ему руки с помощью рельсотрона и предупредите товарищей, затем эвакуируйтесь.",
     },
     {
-      id: 36,
+      id: 37,
       iconPath: "/static/Achievements/SuppliesIcon.webp",
       title: "Смертельное снабжение!",
       description: "Убейте громилу капсулой «Пополнение запасов».",
@@ -294,7 +302,7 @@ class AchievementsStore {
         "Нанесите много урона громиле, затем оглушите его (эми удар или удар его головой о стену) и вызовите стратагему.",
     },
     {
-      id: 37,
+      id: 38,
       iconPath: "/static/Achievements/HoldMyPrimaryIcon.webp",
       title: "Подержи-ка пушку, я иду в атаку!",
       description:
@@ -303,7 +311,7 @@ class AchievementsStore {
         "Забудьте про 1 и 3 клавишу, берите много атакующих стратагем и выбирайте быстрое задание. Да поможет вам демократия!",
     },
     {
-      id: 38,
+      id: 39,
       iconPath: "/static/Achievements/360SecIcon.webp",
       title: "Угнать за 360 секунд!",
       description:
