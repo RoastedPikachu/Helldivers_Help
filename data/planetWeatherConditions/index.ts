@@ -61,7 +61,7 @@ export const weatherConditions: WeatherConditionsObject = {
     id: 10,
     name: "Кислотные бури",
     description: "Яростные кислотные бури снижают видимость.",
-    iconPath: "/static/WeatherConditions/AcidStormsIcon.png",
+    iconPath: "/static/WeatherConditions/AcidIcon.png",
   },
   volcanicActivity: {
     id: 11,
