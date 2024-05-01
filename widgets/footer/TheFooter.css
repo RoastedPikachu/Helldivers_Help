@@ -1,9 +1,9 @@
 footer {
-    @apply relative grid justify-items-center py-[20px] px-[5%] deskWide:px-[calc((100%-1440px)/2)] w-full h-auto bg-[#00293a] border-t-[1px] border-[#2cc384];
+    @apply relative grid justify-items-center py-[30px] px-[5%] deskWide:px-[calc((100%-1440px)/2)] w-full h-auto bg-[#00293a] border-t-[1px] border-[#2cc384];
 }
 
 .footerTop {
-    @apply flex justify-between items-center w-full h-auto;
+    @apply flex justify-between items-start w-full h-auto;
 }
 
 .footerTop_Icon {
@@ -19,7 +19,7 @@ footer {
 }
 
 .footerTop_TextBlock_RusLink {
-    @apply text-[--theme-color] font-['Exo2'] font-bold;
+    @apply block text-[--theme-color] font-['Exo2'] font-bold;
 }
 
 .footerTop_TextBlock_Link_EngLink {

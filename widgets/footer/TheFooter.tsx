@@ -6,7 +6,7 @@ const TheFooter = () => {
   return (
     <footer>
       <div className="footerTop">
-        <span className="footerTop_TextBlock">
+        <div className="footerTop_TextBlock">
           <h3 className="footerTop_TextBlock_Title">ССЫЛКИ</h3>
 
           <a
@@ -14,9 +14,17 @@ const TheFooter = () => {
             target="_blank"
             className="footerTop_TextBlock_RusLink"
           >
-            Группа сайта
+            Телеграм
           </a>
-        </span>
+
+          <a
+            href="https://discord.gg/SBntR38EKW"
+            target="_blank"
+            className="footerTop_TextBlock_RusLink mt-[10px]"
+          >
+            Дискорд сервер
+          </a>
+        </div>
 
         <img
           src="/static/GeneralLogos/HelldiversLogo.png"
@@ -24,7 +32,7 @@ const TheFooter = () => {
           className="footerTop_Icon"
         />
 
-        <span className="footerTop_TextBlock">
+        <div className="footerTop_TextBlock">
           <h3 className="footerTop_TextBlock_Title">ПОДДЕРЖАТЬ САЙТ</h3>
 
           <a
@@ -34,7 +42,7 @@ const TheFooter = () => {
           >
             Boosty
           </a>
-        </span>
+        </div>
       </div>
 
       <span className="footerBottom">
