@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 
 import { Direction } from "@/utils/generalInterfaces";
+import { getTargetRotate } from "@/utils/generalFunctions";
 
 import LoadingSpinner from "@/shared/loadingSpinner/LoadingSpinner";
 
@@ -58,24 +59,6 @@ const Stratagem: React.FC<StratagemProps> = ({
 
   const pauseVideo = () => {
     videoRef.current && videoRef.current.pause();
-  };
-
-  const getTargetRotate = (direction: number) => {
-    let rotationAngle = "";
-
-    switch (direction) {
-      case 2:
-        rotationAngle = "rotate-90";
-        break;
-      case 3:
-        rotationAngle = "rotate-180";
-        break;
-      case 4:
-        rotationAngle = "rotate-[270deg]";
-        break;
-    }
-
-    return rotationAngle;
   };
 
   useEffect(() => {
