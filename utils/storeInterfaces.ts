@@ -26,14 +26,23 @@ interface Weapon {
   damage: number;
 }
 
-export interface PrimaryOrSecondaryWeapon extends Weapon {
+export interface WeaponWithAmmo extends Weapon {
   magsCount: number;
   roundsPerMag: number;
   totalRounds: number;
+}
+
+export interface PrimaryOrSecondaryWeapon extends WeaponWithAmmo {
   recoil: number;
   fireRate: number;
   totalDamage: number;
   dps: number;
+}
+
+export interface SupportWeapon extends WeaponWithAmmo {
+  callTime: number;
+  directions: any[];
+  features: string[];
 }
 
 export interface Grenade extends Weapon {
