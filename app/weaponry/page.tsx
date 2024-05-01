@@ -25,6 +25,7 @@ import "./WeaponryPage.css";
 import EntitySection from "@/widgets/EntitySection";
 import Weapon from "@/entities/weaponryPage/weapon/Weapon";
 import axios from "axios";
+import { stratagemStore } from "@/store/StratagemStore";
 
 const Page = observer(() => {
   const getTargetWeaponProps = (weapon: any) => {
@@ -33,6 +34,7 @@ const Page = observer(() => {
       case 2:
         return (
           <WeaponAdditionalInfoModalWindow
+            id={weapon.id}
             imagePath={weapon.imagePath}
             name={weapon.name}
             description={weapon.description}
@@ -50,6 +52,7 @@ const Page = observer(() => {
       case 3:
         return (
           <WeaponAdditionalInfoModalWindow
+            id={weapon.id}
             imagePath={weapon.imagePath}
             name={weapon.name}
             description={weapon.description}
@@ -58,11 +61,15 @@ const Page = observer(() => {
             magsCount={weapon.magsCount}
             roundsPerMag={weapon.roundsPerMag}
             totalRounds={weapon.totalRounds}
+            callTime={weapon.callTime}
+            directions={weapon.directions}
+            features={weapon.features}
           />
         );
       case 4:
         return (
           <WeaponAdditionalInfoModalWindow
+            id={weapon.id}
             imagePath={weapon.imagePath}
             name={weapon.name}
             description={weapon.description}
@@ -126,15 +133,6 @@ const Page = observer(() => {
                 </SwiperSlide>
               ))}
             </ModalSlider>
-
-            {/*{directions.map((direction) => (*/}
-            {/*    <img*/}
-            {/*        key={direction.id}*/}
-            {/*        src="/static/GeneralIcons/ArrowIcon.svg"*/}
-            {/*        alt=""*/}
-            {/*        className={`rootStratagemBlock_Bottom_Top_Left_ArrowsWrapper_Block_Arrow ${getTargetRotate(direction.orientation)}`}*/}
-            {/*    />*/}
-            {/*))}*/}
 
             <EntitySection title={"ОСНОВНОЕ"} gridStyles={"grid-cols-3"}>
               {getSpecificWeaponArray(1)?.map((primaryWeapon) => (
