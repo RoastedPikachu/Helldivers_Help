@@ -387,6 +387,49 @@ class StratagemStore {
       },
       {
         id: 9,
+        iconPath: "/static/Stratagems/Rl77Icon.png",
+        videoPath: "/static/StratagemVideos/Rl77Video.mp4",
+        videoPreviewPath: "/static/StratagemVideoPreviews/Rl77Preview.jpg",
+        type: stratagemTypes.supportWeapon,
+        name: "RL-77 «Ракетница с подрывом в воздухе»",
+        description:
+          "Выпускает ракету, которая взрывается при приближении к цели и разбрасывает множество взрывающихся бомб.",
+        price: 8000,
+        obtainingLevel: 15,
+        callTime: 7,
+        useCount: 0,
+        reloadTime: 480,
+        keyCodes: [83, 87, 87, 65, 68],
+        directions: [
+          {
+            id: 1,
+            orientation: 3,
+            isPressed: false,
+          },
+          {
+            id: 2,
+            orientation: 1,
+            isPressed: false,
+          },
+          {
+            id: 3,
+            orientation: 1,
+            isPressed: false,
+          },
+          {
+            id: 4,
+            orientation: 4,
+            isPressed: false,
+          },
+          {
+            id: 5,
+            orientation: 2,
+            isPressed: false,
+          },
+        ],
+      },
+      {
+        id: 10,
         iconPath: "/static/Stratagems/RelsaGunIcon.png",
         videoPath: "/static/StratagemVideos/RailgunVideo.mp4",
         videoPreviewPath: "/static/StratagemVideoPreviews/RailgunPreview.webp",
@@ -434,7 +477,7 @@ class StratagemStore {
         ],
       },
       {
-        id: 10,
+        id: 11,
         iconPath: "/static/Stratagems/SpearIcon.png",
         videoPath: "/static/StratagemVideos/SpearVideo.mp4",
         videoPreviewPath: "/static/StratagemVideoPreviews/SpearPreview.webp",
