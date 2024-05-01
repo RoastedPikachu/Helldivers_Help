@@ -5,10 +5,13 @@ import { observer, Observer } from "mobx-react-lite";
 
 import { weaponsStore } from "@/store/WeaponsStore";
 
+import { getTargetRotate } from "@/utils/generalFunctions";
+
 import "./WeaponAdditionalInfoModalWindow.css";
 import "@/app/modalsSlider.css";
 
 interface WeaponAdditionalInfoModaProps {
+  id: number;
   imagePath: string;
   name: string;
   description: string;
@@ -21,6 +24,9 @@ interface WeaponAdditionalInfoModaProps {
   fireRate?: number;
   totalDamage?: number;
   dps?: number;
+  callTime?: number;
+  directions?: any[];
+  features?: string[];
   fuseTime?: number;
   penetration?: number;
   radius?: number;
@@ -29,6 +35,7 @@ interface WeaponAdditionalInfoModaProps {
 const WeaponAdditionalInfoModa: React.FC<WeaponAdditionalInfoModaProps> =
   observer(
     ({
+      id,
       imagePath,
       name,
       description,
@@ -41,6 +48,9 @@ const WeaponAdditionalInfoModa: React.FC<WeaponAdditionalInfoModaProps> =
       fireRate,
       totalDamage,
       dps,
+      callTime,
+      directions,
+      features,
       fuseTime,
       penetration,
       radius,
@@ -66,6 +76,117 @@ const WeaponAdditionalInfoModa: React.FC<WeaponAdditionalInfoModaProps> =
           );
         }
       };
+
+      const getSpecificTextFields = () => {
+        if (fireRate) {
+          return (
+            <>
+              <div className="currentWeapon_Modal_Top_TextBlock_Characteristic">
+                <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Name">
+                  ВМЕСТИМОСТЬ:
+                </p>
+
+                {isFinite(roundsPerMag!) ? (
+                  <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Text insigniaNumericText">
+                    {roundsPerMag}
+                  </p>
+                ) : (
+                  <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Text insigniaNumericText">
+                    ∞
+                  </p>
+                )}
+              </div>
+
+              <div className="currentWeapon_Modal_Top_TextBlock_Characteristic">
+                <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Name">
+                  ОТДАЧА:
+                </p>
+
+                <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Text insigniaNumericText">
+                  {recoil}
+                </p>
+              </div>
+
+              <div className="currentWeapon_Modal_Top_TextBlock_Characteristic">
+                <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Name">
+                  СКОРОСТРЕЛЬНОСТЬ:
+                </p>
+
+                <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Text insigniaNumericText">
+                  {fireRate}
+                </p>
+              </div>
+            </>
+          );
+        } else if (directions?.length) {
+          return (
+            <>
+              <div className="currentWeapon_Modal_Top_TextBlock_Characteristic">
+                <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Name">
+                  ВРЕМЯ ВЫЗОВА:
+                </p>
+
+                <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Text">
+                  <b className="mt-[-5px] font-['Insignia'] font-bold">
+                    {callTime}
+                  </b>{" "}
+                  сек.
+                </p>
+              </div>
+              <div className="mt-[10px]">
+                <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Name">
+                  ОСОБЕННОСТИ:
+                </p>
+
+                <span>
+                  {features?.map((feature, index) => (
+                    <p
+                      key={index + 1}
+                      className="currentWeapon_Modal_Top_TextBlock_Characteristic_Feature"
+                    >
+                      {feature}
+                    </p>
+                  ))}
+                </span>
+              </div>
+            </>
+          );
+        } else {
+          return (
+            <>
+              <div className="currentWeapon_Modal_Top_TextBlock_Characteristic">
+                <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Name">
+                  ВРЕМЯ ВЗВЕДЕНИЯ:
+                </p>
+
+                <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Text insigniaNumericText">
+                  {fuseTime}
+                </p>
+              </div>
+
+              <div className="currentWeapon_Modal_Top_TextBlock_Characteristic">
+                <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Name">
+                  ПРОБИВАЕМОСТЬ:
+                </p>
+
+                <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Text insigniaNumericText">
+                  {penetration}
+                </p>
+              </div>
+
+              <div className="currentWeapon_Modal_Top_TextBlock_Characteristic">
+                <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Name">
+                  РАДИУС:
+                </p>
+
+                <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Text insigniaNumericText">
+                  {radius}
+                </p>
+              </div>
+            </>
+          );
+        }
+      };
       return (
         <Observer>
           {() => (
@@ -82,12 +203,31 @@ const WeaponAdditionalInfoModa: React.FC<WeaponAdditionalInfoModaProps> =
               </button>
 
               <div className="currentWeapon_Modal_Top">
-                <div className="currentWeapon_Modal_Top_ImageWrapper">
+                <div
+                  className={`currentWeapon_Modal_Top_ImageWrapper ${directions ? "" : "flex justify-center items-center"} ${fuseTime ? "w-[400px]" : "w-[640px]"}`}
+                >
                   <img
                     src={imagePath}
                     alt=""
-                    className={`currentWeapon_Modal_Top_ImageWrapper_Image ${fireRate ? "" : "scale-[0.6]"}`}
+                    className={`currentWeapon_Modal_Top_ImageWrapper_Image ${dps ? "scale-y-[0.7]" : directions ? "scale-[0.9]" : "scale-[0.7]"}`}
                   />
+
+                  {directions && (
+                    <div className="relative flex justify-center items-center w-full h-[calc(100%-292px)] border-t-2 border-[#2cc388]">
+                      <div className="relative flex justify-around items-center py-[15px] px-[20px] w-full h-auto">
+                        {directions.map((direction) => {
+                          return (
+                            <img
+                              key={direction.id}
+                              src="/static/GeneralIcons/ArrowIcon.svg"
+                              alt=""
+                              className={`w-[35px] h-[30px] ${getTargetRotate(direction.orientation)}`}
+                            />
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 <div className="currentWeapon_Modal_Top_TextBlock">
@@ -116,82 +256,12 @@ const WeaponAdditionalInfoModa: React.FC<WeaponAdditionalInfoModaProps> =
                       УРОН:
                     </p>
 
-                    <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Text">
+                    <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Text insigniaNumericText">
                       {damage}
                     </p>
                   </div>
 
-                  {fireRate ? (
-                    <>
-                      <div className="currentWeapon_Modal_Top_TextBlock_Characteristic">
-                        <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Name">
-                          ВМЕСТИМОСТЬ:
-                        </p>
-
-                        {isFinite(roundsPerMag!) ? (
-                          <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Text">
-                            {roundsPerMag}
-                          </p>
-                        ) : (
-                          <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Text">
-                            ∞
-                          </p>
-                        )}
-                      </div>
-
-                      <div className="currentWeapon_Modal_Top_TextBlock_Characteristic">
-                        <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Name">
-                          ОТДАЧА:
-                        </p>
-
-                        <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Text">
-                          {recoil}
-                        </p>
-                      </div>
-
-                      <div className="currentWeapon_Modal_Top_TextBlock_Characteristic">
-                        <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Name">
-                          СКОРОСТРЕЛЬНОСТЬ:
-                        </p>
-
-                        <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Text">
-                          {fireRate}
-                        </p>
-                      </div>
-                    </>
-                  ) : (
-                    <>
-                      <div className="currentWeapon_Modal_Top_TextBlock_Characteristic">
-                        <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Name">
-                          ВРЕМЯ ВЗВЕДЕНИЯ:
-                        </p>
-
-                        <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Text">
-                          {fuseTime}
-                        </p>
-                      </div>
-
-                      <div className="currentWeapon_Modal_Top_TextBlock_Characteristic">
-                        <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Name">
-                          ПРОБИВАЕМОСТЬ:
-                        </p>
-
-                        <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Text">
-                          {penetration}
-                        </p>
-                      </div>
-
-                      <div className="currentWeapon_Modal_Top_TextBlock_Characteristic">
-                        <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Name">
-                          РАДИУС:
-                        </p>
-
-                        <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Text">
-                          {radius}
-                        </p>
-                      </div>
-                    </>
-                  )}
+                  {getSpecificTextFields()}
                 </div>
               </div>
 

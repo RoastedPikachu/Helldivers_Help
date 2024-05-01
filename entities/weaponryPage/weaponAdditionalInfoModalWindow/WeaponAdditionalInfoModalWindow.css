@@ -3,11 +3,11 @@
 }
 
 .currentWeapon_Modal_Top_ImageWrapper {
-    @apply relative flex justify-center items-center w-[400px] h-[292px] bg-cover bg-no-repeat border-2 border-[--theme-color] rounded-t-[7.5px] rounded-bl-[7.5px];
+    @apply relative h-auto bg-cover bg-no-repeat border-2 border-[--theme-color] rounded-t-[7.5px] rounded-bl-[7.5px];
 }
 
 .currentWeapon_Modal_Top_ImageWrapper_Image {
-    @apply w-full;
+    @apply w-full h-[292px];
 }
 
 .currentWeapon_Modal_Top_TextBlock {
@@ -15,7 +15,7 @@
 }
 
 .currentWeapon_Modal_Top_TextBlock_Title {
-    @apply text-[#ffffff] text-[2rem] font-['Exo2'] font-bold;
+    @apply w-[80%] text-[#ffffff] text-[2rem] font-['Exo2'] font-bold;
 }
 
 .currentWeapon_Modal_Top_TextBlock_Characteristic {
@@ -38,8 +38,12 @@
     @apply ml-[10px] w-[35px] h-[35px];
 }
 
+.currentWeapon_Modal_Top_TextBlock_Characteristic_Feature {
+    @apply mt-[15px] pl-[10px] border-l-4 border-[#fffff] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium;
+}
+
 .currentWeapon_Modal_Top_TextBlock_Characteristic_Text {
-    @apply mt-[2.5px] ml-[20px] text-[#ffffff] text-[1.75rem] font-['Insignia'] font-bold;
+    @apply ml-[20px] text-[#ffffff] text-[1.75rem] font-bold;
 }
 
 .currentWeapon_Modal_Bottom {
@@ -72,4 +76,8 @@
 
 .currentWeapon_Modal_Bottom_Bottom_TextBlock_Text {
     @apply mt-[2.5px] ml-[20px] text-[#ffffff] text-[1.75rem] font-['Insignia'] font-bold;
+}
+
+.insigniaNumericText {
+    @apply mt-[2.5px] font-['Insignia'];
 }

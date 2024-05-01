@@ -1,13 +1,12 @@
 "use client";
 import React from "react";
 
+import { slidersStore } from "@/store/SlidersStore";
 import { weaponsStore } from "@/store/WeaponsStore";
 
 import { WeaponType } from "@/utils/dataInterfaces";
 
 import "./Weapon.css";
-import modalSlider from "@/widgets/modalSlider/ModalSlider";
-import { slidersStore } from "@/store/SlidersStore";
 
 interface WeaponProps {
   id: number;
@@ -23,23 +22,29 @@ const Weapon: React.FC<WeaponProps> = ({ id, weaponType, imagePath, name }) => {
     weaponsStore.changeCurrentWeaponInfo(id, weaponType);
   };
 
-  const getTargetWeaponImageScale = () => {
+  const getTargetSupportWeaponImageScale = (id: number) => {
     switch (id) {
       case 1:
-        return "scale-y-[0.8]";
+        return "mt-[-10px] scale-y-[1.4]";
+      case 2:
+        return "scale-y-[1.2]";
       case 3:
+        return "scale-y-[1.2]";
+      case 6:
+        return "mt-[-10px]";
+      case 8:
         return "scale-[0.9]";
-      case 4:
-        return "scale-y-[0.8]";
-      case 5:
-        return "scale-y-[0.9]";
-      case 7:
-        return "scale-y-[0.9]";
       case 9:
-        return "scale-y-[0.8]";
+        return "scale-[1.2]";
+      case 10:
+        return "scale-y-[1.1]";
       case 12:
-        return "scale-y-[0.8]";
+        return "scale-[0.9]";
+      case 13:
+        return "scale-[0.9]";
       case 14:
+        return "scale-[0.8]";
+      case 15:
         return "scale-[0.9]";
     }
   };
@@ -48,7 +53,8 @@ const Weapon: React.FC<WeaponProps> = ({ id, weaponType, imagePath, name }) => {
       <img
         src={imagePath}
         alt=""
-        className={`${weaponType.typeNumber !== 4 ? "w-[400px] h-[160px]" : "w-[200px] h-[150px] scale-[0.9]"} ${weaponType.typeNumber === 3 ? getTargetWeaponImageScale() : ""}`}
+        style={{ transform: "" }}
+        className={`${weaponType.typeNumber !== 4 ? "w-[400px] h-[160px]" : "w-[200px] h-[150px] scale-[0.9]"} ${weaponType.typeNumber === 3 ? getTargetSupportWeaponImageScale(id) : ""}`}
       />
 
       <p className="weaponWidget_Text">{name}</p>
