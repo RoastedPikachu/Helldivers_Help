@@ -1,12 +1,17 @@
+"use client";
 import React, { useEffect } from "react";
+
+import { Observer, observer } from "mobx-react-lite";
 
 import Link from "next/link";
 
-import "./TheHeader.css";
-import { Observer, observer } from "mobx-react-lite";
 import { mobileStore } from "@/store/MobileStore";
+
 import { isMobileDevice } from "@/utils/generalFunctions";
+
 import MobileHeaderContent from "@/widgets/mobileHeaderContent/MobileHeaderContent";
+
+import "./TheHeader.css";
 
 const TheHeader = observer(() => {
   useEffect(() => {
