@@ -4,11 +4,10 @@ import React, { useState } from "react";
 import { IResource, ResourceTableTitle } from "@/utils/generalInterfaces";
 import { resources } from "@/data/resources/";
 
-import TheHeader from "@/widgets/header/TheHeader";
+import TopPageBlock from "@/widgets/topPageBlock/TopPageBlock";
 import TheFooter from "@/widgets/footer/TheFooter";
 import ResourceTable from "@/widgets/resourceTable/ResourceTable";
 
-import RunningLine from "@/shared/RunningLine";
 import TheScrollToUpButton from "@/shared/theScrollToUpButton/TheScrollToUpButton";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
@@ -63,9 +62,7 @@ const Page = () => {
 
   return (
     <>
-      <TheHeader />
-
-      <RunningLine />
+      <TopPageBlock />
 
       <TheScrollToUpButton />
 

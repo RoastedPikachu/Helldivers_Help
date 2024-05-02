@@ -1,12 +1,11 @@
 "use client";
 import React from "react";
 
-import TheHeader from "@/widgets/header/TheHeader";
+import TopPageBlock from "@/widgets/topPageBlock/TopPageBlock";
 import TheFooter from "@/widgets/footer/TheFooter";
 import MajorOrderSection from "@/widgets/warPage/majorOrderSection/MajorOrderSection";
 import CampaignsSection from "@/widgets/warPage/campaignsSection/CampaignsSection";
 
-import RunningLine from "@/shared/RunningLine";
 import SectionTitle from "@/shared/sectionTitle/SectionTitle";
 
 import "./WarPage.css";
@@ -14,9 +13,7 @@ import "./WarPage.css";
 const Page = () => {
   return (
     <>
-      <TheHeader />
-
-      <RunningLine />
+      <TopPageBlock />
 
       <main className="flex justify-between">
         <aside className="galaxyMap">

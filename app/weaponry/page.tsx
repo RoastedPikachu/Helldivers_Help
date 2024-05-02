@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 
 import { observer, Observer } from "mobx-react-lite";
 
@@ -7,25 +7,22 @@ import { SwiperSlide } from "swiper/react";
 
 import { weaponsStore } from "@/store/WeaponsStore";
 
-import TheHeader from "@/widgets/header/TheHeader";
+import TopPageBlock from "@/widgets/topPageBlock/TopPageBlock";
 import TheFooter from "@/widgets/footer/TheFooter";
 import ModalSlider from "@/widgets/modalSlider/ModalSlider";
+import EntitySection from "@/widgets/EntitySection";
 
-import RunningLine from "@/shared/RunningLine";
 import TheScrollToUpButton from "@/shared/theScrollToUpButton/TheScrollToUpButton";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 
+import Weapon from "@/entities/weaponryPage/weapon/Weapon";
 import WeaponAdditionalInfoModalWindow from "@/entities/weaponryPage/weaponAdditionalInfoModalWindow/WeaponAdditionalInfoModalWindow";
 
 import "swiper/css";
 import "swiper/css/navigation";
 
 import "./WeaponryPage.css";
-import EntitySection from "@/widgets/EntitySection";
-import Weapon from "@/entities/weaponryPage/weapon/Weapon";
-import axios from "axios";
-import { stratagemStore } from "@/store/StratagemStore";
 
 const Page = observer(() => {
   const getTargetWeaponProps = (weapon: any) => {
@@ -100,9 +97,7 @@ const Page = observer(() => {
     <Observer>
       {() => (
         <>
-          <TheHeader />
-
-          <RunningLine />
+          <TopPageBlock />
 
           <TheScrollToUpButton />
 

@@ -2,11 +2,10 @@ import React from "react";
 
 import { achievementsStore } from "@/store/AchievementsStore";
 
-import TheHeader from "@/widgets/header/TheHeader";
+import TopPageBlock from "@/widgets/topPageBlock/TopPageBlock";
 import TheFooter from "@/widgets/footer/TheFooter";
 import EntitySection from "@/widgets/EntitySection";
 
-import RunningLine from "@/shared/RunningLine";
 import TheScrollToUpButton from "@/shared/theScrollToUpButton/TheScrollToUpButton";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
@@ -16,9 +15,7 @@ import Achievement from "@/entities/achievement/Achievement";
 const Page = () => {
   return (
     <>
-      <TheHeader />
-
-      <RunningLine />
+      <TopPageBlock />
 
       <TheScrollToUpButton />
 

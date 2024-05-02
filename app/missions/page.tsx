@@ -7,11 +7,10 @@ import {
   terminidMissions,
 } from "@/data/missions";
 
-import TheHeader from "@/widgets/header/TheHeader";
+import TopPageBlock from "@/widgets/topPageBlock/TopPageBlock";
 import TheFooter from "@/widgets/footer/TheFooter";
 import EntitySection from "@/widgets/EntitySection";
 
-import RunningLine from "@/shared/RunningLine";
 import TheScrollToUpButton from "@/shared/theScrollToUpButton/TheScrollToUpButton";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
@@ -21,9 +20,7 @@ import Mission from "@/entities/mission/Mission";
 const Page = () => {
   return (
     <>
-      <TheHeader />
-
-      <RunningLine />
+      <TopPageBlock />
 
       <TheScrollToUpButton />
 

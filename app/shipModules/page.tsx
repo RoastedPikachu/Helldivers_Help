@@ -3,11 +3,10 @@ import React from "react";
 
 import { shipModulesStore } from "@/store/ShipModulesStore";
 
-import TheHeader from "@/widgets/header/TheHeader";
+import TopPageBlock from "@/widgets/topPageBlock/TopPageBlock";
 import TheFooter from "@/widgets/footer/TheFooter";
 import EntitySection from "@/widgets/EntitySection";
 
-import RunningLine from "@/shared/RunningLine";
 import TheScrollToUpButton from "@/shared/theScrollToUpButton/TheScrollToUpButton";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
@@ -20,9 +19,7 @@ import "swiper/css/navigation";
 const Page = () => {
   return (
     <>
-      <TheHeader />
-
-      <RunningLine />
+      <TopPageBlock />
 
       <TheScrollToUpButton />
 

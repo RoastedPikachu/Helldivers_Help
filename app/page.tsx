@@ -1,14 +1,13 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 
 import { useRouter } from "next/navigation";
 
-import { isMobileDevice } from "@/utils/generalFunctions";
+import { pages } from "@/data/pages/pages";
 
-import TheHeader from "@/widgets/header/TheHeader";
+import TopPageBlock from "@/widgets/topPageBlock/TopPageBlock";
 import TheFooter from "@/widgets/footer/TheFooter";
 
-import RunningLine from "@/shared/RunningLine";
 import TheScrollToUpButton from "@/shared/theScrollToUpButton/TheScrollToUpButton";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
@@ -17,76 +16,9 @@ import ManualSection from "@/entities/ManualSection";
 
 const Page = () => {
   const router = useRouter();
-
-  const manualSections = [
-    { id: 1, link: "/weaponry", title: "Вооружение" },
-    {
-      id: 2,
-      link: "/armorKits",
-      title: "Броня",
-    },
-    {
-      id: 3,
-      link: "/stratagems",
-      title: "Стратагемы",
-    },
-    {
-      id: 4,
-      link: "/boosters",
-      title: "Усилители",
-    },
-    {
-      id: 5,
-      link: "/resources",
-      title: "Ресурсы",
-    },
-    {
-      id: 6,
-      link: "/shipModules",
-      title: "Модули корабля",
-    },
-    {
-      id: 7,
-      link: "/progression",
-      title: "Прогрессия",
-    },
-    {
-      id: 8,
-      link: "/achievements",
-      title: "Достижения",
-    },
-    {
-      id: 9,
-      link: "/enemy/terminids",
-      title: "Терминиды",
-    },
-    {
-      id: 10,
-      link: "/enemy/automatons",
-      title: "Автоматоны",
-    },
-    {
-      id: 11,
-      link: "/missions",
-      title: "Миссии",
-    },
-    {
-      id: 12,
-      link: "/planets",
-      title: "Планеты",
-    },
-  ];
-
-  useEffect(() => {
-    if (isMobileDevice()) {
-      router.push("/mobilePageBlank");
-    }
-  }, []);
   return (
     <>
-      <TheHeader />
-
-      <RunningLine />
+      <TopPageBlock />
 
       <TheScrollToUpButton />
 
@@ -114,12 +46,12 @@ const Page = () => {
         />
 
         <section className="relative grid grid-cols-4 grid-rows-2 gap-y-[30px] gap-x-[30px] mt-[50px] w-full h-auto">
-          {manualSections.map((section) => (
+          {pages.map((page) => (
             <ManualSection
-              key={section.id}
-              id={section.id}
-              link={section.link}
-              title={section.title}
+              key={page.id}
+              id={page.id}
+              link={page.link}
+              title={page.title}
             />
           ))}
         </section>

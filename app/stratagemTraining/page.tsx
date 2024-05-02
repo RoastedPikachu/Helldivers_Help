@@ -3,10 +3,9 @@ import React from "react";
 
 import { observer, Observer } from "mobx-react-lite";
 
-import TheHeader from "@/widgets/header/TheHeader";
+import TopPageBlock from "@/widgets/topPageBlock/TopPageBlock";
 import TheFooter from "@/widgets/footer/TheFooter";
 
-import RunningLine from "@/shared/RunningLine";
 import TheScrollToUpButton from "@/shared/theScrollToUpButton/TheScrollToUpButton";
 
 const Page = observer(() => {
@@ -31,9 +30,7 @@ const Page = observer(() => {
     <Observer>
       {() => (
         <>
-          <TheHeader />
-
-          <RunningLine />
+          <TopPageBlock />
 
           <TheScrollToUpButton />
 

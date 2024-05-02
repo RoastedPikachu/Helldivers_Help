@@ -9,12 +9,11 @@ import { planetsStore } from "@/store/PlanetsStore";
 
 import { galaxySectors } from "@/data/galaxySectors";
 
-import TheHeader from "@/widgets/header/TheHeader";
+import TopPageBlock from "@/widgets/topPageBlock/TopPageBlock";
 import TheFooter from "@/widgets/footer/TheFooter";
 import ModalSlider from "@/widgets/modalSlider/ModalSlider";
 import EntitySection from "@/widgets/EntitySection";
 
-import RunningLine from "@/shared/RunningLine";
 import TheScrollToUpButton from "@/shared/theScrollToUpButton/TheScrollToUpButton";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
@@ -38,9 +37,7 @@ const Page = observer(() => {
     <Observer>
       {() => (
         <>
-          <TheHeader />
-
-          <RunningLine />
+          <TopPageBlock />
 
           <TheScrollToUpButton />
 
