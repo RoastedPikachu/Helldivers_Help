@@ -8,6 +8,8 @@ import { tipsStore } from "@/store/TipsStore";
 import { Tip } from "@/utils/generalInterfaces";
 import { getRandomEntity } from "@/utils/generalFunctions";
 
+import "./RunningLine.css";
+
 const RunningLine = () => {
   const [currentTip, setCurrentTip] = useState({} as Tip);
 
@@ -16,11 +18,7 @@ const RunningLine = () => {
   }, []);
 
   return (
-    <Marquee
-      direction="left"
-      pauseOnHover={true}
-      className="flex items-center mlarge:top-[65px] w-full h-[55px] mlarge:h-[50px] border-y-[1px] bg-[#00293a] border-[--theme-color] text-[--theme-color] text-[1.5rem] mlarge:text-[1.375rem] font-['Exo2'] font-medium mlarge:z-[40]"
-    >
+    <Marquee direction="left" pauseOnHover={true} className="runningLine">
       {currentTip.text}&nbsp;
     </Marquee>
   );

@@ -1,10 +1,15 @@
+"use client";
 import React from "react";
+
 import TheHeader from "@/widgets/header/TheHeader";
-import RunningLine from "@/shared/RunningLine";
+
+import RunningLine from "@/shared/runningLine/RunningLine";
+
+import "./TopPageBlock.css";
 
 const TopPageBlock = () => {
   return (
-    <section className="fixed top-0 w-screen h-auto z-[40]">
+    <section>
       <TheHeader />
 
       <RunningLine />
