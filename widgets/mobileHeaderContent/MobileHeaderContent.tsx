@@ -21,7 +21,7 @@ const MobileHeaderContent = () => {
           aria-label={`Кнопка: ${isAdditionalHeaderInfoOpened ? "Закрыть" : "Открыть"} меню с ссылками на другие страницы`}
           className="absolute flex justify-center items-center left-[2.5%] w-[50px] h-[50px]"
         >
-          <div className="relative w-[35px] h-[28px] duration-[400ms] ease-in-out">
+          <div className="relative w-[35px] mmedium:w-[32.5px] msmall:w-[30px] h-[28px] mmedium:h-[25px] msmall:h-[23px] duration-[400ms] ease-in-out">
             <span
               className={`absolute left-0 w-full h-[5px] bg-[#2cc388] rounded-[10px] duration-[250ms] ease-in-out ${isAdditionalHeaderInfoOpened ? "top-[11px] -rotate-45" : "top-0"}`}
             ></span>
@@ -34,7 +34,7 @@ const MobileHeaderContent = () => {
           </div>
         </button>
 
-        <p className="headerLogoLink_Text !ml-0">
+        <p className="headerLogoLink_Text">
           HELLDIVERS <b className="headerLogoLink_Text_Bold">help</b>
         </p>
       </div>

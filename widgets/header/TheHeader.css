@@ -11,7 +11,7 @@ header {
 }
 
 .headerLogoLink_Text {
-    @apply ml-[10px] text-[#ffffff] text-[2rem] font-['Insignia'] font-bold;
+    @apply mmedium:mt-[2.5px] msmall:mt-[5px] ml-[10px] mlarge:ml-0 text-[#ffffff] text-[2rem] mlarge:text-[1.75rem] mmedium:text-[1.625rem] msmall:text-[1.5rem] font-['Insignia'] font-bold;
 }
 
 .headerLogoLink_Text_Bold {
