@@ -7,11 +7,13 @@ class MobileStore {
   constructor() {
     makeAutoObservable(this);
 
-    makePersistable(this, {
-      name: "MobileStore",
-      properties: ["isMobileDevice"],
-      storage: window.localStorage,
-    });
+    if (typeof window !== "undefined") {
+      makePersistable(this, {
+        name: "MobileStore",
+        properties: ["isMobileDevice"],
+        storage: window.localStorage,
+      });
+    }
   }
 
   changeIsMobileDeviceStatus = (status: boolean) => {
