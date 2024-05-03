@@ -40,7 +40,7 @@ const MobileHeaderContent = () => {
       </div>
 
       <div
-        className={`absolute top-[115px] w-full h-[calc(100vh+115px)] bg-[#01212f] duration-[400ms] ease-in-out z-[30] ${isAdditionalHeaderInfoOpened ? "left-0" : "left-[-100vw]"}`}
+        className={`absolute top-[115px] w-full h-[calc(100vh+115px)] bg-[#01212f] duration-[400ms] ease-in-out ${isAdditionalHeaderInfoOpened ? "left-0" : "left-[-100vw]"}`}
       >
         <nav className="mt-[30px] px-[calc(2.5%+10px)]">
           <div className="flex justify-between items-center w-full">
@@ -65,7 +65,7 @@ const MobileHeaderContent = () => {
             </Link>
           </div>
 
-          <div className="grid gap-y-[15px] mt-[30px]">
+          <div className="relative grid gap-y-[15px] mt-[30px] z-[40]">
             {pages.map((page) => (
               <Link
                 key={page.id}
