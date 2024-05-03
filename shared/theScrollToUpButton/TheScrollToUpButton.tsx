@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 
 import "./TheScrollToUpButton.css";
+import { mobileStore } from "@/store/MobileStore";
 
 const TheScrollToUpButton = () => {
   const [isScrollButtonShowed, changeIsScrollButtonShowed] = useState(false);
@@ -25,7 +26,7 @@ const TheScrollToUpButton = () => {
           behavior: "smooth",
         })
       }
-      className={`${isScrollButtonShowed ? "opacity-1" : "opacity-0 scroll-default"} buttonWrapper`}
+      className={`${isScrollButtonShowed ? "opacity-1" : "opacity-0 scroll-default"} ${mobileStore.isMobileDevice ? "hidden" : "block"} buttonWrapper`}
     >
       <img
         src="/static/GeneralIcons/ArrowDownIcon.svg"

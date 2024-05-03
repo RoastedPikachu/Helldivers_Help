@@ -28,7 +28,11 @@ const Page = () => {
           }
         />
 
-        <EntitySection gridStyles={"mt-[50px]! grid-cols-2"}>
+        <EntitySection
+          gridStyles={
+            "mt-[50px] mlarge:mt-[30px] grid-cols-2 mlarge:grid-cols-1"
+          }
+        >
           {achievementsStore.achievements.map((achievement) => (
             <Achievement
               key={achievement.id}

@@ -15,7 +15,7 @@
 }
 
 .pageGridSection {
-    @apply relative grid gap-y-[30px] gap-x-[30px] mt-[50px] w-full h-auto;
+    @apply relative grid gap-y-[30px] gap-x-[30px] w-full h-auto z-[20];
 }
 
 .pageSectionContentWrapper {
