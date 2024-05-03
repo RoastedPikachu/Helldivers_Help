@@ -1,13 +1,17 @@
 "use client";
 import React, { useState } from "react";
 
+import { observer, Observer } from "mobx-react-lite";
+
 import { levels } from "@/data/levels";
+
+import { mobileStore } from "@/store/MobileStore";
 
 import SectionTitle from "@/shared/sectionTitle/SectionTitle";
 
 import "./LevelsSection.css";
 
-const LevelsSection = () => {
+const LevelsSection = observer(() => {
   const [currentLevel, setCurrentLevel] = useState("");
   const [targetLevel, setTargetLevel] = useState("");
 
@@ -31,74 +35,83 @@ const LevelsSection = () => {
   };
 
   return (
-    <section className="levelsSection">
-      <SectionTitle text={"КАЛЬКУЛЯТОР УРОВНЕЙ"} />
+    <Observer>
+      {() => (
+        <section className="levelsSection">
+          <SectionTitle text={"КАЛЬКУЛЯТОР УРОВНЕЙ"} />
 
-      <form>
-        <div className="formInputBlock">
-          <input
-            type="text"
-            list="Levels"
-            placeholder="Начальный уровень"
-            maxLength={10}
-            value={currentLevel}
-            onChange={(event) => setCurrentLevel(event.target.value)}
-            className="formInputBlock_Input"
-          />
-
-          {currentLevel && (
-            <button
-              onClick={() => setCurrentLevel("")}
-              className="formInputBlock_ClearButton"
-            >
-              <img
-                src="/static/GeneralIcons/XMarkIcon.svg"
-                alt=""
-                className="formInputBlock_ClearButton_Icon"
+          <form>
+            <div className="formInputBlock">
+              <input
+                type="text"
+                list="Levels"
+                placeholder={`Начальный ${mobileStore.isMobileDevice ? "" : "уровень"}`}
+                maxLength={10}
+                value={currentLevel}
+                onChange={(event) => setCurrentLevel(event.target.value)}
+                className="formInputBlock_Input"
               />
-            </button>
-          )}
-        </div>
 
-        <div className="formInputBlock">
-          <input
-            type="text"
-            list="Levels"
-            placeholder="Конечный уровень"
-            maxLength={10}
-            value={targetLevel}
-            onChange={(event) => setTargetLevel(event.target.value)}
-            className="formInputBlock_Input"
-          />
+              {currentLevel && (
+                <button
+                  onClick={() => setCurrentLevel("")}
+                  className="formInputBlock_ClearButton"
+                >
+                  <img
+                    src="/static/GeneralIcons/XMarkIcon.svg"
+                    alt=""
+                    className="formInputBlock_ClearButton_Icon"
+                  />
+                </button>
+              )}
+            </div>
 
-          {targetLevel && (
-            <button
-              onClick={() => setTargetLevel("")}
-              className="formInputBlock_ClearButton"
-            >
-              <img
-                src="/static/GeneralIcons/XMarkIcon.svg"
-                alt=""
-                className="formInputBlock_ClearButton_Icon"
+            <div className="formInputBlock">
+              <input
+                type="text"
+                list="Levels"
+                placeholder={`Конечный ${mobileStore.isMobileDevice ? "" : "уровень"}`}
+                maxLength={10}
+                value={targetLevel}
+                onChange={(event) => setTargetLevel(event.target.value)}
+                className="formInputBlock_Input"
               />
-            </button>
-          )}
-        </div>
 
-        <datalist id="Levels">
-          {getLevelsArray().map((level) => (
-            <option key={level.id} value={level.id + " уровень"} />
-          ))}
-        </datalist>
+              {targetLevel && (
+                <button
+                  onClick={() => setTargetLevel("")}
+                  className="formInputBlock_ClearButton"
+                >
+                  <img
+                    src="/static/GeneralIcons/XMarkIcon.svg"
+                    alt=""
+                    className="formInputBlock_ClearButton_Icon"
+                  />
+                </button>
+              )}
+            </div>
 
-        <div className="formResultBlock">
-          <p className="formResultBlock_Text">
-            {getTargetLevelXpTotal() - getCurrentLevelXpTotal() || 0} опыта
-          </p>
-        </div>
-      </form>
-    </section>
+            <datalist id="Levels">
+              {getLevelsArray().map((level) => (
+                <option
+                  key={level.id}
+                  value={
+                    level.id + (mobileStore.isMobileDevice ? "" : " уровень")
+                  }
+                />
+              ))}
+            </datalist>
+
+            <div className="formResultBlock">
+              <p className="formResultBlock_Text">
+                {getTargetLevelXpTotal() - getCurrentLevelXpTotal() || 0} опыта
+              </p>
+            </div>
+          </form>
+        </section>
+      )}
+    </Observer>
   );
-};
+});
 
 export default LevelsSection;

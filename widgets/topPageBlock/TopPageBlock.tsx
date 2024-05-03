@@ -8,7 +8,7 @@ import "./TopPageBlock.css";
 
 const TopPageBlock = () => {
   return (
-    <section>
+    <section className="topPageSection">
       <TheHeader />
 
       <RunningLine />
