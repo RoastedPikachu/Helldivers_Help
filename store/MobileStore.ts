@@ -1,5 +1,6 @@
 import { makeAutoObservable } from "mobx";
 import { makePersistable } from "mobx-persist-store";
+import { isMobileDevice } from "@/utils/generalFunctions";
 
 class MobileStore {
   isMobileDevice = false;
@@ -13,11 +14,18 @@ class MobileStore {
         properties: ["isMobileDevice"],
         storage: window.localStorage,
       });
+
+      this.changeIsMobileDeviceStatus();
+      setInterval(() => this.changeIsMobileDeviceStatus(), 1000);
     }
   }
 
-  changeIsMobileDeviceStatus = (status: boolean) => {
-    this.isMobileDevice = status;
+  changeIsMobileDeviceStatus = () => {
+    if (isMobileDevice()) {
+      this.isMobileDevice = true;
+    } else {
+      this.isMobileDevice = false;
+    }
   };
 }
 

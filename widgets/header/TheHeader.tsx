@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 
 import { Observer, observer } from "mobx-react-lite";
 
@@ -7,18 +7,11 @@ import Link from "next/link";
 
 import { mobileStore } from "@/store/MobileStore";
 
-import { isMobileDevice } from "@/utils/generalFunctions";
-
 import MobileHeaderContent from "@/widgets/mobileHeaderContent/MobileHeaderContent";
 
 import "./TheHeader.css";
 
 const TheHeader = observer(() => {
-  useEffect(() => {
-    if (isMobileDevice()) {
-      mobileStore.changeIsMobileDeviceStatus(true);
-    }
-  }, []);
   return (
     <Observer>
       {() => (
