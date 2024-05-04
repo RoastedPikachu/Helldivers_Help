@@ -8,6 +8,7 @@ import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 
 import CodeRule from "@/entities/CodeRule";
+import EntitySection from "@/widgets/EntitySection";
 
 const Page = () => {
   const codeRules = [
@@ -57,11 +58,16 @@ const Page = () => {
           }
         />
 
-        <section className="relative grid grid-cols-4 grid-rows-2 gap-y-[30px] gap-x-[30px] mt-[50px] w-full h-auto">
+        <EntitySection
+          title={""}
+          gridStyles={
+            "mt-[50px] mlarge:mt-[30px] grid-cols-4 mlarge:grid-cols-1"
+          }
+        >
           {codeRules.map((rule) => (
             <CodeRule key={rule.id} id={rule.id} text={rule.text} />
           ))}
-        </section>
+        </EntitySection>
       </main>
 
       <TheFooter />
