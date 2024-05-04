@@ -1,41 +1,41 @@
 .rootActiveCampaignWidget {
-   @apply relative w-[450px] h-auto bg-[#00293a] border-2 rounded-[10px];
+   @apply relative w-[450px] mlarge:w-full h-auto bg-[#00293a] border-2 rounded-[10px];
 }
 
 .rootActiveCampaignWidget_Top {
-    @apply flex justify-between items-center px-[20px] w-full h-[50px] bg-[#000000] rounded-t-[10px];
+    @apply flex justify-between items-center px-[20px] w-full h-[50px] mlarge:h-[45px] mmedium:h-[40px] msmall:h-[35px] bg-[#000000] rounded-t-[10px];
 }
 
 .rootActiveCampaignWidget_Top_Left {
-    @apply flex;
+    @apply flex mlarge:items-center;
 }
 
 .rootActiveCampaignWidget_Top_Left_Icon {
-    @apply w-[40px] h-[30px];
+    @apply w-[40px] mlarge:w-[35px] mmedium:w-[30px] msmall:w-[25px] h-[30px] mlarge:h-[27.5px] mmedium:h-[25px] msmall:h-[22.5px];
 }
 
 .rootActiveCampaignWidget_Top_Left_Title {
-    @apply ml-[10px] text-[1.5rem] font-['Exo2'] font-bold;
+    @apply ml-[10px] text-[1.5rem] mlarge:text-[1.375rem] mmedium:text-[1.25rem] msmall:text-[1.125rem] font-['Exo2'] font-bold;
 }
 
 .rootActiveCampaignWidget_Top_TimeLeft {
-    @apply text-[1.375rem] font-['Insignia'] font-bold;
+    @apply text-[1.375rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-['Insignia'] font-bold;
 }
 
 .rootActiveCampaignWidget_Center {
-    @apply relative w-full h-[185px];
+    @apply relative w-full h-[185px] mlarge:h-[150px] mmedium:h-[130px] msmall:h-[110px];
 }
 
 .rootActiveCampaignWidget_Center_Status {
-    @apply absolute flex justify-center items-center px-[20px] w-full h-[35px] bg-[#00000073];
+    @apply absolute flex justify-center items-center px-[20px] w-full h-[35px] mmedium:h-[30px] msmall:h-[27.5px] bg-[#00000073];
 }
 
 .rootActiveCampaignWidget_Center_Status_Icon {
-    @apply w-[20px] h-[20px];
+    @apply w-[20px] mlarge:w-[17.5px] msmall:w-[15px] h-[20px] mlarge:h-[17.5px] msmall:h-[15px];
 }
 
 .rootActiveCampaignWidget_Center_Status_Text {
-    @apply mt-[-1.5px] ml-[10px] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-semibold;
+    @apply mt-[-1.5px] ml-[10px] text-[#ffffff] text-[1.5rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-['Exo2'] font-semibold;
 }
 
 .rootActiveCampaignWidget_Center_Image {
@@ -51,11 +51,11 @@
 }
 
 .rootActiveCampaignWidget_Center_WeatherConditions_Block_ImageWrapper_Image {
-    @apply mr-[20px] p-[2.5px] w-[45px] h-[45px] bg-[#ffffff] rounded-[7.5px] cursor-pointer z-50;
+    @apply mr-[20px] mlarge:mr-[10px] p-[2.5px] w-[45px] mlarge:w-[40px] mmedium:w-[35px] msmall:w-[32.5px] h-[45px] mlarge:h-[40px] mmedium:h-[35px] msmall:h-[32.5px] bg-[#ffffff] rounded-[7.5px] cursor-pointer z-50;
 }
 
 .rootActiveCampaignWidget_Liberation {
-    @apply relative flex w-full h-[40px] bg-[#000000] border-2 border-[#000000];
+    @apply relative flex w-full h-[40px] mlarge:h-[35px] mmedium:h-[32.5px] msmall:h-[30px] bg-[#000000] border-2 border-[#000000];
 }
 
 .rootActiveCampaignWidget_Liberation_Wrapper {
@@ -71,11 +71,11 @@
 }
 
 .rootActiveCampaignWidget_Percentage {
-    @apply relative w-full h-[50px] bg-[#000000] border-2 border-[#000000];
+    @apply relative w-full h-[50px] mlarge:h-[40px] msmall:h-[35px] bg-[#000000] border-2 border-[#000000];
 }
 
 .rootActiveCampaignWidget_Percentage_Wrapper {
-    @apply flex justify-between items-center px-[20px] w-full h-full border-2 border-[#ffffff];
+    @apply flex justify-between items-center px-[20px] mlarge:px-[10px] w-full h-full border-2 border-[#ffffff];
 }
 
 .rootActiveCampaignWidget_Percentage_Wrapper_Left {
@@ -83,11 +83,11 @@
 }
 
 .rootActiveCampaignWidget_Percentage_Wrapper_Left_NumberText {
-    @apply text-[#ffffff] text-[1.375rem] font-['Insignia'] font-medium;
+    @apply text-[#ffffff] text-[1.375rem] mlarge:text-[1.25rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Insignia'] font-medium;
 }
 
 .rootActiveCampaignWidget_Percentage_Wrapper_Left_Text {
-    @apply mt-[-2px] ml-[10px] text-[#ffffff] text-[1.25rem] font-['Exo2'] font-medium;
+    @apply mt-[-2px] mlarge:mt-[-1px] ml-[10px] mlarge:ml-[5px] text-[#ffffff] text-[1.25rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] font-['Exo2'] font-medium;
 }
 
 .rootActiveCampaignWidget_Percentage_Wrapper_Right {
@@ -95,19 +95,19 @@
 }
 
 .rootActiveCampaignWidget_Percentage_Wrapper_Right_Icon {
-   @apply w-[20px] h-[25px];
+   @apply mmedium:mt-[2.5px] w-[20px] mlarge:w-[17.5px] msmall:w-[15px] h-[25px] mlarge:h-[22.5px] msmall:h-[20px];
 }
 
 .rootActiveCampaignWidget_Percentage_Wrapper_Right_Text {
-  @apply ml-[10px] text-[1.25rem] font-['Exo2'] font-bold;
+  @apply ml-[10px] mlarge:ml-[5px] text-[1.25rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] font-['Exo2'] font-bold;
 }
 
 .rootActiveCampaignWidget_Bottom {
-    @apply relative w-full h-[50px] bg-[#000000] border-2 border-[#000000] rounded-b-[7.5px];
+    @apply relative w-full h-[50px] mlarge:h-[40px] msmall:h-[35px] bg-[#000000] border-2 border-[#000000] rounded-b-[7.5px];
 }
 
 .rootActiveCampaignWidget_Bottom_Wrapper {
-    @apply flex items-center px-[20px] w-full h-full border-2 border-[#ffffff] rounded-b-[5px];
+    @apply flex items-center px-[20px] mlarge:px-[10px] w-full h-full border-2 border-[#ffffff] rounded-b-[5px];
 }
 
 .rootActiveCampaignWidget_Bottom_Wrapper_Block {
@@ -115,9 +115,9 @@
 }
 
 .rootActiveCampaignWidget_Bottom_Wrapper_Block_Icon {
-    @apply w-[25px] h-[25px];
+    @apply w-[25px] mlarge:w-[20px] mmedium:w-[17.5px] msmall:w-[15px] h-[25px] mlarge:h-[20px] mmedium:h-[17.5px] msmall:h-[15px];
 }
 
 .rootActiveCampaignWidget_Bottom_Wrapper_Block_NumberText {
-    @apply ml-[10px] text-[1.375rem] font-['Insignia'] font-bold;
+    @apply ml-[10px] text-[1.375rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Insignia'] font-bold;
 }

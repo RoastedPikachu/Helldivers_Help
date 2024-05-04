@@ -34,19 +34,19 @@ const MobileHeaderContent = () => {
           </div>
         </button>
 
-        <p className="headerLogoLink_Text">
+        <Link href="/" className="headerLogoLink_Text">
           HELLDIVERS <b className="headerLogoLink_Text_Bold">help</b>
-        </p>
+        </Link>
       </div>
 
       <div
-        className={`absolute top-[115px] w-full h-[calc(100vh+115px)] bg-[#01212f] duration-[400ms] ease-in-out ${isAdditionalHeaderInfoOpened ? "left-0" : "left-[-100vw]"}`}
+        className={`absolute top-[115px] msmall:top-[110px] w-full h-[calc(100vh+115px)] bg-[#01212f] duration-[400ms] ease-in-out ${isAdditionalHeaderInfoOpened ? "left-0" : "left-[-100vw]"}`}
       >
         <nav className="mt-[30px] px-[calc(2.5%+10px)]">
           <div className="flex justify-between items-center w-full">
             <Link
               href="/code"
-              className="headerNavBlock_Link py-[10px] px-[15px] border-2 border-[#2cc388] rounded-[10px]"
+              className="headerNavBlock_Link py-[10px] msmall:py-[5px] px-[15px] msmall:px-[10px] border-2 border-[#2cc388] rounded-[10px]"
             >
               КОДЕКС
             </Link>
@@ -59,7 +59,7 @@ const MobileHeaderContent = () => {
 
             <Link
               href="/war"
-              className="headerNavBlock_Link py-[10px] px-[15px] border-2 border-[#2cc388] rounded-[10px]"
+              className="headerNavBlock_Link py-[10px] msmall:py-[5px] px-[15px] msmall:px-[10px] border-2 border-[#2cc388] rounded-[10px]"
             >
               ВОЙНА
             </Link>
@@ -70,7 +70,7 @@ const MobileHeaderContent = () => {
               <Link
                 key={page.id}
                 href={`${page.link}`}
-                className="block text-[#ffffff] text-[1.25rem] text-left font-['Exo2'] font-bold outline-none"
+                className="block text-[#ffffff] text-[1.25rem] msmall:text-[1.125rem] text-left font-['Exo2'] font-bold outline-none"
               >
                 {page.title.toUpperCase()}
               </Link>

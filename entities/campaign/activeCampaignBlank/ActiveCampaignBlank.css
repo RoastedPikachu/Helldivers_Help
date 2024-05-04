@@ -1,3 +1,3 @@
 .blankBlock {
-    @apply w-[450px] h-[340px] bg-[#00405a] rounded-[10px];
+    @apply w-[450px] mlarge:w-full h-[340px] mmedium:h-[320px] msmall:h-[300px] bg-[#00405a] rounded-[10px];
 }

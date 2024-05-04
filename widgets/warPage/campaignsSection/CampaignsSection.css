@@ -1,7 +1,7 @@
 .campaignsSection {
-    @apply mt-[-20px] ml-[30px];
+    @apply mt-[-20px] mlarge:mt-0 ml-[30px] mlarge:ml-0;
 }
 
 .campaignsSection_ActiveCampaigns {
-    @apply grid grid-cols-1 gap-y-[30px] mt-[25px] w-[450px];
+    @apply grid grid-cols-1 gap-y-[30px] mt-[25px] w-[450px] mlarge:w-full;
 }
