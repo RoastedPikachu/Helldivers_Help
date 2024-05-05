@@ -15,7 +15,6 @@ class MobileStore {
         storage: window.localStorage,
       });
 
-      this.changeIsMobileDeviceStatus();
       setInterval(() => this.changeIsMobileDeviceStatus(), 1000);
     }
   }

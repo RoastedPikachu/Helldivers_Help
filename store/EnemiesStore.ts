@@ -254,7 +254,7 @@ class EnemiesStore {
     {
       id: 3,
       iconPath: "/static/Automatons/BerserkerImage.webp",
-      imageStyleScale: "scaleY(1.2) scaleX(3.5)",
+      imageStyleScale: "scaleY(1.05) scaleX(3.5)",
       title: "Берсерк",
       engTitle: "Berserker",
       fraction: fractions["3"],

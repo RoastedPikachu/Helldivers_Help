@@ -14,7 +14,6 @@ import PageDescription from "@/shared/PageDescription";
 import Enemy from "@/entities/enemiesPage/enemy/Enemy";
 
 import "@/app/pageSections.css";
-import "./EnemyPage.css";
 
 export function generateStaticParams() {
   return [{ fractionName: "terminids" }, { fractionName: "automatons" }];
@@ -75,7 +74,7 @@ const Page: React.FC<{ params: any }> = ({ params }) => {
           </>
         )}
 
-        <section className="pageGridSection grid-cols-3">
+        <section className="pageGridSection grid-cols-3 mlarge:grid-cols-1 mt-[50px] mlarge:mt-[30px]">
           {params.fractionName === "terminids"
             ? enemiesStore.terminids.map((terminid) => (
                 <Enemy

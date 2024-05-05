@@ -56,7 +56,7 @@ const Enemy: React.FC<EnemyTypeProps> = ({
           src={`${iconPath}`}
           alt=""
           style={{ transform: imageStyleScale }}
-          className={`w-[200px] h-[300px] ${fraction === "Автоматоны" ? getSpecificAutomatonStyle(id) : getSpecificTerminidStyle(id)}`}
+          className={`w-[200px] mlarge:w-[180px] mmedium:w-[160px] msmall:w-[140px] h-[300px] mlarge:h-[235px] mmedium:h-[215px] msmall:h-[195px] ${fraction === "Автоматоны" ? getSpecificAutomatonStyle(id) : getSpecificTerminidStyle(id)}`}
         />
       ) : (
         <p
@@ -66,7 +66,7 @@ const Enemy: React.FC<EnemyTypeProps> = ({
         </p>
       )}
 
-      <p className="mt-[20px] text-[#ffffff] text-[1.75rem] text-center font-['Exo2'] font-bold">
+      <p className="mt-[20px] mlarge:mt-[-5px] mmedium:mt-[-5px] msmall:mt-0 text-[#ffffff] text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] text-center font-['Exo2'] font-bold">
         {title}
       </p>
     </Link>

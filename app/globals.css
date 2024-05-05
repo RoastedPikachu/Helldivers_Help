@@ -43,7 +43,7 @@ main {
 }
 
 .pageDescription {
-  @apply mt-[20px] w-[80%] mlarge:w-full text-[#ffffff] text-[1.5rem] mlarge:text-[1.125rem] font-['Exo2'] font-medium brightness-75;
+  @apply mt-[20px] mlarge:mt-[10px] w-[80%] mlarge:w-full text-[#ffffff] text-[1.5rem] mlarge:text-[1.125rem] font-['Exo2'] font-medium brightness-75;
 }
 
 .sliderWrapper_Slider_Slide {
