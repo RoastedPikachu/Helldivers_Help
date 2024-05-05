@@ -83,7 +83,7 @@ const Page = () => {
 
         <section
           id="ResourceInfo"
-          className="relative grid grid-cols-3 grid-rows-2 gap-y-[30px] gap-x-[30px] mt-[50px] w-full h-auto"
+          className="relative grid grid-cols-3 mlarge:grid-cols-1 gap-y-[30px] mlarge:gap-y-[25px] mmedium:gap-y-[20px] msmall:gap-y-[15px] gap-x-[30px] mlarge:gapy-x-[25px] mmedium:gap-x-[20px] msmall:gap-x-[15px] mt-[50px] mlarge:mt-[30px] w-full h-auto"
         >
           {resources.map((resource) => (
             <Resource
@@ -96,7 +96,7 @@ const Page = () => {
           ))}
         </section>
 
-        <section className="mt-[50px]">
+        <section className="mt-[50px] mlarge:mt-[30px]">
           {currentResource.id && (
             <CurrentResourceInfo
               title={currentResource.title}

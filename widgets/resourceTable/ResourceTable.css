@@ -1,17 +1,17 @@
 .rootTableSection {
-    @apply relative grid grid-rows-[9] mt-[50px] h-auto border-2 border-[--theme-color] rounded-[10px] overflow-hidden;
+    @apply relative grid grid-rows-[9] mt-[50px] mlarge:mt-[30px] h-auto border-2 border-[--theme-color] rounded-[10px] overflow-hidden mlarge:overflow-x-auto;
 }
 
 .topTableRow {
-    @apply flex items-center w-full h-full border-b-2 border-[--theme-color];
+    @apply flex items-center w-full h-full bg-[#00293a] border-b-2 border-[--theme-color];
 }
 
 .topTableRow_Column {
-    @apply flex justify-center items-center w-full h-[80px] bg-[#00293a];
+    @apply flex justify-center items-center w-full h-[80px] mlarge:h-[60px] mmedium:h-[50px] msmall:h-[40px];
 }
 
 .topTableRow_Column_Title {
-    @apply text-[--theme-color] text-[1.75rem] font-['Exo2'] font-bold;
+    @apply text-[--theme-color] text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-['Exo2'] font-bold;
 }
 
 .tableRow {
@@ -19,19 +19,19 @@
 }
 
 .tableRow_Column {
-    @apply flex justify-center items-center w-full h-[80px] bg-[#00293a];
+    @apply flex justify-center items-center w-full mlarge:w-[190px] mmedium:w-[170px] msmall:w-[150px] h-[80px] mlarge:h-[60px] mmedium:h-[50px] msmall:h-[40px] bg-[#00293a];
 }
 
 .tableRow_Column_Text {
-    @apply w-[80%] text-[--theme-color] text-[1.75rem] text-left font-['Insignia'];
+    @apply w-[80%] text-[--theme-color] text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] text-left font-['Insignia'];
 }
 
-.tableRow_MedalFirstColumn_Text {
-    @apply ml-[10%] w-[90%] text-[--theme-color] text-[1.75rem] text-left font-['Insignia'];
+.tableRow_FirstColumn_Text {
+    @apply ml-[10%] w-[90%] text-[--theme-color] text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] text-left font-['Insignia'];
 }
 
 .tableRow_Column_Text_Count {
-    @apply text-[--theme-color] text-[1.75rem] font-['Insignia'] font-bold;
+    @apply text-[--theme-color] text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-['Insignia'] font-bold;
 }
 
 .tableRow_Column_Text_Bold {

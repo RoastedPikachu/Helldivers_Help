@@ -1,12 +1,8 @@
 "use client";
 import React from "react";
 
-import {
-  samplesCountPerDifficulty,
-} from "@/data/samples";
-import {
-  medalsCountPerDifficulty,
-} from "@/data/medals";
+import { samplesCountPerDifficulty } from "@/data/samples";
+import { medalsCountPerDifficulty } from "@/data/medals";
 
 import { ResourceTableTitle } from "@/utils/generalInterfaces";
 
@@ -34,13 +30,16 @@ const ResourceTable: React.FC<ResourceTableProps> = ({
 
   return (
     <section
-      className={`${resourceId <= 3 ? "w-[60%]" : "w-full"} rootTableSection`}
+      className={`${resourceId <= 3 ? "w-[60%] mlarge:w-full" : "w-full"} rootTableSection`}
     >
       <div className="topTableRow">
         {titles.map((title) => (
-          <div key={title.id} className="topTableRow_Column">
+          <div
+            key={title.id}
+            className={`topTableRow_Column ${resourceId > 3 ? "mlarge:w-[calc(100%/5)]" : ""}`}
+          >
             <p
-              className={`${title.id === 1 ? "w-[80%] text-left" : ""} topTableRow_Column_Title`}
+              className={`${title.id === 1 ? "mlarge:ml-[10%] w-[80%] mlarge:w-full text-left" : ""} topTableRow_Column_Title`}
             >
               {title.name}
             </p>
@@ -52,7 +51,7 @@ const ResourceTable: React.FC<ResourceTableProps> = ({
         ? samplesCountPerDifficulty.map((difficulty) => (
             <div key={difficulty.id} className="tableRow">
               <div className="tableRow_Column">
-                <p className="tableRow_Column_Text">
+                <p className="tableRow_FirstColumn_Text">
                   {difficulty.id}.{" "}
                   <b className="tableRow_Column_Text_Bold">
                     {difficulty.difficultyTitle}
@@ -70,7 +69,7 @@ const ResourceTable: React.FC<ResourceTableProps> = ({
         : medalsCountPerDifficulty.map((difficulty) => (
             <div key={difficulty.id} className="tableRow">
               <div className="tableRow_Column">
-                <p className="tableRow_MedalFirstColumn_Text">
+                <p className="tableRow_FirstColumn_Text">
                   {difficulty.id}.{" "}
                   <b className="tableRow_Column_Text_Bold">
                     {difficulty.difficultyTitle}
