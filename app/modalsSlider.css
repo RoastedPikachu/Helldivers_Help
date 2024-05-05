@@ -3,15 +3,15 @@
 }
 
 .swiper-button-prev {
-    @apply !top-[50%] !left-[50px];
+    @apply mlarge:hidden !top-[50%] !left-[50px];
 }
 
 .swiper-button-next {
-    @apply !top-[50%] !right-[65px];
+    @apply mlarge:hidden !top-[50%] !right-[65px];
 }
 
 .sliderModal {
-    @apply relative px-[20px] pt-[40px] pb-[35px] h-auto w-[80vw] max-w-[1152px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] z-30;
+    @apply relative px-[20px] mlarge:px-[15px] pt-[40px] mlarge:pt-[20px] pb-[35px] mlarge:pb-[15px] h-auto w-[80vw] mlarge:w-[90vw] max-w-[1152px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] z-30;
 }
 
 .sliderModal_CloseButton {
