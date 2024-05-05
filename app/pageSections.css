@@ -15,9 +15,9 @@
 }
 
 .pageGridSection {
-    @apply relative grid gap-y-[30px] mlarge:gap-y-[25px] mmedium:gap-y-[20px] msmall:gap-y-[15px] gap-x-[30px] mlarge:gapy-x-[25px] mmedium:gap-x-[20px] msmall:gap-x-[15px] w-full h-auto z-[20];
+    @apply relative grid gap-y-[30px] mlarge:gap-y-[25px] mmedium:gap-y-[20px] msmall:gap-y-[15px] gap-x-[30px] mlarge:gap-x-[25px] mmedium:gap-x-[20px] msmall:gap-x-[15px] w-full h-auto z-[20];
 }
 
 .pageSectionContentWrapper {
-    @apply relative grid gap-y-[30px] mlarge:gap-y-[25px] mmedium:gap-y-[20px] msmall:gap-y-[15px] gap-x-[30px] mlarge:gapy-x-[25px] mmedium:gap-x-[20px] msmall:gap-x-[15px] mt-[20px] w-full h-auto;
+    @apply relative grid gap-y-[30px] mlarge:gap-y-[25px] mmedium:gap-y-[20px] msmall:gap-y-[15px] gap-x-[30px] mlarge:gap-x-[25px] mmedium:gap-x-[20px] msmall:gap-x-[15px] mt-[20px] w-full h-auto;
 }
