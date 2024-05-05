@@ -126,7 +126,7 @@ export const secondaryMissions = [
   {
     id: 6,
     imagePath: "/static/Missions/DestroyRogueResearchStationIcon.svg",
-    title: "Уничтожить неуправляемую научную станцию",
+    title: "Уничтожить ННС",
     effect: "Отсутствует.",
     rewardEffect: "Отсутствует.",
   },

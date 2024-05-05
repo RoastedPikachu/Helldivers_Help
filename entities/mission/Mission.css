@@ -1,9 +1,9 @@
 .rootShipModuleBlock {
-    @apply relative w-auto h-auto min-h-[85px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px];
+    @apply relative w-auto h-auto min-h-[85px] mlarge:min-h-[80px] mmedium:min-h-[70px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px];
 }
 
 .rootShipModuleBlock_Top {
-    @apply relative flex justify-between items-center px-[30px] w-full h-[80px];
+    @apply relative flex justify-between items-center px-[30px] mlarge:px-[15px] msmall:px-[10px] w-full h-[80px] mmedium:h-[70px];
 }
 
 .rootShipModuleBlock_Top_Left {
@@ -11,43 +11,43 @@
 }
 
 .rootShipModuleBlock_Top_Left_ImageWrapper {
-    @apply flex justify-center items-center p-[2.5px] w-[55px] h-[55px] bg-[#000000] border-2 border-[--theme-color] rounded-[7.5px];
+    @apply relative flex justify-stretch items-stretch p-[2.5px] w-[55px] mlarge:w-[47.5px] mmedium:w-[42.5px] msmall:w-[37.5px] mlarge:min-w-[47.5px] mmedium:min-w-[42.5px] msmall:min-w-[37.5px] h-[55px] mlarge:h-[47.5px] mmedium:h-[42.5px] msmall:h-[37.5px] mlarge:min-h-[47.5px] mmedium:min-h-[42.5px] msmall:min-h-[37.5px] bg-[#000000] border-2 border-[--theme-color] rounded-[7.5px];
 }
 
 .rootShipModuleBlock_Top_Left_ImageWrapper_Image {
-    @apply w-[45px] h-[45px];
+    @apply relative;
 }
 
 .rootShipModuleBlock_Top_Left_Title {
-    @apply ml-[20px] text-[--theme-color] text-[1.75rem] font-['Exo2'] font-bold;
+    @apply mlarge:block ml-[20px] mlarge:ml-[10px] mlarge:w-[75%] text-[--theme-color] text-[1.75rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold;
 }
 
 .rootShipModuleBlock_Top_Button {
-    @apply relative flex justify-center items-center w-[30px] h-[30px] z-30;
+    @apply relative flex justify-stretch items-stretch w-[30px] mlarge:w-[25px] mmedium:w-[22.5px] msmall:w-[20px] mlarge:min-w-[25px] mmedium:min-w-[22.5px] msmall:min-w-[20px] h-[30px] mlarge:h-[25px] mmedium:h-[22.5px] msmall:h-[20px] mlarge:min-h-[25px] mmedium:min-h-[22.5px] msmall:min-h-[20px] z-30;
 }
 
 .rootShipModuleBlock_Top_Button_Image {
-    @apply w-full h-full duration-500 ease-in-out;
+    @apply relative duration-500 ease-in-out;
 }
 
 .rootShipModuleBlock_Bottom {
-    @apply relative px-[30px] pb-[25px] h-auto duration-1000 ease-in-out;
+    @apply relative px-[30px] mlarge:px-[15px] msmall:px-[10px] pb-[25px] mlarge:pb-[15px] mmedium:pb-[10px] h-auto duration-1000 ease-in-out;
 }
 
 .rootShipModuleBlock_Bottom_Description {
-    @apply w-[75%] text-[#ffffff] text-[1.25rem] font-['Exo2'] font-medium brightness-75;
+    @apply w-[75%] mlarge:w-[90%] text-[#ffffff] text-[1.25rem] mlarge:text-[0.95rem] mmedium:text-[0.825rem] msmall:text-[0.7rem] font-['Exo2'] font-medium brightness-75;
 }
 
 .rootShipModuleBlock_Bottom_Text {
-    @apply mt-[10px] text-[#ffffff] text-[1.25rem] font-['Exo2'] font-semibold;
+    @apply mt-[10px] mlarge:mt-[5px] text-[#ffffff] text-[1.25rem] mlarge:text-[1.075rem] mmedium:text-[0.95rem] msmall:text-[0.825rem] font-['Exo2'] font-semibold;
 }
 
 .rootShipModuleBlock_Bottom_Text_Bold {
-    @apply pr-[10px] text-[--theme-color] font-bold;
+    @apply pr-[10px] mlarge:pr-[5px] text-[--theme-color] font-bold;
 }
 
 .rootShipModuleBlock_Bottom_TableBlock {
-    @apply relative mt-[30px] py-[10px] w-[600px] h-auto border-2 border-[--theme-color] rounded-[10px];
+    @apply relative mt-[30px] mlarge:mt-[15px] msmall:mt-[10px] py-[10px] mlarge:py-[5px] w-[600px] mlarge:w-full h-auto border-2 border-[--theme-color] rounded-[10px];
 }
 
 .rootShipModuleBlock_Bottom_TableBlock_Table {
@@ -59,7 +59,7 @@
 }
 
 .rootShipModuleBlock_Bottom_TableBlock_Table_TopRow_Column {
-    @apply pb-[10px] text-[--theme-color] text-[1.25rem] font-['Exo2'] font-bold text-center;
+    @apply pb-[10px] text-[--theme-color] text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold text-center;
 }
 
 .rootShipModuleBlock_Bottom_TableBlock_Table_Body {
@@ -67,5 +67,5 @@
 }
 
 .rootShipModuleBlock_Bottom_TableBlock_Table_Body_Column {
-    @apply py-[10px] text-[--theme-color] text-[1.5rem] text-center font-['Insignia'] font-bold;
+    @apply py-[10px] text-[--theme-color] text-[1.5rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] text-center font-['Insignia'] font-bold;
 }
