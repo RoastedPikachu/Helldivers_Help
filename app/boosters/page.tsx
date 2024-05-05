@@ -37,7 +37,7 @@ const Page = () => {
 
         <EntitySection
           title={"БОЕВОЙ ПРОПУСК «АДСКИЕ ДЕСАНТНИКИ, В БОЙ!»"}
-          gridStyles={"grid-cols-2"}
+          gridStyles={"grid-cols-2 mlarge:grid-cols-1"}
         >
           {boostersStore.boosters.helldiversMobilize.map((booster) => (
             <Booster
@@ -52,7 +52,7 @@ const Page = () => {
 
         <EntitySection
           title={"БОЕВОЙ ПРОПУСК «ЗАКАЛЕННЫЕ ВЕТЕРАНЫ»"}
-          gridStyles={"grid-cols-2"}
+          gridStyles={"grid-cols-2 mlarge:grid-cols-1"}
         >
           {boostersStore.boosters.steeledVeterans.map((booster) => (
             <Booster
@@ -67,7 +67,7 @@ const Page = () => {
 
         <EntitySection
           title={"БОЕВОЙ ПРОПУСК «НА ОСТРИЕ»"}
-          gridStyles={"grid-cols-2"}
+          gridStyles={"grid-cols-2 mlarge:grid-cols-1"}
         >
           {boostersStore.boosters.cuttingEdge.map((booster) => (
             <Booster
@@ -82,7 +82,7 @@ const Page = () => {
 
         <EntitySection
           title={"БОЕВОЙ ПРОПУСК «ДЕМОКРАТИЧЕСКИЙ ПОДРЫВ»"}
-          gridStyles={"grid-cols-2"}
+          gridStyles={"grid-cols-2 mlarge:grid-cols-1"}
         >
           {boostersStore.boosters.democraticDetonation.map((booster) => (
             <Booster
