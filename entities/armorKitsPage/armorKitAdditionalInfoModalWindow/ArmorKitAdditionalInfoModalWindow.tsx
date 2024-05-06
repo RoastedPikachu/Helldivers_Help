@@ -65,11 +65,11 @@ const ArmorKitAdditionalInfoModalWindow: React.FC<ArmorKitAdditionalInfoModalWin
                     {name}
                   </h2>
 
-                  <p className="text-[#ffffff] text-[1.25rem] font-['Exo2'] font-semibold brightness-75">
+                  <p className="text-[#ffffff] text-[1.25rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] font-['Exo2'] font-semibold brightness-75">
                     {type}
                   </p>
 
-                  <div className="currentArmor_Modal_Top_TextBlock_Characteristic mt-[20px]">
+                  <div className="currentArmor_Modal_Top_TextBlock_Characteristic mt-[20px] mlarge:mt-[10px]">
                     <p className="currentArmor_Modal_Top_TextBlock_Characteristic_Name">
                       СТОИМОСТЬ:{" "}
                     </p>
@@ -97,7 +97,7 @@ const ArmorKitAdditionalInfoModalWindow: React.FC<ArmorKitAdditionalInfoModalWin
                     </div>
                   </div>
 
-                  <div className="mt-[20px]">
+                  <div className="mt-[20px] mlarge:mt-[10px]">
                     <p className="currentArmor_Modal_Top_TextBlock_Characteristic_Name">
                       СПОСОБ ПОЛУЧЕНИЯ:
                     </p>
@@ -107,7 +107,7 @@ const ArmorKitAdditionalInfoModalWindow: React.FC<ArmorKitAdditionalInfoModalWin
                     </p>
                   </div>
 
-                  <div className="mt-[20px]">
+                  <div className="mt-[20px] mlarge:mt-[10px]">
                     <p className="currentArmor_Modal_Top_TextBlock_Characteristic_Name">
                       ЭФФЕКТ:
                     </p>
@@ -156,7 +156,7 @@ const ArmorKitAdditionalInfoModalWindow: React.FC<ArmorKitAdditionalInfoModalWin
                   </div>
 
                   <div className="currentArmor_Modal_Bottom_Bottom_TextBlock">
-                    <p className="currentArmor_Modal_Bottom_Bottom_TextBlock_Title">
+                    <p className="currentArmor_Modal_Bottom_Bottom_TextBlock_Title mlarge:w-[82.5%] mmedium:w-[72.5%] msmall:w-[67.5%]">
                       ВОССТАНОВЛЕНИЕ ВЫНОСЛИВОСТИ:
                     </p>
 

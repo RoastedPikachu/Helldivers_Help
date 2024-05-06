@@ -70,7 +70,10 @@ const Page = observer(() => {
               ))}
             </ModalSlider>
 
-            <EntitySection title={"ОБУЧЕНИЕ"} gridStyles={"grid-cols-5"}>
+            <EntitySection
+              title={"ОБУЧЕНИЕ"}
+              gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
+            >
               {armorStore.armorKits.tutorial.map((armorKit) => (
                 <ArmorKit
                   key={armorKit.id}
@@ -84,7 +87,7 @@ const Page = observer(() => {
 
             <EntitySection
               title={"БОЕВОЙ ПРОПУСК «АДСКИЕ ДЕСАНТНИКИ, В БОЙ!»"}
-              gridStyles={"grid-cols-5"}
+              gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
             >
               {armorStore.armorKits.helldiversMobilize.map((armorKit) => (
                 <ArmorKit
@@ -99,7 +102,7 @@ const Page = observer(() => {
 
             <EntitySection
               title={"БОЕВОЙ ПРОПУСК «ЗАКАЛЕННЫЕ ВЕТЕРАНЫ»"}
-              gridStyles={"grid-cols-5"}
+              gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
             >
               {armorStore.armorKits.steeledVeterans.map((armorKit) => (
                 <ArmorKit
@@ -114,7 +117,7 @@ const Page = observer(() => {
 
             <EntitySection
               title={"БОЕВОЙ ПРОПУСК «НА ОСТРИЕ»"}
-              gridStyles={"grid-cols-5"}
+              gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
             >
               {armorStore.armorKits.cuttingEdge.map((armorKit) => (
                 <ArmorKit
@@ -129,7 +132,7 @@ const Page = observer(() => {
 
             <EntitySection
               title={"БОЕВОЙ ПРОПУСК «ДЕМОКРАТИЧЕСКИЙ ПОДРЫВ»"}
-              gridStyles={"grid-cols-5"}
+              gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
             >
               {armorStore.armorKits.democraticDetonation.map((armorKit) => (
                 <ArmorKit
@@ -142,7 +145,10 @@ const Page = observer(() => {
               ))}
             </EntitySection>
 
-            <EntitySection title={"СУПЕРМАГАЗИН"} gridStyles={"grid-cols-5"}>
+            <EntitySection
+              title={"СУПЕРМАГАЗИН"}
+              gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
+            >
               {armorStore.armorKits.superstore.map((armorKit) => (
                 <ArmorKit
                   key={armorKit.id}
@@ -154,7 +160,10 @@ const Page = observer(() => {
               ))}
             </EntitySection>
 
-            <EntitySection title={"ПРЕДЗАКАЗ"} gridStyles={"grid-cols-5"}>
+            <EntitySection
+              title={"ПРЕДЗАКАЗ"}
+              gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
+            >
               {armorStore.armorKits.preOrder.map((armorKit) => (
                 <ArmorKit
                   key={armorKit.id}
@@ -168,7 +177,7 @@ const Page = observer(() => {
 
             <EntitySection
               title={"ИЗДАНИЕ SUPER CITIZEN"}
-              gridStyles={"grid-cols-5"}
+              gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
             >
               {armorStore.armorKits.superCitizen.map((armorKit) => (
                 <ArmorKit
@@ -181,7 +190,10 @@ const Page = observer(() => {
               ))}
             </EntitySection>
 
-            <EntitySection title={"TWITCH DROPS"} gridStyles={"grid-cols-5"}>
+            <EntitySection
+              title={"TWITCH DROPS"}
+              gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
+            >
               {armorStore.armorKits.twitchDrops.map((armorKit) => (
                 <ArmorKit
                   key={armorKit.id}

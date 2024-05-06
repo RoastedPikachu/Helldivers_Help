@@ -1,7 +1,13 @@
 .armorKitWidget {
-    @apply relative flex justify-center w-full h-[450px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] overflow-hidden cursor-pointer;
+    @apply relative flex justify-center w-full h-[450px] mlarge:h-[300px] mmedium:h-[280px] msmall:h-[250px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] overflow-hidden cursor-pointer;
 }
 
 .armorKitWidget_Text {
-    @apply absolute bottom-[10px] left-[10px] px-[5px] w-auto max-w-[calc(100%-20px)] bg-[#00000080] rounded-[7.5px] text-[#2cc388] text-[1.25rem] text-left font-['Exo2'] font-bold brightness-125;
+    @apply absolute bottom-[10px] mlarge:bottom-[5px] left-[10px] mlarge:left-[5px] px-[5px] w-auto max-w-[calc(100%-20px)] mlarge:max-w-[calc(100%-10px)] bg-[#00000080] rounded-[7.5px] mlarge:rounded-[5px] msmall:rounded-[2.5px] text-[#2cc388] text-[1.25rem] mlarge:text-[0.9rem] mmedium:text-[0.775rem] msmall:text-[0.675rem] text-left font-['Exo2'] font-bold brightness-125;
+}
+
+@media(max-width: 480px) {
+    .armorKitWidget_Text {
+        word-wrap: break-word;
+    }
 }
