@@ -64,7 +64,11 @@ const Page = observer(() => {
             </ModalSlider>
 
             {Object.values(galaxySectors).map((value, i) => (
-              <EntitySection key={i} title={value} gridStyles={"grid-cols-3"}>
+              <EntitySection
+                key={i}
+                title={value}
+                gridStyles={"grid-cols-3 mlarge:grid-cols-1"}
+              >
                 {Object.values(planetsStore.planets)
                   .filter((planetValue) => planetValue.sector === value)
                   .map((planet) => (

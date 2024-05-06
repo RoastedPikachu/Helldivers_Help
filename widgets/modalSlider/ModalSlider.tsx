@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Swiper } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
+import { mobileStore } from "@/store/MobileStore";
 import { slidersStore } from "@/store/SlidersStore";
 
 import "./ModalSlider.css";

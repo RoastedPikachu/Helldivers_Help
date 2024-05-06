@@ -1,9 +1,9 @@
 .currentPlanet_Modal_Top {
-    @apply relative flex;
+    @apply relative flex mlarge:block ;
 }
 
 .currentPlanet_Modal_Top_ImageWrapper {
-    @apply relative flex justify-center items-center w-[700px] h-[232px] bg-cover bg-no-repeat border-2 border-[--theme-color] rounded-t-[7.5px] rounded-bl-[7.5px];
+    @apply relative flex justify-center items-center w-[700px] mlarge:w-full h-[232px] mlarge:h-[162px] mmedium:h-[142px] msmall:h-[122px] bg-cover bg-no-repeat border-2 border-[--theme-color] rounded-t-[7.5px] rounded-bl-[7.5px] mlarge:rounded-[7.5px] mlarge:overflow-hidden;
 }
 
 .currentPlanet_Modal_Top_ImageWrapper_Image {
@@ -11,37 +11,37 @@
 }
 
 .currentPlanet_Modal_Top_TextBlock {
-    @apply relative mt-[-10px] pl-[40px] pb-[20px] w-[calc(100%-420px)] h-auto border-b-2 border-[--theme-color];
+    @apply relative mt-[-10px] mlarge:mt-[10px] mmedium:mt-[7.5px] pl-[40px] mlarge:pl-0 pb-[20px] mlarge:pb-[15px] mmedium:pb-[10px] w-[calc(100%-420px)] mlarge:w-full h-auto border-b-2 border-[--theme-color];
 }
 
 .currentPlanet_Modal_Top_TextBlock_Title {
-    @apply text-[#ffffff] text-[2rem] font-['Exo2'] font-bold;
+    @apply text-[#ffffff] text-[2rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-['Exo2'] font-bold;
 }
 
 .currentPlanet_Modal_Top_TextBlock_WeatherConditionsBlock {
-    @apply flex items-center mt-[20px];
+    @apply flex items-center mt-[20px] mlarge:mt-[10px] mmedium:mt-[7.5px] msmall:mt-[5px];
 }
 
 .currentPlanet_Modal_Top_TextBlock_WeatherConditionsBlock_Image {
-    @apply p-[5px] w-[60px] h-[60px] bg-[#ffffff] border-2 border-[--theme-color] rounded-[7.5px];
+    @apply p-[5px] w-[60px] mlarge:w-[45px] mmedium:w-[40px] msmall:w-[35px] h-[60px] mlarge:h-[45px] mmedium:h-[40px] msmall:h-[35px] bg-[#ffffff] border-2 border-[--theme-color] rounded-[7.5px];
 }
 
 .currentPlanet_Modal_Top_TextBlock_WeatherConditionsBlock_Text {
-    @apply ml-[20px] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-semibold;
+    @apply ml-[20px] mlarge:ml-[10px] text-[#ffffff] text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-semibold;
 }
 
 .currentPlanet_Modal_Bottom {
-    @apply relative pr-[17.5px];
+    @apply relative pr-[17.5px] mlarge:pr-0;
 }
 
 .currentPlanet_Modal_Bottom{
-    @apply mt-[20px] w-auto h-auto;
+    @apply mt-[20px] mlarge:mt-[10px] mmedium:mt-[5px] w-auto h-auto;
 }
 
 .currentPlanet_Modal_Bottom_Title {
-    @apply text-[--theme-color] text-[1.5rem] font-['Exo2'] font-bold;
+    @apply text-[--theme-color] text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold;
 }
 
 .currentPlanet_Modal_Bottom_Text {
-    @apply mt-[10px] text-[#ffffff] text-[1.25rem] font-['Exo2'] font-bold brightness-75;
+    @apply mt-[10px] mlarge:mt-[5px] mmedium:mt-[2.5px] text-[#ffffff] text-[1.25rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] font-['Exo2'] font-bold brightness-75;
 }
