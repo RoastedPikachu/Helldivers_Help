@@ -12,6 +12,7 @@ import Stratagem from "@/entities/stratagem/Stratagem";
 
 import "@/app/pageSections.css";
 import "./StratagemsPage.css";
+import EntitySection from "@/widgets/EntitySection";
 
 const Page = () => {
   return (
@@ -43,163 +44,133 @@ const Page = () => {
           процветания в галактике.
         </p>
 
-        <section className="pageSection grid-cols-1">
-          <div className="pageSection_Block">
-            <h3 className="pageSection_Block_Title">ОРУЖИЕ ПОДДЕРЖКИ</h3>
+        <EntitySection title={"ОРУЖИЕ ПОДДЕРЖКИ"} gridStyles={"grid-cols-1"}>
+          {stratagemStore.stratagems.patrioticAdministrationCenter.map(
+            (stratagem) => (
+              <Stratagem
+                key={stratagem.id}
+                iconPath={stratagem.iconPath}
+                videoPath={stratagem.videoPath}
+                videoPreviewPath={stratagem.videoPreviewPath}
+                name={stratagem.name}
+                description={stratagem.description}
+                price={stratagem.price}
+                obtainingLevel={stratagem.obtainingLevel}
+                callTime={stratagem.callTime}
+                useCount={stratagem.useCount}
+                reloadTime={stratagem.reloadTime}
+                directions={stratagem.directions}
+              />
+            ),
+          )}
+        </EntitySection>
 
-            <div className="pageSection_Block_Wrapper">
-              {stratagemStore.stratagems.patrioticAdministrationCenter.map(
-                (stratagem) => (
-                  <Stratagem
-                    key={stratagem.id}
-                    iconPath={stratagem.iconPath}
-                    videoPath={stratagem.videoPath}
-                    videoPreviewPath={stratagem.videoPreviewPath}
-                    name={stratagem.name}
-                    description={stratagem.description}
-                    price={stratagem.price}
-                    obtainingLevel={stratagem.obtainingLevel}
-                    callTime={stratagem.callTime}
-                    useCount={stratagem.useCount}
-                    reloadTime={stratagem.reloadTime}
-                    directions={stratagem.directions}
-                  />
-                ),
-              )}
-            </div>
-          </div>
+        <EntitySection title={"ОРБИТАЛЬНЫЕ"} gridStyles={"grid-cols-1"}>
+          {stratagemStore.stratagems.orbitalCannon.map((stratagem) => (
+            <Stratagem
+              key={stratagem.id}
+              iconPath={stratagem.iconPath}
+              videoPath={stratagem.videoPath}
+              videoPreviewPath={stratagem.videoPreviewPath}
+              name={stratagem.name}
+              description={stratagem.description}
+              price={stratagem.price}
+              obtainingLevel={stratagem.obtainingLevel}
+              callTime={stratagem.callTime}
+              useCount={stratagem.useCount}
+              reloadTime={stratagem.reloadTime}
+              directions={stratagem.directions}
+            />
+          ))}
+        </EntitySection>
 
-          <div className="pageSection_Block">
-            <h3 className="pageSection_Block_Title">ОРБИТАЛЬНЫЕ</h3>
+        <EntitySection title={"АНГАР"} gridStyles={"grid-cols-1"}>
+          {stratagemStore.stratagems.hangar.map((stratagem) => (
+            <Stratagem
+              key={stratagem.id}
+              iconPath={stratagem.iconPath}
+              videoPath={stratagem.videoPath}
+              videoPreviewPath={stratagem.videoPreviewPath}
+              name={stratagem.name}
+              description={stratagem.description}
+              price={stratagem.price}
+              obtainingLevel={stratagem.obtainingLevel}
+              callTime={stratagem.callTime}
+              useCount={stratagem.useCount}
+              reloadTime={stratagem.reloadTime}
+              directions={stratagem.directions}
+            />
+          ))}
+        </EntitySection>
 
-            <div className="pageSection_Block_Wrapper">
-              {stratagemStore.stratagems.orbitalCannon.map((stratagem) => (
-                <Stratagem
-                  key={stratagem.id}
-                  iconPath={stratagem.iconPath}
-                  videoPath={stratagem.videoPath}
-                  videoPreviewPath={stratagem.videoPreviewPath}
-                  name={stratagem.name}
-                  description={stratagem.description}
-                  price={stratagem.price}
-                  obtainingLevel={stratagem.obtainingLevel}
-                  callTime={stratagem.callTime}
-                  useCount={stratagem.useCount}
-                  reloadTime={stratagem.reloadTime}
-                  directions={stratagem.directions}
-                />
-              ))}
-            </div>
-          </div>
+        <EntitySection title={"КАПИТАНСКИЙ МОСТИК"} gridStyles={"grid-cols-1"}>
+          {stratagemStore.stratagems.bridge.map((stratagem) => (
+            <Stratagem
+              key={stratagem.id}
+              iconPath={stratagem.iconPath}
+              videoPath={stratagem.videoPath}
+              videoPreviewPath={stratagem.videoPreviewPath}
+              name={stratagem.name}
+              description={stratagem.description}
+              price={stratagem.price}
+              obtainingLevel={stratagem.obtainingLevel}
+              callTime={stratagem.callTime}
+              useCount={stratagem.useCount}
+              reloadTime={stratagem.reloadTime}
+              directions={stratagem.directions}
+            />
+          ))}
+        </EntitySection>
 
-          <div className="pageSection_Block">
-            <h3 className="pageSection_Block_Title">АНГАР</h3>
+        <EntitySection title={"ИНЖЕНЕРНЫЙ ОТСЕК"} gridStyles={"grid-cols-1"}>
+          {stratagemStore.stratagems.engineerBay.map((stratagem) => (
+            <Stratagem
+              key={stratagem.id}
+              iconPath={stratagem.iconPath}
+              videoPath={stratagem.videoPath}
+              videoPreviewPath={stratagem.videoPreviewPath}
+              name={stratagem.name}
+              description={stratagem.description}
+              price={stratagem.price}
+              obtainingLevel={stratagem.obtainingLevel}
+              callTime={stratagem.callTime}
+              useCount={stratagem.useCount}
+              reloadTime={stratagem.reloadTime}
+              directions={stratagem.directions}
+            />
+          ))}
+        </EntitySection>
 
-            <div className="pageSection_Block_Wrapper">
-              {stratagemStore.stratagems.hangar.map((stratagem) => (
-                <Stratagem
-                  key={stratagem.id}
-                  iconPath={stratagem.iconPath}
-                  videoPath={stratagem.videoPath}
-                  videoPreviewPath={stratagem.videoPreviewPath}
-                  name={stratagem.name}
-                  description={stratagem.description}
-                  price={stratagem.price}
-                  obtainingLevel={stratagem.obtainingLevel}
-                  callTime={stratagem.callTime}
-                  useCount={stratagem.useCount}
-                  reloadTime={stratagem.reloadTime}
-                  directions={stratagem.directions}
-                />
-              ))}
-            </div>
-          </div>
+        <EntitySection title={"МАСТЕРСКАЯ РОБОТОВ"} gridStyles={"grid-cols-1"}>
+          {stratagemStore.stratagems.roboticsWorkshop.map((stratagem) => (
+            <Stratagem
+              key={stratagem.id}
+              iconPath={stratagem.iconPath}
+              videoPath={stratagem.videoPath}
+              videoPreviewPath={stratagem.videoPreviewPath}
+              name={stratagem.name}
+              description={stratagem.description}
+              price={stratagem.price}
+              obtainingLevel={stratagem.obtainingLevel}
+              callTime={stratagem.callTime}
+              useCount={stratagem.useCount}
+              reloadTime={stratagem.reloadTime}
+              directions={stratagem.directions}
+            />
+          ))}
+        </EntitySection>
 
-          <div className="pageSection_Block">
-            <h3 className="pageSection_Block_Title">КАПИТАНСКИЙ МОСТИК</h3>
-
-            <div className="pageSection_Block_Wrapper">
-              {stratagemStore.stratagems.bridge.map((stratagem) => (
-                <Stratagem
-                  key={stratagem.id}
-                  iconPath={stratagem.iconPath}
-                  videoPath={stratagem.videoPath}
-                  videoPreviewPath={stratagem.videoPreviewPath}
-                  name={stratagem.name}
-                  description={stratagem.description}
-                  price={stratagem.price}
-                  obtainingLevel={stratagem.obtainingLevel}
-                  callTime={stratagem.callTime}
-                  useCount={stratagem.useCount}
-                  reloadTime={stratagem.reloadTime}
-                  directions={stratagem.directions}
-                />
-              ))}
-            </div>
-          </div>
-
-          <div className="pageSection_Block">
-            <h3 className="pageSection_Block_Title">ИНЖЕНЕРНЫЙ ОТСЕК</h3>
-
-            <div className="pageSection_Block_Wrapper">
-              {stratagemStore.stratagems.engineerBay.map((stratagem) => (
-                <Stratagem
-                  key={stratagem.id}
-                  iconPath={stratagem.iconPath}
-                  videoPath={stratagem.videoPath}
-                  videoPreviewPath={stratagem.videoPreviewPath}
-                  name={stratagem.name}
-                  description={stratagem.description}
-                  price={stratagem.price}
-                  obtainingLevel={stratagem.obtainingLevel}
-                  callTime={stratagem.callTime}
-                  useCount={stratagem.useCount}
-                  reloadTime={stratagem.reloadTime}
-                  directions={stratagem.directions}
-                />
-              ))}
-            </div>
-          </div>
-
-          <div className="pageSection_Block">
-            <h3 className="pageSection_Block_Title">МАСТЕРСКАЯ РОБОТОВ</h3>
-
-            <div className="pageSection_Block_Wrapper">
-              {stratagemStore.stratagems.roboticsWorkshop.map((stratagem) => (
-                <Stratagem
-                  key={stratagem.id}
-                  iconPath={stratagem.iconPath}
-                  videoPath={stratagem.videoPath}
-                  videoPreviewPath={stratagem.videoPreviewPath}
-                  name={stratagem.name}
-                  description={stratagem.description}
-                  price={stratagem.price}
-                  obtainingLevel={stratagem.obtainingLevel}
-                  callTime={stratagem.callTime}
-                  useCount={stratagem.useCount}
-                  reloadTime={stratagem.reloadTime}
-                  directions={stratagem.directions}
-                />
-              ))}
-            </div>
-          </div>
-
-          <div className="pageSection_Block">
-            <h3 className="pageSection_Block_Title">ОБЩИЕ</h3>
-
-            <div className="pageSection_Block_Wrapper">
-              {stratagemStore.stratagems.general.map((stratagem) => (
-                <Stratagem
-                  key={stratagem.id}
-                  iconPath={stratagem.iconPath}
-                  name={stratagem.name}
-                  description={stratagem.description}
-                  directions={stratagem.directions}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
+        <EntitySection title={"ОБЩИЕ"} gridStyles={"grid-cols-1"}>
+          {stratagemStore.stratagems.general.map((stratagem) => (
+            <Stratagem
+              key={stratagem.id}
+              iconPath={stratagem.iconPath}
+              name={stratagem.name}
+              description={stratagem.description}
+              directions={stratagem.directions}
+            />
+          ))}
+        </EntitySection>
       </main>
 
       <TheFooter />
