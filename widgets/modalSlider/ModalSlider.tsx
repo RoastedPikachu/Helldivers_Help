@@ -19,7 +19,7 @@ const ModalSlider: React.FC<ModalSliderProps> = ({
   currentEntityId,
   children,
 }) => {
-  const sliderRef = useRef(null);
+  const sliderRef = useRef(null as any);
 
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 

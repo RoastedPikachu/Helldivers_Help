@@ -51,9 +51,13 @@ const EnemyAdditionalInfoNavigation = observer(() => {
             onClick={() => handleCurrentEnemyChange(false)}
             className="navBlock_buttonEnemyLink"
           >
-            <img src="/static/GeneralIcons/LeftArrowIcon.svg" alt="" />
+            <img
+              src="/static/GeneralIcons/LeftArrowIcon.svg"
+              alt=""
+              className="mlarge:w-[35px] mmedium:w-[32.5px] msmall:w-[30px] mlarge:h-[35px] mmedium:h-[32.5px] msmall:h-[30px]"
+            />
 
-            <p className="navBlock_buttonEnemyLink_Text ml-[10px]">
+            <p className="navBlock_buttonEnemyLink_Text ml-[10px] mlarge:ml-[5px] mlarge:text-right">
               {getPreviousEnemy()!.title}
             </p>
           </Link>
@@ -63,14 +67,14 @@ const EnemyAdditionalInfoNavigation = observer(() => {
             onClick={() => handleCurrentEnemyChange(true)}
             className="navBlock_buttonEnemyLink"
           >
-            <p className="navBlock_buttonEnemyLink_Text mr-[10px]">
+            <p className="navBlock_buttonEnemyLink_Text mr-[10px] mlarge:mr-[5px] mlarge:text-left">
               {getNextEnemy()?.title}
             </p>
 
             <img
               src="/static/GeneralIcons/LeftArrowIcon.svg"
               alt=""
-              className="rotate-180"
+              className="mlarge:w-[35px] mmedium:w-[32.5px] msmall:w-[30px] mlarge:h-[35px] mmedium:h-[32.5px] msmall:h-[30px] rotate-180"
             />
           </Link>
         </div>

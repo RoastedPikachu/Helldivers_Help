@@ -1,9 +1,9 @@
 .pageEnemyInfoSection {
-    @apply col-span-2 w-[100%] h-auto;
+    @apply relative col-span-2 mlarge:col-span-1 w-full h-auto;
 }
 
 .pageEnemyInfoSection_Title {
-    @apply text-[#ffffff] text-[2rem] font-['Exo2'] font-bold;
+    @apply mlarge:mt-[10px] text-[#ffffff] text-[2rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-['Exo2'] font-bold;
 }
 
 .pageEnemyInfoSection_Title_Bold {
@@ -11,24 +11,28 @@
 }
 
 .pageEnemyInfoSection_Description {
-    @apply mt-[30px] text-[#ffffff] text-[1.25rem] font-['Exo2'] font-medium brightness-75;
+    @apply mt-[30px] mlarge:mt-[10px] text-[#ffffff] text-[1.25rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] font-['Exo2'] font-medium brightness-75;
 }
 
 .pageEnemyInfoSection_SecondaryTitle {
-    @apply mt-[20px] text-[#ffffff] text-[1.75rem] font-['Exo2'] font-bold;
+    @apply mt-[20px] mlarge:mt-[10px] text-[#ffffff] text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-['Exo2'] font-bold;
 }
 .pageEnemyInfoSection_Text {
-    @apply mt-[10px] text-[#ffffff] text-[1.25rem] font-['Exo2'] font-medium brightness-75;
+    @apply mt-[10px] mlarge:mt-[5px] text-[#ffffff] text-[1.25rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] font-['Exo2'] font-medium brightness-75;
 }
 
 .pageEnemyAside {
-    @apply flex justify-end mt-[80px];
+    @apply relative flex justify-end mlarge:justify-start mt-[80px] mlarge:mt-0 mlarge:w-[90vw] mlarge:h-auto;
 }
 
 .pageEnemyAside_ImageWrapper {
-    @apply flex justify-center items-center w-[400px] h-[400px] bg-cover bg-no-repeat border-2 border-[--theme-color] rounded-[10px];
+    @apply flex justify-center items-center w-[400px] mlarge:w-full h-[400px] mlarge:h-[300px] mmedium:h-[250px] msmall:h-[200px] bg-cover bg-no-repeat border-2 border-[--theme-color] rounded-[10px];
 }
 
 .pageEnemyAside_ImageWrapper_Image {
-    @apply w-[200px] h-[300px];
+    @apply w-[200px] mlarge:w-[150px] mmedium:w-[135px] h-[300px] mlarge:h-[225px] mmedium:h-[200px];
+}
+
+h5 {
+    @apply mt-[20px] mlarge:mt-[10px] msmall:mt-[7.5px] text-[#2cc388] text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-bold;
 }
