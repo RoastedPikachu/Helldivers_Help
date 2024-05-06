@@ -22,7 +22,7 @@
 }
 
 .pageEnemyAside {
-    @apply relative flex justify-end mlarge:justify-start mt-[80px] mlarge:mt-0 mlarge:w-[90vw] mlarge:h-auto;
+    @apply relative flex justify-end mlarge:justify-start mt-[80px] mlarge:mt-[20px] mlarge:w-[90vw] mlarge:h-auto;
 }
 
 .pageEnemyAside_ImageWrapper {

@@ -28,7 +28,7 @@ const Page: React.FC<{ params: any }> = ({ params }) => {
 
       <RunningLine />
 
-      <main className="grid mlarge:block grid-cols-3 mlarge:!mt-[70px]">
+      <main className="grid mlarge:block grid-cols-3 mlarge:!mt-[20px]">
         <EnemyAdditionalInfoContent />
       </main>
 
