@@ -133,7 +133,7 @@ const WeaponAdditionalInfoModa: React.FC<WeaponAdditionalInfoModaProps> =
                   сек.
                 </p>
               </div>
-              <div className="mt-[10px]">
+              <div className="mt-[10px] mlarge:mt-0 mlarge:mb-[10px]">
                 <p className="currentWeapon_Modal_Top_TextBlock_Characteristic_Name">
                   ОСОБЕННОСТИ:
                 </p>
@@ -204,7 +204,7 @@ const WeaponAdditionalInfoModa: React.FC<WeaponAdditionalInfoModaProps> =
 
               <div className="currentWeapon_Modal_Top">
                 <div
-                  className={`currentWeapon_Modal_Top_ImageWrapper ${directions ? "" : "flex justify-center items-center"} ${fuseTime ? "w-[400px]" : "w-[640px]"}`}
+                  className={`currentWeapon_Modal_Top_ImageWrapper ${directions ? "" : "flex justify-center items-center"} ${fuseTime ? "w-[400px] mlarge:w-full" : "w-[640px] mlarge:w-full"}`}
                 >
                   <img
                     src={imagePath}
@@ -221,7 +221,7 @@ const WeaponAdditionalInfoModa: React.FC<WeaponAdditionalInfoModaProps> =
                               key={direction.id}
                               src="/static/GeneralIcons/ArrowIcon.svg"
                               alt=""
-                              className={`w-[35px] h-[30px] ${getTargetRotate(direction.orientation)}`}
+                              className={`w-[35px] mlarge:w-[30px] mmedium:w-[25px] msmall:w-[20px] h-[30px] mlarge:h-[30px] mmedium:h-[25px] msmall:h-[20px] ${getTargetRotate(direction.orientation)}`}
                             />
                           );
                         })}

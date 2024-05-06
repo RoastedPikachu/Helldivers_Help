@@ -3,19 +3,19 @@
 }
 
 .swiper-button-prev {
-    @apply mlarge:hidden !top-[50%] !left-[50px];
+    @apply mlarge:!hidden !top-[50%] !left-[50px];
 }
 
 .swiper-button-next {
-    @apply mlarge:hidden !top-[50%] !right-[65px];
+    @apply mlarge:!hidden !top-[50%] !right-[65px];
 }
 
 .sliderModal {
-    @apply relative px-[20px] mlarge:px-[15px] pt-[40px] mlarge:pt-[20px] pb-[35px] mlarge:pb-[15px] h-auto w-[80vw] mlarge:w-[90vw] max-w-[1152px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] z-30;
+    @apply relative px-[20px] mlarge:px-[15px] pt-[40px] mlarge:pt-[20px] msmall:pt-[15px] pb-[35px] mlarge:pb-[15px] msmall:pb-[10px] h-auto w-[80vw] mlarge:w-[90vw] max-w-[1152px] mlarge:max-h-[60vh] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] mlarge:overflow-y-auto z-30;
 }
 
 .sliderModal_CloseButton {
-    @apply absolute top-[40px] right-[40px] w-[35px] h-[35px] cursor-pointer z-30;
+    @apply absolute top-[40px] mlarge:top-[30px] right-[40px] mlarge:right-[25px] w-[35px] mlarge:w-[32.5px] h-[35px] mlarge:h-[32.5px] cursor-pointer z-30;
 }
 
 .sliderModal_CloseButton_Icon {

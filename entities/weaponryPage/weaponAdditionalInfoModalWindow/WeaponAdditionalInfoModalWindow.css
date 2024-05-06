@@ -1,49 +1,49 @@
 .currentWeapon_Modal_Top {
-    @apply relative flex;
+    @apply relative flex mlarge:block;
 }
 
 .currentWeapon_Modal_Top_ImageWrapper {
-    @apply relative h-auto bg-cover bg-no-repeat border-2 border-[--theme-color] rounded-t-[7.5px] rounded-bl-[7.5px];
+    @apply relative h-auto bg-cover bg-no-repeat border-2 border-[--theme-color] rounded-t-[7.5px] rounded-bl-[7.5px] mlarge:rounded-[10px];
 }
 
 .currentWeapon_Modal_Top_ImageWrapper_Image {
-    @apply w-full h-[292px];
+    @apply w-full h-[292px] mlarge:h-[200px] mmedium:h-[170px] msmall:h-[140px];
 }
 
 .currentWeapon_Modal_Top_TextBlock {
-    @apply relative mt-[-10px] pl-[40px] pb-[20px] w-[calc(100%-420px)] h-auto border-b-2 border-[--theme-color];
+    @apply relative mt-[-10px] mlarge:mt-[10px] pl-[40px] mlarge:pl-0 pb-[20px] mlarge:pb-[5px] w-[calc(100%-420px)] mlarge:w-full h-auto border-b-2 border-[--theme-color];
 }
 
 .currentWeapon_Modal_Top_TextBlock_Title {
-    @apply w-[80%] text-[#ffffff] text-[2rem] font-['Exo2'] font-bold;
+    @apply mlarge:mb-[5px] w-[80%] mlarge:w-full text-[#ffffff] text-[2rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-['Exo2'] font-bold;
 }
 
 .currentWeapon_Modal_Top_TextBlock_Characteristic {
-    @apply flex items-center mt-[10px] w-auto h-[36px];
+    @apply flex items-center mt-[10px] mlarge:mt-[-5px] w-auto h-[36px] msmall:h-[30px];
 }
 
 .currentWeapon_Modal_Top_TextBlock_Characteristic_Name {
-    @apply text-[--theme-color] text-[1.5rem] font-['Exo2'] font-bold;
+    @apply text-[--theme-color] text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold;
 }
 
 .currentWeapon_Modal_Top_TextBlock_Characteristic_Price {
-    @apply flex items-center ml-[20px] mt-[2.5px];
+    @apply flex items-center ml-[20px] mlarge:ml-[10px] mt-[2.5px];
 }
 
 .currentWeapon_Modal_Top_TextBlock_Characteristic_Price_Text {
-    @apply text-[#ffffff] text-[1.75rem] font-bold;
+    @apply text-[#ffffff] text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-bold;
 }
 
 .currentWeapon_Modal_Top_TextBlock_Characteristic_Price_Image {
-    @apply ml-[10px] w-[35px] h-[35px];
+    @apply ml-[10px] mlarge:ml-[5px] w-[35px] mlarge:w-[25px] mmedium:w-[22.5px] msmall:w-[20px] h-[35px] mlarge:h-[25px] mmedium:h-[22.5px] msmall:h-[20px];
 }
 
 .currentWeapon_Modal_Top_TextBlock_Characteristic_Feature {
-    @apply mt-[15px] pl-[10px] border-l-4 border-[#fffff] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-medium;
+    @apply mt-[15px] mlarge:mt-[5px] pl-[10px] border-l-4 mlarge:border-l-[3px] border-[#fffff] text-[#ffffff] text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-medium;
 }
 
 .currentWeapon_Modal_Top_TextBlock_Characteristic_Text {
-    @apply ml-[20px] text-[#ffffff] text-[1.75rem] font-bold;
+    @apply ml-[20px] mlarge:ml-[10px] text-[#ffffff] text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-bold;
 }
 
 .currentWeapon_Modal_Bottom {
@@ -51,31 +51,31 @@
 }
 
 .currentWeapon_Modal_Bottom_Top {
-    @apply mt-[20px] w-auto h-auto;
+    @apply mt-[20px] mlarge:mt-[10px] w-auto h-auto;
 }
 
 .currentWeapon_Modal_Bottom_Top_Title {
-    @apply text-[--theme-color] text-[1.5rem] font-['Exo2'] font-bold;
+    @apply text-[--theme-color] text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold;
 }
 
 .currentWeapon_Modal_Bottom_Top_Text {
-    @apply mt-[10px] text-[#ffffff] text-[1.25rem] font-['Exo2'] font-bold brightness-75;
+    @apply mt-[10px] mlarge:mt-[5px] msmall:mt-0 text-[#ffffff] text-[1.25rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] font-['Exo2'] font-bold brightness-75;
 }
 
 .currentWeapon_Modal_Bottom_Bottom {
-    @apply flex justify-between items-center mt-[20px] w-auto h-auto;
+    @apply flex mlarge:block justify-between items-center mt-[20px] mlarge:mt-[5px] w-auto h-auto;
 }
 
 .currentWeapon_Modal_Bottom_Bottom_TextBlock {
-    @apply flex items-center h-[36px];      
+    @apply flex items-center h-[36px] mlarge:h-[30px];
 }
 
 .currentWeapon_Modal_Bottom_Bottom_TextBlock_Title {
-    @apply text-[--theme-color] text-[1.375rem] font-['Exo2'] font-bold;
+    @apply text-[--theme-color] text-[1.375rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold;
 }
 
 .currentWeapon_Modal_Bottom_Bottom_TextBlock_Text {
-    @apply mt-[2.5px] ml-[20px] text-[#ffffff] text-[1.75rem] font-['Insignia'] font-bold;
+    @apply mt-[2.5px] mlarge:mt-0 ml-[20px] mlarge:ml-[10px] text-[#ffffff] text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-['Insignia'] font-bold;
 }
 
 .insigniaNumericText {
