@@ -24,7 +24,7 @@ class EnemiesStore {
       notes:
         "<p style='filter: brightness(0.95)'>При попытке вызвать подкрепление они поднимают брюшко, издают специфический звук и выделяют феромоны. </p> <p style='margin-top: 10px; filter: brightness(0.95)'>Вызов подкрепления может быть прерван, если их быстро убить. </p> <p style='margin-top: 10px; filter: brightness(0.95)'> Могут зарыться под землю и появиться позади вас.</p>",
       types:
-        "<p style='filter: brightness(0.95)'>Существует всего 2 варианта мусорщиков с уникальными атаками и внешним видом:</p> <h5 style='margin-top: 20px; color: #2cc388; font-size: 1.5rem; font-weight: bold; filter: brightness(1.25)'>Желчный плеватель</h5> <h5 style='margin-top: 10px; color: #2cc388; font-size: 1.5rem; font-weight: bold; filter: brightness(1.25)'>Прыгун</h5>",
+        "<p style='filter: brightness(0.95)'>Существует всего 2 варианта мусорщиков с уникальными атаками и внешним видом:</p> <h5 style='margin-top: 20px; filter: brightness(1.25);'>Желчный плеватель</h5> <h5 style='margin-top: 10px; filter: brightness(1.25)'>Прыгун</h5>",
     },
     {
       id: 2,
@@ -98,7 +98,7 @@ class EnemiesStore {
       notes:
         "<p style='filter: brightness(0.95)'>Может зарыться под землю и неожиданно появиться сзади вас или же с фланга.</p>",
       types:
-        "<p style='filter: brightness(0.95)'>Существует только 2 варианта воинов с особенным внешним видом и уникальными повадками:</p> <h5 style='margin-top: 20px; color: #2cc388; font-size: 1.5rem; font-weight: bold; filter: brightness(1.25)'>Желчный воин</h5> <h5 style='margin-top: 20px; color: #2cc388; font-size: 1.5rem; font-weight: bold; filter: brightness(1.25)'>Страж улья</h5>",
+        "<p style='filter: brightness(0.95)'>Существует только 2 варианта воинов с особенным внешним видом и уникальными повадками:</p> <h5 style='margin-top: 20px; filter: brightness(1.25)'>Желчный воин</h5> <h5 style='margin-top: 20px; filter: brightness(1.25)'>Страж улья</h5>",
     },
     {
       id: 7,
@@ -201,6 +201,7 @@ class EnemiesStore {
         "Если вы вооружены взрывным оружием, то цельтесь прямо в хитиновый панцирь над его пастью, в случае если ваше оружие стреляет только пулями, то громила имеет уязвимую и незащищенную зону сзади. Также берегитесь его атак, так как помимо рывка с целью растоптать Адского Десантника он может совершить сильный толчок в свой фланг и оттолкнуть вас.",
       notes:
         "<p style='filter: brightness(0.95)'>Существует достижение, связанное с убийством громилы с помощью стратагемы припасов.</p> <p style='margin-top: 10px; filter: brightness(0.95)'>Громила стал героем самых демократических и свободных мемов, распространяемых Адскими Десантниками.</p> <p style='margin-top: 10px; filter: brightness(0.95)'>Одного выстрела в голову из одноразового бронебоя, безоткатки, квазара достаточно для убийства громилы.</p> <p style='margin-top: 10px; filter: brightness(0.95)'>Прототипом громилы является танк из первой части Helldivers.</p> ",
+      types: "",
     },
     {
       id: 14,
@@ -234,7 +235,7 @@ class EnemiesStore {
       notes:
         "<p style='filter: brightness(0.95)'>На высоких сложностях может заспавниться большой патруль, состоящий из 30-40 кавалеристов.</p>",
       types:
-        "<p style='filter: brightness(0.95)'>Так как кавалерист — это основная боевая единица, то их существует 6 вариантов:</p> <h5 style='margin-top: 20px; color: #2cc388; font-size: 1.5rem; font-weight: bold; filter: brightness(1.25)'>Солдат</h5> <h5 style='margin-top: 20px; color: #2cc388; font-size: 1.5rem; font-weight: bold; filter: brightness(1.25)'>Дебошир</h5> <h5 style='margin-top: 20px; color: #2cc388; font-size: 1.5rem; font-weight: bold; filter: brightness(1.25)'>Рейдер</h5> <h5 style='margin-top: 20px; color: #2cc388; font-size: 1.5rem; font-weight: bold; filter: brightness(1.25)'>Ракетный рейдер</h5> <h5 style='margin-top: 20px; color: #2cc388; font-size: 1.5rem; font-weight: bold; filter: brightness(1.25)'>Мародер</h5> <h5 style='margin-top: 20px; color: #2cc388; font-size: 1.5rem; font-weight: bold; filter: brightness(1.25)'>Штурмовик</h5>",
+        "<p style='filter: brightness(0.95)'>Так как кавалерист — это основная боевая единица, то их существует 6 вариантов:</p> <h5 style='filter: brightness(1.25)'>Солдат</h5> <h5 style='filter: brightness(1.25)'>Дебошир</h5> <h5 style='filter: brightness(1.25)'>Рейдер</h5> <h5 style='filter: brightness(1.25)'>Ракетный рейдер</h5> <h5 style='filter: brightness(1.25)'>Мародер</h5> <h5 style='filter: brightness(1.25)'>Штурмовик</h5>",
     },
     {
       id: 2,
@@ -295,7 +296,7 @@ class EnemiesStore {
       notes:
         "<p style='filter: brightness(0.95)'>Разрушитель в отличие от других боевых единиц автоматонов будет выслеживать и преследовать Адского Десантника до его полного уничтожения.</p> <p style='margin-top: 10px; filter: brightness(0.95)'>Разрушители выделяются другой голосовой подпрограммой, которая подчеркивает его пафосность и опасность. </p> <p style='margin-top: 10px; filter: brightness(0.95)'>При встрече с ракетным разрушителем вы можете узнать, когда он будет начинать ракетный залп, в этот момент он наклонится и примет широкую стойку.</p> <p style='margin-top: 10px; filter: brightness(0.95)'>Прототипом разрушителя является киборг, именуемый глыбой, из первой части Helldivers.</p>",
       types:
-        "<p style='filter: brightness(0.95)'>Всего заводы автоматонов производят 3 вида разрушителей:</p> <h5 style='margin-top: 20px; color: #2cc388; font-size: 1.5rem; font-weight: bold; filter: brightness(1.25)'>Стандартный разрушитель</h5> <h5 style='margin-top: 20px; color: #2cc388; font-size: 1.5rem; font-weight: bold; filter: brightness(1.25)'>Тяжелый разрушитель</h5> <h5 style='margin-top: 20px; color: #2cc388; font-size: 1.5rem; font-weight: bold; filter: brightness(1.25)'>Ракетный разрушитель</h5>",
+        "<p style='filter: brightness(0.95)'>Всего заводы автоматонов производят 3 вида разрушителей:</p> <h5 style='filter: brightness(1.25)'>Стандартный разрушитель</h5> <h5 style='filter: brightness(1.25)'>Тяжелый разрушитель</h5> <h5 style='filter: brightness(1.25)'>Ракетный разрушитель</h5>",
     },
     {
       id: 6,
@@ -311,7 +312,7 @@ class EnemiesStore {
       notes:
         "<p style='filter: brightness(0.95)'>После своего уничтожения реактор глыбы начинает самоуничтожение и взрывается, поэтому будьте осторожны.</p> <p style='margin-top: 10px; filter: brightness(0.95)'>Существует достижение, связанное с эвакуацией с миссии при живой глыбе с отстреленными руками.</p> <p style='margin-top: 10px; filter: brightness(0.95)'>Может являться главной целью миссии на низких сложностях.</p> <p style='margin-top: 10px; filter: brightness(0.95)'>Вдохновением для этого юнита являлся вождь киборгов из первой части Helldivers.</p>",
       types:
-        "<p style='filter: brightness(0.95)'>Военная машина автоматонов смогла придумать и создать 3 типа глыб:</p> <h5 style='margin-top: 20px; color: #2cc388; font-size: 1.5rem; font-weight: bold; filter: brightness(1.25)'>Здоровяк</h5> <h5 style='margin-top: 20px; color: #2cc388; font-size: 1.5rem; font-weight: bold; filter: brightness(1.25)'>Выжигатель</h5> <h5 style='margin-top: 20px; color: #2cc388; font-size: 1.5rem; font-weight: bold; filter: brightness(1.25)'>Уничтожитель</h5>",
+        "<p style='filter: brightness(0.95)'>Военная машина автоматонов смогла придумать и создать 3 типа глыб:</p> <h5 style='filter: brightness(1.25)'>Здоровяк</h5> <h5 style='filter: brightness(1.25)'>Выжигатель</h5> <h5 style='filter: brightness(1.25)'>Уничтожитель</h5>",
     },
     {
       id: 7,
@@ -327,7 +328,7 @@ class EnemiesStore {
       notes:
         "<p style='filter: brightness(0.95)'>Танк автоматонов является ужасно сконструированной копией танка войск Супер-Земли.</p> <p style='margin-top: 10px; filter: brightness(0.95)'>За секунду до выстрела ствол/ы танка начинают загораться красным, используйте это для своевременного уклонения.</p> <p style='margin-top: 10px; filter: brightness(0.95)'>Танк является более продвинутой версией чем в первой части Helldivers.</p>",
       types:
-        "<p style='filter: brightness(0.95)'>Несмотря на то, что танки являются клонами танков войск Супер-Земли, автоматоны смогли разработать 2 своих версии:</p> <h5 style='margin-top: 20px; color: #2cc388; font-size: 1.5rem; font-weight: bold; filter: brightness(1.25)'>Аннигилятор</h5> <h5 style='margin-top: 20px; color: #2cc388; font-size: 1.5rem; font-weight: bold; filter: brightness(1.25)'>Измельчитель</h5>",
+        "<p style='filter: brightness(0.95)'>Несмотря на то, что танки являются клонами танков войск Супер-Земли, автоматоны смогли разработать 2 своих версии:</p> <h5 style='filter: brightness(1.25)'>Аннигилятор</h5> <h5 style='filter: brightness(1.25)'>Измельчитель</h5>",
     },
     {
       id: 8,

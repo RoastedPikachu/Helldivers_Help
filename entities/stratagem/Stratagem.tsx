@@ -68,7 +68,9 @@ const Stratagem: React.FC<StratagemProps> = ({
     }
   }, [isAdditionalInfoOpened]);
   return (
-    <div className="rootStratagemBlock">
+    <div
+      className={`rootStratagemBlock ${isAdditionalInfoOpened ? "" : "max-h-[85px] mlarge:max-h-[80px] mmedium:max-h-[70px]"}`}
+    >
       <div
         className={`rootStratagemBlock_Top ${isAdditionalInfoOpened ? "" : "z-30"}`}
       >
@@ -95,7 +97,7 @@ const Stratagem: React.FC<StratagemProps> = ({
       </div>
 
       <div
-        className={`rootStratagemBlock_Bottom ${isAdditionalInfoOpened ? "opacity-1" : videoPath && videoPreviewPath ? "mt-[-515px] opacity-0 z-[-1]" : "mt-[-70px] opacity-0 z-[-1]"}`}
+        className={`rootStratagemBlock_Bottom ${isAdditionalInfoOpened ? "opacity-1" : videoPath && videoPreviewPath ? "mt-[-315px] opacity-0 z-[-1]" : "mt-[-70px] opacity-0 z-[-1]"}`}
       >
         {videoPath && videoPreviewPath && (
           <div className="rootStratagemBlock_Bottom_Top">
@@ -171,7 +173,7 @@ const Stratagem: React.FC<StratagemProps> = ({
                 <img
                   src="/static/Resources/RequisitesIcon.svg"
                   alt=""
-                  className="mt-[10px] ml-[5px] w-[27.5px] h-[27.5px]"
+                  className="mt-[10px] mlarge:mt-[5px] mmedium:mt-[7.5px] ml-[5px] w-[27.5px] mlarge:w-[25px] mmedium:w-[22.5px] msmall:w-[20px] h-[27.5px] mlarge:h-[25px] mmedium:h-[22.5px] msmall:h-[20px]"
                 />
               </div>
 

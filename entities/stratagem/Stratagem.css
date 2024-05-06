@@ -1,9 +1,9 @@
 .rootStratagemBlock {
-    @apply relative mt-[30px] w-auto h-auto min-h-[85px] bg-[#00293a] border-2 border-[#2cc388] rounded-[10px];
+    @apply relative w-auto h-auto min-h-[85px] mlarge:min-h-[80px] mmedium:min-h-[70px] bg-[#00293a] border-2 border-[#2cc388] rounded-[10px];
 }
 
 .rootStratagemBlock_Top {
-    @apply relative flex justify-between items-center px-[30px] w-full h-[80px];
+    @apply relative flex justify-between items-center px-[30px] mlarge:px-[15px] msmall:px-[10px] w-full h-[80px] mmedium:h-[70px];
 }
 
 .rootStratagemBlock_Top_Left {
@@ -11,15 +11,15 @@
 }
 
 .rootStratagemBlock_Top_Left_ImageWrapper_Image {
-    @apply relative w-[55px] h-[50px] bg-[#000000] rounded-[5px] overflow-hidden;
+    @apply relative w-[55px] mlarge:w-[47.5px] mmedium:w-[42.5px] msmall:w-[37.5px] mlarge:min-w-[47.5px] mmedium:min-w-[42.5px] msmall:min-w-[37.5px] h-[50px] mlarge:h-[47.5px] mmedium:h-[42.5px] msmall:h-[37.5px] mlarge:min-h-[47.5px] mmedium:min-h-[42.5px] msmall:min-h-[37.5px] bg-[#000000] rounded-[5px] overflow-hidden;
 }
 
 .rootStratagemBlock_Top_Left_Title {
-    @apply ml-[20px] text-[#2cc388] text-[1.75rem] font-['Exo2'] font-bold;
+    @apply ml-[20px] mlarge:ml-[10px] mlarge:w-[77.5%] text-[#2cc388] text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-['Exo2'] font-bold break-all overflow-ellipsis;
 }
 
 .rootStratagemBlock_Top_Button {
-    @apply relative flex justify-center items-center w-[30px] h-[30px];
+    @apply relative flex justify-center items-center w-[30px] mlarge:w-[25px] mmedium:w-[22.5px] msmall:w-[20px] mlarge:min-w-[25px] mmedium:min-w-[22.5px] msmall:min-w-[20px] h-[30px] mlarge:h-[25px] mmedium:h-[22.5px] msmall:h-[20px] mlarge:min-h-[25px] mmedium:min-h-[22.5px] msmall:min-h-[20px];
 }
 
 .rootStratagemBlock_Top_Button_Image {
@@ -27,11 +27,11 @@
 }
 
 .rootStratagemBlock_Bottom {
-    @apply relative px-[30px] pb-[25px] h-auto duration-1000 ease-in-out;
+    @apply relative px-[30px] mlarge:px-[15px] msmall:px-[10px] pb-[25px] mlarge:pb-[15px] mmedium:pb-[10px] h-auto duration-1000 ease-in-out;
 }
 
 .rootStratagemBlock_Bottom_Top {
-    @apply relative flex mt-[20px] mb-[20px] w-full h-auto;
+    @apply relative flex mlarge:block mt-[20px] mlarge:mt-[10px] mmedium:mt-[5px] msmall:mt-0 mb-[20px] mlarge:mb-[5px] w-full h-auto;
 }
 
 .rootStratagemBlock_Bottom_Top_Left {
@@ -39,43 +39,43 @@
 }
 
 .rootStratagemBlock_Bottom_Top_Left_VideoWrapper {
-    @apply relative w-[800px] deskWide:w-[910px] h-[282px] deskWide:h-[320px];
+    @apply relative w-[800px] mlarge:w-full deskWide:w-[910px] h-[282px] mlarge:h-[140px] mmedium:h-[120px] msmall:h-[110px] deskWide:h-[320px];
 }
 
 .rootStratagemBlock_Bottom_Top_Left_VideoWrapper_Video {
-    @apply relative w-full h-full border-2 border-[#2cc388] rounded-[10px];
+    @apply relative w-full h-full object-fill border-2 border-[#2cc388] rounded-[10px] mlarge:rounded-b-[0px];
 }
 
 .rootStratagemBlock_Bottom_Top_Left_VideoWrapper_Video_Button {
-    @apply absolute flex justify-center items-center right-[20px] bottom-[20px] w-[55px] h-[55px] bg-[#01212f] border-2 border-[#2cc388] rounded-[50%];
+    @apply absolute flex justify-center items-center right-[20px] mlarge:right-[10px] bottom-[20px] mlarge:bottom-[10px] w-[55px] mlarge:w-[47.5px] mmedium:w-[42.5px] msmall:w-[37.5px] h-[55px] mlarge:h-[47.5px] mmedium:h-[42.5px] msmall:h-[37.5px] bg-[#01212f] border-2 border-[#2cc388] rounded-[50%];
 }
 
 .rootStratagemBlock_Bottom_Top_Left_VideoWrapper_Video_Button_Pause {
-    @apply w-[30px] h-[30px];
+    @apply w-[30px] mlarge:w-[25px] mmedium:w-[22.5px] msmall:w-[20px] h-[30px] mlarge:h-[25px] mmedium:h-[22.5px] msmall:h-[20px];
 }
 
 .rootStratagemBlock_Bottom_Top_Left_VideoWrapper_Video_Button_Play {
-    @apply ml-[5px] w-[30px] h-[30px];
+    @apply ml-[5px] mlarge:ml-[2.5px] w-[30px] mlarge:w-[25px] mmedium:w-[22.5px] msmall:w-[20px] h-[30px] mlarge:h-[25px] mmedium:h-[22.5px] msmall:h-[20px];
 }
 
 .rootStratagemBlock_Bottom_Top_Left_ArrowsWrapper {
-    @apply relative grid justify-items-center w-auto h-auto;
+    @apply relative grid justify-items-center mlarge:mb-[10px] w-auto h-auto;
 }
 
 .rootStratagemBlock_Bottom_Top_Left_ArrowsWrapper_Block {
-    @apply relative flex justify-items-center items-center py-[15px] pl-[40px] w-auto h-auto border-b-2 border-x-2 border-[#2cc388] rounded-b-[10px];
+    @apply relative flex justify-between items-center py-[15px] mlarge:py-[10px] pl-[40px] mlarge:pl-[20px] mlarge:pr-[20px] w-auto mlarge:w-full h-auto border-b-2 border-x-2 border-[#2cc388] rounded-b-[10px];
 }
 
 .rootStratagemBlock_Bottom_Top_Left_ArrowsWrapper_Block_Arrow {
-    @apply mr-[40px] w-[40px] h-[35px];
+    @apply mr-[40px] mlarge:mr-0 w-[40px] mlarge:w-[30px] mmedium:w-[25px] msmall:w-[20px] h-[35px] mlarge:h-[30px] mmedium:h-[25px] msmall:h-[20px];
 }
 
 .rootStratagemBlock_Bottom_Top_Right {
-    @apply ml-[40px];
+    @apply ml-[40px] mlarge:ml-0;
 }
 
 .rootStratagemBlock_Bottom_Top_Right_Text {
-    @apply mt-[10px] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-semibold;
+    @apply mt-[10px] mlarge:mt-[5px] text-[#ffffff] text-[1.5rem] mlarge:text-[1.2rem] mmedium:text-[1.075rem] msmall:text-[0.95rem] font-['Exo2'] font-semibold;
 }
 
 .rootStratagemBlock_Bottom_Top_Right_Text_Bold {
@@ -83,5 +83,5 @@
 }
 
 .rootStratagemBlock_Bottom_Description {
-    @apply w-[75%] min-h-[30px] text-[#ffffff] text-[1.25rem] font-['Exo2'] font-medium brightness-75;
+    @apply w-[75%] mlarge:w-full min-h-[30px] text-[#ffffff] text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-medium brightness-75;
 }

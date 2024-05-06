@@ -50,7 +50,10 @@ const Page = observer(() => {
               }
             />
 
-            <ModalSlider currentEntityId={planetsStore.currentPlanetInfo.id}>
+            <ModalSlider
+              closeFunction={() => planetsStore.clearCurrentPlanetInfo()}
+              currentEntityId={planetsStore.currentPlanetInfo.id}
+            >
               {getTargetPlanetArray()?.map((planet) => (
                 <SwiperSlide key={planet.id}>
                   <PlanetAdditionalInfoModalWindow

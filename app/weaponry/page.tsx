@@ -119,7 +119,10 @@ const Page = observer(() => {
               }
             />
 
-            <ModalSlider currentEntityId={weaponsStore.currentWeaponInfo.id}>
+            <ModalSlider
+              closeFunction={() => weaponsStore.clearCurrentWeaponInfo()}
+              currentEntityId={weaponsStore.currentWeaponInfo.id}
+            >
               {getSpecificWeaponArray(
                 weaponsStore.currentWeaponInfo.weaponType?.typeNumber!,
               )?.map((weapon) => (
@@ -129,7 +132,10 @@ const Page = observer(() => {
               ))}
             </ModalSlider>
 
-            <EntitySection title={"ОСНОВНОЕ"} gridStyles={"grid-cols-3"}>
+            <EntitySection
+              title={"ОСНОВНОЕ"}
+              gridStyles={"grid-cols-3 mlarge:grid-cols-1"}
+            >
               {getSpecificWeaponArray(1)?.map((primaryWeapon) => (
                 <Weapon
                   key={primaryWeapon.id}
@@ -141,7 +147,10 @@ const Page = observer(() => {
               ))}
             </EntitySection>
 
-            <EntitySection title={"ВТОРИЧНОЕ"} gridStyles={"grid-cols-3"}>
+            <EntitySection
+              title={"ВТОРИЧНОЕ"}
+              gridStyles={"grid-cols-3 mlarge:grid-cols-1"}
+            >
               {getSpecificWeaponArray(2)?.map((primaryWeapon) => (
                 <Weapon
                   key={primaryWeapon.id}
@@ -153,7 +162,10 @@ const Page = observer(() => {
               ))}
             </EntitySection>
 
-            <EntitySection title={"ВСПОМОГАТЕЛЬНОЕ"} gridStyles={"grid-cols-3"}>
+            <EntitySection
+              title={"ВСПОМОГАТЕЛЬНОЕ"}
+              gridStyles={"grid-cols-3 mlarge:grid-cols-1"}
+            >
               {getSpecificWeaponArray(3)?.map((primaryWeapon) => (
                 <Weapon
                   key={primaryWeapon.id}
@@ -165,7 +177,10 @@ const Page = observer(() => {
               ))}
             </EntitySection>
 
-            <EntitySection title={"ГРАНАТЫ"} gridStyles={"grid-cols-4"}>
+            <EntitySection
+              title={"ГРАНАТЫ"}
+              gridStyles={"grid-cols-4 mlarge:grid-cols-1"}
+            >
               {getSpecificWeaponArray(4)?.map((primaryWeapon) => (
                 <Weapon
                   key={primaryWeapon.id}

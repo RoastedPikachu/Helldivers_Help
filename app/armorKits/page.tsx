@@ -23,6 +23,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import "@/app/modalsSlider.css";
+import { weaponsStore } from "@/store/WeaponsStore";
 
 const Page = observer(() => {
   return (
@@ -45,7 +46,10 @@ const Page = observer(() => {
               }
             />
 
-            <ModalSlider currentEntityId={armorStore.currentArmorInfo.id}>
+            <ModalSlider
+              closeFunction={() => armorStore.clearCurrentArmorInfo()}
+              currentEntityId={armorStore.currentArmorInfo.id}
+            >
               {armorStore.armorKits[
                 armorStore.currentArmorInfo.obtainingType?.name
               ]?.map((armorKit) => (
