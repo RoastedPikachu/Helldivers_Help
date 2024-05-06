@@ -24,7 +24,7 @@ const PlanetAdditionalInfoModalWindow: React.FC<PlanetAdditionalInfoModalWindowP
           <div className="sliderModal">
             <button
               onClick={() => planetsStore.clearCurrentPlanetInfo()}
-              className="sliderModal_CloseButton"
+              className="sliderModal_CloseButton mlarge:bg-[#00000080] mlarge:rounded-[5px]"
             >
               <img
                 src="/static/GeneralIcons/CloseIcon.svg"

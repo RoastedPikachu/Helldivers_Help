@@ -15,7 +15,7 @@
 }
 
 .sliderModal_CloseButton {
-    @apply absolute top-[40px] mlarge:top-[30px] right-[40px] mlarge:right-[25px] w-[35px] mlarge:w-[32.5px] h-[35px] mlarge:h-[32.5px] cursor-pointer z-30;
+    @apply absolute top-[40px] mlarge:top-[30px] right-[40px] mlarge:right-[25px] w-[35px] mlarge:w-[32.5px] mmedium:w-[30px] msmall:w-[27.5px] h-[35px] mlarge:h-[32.5px] mmedium:h-[30px] msmall:h-[27.5px] cursor-pointer z-30;
 }
 
 .sliderModal_CloseButton_Icon {

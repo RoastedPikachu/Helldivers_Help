@@ -7,6 +7,7 @@ import { slidersStore } from "@/store/SlidersStore";
 import WeatherConditionAdditionalInfoModalWindow from "@/entities/planetsPage/weatherConditionAdditionalInfo/WeatherConditionAdditionalInfoModalWindow";
 
 import "./Planet.css";
+import { mobileStore } from "@/store/MobileStore";
 
 interface PlanetProps {
   id: number;
@@ -63,12 +64,14 @@ const Planet: React.FC<PlanetProps> = ({
               className="planetWidget_WeatherConditions_Container_ImageWrapper_Image"
             />
 
-            <WeatherConditionAdditionalInfoModalWindow
-              isVisible={targetWeatherConditionId === weatherCondition.id}
-              borderStyle={"border-[--theme-color]"}
-              name={weatherCondition.name}
-              description={weatherCondition.description}
-            />
+            {!mobileStore.isMobileDevice && (
+              <WeatherConditionAdditionalInfoModalWindow
+                isVisible={targetWeatherConditionId === weatherCondition.id}
+                borderStyle={"border-[--theme-color]"}
+                name={weatherCondition.name}
+                description={weatherCondition.description}
+              />
+            )}
           </div>
         ))}
       </div>
