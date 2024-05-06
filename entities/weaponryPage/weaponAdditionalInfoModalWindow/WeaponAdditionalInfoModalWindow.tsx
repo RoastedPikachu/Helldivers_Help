@@ -209,7 +209,7 @@ const WeaponAdditionalInfoModa: React.FC<WeaponAdditionalInfoModaProps> =
                   <img
                     src={imagePath}
                     alt=""
-                    className={`currentWeapon_Modal_Top_ImageWrapper_Image ${dps ? "scale-y-[0.7]" : directions ? "scale-[0.9]" : "scale-[0.7]"}`}
+                    className={`currentWeapon_Modal_Top_ImageWrapper_Image ${dps ? "scale-y-[0.7]" : directions ? "scale-[0.9]" : "scale-[0.7] mlarge:scale-x-[0.5]"}`}
                   />
 
                   {directions && (

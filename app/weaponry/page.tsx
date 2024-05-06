@@ -119,7 +119,10 @@ const Page = observer(() => {
               }
             />
 
-            <ModalSlider currentEntityId={weaponsStore.currentWeaponInfo.id}>
+            <ModalSlider
+              closeFunction={() => weaponsStore.clearCurrentWeaponInfo()}
+              currentEntityId={weaponsStore.currentWeaponInfo.id}
+            >
               {getSpecificWeaponArray(
                 weaponsStore.currentWeaponInfo.weaponType?.typeNumber!,
               )?.map((weapon) => (

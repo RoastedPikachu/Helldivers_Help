@@ -11,7 +11,7 @@
 }
 
 .sliderModal {
-    @apply relative px-[20px] mlarge:px-[15px] pt-[40px] mlarge:pt-[20px] msmall:pt-[15px] pb-[35px] mlarge:pb-[15px] msmall:pb-[10px] h-auto w-[80vw] mlarge:w-[90vw] max-w-[1152px] mlarge:max-h-[60vh] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] mlarge:overflow-y-auto z-30;
+    @apply relative px-[20px] mlarge:px-[15px] pt-[40px] mlarge:pt-[20px] msmall:pt-[15px] pb-[35px] mlarge:pb-[15px] msmall:pb-[10px] h-auto w-[80vw] mlarge:w-[90vw] max-w-[1152px] mlarge:max-h-[60vh] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] mlarge:overflow-y-auto overscroll-contain z-30;
 }
 
 .sliderModal_CloseButton {
