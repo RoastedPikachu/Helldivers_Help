@@ -40,7 +40,7 @@ const MobileHeaderContent = () => {
       </div>
 
       <div
-        className={`absolute top-[115px] msmall:top-[110px] w-full h-[calc(100vh+115px)] bg-[#01212f] duration-[400ms] ease-in-out ${isAdditionalHeaderInfoOpened ? "left-0" : "left-[-100vw]"}`}
+        className={`absolute top-[115px] msmall:top-[110px] w-full h-[calc(100vh+115px)] bg-[#01212f] duration-[400ms] ease-in-out overscroll-contain ${isAdditionalHeaderInfoOpened ? "left-0" : "left-[-100vw]"}`}
       >
         <nav className="mt-[30px] px-[calc(2.5%+10px)]">
           <div className="flex justify-between items-center w-full">

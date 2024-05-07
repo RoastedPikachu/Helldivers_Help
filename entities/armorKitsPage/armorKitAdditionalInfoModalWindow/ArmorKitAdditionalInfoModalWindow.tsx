@@ -8,6 +8,7 @@ import { armorStore } from "@/store/ArmorKitsStore";
 import { Bonus } from "@/utils/dataInterfaces";
 
 import "./ArmorKitAdditionalInfoModalWindow.css";
+import { mobileStore } from "@/store/MobileStore";
 
 interface ArmorKitAdditionalInfoModalWindowProps {
   imagePath: string;
@@ -42,7 +43,7 @@ const ArmorKitAdditionalInfoModalWindow: React.FC<ArmorKitAdditionalInfoModalWin
             <div className="sliderModal">
               <button
                 onClick={() => armorStore.clearCurrentArmorInfo()}
-                className="sliderModal_CloseButton"
+                className="sliderModal_CloseButton !top-[15px] !right-[15px]"
               >
                 <img
                   src="/static/GeneralIcons/CloseIcon.svg"
@@ -69,7 +70,7 @@ const ArmorKitAdditionalInfoModalWindow: React.FC<ArmorKitAdditionalInfoModalWin
                     {type}
                   </p>
 
-                  <div className="currentArmor_Modal_Top_TextBlock_Characteristic mt-[20px] mlarge:mt-[10px]">
+                  <div className="currentArmor_Modal_Top_TextBlock_Characteristic mt-[20px] mlarge:!mt-[10px]">
                     <p className="currentArmor_Modal_Top_TextBlock_Characteristic_Name">
                       СТОИМОСТЬ:{" "}
                     </p>
@@ -107,7 +108,27 @@ const ArmorKitAdditionalInfoModalWindow: React.FC<ArmorKitAdditionalInfoModalWin
                     </p>
                   </div>
 
-                  <div className="mt-[20px] mlarge:mt-[10px]">
+                  {!mobileStore.isMobileDevice && (
+                    <div className="mt-[20px] mlarge:mt-[10px]">
+                      <p className="currentArmor_Modal_Top_TextBlock_Characteristic_Name">
+                        ЭФФЕКТ:
+                      </p>
+
+                      <p className="currentArmor_Modal_Top_TextBlock_Characteristic_Value">
+                        {bonus.name}
+                      </p>
+
+                      <p className="currentArmor_Modal_Top_TextBlock_Characteristic_Description">
+                        {bonus.description}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              <div className="currentArmor_Modal_Bottom">
+                {mobileStore.isMobileDevice && (
+                  <div className="mt-[10px]">
                     <p className="currentArmor_Modal_Top_TextBlock_Characteristic_Name">
                       ЭФФЕКТ:
                     </p>
@@ -120,10 +141,8 @@ const ArmorKitAdditionalInfoModalWindow: React.FC<ArmorKitAdditionalInfoModalWin
                       {bonus.description}
                     </p>
                   </div>
-                </div>
-              </div>
+                )}
 
-              <div className="currentArmor_Modal_Bottom">
                 <div className="currentArmor_Modal_Bottom_Top">
                   <h3 className="currentArmor_Modal_Bottom_Top_Title">
                     ОПИСАНИЕ:
@@ -156,7 +175,7 @@ const ArmorKitAdditionalInfoModalWindow: React.FC<ArmorKitAdditionalInfoModalWin
                   </div>
 
                   <div className="currentArmor_Modal_Bottom_Bottom_TextBlock">
-                    <p className="currentArmor_Modal_Bottom_Bottom_TextBlock_Title mlarge:w-[82.5%] mmedium:w-[72.5%] msmall:w-[67.5%]">
+                    <p className="currentArmor_Modal_Bottom_Bottom_TextBlock_Title">
                       ВОССТАНОВЛЕНИЕ ВЫНОСЛИВОСТИ:
                     </p>
 

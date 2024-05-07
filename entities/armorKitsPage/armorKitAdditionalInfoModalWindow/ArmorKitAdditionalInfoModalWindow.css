@@ -1,9 +1,9 @@
 .currentArmor_Modal_Top {
-    @apply relative flex mlarge:block h-auto max-h-[410px] mlarge:max-h-[1000px];
+    @apply relative flex h-auto max-h-[410px] mlarge:max-h-[1000px];
 }
 
 .currentArmor_Modal_Top_ImageWrapper {
-    @apply relative flex justify-center items-center w-[250px] mlarge:w-full h-[410px] mlarge:h-[370px] mmedium:h-[340px] msmall:h-[320px] bg-cover bg-no-repeat border-2 border-[--theme-color] rounded-t-[7.5px] rounded-bl-[7.5px] mlarge:rounded-[7.5px] overflow-hidden;
+    @apply relative flex justify-center items-center w-[250px] mlarge:w-[40%] mlarge:min-w-[40%] h-[410px] mlarge:h-[230px] mmedium:h-[210px] msmall:h-[190px] bg-cover bg-no-repeat border-2 border-[--theme-color] rounded-t-[7.5px] rounded-bl-[7.5px] mlarge:rounded-[7.5px] overflow-hidden;
 }
 
 .currentArmor_Modal_Top_ImageWrapper_Image {
@@ -11,15 +11,15 @@
 }
 
 .currentArmor_Modal_Top_TextBlock {
-    @apply relative mt-[-10px] mlarge:mt-[10px] mmedium:mt-[5px] msmall:mt-[2.5px] pl-[40px] mlarge:pl-0 pb-[20px] mlarge:pb-[10px] w-[calc(100%-270px)] mlarge:w-full h-auto border-b-2 border-[--theme-color];
+    @apply relative mt-[-10px] mlarge:mt-[-7.5px] mmedium:mt-[-5px] msmall:mt-[-2.5px] pl-[40px] mlarge:pl-[10px] pb-[20px] mlarge:pb-0 w-[calc(100%-270px)] mlarge:w-full h-auto mlarge:max-h-[230px] mmedium:max-h-[215px] msmall:max-h-[180px] border-b-2 mlarge:border-0 border-[--theme-color];
 }
 
 .currentArmor_Modal_Top_TextBlock_Title {
-    @apply text-[#ffffff] text-[2rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-['Exo2'] font-bold;
+    @apply mlarge:w-[80%] text-[#ffffff] text-[2rem] mlarge:text-[1.2rem] mmedium:text-[1.075rem] msmall:text-[0.95rem] font-['Exo2'] font-bold;
 }
 
 .currentArmor_Modal_Top_TextBlock_Characteristic {
-    @apply flex items-center mt-[10px] mlarge:mt-[5px] msmall:mt-[2.5px] w-auto h-[36px] mlarge:h-[30px] mmedium:h-[28px] msmall:h-[26px];
+    @apply flex items-center mt-[10px] mlarge:mt-[2.5px] msmall:mt-[2.5px] w-auto h-[36px] mlarge:h-[30px] mmedium:h-[28px] msmall:h-[26px];
 }
 
 .currentArmor_Modal_Top_TextBlock_Characteristic_Name {
@@ -27,7 +27,7 @@
 }
 
 .currentArmor_Modal_Top_TextBlock_Characteristic_Value {
-    @apply text-[#ffffff] text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold;
+    @apply text-[#ffffff] text-[1.5rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] font-['Exo2'] font-bold;
 }
 
 .currentArmor_Modal_Top_TextBlock_Characteristic_Description {
@@ -59,7 +59,7 @@
 }
 
 .currentArmor_Modal_Bottom_Top_Title {
-    @apply text-[--theme-color] text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold;
+    @apply text-[--theme-color] text-[1.5rem] mlarge:text-[1.075rem] mmedium:text-[0.95rem] msmall:text-[0.825rem] font-['Exo2'] font-bold;
 }
 
 .currentArmor_Modal_Bottom_Top_Text {
@@ -75,13 +75,9 @@
 }
 
 .currentArmor_Modal_Bottom_Bottom_TextBlock_Title {
-    @apply text-[--theme-color] text-[1.375rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold;
+    @apply text-[--theme-color] text-[1.375rem] mlarge:text-[1.075rem] mmedium:text-[0.95rem] msmall:text-[0.825rem] font-['Exo2'] font-bold;
 }
 
 .currentArmor_Modal_Bottom_Bottom_TextBlock_Text {
     @apply mt-[2.5px] ml-[20px] mlarge:ml-[10px] text-[#ffffff] text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-['Insignia'] font-bold;
-}
-
-.sliderModal {
-    @apply mlarge:!w-[60vw] mmedium:!w-[65vw] msmall:!w-[70vw];
 }
