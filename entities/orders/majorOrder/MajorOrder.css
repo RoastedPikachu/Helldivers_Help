@@ -1,53 +1,53 @@
 .rootMajorOrderWidget {
-    @apply relative mt-[30px] w-full h-auto bg-[#000000] border-2 border-[#2cc388] rounded-[10px] overflow-hidden;
+    @apply relative mt-[30px] mlarge:mt-[25px] w-full h-auto bg-[#000000] border-2 border-[#2cc388] rounded-[10px] overflow-hidden;
 }
 
 .rootMajorOrderWidget_Top {
-    @apply flex justify-between items-center pt-[15px] pb-[10px] px-[20px] w-full h-[65px] bg-[#2cc388];
+    @apply flex justify-between items-center pt-[15px] mlarge:pt-[10px] pb-[10px] px-[20px] mlarge:px-[10px] w-full h-[65px] mlarge:h-[40px] bg-[#2cc388];
 }
 
 .rootMajorOrderWidget_Top_Title {
-    @apply text-[#ffffff] text-[2rem] font-['Exo2'] font-bold;
+    @apply text-[#ffffff] text-[2rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-['Exo2'] font-bold;
 }
 
 .rootMajorOrderWidget_Top_TimeLeft {
-    @apply text-[#ffffff] text-[2rem] font-['Exo2'] font-bold;
+    @apply text-[#ffffff] text-[2rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-['Exo2'] font-bold;
 }
 
 .rootMajorOrderWidget_Description {
-    @apply mt-[20px] px-[20px] text-[#2cc388] text-[1.25rem] font-['Exo2'] font-medium;
+    @apply mt-[20px] mlarge:mt-[10px] px-[20px] mlarge:px-[10px] text-[#2cc388] text-[1.25rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] font-['Exo2'] font-medium;
 }
 
 .rootMajorOrderWidget_TaskTitle {
-    @apply mt-[20px] mx-[20px] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-bold;
+    @apply mt-[20px] mlarge:mt-[10px] mx-[20px] mlarge:mx-[10px] text-[#ffffff] text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold;
 }
 
 .rootMajorOrderWidget_TaskDescription {
-    @apply mt-[10px] mx-[20px] text-[#2cc388] text-[1.25rem] font-['Exo2'] font-medium;
+    @apply mt-[10px] mlarge:mt-[5px] mx-[20px] mlarge:mx-[10px] text-[#2cc388] text-[1.25rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] font-['Exo2'] font-medium;
 }
 
 .rootMajorOrderWidget_PlanetsBlock {
-    @apply grid grid-cols-2 gap-y-[20px] mt-[30px] mx-[20px] h-[100px];
+    @apply grid grid-cols-2 mlarge:grid-cols-1 gap-y-[20px] mlarge:gap-y-[10px] mt-[30px] mlarge:mt-[15px] mx-[20px] mlarge:mx-[10px] h-[100px] mlarge:h-auto;
 }
 
 .rootMajorOrderWidget_PlanetsBlock_TextWrapper {
-    @apply relative flex justify-between items-center px-[30px] h-[40px] border-l-4;
+    @apply relative flex justify-between items-center px-[30px] mlarge:px-[15px] h-[40px] mmedium:h-[35px] msmall:h-[32.5px] border-l-4;
 }
 
 .rootMajorOrderWidget_PlanetsBlock_TextWrapper_Block {
-    @apply absolute ml-[-30px] w-full h-full brightness-[0.5];
+    @apply absolute ml-[-30px] mlarge:ml-[-15px] w-full h-full brightness-[0.5];
 }
 
 .rootMajorOrderWidget_PlanetsBlock_TextWrapper_Block_PlanetName {
-    @apply text-[#ffffff] text-[1.5rem] font-['Exo2'] font-bold z-30;
+    @apply text-[#ffffff] text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold z-30;
 }
 
 .rootMajorOrderWidget_PlanetsBlock_TextWrapper_Block_BoolText {
-    @apply text-[1.125rem] font-['Exo2'] font-semibold z-30 brightness-75;
+    @apply text-[1.125rem] mlarge:text-[0.875rem] mmedium:text-[0.75rem] msmall:text-[0.7rem] font-['Exo2'] font-semibold z-30 brightness-75;
 }
 
 .rootMajorOrderWidget_LiberationProgress {
-    @apply relative mx-[20px] py-[2px] px-[2px] w-[calc(100%-40px)] h-[34px] border-2 border-[#2cc388];
+    @apply relative mlarge:mt-[10px] mx-[20px] mlarge:mx-[10px] py-[2px] px-[2px] w-[calc(100%-40px)] mlarge:w-[calc(100%-20px)] h-[34px] mlarge:h-[30px] mmedium:h-[26px] msmall:h-[24px] border-2 border-[#2cc388];
 }
 
 .rootMajorOrderWidget_LiberationProgress_ProgressBar {
@@ -55,17 +55,17 @@
 }
 
 .rootMajorOrderWidget_Bottom {
-    @apply flex items-center mt-[30px] mb-[20px] mx-[20px] px-[calc((100%-280px)/2)] w-[calc(100%-40px)] h-[60px] bg-[url('/static/MajorOrderRewardBackgroundImage.png')] bg-cover bg-no-repeat;
+    @apply flex items-center mt-[30px] mlarge:mt-[20px] mb-[20px] mlarge:mb-[10px] mx-[20px] mlarge:mx-[10px] px-[calc((100%-280px)/2)] mlarge:px-[calc((100%-230px)/2)] mmedium:px-[calc((100%-210px)/2)] msmall:px-[calc((100%-190px)/2)] w-[calc(100%-40px)] mlarge:w-[calc(100%-20px)] h-[60px] mlarge:h-[50px] bg-[url('/static/MajorOrderRewardBackgroundImage.png')] bg-cover bg-no-repeat;
 }
 
 .rootMajorOrderWidget_Bottom_LeftText {
-    @apply text-[#ffffff] text-[1.5rem] font-['Exo2'] font-bold;
+    @apply text-[#ffffff] text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold;
 }
 
 .rootMajorOrderWidget_Bottom_NumberText {
-    @apply ml-[10px] text-[#ffe702] text-[2rem] font-['Insignia'] font-bold;
+    @apply ml-[10px] text-[#ffe702] text-[2rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-['Insignia'] font-bold;
 }
 
 .rootMajorOrderWidget_Bottom_RightText {
-    @apply ml-[10px] text-[#ffe702] text-[1.5rem] font-['Exo2'] font-bold;
+    @apply ml-[10px] text-[#ffe702] text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold;
 }

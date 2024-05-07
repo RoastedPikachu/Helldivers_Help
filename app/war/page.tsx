@@ -31,7 +31,7 @@ const Page = observer(() => {
         <>
           <TopPageBlock />
 
-          <main className="flex mlarge:block justify-between">
+          <main className="flex mlarge:block justify-between mlarge:mt-[115px]">
             {!mobileStore.isMobileDevice ? (
               <>
                 <aside className="galaxyMap">
