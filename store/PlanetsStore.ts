@@ -567,7 +567,7 @@ class PlanetsStore {
       name: "Меридия",
       tidbit: `<p>Одна из четырех планет, где была развернута система терминального контроля (TCS) - сеть массивных башен, которые покрывают планету нейротоксином, известным как Терминцид. Установка этих башен TCS потребовала совместных усилий многих Адских Десантников и в конечном итоге привела к тому, что терминиды были удалены навсегда.</p>`,
       sector: galaxySectors.umlaut,
-      biome: biomes.jungle,
+      biome: biomes.meridia,
       weatherConditions: [
         weatherConditions.volcanicActivity,
         weatherConditions.rainstorms,

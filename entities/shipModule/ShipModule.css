@@ -30,6 +30,10 @@
     ::-webkit-scrollbar-thumb:hover {
         background: #1c7f59;
     }
+
+    .swiper-pagination {
+        display: none;
+    }
 }
 
 .rootShipModuleBlock {
@@ -121,7 +125,7 @@
 }
 
 .rootShipModuleBlock_Bottom_RightBlock_Stratagems {
-    @apply absolute mlarge:relative bottom-[25px] mlarge:bottom-[15px] mlarge:mt-[20px] right-0 w-full h-auto z-30;
+    @apply absolute mlarge:relative bottom-[25px] mlarge:bottom-[15px] mt-[10px] mlarge:mt-[20px] right-0 w-full h-[calc(100%-160px)] z-30;
 }
 
 .rootShipModuleBlock_Bottom_RightBlock_StratagemsTitle {
@@ -129,5 +133,5 @@
 }
 
 .rootShipModuleBlock_Bottom_RightBlock_StratagemsBlock {
-    @apply relative mt-[10px] mlarge:mt-[5px] mmedium:mt-[7.5px] pb-[20px] mlarge:pb-[15px] px-[20px] mlarge:px-[15px] w-full h-[380px] mlarge:h-[300px] border-2 border-[--theme-color] rounded-[10px] overflow-y-scroll;
+    @apply relative mt-[10px] mlarge:mt-[5px] mmedium:mt-[7.5px] pb-[20px] mlarge:pb-[15px] px-[20px] mlarge:px-[15px] w-full h-[calc(100%-40px)] mlarge:h-[300px] border-2 border-[--theme-color] rounded-[10px] overflow-y-scroll;
 }
