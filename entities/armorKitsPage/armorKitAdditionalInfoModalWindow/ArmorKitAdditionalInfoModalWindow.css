@@ -67,7 +67,7 @@
 }
 
 .currentArmor_Modal_Bottom_Bottom {
-    @apply flex mlarge:block justify-between items-center mt-[20px] mlarge:mt-[10px] msmall:mt-[5px] w-auto h-auto;
+    @apply flex mlarge:block justify-between items-center mt-[20px] mlarge:mt-[10px] mmedium:mt-[7.5px] msmall:mt-[5px] w-auto h-auto;
 }
 
 .currentArmor_Modal_Bottom_Bottom_TextBlock {
@@ -75,7 +75,7 @@
 }
 
 .currentArmor_Modal_Bottom_Bottom_TextBlock_Title {
-    @apply text-[--theme-color] text-[1.375rem] mlarge:text-[1.075rem] mmedium:text-[0.95rem] msmall:text-[0.825rem] font-['Exo2'] font-bold;
+    @apply mlarge:max-w-[50%] mmedium:max-w-[52.5%] text-[--theme-color] text-[1.375rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold;
 }
 
 .currentArmor_Modal_Bottom_Bottom_TextBlock_Text {
