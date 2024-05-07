@@ -3,9 +3,9 @@
 }
 
 .navBlock_buttonEnemyLink {
-    @apply flex items-center py-[7.5px] mlarge:py-[5px] px-[25px] mlarge:px-[10px] mlarge:max-w-[calc(42.5%+30px)] mlarge:h-[60px] bg-[#00293a] border-2 border-[#2cc388] rounded-[10px];
+    @apply flex items-center py-[7.5px] mlarge:py-[5px] px-[25px] mlarge:px-[10px] mlarge:w-[42.5%] msmall:max-w-[calc(42.5%+10px)] mlarge:h-[60px] bg-[#00293a] border-2 border-[#2cc388] rounded-[10px];
 }
 
 .navBlock_buttonEnemyLink_Text {
-  @apply text-[#2cc388] text-[1.375rem] mlarge:text-[1rem] mmedium:text-[0.875rem] font-['Exo2'] font-semibold;
+  @apply mlarge:w-full text-[#2cc388] text-[1.375rem] mlarge:text-[1rem] mmedium:text-[0.875rem] font-['Exo2'] font-semibold;
 }

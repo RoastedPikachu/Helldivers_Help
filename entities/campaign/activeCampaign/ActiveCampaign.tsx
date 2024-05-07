@@ -233,11 +233,11 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
               <>
                 <div
                   style={{ width: `${getLiberationWidth(false)}%` }}
-                  className="w-full h-[14px] bg-[#3db8fe]"
+                  className="w-full h-[14px] mlarge:h-[11.5px] mmedium:h-[10.25px] msmall:h-[9px] bg-[#3db8fe]"
                 ></div>
                 <div
                   style={{ width: `${getLiberationWidth(true)}%` }}
-                  className={`w-full h-[14px] ${getEnemyBgColor()}`}
+                  className={`w-full h-[14px] mlarge:h-[11.5px] mmedium:h-[10.25px] msmall:h-[9px] ${getEnemyBgColor()}`}
                 ></div>
               </>
             )}
