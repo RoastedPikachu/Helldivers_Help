@@ -2,7 +2,9 @@
 import React, { useEffect, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
+
+import { mobileStore } from "@/store/MobileStore";
 
 import { Stratagem } from "@/utils/generalInterfaces";
 
@@ -10,6 +12,7 @@ import Typewriter from "@/shared/Typewriter";
 
 import ShipModuleStratagem from "@/entities/ShipModuleStratagem";
 
+import "swiper/css/pagination";
 import "./ShipModule.css";
 
 interface ShipModuleProps {
@@ -66,7 +69,9 @@ const ShipModule: React.FC<ShipModuleProps> = ({
     getStratagems();
   }, []);
   return (
-    <div className="rootShipModuleBlock">
+    <div
+      className={`rootShipModuleBlock ${isAdditionalInfoOpened ? "" : "mlarge:max-h-[72.5px]"}`}
+    >
       <div
         className={`rootShipModuleBlock_Top ${isAdditionalInfoOpened ? "" : "z-30"}`}
       >
@@ -93,8 +98,9 @@ const ShipModule: React.FC<ShipModuleProps> = ({
             slidesPerView={1}
             loop={false}
             centeredSlides={false}
-            modules={[Navigation]}
-            navigation={true}
+            modules={[Pagination, Navigation]}
+            navigation={!mobileStore.isMobileDevice}
+            pagination={{ clickable: false }}
             onSlideChange={handleSlideChange}
             className="rootShipModuleBlock_Bottom_LeftBlock_Slider"
           >

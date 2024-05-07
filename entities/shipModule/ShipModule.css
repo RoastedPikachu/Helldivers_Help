@@ -1,45 +1,51 @@
 .swiper-button-prev {
     top: 150px !important;
-    left: 30px !important;
+    left: 20px !important;
 }
 
 .swiper-button-next {
     top: 150px !important;
-    right: 30px !important;
+    right: 20px !important;
 }
 
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #ffffff;
-    border-radius: 0 7.5px 7.5px 0;
-}
-
-::-webkit-scrollbar-thumb {
+.swiper-pagination-bullet {
     background: #2cc388;
-    border-radius: 5px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #1c7f59;
+@media(min-width: 480px) {
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #ffffff;
+        border-radius: 0 7.5px 7.5px 0;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #2cc388;
+        border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #1c7f59;
+    }
 }
 
 .rootShipModuleBlock {
-    @apply relative w-auto h-auto min-h-[80px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px];
+    @apply relative w-auto h-auto min-h-[80px] mlarge:min-h-[72.5px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px];
 }
 
 .rootShipModuleBlock_Top {
-    @apply relative flex justify-between items-center px-[30px] w-full h-[80px];
+    @apply relative flex justify-between items-center px-[30px] mlarge:px-[15px] w-full h-[80px] mlarge:h-[72.5px];
 }
 
 .rootShipModuleBlock_Top_Title {
-    @apply text-[--theme-color] text-[1.75rem] font-['Exo2'] font-bold;
+    @apply text-[--theme-color] text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-['Exo2'] font-bold;
 }
 
 .rootShipModuleBlock_Top_Button {
-    @apply relative flex justify-center items-center w-[30px] h-[30px];
+    @apply relative flex justify-center items-center w-[30px] mlarge:w-[25px] mmedium:w-[22.5px] msmall:w-[20px] mlarge:min-w-[25px] mmedium:min-w-[22.5px] msmall:min-w-[20px] h-[30px] mlarge:h-[25px] mmedium:h-[22.5px] msmall:h-[20px] mlarge:min-h-[25px] mmedium:min-h-[22.5px] msmall:min-h-[20px];
 }
 
 .rootShipModuleBlock_Top_Button_Image {
@@ -47,47 +53,47 @@
 }
 
 .rootShipModuleBlock_Bottom {
-    @apply relative flex justify-between px-[30px] w-full h-auto duration-1000 ease-in-out;
+    @apply relative flex mlarge:block justify-between px-[30px] mlarge:px-[15px] w-full h-auto duration-1000 ease-in-out;
 }
 
 .rootShipModuleBlock_Bottom_LeftBlock {
-    @apply relative w-[60%] h-auto;
+    @apply relative w-[60%] mlarge:w-full h-auto;
 }
 
 .rootShipModuleBlock_Bottom_LeftBlock_Slider {
-    @apply w-full h-[300px];
+    @apply relative w-full h-[300px] mlarge:h-[190px] mmedium:h-[170px] msmall:h-[150px];
 }
 
 .slideImage {
-    @apply h-full border-2 border-[--theme-color] rounded-[7.5px];
+    @apply h-full mlarge:h-[160px] mmedium:h-[140px] msmall:h-[120px] border-2 border-[--theme-color] rounded-[7.5px];
 }
 
 .rootShipModuleBlock_Bottom_LeftBlock_Level {
-    @apply flex justify-center items-center mt-[20px] w-full h-auto border-b-2 border-[--theme-color];
+    @apply flex justify-center items-center mt-[20px] mlarge:mt-[-5px] w-full h-auto border-b-2 border-[--theme-color];
 }
 
 .rootShipModuleBlock_Bottom_LeftBlock_Level_Title {
-    @apply w-full text-[#ffffff] text-[1.5rem] text-left font-['Exo2'] font-semibold;
+    @apply w-full text-[#ffffff] text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] text-left font-['Exo2'] font-semibold;
 }
 
 .rootShipModuleBlock_Bottom_LeftBlock_Level_Number {
-    @apply w-[160px] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-semibold;
+    @apply w-[160px] text-[#ffffff] text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] mlarge:text-right font-['Exo2'] font-semibold;
 }
 
 .rootShipModuleBlock_Bottom_LeftBlock_Level_Number_Bold {
-    @apply mr-[10px] text-[--theme-color] text-[1.75rem] font-['Insignia'];
+    @apply mr-[10px] mlarge:mr-[5px] text-[--theme-color] text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-['Insignia'];
 }
 
 .rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo {
-    @apply mt-[20px] pb-[25px] flex justify-between w-full h-auto;
+    @apply mlarge:block mt-[20px] mlarge:mt-[10px] pb-[25px] mlarge:pb-[15px] flex justify-between w-full h-auto;
 }
 
 .rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_Description {
-    @apply w-[75%] text-[#ffffff] text-[1.25rem] font-['Exo2'] font-medium brightness-75;
+    @apply w-[75%] mlarge:w-full text-[#ffffff] text-[1.25rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] font-['Exo2'] font-medium brightness-75;
 }
 
 .rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer {
-    @apply grid justify-items-end grid-rows-3 grid-cols-1 gap-y-[10px] w-auto h-auto;
+    @apply grid justify-items-end mlarge:justify-items-start grid-cols-1 gap-y-[10px] mlarge:mt-[10px] w-auto h-auto;
 }
 
 .rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block {
@@ -95,33 +101,33 @@
 }
 
 .rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block_Text {
-    @apply text-[#ffffff] text-[2rem] text-left font-['Insignia'] font-bold;
+    @apply mlarge:min-w-[30px] msmall:min-w-[25px] text-[#ffffff] text-[2rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] text-left font-['Insignia'] font-bold;
 }
 
 .rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block_Image {
-    @apply ml-[15px] w-[35px] h-[35px];
+    @apply ml-[15px] mlarge:ml-[10px] w-[35px] mlarge:w-[25px] mmedium:w-[22.5px] msmall:w-[20px] h-[35px] mlarge:h-[25px] mmedium:h-[22.5px] msmall:h-[20px];
 }
 
 .rootShipModuleBlock_Bottom_RightBlock {
-    @apply relative w-[37.5%] h-auto;
+    @apply relative mlarge:mt-0 w-[37.5%] mlarge:w-full h-auto;
 }
 
 .rootShipModuleBlock_Bottom_RightBlock_EffectTitle {
-    @apply mt-[-5px] text-[#ffffff] text-[1.5rem] font-['Exo2'] font-semibold;
+    @apply mt-[-5px] text-[#ffffff] text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-semibold;
 }
 
 .rootShipModuleBlock_Bottom_RightBlock_EffectText {
-    @apply h-[90px] text-[#ffffff] text-[1.25rem] font-['Exo2'] font-medium brightness-75;
+    @apply h-[90px] mlarge:h-auto text-[#ffffff] text-[1.25rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] font-['Exo2'] font-medium brightness-75;
 }
 
 .rootShipModuleBlock_Bottom_RightBlock_Stratagems {
-    @apply absolute bottom-[25px] right-0 w-full h-auto z-30;
+    @apply absolute mlarge:relative bottom-[25px] mlarge:bottom-[15px] mlarge:mt-[20px] right-0 w-full h-auto z-30;
 }
 
 .rootShipModuleBlock_Bottom_RightBlock_StratagemsTitle {
-    @apply text-[#ffffff] text-[1.5rem] font-['Exo2'] font-semibold;
+    @apply text-[#ffffff] text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-semibold;
 }
 
 .rootShipModuleBlock_Bottom_RightBlock_StratagemsBlock {
-    @apply relative mt-[10px] pb-[20px] px-[20px] w-full h-[380px] border-2 border-[--theme-color] rounded-[10px] overflow-y-scroll;
+    @apply relative mt-[10px] mlarge:mt-[5px] mmedium:mt-[7.5px] pb-[20px] mlarge:pb-[15px] px-[20px] mlarge:px-[15px] w-full h-[380px] mlarge:h-[300px] border-2 border-[--theme-color] rounded-[10px] overflow-y-scroll;
 }

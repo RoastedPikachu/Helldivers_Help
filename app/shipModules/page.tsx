@@ -38,7 +38,7 @@ const Page = () => {
           }
         />
 
-        <EntitySection gridStyles={"grid-cols-1"}>
+        <EntitySection gridStyles={"grid-cols-1 mt-[50px] mlarge:mt-[30px]"}>
           {shipModulesStore.shipModules.map((shipModule) => (
             <ShipModule
               key={shipModule.id}

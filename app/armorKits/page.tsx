@@ -23,7 +23,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import "@/app/modalsSlider.css";
-import { weaponsStore } from "@/store/WeaponsStore";
 
 const Page = observer(() => {
   return (
