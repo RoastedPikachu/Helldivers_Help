@@ -3,26 +3,26 @@ import React from "react";
 
 import { Observer, observer } from "mobx-react-lite";
 
+import { mobileStore } from "@/store/MobileStore";
 import { enemiesStore } from "@/store/EnemiesStore";
 
+import { getEnemyFractionPageLink } from "@/utils/generalFunctions";
 import {
   getSpecificAutomatonStyle,
   getSpecificTerminidStyle,
 } from "@/utils/enemyTypeFunctions";
-import { getEnemyFractionPageLink } from "@/utils/generalFunctions";
 
 import EnemyAdditionalInfoNavigation from "@/widgets/enemyAdditionalInfoNavigation/EnemyAdditionalInfoNavigation";
 
 import GoBackButton from "@/shared/goBackButton/GoBackButton";
 
-import "./EnemyAdditionalInfoContent.css";
-import { mobileStore } from "@/store/MobileStore";
+import "./TheEnemyContent.css";
 
-const EnemyAdditionalInfoContent = observer(() => {
+const TheEnemyContent = observer(() => {
   return (
     <Observer>
       {() => (
-        <>
+        <main className="grid mlarge:block grid-cols-3 mlarge:!mt-[20px]">
           <GoBackButton designationLink={getEnemyFractionPageLink()} />
 
           {mobileStore.isMobileDevice ? (
@@ -172,10 +172,10 @@ const EnemyAdditionalInfoContent = observer(() => {
           )}
 
           <EnemyAdditionalInfoNavigation />
-        </>
+        </main>
       )}
     </Observer>
   );
 });
 
-export default EnemyAdditionalInfoContent;
+export default TheEnemyContent;

@@ -4,9 +4,9 @@ import TheHeader from "@/widgets/header/TheHeader";
 
 import RunningLine from "@/shared/runningLine/RunningLine";
 
-import "./TopPageBlock.css";
+import "./TheTopPageBlock.css";
 
-const TopPageBlock = () => {
+const TheTopPageBlock = () => {
   return (
     <section className="topPageSection">
       <TheHeader />
@@ -16,4 +16,4 @@ const TopPageBlock = () => {
   );
 };
 
-export default TopPageBlock;
+export default TheTopPageBlock;

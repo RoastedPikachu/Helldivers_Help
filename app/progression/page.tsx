@@ -1,60 +1,21 @@
 import React from "react";
 
-import { ranks } from "@/data/ranks";
+import { Metadata } from "next";
 
-import TopPageBlock from "@/widgets/topPageBlock/TopPageBlock";
-import TheFooter from "@/widgets/footer/TheFooter";
-import EntitySection from "@/widgets/EntitySection";
-import LevelsSection from "@/widgets/levelsSection/LevelsSection";
+import ThePageContent from "@/widgets/pageContents/ThePageContent";
+import TheProgressionContent from "@/widgets/pageContents/TheProgressionContent";
 
-import TheScrollToUpButton from "@/shared/theScrollToUpButton/TheScrollToUpButton";
-import ThePageTitle from "@/shared/ThePageTitle";
-import PageDescription from "@/shared/PageDescription";
-
-import Rank from "@/entities/Rank";
+export const metadata: Metadata = {
+  title: "HELLDIVERS 2: Прогрессия. Звания, уровни и титулы",
+  description:
+    "Когда вы отправляетесь в битву, помните, что ваше мужество и преданность будут отмечены. Благодаря вашему усердию и верности делу Супер-Земли, вы получите повышение и почетные звания за ваши героические подвиги в продвижении управляемой демократии.",
+};
 
 const Page = () => {
   return (
-    <>
-      <TopPageBlock />
-
-      <TheScrollToUpButton />
-
-      <main>
-        <ThePageTitle
-          title={"прогрессия"}
-          additionalTitle={"адского десантника"}
-        />
-
-        <PageDescription
-          description={
-            "Когда вы отправляетесь в битву, помните, что ваше мужество и преданность будут отмечены. Благодаря вашему усердию и верности делу Супер-Земли, вы получите повышение и почетные звания за ваши героические подвиги в продвижении управляемой демократии."
-          }
-        />
-
-        <PageDescription
-          description={
-            "Начиная с кадетского звания, вам нужно продемонстрировать вашу верность, проявив себя на поле боя как истинный защитник демократии. Каждое полученное звание отражает ваше стремление к величию через подвиги, храбрость и мастерство. Пусть ваше имя станет символом мощи, которая потрясет галактику!"
-          }
-        />
-
-        <LevelsSection />
-
-        <EntitySection title={"РАНГИ"} gridStyles={"grid-cols-1"}>
-          {ranks.map((rank) => (
-            <Rank
-              key={rank.id}
-              iconPath={rank.iconPath}
-              title={rank.title}
-              fromLevel={rank.fromLevel}
-              xpCount={rank.xpCount}
-            />
-          ))}
-        </EntitySection>
-      </main>
-
-      <TheFooter />
-    </>
+    <ThePageContent>
+      <TheProgressionContent />
+    </ThePageContent>
   );
 };
 

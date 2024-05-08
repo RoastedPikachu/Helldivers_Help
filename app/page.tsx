@@ -1,11 +1,10 @@
-"use client";
 import React from "react";
 
-import { useRouter } from "next/navigation";
+import { Metadata } from "next";
 
 import { pages } from "@/data/pages/pages";
 
-import TopPageBlock from "@/widgets/topPageBlock/TopPageBlock";
+import TheTopPageBlock from "@/widgets/topPageBlock/TheTopPageBlock";
 import TheFooter from "@/widgets/footer/TheFooter";
 
 import TheScrollToUpButton from "@/shared/theScrollToUpButton/TheScrollToUpButton";
@@ -14,11 +13,16 @@ import PageDescription from "@/shared/PageDescription";
 
 import ManualSection from "@/entities/ManualSection";
 
+export const metadata: Metadata = {
+  title: "Helldivers.help — Helldivers 2 помощник: Вики & другое",
+  description:
+    "Helldiver.help — это сайт-помощник каждому Адскому Десантнику, который сражается за продвижение демократии, свободы и процветания по всей галактике.",
+};
+
 const Page = () => {
-  const router = useRouter();
   return (
     <>
-      <TopPageBlock />
+      <TheTopPageBlock />
 
       <TheScrollToUpButton />
 

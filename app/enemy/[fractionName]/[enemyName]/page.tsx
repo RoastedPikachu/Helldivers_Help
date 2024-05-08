@@ -1,16 +1,20 @@
 import React from "react";
 
+import { Metadata } from "next";
+
 import { enemiesStore } from "@/store/EnemiesStore";
 
 import { toSlug } from "@/utils/generalFunctions";
 
-import TheHeader from "@/widgets/header/TheHeader";
-import TheFooter from "@/widgets/footer/TheFooter";
-import EnemyAdditionalInfoContent from "@/widgets/enemyAdditionalInfoContent/EnemyAdditionalInfoContent";
-
-import RunningLine from "@/shared/runningLine/RunningLine";
+import ThePageContent from "@/widgets/pageContents/ThePageContent";
+import TheEnemyContent from "@/widgets/pageContents/TheEnemyContent";
 
 import "./EnemyAdditionalInfo.css";
+
+export const metadata: Metadata = {
+  title: `HELLDIVERS 2: Противник`,
+  description: "",
+};
 
 export function generateStaticParams() {
   const enemies = [...enemiesStore.terminids, ...enemiesStore.automatons];
@@ -23,17 +27,9 @@ export function generateStaticParams() {
 
 const Page: React.FC<{ params: any }> = ({ params }) => {
   return (
-    <>
-      <TheHeader />
-
-      <RunningLine />
-
-      <main className="grid mlarge:block grid-cols-3 mlarge:!mt-[20px]">
-        <EnemyAdditionalInfoContent />
-      </main>
-
-      <TheFooter />
-    </>
+    <ThePageContent>
+      <TheEnemyContent />
+    </ThePageContent>
   );
 };
 

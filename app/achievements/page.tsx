@@ -1,52 +1,21 @@
 import React from "react";
 
-import { achievementsStore } from "@/store/AchievementsStore";
+import { Metadata } from "next";
 
-import TopPageBlock from "@/widgets/topPageBlock/TopPageBlock";
-import TheFooter from "@/widgets/footer/TheFooter";
-import EntitySection from "@/widgets/EntitySection";
+import ThePageContent from "@/widgets/pageContents/ThePageContent";
+import TheAchievementsContent from "@/widgets/pageContents/TheAchievementsContent";
 
-import TheScrollToUpButton from "@/shared/theScrollToUpButton/TheScrollToUpButton";
-import ThePageTitle from "@/shared/ThePageTitle";
-import PageDescription from "@/shared/PageDescription";
-
-import Achievement from "@/entities/achievement/Achievement";
+export const metadata: Metadata = {
+  title: "HELLDIVERS 2: Достижения",
+  description:
+    "Каждый адский десантник, перед тем, как приступить к обороне управляемой демократии, должен ознакомиться со свободом правил, составленным самым гениальным и демократическим руководством Супер-Земли.",
+};
 
 const Page = () => {
   return (
-    <>
-      <TopPageBlock />
-
-      <TheScrollToUpButton />
-
-      <main>
-        <ThePageTitle title={"достижения"} additionalTitle={""} />
-
-        <PageDescription
-          description={
-            "Для поощрения каждого десантника руководство Супер-Земли разработало список достижений, за выполнение которых вы будете получать почет и уважение от каждого жителя свободной и демократической галактики."
-          }
-        />
-
-        <EntitySection
-          gridStyles={
-            "mt-[50px] mlarge:mt-[30px] grid-cols-2 mlarge:grid-cols-1"
-          }
-        >
-          {achievementsStore.achievements.map((achievement) => (
-            <Achievement
-              key={achievement.id}
-              iconPath={achievement.iconPath}
-              title={achievement.title}
-              description={achievement.description}
-              accomplishmentWay={achievement.accomplishmentWay}
-            />
-          ))}
-        </EntitySection>
-      </main>
-
-      <TheFooter />
-    </>
+    <ThePageContent>
+      <TheAchievementsContent />
+    </ThePageContent>
   );
 };
 

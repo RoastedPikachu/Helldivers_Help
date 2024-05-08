@@ -31,7 +31,7 @@ body {
 }
 
 main {
-  @apply mt-[30px] mlarge:mt-[145px] deskWide:ml-[calc((100%-1440px)/2)] pb-[100px] mlarge:pb-[30px] px-[5%] deskWide:px-0 w-full max-w-[1440px] h-auto min-h-[780px] mlarge:min-h-[700px] msmall:min-h-[600px] mlarge:overflow-hidden;
+  @apply mt-[30px] mlarge:mt-[145px] deskWide:ml-[calc((100%-1440px)/2)] pb-[100px] mlarge:pb-[30px] px-[5%] deskWide:px-0 w-full max-w-[1440px] h-auto min-h-[780px] mlarge:min-h-[700px] msmall:min-h-[600px] overflow-hidden;
 }
 
 .pageTitle {

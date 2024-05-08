@@ -2,14 +2,12 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://helldivers.help"),
-  title: "Helldivers.help — Helldivers 2 помощник: Вики & другое",
-  description:
-    "Helldiver.help — это сайт-помощник каждому Адскому Десантнику, который сражается за продвижение демократии, свободы и процветания по всей галактике.",
   openGraph: {
     url: "https://helldivers.help",
     images: [
@@ -45,6 +43,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
+      <Head>
+        <link rel="icon" href="/icon.png" type="image/png" sizes="512x512" />
+        <link
+          rel="apple-touch-icon"
+          href="/apple-touch-icon.png"
+          sizes="180x180"
+        />
+      </Head>
+
       <body className={inter.className}>
         <Script src="/static/metric/index.js" strategy="lazyOnload" />
 
