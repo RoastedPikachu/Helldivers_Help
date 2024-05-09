@@ -3,7 +3,7 @@ import React from "react";
 
 import { Observer, observer } from "mobx-react-lite";
 
-import { SwiperSlide } from "swiper/swiper-react";
+import { SwiperSlide } from "swiper/react";
 
 import { weaponsStore } from "@/store/WeaponsStore";
 

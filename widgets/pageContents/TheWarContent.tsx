@@ -10,7 +10,7 @@ import CampaignsSection from "@/widgets/warPage/campaignsSection/CampaignsSectio
 
 import SectionTitle from "@/shared/sectionTitle/SectionTitle";
 
-import "./WarPage.css";
+import "./TheWarContent.css";
 
 const TheWarContent = observer(() => {
   const [targetContentPage, setTargetContentPage] = useState(1);
