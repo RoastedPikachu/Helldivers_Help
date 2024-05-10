@@ -3,6 +3,8 @@ import { makeAutoObservable } from "mobx";
 import { Stratagem } from "@/utils/generalInterfaces";
 // import { getRandomEntity } from "@/utils/generalFunctions";
 import { stratagemTypes } from "@/data/stratagemTypes";
+import { useState } from "react";
+import { getRandomEntity } from "@/utils/generalFunctions";
 
 /*
   С 1 по 8: стратагемы оружия поддержки;
@@ -15,12 +17,20 @@ import { stratagemTypes } from "@/data/stratagemTypes";
 */
 
 class StratagemStore {
-  // isStratagemTrainingStarted = false;
-  isStratagemInputFail = false;
-  isStratagemInputSuccessful = false;
-
   currentStratagem = {} as Stratagem;
-  // nextStratagem = {} as Stratagem;
+  nextStratagemsArray = [] as Stratagem[];
+
+  currentRoundNumber = 1;
+  secondsLeft = 10;
+  finalGameScore = 0;
+  highestGameScore = 0;
+
+  isRequiredKeyPressed = false;
+  isGameStarted = false;
+  isRoundEnded = false;
+  isRoundLost = false;
+  isStratagemInputSuccessful = false;
+  isStratagemInputFail = false;
 
   stratagems = {
     patrioticAdministrationCenter: [
@@ -2616,15 +2626,6 @@ class StratagemStore {
 
   constructor() {
     makeAutoObservable(this);
-
-    // this.currentStratagem = getRandomEntity(
-    //   this.stratagems,
-    //   this.currentStratagem,
-    // );
-    // this.nextStratagem = getRandomEntity(
-    //   this.stratagems,
-    //   this.currentStratagem,
-    // );
   }
 
   handleStratagemKeyPress = (() => {
@@ -2651,37 +2652,64 @@ class StratagemStore {
           ...this.currentStratagem,
           directions: updatedDirections,
         };
+
+        console.log(currentIndex);
+
+        if (currentIndex === 0) {
+          if (this.nextStratagemsArray.length) {
+            setTimeout(() => {
+              this.currentStratagem = this.nextStratagemsArray[0];
+              this.nextStratagemsArray.unshift();
+            }, 250);
+          }
+          this.secondsLeft + 1;
+        }
       } else {
         document.removeEventListener("keydown", this.handleStratagemKeyPress);
 
         currentIndex = 0;
 
-        this.isStratagemInputFail = true;
+        this.isStratagemInputSuccessful = true;
       }
     };
   })();
 
-  // handleStratagemTrainingStart() {
-  //   this.isStratagemTrainingStarted = true;
-  //
-  //   document.addEventListener("keydown", this.handleStratagemKeyPress);
-  // }
+  handleGameStart = (event: KeyboardEvent) => {
+    if ((event.keyCode === 38 || event.keyCode === 87) && !this.isGameStarted) {
+      this.isRequiredKeyPressed = true;
+      setTimeout(() => (this.isGameStarted = true), 300);
 
-  // handleStratagemTrainingRestart() {
-  //   this.stratagems.forEach((stratagem) =>
-  //     stratagem.directions.map((direction) => (direction.isPressed = false)),
-  //   );
-  //
-  //   this.isStratagemInputFail = false;
-  //   this.isStratagemInputSuccessful = false;
-  //   this.currentStratagem = this.nextStratagem;
-  //   this.nextStratagem = getRandomEntity(
-  //     stratagemStore.stratagems,
-  //     this.currentStratagem,
-  //   );
-  //
-  //   document.addEventListener("keydown", this.handleStratagemKeyPress);
-  // }
+      this.handleStratagemTrainingRoundStart();
+    }
+  };
+
+  handleStratagemTrainingRoundStart = () => {
+    const stratagemsArray = Object.values(this.stratagems)
+      .map((shipModule) => [...shipModule])
+      .flat();
+
+    this.currentStratagem = getRandomEntity(
+      stratagemsArray,
+      this.currentStratagem,
+    );
+
+    for (let i = 0; i < 5; i++) {
+      this.nextStratagemsArray.push(
+        getRandomEntity(stratagemsArray, this.currentStratagem),
+      );
+    }
+
+    setInterval(() => {
+      this.secondsLeft = this.secondsLeft - 0.01;
+
+      if (this.secondsLeft < 0) {
+        this.isRoundEnded = true;
+        this.isRoundLost = true;
+      }
+    }, 10);
+
+    document.addEventListener("keydown", this.handleStratagemKeyPress);
+  };
 }
 
 export const stratagemStore = new StratagemStore();

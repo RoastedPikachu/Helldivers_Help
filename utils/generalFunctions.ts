@@ -23,12 +23,16 @@ export function toSlug(string = "") {
 
 export const getTargetRotate = (direction: number) => {
   switch (direction) {
+    case 1:
+      return "";
     case 2:
       return "rotate-90";
     case 3:
+      console.log(direction);
       return "rotate-180";
     case 4:
-      return "rotate-[270deg]";
+      console.log(direction);
+      return "-rotate-90";
   }
 };
 
