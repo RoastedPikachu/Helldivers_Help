@@ -349,6 +349,21 @@ class ArmorKitsStore {
         staminaRegen: 50,
         bonus: armorBonuses.servoAssisted,
       },
+      {
+        id: 2,
+        imagePath: "/static/ArmorKits/Cw22KadiaqImage.webp",
+        type: "Тяжелая броня",
+        name: "CW-22 «Кадьяк»",
+        obtainingType: obtainingType["5"],
+        obtainingMethod: "Покупается в боевом пропуске «Полярные патриоты»",
+        description:
+          "Броня CW-22 «Кадьяк» была тщательно испытана на герметичность патриотичными добровольцами в рамках программы продвижения граждан «Подопытные для Супер-Земли».",
+        price: 80,
+        armorRating: 150,
+        speed: 450,
+        staminaRegen: 50,
+        bonus: armorBonuses.fortification,
+      },
     ],
     superstore: [
       {
