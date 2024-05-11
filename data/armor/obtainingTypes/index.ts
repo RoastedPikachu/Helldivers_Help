@@ -22,19 +22,23 @@ export const obtainingType: { [key: number]: ArmorObtainingType } = {
     typeNumber: 4,
   },
   5: {
-    name: "superstore",
+    name: "polarPatriots",
     typeNumber: 5,
   },
   6: {
-    name: "preOrder",
+    name: "superstore",
     typeNumber: 6,
   },
   7: {
-    name: "superCitizen",
+    name: "preOrder",
     typeNumber: 7,
   },
   8: {
-    name: "twitchDrops",
+    name: "superCitizen",
     typeNumber: 8,
+  },
+  9: {
+    name: "twitchDrops",
+    typeNumber: 9,
   },
 };

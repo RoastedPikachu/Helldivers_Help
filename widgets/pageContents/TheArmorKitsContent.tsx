@@ -137,6 +137,21 @@ const TheArmorKitsContent = observer(() => {
           </EntitySection>
 
           <EntitySection
+            title={"БОЕВОЙ ПРОПУСК «ПОЛЯРНЫЕ ПАТРИОТЫ»"}
+            gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
+          >
+            {armorStore.armorKits.polarPatriots.map((armorKit) => (
+              <ArmorKit
+                key={armorKit.id}
+                id={armorKit.id}
+                obtainingType={armorKit.obtainingType}
+                imagePath={armorKit.imagePath}
+                name={armorKit.name}
+              />
+            ))}
+          </EntitySection>
+
+          <EntitySection
             title={"СУПЕРМАГАЗИН"}
             gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
           >

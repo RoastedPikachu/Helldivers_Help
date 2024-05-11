@@ -333,13 +333,30 @@ class ArmorKitsStore {
         bonus: armorBonuses.fortification,
       },
     ],
+    polarPatriots: [
+      {
+        id: 1,
+        imagePath: "/static/ArmorKits/Cw36WinterWarriorImage.webp",
+        type: "Тяжелая броня",
+        name: "CW-36 «Зимний воин»",
+        obtainingType: obtainingType["5"],
+        obtainingMethod: "Покупается в боевом пропуске «Полярные патриоты»",
+        description:
+          "Броня обеспечивает маскировку в заснеженных областях и пользуется популярностью среди фотографов-натуралистов и опытных охотников.",
+        price: 30,
+        armorRating: 150,
+        speed: 450,
+        staminaRegen: 50,
+        bonus: armorBonuses.servoAssisted,
+      },
+    ],
     superstore: [
       {
         id: 1,
         imagePath: "/static/ArmorKits/B08LightGunnerImage.webp",
         type: "Легкая броня",
         name: "B-08 «Легкий стрелок»",
-        obtainingType: obtainingType["5"],
+        obtainingType: obtainingType["6"],
         obtainingMethod: "Покупается в Супермагазине",
         description:
           "Компактная и гибкая, эта кевларовая броня добавляет минимальную массу, что делает ее обычным выбором для фитнес-тестов Адских Десантников.",
@@ -354,7 +371,7 @@ class ArmorKitsStore {
         imagePath: "/static/ArmorKits/B24EnforcerImage.webp",
         type: "Средняя броня",
         name: "B-24 «Вышибала»",
-        obtainingType: obtainingType["5"],
+        obtainingType: obtainingType["6"],
         obtainingMethod: "Покупается в Супермагазине",
         description:
           "В ходе полевых испытаний 84% пользователей заявили, что броня улучшила их осанку и самооценку.",
@@ -369,7 +386,7 @@ class ArmorKitsStore {
         imagePath: "/static/ArmorKits/B27FortifiedCommandoImage.webp",
         type: "Тяжелая броня",
         name: "B-27 «Укрепленный коммандос»",
-        obtainingType: obtainingType["5"],
+        obtainingType: obtainingType["6"],
         obtainingMethod: "Покупается в Супермагазине",
         description:
           'Этот комплект доспехов впервые появился в музыкальном клипе на летний гимн "Наша любовь подобна свободе (нерушимой)".',
@@ -384,7 +401,7 @@ class ArmorKitsStore {
         imagePath: "/static/ArmorKits/Ce67TitanImage.webp",
         type: "Легкая броня",
         name: "CE-67 «Титан»",
-        obtainingType: obtainingType["5"],
+        obtainingType: obtainingType["6"],
         obtainingMethod: "Покупается в Супермагазине",
         description:
           "Являясь качественным продуктом, эта броня может разрушить 300 000 километров ограждений без снижения эксплуатационной эффективности.",
@@ -399,7 +416,7 @@ class ArmorKitsStore {
         imagePath: "/static/ArmorKits/Ce74BreakerImage.webp",
         type: "Легкая броня",
         name: "CE-74 «Крушитель»",
-        obtainingType: obtainingType["5"],
+        obtainingType: obtainingType["6"],
         obtainingMethod: "Покупается в Супермагазине",
         description:
           "Отечественная версия этой брони доступна для граждан, которые хотят выполнить эффективные проекты по ремонту дома.",
@@ -414,7 +431,7 @@ class ArmorKitsStore {
         imagePath: "/static/ArmorKits/Ce81JuggernautImage.webp",
         type: "Средняя броня",
         name: "CE-81 «Джаггернаут»",
-        obtainingType: obtainingType["5"],
+        obtainingType: obtainingType["6"],
         obtainingMethod: "Покупается в Супермагазине",
         description:
           "Один из самых долговечных видов инженерных брони. Каждый комплект прошел проверку взрослой особью жука-громилы.",
@@ -429,7 +446,7 @@ class ArmorKitsStore {
         imagePath: "/static/ArmorKits/Cm10ClinicianImage.webp",
         type: "Средняя броня",
         name: "CM-10 «Клиницист»",
-        obtainingType: obtainingType["5"],
+        obtainingType: obtainingType["6"],
         obtainingMethod: "Покупается в Супермагазине",
         description:
           "Запатентованная технология обратного шва снижает риск попадания телесных жидкостей внутрь бронм.",
@@ -444,7 +461,7 @@ class ArmorKitsStore {
         imagePath: "/static/ArmorKits/Cm17ButcherImage.webp",
         type: "Тяжелая броня",
         name: "CM-17 «Мясник»",
-        obtainingType: obtainingType["5"],
+        obtainingType: obtainingType["6"],
         obtainingMethod: "Покупается в Супермагазине",
         description:
           "Броня популярна у фронтовых хирургов, которые как искусно собирают тела, так и разбирают их по кусочкам.",
@@ -459,7 +476,7 @@ class ArmorKitsStore {
         imagePath: "/static/ArmorKits/Cm21TrenchParamedicImage.webp",
         type: "Легкая броня",
         name: "CM-21 «Траншейный фельдшер»",
-        obtainingType: obtainingType["5"],
+        obtainingType: obtainingType["6"],
         obtainingMethod: "Покупается в Супермагазине",
         description:
           "Когда-то костюм предназначался для хранения различного медицинского оборудования на поле боя. Теперь в нем имеется большой запас стимуляторов.",
@@ -474,7 +491,7 @@ class ArmorKitsStore {
         imagePath: "/static/ArmorKits/Fs11ExecutionerImage.webp",
         type: "Тяжелая броня",
         name: "FS-11 «Палач»",
-        obtainingType: obtainingType["5"],
+        obtainingType: obtainingType["6"],
         obtainingMethod: "Покупается в Супермагазине",
         description:
           'Эту броню популяризовал актер Чип Месситер, который носил ее в боевике-ромком-мюзикле "Мое сердце похитил человек в шлеме".',
@@ -489,7 +506,7 @@ class ArmorKitsStore {
         imagePath: "/static/ArmorKits/Fs34ExterminatorImage.webp",
         type: "Средняя броня",
         name: "FS-34 «Истребитель»",
-        obtainingType: obtainingType["5"],
+        obtainingType: obtainingType["6"],
         obtainingMethod: "Покупается в Супермагазине",
         description:
           "Имеет запатентованное антипригарное покрытие, которое облегчает соскабливание внутренностей после долгого рабочего дня.",
@@ -504,7 +521,7 @@ class ArmorKitsStore {
         imagePath: "/static/ArmorKits/Fs37RavagerImage.webp",
         type: "Легкая броня",
         name: "FS-37 «Разоритель»",
-        obtainingType: obtainingType["5"],
+        obtainingType: obtainingType["6"],
         obtainingMethod: "Покупается в Супермагазине",
         description:
           "Содержит множество маленьких карманов, позволяющих равномерно распределить вес боеприпасов, образцов и симпатичных камешков.",
@@ -519,7 +536,7 @@ class ArmorKitsStore {
         imagePath: "/static/ArmorKits/Fs38EradicatorImage.webp",
         type: "Легкая броня",
         name: "FS-38 «Искоренитель»",
-        obtainingType: obtainingType["5"],
+        obtainingType: obtainingType["6"],
         obtainingMethod: "Покупается в Супермагазине",
         description:
           "Впервые он был применен в шахтах Киберстана, где обеспечивал защиту от взрывов в богатых водородом пещерах.",
@@ -534,7 +551,7 @@ class ArmorKitsStore {
         imagePath: "/static/ArmorKits/Fs61DreadnoughtImage.webp",
         type: "Тяжелая броня",
         name: "FS-61 «Дредноут»",
-        obtainingType: obtainingType["5"],
+        obtainingType: obtainingType["6"],
         obtainingMethod: "Покупается в Супермагазине",
         description:
           "С помощью гражданских модификаций этой брони жители горных колоний зашвыривают наверх метеорологическое оборудование.",
@@ -549,7 +566,7 @@ class ArmorKitsStore {
         imagePath: "/static/ArmorKits/Sc15DroneMasterImage.webp",
         type: "Средняя броня",
         name: "SС-15 «Мастер дронов»",
-        obtainingType: obtainingType["5"],
+        obtainingType: obtainingType["6"],
         obtainingMethod: "Покупается в Супермагазине",
         description:
           "Некоторые солдаты сообщают о странных радиопомехах, появляющихся, если носить эту броню рядом с инопланетными артефактами.",
@@ -564,7 +581,7 @@ class ArmorKitsStore {
         imagePath: "/static/ArmorKits/Sc37LegionnaireImage.webp",
         type: "Легкая броня",
         name: "SС-37 «Легионер»",
-        obtainingType: obtainingType["5"],
+        obtainingType: obtainingType["6"],
         obtainingMethod: "Покупается в Супермагазине",
         description:
           'Эта броня основана на старинной униформе "Легиона Суперземли", менее патриотичного предшественника "Адских Десантников".',
@@ -581,7 +598,7 @@ class ArmorKitsStore {
         imagePath: "/static/ArmorKits/Tr7AmbassadorOfTheBrandImage.webp",
         type: "Средняя броня",
         name: "TR-7 «Представитель бренда»",
-        obtainingType: obtainingType["6"],
+        obtainingType: obtainingType["7"],
         obtainingMethod: "Бонус за предзаказ",
         description:
           "Рекламная броня, изготовленная компанией SUMY Corp. в рамках весьма успешной маркетинговой кампании замороженного йогурта.",
@@ -596,7 +613,7 @@ class ArmorKitsStore {
         imagePath: "/static/ArmorKits/Tr9CavalierOfDemocracyImage.webp",
         type: "Средняя броня",
         name: "TR-9 «Кавалер демократии»",
-        obtainingType: obtainingType["6"],
+        obtainingType: obtainingType["7"],
         obtainingMethod: "Бонус за предзаказ",
         description:
           "Носители этих доспехов не ездят верхом на лошадях, но, тем не менее, отправляются в бой верхом на верном скакуне Свободы.",
@@ -611,7 +628,7 @@ class ArmorKitsStore {
         imagePath: "/static/ArmorKits/Tr62KnightImage.webp",
         type: "Тяжелая броня",
         name: "TR-62 «Рыцарь»",
-        obtainingType: obtainingType["6"],
+        obtainingType: obtainingType["7"],
         obtainingMethod: "Бонус за предзаказ",
         description:
           "Создан для того, чтобы вершить правосудие в самых темных уголках галактики.",
@@ -628,7 +645,7 @@ class ArmorKitsStore {
         imagePath: "/static/ArmorKits/Dp53SaviourOfTheFreeImage.webp",
         type: "Средняя броня",
         name: "DP-53 «Спаситель свободных»",
-        obtainingType: obtainingType["7"],
+        obtainingType: obtainingType["8"],
         obtainingMethod: "Покупка издания Super-Citizen",
         description:
           "Точная копия доспехов, которые носили в битве за Пик Свободы. Почитайте их наследие и носите его с гордостью.",
@@ -645,7 +662,7 @@ class ArmorKitsStore {
         imagePath: "/static/ArmorKits/Tr117AlphaCommanderImage.webp",
         type: "Средняя броня",
         name: "TR-117 «Альфа командир»",
-        obtainingType: obtainingType["8"],
+        obtainingType: obtainingType["9"],
         obtainingMethod: "Helldivers2 Twitch-drops",
         description:
           "Для столь сильных и уверенных в себе воинов, что им не требуется какая-либо поддержка.",
