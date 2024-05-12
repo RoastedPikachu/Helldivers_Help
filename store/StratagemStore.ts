@@ -1,27 +1,21 @@
 import { makeAutoObservable } from "mobx";
 
-import { Stratagem } from "@/utils/generalInterfaces";
-// import { getRandomEntity } from "@/utils/generalFunctions";
-import { stratagemTypes } from "@/data/stratagemTypes";
-import { useState } from "react";
-import { getRandomEntity } from "@/utils/generalFunctions";
+import { makePersistable } from "mobx-persist-store";
 
-/*
-  С 1 по 8: стратагемы оружия поддержки;
-  С 9 по 15: стратагемы орбитальных ударов;
-  С 16 по 22: стратагемы ангара;
-  С 23 по 28: страгемы капитанского мостика;
-  С 29 по 37: стратагемы инженерии;
-  С 38 по 45: стратагемы производственного цеха;
-  С 45 по 52: стратагемы миссий;
-*/
+import { stratagemTypes } from "@/data/stratagemTypes";
+
+import { Stratagem } from "@/utils/generalInterfaces";
+import { getRandomEntity } from "@/utils/generalFunctions";
 
 class StratagemStore {
   currentStratagem = {} as Stratagem;
   nextStratagemsArray = [] as Stratagem[];
 
+  secondsInterval = undefined as ReturnType<typeof setInterval>;
+
   currentRoundNumber = 1;
   secondsLeft = 10;
+  currentScore = 0;
   finalGameScore = 0;
   highestGameScore = 0;
 
@@ -2626,7 +2620,61 @@ class StratagemStore {
 
   constructor() {
     makeAutoObservable(this);
+
+    if (typeof window !== "undefined") {
+      makePersistable(this, {
+        name: "StratagemsStore",
+        properties: ["highestGameScore"],
+        storage: window.localStorage,
+      });
+    }
   }
+
+  restartStratagemInput = () => {
+    this.currentStratagem.directions.map(
+      (direction) => (direction.isPressed = false),
+    );
+  };
+
+  handleRoundEnd = () => {
+    this.isRoundEnded = true;
+
+    clearInterval(this.secondsInterval);
+
+    this.stratagems.patrioticAdministrationCenter.map((stratagem) =>
+      stratagem.directions.forEach(
+        (direction) => (direction.isPressed = false),
+      ),
+    );
+    this.stratagems.orbitalCannon.map((stratagem) =>
+      stratagem.directions.forEach(
+        (direction) => (direction.isPressed = false),
+      ),
+    );
+    this.stratagems.hangar.map((stratagem) =>
+      stratagem.directions.forEach(
+        (direction) => (direction.isPressed = false),
+      ),
+    );
+    this.stratagems.bridge.map((stratagem) =>
+      stratagem.directions.forEach(
+        (direction) => (direction.isPressed = false),
+      ),
+    );
+    this.stratagems.engineerBay.map((stratagem) =>
+      stratagem.directions.forEach(
+        (direction) => (direction.isPressed = false),
+      ),
+    );
+    this.stratagems.roboticsWorkshop.map((stratagem) =>
+      stratagem.directions.forEach(
+        (direction) => (direction.isPressed = false),
+      ),
+    );
+
+    this.currentRoundNumber++;
+    setTimeout(() => this.handleStratagemTrainingRoundStart(), 1500);
+  };
 
   handleStratagemKeyPress = (() => {
     let currentIndex = 0;
@@ -2641,9 +2689,23 @@ class StratagemStore {
         currentIndex++;
 
         if (currentIndex === this.currentStratagem.keyCodes.length) {
-          document.removeEventListener("keydown", this.handleStratagemKeyPress);
-
+          this.currentScore += 20;
           currentIndex = 0;
+
+          if (this.nextStratagemsArray.length) {
+            setTimeout(() => {
+              this.currentStratagem = this.nextStratagemsArray[0];
+              this.nextStratagemsArray = this.nextStratagemsArray.slice(1);
+            }, 250);
+          } else {
+            this.handleRoundEnd();
+          }
+
+          if (this.secondsLeft > 9) {
+            this.secondsLeft = 10;
+          } else {
+            this.secondsLeft += 1;
+          }
 
           this.isStratagemInputSuccessful = true;
         }
@@ -2652,24 +2714,10 @@ class StratagemStore {
           ...this.currentStratagem,
           directions: updatedDirections,
         };
-
-        console.log(currentIndex);
-
-        if (currentIndex === 0) {
-          if (this.nextStratagemsArray.length) {
-            setTimeout(() => {
-              this.currentStratagem = this.nextStratagemsArray[0];
-              this.nextStratagemsArray.unshift();
-            }, 250);
-          }
-          this.secondsLeft + 1;
-        }
       } else {
-        document.removeEventListener("keydown", this.handleStratagemKeyPress);
-
         currentIndex = 0;
 
-        this.isStratagemInputSuccessful = true;
+        this.restartStratagemInput();
       }
     };
   })();
@@ -2677,6 +2725,7 @@ class StratagemStore {
   handleGameStart = (event: KeyboardEvent) => {
     if ((event.keyCode === 38 || event.keyCode === 87) && !this.isGameStarted) {
       this.isRequiredKeyPressed = true;
+
       setTimeout(() => (this.isGameStarted = true), 300);
 
       this.handleStratagemTrainingRoundStart();
@@ -2684,6 +2733,9 @@ class StratagemStore {
   };
 
   handleStratagemTrainingRoundStart = () => {
+    this.isRoundEnded = false;
+    this.secondsLeft = 10;
+
     const stratagemsArray = Object.values(this.stratagems)
       .map((shipModule) => [...shipModule])
       .flat();
@@ -2693,22 +2745,43 @@ class StratagemStore {
       this.currentStratagem,
     );
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 4 + this.currentRoundNumber; i++) {
       this.nextStratagemsArray.push(
         getRandomEntity(stratagemsArray, this.currentStratagem),
       );
     }
 
-    setInterval(() => {
+    this.secondsInterval = setInterval(() => {
       this.secondsLeft = this.secondsLeft - 0.01;
 
       if (this.secondsLeft < 0) {
-        this.isRoundEnded = true;
-        this.isRoundLost = true;
+        this.handleGameLost();
       }
     }, 10);
 
     document.addEventListener("keydown", this.handleStratagemKeyPress);
+  };
+
+  handleGameLost = () => {
+    this.isRoundEnded = true;
+    this.isRoundLost = true;
+
+    this.finalGameScore = this.currentScore;
+
+    if (this.currentScore > this.highestGameScore) {
+      this.highestGameScore = this.currentScore;
+    }
+
+    setTimeout(() => {
+      this.currentScore = 0;
+
+      this.isGameStarted = false;
+      this.isRoundEnded = false;
+      this.isRoundLost = false;
+      this.isRequiredKeyPressed = false;
+
+      clearInterval(this.secondsInterval);
+    }, 5000);
   };
 }
 
