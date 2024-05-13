@@ -86,6 +86,21 @@ const TheBoostersContent = () => {
           />
         ))}
       </EntitySection>
+
+      <EntitySection
+        title={"БОЕВОЙ ПРОПУСК «ПОЛЯРНЫЕ ПАТРИОТЫ»"}
+        gridStyles={"grid-cols-2 mlarge:grid-cols-1"}
+      >
+        {boostersStore.boosters.polarPatriots.map((booster) => (
+          <Booster
+            key={booster.id}
+            iconPath={booster.iconPath}
+            title={booster.title}
+            effect={booster.effect}
+            price={booster.price}
+          />
+        ))}
+      </EntitySection>
     </main>
   );
 };
