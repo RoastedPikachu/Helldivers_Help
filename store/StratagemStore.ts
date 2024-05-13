@@ -11,7 +11,7 @@ class StratagemStore {
   currentStratagem = {} as Stratagem;
   nextStratagemsArray = [] as Stratagem[];
 
-  secondsInterval = undefined as ReturnType<typeof setInterval>;
+  secondsInterval: ReturnType<typeof setInterval> | undefined;
 
   currentRoundNumber = 1;
   secondsLeft = 10;
@@ -2631,46 +2631,21 @@ class StratagemStore {
   }
 
   restartStratagemInput = () => {
-    this.currentStratagem.directions.map(
-      (direction) => (direction.isPressed = false),
-    );
+    this.isStratagemInputFail = true;
+
+    setTimeout(() => {
+      this.isStratagemInputFail = false;
+
+      this.currentStratagem.directions.map(
+        (direction) => (direction.isPressed = false),
+      );
+    }, 200);
   };
 
   handleRoundEnd = () => {
     this.isRoundEnded = true;
 
     clearInterval(this.secondsInterval);
-
-    this.stratagems.patrioticAdministrationCenter.map((stratagem) =>
-      stratagem.directions.forEach(
-        (direction) => (direction.isPressed = false),
-      ),
-    );
-    this.stratagems.orbitalCannon.map((stratagem) =>
-      stratagem.directions.forEach(
-        (direction) => (direction.isPressed = false),
-      ),
-    );
-    this.stratagems.hangar.map((stratagem) =>
-      stratagem.directions.forEach(
-        (direction) => (direction.isPressed = false),
-      ),
-    );
-    this.stratagems.bridge.map((stratagem) =>
-      stratagem.directions.forEach(
-        (direction) => (direction.isPressed = false),
-      ),
-    );
-    this.stratagems.engineerBay.map((stratagem) =>
-      stratagem.directions.forEach(
-        (direction) => (direction.isPressed = false),
-      ),
-    );
-    this.stratagems.roboticsWorkshop.map((stratagem) =>
-      stratagem.directions.forEach(
-        (direction) => (direction.isPressed = false),
-      ),
-    );
 
     this.currentRoundNumber++;
     setTimeout(() => this.handleStratagemTrainingRoundStart(), 1500);
@@ -2694,6 +2669,9 @@ class StratagemStore {
 
           if (this.nextStratagemsArray.length) {
             setTimeout(() => {
+              this.currentStratagem.directions.forEach(
+                (direction) => (direction.isPressed = false),
+              );
               this.currentStratagem = this.nextStratagemsArray[0];
               this.nextStratagemsArray = this.nextStratagemsArray.slice(1);
             }, 250);

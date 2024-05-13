@@ -15,6 +15,20 @@ const TheStratagemsTrainingContent = observer(() => {
     return "bg-[#ef4444]";
   };
 
+  const getArrowBrightness = (direction: any) => {
+    if (direction.isPressed) {
+      return "";
+    }
+    return "brightness-50";
+  };
+
+  const getArrowColor = (direction: any) => {
+    if (direction.isPressed) {
+      return stratagemStore.isStratagemInputFail ? "#ef4444" : "#ffe702";
+    }
+    return "#ffffff";
+  };
+
   const getTargetInlineRotate = (direction: any) => {
     switch (direction.orientation) {
       case 1:
@@ -26,16 +40,16 @@ const TheStratagemsTrainingContent = observer(() => {
             viewBox="0 0 65 60"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={`mr-[30px] rotate-0 ${direction.isPressed ? "" : "brightness-50"}`}
+            className={`mr-[30px] rotate-0 ${getArrowBrightness(direction)}`}
           >
             <g clipPath="url(#clip0_1_4)">
               <path
                 d="M32.5 0L0 30H18.9583V60H46.0417V30H65L32.5 0Z"
-                fill={`${direction.isPressed ? "#ffe702" : "#ffffff"}`}
+                fill={`${getArrowColor(direction)}`}
               />
               <path
                 d="M35.1761 0.892805C34.8779 0.61746 34.479 0.392326 34.0135 0.236796C33.5481 0.0812659 33.0302 1.62527e-06 32.5044 1.62527e-06C31.9786 1.62527e-06 31.4607 0.0812659 30.9953 0.236796C30.5299 0.392326 30.1309 0.61746 29.8327 0.892805L0.580405 27.7576C0.24181 28.0675 0.0432524 28.4304 0.00630039 28.807C-0.0306516 29.1836 0.0954166 29.5594 0.370811 29.8936C0.646205 30.2278 1.06039 30.5077 1.56837 30.7027C2.07634 30.8978 2.65868 31.0006 3.25212 31L61.7567 31C62.3488 30.9984 62.9289 30.8943 63.4349 30.6988C63.9408 30.5032 64.3533 30.2237 64.6281 29.8903C64.9028 29.5568 65.0294 29.1821 64.9942 28.8063C64.9591 28.4305 64.7634 28.068 64.4284 27.7576L35.1761 0.892805Z"
-                fill={`${direction.isPressed ? "#ffe702" : "#ffffff"}`}
+                fill={`${getArrowColor(direction)}`}
               />
             </g>
             <defs>
@@ -43,7 +57,7 @@ const TheStratagemsTrainingContent = observer(() => {
                 <rect
                   width="65"
                   height="60"
-                  fill={`${direction.isPressed ? "#ffe702" : "#ffffff"}`}
+                  fill={`${getArrowColor(direction)}`}
                 />
               </clipPath>
             </defs>
@@ -58,16 +72,16 @@ const TheStratagemsTrainingContent = observer(() => {
             viewBox="0 0 65 60"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={`mr-[30px] rotate-90 ${direction.isPressed ? "" : "brightness-50"}`}
+            className={`mr-[30px] rotate-90 ${getArrowBrightness(direction)}`}
           >
             <g clipPath="url(#clip0_1_4)">
               <path
                 d="M32.5 0L0 30H18.9583V60H46.0417V30H65L32.5 0Z"
-                fill={`${direction.isPressed ? "#ffe702" : "#ffffff"}`}
+                fill={`${getArrowColor(direction)}`}
               />
               <path
                 d="M35.1761 0.892805C34.8779 0.61746 34.479 0.392326 34.0135 0.236796C33.5481 0.0812659 33.0302 1.62527e-06 32.5044 1.62527e-06C31.9786 1.62527e-06 31.4607 0.0812659 30.9953 0.236796C30.5299 0.392326 30.1309 0.61746 29.8327 0.892805L0.580405 27.7576C0.24181 28.0675 0.0432524 28.4304 0.00630039 28.807C-0.0306516 29.1836 0.0954166 29.5594 0.370811 29.8936C0.646205 30.2278 1.06039 30.5077 1.56837 30.7027C2.07634 30.8978 2.65868 31.0006 3.25212 31L61.7567 31C62.3488 30.9984 62.9289 30.8943 63.4349 30.6988C63.9408 30.5032 64.3533 30.2237 64.6281 29.8903C64.9028 29.5568 65.0294 29.1821 64.9942 28.8063C64.9591 28.4305 64.7634 28.068 64.4284 27.7576L35.1761 0.892805Z"
-                fill={`${direction.isPressed ? "#ffe702" : "#ffffff"}`}
+                fill={`${getArrowColor(direction)}`}
               />
             </g>
             <defs>
@@ -75,7 +89,7 @@ const TheStratagemsTrainingContent = observer(() => {
                 <rect
                   width="65"
                   height="60"
-                  fill={`${direction.isPressed ? "#ffe702" : "#ffffff"}`}
+                  fill={`${getArrowColor(direction)}`}
                 />
               </clipPath>
             </defs>
@@ -90,16 +104,16 @@ const TheStratagemsTrainingContent = observer(() => {
             viewBox="0 0 65 60"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={`mr-[30px] rotate-180 ${direction.isPressed ? "" : "brightness-50"}`}
+            className={`mr-[30px] rotate-180 ${getArrowBrightness(direction)}`}
           >
             <g clipPath="url(#clip0_1_4)">
               <path
                 d="M32.5 0L0 30H18.9583V60H46.0417V30H65L32.5 0Z"
-                fill={`${direction.isPressed ? "#ffe702" : "#ffffff"}`}
+                fill={`${getArrowColor(direction)}`}
               />
               <path
                 d="M35.1761 0.892805C34.8779 0.61746 34.479 0.392326 34.0135 0.236796C33.5481 0.0812659 33.0302 1.62527e-06 32.5044 1.62527e-06C31.9786 1.62527e-06 31.4607 0.0812659 30.9953 0.236796C30.5299 0.392326 30.1309 0.61746 29.8327 0.892805L0.580405 27.7576C0.24181 28.0675 0.0432524 28.4304 0.00630039 28.807C-0.0306516 29.1836 0.0954166 29.5594 0.370811 29.8936C0.646205 30.2278 1.06039 30.5077 1.56837 30.7027C2.07634 30.8978 2.65868 31.0006 3.25212 31L61.7567 31C62.3488 30.9984 62.9289 30.8943 63.4349 30.6988C63.9408 30.5032 64.3533 30.2237 64.6281 29.8903C64.9028 29.5568 65.0294 29.1821 64.9942 28.8063C64.9591 28.4305 64.7634 28.068 64.4284 27.7576L35.1761 0.892805Z"
-                fill={`${direction.isPressed ? "#ffe702" : "#ffffff"}`}
+                fill={`${getArrowColor(direction)}`}
               />
             </g>
             <defs>
@@ -107,7 +121,7 @@ const TheStratagemsTrainingContent = observer(() => {
                 <rect
                   width="65"
                   height="60"
-                  fill={`${direction.isPressed ? "#ffe702" : "#ffffff"}`}
+                  fill={`${getArrowColor(direction)}`}
                 />
               </clipPath>
             </defs>
@@ -122,16 +136,16 @@ const TheStratagemsTrainingContent = observer(() => {
             viewBox="0 0 65 60"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={`mr-[30px] -rotate-90 ${direction.isPressed ? "" : "brightness-50"}`}
+            className={`mr-[30px] -rotate-90 ${getArrowBrightness(direction)}`}
           >
             <g clipPath="url(#clip0_1_4)">
               <path
                 d="M32.5 0L0 30H18.9583V60H46.0417V30H65L32.5 0Z"
-                fill={`${direction.isPressed ? "#ffe702" : "#ffffff"}`}
+                fill={`${getArrowColor(direction)}`}
               />
               <path
                 d="M35.1761 0.892805C34.8779 0.61746 34.479 0.392326 34.0135 0.236796C33.5481 0.0812659 33.0302 1.62527e-06 32.5044 1.62527e-06C31.9786 1.62527e-06 31.4607 0.0812659 30.9953 0.236796C30.5299 0.392326 30.1309 0.61746 29.8327 0.892805L0.580405 27.7576C0.24181 28.0675 0.0432524 28.4304 0.00630039 28.807C-0.0306516 29.1836 0.0954166 29.5594 0.370811 29.8936C0.646205 30.2278 1.06039 30.5077 1.56837 30.7027C2.07634 30.8978 2.65868 31.0006 3.25212 31L61.7567 31C62.3488 30.9984 62.9289 30.8943 63.4349 30.6988C63.9408 30.5032 64.3533 30.2237 64.6281 29.8903C64.9028 29.5568 65.0294 29.1821 64.9942 28.8063C64.9591 28.4305 64.7634 28.068 64.4284 27.7576L35.1761 0.892805Z"
-                fill={`${direction.isPressed ? "#ffe702" : "#ffffff"}`}
+                fill={`${getArrowColor(direction)}`}
               />
             </g>
             <defs>
@@ -139,7 +153,7 @@ const TheStratagemsTrainingContent = observer(() => {
                 <rect
                   width="65"
                   height="60"
-                  fill={`${direction.isPressed ? "#ffe702" : "#ffffff"}`}
+                  fill={`${getArrowColor(direction)}`}
                 />
               </clipPath>
             </defs>
