@@ -2634,12 +2634,76 @@ class StratagemStore {
     }
   }
 
+  setSecondsInterval = (interval: ReturnType<typeof setInterval>) => {
+    this.secondsInterval = interval;
+  };
+
+  setCurrentRoundNumber = (roundNumber: number) => {
+    this.currentRoundNumber = roundNumber;
+  };
+
+  setSecondsLeftCount = (count: number) => {
+    this.secondsLeft = count;
+  };
+
+  setCurrentScore = (score: number) => {
+    this.currentScore = score;
+  };
+
+  setFinalScore = (score: number) => {
+    this.finalGameScore = score;
+  };
+
+  setHighestScore = (score: number) => {
+    this.highestGameScore = score;
+  };
+
+  setCurrentRoundBonus = (bonus: number) => {
+    this.currentRoundBonus = bonus;
+  };
+
+  setRoundTimeBonus = (bonus: number) => {
+    this.currentRoundTimeBonus = bonus;
+  };
+
+  changeIsRequiredKeyPressedStatus = (status: boolean) => {
+    this.isRequiredKeyPressed = status;
+  };
+
+  changeIsGameStartedStatus = (status: boolean) => {
+    this.isGameStarted = status;
+  };
+
+  changeIsResultsShowedStatus = (status: boolean) => {
+    this.isResultsShowed = status;
+  };
+
+  changeIsRoundEndedStatus = (status: boolean) => {
+    this.isRoundEnded = status;
+  };
+
+  changeIsRoundLostStatus = (status: boolean) => {
+    this.isRoundLost = status;
+  };
+
+  changeIsClearInputRoundStatus = (status: boolean) => {
+    this.isClearInputRound = status;
+  };
+
+  changeIsStratagemInputSuccessfulStatus = (status: boolean) => {
+    this.isStratagemInputSuccessful = status;
+  };
+
+  changeIsStratagemInputFailStatus = (status: boolean) => {
+    this.isStratagemInputFail = status;
+  };
+
   restartStratagemInput = () => {
-    this.isStratagemInputFail = true;
-    this.isClearInputRound = false;
+    this.changeIsStratagemInputFailStatus(true);
+    this.changeIsClearInputRoundStatus(false);
 
     setTimeout(() => {
-      this.isStratagemInputFail = false;
+      this.changeIsStratagemInputFailStatus(false);
 
       this.currentStratagem.directions.map(
         (direction) => (direction.isPressed = false),
@@ -2648,19 +2712,22 @@ class StratagemStore {
   };
 
   handleRoundEnd = () => {
-    this.isRoundEnded = true;
-    this.isResultsShowed = true;
+    this.changeIsRoundEndedStatus(true);
+    this.changeIsResultsShowedStatus(true);
 
-    this.currentRoundNumber++;
+    this.setCurrentRoundNumber(this.currentRoundNumber + 1);
 
     clearInterval(this.secondsInterval);
 
-    this.currentRoundTimeBonus = 10 * this.secondsLeft;
-    this.currentScore +=
-      this.currentRoundBonus + Number(this.currentRoundTimeBonus.toFixed(0));
+    this.setRoundTimeBonus(10 * this.secondsLeft);
+    this.setCurrentScore(
+      this.currentScore +
+        this.currentRoundBonus +
+        Number(this.currentRoundTimeBonus.toFixed(0)),
+    );
 
     if (this.isClearInputRound) {
-      this.currentScore += 100;
+      this.setCurrentScore(this.currentScore + 100);
     }
 
     this.stratagems.patrioticAdministrationCenter =
@@ -2719,7 +2786,7 @@ class StratagemStore {
       },
     );
 
-    setTimeout(() => (this.isResultsShowed = false), 3000);
+    setTimeout(() => this.changeIsResultsShowedStatus(false), 3000);
 
     setTimeout(() => this.handleRoundStart(), 4500);
   };
@@ -2737,7 +2804,7 @@ class StratagemStore {
         currentIndex++;
 
         if (currentIndex === this.currentStratagem.keyCodes.length) {
-          this.currentScore += 20;
+          this.setCurrentScore(this.currentScore + 20);
           currentIndex = 0;
 
           if (this.nextStratagemsArray.length) {
@@ -2753,12 +2820,12 @@ class StratagemStore {
           }
 
           if (this.secondsLeft > 9) {
-            this.secondsLeft = 10;
+            this.setSecondsLeftCount(10);
           } else {
-            this.secondsLeft += 1;
+            this.setSecondsLeftCount(this.secondsLeft + 1);
           }
 
-          this.isStratagemInputSuccessful = true;
+          this.changeIsStratagemInputSuccessfulStatus(true);
         }
 
         this.currentStratagem = {
@@ -2774,23 +2841,27 @@ class StratagemStore {
   })();
 
   handleGameStart = (event: KeyboardEvent) => {
-    if ((event.keyCode === 38 || event.keyCode === 87) && !this.isGameStarted) {
-      this.isRequiredKeyPressed = true;
+    if (event.keyCode === 38 || event.keyCode === 87) {
+      if (typeof document !== "undefined") {
+        document.removeEventListener("keydown", this.handleGameStart);
+      }
 
-      setTimeout(() => (this.isGameStarted = true), 300);
+      this.changeIsRequiredKeyPressedStatus(true);
+
+      setTimeout(() => this.changeIsGameStartedStatus(true), 300);
 
       this.handleRoundStart();
     }
   };
 
   handleRoundStart = () => {
-    this.isRoundEnded = false;
-    this.isClearInputRound = true;
+    this.changeIsRoundEndedStatus(false);
+    this.changeIsClearInputRoundStatus(true);
 
-    this.secondsLeft = 10;
-    this.currentRoundTimeBonus = 0;
+    this.setSecondsLeftCount(10);
+    this.setRoundTimeBonus(0);
 
-    this.currentRoundBonus += 25;
+    this.setCurrentRoundBonus(this.currentRoundBonus + 25);
 
     const stratagemsArray = Object.values(this.stratagems)
       .map((shipModule) => [...shipModule])
@@ -2807,44 +2878,54 @@ class StratagemStore {
       );
     }
 
-    this.secondsInterval = setInterval(() => {
-      this.secondsLeft = this.secondsLeft - 0.01;
+    this.setSecondsInterval(
+      setInterval(() => {
+        this.setSecondsLeftCount(this.secondsLeft - 0.01);
 
-      if (this.secondsLeft < 0) {
-        this.handleGameLost();
-      }
-    }, 10);
+        if (this.secondsLeft < 0) {
+          this.handleGameLost();
+        }
+      }, 10),
+    );
 
     document.addEventListener("keydown", this.handleStratagemKeyPress);
   };
 
   handleGameLost = () => {
-    this.isRoundEnded = true;
-    this.isRoundLost = true;
+    this.changeIsRoundEndedStatus(true);
+    this.changeIsRoundLostStatus(true);
+    this.changeIsStratagemInputSuccessfulStatus(false);
 
-    this.currentRoundNumber = 0;
+    this.setCurrentRoundNumber(0);
 
-    this.finalGameScore = this.currentScore;
-    this.currentRoundBonus = 75;
-    this.currentRoundTimeBonus = 0;
-
-    this.isClearInputRound = true;
+    this.setFinalScore(this.currentScore);
 
     if (this.finalGameScore > this.highestGameScore) {
-      this.highestGameScore = this.finalGameScore;
+      this.setHighestScore(this.finalGameScore);
     }
 
     setTimeout(() => {
-      this.finalGameScore = 0;
-      this.currentScore = 0;
+      this.changeIsRoundEndedStatus(false);
+      this.changeIsRoundLostStatus(false);
+    }, 5000);
 
-      this.isGameStarted = false;
-      this.isRoundEnded = false;
-      this.isRoundLost = false;
-      this.isRequiredKeyPressed = false;
+    setTimeout(() => {
+      this.setCurrentRoundNumber(1);
+      this.setCurrentRoundBonus(75);
+      this.setFinalScore(0);
+      this.setCurrentScore(0);
+
+      this.changeIsGameStartedStatus(false);
+      this.changeIsRequiredKeyPressedStatus(false);
+
+      document.addEventListener("keydown", this.handleGameStart, {
+        once: true,
+      });
+
+      console.log("ugu");
 
       clearInterval(this.secondsInterval);
-    }, 5000);
+    }, 500);
   };
 }
 
