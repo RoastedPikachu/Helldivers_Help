@@ -163,7 +163,9 @@ const TheStratagemsTrainingContent = observer(() => {
   };
 
   useEffect(() => {
-    document.addEventListener("keydown", stratagemStore.handleGameStart);
+    document.addEventListener("keydown", stratagemStore.handleGameStart, {
+      once: true,
+    });
 
     return () => {
       document.removeEventListener("keydown", stratagemStore.handleGameStart);
@@ -212,6 +214,10 @@ const TheStratagemsTrainingContent = observer(() => {
                   НАЧАТЬ
                 </p>
 
+                <p className="text-[#ffffff] text-[1rem] text-center brightness-50">
+                  {stratagemStore.highestGameScore}
+                </p>
+
                 <p className="mt-[20px] text-[#ffffff] text-[1.25rem] text-center brightness-75">
                   Используйте WASD или стрелки на клавиатуре для ввода стратагем
                 </p>
@@ -226,7 +232,7 @@ const TheStratagemsTrainingContent = observer(() => {
                   </p>
 
                   <p className="mt-[-7.5px] text-[#ffe702] text-[3rem] text-left font-['Insignia'] font-extrabold">
-                    {stratagemStore.currentRoundNumber}
+                    {stratagemStore.currentRoundNumber + 1}
                   </p>
                 </span>
 
@@ -279,6 +285,13 @@ const TheStratagemsTrainingContent = observer(() => {
 
                   <p className="mt-[-17.5px] text-[#ffffff] text-[2rem] text-right font-['Exo2'] font-semibold">
                     Счет
+                  </p>
+
+                  <p className="text-[#ffffff] text-[1rem] text-right font-['Exo2'] font-semibold brightness-50">
+                    Ваш рекорд:{" "}
+                    <b className="font-['Insignia']">
+                      {stratagemStore.highestGameScore}
+                    </b>
                   </p>
                 </span>
               </div>

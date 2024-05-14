@@ -13,16 +13,20 @@ class StratagemStore {
 
   secondsInterval: ReturnType<typeof setInterval> | undefined;
 
-  currentRoundNumber = 1;
+  currentRoundNumber = 0;
   secondsLeft = 10;
   currentScore = 0;
   finalGameScore = 0;
   highestGameScore = 0;
+  currentRoundBonus = 75;
+  currentRoundTimeBonus = 0;
 
   isRequiredKeyPressed = false;
   isGameStarted = false;
+  isResultsShowed = false;
   isRoundEnded = false;
   isRoundLost = false;
+  isClearInputRound = true;
   isStratagemInputSuccessful = false;
   isStratagemInputFail = false;
 
@@ -2632,6 +2636,7 @@ class StratagemStore {
 
   restartStratagemInput = () => {
     this.isStratagemInputFail = true;
+    this.isClearInputRound = false;
 
     setTimeout(() => {
       this.isStratagemInputFail = false;
@@ -2647,8 +2652,72 @@ class StratagemStore {
 
     clearInterval(this.secondsInterval);
 
-    this.currentRoundNumber++;
-    setTimeout(() => this.handleStratagemTrainingRoundStart(), 1500);
+    this.currentRoundTimeBonus = 10 * this.secondsLeft;
+    this.currentScore +=
+      this.currentRoundBonus + Number(this.currentRoundTimeBonus.toFixed(0));
+    this.currentRoundBonus += 25;
+
+    if (this.isClearInputRound) {
+      this.currentScore += 100;
+    }
+
+    this.stratagems.patrioticAdministrationCenter =
+      this.stratagems.patrioticAdministrationCenter.map((stratagem) => {
+        return {
+          ...stratagem,
+          directions: stratagem.directions.map((direction) => {
+            return { ...direction, isPressed: false };
+          }),
+        };
+      });
+    this.stratagems.orbitalCannon = this.stratagems.orbitalCannon.map(
+      (stratagem) => {
+        return {
+          ...stratagem,
+          directions: stratagem.directions.map((direction) => {
+            return { ...direction, isPressed: false };
+          }),
+        };
+      },
+    );
+    this.stratagems.hangar = this.stratagems.hangar.map((stratagem) => {
+      return {
+        ...stratagem,
+        directions: stratagem.directions.map((direction) => {
+          return { ...direction, isPressed: false };
+        }),
+      };
+    });
+    this.stratagems.bridge = this.stratagems.bridge.map((stratagem) => {
+      return {
+        ...stratagem,
+        directions: stratagem.directions.map((direction) => {
+          return { ...direction, isPressed: false };
+        }),
+      };
+    });
+    this.stratagems.engineerBay = this.stratagems.engineerBay.map(
+      (stratagem) => {
+        return {
+          ...stratagem,
+          directions: stratagem.directions.map((direction) => {
+            return { ...direction, isPressed: false };
+          }),
+        };
+      },
+    );
+    this.stratagems.roboticsWorkshop = this.stratagems.roboticsWorkshop.map(
+      (stratagem) => {
+        return {
+          ...stratagem,
+          directions: stratagem.directions.map((direction) => {
+            return { ...direction, isPressed: false };
+          }),
+        };
+      },
+    );
+
+    setTimeout(() => this.handleRoundStart(), 1500);
   };
 
   handleStratagemKeyPress = (() => {
@@ -2706,13 +2775,17 @@ class StratagemStore {
 
       setTimeout(() => (this.isGameStarted = true), 300);
 
-      this.handleStratagemTrainingRoundStart();
+      this.handleRoundStart();
     }
   };
 
-  handleStratagemTrainingRoundStart = () => {
+  handleRoundStart = () => {
     this.isRoundEnded = false;
+    this.isClearInputRound = true;
+
+    this.currentRoundNumber++;
     this.secondsLeft = 10;
+    this.currentRoundTimeBonus = 0;
 
     const stratagemsArray = Object.values(this.stratagems)
       .map((shipModule) => [...shipModule])
@@ -2744,13 +2817,20 @@ class StratagemStore {
     this.isRoundEnded = true;
     this.isRoundLost = true;
 
-    this.finalGameScore = this.currentScore;
+    this.currentRoundNumber = 0;
 
-    if (this.currentScore > this.highestGameScore) {
-      this.highestGameScore = this.currentScore;
+    this.finalGameScore = this.currentScore;
+    this.currentRoundBonus = 75;
+    this.currentRoundTimeBonus = 0;
+
+    this.isClearInputRound = true;
+
+    if (this.finalGameScore > this.highestGameScore) {
+      this.highestGameScore = this.finalGameScore;
     }
 
     setTimeout(() => {
+      this.finalGameScore = 0;
       this.currentScore = 0;
 
       this.isGameStarted = false;
