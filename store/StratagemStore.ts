@@ -2907,12 +2907,13 @@ class StratagemStore {
     setTimeout(() => {
       this.changeIsRoundEndedStatus(false);
       this.changeIsRoundLostStatus(false);
+
+      this.setFinalScore(0);
     }, 5000);
 
     setTimeout(() => {
       this.setCurrentRoundNumber(1);
       this.setCurrentRoundBonus(75);
-      this.setFinalScore(0);
       this.setCurrentScore(0);
 
       this.changeIsGameStartedStatus(false);
