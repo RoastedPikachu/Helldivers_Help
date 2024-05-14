@@ -13,7 +13,7 @@ class StratagemStore {
 
   secondsInterval: ReturnType<typeof setInterval> | undefined;
 
-  currentRoundNumber = 0;
+  currentRoundNumber = 1;
   secondsLeft = 10;
   currentScore = 0;
   finalGameScore = 0;
@@ -2649,13 +2649,15 @@ class StratagemStore {
 
   handleRoundEnd = () => {
     this.isRoundEnded = true;
+    this.isResultsShowed = true;
+
+    this.currentRoundNumber++;
 
     clearInterval(this.secondsInterval);
 
     this.currentRoundTimeBonus = 10 * this.secondsLeft;
     this.currentScore +=
       this.currentRoundBonus + Number(this.currentRoundTimeBonus.toFixed(0));
-    this.currentRoundBonus += 25;
 
     if (this.isClearInputRound) {
       this.currentScore += 100;
@@ -2717,7 +2719,9 @@ class StratagemStore {
       },
     );
 
-    setTimeout(() => this.handleRoundStart(), 1500);
+    setTimeout(() => (this.isResultsShowed = false), 3000);
+
+    setTimeout(() => this.handleRoundStart(), 4500);
   };
 
   handleStratagemKeyPress = (() => {
@@ -2783,9 +2787,10 @@ class StratagemStore {
     this.isRoundEnded = false;
     this.isClearInputRound = true;
 
-    this.currentRoundNumber++;
     this.secondsLeft = 10;
     this.currentRoundTimeBonus = 0;
+
+    this.currentRoundBonus += 25;
 
     const stratagemsArray = Object.values(this.stratagems)
       .map((shipModule) => [...shipModule])
