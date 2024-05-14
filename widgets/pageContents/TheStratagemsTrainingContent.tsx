@@ -214,7 +214,7 @@ const TheStratagemsTrainingContent = observer(() => {
                   НАЧАТЬ
                 </p>
 
-                <p className="text-[#ffffff] text-[1rem] text-center brightness-50">
+                <p className="text-[#ffffff] text-[1rem] text-center font-['Insignia'] brightness-50">
                   {stratagemStore.highestGameScore}
                 </p>
 
@@ -232,7 +232,7 @@ const TheStratagemsTrainingContent = observer(() => {
                   </p>
 
                   <p className="mt-[-7.5px] text-[#ffe702] text-[3rem] text-left font-['Insignia'] font-extrabold">
-                    {stratagemStore.currentRoundNumber + 1}
+                    {stratagemStore.currentRoundNumber}
                   </p>
                 </span>
 
@@ -323,21 +323,69 @@ const TheStratagemsTrainingContent = observer(() => {
               </div>
             )}
 
-            {stratagemStore.isRoundEnded && !stratagemStore.isRoundLost && (
-              <div className="grid justify-items-center mt-[-100px] w-auto">
-                <h2 className="text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold">
-                  Приготовьтесь
-                </h2>
+            {stratagemStore.isRoundEnded &&
+              stratagemStore.isResultsShowed &&
+              !stratagemStore.isRoundLost && (
+                <div className="relative mt-[-100px] w-[600px]">
+                  <div className="flex justify-between items-center w-full">
+                    <p className="text-[#ffffff] text-[2rem] font-['Exo2'] font-bold">
+                      Бонус за раунд
+                    </p>
 
-                <p className="mt-[30px] text-[#ffffff] text-[2.25rem] font-['Exo2'] font-bold">
-                  Раунд
-                </p>
+                    <p className="mt-[5px] text-[#ffe702] text-[2.5rem] font-['Insignia'] font-bold">
+                      {stratagemStore.currentRoundBonus}
+                    </p>
+                  </div>
 
-                <p className="text-[#ffe702] text-[3rem] font-['Insignia'] font-bold">
-                  {stratagemStore.currentRoundNumber}
-                </p>
-              </div>
-            )}
+                  <span className="flex justify-between items-center w-full">
+                    <p className="text-[#ffffff] text-[2rem] font-['Exo2'] font-bold">
+                      Бонус за время
+                    </p>
+
+                    <p className="mt-[5px] text-[#ffe702] text-[2.5rem] font-['Insignia'] font-bold">
+                      {stratagemStore.currentRoundTimeBonus.toFixed(0)}
+                    </p>
+                  </span>
+
+                  <span className="flex justify-between items-center w-full">
+                    <p className="text-[#ffffff] text-[2rem] font-['Exo2'] font-bold">
+                      Бонус за идеал
+                    </p>
+
+                    <p className="mt-[5px] text-[#ffe702] text-[2.5rem] font-['Insignia'] font-bold">
+                      {stratagemStore.isClearInputRound ? "100" : "0"}
+                    </p>
+                  </span>
+
+                  <span className="flex justify-between items-center w-full">
+                    <p className="text-[#ffffff] text-[2rem] font-['Exo2'] font-bold">
+                      Итоговый счет
+                    </p>
+
+                    <p className="mt-[5px] text-[#ffe702] text-[2.5rem] font-['Insignia'] font-bold">
+                      {stratagemStore.currentScore}
+                    </p>
+                  </span>
+                </div>
+              )}
+
+            {stratagemStore.isRoundEnded &&
+              !stratagemStore.isResultsShowed &&
+              !stratagemStore.isRoundLost && (
+                <div className="grid justify-items-center mt-[-100px] w-auto">
+                  <h2 className="text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold">
+                    Приготовьтесь
+                  </h2>
+
+                  <p className="mt-[30px] text-[#ffffff] text-[2.25rem] font-['Exo2'] font-bold">
+                    Раунд
+                  </p>
+
+                  <p className="text-[#ffe702] text-[3rem] font-['Insignia'] font-bold">
+                    {stratagemStore.currentRoundNumber}
+                  </p>
+                </div>
+              )}
           </section>
         </main>
       )}
