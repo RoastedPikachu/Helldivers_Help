@@ -180,7 +180,7 @@ const TheStratagemsTrainingContent = observer(() => {
           </div>
 
           <section className="relative flex justify-center items-center w-full h-[calc(100vh-310px)]">
-            {!stratagemStore.isGameStarted && (
+            {!stratagemStore.isGameStarted && !stratagemStore.isRoundEnded && (
               <div className="relative grid justify-items-center w-auto h-auto">
                 <svg
                   width="50"
