@@ -5,8 +5,6 @@ import { observer, Observer } from "mobx-react-lite";
 
 import { stratagemStore } from "@/store/StratagemStore";
 
-import ThePageTitle from "@/shared/ThePageTitle";
-
 const TheStratagemsTrainingContent = observer(() => {
   const getSpecificGameTimeColor = () => {
     if (stratagemStore.secondsLeft > 2) {
@@ -182,6 +180,12 @@ const TheStratagemsTrainingContent = observer(() => {
             </h2>
           </div>
 
+          <img
+            src="/static/GeneralIcons/SuperEarthBackgroundIcon.svg"
+            alt=""
+            className="absolute top-0 left-0 w-[700px] h-[450px] mt-[calc(50vh-150px)] mx-[calc((100%-700px)/2)]"
+          />
+
           <section className="relative flex justify-center items-center w-full h-[calc(100vh-310px)]">
             {!stratagemStore.isGameStarted && !stratagemStore.isRoundEnded && (
               <div className="relative grid justify-items-center w-auto h-auto">
@@ -329,7 +333,7 @@ const TheStratagemsTrainingContent = observer(() => {
             {stratagemStore.isRoundEnded &&
               stratagemStore.isResultsShowed &&
               !stratagemStore.isRoundLost && (
-                <div className="relative mt-[-100px] w-[600px]">
+                <div className="relative mt-[-100px] w-[600px] mlarge:w-full">
                   <div className="flex justify-between items-center w-full">
                     <p className="text-[#ffffff] text-[2rem] font-['Exo2'] font-bold">
                       Бонус за раунд
