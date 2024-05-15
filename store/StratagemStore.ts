@@ -2785,6 +2785,14 @@ class StratagemStore {
         };
       },
     );
+    this.stratagems.general = this.stratagems.general.map((stratagem) => {
+      return {
+        ...stratagem,
+        directions: stratagem.directions.map((direction) => {
+          return { ...direction, isPressed: false };
+        }),
+      };
+    });
 
     setTimeout(() => this.changeIsResultsShowedStatus(false), 3000);
 
@@ -2923,10 +2931,8 @@ class StratagemStore {
         once: true,
       });
 
-      console.log("ugu");
-
       clearInterval(this.secondsInterval);
-    }, 500);
+    }, 100);
   };
 }
 
