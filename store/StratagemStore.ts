@@ -2803,9 +2803,27 @@ class StratagemStore {
     let currentIndex = 0;
 
     return (event: any) => {
-      const targetKey = this.currentStratagem.keyCodes[currentIndex];
+      event.preventDefault();
 
-      if (event.keyCode === targetKey) {
+      const targetKey = this.currentStratagem.keyCodes[currentIndex];
+      let keyCode = event.keyCode;
+
+      switch (event.keyCode) {
+        case 38:
+          keyCode = 87;
+          break;
+        case 40:
+          keyCode = 83;
+          break;
+        case 37:
+          keyCode = 65;
+          break;
+        case 39:
+          keyCode = 68;
+          break;
+      }
+
+      if (keyCode === targetKey) {
         const updatedDirections = [...this.currentStratagem.directions];
         updatedDirections[currentIndex].isPressed = true;
 
@@ -2932,7 +2950,7 @@ class StratagemStore {
       });
 
       clearInterval(this.secondsInterval);
-    }, 100);
+    }, 50);
   };
 }
 
