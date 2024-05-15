@@ -2634,6 +2634,14 @@ class StratagemStore {
     }
   }
 
+  setCurrentStratagem = (stratagem: Stratagem) => {
+    this.currentStratagem = stratagem;
+  };
+
+  setNextStratagemsArray = (stratagemsArray: Stratagem[]) => {
+    this.nextStratagemsArray = stratagemsArray;
+  };
+
   setSecondsInterval = (interval: ReturnType<typeof setInterval>) => {
     this.secondsInterval = interval;
   };
@@ -2703,11 +2711,11 @@ class StratagemStore {
     this.changeIsClearInputRoundStatus(false);
 
     setTimeout(() => {
-      this.changeIsStratagemInputFailStatus(false);
-
-      this.currentStratagem.directions.map(
+      this.currentStratagem.directions.forEach(
         (direction) => (direction.isPressed = false),
       );
+
+      this.changeIsStratagemInputFailStatus(false);
     }, 200);
   };
 
@@ -2838,8 +2846,9 @@ class StratagemStore {
               this.currentStratagem.directions.forEach(
                 (direction) => (direction.isPressed = false),
               );
-              this.currentStratagem = this.nextStratagemsArray[0];
-              this.nextStratagemsArray = this.nextStratagemsArray.slice(1);
+
+              this.setCurrentStratagem(this.nextStratagemsArray[0]);
+              this.setNextStratagemsArray(this.nextStratagemsArray.slice(1));
             }, 250);
           } else {
             this.handleRoundEnd();
@@ -2854,10 +2863,10 @@ class StratagemStore {
           this.changeIsStratagemInputSuccessfulStatus(true);
         }
 
-        this.currentStratagem = {
+        this.setCurrentStratagem({
           ...this.currentStratagem,
           directions: updatedDirections,
-        };
+        });
       } else {
         currentIndex = 0;
 
@@ -2893,9 +2902,8 @@ class StratagemStore {
       .map((shipModule) => [...shipModule])
       .flat();
 
-    this.currentStratagem = getRandomEntity(
-      stratagemsArray,
-      this.currentStratagem,
+    this.setCurrentStratagem(
+      getRandomEntity(stratagemsArray, this.currentStratagem),
     );
 
     for (let i = 0; i < 4 + this.currentRoundNumber; i++) {
@@ -2944,6 +2952,8 @@ class StratagemStore {
 
       this.changeIsGameStartedStatus(false);
       this.changeIsRequiredKeyPressedStatus(false);
+
+      this.setNextStratagemsArray([]);
 
       document.addEventListener("keydown", this.handleGameStart, {
         once: true,
