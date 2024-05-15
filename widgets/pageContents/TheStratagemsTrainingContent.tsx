@@ -174,9 +174,12 @@ const TheStratagemsTrainingContent = observer(() => {
   return (
     <Observer>
       {() => (
-        <main>
+        <main className="mt-0 pt-[50px] mlarge:pt-[30px] bg-[#0e0e0e]">
           <div className="flex justify-center items-center w-full h-[60px]">
-            <ThePageTitle title={"тренировка"} additionalTitle={"стратагем"} />
+            <h2 className="pageTitle">
+              ТРЕНИРОВКА{" "}
+              <b className="pageTitle_Bold !text-[#ffe702]">СТРАТАГЕМ</b>
+            </h2>
           </div>
 
           <section className="relative flex justify-center items-center w-full h-[calc(100vh-310px)]">
