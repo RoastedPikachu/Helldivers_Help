@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { observer, Observer } from "mobx-react-lite";
 
 import { stratagemStore } from "@/store/StratagemStore";
+import { mobileStore } from "@/store/MobileStore";
 
 const TheStratagemsTrainingContent = observer(() => {
   const getSpecificGameTimeColor = () => {
@@ -38,7 +39,7 @@ const TheStratagemsTrainingContent = observer(() => {
             viewBox="0 0 65 60"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={`mr-[30px] rotate-0 ${getArrowBrightness(direction)}`}
+            className={`mr-[30px] mlarge:mr-[12.5px] mlarge:w-[37.5px] mlarge:h-[37.5px] rotate-0 ${getArrowBrightness(direction)}`}
           >
             <g clipPath="url(#clip0_1_4)">
               <path
@@ -70,7 +71,7 @@ const TheStratagemsTrainingContent = observer(() => {
             viewBox="0 0 65 60"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={`mr-[30px] rotate-90 ${getArrowBrightness(direction)}`}
+            className={`mr-[30px] mlarge:mr-[12.5px] mlarge:w-[37.5px] mlarge:h-[37.5px] rotate-90 ${getArrowBrightness(direction)}`}
           >
             <g clipPath="url(#clip0_1_4)">
               <path
@@ -102,7 +103,7 @@ const TheStratagemsTrainingContent = observer(() => {
             viewBox="0 0 65 60"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={`mr-[30px] rotate-180 ${getArrowBrightness(direction)}`}
+            className={`mr-[30px] mlarge:mr-[12.5px] mlarge:w-[37.5px] mlarge:h-[37.5px] rotate-180 ${getArrowBrightness(direction)}`}
           >
             <g clipPath="url(#clip0_1_4)">
               <path
@@ -134,7 +135,7 @@ const TheStratagemsTrainingContent = observer(() => {
             viewBox="0 0 65 60"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={`mr-[30px] -rotate-90 ${getArrowBrightness(direction)}`}
+            className={`mr-[30px] mlarge:mr-[12.5px] mlarge:w-[37.5px] mlarge:h-[37.5px] -rotate-90 ${getArrowBrightness(direction)}`}
           >
             <g clipPath="url(#clip0_1_4)">
               <path
@@ -161,9 +162,7 @@ const TheStratagemsTrainingContent = observer(() => {
   };
 
   useEffect(() => {
-    document.addEventListener("keydown", stratagemStore.handleGameStart, {
-      once: true,
-    });
+    document.addEventListener("keydown", stratagemStore.handleGameStart);
 
     return () => {
       document.removeEventListener("keydown", stratagemStore.handleGameStart);
@@ -172,7 +171,7 @@ const TheStratagemsTrainingContent = observer(() => {
   return (
     <Observer>
       {() => (
-        <main className="mt-0 pt-[50px] mlarge:pt-[30px] deskWide:mx-0 deskWide:px-[calc((100%-1440px)/2)] max-w-full bg-[#0e0e0e]">
+        <main className="mt-0 mlarge:mt-[115px] pt-[50px] mlarge:pt-[30px] deskWide:mx-0 deskWide:px-[calc((100%-1440px)/2)] max-w-full bg-[#0e0e0e]">
           <div className="flex justify-center items-center w-full h-[60px]">
             <h2 className="pageTitle">
               ТРЕНИРОВКА{" "}
@@ -183,18 +182,19 @@ const TheStratagemsTrainingContent = observer(() => {
           <img
             src="/static/GeneralIcons/SuperEarthBackgroundIcon.svg"
             alt=""
-            className="absolute top-0 left-0 w-[700px] h-[450px] mt-[calc(50vh-150px)] mx-[calc((100%-700px)/2)]"
+            className="absolute top-0 left-0 w-[700px] mlarge:w-full h-[450px] mlarge:h-[300px] mt-[calc(50vh-150px)] mlarge:mt-[calc(50vh-220px)] mx-[calc((100%-700px)/2)] mlarge:mx-0"
           />
 
           <section className="relative flex justify-center items-center w-full h-[calc(100vh-310px)]">
             {!stratagemStore.isGameStarted && !stratagemStore.isRoundEnded && (
-              <div className="relative grid justify-items-center w-auto h-auto">
+              <div className="relative grid justify-items-center mlarge:mt-[50px] w-auto h-auto">
                 <svg
                   width="50"
                   height="45"
                   viewBox="0 0 65 60"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  className="mlarge:w-[45px] mlarge:h-[40px]"
                 >
                   <g clipPath="url(#clip0_1_4)">
                     <path
@@ -214,115 +214,152 @@ const TheStratagemsTrainingContent = observer(() => {
                 </svg>
 
                 <div
-                  className={`mt-[10px] w-[100px] h-[150px] ${stratagemStore.isRequiredKeyPressed ? "bg-[#008000]" : "bg-[#7f1d1d]"} border-2 border-[#ffe702] duration-[400ms] ease-in-out`}
+                  className={`mt-[10px] w-[100px] mlarge:w-[80px] h-[150px] mlarge:h-[120px] ${stratagemStore.isRequiredKeyPressed ? "bg-[#008000]" : "bg-[#7f1d1d]"} border-2 border-[#ffe702] duration-[400ms] ease-in-out`}
                 ></div>
 
-                <p className="mt-[10px] w-full text-[#ffe702] text-[1.25rem] text-center font-['Exo2'] font-semibold">
+                <p className="mt-[10px] w-full text-[#ffe702] text-[1.25rem] mlarge:text-[1.125rem] text-center font-['Exo2'] font-semibold">
                   НАЧАТЬ
                 </p>
 
-                <p className="text-[#ffffff] text-[1rem] text-center font-['Insignia'] brightness-50">
+                <p className="text-[#ffffff] text-[1rem] mlarge:text-[0.875rem] text-center font-['Insignia'] brightness-50">
                   {stratagemStore.highestGameScore}
                 </p>
 
-                <p className="mt-[20px] text-[#ffffff] text-[1.25rem] text-center brightness-75">
+                <p className="mt-[20px] text-[#ffffff] text-[1.25rem] mlarge:text-[1.125rem] text-center brightness-75">
                   Используйте WASD или стрелки на клавиатуре для ввода стратагем
                 </p>
               </div>
             )}
 
             {!stratagemStore.isRoundEnded && stratagemStore.isGameStarted && (
-              <div className="flex items-start">
-                <span className="mr-[100px]">
-                  <p className="mt-[-10px] text-[#ffffff] text-[2rem] text-left font-['Exo2'] font-semibold">
-                    Раунд
-                  </p>
+              <>
+                <div className="flex mlarge:block items-start">
+                  {mobileStore.isMobileDevice ? (
+                    <div className="flex justify-between items-start w-full h-auto">
+                      <span className="mr-[100px] mlarge:mr-0">
+                        <p className="mt-[-10px] text-[#ffffff] text-[2rem] mlarge:text-[1.5rem] text-left font-['Exo2'] font-semibold">
+                          Раунд
+                        </p>
 
-                  <p className="mt-[-7.5px] text-[#ffe702] text-[3rem] text-left font-['Insignia'] font-extrabold">
-                    {stratagemStore.currentRoundNumber}
-                  </p>
-                </span>
+                        <p className="mt-[-7.5px] text-[#ffe702] text-[3rem] mlarge:text-[2rem] text-left font-['Insignia'] font-extrabold">
+                          {stratagemStore.currentRoundNumber}
+                        </p>
+                      </span>
 
-                <div className="relative p-[4px] w-auto min-w-[735px] h-auto">
-                  <div className="flex items-center w-full h-[120px]">
-                    <img
-                      src={`${stratagemStore.currentStratagem.iconPath}`}
-                      alt=""
-                      className="w-[120px] h-full"
-                    />
+                      <span className="ml-[100px] mlarge:ml-0">
+                        <p className="mt-[-12.5px] text-[#ffe702] text-[3rem] mlarge:text-[2rem] text-right font-['Insignia'] font-extrabold">
+                          {stratagemStore.currentScore}
+                        </p>
 
-                    {stratagemStore.nextStratagemsArray
-                      .slice(0, 5)
-                      .map((nextStratagem, index) => (
-                        <img
-                          key={index + 1}
-                          src={`${nextStratagem.iconPath}`}
-                          alt=""
-                          className="ml-[40px] w-[75px] h-[75px]"
-                        />
-                      ))}
-                  </div>
+                        <p className="mt-[-17.5px] text-[#ffffff] text-[2rem] mlarge:text-[1.5rem] text-right font-['Exo2'] font-semibold">
+                          Счет
+                        </p>
 
-                  <div
-                    className={`flex items-center mt-[10px] w-full h-[50px] ${getSpecificGameTimeColor()}`}
-                  >
-                    <h3 className="w-full text-[#000000] text-[1.5rem] text-center font-['Exo2'] font-bold">
-                      {stratagemStore.currentStratagem.name}
-                    </h3>
-                  </div>
-
-                  <div className="flex justify-center items-center pl-[30px] w-full h-[120px]">
-                    <div className="flex">
-                      {stratagemStore.currentStratagem.directions?.map(
-                        (direction) => getTargetInlineRotate(direction),
-                      )}
+                        <p className="text-[#ffffff] text-[1rem] mlarge:text-[0.875rem] text-right font-['Exo2'] font-semibold brightness-50">
+                          Ваш рекорд:{" "}
+                          <b className="font-['Insignia']">
+                            {stratagemStore.highestGameScore}
+                          </b>
+                        </p>
+                      </span>
                     </div>
+                  ) : (
+                    <span className="mr-[100px]">
+                      <p className="mt-[-10px] text-[#ffffff] text-[2rem] mlarge:text-[1.5rem] text-left font-['Exo2'] font-semibold">
+                        Раунд
+                      </p>
+
+                      <p className="mt-[-7.5px] text-[#ffe702] text-[3rem] mlarge:text-[2rem] text-left font-['Insignia'] font-extrabold">
+                        {stratagemStore.currentRoundNumber}
+                      </p>
+                    </span>
+                  )}
+
+                  <div className="relative mlarge:mt-[10px] p-[4px] w-auto min-w-[735px] mlarge:min-w-[calc(100vw-20px)] h-auto">
+                    <div className="flex items-center w-full h-[120px] mlarge:h-[70px]">
+                      <img
+                        src={`${stratagemStore.currentStratagem.iconPath}`}
+                        alt=""
+                        className="w-[120px] mlarge:w-[70px] h-full"
+                      />
+
+                      {stratagemStore.nextStratagemsArray
+                        .slice(0, 5)
+                        .map((nextStratagem, index) => (
+                          <img
+                            key={index + 1}
+                            src={`${nextStratagem.iconPath}`}
+                            alt=""
+                            className="ml-[40px] mlarge:ml-[17.5px] w-[75px] mlarge:w-[45px] h-[75px] mlarge:h-[45px]"
+                          />
+                        ))}
+                    </div>
+
+                    <div
+                      className={`flex items-center mt-[10px] w-full h-[50px] mlarge:h-[30px] ${getSpecificGameTimeColor()}`}
+                    >
+                      <h3 className="w-full text-[#000000] text-[1.5rem] mlarge:text-[1rem] text-center font-['Exo2'] font-bold">
+                        {stratagemStore.currentStratagem.name}
+                      </h3>
+                    </div>
+
+                    <div className="flex justify-center items-center pl-[30px] mlarge:pl-[12.5px] w-full h-[120px] mlarge:h-[70px]">
+                      <div className="flex">
+                        {stratagemStore.currentStratagem.directions?.map(
+                          (direction) => getTargetInlineRotate(direction),
+                        )}
+                      </div>
+                    </div>
+
+                    <div
+                      style={{ width: `${stratagemStore.secondsLeft * 10}%` }}
+                      className={`h-[30px] mlarge:h-[20px] ${getSpecificGameTimeColor()}`}
+                    ></div>
                   </div>
 
-                  <div
-                    style={{ width: `${stratagemStore.secondsLeft * 10}%` }}
-                    className={`h-[30px] ${getSpecificGameTimeColor()}`}
-                  ></div>
+                  {!mobileStore.isMobileDevice && (
+                    <span className="ml-[100px]">
+                      <p className="mt-[-12.5px] text-[#ffe702] text-[3rem] text-right font-['Insignia'] font-extrabold">
+                        {stratagemStore.currentScore}
+                      </p>
+
+                      <p className="mt-[-17.5px] text-[#ffffff] text-[2rem] text-right font-['Exo2'] font-semibold">
+                        Счет
+                      </p>
+
+                      <p className="text-[#ffffff] text-[1rem] text-right font-['Exo2'] font-semibold brightness-50">
+                        Ваш рекорд:{" "}
+                        <b className="font-['Insignia']">
+                          {stratagemStore.highestGameScore}
+                        </b>
+                      </p>
+                    </span>
+                  )}
                 </div>
 
-                <span className="ml-[100px]">
-                  <p className="mt-[-12.5px] text-[#ffe702] text-[3rem] text-right font-['Insignia'] font-extrabold">
-                    {stratagemStore.currentScore}
-                  </p>
-
-                  <p className="mt-[-17.5px] text-[#ffffff] text-[2rem] text-right font-['Exo2'] font-semibold">
-                    Счет
-                  </p>
-
-                  <p className="text-[#ffffff] text-[1rem] text-right font-['Exo2'] font-semibold brightness-50">
-                    Ваш рекорд:{" "}
-                    <b className="font-['Insignia']">
-                      {stratagemStore.highestGameScore}
-                    </b>
-                  </p>
-                </span>
-              </div>
+                {mobileStore.isMobileDevice && <div className=""></div>}
+              </>
             )}
 
             {stratagemStore.isRoundEnded && stratagemStore.isRoundLost && (
-              <div className="grid justify-items-center mt-[-100px] w-auto min-w-[550px]">
-                <h2 className="text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold">
+              <div className="grid justify-items-center mt-[-100px] mlarge:mt-[-10px] w-auto min-w-[550px] mlarge:min-w-[calc(100vw-70px)]">
+                <h2 className="text-[#ffffff] text-[2.5rem] mlarge:text-[2rem] font-['Exo2'] font-bold">
                   Игра окончена
                 </h2>
 
-                <div className="flex justify-between items-center mt-[30px] w-full h-auto">
-                  <span className="text-[#ffffff] text-[1.5rem] text-left font-['Exo2'] font-bold">
+                <div className="flex justify-between items-center mt-[30px] mlarge:mt-[20px] w-full h-auto">
+                  <span className="text-[#ffffff] text-[1.5rem] mlarge:text-[1.125rem] text-left font-['Exo2'] font-bold">
                     <p>ФИНАЛЬНЫЙ СЧЕТ</p>
 
-                    <p className="text-[#ffe702] text-[2rem]">
+                    <p className="text-[#ffe702] text-[2rem] mlarge:text-[1.375rem]">
                       {stratagemStore.finalGameScore}
                     </p>
                   </span>
 
-                  <span className="text-[#ffffff] text-[1.5rem] text-right font-['Exo2'] font-bold">
+                  <span className="text-[#ffffff] text-[1.5rem] mlarge:text-[1.125rem] text-right font-['Exo2'] font-bold">
                     <p>МАКС. РЕЗУЛЬТАТ</p>
 
-                    <p className="text-[2rem]">
+                    <p className="text-[2rem] mlarge:text-[1.375rem]">
                       {stratagemStore.highestGameScore}
                     </p>
                   </span>
@@ -333,43 +370,43 @@ const TheStratagemsTrainingContent = observer(() => {
             {stratagemStore.isRoundEnded &&
               stratagemStore.isResultsShowed &&
               !stratagemStore.isRoundLost && (
-                <div className="relative mt-[-100px] w-[600px] mlarge:w-full">
+                <div className="relative mt-[-100px] mlarge:mt-[20px] w-[600px] mlarge:w-full">
                   <div className="flex justify-between items-center w-full">
-                    <p className="text-[#ffffff] text-[2rem] font-['Exo2'] font-bold">
+                    <p className="text-[#ffffff] text-[2rem] mlarge:text-[1.375rem] mmedium:text-[1.25rem] msmall:text-[1.125rem] font-['Exo2'] font-bold">
                       Бонус за раунд
                     </p>
 
-                    <p className="mt-[5px] text-[#ffe702] text-[2.5rem] font-['Insignia'] font-bold">
+                    <p className="mt-[5px] text-[#ffe702] text-[2.5rem] mlarge:text-[1.75rem] mmedium:text-[1.625rem] msmall:text-[1.5rem] font-['Insignia'] font-bold">
                       {stratagemStore.currentRoundBonus}
                     </p>
                   </div>
 
                   <span className="flex justify-between items-center w-full">
-                    <p className="text-[#ffffff] text-[2rem] font-['Exo2'] font-bold">
+                    <p className="text-[#ffffff] text-[2rem] mlarge:text-[1.375rem] mmedium:text-[1.25rem] msmall:text-[1.125rem] font-['Exo2'] font-bold">
                       Бонус за время
                     </p>
 
-                    <p className="mt-[5px] text-[#ffe702] text-[2.5rem] font-['Insignia'] font-bold">
+                    <p className="mt-[5px] text-[#ffe702] text-[2.5rem] mlarge:text-[1.75rem] mmedium:text-[1.625rem] msmall:text-[1.5rem] font-['Insignia'] font-bold">
                       {stratagemStore.currentRoundTimeBonus.toFixed(0)}
                     </p>
                   </span>
 
                   <span className="flex justify-between items-center w-full">
-                    <p className="text-[#ffffff] text-[2rem] font-['Exo2'] font-bold">
+                    <p className="text-[#ffffff] text-[2rem] mlarge:text-[1.375rem] mmedium:text-[1.25rem] msmall:text-[1.125rem] font-['Exo2'] font-bold">
                       Бонус за идеал
                     </p>
 
-                    <p className="mt-[5px] text-[#ffe702] text-[2.5rem] font-['Insignia'] font-bold">
+                    <p className="mt-[5px] text-[#ffe702] text-[2.5rem] mlarge:text-[1.75rem] mmedium:text-[1.625rem] msmall:text-[1.5rem] font-['Insignia'] font-bold">
                       {stratagemStore.isClearInputRound ? "100" : "0"}
                     </p>
                   </span>
 
                   <span className="flex justify-between items-center w-full">
-                    <p className="text-[#ffffff] text-[2rem] font-['Exo2'] font-bold">
+                    <p className="text-[#ffffff] text-[2rem] mlarge:text-[1.375rem] mmedium:text-[1.25rem] msmall:text-[1.125rem] font-['Exo2'] font-bold">
                       Итоговый счет
                     </p>
 
-                    <p className="mt-[5px] text-[#ffe702] text-[2.5rem] font-['Insignia'] font-bold">
+                    <p className="mt-[5px] text-[#ffe702] text-[2.5rem] mlarge:text-[1.75rem] mmedium:text-[1.625rem] msmall:text-[1.5rem] font-['Insignia'] font-bold">
                       {stratagemStore.currentScore}
                     </p>
                   </span>

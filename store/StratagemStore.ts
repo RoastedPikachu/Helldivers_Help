@@ -2876,7 +2876,7 @@ class StratagemStore {
   })();
 
   handleGameStart = (event: KeyboardEvent) => {
-    if (event.keyCode === 38 || event.keyCode === 87) {
+    if ((event.keyCode === 38 || event.keyCode === 87) && !this.isGameStarted) {
       if (typeof document !== "undefined") {
         document.removeEventListener("keydown", this.handleGameStart);
       }
@@ -2955,9 +2955,7 @@ class StratagemStore {
 
       this.setNextStratagemsArray([]);
 
-      document.addEventListener("keydown", this.handleGameStart, {
-        once: true,
-      });
+      document.addEventListener("keydown", this.handleGameStart);
 
       clearInterval(this.secondsInterval);
     }, 50);
