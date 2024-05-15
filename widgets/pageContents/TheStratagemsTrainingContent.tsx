@@ -174,7 +174,7 @@ const TheStratagemsTrainingContent = observer(() => {
   return (
     <Observer>
       {() => (
-        <main className="mt-0 pt-[50px] mlarge:pt-[30px] bg-[#0e0e0e]">
+        <main className="mt-0 pt-[50px] mlarge:pt-[30px] deskWide:mx-0 deskWide:px-[calc((100%-1440px)/2)] max-w-full bg-[#0e0e0e]">
           <div className="flex justify-center items-center w-full h-[60px]">
             <h2 className="pageTitle">
               ТРЕНИРОВКА{" "}
