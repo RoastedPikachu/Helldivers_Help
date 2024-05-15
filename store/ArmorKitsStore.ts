@@ -364,6 +364,21 @@ class ArmorKitsStore {
         staminaRegen: 50,
         bonus: armorBonuses.fortification,
       },
+      {
+        id: 3,
+        imagePath: "/static/ArmorKits/Cw4ArcticRangerImage.webp",
+        type: "Легкая броня",
+        name: "CW-4 «Арктический рейнджер»",
+        obtainingType: obtainingType["5"],
+        obtainingMethod: "Покупается в боевом пропуске «Полярные патриоты»",
+        description:
+          "Оснащен разгрузочным поясом со множеством карманов, которые можно наполнить различными предметами: перочинными ножами, сувенирами из дома или интересными камнями.",
+        price: 112,
+        armorRating: 50,
+        speed: 550,
+        staminaRegen: 125,
+        bonus: armorBonuses.scout,
+      },
     ],
     superstore: [
       {
