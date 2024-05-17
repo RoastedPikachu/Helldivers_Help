@@ -2716,9 +2716,13 @@ class StratagemStore {
     this.changeIsClearInputRoundStatus(false);
 
     setTimeout(() => {
-      this.currentStratagem.directions.forEach(
-        (direction) => (direction.isPressed = false),
-      );
+      this.setCurrentStratagem({
+        ...this.currentStratagem,
+        directions: this.currentStratagem.directions.map((direction) => ({
+          ...direction,
+          isPressed: false,
+        })),
+      });
 
       this.changeIsStratagemInputFailStatus(false);
     }, 200);

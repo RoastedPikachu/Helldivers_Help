@@ -17,22 +17,16 @@ const TheStratagemsTrainingContent = observer(() => {
   const [finalY, setFinalY] = useState(0);
 
   function handleTouchStart(event: TouchEvent) {
-    event.preventDefault();
-
     setInitialX(event.touches[0].clientX);
     setInitialY(event.touches[0].clientY);
   }
 
   function handleTouchMove(event: TouchEvent) {
-    event.preventDefault();
-
     setFinalX(event.touches[0].clientX);
     setFinalY(event.touches[0].clientY);
   }
 
   function handleTouchEnd(event: TouchEvent) {
-    event.preventDefault();
-
     const deltaX = finalX - initialX;
     const deltaY = finalY - initialY;
 
@@ -207,10 +201,14 @@ const TheStratagemsTrainingContent = observer(() => {
 
   useEffect(() => {
     if (mobileStore.isMobileDevice && stratagemStore.isGameStarted) {
+      document.body.style.overflow = "hidden";
+
       document.addEventListener("touchstart", handleTouchStart);
       document.addEventListener("touchmove", handleTouchMove);
       document.addEventListener("touchend", handleTouchEnd);
-    } else {
+    } else if (mobileStore.isMobileDevice && !stratagemStore.isGameStarted) {
+      document.body.style.overflow = "auto";
+
       document.removeEventListener("touchstart", handleTouchStart);
       document.removeEventListener("touchmove", handleTouchMove);
       document.removeEventListener("touchend", handleTouchEnd);
@@ -297,6 +295,7 @@ const TheStratagemsTrainingContent = observer(() => {
                     <label className="relative inline-block mx-[20px] w-[84px] h-[38px]">
                       <input
                         type="checkbox"
+                        checked={!stratagemStore.isButtonsChoosen}
                         onClick={() =>
                           stratagemStore.changeIsButtonChoosenStatus(
                             !stratagemStore.isButtonsChoosen,
@@ -317,7 +316,7 @@ const TheStratagemsTrainingContent = observer(() => {
 
             {!stratagemStore.isRoundEnded && stratagemStore.isGameStarted && (
               <>
-                <div className="flex mlarge:block items-start mlarge:mt-[40px]">
+                <div className="flex mlarge:block items-start mlarge:mt-[30px]">
                   {mobileStore.isMobileDevice ? (
                     <div className="flex justify-between items-start w-full h-auto">
                       <span className="mr-[100px] mlarge:mr-0">
@@ -359,7 +358,7 @@ const TheStratagemsTrainingContent = observer(() => {
                     </span>
                   )}
 
-                  <div className="relative mlarge:mt-[10px] p-[4px] w-auto min-w-[735px] mlarge:min-w-[calc(100vw-20px)] h-auto">
+                  <div className="relative p-[4px] w-auto min-w-[735px] mlarge:min-w-[calc(100vw-20px)] h-auto">
                     <div className="flex items-center w-full h-[120px] mlarge:h-[70px]">
                       <img
                         src={`${stratagemStore.currentStratagem.iconPath}`}
@@ -403,7 +402,7 @@ const TheStratagemsTrainingContent = observer(() => {
 
                   {mobileStore.isMobileDevice && (
                     <div
-                      className={`w-full ${stratagemStore.isButtonsChoosen ? "grid justify-items-center mt-[30px] h-auto" : "flex justify-center items-center mt-[10px] h-[300px] bg-[#646464] border-[6px] border-[#2a2a2a]"}`}
+                      className={`w-full ${stratagemStore.isButtonsChoosen ? "grid justify-items-center mt-[30px] h-auto" : "flex justify-center items-center mt-[10px] h-[calc(100vw-314px)] bg-[#646464] border-[6px] border-[#2a2a2a]"}`}
                     >
                       {stratagemStore.isButtonsChoosen ? (
                         <>
