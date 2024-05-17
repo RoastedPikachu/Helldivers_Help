@@ -11,7 +11,8 @@ const TheTopPageBlock = () => {
     <section className="topPageSection">
       <TheHeader />
 
-      <RunningLine />
+      {typeof window !== "undefined" &&
+        !window.location.href.includes("/stratagemTraining") && <RunningLine />}
     </section>
   );
 };

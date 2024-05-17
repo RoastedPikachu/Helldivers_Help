@@ -17,16 +17,22 @@ const TheStratagemsTrainingContent = observer(() => {
   const [finalY, setFinalY] = useState(0);
 
   function handleTouchStart(event: TouchEvent) {
+    event.preventDefault();
+
     setInitialX(event.touches[0].clientX);
     setInitialY(event.touches[0].clientY);
   }
 
   function handleTouchMove(event: TouchEvent) {
+    event.preventDefault();
+
     setFinalX(event.touches[0].clientX);
     setFinalY(event.touches[0].clientY);
   }
 
-  function handleTouchEnd() {
+  function handleTouchEnd(event: TouchEvent) {
+    event.preventDefault();
+
     const deltaX = finalX - initialX;
     const deltaY = finalY - initialY;
 
@@ -200,25 +206,28 @@ const TheStratagemsTrainingContent = observer(() => {
   };
 
   useEffect(() => {
-    document.addEventListener("keydown", stratagemStore.handleGameStart);
-
-    if (mobileStore.isMobileDevice) {
+    if (mobileStore.isMobileDevice && stratagemStore.isGameStarted) {
       document.addEventListener("touchstart", handleTouchStart);
       document.addEventListener("touchmove", handleTouchMove);
       document.addEventListener("touchend", handleTouchEnd);
-    }
-
-    return () => {
-      document.removeEventListener("keydown", stratagemStore.handleGameStart);
+    } else {
       document.removeEventListener("touchstart", handleTouchStart);
       document.removeEventListener("touchmove", handleTouchMove);
       document.removeEventListener("touchend", handleTouchEnd);
+    }
+  }, [stratagemStore.isGameStarted]);
+
+  useEffect(() => {
+    document.addEventListener("keydown", stratagemStore.handleGameStart);
+
+    return () => {
+      document.removeEventListener("keydown", stratagemStore.handleGameStart);
     };
   }, []);
   return (
     <Observer>
       {() => (
-        <main className="mt-0 mlarge:mt-[115px] pt-[50px] mlarge:pt-[30px] deskWide:mx-0 deskWide:px-[calc((100%-1440px)/2)] max-w-full bg-[#0e0e0e]">
+        <main className="mt-0 mlarge:mt-[50px] pt-[50px] mlarge:pt-[30px] deskWide:mx-0 deskWide:px-[calc((100%-1440px)/2)] max-w-full bg-[#0e0e0e]">
           <div className="flex justify-center items-center w-full h-[60px]">
             <h2 className="pageTitle">
               ТРЕНИРОВКА{" "}
@@ -229,7 +238,7 @@ const TheStratagemsTrainingContent = observer(() => {
           <img
             src="/static/GeneralIcons/SuperEarthBackgroundIcon.svg"
             alt=""
-            className="absolute top-0 left-0 w-[700px] mlarge:w-full h-[450px] mlarge:h-[300px] mt-[calc(50vh-150px)] mlarge:mt-[calc(50vh-220px)] mx-[calc((100%-700px)/2)] mlarge:mx-0"
+            className="absolute top-0 mlarge:top-[-30px] left-0 w-[700px] mlarge:w-full h-[450px] mlarge:h-[300px] mt-[calc(50vh-150px)] mlarge:mt-[calc(50vh-220px)] mx-[calc((100%-700px)/2)] mlarge:mx-0"
           />
 
           <section className="relative flex justify-center items-center w-full h-[calc(100vh-310px)] mlarge:min-h-[calc(100vh-310px)] mlarge:h-auto">
@@ -394,7 +403,7 @@ const TheStratagemsTrainingContent = observer(() => {
 
                   {mobileStore.isMobileDevice && (
                     <div
-                      className={`mt-[30px] w-full ${stratagemStore.isButtonsChoosen ? "grid justify-items-center h-auto" : "flex justify-center items-center h-[100vw] bg-[#646464] border-[6px] border-[#2a2a2a]"}`}
+                      className={`w-full ${stratagemStore.isButtonsChoosen ? "grid justify-items-center mt-[30px] h-auto" : "flex justify-center items-center mt-[10px] h-[300px] bg-[#646464] border-[6px] border-[#2a2a2a]"}`}
                     >
                       {stratagemStore.isButtonsChoosen ? (
                         <>
