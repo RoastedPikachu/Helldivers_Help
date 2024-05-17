@@ -274,7 +274,7 @@ const TheStratagemsTrainingContent = observer(() => {
 
             {!stratagemStore.isRoundEnded && stratagemStore.isGameStarted && (
               <>
-                <div className="flex mlarge:block items-start mlarge:mt-[10px]">
+                <div className="flex mlarge:block items-start mlarge:mt-[20px]">
                   {mobileStore.isMobileDevice ? (
                     <div className="flex justify-between items-start w-full h-auto">
                       <span className="mr-[100px] mlarge:mr-0">
@@ -360,7 +360,8 @@ const TheStratagemsTrainingContent = observer(() => {
 
                   {mobileStore.isMobileDevice && (
                     <div
-                      className={`w-full ${stratagemStore.isButtonsChoosen ? "grid justify-items-center mt-[30px] h-auto" : "flex justify-center items-center mt-[10px] h-[calc(100vh-384px)] bg-[#646464] border-[6px] border-[#2a2a2a]"}`}
+                      id="SwipeBlock"
+                      className={`w-full ${stratagemStore.isButtonsChoosen ? "grid justify-items-center mt-[30px] h-auto" : "flex justify-center items-center mt-[10px] h-[280px] bg-[#646464] border-[6px] border-[#2a2a2a]"}`}
                     >
                       {stratagemStore.isButtonsChoosen ? (
                         <>
