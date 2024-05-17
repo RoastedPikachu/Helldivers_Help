@@ -5,6 +5,7 @@ import { observer, Observer } from "mobx-react-lite";
 
 import { stratagemStore } from "@/store/StratagemStore";
 import { mobileStore } from "@/store/MobileStore";
+import { simulateKeyPress } from "@/utils/generalFunctions";
 
 const TheStratagemsTrainingContent = observer(() => {
   const getSpecificGameTimeColor = () => {
@@ -185,7 +186,7 @@ const TheStratagemsTrainingContent = observer(() => {
             className="absolute top-0 left-0 w-[700px] mlarge:w-full h-[450px] mlarge:h-[300px] mt-[calc(50vh-150px)] mlarge:mt-[calc(50vh-220px)] mx-[calc((100%-700px)/2)] mlarge:mx-0"
           />
 
-          <section className="relative flex justify-center items-center w-full h-[calc(100vh-310px)]">
+          <section className="relative flex justify-center items-center w-full h-[calc(100vh-310px)] mlarge:min-h-[calc(100vh-310px)] mlarge:h-auto">
             {!stratagemStore.isGameStarted && !stratagemStore.isRoundEnded && (
               <div className="relative grid justify-items-center mlarge:mt-[50px] w-auto h-auto">
                 <svg
@@ -233,7 +234,7 @@ const TheStratagemsTrainingContent = observer(() => {
 
             {!stratagemStore.isRoundEnded && stratagemStore.isGameStarted && (
               <>
-                <div className="flex mlarge:block items-start">
+                <div className="flex mlarge:block items-start mlarge:mt-[40px]">
                   {mobileStore.isMobileDevice ? (
                     <div className="flex justify-between items-start w-full h-auto">
                       <span className="mr-[100px] mlarge:mr-0">
@@ -317,6 +318,56 @@ const TheStratagemsTrainingContent = observer(() => {
                     ></div>
                   </div>
 
+                  {mobileStore.isMobileDevice && (
+                    <div className="grid justify-items-center mt-[30px] w-full h-auto">
+                      <button
+                        onClick={() => simulateKeyPress(87)}
+                        className="flex justify-center items-center w-[70px] h-[70px] bg-[#00000066] rounded-[10px]"
+                      >
+                        <img
+                          src="/static/GeneralIcons/ArrowIcon.svg"
+                          alt=""
+                          className="w-[40px] h-[40px]"
+                        />
+                      </button>
+
+                      <div className="flex justify-between items-center mt-[10px] w-[210px]">
+                        <button
+                          onClick={() => simulateKeyPress(65)}
+                          className="flex justify-center items-center w-[70px] h-[70px] bg-[#00000066] rounded-[10px]"
+                        >
+                          <img
+                            src="/static/GeneralIcons/ArrowIcon.svg"
+                            alt=""
+                            className="w-[40px] h-[40px] -rotate-90"
+                          />
+                        </button>
+
+                        <button
+                          onClick={() => simulateKeyPress(68)}
+                          className="flex justify-center items-center w-[70px] h-[70px] bg-[#00000066] rounded-[10px]"
+                        >
+                          <img
+                            src="/static/GeneralIcons/ArrowIcon.svg"
+                            alt=""
+                            className="w-[40px] h-[40px] rotate-90"
+                          />
+                        </button>
+                      </div>
+
+                      <button
+                        onClick={() => simulateKeyPress(83)}
+                        className="flex justify-center items-center mt-[10px] w-[70px] h-[70px] bg-[#00000066] rounded-[10px]"
+                      >
+                        <img
+                          src="/static/GeneralIcons/ArrowIcon.svg"
+                          alt=""
+                          className="w-[40px] h-[40px] rotate-180"
+                        />
+                      </button>
+                    </div>
+                  )}
+
                   {!mobileStore.isMobileDevice && (
                     <span className="ml-[100px]">
                       <p className="mt-[-12.5px] text-[#ffe702] text-[3rem] text-right font-['Insignia'] font-extrabold">
@@ -336,8 +387,6 @@ const TheStratagemsTrainingContent = observer(() => {
                     </span>
                   )}
                 </div>
-
-                {mobileStore.isMobileDevice && <div className=""></div>}
               </>
             )}
 
