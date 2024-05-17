@@ -1,13 +1,50 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { observer, Observer } from "mobx-react-lite";
 
 import { stratagemStore } from "@/store/StratagemStore";
 import { mobileStore } from "@/store/MobileStore";
+
 import { simulateKeyPress } from "@/utils/generalFunctions";
 
+import "./TheStratagemsTrainingContent.css";
+
 const TheStratagemsTrainingContent = observer(() => {
+  const [initialX, setInitialX] = useState(0);
+  const [initialY, setInitialY] = useState(0);
+  const [finalX, setFinalX] = useState(0);
+  const [finalY, setFinalY] = useState(0);
+
+  function handleTouchStart(event: TouchEvent) {
+    setInitialX(event.touches[0].clientX);
+    setInitialY(event.touches[0].clientY);
+  }
+
+  function handleTouchMove(event: TouchEvent) {
+    setFinalX(event.touches[0].clientX);
+    setFinalY(event.touches[0].clientY);
+  }
+
+  function handleTouchEnd() {
+    const deltaX = finalX - initialX;
+    const deltaY = finalY - initialY;
+
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+      if (deltaX > 0) {
+        simulateKeyPress(68);
+      } else {
+        simulateKeyPress(65);
+      }
+    } else {
+      if (deltaY > 0) {
+        simulateKeyPress(83);
+      } else {
+        simulateKeyPress(87);
+      }
+    }
+  }
+
   const getSpecificGameTimeColor = () => {
     if (stratagemStore.secondsLeft > 2) {
       return "bg-[#ffe702]";
@@ -165,8 +202,17 @@ const TheStratagemsTrainingContent = observer(() => {
   useEffect(() => {
     document.addEventListener("keydown", stratagemStore.handleGameStart);
 
+    if (mobileStore.isMobileDevice) {
+      document.addEventListener("touchstart", handleTouchStart);
+      document.addEventListener("touchmove", handleTouchMove);
+      document.addEventListener("touchend", handleTouchEnd);
+    }
+
     return () => {
       document.removeEventListener("keydown", stratagemStore.handleGameStart);
+      document.removeEventListener("touchstart", handleTouchStart);
+      document.removeEventListener("touchmove", handleTouchMove);
+      document.removeEventListener("touchend", handleTouchEnd);
     };
   }, []);
   return (
@@ -215,6 +261,9 @@ const TheStratagemsTrainingContent = observer(() => {
                 </svg>
 
                 <div
+                  onClick={() =>
+                    mobileStore.isMobileDevice ? simulateKeyPress(87) : ""
+                  }
                   className={`mt-[10px] w-[100px] mlarge:w-[80px] h-[150px] mlarge:h-[120px] ${stratagemStore.isRequiredKeyPressed ? "bg-[#008000]" : "bg-[#7f1d1d]"} border-2 border-[#ffe702] duration-[400ms] ease-in-out`}
                 ></div>
 
@@ -226,9 +275,34 @@ const TheStratagemsTrainingContent = observer(() => {
                   {stratagemStore.highestGameScore}
                 </p>
 
-                <p className="mt-[20px] text-[#ffffff] text-[1.25rem] mlarge:text-[1.125rem] text-center brightness-75">
+                <p className="mt-[20px] text-[#ffffff] text-[1.25rem] mlarge:text-[1.125rem] text-center font-['Exo2'] brightness-75">
                   Используйте WASD или стрелки на клавиатуре для ввода стратагем
                 </p>
+
+                {mobileStore.isMobileDevice && (
+                  <div className="relative flex justify-center items-center mt-[20px] ml-[-12px] w-full h-auto">
+                    <p className="text-[#ffffff] text-[1.25rem] mlarge:text-[1.125rem] font-['Exo2'] font-bold">
+                      Кнопки
+                    </p>
+
+                    <label className="relative inline-block mx-[20px] w-[84px] h-[38px]">
+                      <input
+                        type="checkbox"
+                        onClick={() =>
+                          stratagemStore.changeIsButtonChoosenStatus(
+                            !stratagemStore.isButtonsChoosen,
+                          )
+                        }
+                        className="opacity-0 w-0 h-0 outline-none"
+                      />
+                      <span className="slider absolute top-0 bottom-0 left-0 right-0 rounded-[34px] bg-[#0e0e0e] border-2 border-[#ffe702] duration-[400ms] ease-in-out cursor-pointer"></span>
+                    </label>
+
+                    <p className="text-[#ffffff] text-[1.25rem] mlarge:text-[1.125rem] font-['Exo2'] font-bold">
+                      Свайп
+                    </p>
+                  </div>
+                )}
               </div>
             )}
 
@@ -319,52 +393,62 @@ const TheStratagemsTrainingContent = observer(() => {
                   </div>
 
                   {mobileStore.isMobileDevice && (
-                    <div className="grid justify-items-center mt-[30px] w-full h-auto">
-                      <button
-                        onClick={() => simulateKeyPress(87)}
-                        className="flex justify-center items-center w-[70px] h-[70px] bg-[#00000066] rounded-[10px]"
-                      >
-                        <img
-                          src="/static/GeneralIcons/ArrowIcon.svg"
-                          alt=""
-                          className="w-[40px] h-[40px]"
-                        />
-                      </button>
+                    <div
+                      className={`mt-[30px] w-full ${stratagemStore.isButtonsChoosen ? "grid justify-items-center h-auto" : "flex justify-center items-center h-[100vw] bg-[#646464] border-[6px] border-[#2a2a2a]"}`}
+                    >
+                      {stratagemStore.isButtonsChoosen ? (
+                        <>
+                          <button
+                            onClick={() => simulateKeyPress(87)}
+                            className="flex justify-center items-center w-[70px] h-[70px] bg-[#00000066] rounded-[10px]"
+                          >
+                            <img
+                              src="/static/GeneralIcons/ArrowIcon.svg"
+                              alt=""
+                              className="w-[40px] h-[40px]"
+                            />
+                          </button>
 
-                      <div className="flex justify-between items-center mt-[10px] w-[210px]">
-                        <button
-                          onClick={() => simulateKeyPress(65)}
-                          className="flex justify-center items-center w-[70px] h-[70px] bg-[#00000066] rounded-[10px]"
-                        >
-                          <img
-                            src="/static/GeneralIcons/ArrowIcon.svg"
-                            alt=""
-                            className="w-[40px] h-[40px] -rotate-90"
-                          />
-                        </button>
+                          <div className="flex justify-between items-center mt-[10px] w-[210px]">
+                            <button
+                              onClick={() => simulateKeyPress(65)}
+                              className="flex justify-center items-center w-[70px] h-[70px] bg-[#00000066] rounded-[10px]"
+                            >
+                              <img
+                                src="/static/GeneralIcons/ArrowIcon.svg"
+                                alt=""
+                                className="w-[40px] h-[40px] -rotate-90"
+                              />
+                            </button>
 
-                        <button
-                          onClick={() => simulateKeyPress(68)}
-                          className="flex justify-center items-center w-[70px] h-[70px] bg-[#00000066] rounded-[10px]"
-                        >
-                          <img
-                            src="/static/GeneralIcons/ArrowIcon.svg"
-                            alt=""
-                            className="w-[40px] h-[40px] rotate-90"
-                          />
-                        </button>
-                      </div>
+                            <button
+                              onClick={() => simulateKeyPress(68)}
+                              className="flex justify-center items-center w-[70px] h-[70px] bg-[#00000066] rounded-[10px]"
+                            >
+                              <img
+                                src="/static/GeneralIcons/ArrowIcon.svg"
+                                alt=""
+                                className="w-[40px] h-[40px] rotate-90"
+                              />
+                            </button>
+                          </div>
 
-                      <button
-                        onClick={() => simulateKeyPress(83)}
-                        className="flex justify-center items-center mt-[10px] w-[70px] h-[70px] bg-[#00000066] rounded-[10px]"
-                      >
-                        <img
-                          src="/static/GeneralIcons/ArrowIcon.svg"
-                          alt=""
-                          className="w-[40px] h-[40px] rotate-180"
-                        />
-                      </button>
+                          <button
+                            onClick={() => simulateKeyPress(83)}
+                            className="flex justify-center items-center mt-[10px] w-[70px] h-[70px] bg-[#00000066] rounded-[10px]"
+                          >
+                            <img
+                              src="/static/GeneralIcons/ArrowIcon.svg"
+                              alt=""
+                              className="w-[40px] h-[40px] rotate-180"
+                            />
+                          </button>
+                        </>
+                      ) : (
+                        <p className="w-[80%] text-[#2a2a2a] text-[3.25rem] text-center font-['Exo2'] font-bold">
+                          СВАЙПАЙТЕ ЗДЕСЬ
+                        </p>
+                      )}
                     </div>
                   )}
 

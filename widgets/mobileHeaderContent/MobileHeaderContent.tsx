@@ -65,6 +65,15 @@ const MobileHeaderContent = () => {
             </Link>
           </div>
 
+          <div className="flex justify-center items-center mt-[20px] w-full">
+            <Link
+              href="/stratagemTraining"
+              className="headerNavBlock_Link py-[10px] msmall:py-[5px] px-[15px] msmall:px-[10px] border-2 border-[#2cc388] rounded-[10px]"
+            >
+              ТРЕНИРОВКА СТРАТАГЕМ
+            </Link>
+          </div>
+
           <div className="relative grid gap-y-[15px] mt-[30px] z-[40]">
             {pages.map((page) => (
               <Link

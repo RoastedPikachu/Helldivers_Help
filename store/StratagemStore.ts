@@ -29,6 +29,7 @@ class StratagemStore {
   isClearInputRound = true;
   isStratagemInputSuccessful = false;
   isStratagemInputFail = false;
+  isButtonsChoosen = true;
 
   stratagems = {
     patrioticAdministrationCenter: [
@@ -2628,7 +2629,7 @@ class StratagemStore {
     if (typeof window !== "undefined") {
       makePersistable(this, {
         name: "StratagemsStore",
-        properties: ["highestGameScore"],
+        properties: ["highestGameScore", "isButtonsChoosen"],
         storage: window.localStorage,
       });
     }
@@ -2704,6 +2705,10 @@ class StratagemStore {
 
   changeIsStratagemInputFailStatus = (status: boolean) => {
     this.isStratagemInputFail = status;
+  };
+
+  changeIsButtonChoosenStatus = (status: boolean) => {
+    this.isButtonsChoosen = status;
   };
 
   restartStratagemInput = () => {
