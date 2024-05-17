@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 import { observer, Observer } from "mobx-react-lite";
 
@@ -11,40 +11,6 @@ import { simulateKeyPress } from "@/utils/generalFunctions";
 import "./TheStratagemsTrainingContent.css";
 
 const TheStratagemsTrainingContent = observer(() => {
-  const [initialX, setInitialX] = useState(0);
-  const [initialY, setInitialY] = useState(0);
-  const [finalX, setFinalX] = useState(0);
-  const [finalY, setFinalY] = useState(0);
-
-  function handleTouchStart(event: TouchEvent) {
-    setInitialX(event.touches[0].clientX);
-    setInitialY(event.touches[0].clientY);
-  }
-
-  function handleTouchMove(event: TouchEvent) {
-    setFinalX(event.touches[0].clientX);
-    setFinalY(event.touches[0].clientY);
-  }
-
-  function handleTouchEnd(event: TouchEvent) {
-    const deltaX = finalX - initialX;
-    const deltaY = finalY - initialY;
-
-    if (Math.abs(deltaX) > Math.abs(deltaY)) {
-      if (deltaX > 0) {
-        simulateKeyPress(68);
-      } else {
-        simulateKeyPress(65);
-      }
-    } else {
-      if (deltaY > 0) {
-        simulateKeyPress(83);
-      } else {
-        simulateKeyPress(87);
-      }
-    }
-  }
-
   const getSpecificGameTimeColor = () => {
     if (stratagemStore.secondsLeft > 2) {
       return "bg-[#ffe702]";
@@ -202,16 +168,8 @@ const TheStratagemsTrainingContent = observer(() => {
   useEffect(() => {
     if (mobileStore.isMobileDevice && stratagemStore.isGameStarted) {
       document.body.style.overflow = "hidden";
-
-      document.addEventListener("touchstart", handleTouchStart);
-      document.addEventListener("touchmove", handleTouchMove);
-      document.addEventListener("touchend", handleTouchEnd);
     } else if (mobileStore.isMobileDevice && !stratagemStore.isGameStarted) {
       document.body.style.overflow = "auto";
-
-      document.removeEventListener("touchstart", handleTouchStart);
-      document.removeEventListener("touchmove", handleTouchMove);
-      document.removeEventListener("touchend", handleTouchEnd);
     }
   }, [stratagemStore.isGameStarted]);
 
@@ -316,7 +274,7 @@ const TheStratagemsTrainingContent = observer(() => {
 
             {!stratagemStore.isRoundEnded && stratagemStore.isGameStarted && (
               <>
-                <div className="flex mlarge:block items-start mlarge:mt-[30px]">
+                <div className="flex mlarge:block items-start mlarge:mt-[10px]">
                   {mobileStore.isMobileDevice ? (
                     <div className="flex justify-between items-start w-full h-auto">
                       <span className="mr-[100px] mlarge:mr-0">
@@ -402,7 +360,7 @@ const TheStratagemsTrainingContent = observer(() => {
 
                   {mobileStore.isMobileDevice && (
                     <div
-                      className={`w-full ${stratagemStore.isButtonsChoosen ? "grid justify-items-center mt-[30px] h-auto" : "flex justify-center items-center mt-[10px] h-[calc(100vw-314px)] bg-[#646464] border-[6px] border-[#2a2a2a]"}`}
+                      className={`w-full ${stratagemStore.isButtonsChoosen ? "grid justify-items-center mt-[30px] h-auto" : "flex justify-center items-center mt-[10px] h-[calc(100vh-384px)] bg-[#646464] border-[6px] border-[#2a2a2a]"}`}
                     >
                       {stratagemStore.isButtonsChoosen ? (
                         <>

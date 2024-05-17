@@ -5,7 +5,8 @@ import { makePersistable } from "mobx-persist-store";
 import { stratagemTypes } from "@/data/stratagemTypes";
 
 import { Stratagem } from "@/utils/generalInterfaces";
-import { getRandomEntity } from "@/utils/generalFunctions";
+import { getRandomEntity, simulateKeyPress } from "@/utils/generalFunctions";
+import { mobileStore } from "@/store/MobileStore";
 
 class StratagemStore {
   currentStratagem = {} as Stratagem;
@@ -13,22 +14,33 @@ class StratagemStore {
 
   secondsInterval: ReturnType<typeof setInterval> | undefined;
 
+  initialX = 0;
+  initialY = 0;
+  finalX = 0;
+  finalY = 0;
+
   currentRoundNumber = 1;
   secondsLeft = 10;
+
   currentScore = 0;
   finalGameScore = 0;
   highestGameScore = 0;
+
   currentRoundBonus = 75;
   currentRoundTimeBonus = 0;
 
   isRequiredKeyPressed = false;
   isGameStarted = false;
   isResultsShowed = false;
+
   isRoundEnded = false;
   isRoundLost = false;
+
   isClearInputRound = true;
+
   isStratagemInputSuccessful = false;
   isStratagemInputFail = false;
+
   isButtonsChoosen = true;
 
   stratagems = {
@@ -2647,6 +2659,22 @@ class StratagemStore {
     this.secondsInterval = interval;
   };
 
+  setInitialX = (coordinate: number) => {
+    this.initialX = coordinate;
+  };
+
+  setInitialY = (coordinate: number) => {
+    this.initialY = coordinate;
+  };
+
+  setFinalX = (coordinate: number) => {
+    this.finalX = coordinate;
+  };
+
+  setFinalY = (coordinate: number) => {
+    this.finalY = coordinate;
+  };
+
   setCurrentRoundNumber = (roundNumber: number) => {
     this.currentRoundNumber = roundNumber;
   };
@@ -2884,10 +2912,45 @@ class StratagemStore {
     };
   })();
 
+  handleTouchStart = (event: TouchEvent) => {
+    this.setInitialX(event.touches[0].clientX);
+    this.setInitialY(event.touches[0].clientY);
+  };
+
+  handleTouchMove = (event: TouchEvent) => {
+    this.setFinalX(event.touches[0].clientX);
+    this.setFinalY(event.touches[0].clientY);
+  };
+
+  handleTouchEnd = () => {
+    const deltaX = this.finalX - this.initialX;
+    const deltaY = this.finalY - this.initialY;
+
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+      if (deltaX > 0) {
+        simulateKeyPress(68);
+      } else {
+        simulateKeyPress(65);
+      }
+    } else {
+      if (deltaY > 0) {
+        simulateKeyPress(83);
+      } else {
+        simulateKeyPress(87);
+      }
+    }
+  };
+
   handleGameStart = (event: KeyboardEvent) => {
     if ((event.keyCode === 38 || event.keyCode === 87) && !this.isGameStarted) {
       if (typeof document !== "undefined") {
         document.removeEventListener("keydown", this.handleGameStart);
+
+        if (mobileStore.isMobileDevice && !this.isButtonsChoosen) {
+          document.addEventListener("touchstart", this.handleTouchStart);
+          document.addEventListener("touchmove", this.handleTouchMove);
+          document.addEventListener("touchend", this.handleTouchEnd);
+        }
       }
 
       this.changeIsRequiredKeyPressedStatus(true);
@@ -2965,6 +3028,10 @@ class StratagemStore {
       this.setNextStratagemsArray([]);
 
       document.addEventListener("keydown", this.handleGameStart);
+
+      document.removeEventListener("touchstart", this.handleTouchStart);
+      document.removeEventListener("touchmove", this.handleTouchMove);
+      document.removeEventListener("touchend", this.handleTouchEnd);
 
       clearInterval(this.secondsInterval);
     }, 50);
