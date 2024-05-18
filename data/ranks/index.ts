@@ -95,14 +95,14 @@ export const ranks = [
   {
     id: 14,
     iconPath: "/static/Ranks/CommanderIcon.svg",
-    title: "Командующий",
+    title: "Командир",
     fromLevel: 80,
     xpCount: 332900,
   },
   {
     id: 15,
     iconPath: "/static/Ranks/GalacticCommanderIcon.svg",
-    title: "Галактический командующий",
+    title: "Галактический командир",
     fromLevel: 90,
     xpCount: 419400,
   },
@@ -123,14 +123,14 @@ export const ranks = [
   {
     id: 18,
     iconPath: "/static/Ranks/5StarGeneralIcon.svg",
-    title: "5-ти звездочный генерал",
+    title: "Пятизвездный генерал",
     fromLevel: 120,
     xpCount: 738900,
   },
   {
     id: 19,
     iconPath: "/static/Ranks/10StarGeneralIcon.svg",
-    title: "10-ти звездочный генерал",
+    title: "Десятизвездный генерал",
     fromLevel: 130,
     xpCount: 865400,
   },
