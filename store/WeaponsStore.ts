@@ -68,6 +68,23 @@ class WeaponsStore {
     },
     {
       id: 4,
+      imagePath: "/static/Weaponry/primary/Ar61Image.webp",
+      weaponType: weaponTypes.primary,
+      name: "AR-61 «Размягчитель»",
+      description:
+        "Крупнокалиберная штурмовая винтовка, отличающаяся небольшим магазином, но увеличенной останавливающей силой.",
+      price: 20,
+      damage: 60,
+      magsCount: 10,
+      roundsPerMag: 35,
+      totalRounds: 350,
+      recoil: 10,
+      fireRate: 600,
+      totalDamage: 21000,
+      dps: 475,
+    },
+    {
+      id: 5,
       imagePath: "/static/Weaponry/primary/R63CsDiligenceImage.webp",
       weaponType: weaponTypes.primary,
       name: "R-63 «Рвение»",
@@ -84,7 +101,7 @@ class WeaponsStore {
       dps: 521,
     },
     {
-      id: 5,
+      id: 6,
       imagePath: "/static/Weaponry/primary/R63CsImage.webp",
       weaponType: weaponTypes.primary,
       name: "R-63 «Рвение антиснайпер»",
@@ -101,7 +118,7 @@ class WeaponsStore {
       dps: 568,
     },
     {
-      id: 6,
+      id: 7,
       imagePath: "/static/Weaponry/primary/Br14Image.webp",
       weaponType: weaponTypes.primary,
       name: "BR-14 «Эксперт»",
@@ -118,7 +135,7 @@ class WeaponsStore {
       dps: 577,
     },
     {
-      id: 7,
+      id: 8,
       imagePath: "/static/Weaponry/primary/Smg37Image.webp",
       weaponType: weaponTypes.primary,
       name: "SMG-37 «Защитник»",
@@ -135,7 +152,24 @@ class WeaponsStore {
       dps: 519,
     },
     {
-      id: 8,
+      id: 9,
+      imagePath: "/static/Weaponry/primary/Smg72Image.webp",
+      weaponType: weaponTypes.primary,
+      name: "SMG-72 «Трамбовщик»",
+      description:
+        "Стреляет ударными патронами, оглушающими врагов. Скорострельность снижена по сравнению с другими пистолетами-пулеметами.",
+      price: 60,
+      damage: 65,
+      magsCount: 7,
+      roundsPerMag: 45,
+      totalRounds: 315,
+      recoil: 10,
+      fireRate: 475,
+      totalDamage: 20475,
+      dps: 426,
+    },
+    {
+      id: 10,
       imagePath: "/static/Weaponry/primary/Mp98Image.webp",
       weaponType: weaponTypes.primary,
       name: "MP-98 «Рыцарь»",
@@ -152,7 +186,7 @@ class WeaponsStore {
       dps: 871,
     },
     {
-      id: 9,
+      id: 11,
       imagePath: "/static/Weaponry/primary/Sg8Image.webp",
       weaponType: weaponTypes.primary,
       name: "SG-8 «Каратель»",
@@ -169,7 +203,7 @@ class WeaponsStore {
       dps: 447,
     },
     {
-      id: 10,
+      id: 12,
       imagePath: "/static/Weaponry/primary/Sg8SImage.webp",
       weaponType: weaponTypes.primary,
       name: "SG-8S «Крушила»",
@@ -186,7 +220,7 @@ class WeaponsStore {
       dps: 276,
     },
     {
-      id: 11,
+      id: 13,
       imagePath: "/static/Weaponry/primary/Sg8PImage.webp",
       weaponType: weaponTypes.primary,
       name: "SG-8P «Плазменный каратель»",
@@ -203,7 +237,7 @@ class WeaponsStore {
       dps: 116,
     },
     {
-      id: 12,
+      id: 14,
       imagePath: "/static/Weaponry/primary/Sg225Image.webp",
       weaponType: weaponTypes.primary,
       name: "SG-225 «Крушитель»",
@@ -220,7 +254,7 @@ class WeaponsStore {
       dps: 1263,
     },
     {
-      id: 13,
+      id: 15,
       imagePath: "/static/Weaponry/primary/Sg225IeImage.webp",
       weaponType: weaponTypes.primary,
       name: "SG-225IE «Зажигательный крушитель»",
@@ -237,7 +271,7 @@ class WeaponsStore {
       dps: 1011,
     },
     {
-      id: 14,
+      id: 16,
       imagePath: "/static/Weaponry/primary/Sg225SpImage.webp",
       weaponType: weaponTypes.primary,
       name: "SG-225SP «Крушитель ураган»",
@@ -254,7 +288,7 @@ class WeaponsStore {
       dps: 851,
     },
     {
-      id: 15,
+      id: 17,
       imagePath: "/static/Weaponry/primary/Jar5Image.webp",
       weaponType: weaponTypes.primary,
       name: "JAR-5 «Угнетатель»",
@@ -271,7 +305,7 @@ class WeaponsStore {
       dps: 955,
     },
     {
-      id: 16,
+      id: 18,
       imagePath: "/static/Weaponry/primary/Cb9Image.webp",
       weaponType: weaponTypes.primary,
       name: "CB-9 «Взрывной арбалет»",
@@ -288,7 +322,7 @@ class WeaponsStore {
       dps: 299,
     },
     {
-      id: 17,
+      id: 19,
       imagePath: "/static/Weaponry/primary/R36Image.webp",
       weaponType: weaponTypes.primary,
       name: "R-36 «Извергатель»",
@@ -305,7 +339,7 @@ class WeaponsStore {
       dps: 142,
     },
     {
-      id: 18,
+      id: 20,
       imagePath: "/static/Weaponry/primary/Las5Image.webp",
       weaponType: weaponTypes.primary,
       name: "LAS-5 «Коса»",
@@ -322,7 +356,7 @@ class WeaponsStore {
       dps: 276,
     },
     {
-      id: 19,
+      id: 21,
       imagePath: "/static/Weaponry/primary/Las16Image.webp",
       weaponType: weaponTypes.primary,
       name: "LAS-16 «Серп»",
@@ -339,7 +373,7 @@ class WeaponsStore {
       dps: 433,
     },
     {
-      id: 20,
+      id: 22,
       imagePath: "/static/Weaponry/primary/Plas1Image.webp",
       weaponType: weaponTypes.primary,
       name: "PLAS-1 «Поджигатель»",
@@ -356,7 +390,24 @@ class WeaponsStore {
       dps: 336,
     },
     {
-      id: 21,
+      id: 23,
+      imagePath: "/static/Weaponry/primary/Plas101Image.webp",
+      weaponType: weaponTypes.primary,
+      name: "PLAS-101 «Очиститель»",
+      description:
+        "Плазменная винтовка, выстреливающая заряд перегретого газа, который взрывается при ударе. Каждый выстрел требует полной предварительной зарядки.",
+      price: 80,
+      damage: 250,
+      magsCount: 6,
+      roundsPerMag: 15,
+      totalRounds: 90,
+      recoil: 20,
+      fireRate: 250,
+      totalDamage: 22500,
+      dps: 847,
+    },
+    {
+      id: 24,
       imagePath: "/static/Weaponry/primary/Arc12Image.webp",
       weaponType: weaponTypes.primary,
       name: "ARC-12 «Налетчик»",
@@ -459,6 +510,23 @@ class WeaponsStore {
       fireRate: 900,
       totalDamage: 4800,
       dps: 734,
+    },
+    {
+      id: 6,
+      imagePath: "/static/Weaponry/secondary/bbb.png",
+      weaponType: weaponTypes.secondary,
+      name: "P-113 «Вердикт»",
+      description:
+        "Полуавтоматический, действующий отводом газов пистолет P-113 использует 14-мм патрон «Быстрое заседание», крупнейший патрон центрального воспламенения для магазинных пистолетов.",
+      price: 60,
+      damage: 125,
+      magsCount: 8,
+      roundsPerMag: 10,
+      totalRounds: 80,
+      recoil: 40,
+      fireRate: 450,
+      totalDamage: 10000,
+      dps: 695,
     },
   ] as PrimaryOrSecondaryWeapon[];
 
