@@ -15,10 +15,28 @@ input:checked + .slider:before {
     background-color: #ffe702;
 }
 
-/*input:focus + .slider {*/
-/*    box-shadow: 0 0 1px #2196F3;*/
-/*}*/
-
 input:checked + .slider:before {
     transform: translateX(46px);
+}
+
+@media (max-width: 380px) {
+    .slider:before {
+        height: 22px;
+        width: 22px;
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(40px);
+    }
+}
+
+@media (max-width: 320px) {
+    .slider:before {
+        height: 18px;
+        width: 18px;
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(34px);
+    }
 }

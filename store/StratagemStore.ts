@@ -2879,6 +2879,8 @@ class StratagemStore {
           currentIndex = 0;
 
           if (this.nextStratagemsArray.length) {
+            currentIndex = 0;
+
             setTimeout(() => {
               this.currentStratagem.directions.forEach(
                 (direction) => (direction.isPressed = false),
