@@ -304,7 +304,7 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
               />
 
               <p className="rootActiveCampaignWidget_Bottom_Wrapper_Block_NumberText text-[#ffe702]">
-                {playersCount}
+                {playersCount.toLocaleString("ru")}
               </p>
             </div>
 

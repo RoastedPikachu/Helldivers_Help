@@ -51,7 +51,13 @@ const MajorOrderSection = () => {
             description: data.setting.overrideBrief,
             targetPlanets: orderPlanets,
             targetCount: data.setting.tasks[0].values[0],
+            targetKillsCount:
+              data.setting.tasks[0].values[2] > 100000
+                ? data.setting.tasks[0].values[2]
+                : 0,
             completedPlanets: data.progress,
+            currentKillsCount:
+              data.setting.tasks[0].values[2] > 100000 ? data.progress[0] : 0,
             reward: data.setting.reward.amount,
           });
         }
@@ -89,7 +95,9 @@ const MajorOrderSection = () => {
           description={majorOrder.description}
           targetPlanets={majorOrder.targetPlanets}
           targetCount={majorOrder.targetCount}
+          targetKillsCount={majorOrder.targetKillsCount}
           completedPlanets={majorOrder.completedPlanets}
+          currentKillsCount={majorOrder.currentKillsCount}
           reward={majorOrder.reward}
         />
       )}
