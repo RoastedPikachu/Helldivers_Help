@@ -30,11 +30,21 @@ interface SuperDestroyerStratagem extends Stratagem {
   reloadTime: number;
 }
 
+interface Stratagems {
+  patrioticAdministrationCenter: SuperDestroyerStratagem[];
+  orbitalCannon: SuperDestroyerStratagem[];
+  hangar: SuperDestroyerStratagem[];
+  bridge: SuperDestroyerStratagem[];
+  engineerBay: SuperDestroyerStratagem[];
+  roboticsWorkshop: SuperDestroyerStratagem[];
+  general: Stratagem[];
+}
+
 class StratagemStore {
   currentStratagem = {} as Stratagem | SuperDestroyerStratagem;
   nextStratagemsArray = [] as Stratagem[] | SuperDestroyerStratagem[];
 
-  stratagems: { [key: string]: SuperDestroyerStratagem[] | Stratagem[] } = {
+  stratagems: Stratagems = {
     patrioticAdministrationCenter: [
       {
         id: 1,
