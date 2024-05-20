@@ -1,36 +1,48 @@
 import { makeAutoObservable } from "mobx";
 
-import { makePersistable } from "mobx-persist-store";
-
 import { stratagemTypes } from "@/data/stratagemTypes";
 
-import { Stratagem } from "@/utils/generalInterfaces";
-import { getRandomEntity } from "@/utils/generalFunctions";
+import { StratagemType } from "@/utils/dataInterfaces";
+
+interface Direction {
+  id: number;
+  orientation: number;
+  isPressed: boolean;
+}
+
+interface Stratagem {
+  id: number;
+  iconPath: string;
+  type: StratagemType;
+  name: string;
+  description: string;
+  keyCodes: number[];
+  directions: Direction[];
+}
+
+interface SuperDestroyerStratagem extends Stratagem {
+  videoPath: string;
+  videoPreviewPath: string;
+  price: number;
+  obtainingLevel: number;
+  callTime: number;
+  useCount: number;
+  reloadTime: number;
+}
+
+// id: 1,
+//     iconPath: "/static/Stratagems/ReinforceIcon.png",
+//     type: stratagemTypes.mission,
+//     name: "Подкрепление",
+//     description:
+// "Подкрепление из 1 нового и готового к тяжелой битве Адского Десантника.",
+//     keyCodes: [87, 83, 68, 65, 87],
 
 class StratagemStore {
   currentStratagem = {} as Stratagem;
   nextStratagemsArray = [] as Stratagem[];
 
-  secondsInterval: ReturnType<typeof setInterval> | undefined;
-
-  currentRoundNumber = 1;
-  secondsLeft = 10;
-  currentScore = 0;
-  finalGameScore = 0;
-  highestGameScore = 0;
-  currentRoundBonus = 75;
-  currentRoundTimeBonus = 0;
-
-  isRequiredKeyPressed = false;
-  isGameStarted = false;
-  isResultsShowed = false;
-  isRoundEnded = false;
-  isRoundLost = false;
-  isClearInputRound = true;
-  isStratagemInputSuccessful = false;
-  isStratagemInputFail = false;
-
-  stratagems = {
+  stratagems: { [key: string]: SuperDestroyerStratagem[] | Stratagem[] } = {
     patrioticAdministrationCenter: [
       {
         id: 1,
@@ -2624,14 +2636,6 @@ class StratagemStore {
 
   constructor() {
     makeAutoObservable(this);
-
-    if (typeof window !== "undefined") {
-      makePersistable(this, {
-        name: "StratagemsStore",
-        properties: ["highestGameScore"],
-        storage: window.localStorage,
-      });
-    }
   }
 
   setCurrentStratagem = (stratagem: Stratagem) => {
@@ -2640,325 +2644,6 @@ class StratagemStore {
 
   setNextStratagemsArray = (stratagemsArray: Stratagem[]) => {
     this.nextStratagemsArray = stratagemsArray;
-  };
-
-  setSecondsInterval = (interval: ReturnType<typeof setInterval>) => {
-    this.secondsInterval = interval;
-  };
-
-  setCurrentRoundNumber = (roundNumber: number) => {
-    this.currentRoundNumber = roundNumber;
-  };
-
-  setSecondsLeftCount = (count: number) => {
-    this.secondsLeft = count;
-  };
-
-  setCurrentScore = (score: number) => {
-    this.currentScore = score;
-  };
-
-  setFinalScore = (score: number) => {
-    this.finalGameScore = score;
-  };
-
-  setHighestScore = (score: number) => {
-    this.highestGameScore = score;
-  };
-
-  setCurrentRoundBonus = (bonus: number) => {
-    this.currentRoundBonus = bonus;
-  };
-
-  setRoundTimeBonus = (bonus: number) => {
-    this.currentRoundTimeBonus = bonus;
-  };
-
-  changeIsRequiredKeyPressedStatus = (status: boolean) => {
-    this.isRequiredKeyPressed = status;
-  };
-
-  changeIsGameStartedStatus = (status: boolean) => {
-    this.isGameStarted = status;
-  };
-
-  changeIsResultsShowedStatus = (status: boolean) => {
-    this.isResultsShowed = status;
-  };
-
-  changeIsRoundEndedStatus = (status: boolean) => {
-    this.isRoundEnded = status;
-  };
-
-  changeIsRoundLostStatus = (status: boolean) => {
-    this.isRoundLost = status;
-  };
-
-  changeIsClearInputRoundStatus = (status: boolean) => {
-    this.isClearInputRound = status;
-  };
-
-  changeIsStratagemInputSuccessfulStatus = (status: boolean) => {
-    this.isStratagemInputSuccessful = status;
-  };
-
-  changeIsStratagemInputFailStatus = (status: boolean) => {
-    this.isStratagemInputFail = status;
-  };
-
-  restartStratagemInput = () => {
-    this.changeIsStratagemInputFailStatus(true);
-    this.changeIsClearInputRoundStatus(false);
-
-    setTimeout(() => {
-      this.currentStratagem.directions.forEach(
-        (direction) => (direction.isPressed = false),
-      );
-
-      this.changeIsStratagemInputFailStatus(false);
-    }, 200);
-  };
-
-  handleRoundEnd = () => {
-    this.changeIsRoundEndedStatus(true);
-    this.changeIsResultsShowedStatus(true);
-
-    this.setCurrentRoundNumber(this.currentRoundNumber + 1);
-
-    clearInterval(this.secondsInterval);
-
-    this.setRoundTimeBonus(10 * this.secondsLeft);
-    this.setCurrentScore(
-      this.currentScore +
-        this.currentRoundBonus +
-        Number(this.currentRoundTimeBonus.toFixed(0)),
-    );
-
-    if (this.isClearInputRound) {
-      this.setCurrentScore(this.currentScore + 100);
-    }
-
-    this.stratagems.patrioticAdministrationCenter =
-      this.stratagems.patrioticAdministrationCenter.map((stratagem) => {
-        return {
-          ...stratagem,
-          directions: stratagem.directions.map((direction) => {
-            return { ...direction, isPressed: false };
-          }),
-        };
-      });
-    this.stratagems.orbitalCannon = this.stratagems.orbitalCannon.map(
-      (stratagem) => {
-        return {
-          ...stratagem,
-          directions: stratagem.directions.map((direction) => {
-            return { ...direction, isPressed: false };
-          }),
-        };
-      },
-    );
-    this.stratagems.hangar = this.stratagems.hangar.map((stratagem) => {
-      return {
-        ...stratagem,
-        directions: stratagem.directions.map((direction) => {
-          return { ...direction, isPressed: false };
-        }),
-      };
-    });
-    this.stratagems.bridge = this.stratagems.bridge.map((stratagem) => {
-      return {
-        ...stratagem,
-        directions: stratagem.directions.map((direction) => {
-          return { ...direction, isPressed: false };
-        }),
-      };
-    });
-    this.stratagems.engineerBay = this.stratagems.engineerBay.map(
-      (stratagem) => {
-        return {
-          ...stratagem,
-          directions: stratagem.directions.map((direction) => {
-            return { ...direction, isPressed: false };
-          }),
-        };
-      },
-    );
-    this.stratagems.roboticsWorkshop = this.stratagems.roboticsWorkshop.map(
-      (stratagem) => {
-        return {
-          ...stratagem,
-          directions: stratagem.directions.map((direction) => {
-            return { ...direction, isPressed: false };
-          }),
-        };
-      },
-    );
-    this.stratagems.general = this.stratagems.general.map((stratagem) => {
-      return {
-        ...stratagem,
-        directions: stratagem.directions.map((direction) => {
-          return { ...direction, isPressed: false };
-        }),
-      };
-    });
-
-    setTimeout(() => this.changeIsResultsShowedStatus(false), 3000);
-
-    setTimeout(() => this.handleRoundStart(), 4500);
-  };
-
-  handleStratagemKeyPress = (() => {
-    let currentIndex = 0;
-
-    return (event: any) => {
-      event.preventDefault();
-
-      const targetKey = this.currentStratagem.keyCodes[currentIndex];
-      let keyCode = event.keyCode;
-
-      switch (event.keyCode) {
-        case 38:
-          keyCode = 87;
-          break;
-        case 40:
-          keyCode = 83;
-          break;
-        case 37:
-          keyCode = 65;
-          break;
-        case 39:
-          keyCode = 68;
-          break;
-      }
-
-      if (keyCode === targetKey) {
-        const updatedDirections = [...this.currentStratagem.directions];
-        updatedDirections[currentIndex].isPressed = true;
-
-        currentIndex++;
-
-        if (currentIndex === this.currentStratagem.keyCodes.length) {
-          this.setCurrentScore(this.currentScore + 20);
-          currentIndex = 0;
-
-          if (this.nextStratagemsArray.length) {
-            setTimeout(() => {
-              this.currentStratagem.directions.forEach(
-                (direction) => (direction.isPressed = false),
-              );
-
-              this.setCurrentStratagem(this.nextStratagemsArray[0]);
-              this.setNextStratagemsArray(this.nextStratagemsArray.slice(1));
-            }, 250);
-          } else {
-            this.handleRoundEnd();
-          }
-
-          if (this.secondsLeft > 9) {
-            this.setSecondsLeftCount(10);
-          } else {
-            this.setSecondsLeftCount(this.secondsLeft + 1);
-          }
-
-          this.changeIsStratagemInputSuccessfulStatus(true);
-        }
-
-        this.setCurrentStratagem({
-          ...this.currentStratagem,
-          directions: updatedDirections,
-        });
-      } else {
-        currentIndex = 0;
-
-        this.restartStratagemInput();
-      }
-    };
-  })();
-
-  handleGameStart = (event: KeyboardEvent) => {
-    if ((event.keyCode === 38 || event.keyCode === 87) && !this.isGameStarted) {
-      if (typeof document !== "undefined") {
-        document.removeEventListener("keydown", this.handleGameStart);
-      }
-
-      this.changeIsRequiredKeyPressedStatus(true);
-
-      setTimeout(() => this.changeIsGameStartedStatus(true), 300);
-
-      this.handleRoundStart();
-    }
-  };
-
-  handleRoundStart = () => {
-    this.changeIsRoundEndedStatus(false);
-    this.changeIsClearInputRoundStatus(true);
-
-    this.setSecondsLeftCount(10);
-    this.setRoundTimeBonus(0);
-
-    this.setCurrentRoundBonus(this.currentRoundBonus + 25);
-
-    const stratagemsArray = Object.values(this.stratagems)
-      .map((shipModule) => [...shipModule])
-      .flat();
-
-    this.setCurrentStratagem(
-      getRandomEntity(stratagemsArray, this.currentStratagem),
-    );
-
-    for (let i = 0; i < 4 + this.currentRoundNumber; i++) {
-      this.nextStratagemsArray.push(
-        getRandomEntity(stratagemsArray, this.currentStratagem),
-      );
-    }
-
-    this.setSecondsInterval(
-      setInterval(() => {
-        this.setSecondsLeftCount(this.secondsLeft - 0.01);
-
-        if (this.secondsLeft < 0) {
-          this.handleGameLost();
-        }
-      }, 10),
-    );
-
-    document.addEventListener("keydown", this.handleStratagemKeyPress);
-  };
-
-  handleGameLost = () => {
-    this.changeIsRoundEndedStatus(true);
-    this.changeIsRoundLostStatus(true);
-    this.changeIsStratagemInputSuccessfulStatus(false);
-
-    this.setCurrentRoundNumber(0);
-
-    this.setFinalScore(this.currentScore);
-
-    if (this.finalGameScore > this.highestGameScore) {
-      this.setHighestScore(this.finalGameScore);
-    }
-
-    setTimeout(() => {
-      this.changeIsRoundEndedStatus(false);
-      this.changeIsRoundLostStatus(false);
-
-      this.setFinalScore(0);
-    }, 5000);
-
-    setTimeout(() => {
-      this.setCurrentRoundNumber(1);
-      this.setCurrentRoundBonus(75);
-      this.setCurrentScore(0);
-
-      this.changeIsGameStartedStatus(false);
-      this.changeIsRequiredKeyPressedStatus(false);
-
-      this.setNextStratagemsArray([]);
-
-      document.addEventListener("keydown", this.handleGameStart);
-
-      clearInterval(this.secondsInterval);
-    }, 50);
   };
 }
 
