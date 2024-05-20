@@ -302,7 +302,7 @@ class StratagemTrainingStore {
       this.setFinalScore(0);
 
       document.addEventListener("keydown", this.handleGameStart);
-    }, 5000);
+    }, 3500);
 
     setTimeout(() => {
       this.setCurrentRoundNumber(1);
@@ -314,7 +314,7 @@ class StratagemTrainingStore {
 
       stratagemStore.setNextStratagemsArray([]);
 
-      document.addEventListener("keydown", this.handleGameStart);
+      document.removeEventListener("keydown", this.handleGameStart);
 
       document.removeEventListener("touchstart", this.handleTouchStart);
       document.removeEventListener("touchmove", this.handleTouchMove);
@@ -362,9 +362,10 @@ class StratagemTrainingStore {
     );
 
     for (let i = 0; i < 4 + this.currentRoundNumber; i++) {
-      stratagemStore.nextStratagemsArray.push(
+      stratagemStore.setNextStratagemsArray([
+        ...stratagemStore.nextStratagemsArray,
         getRandomEntity(stratagemsArray, currentStratagem),
-      );
+      ]);
     }
 
     this.setSecondsInterval(
@@ -375,6 +376,10 @@ class StratagemTrainingStore {
           this.handleGameLost();
         }
       }, 10),
+    );
+
+    Object.keys(stratagemStore.stratagems).map((key) =>
+      this.clearStratagemsDirections(key),
     );
 
     document.addEventListener("keydown", this.handleStratagemKeyPress);

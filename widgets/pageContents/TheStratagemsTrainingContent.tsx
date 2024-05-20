@@ -340,7 +340,7 @@ const TheStratagemsTrainingContent = observer(() => {
                     <div className="relative p-[4px] w-auto min-w-[735px] mlarge:min-w-[calc(100vw-20px)] h-auto">
                       <div className="flex items-center w-full h-[120px] mlarge:h-[70px] mmedium:h-[65px] msmall:h-[60px]">
                         <img
-                          src={`${stratagemStore.currentStratagem.iconPath}`}
+                          src={`${stratagemStore.currentStratagem?.iconPath}`}
                           alt=""
                           className="w-[120px] mlarge:w-[70px] mmedium:w-[65px] msmall:w-[60px] h-full"
                         />
@@ -350,7 +350,7 @@ const TheStratagemsTrainingContent = observer(() => {
                           .map((nextStratagem, index) => (
                             <img
                               key={index + 1}
-                              src={`${nextStratagem.iconPath}`}
+                              src={`${nextStratagem?.iconPath}`}
                               alt=""
                               className="ml-[40px] mlarge:ml-[17.5px] mmedium:ml-[15px] msmall:ml-[12.5px] w-[75px] mlarge:w-[45px] mmedium:w-[40px] msmall:w-[35px] h-[75px] mlarge:h-[45px] mmedium:h-[40px] msmall:h-[35px]"
                             />
