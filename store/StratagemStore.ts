@@ -4,7 +4,7 @@ import { stratagemTypes } from "@/data/stratagemTypes";
 
 import { StratagemType } from "@/utils/dataInterfaces";
 
-interface Direction {
+export interface Direction {
   id: number;
   orientation: number;
   isPressed: boolean;

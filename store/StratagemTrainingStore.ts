@@ -2,7 +2,7 @@ import { makeAutoObservable } from "mobx";
 
 import { makePersistable } from "mobx-persist-store";
 
-import { stratagemStore } from "@/store/StratagemStore";
+import { Direction, stratagemStore } from "@/store/StratagemStore";
 import { mobileStore } from "@/store/MobileStore";
 
 import { getRandomEntity, simulateKeyPress } from "@/utils/generalFunctions";
@@ -205,12 +205,13 @@ class StratagemTrainingStore {
     }
   };
 
-  clearStratagemsDirections = (propName: any) => {
+  clearStratagemsDirections = (propName: string) => {
     const { stratagems } = stratagemStore;
 
+    // @ts-ignore
     stratagems[propName] = stratagems[propName].map((stratagem) => ({
       ...stratagem,
-      directions: stratagem.directions.map((direction) => {
+      directions: stratagem.directions.map((direction: Direction) => {
         return { ...direction, isPressed: false };
       }),
     }));
