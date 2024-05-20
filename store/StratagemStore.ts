@@ -31,8 +31,8 @@ interface SuperDestroyerStratagem extends Stratagem {
 }
 
 class StratagemStore {
-  currentStratagem = {} as Stratagem;
-  nextStratagemsArray = [] as Stratagem[];
+  currentStratagem = {} as Stratagem | SuperDestroyerStratagem;
+  nextStratagemsArray = [] as Stratagem[] | SuperDestroyerStratagem[];
 
   stratagems: { [key: string]: SuperDestroyerStratagem[] | Stratagem[] } = {
     patrioticAdministrationCenter: [
