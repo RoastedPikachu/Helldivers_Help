@@ -7,6 +7,10 @@ import { mobileStore } from "@/store/MobileStore";
 import { stratagemStore } from "@/store/StratagemStore";
 import { stratagemTrainingStore } from "@/store/StratagemTrainingStore";
 
+import { simulateKeyPress } from "@/utils/generalFunctions";
+
+import "./TheStratagemsTrainingContent.css";
+
 const TheStratagemsTrainingContent = observer(() => {
   const getSpecificGameTimeColor = () => {
     if (stratagemTrainingStore.secondsLeft > 2) {
@@ -42,7 +46,7 @@ const TheStratagemsTrainingContent = observer(() => {
             viewBox="0 0 65 60"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={`mr-[30px] mlarge:mr-[12.5px] mlarge:w-[37.5px] mlarge:h-[37.5px] rotate-0 ${getArrowBrightness(direction)}`}
+            className={`mr-[30px] mlarge:mr-[12.5px] mlarge:w-[37.5px] mmedium:w-[35px] msmall:w-[32.5px] mlarge:h-[37.5px] mmedium:h-[35px] msmall:h-[32.5px] rotate-0 ${getArrowBrightness(direction)}`}
           >
             <g clipPath="url(#clip0_1_4)">
               <path
@@ -74,7 +78,7 @@ const TheStratagemsTrainingContent = observer(() => {
             viewBox="0 0 65 60"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={`mr-[30px] mlarge:mr-[12.5px] mlarge:w-[37.5px] mlarge:h-[37.5px] rotate-90 ${getArrowBrightness(direction)}`}
+            className={`mr-[30px] mlarge:mr-[12.5px] mlarge:w-[37.5px] mmedium:w-[35px] msmall:w-[32.5px] mlarge:h-[37.5px] mmedium:h-[35px] msmall:h-[32.5px] rotate-90 ${getArrowBrightness(direction)}`}
           >
             <g clipPath="url(#clip0_1_4)">
               <path
@@ -106,7 +110,7 @@ const TheStratagemsTrainingContent = observer(() => {
             viewBox="0 0 65 60"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={`mr-[30px] mlarge:mr-[12.5px] mlarge:w-[37.5px] mlarge:h-[37.5px] rotate-180 ${getArrowBrightness(direction)}`}
+            className={`mr-[30px] mlarge:mr-[12.5px] mlarge:w-[37.5px] mmedium:w-[35px] msmall:w-[32.5px] mlarge:h-[37.5px] mmedium:h-[35px] msmall:h-[32.5px] rotate-180 ${getArrowBrightness(direction)}`}
           >
             <g clipPath="url(#clip0_1_4)">
               <path
@@ -138,7 +142,7 @@ const TheStratagemsTrainingContent = observer(() => {
             viewBox="0 0 65 60"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={`mr-[30px] mlarge:mr-[12.5px] mlarge:w-[37.5px] mlarge:h-[37.5px] -rotate-90 ${getArrowBrightness(direction)}`}
+            className={`mr-[30px] mlarge:mr-[12.5px] mlarge:w-[37.5px] mmedium:w-[35px] msmall:w-[32.5px] mlarge:h-[37.5px] mmedium:h-[35px] msmall:h-[32.5px] -rotate-90 ${getArrowBrightness(direction)}`}
           >
             <g clipPath="url(#clip0_1_4)">
               <path
@@ -169,6 +173,21 @@ const TheStratagemsTrainingContent = observer(() => {
       "keydown",
       stratagemTrainingStore.handleGameStart,
     );
+    if (mobileStore.isMobileDevice && stratagemTrainingStore.isGameStarted) {
+      document.body.style.overflow = "hidden";
+    } else if (
+      mobileStore.isMobileDevice &&
+      !stratagemTrainingStore.isGameStarted
+    ) {
+      document.body.style.overflow = "auto";
+    }
+  }, [stratagemTrainingStore.isGameStarted]);
+
+  useEffect(() => {
+    document.addEventListener(
+      "keydown",
+      stratagemTrainingStore.handleGameStart,
+    );
 
     return () => {
       document.removeEventListener(
@@ -180,9 +199,9 @@ const TheStratagemsTrainingContent = observer(() => {
   return (
     <Observer>
       {() => (
-        <main className="mt-0 mlarge:mt-[115px] pt-[50px] mlarge:pt-[30px] deskWide:mx-0 deskWide:px-[calc((100%-1440px)/2)] max-w-full bg-[#0e0e0e]">
+        <main className="mt-0 mlarge:mt-[50px] pt-[50px] mlarge:pt-[30px] deskWide:mx-0 deskWide:px-[calc((100%-1440px)/2)] max-w-full bg-[#0e0e0e]">
           <div className="flex justify-center items-center w-full h-[60px]">
-            <h2 className="pageTitle">
+            <h2 className="pageTitle text-center">
               ТРЕНИРОВКА{" "}
               <b className="pageTitle_Bold !text-[#ffe702]">СТРАТАГЕМ</b>
             </h2>
@@ -191,10 +210,10 @@ const TheStratagemsTrainingContent = observer(() => {
           <img
             src="/static/GeneralIcons/SuperEarthBackgroundIcon.svg"
             alt=""
-            className="absolute top-0 left-0 w-[700px] mlarge:w-full h-[450px] mlarge:h-[300px] mt-[calc(50vh-150px)] mlarge:mt-[calc(50vh-220px)] mx-[calc((100%-700px)/2)] mlarge:mx-0"
+            className="absolute top-[-50px] deskWide:top-0 mlarge:top-[-30px] mmedium:top-[-10px] msmall:top-[10px] left-0 w-[700px] mlarge:w-full h-[450px] mlarge:h-[300px] mmedium:h-[260px] msmall:h-[230px] mt-[calc(50vh-150px)] mlarge:mt-[calc(50vh-220px)] mx-[calc((100%-700px)/2)] mlarge:mx-0"
           />
 
-          <section className="relative flex justify-center items-center w-full h-[calc(100vh-310px)]">
+          <section className="relative flex justify-center items-center w-full h-[calc(100vh-310px)] mlarge:min-h-[calc(100vh-310px)] mlarge:h-auto">
             {!stratagemTrainingStore.isGameStarted &&
               !stratagemTrainingStore.isRoundEnded && (
                 <div className="relative grid justify-items-center mlarge:mt-[50px] w-auto h-auto">
@@ -204,7 +223,7 @@ const TheStratagemsTrainingContent = observer(() => {
                     viewBox="0 0 65 60"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="mlarge:w-[45px] mlarge:h-[40px]"
+                    className="mlarge:w-[45px] mmedium:w-[40px] msmall:w-[35px] mlarge:h-[40px] mmedium:h-[35px] msmall:h-[30px]"
                   >
                     <g clipPath="url(#clip0_1_4)">
                       <path
@@ -224,50 +243,81 @@ const TheStratagemsTrainingContent = observer(() => {
                   </svg>
 
                   <div
-                    className={`mt-[10px] w-[100px] mlarge:w-[80px] h-[150px] mlarge:h-[120px] ${stratagemTrainingStore.isRequiredKeyPressed ? "bg-[#008000]" : "bg-[#7f1d1d]"} border-2 border-[#ffe702] duration-[400ms] ease-in-out`}
+                    onClick={() =>
+                      mobileStore.isMobileDevice ? simulateKeyPress(87) : ""
+                    }
+                    className={`mt-[10px] w-[100px] mlarge:w-[80px] mmedium:w-[70px] msmall:w-[60px] h-[150px] mlarge:h-[120px] mmedium:h-[100px] msmall:h-[90px] ${stratagemTrainingStore.isRequiredKeyPressed ? "bg-[#008000]" : "bg-[#7f1d1d]"} border-2 border-[#ffe702] duration-[400ms] ease-in-out`}
                   ></div>
 
-                  <p className="mt-[10px] w-full text-[#ffe702] text-[1.25rem] mlarge:text-[1.125rem] text-center font-['Exo2'] font-semibold">
+                  <p className="mt-[10px] w-full text-[#ffe702] text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] text-center font-['Exo2'] font-semibold">
                     НАЧАТЬ
                   </p>
 
-                  <p className="text-[#ffffff] text-[1rem] mlarge:text-[0.875rem] text-center font-['Insignia'] brightness-50">
+                  <p className="text-[#ffffff] text-[1rem] mlarge:text-[0.875rem] mmedium:text-[0.75rem] msmall:text-[0.625rem] text-center font-['Insignia'] brightness-50">
                     {stratagemTrainingStore.highestGameScore}
                   </p>
 
-                  <p className="mt-[20px] text-[#ffffff] text-[1.25rem] mlarge:text-[1.125rem] text-center brightness-75">
+                  <p className="mt-[20px] text-[#ffffff] text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] text-center font-['Exo2'] brightness-75">
                     Используйте WASD или стрелки на клавиатуре для ввода
                     стратагем
                   </p>
+
+                  {mobileStore.isMobileDevice && (
+                    <div className="relative flex justify-center items-center mt-[20px] ml-[-12px] w-full h-auto">
+                      <p className="text-[#ffffff] text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold">
+                        Кнопки
+                      </p>
+
+                      <label className="relative inline-block mx-[20px] w-[84px] mmedium:w-[74px] msmall:w-[64px] h-[38px] mmedium:h-[34px] msmall:h-[30px]">
+                        <input
+                          type="checkbox"
+                          defaultChecked={
+                            !stratagemTrainingStore.isButtonsChoosen
+                          }
+                          onClick={() =>
+                            stratagemTrainingStore.changeIsButtonChoosenStatus(
+                              !stratagemTrainingStore.isButtonsChoosen,
+                            )
+                          }
+                          className="opacity-0 w-0 h-0 outline-none"
+                        />
+                        <span className="slider absolute top-0 bottom-0 left-0 right-0 rounded-[34px] bg-[#0e0e0e] border-2 border-[#ffe702] duration-[400ms] ease-in-out cursor-pointer"></span>
+                      </label>
+
+                      <p className="text-[#ffffff] text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold">
+                        Свайп
+                      </p>
+                    </div>
+                  )}
                 </div>
               )}
 
             {!stratagemTrainingStore.isRoundEnded &&
               stratagemTrainingStore.isGameStarted && (
                 <>
-                  <div className="flex mlarge:block items-start">
+                  <div className="flex mlarge:block items-start mlarge:mt-[20px]">
                     {mobileStore.isMobileDevice ? (
                       <div className="flex justify-between items-start w-full h-auto">
                         <span className="mr-[100px] mlarge:mr-0">
-                          <p className="mt-[-10px] text-[#ffffff] text-[2rem] mlarge:text-[1.5rem] text-left font-['Exo2'] font-semibold">
+                          <p className="mt-[-10px] text-[#ffffff] text-[2rem] mlarge:text-[1.5rem] mmedium:text-[1.375rem] msmall:text-[1.25rem] text-left font-['Exo2'] font-semibold">
                             Раунд
                           </p>
 
-                          <p className="mt-[-7.5px] text-[#ffe702] text-[3rem] mlarge:text-[2rem] text-left font-['Insignia'] font-extrabold">
+                          <p className="mt-[-7.5px] text-[#ffe702] text-[3rem] mlarge:text-[2rem] mmedium:text-[1.75rem] msmall:text-[1.625rem] text-left font-['Insignia'] font-extrabold">
                             {stratagemTrainingStore.currentRoundNumber}
                           </p>
                         </span>
 
                         <span className="ml-[100px] mlarge:ml-0">
-                          <p className="mt-[-12.5px] text-[#ffe702] text-[3rem] mlarge:text-[2rem] text-right font-['Insignia'] font-extrabold">
+                          <p className="mt-[-12.5px] text-[#ffe702] text-[3rem] mlarge:text-[2rem] mmedium:text-[1.75rem] msmall:text-[1.625rem] text-right font-['Insignia'] font-extrabold">
                             {stratagemTrainingStore.currentScore}
                           </p>
 
-                          <p className="mt-[-17.5px] text-[#ffffff] text-[2rem] mlarge:text-[1.5rem] text-right font-['Exo2'] font-semibold">
+                          <p className="mt-[-17.5px] mmedium:mt-[-15px] msmall:mt-[-12.5px] text-[#ffffff] text-[2rem] mlarge:text-[1.5rem] mmedium:text-[1.375rem] msmall:text-[1.25rem] text-right font-['Exo2'] font-semibold">
                             Счет
                           </p>
 
-                          <p className="text-[#ffffff] text-[1rem] mlarge:text-[0.875rem] text-right font-['Exo2'] font-semibold brightness-50">
+                          <p className="mmedium:mt-[-5px] text-[#ffffff] text-[1rem] mlarge:text-[0.875rem] mmedium:text-[0.75rem] msmall:text-[0.625rem] text-right font-['Exo2'] font-semibold brightness-50">
                             Ваш рекорд:{" "}
                             <b className="font-['Insignia']">
                               {stratagemTrainingStore.highestGameScore}
@@ -287,12 +337,12 @@ const TheStratagemsTrainingContent = observer(() => {
                       </span>
                     )}
 
-                    <div className="relative mlarge:mt-[10px] p-[4px] w-auto min-w-[735px] mlarge:min-w-[calc(100vw-20px)] h-auto">
-                      <div className="flex items-center w-full h-[120px] mlarge:h-[70px]">
+                    <div className="relative p-[4px] w-auto min-w-[735px] mlarge:min-w-[calc(100vw-20px)] h-auto">
+                      <div className="flex items-center w-full h-[120px] mlarge:h-[70px] mmedium:h-[65px] msmall:h-[60px]">
                         <img
                           src={`${stratagemStore.currentStratagem.iconPath}`}
                           alt=""
-                          className="w-[120px] mlarge:w-[70px] h-full"
+                          className="w-[120px] mlarge:w-[70px] mmedium:w-[65px] msmall:w-[60px] h-full"
                         />
 
                         {stratagemStore.nextStratagemsArray
@@ -302,7 +352,7 @@ const TheStratagemsTrainingContent = observer(() => {
                               key={index + 1}
                               src={`${nextStratagem.iconPath}`}
                               alt=""
-                              className="ml-[40px] mlarge:ml-[17.5px] w-[75px] mlarge:w-[45px] h-[75px] mlarge:h-[45px]"
+                              className="ml-[40px] mlarge:ml-[17.5px] mmedium:ml-[15px] msmall:ml-[12.5px] w-[75px] mlarge:w-[45px] mmedium:w-[40px] msmall:w-[35px] h-[75px] mlarge:h-[45px] mmedium:h-[40px] msmall:h-[35px]"
                             />
                           ))}
                       </div>
@@ -310,12 +360,12 @@ const TheStratagemsTrainingContent = observer(() => {
                       <div
                         className={`flex items-center mt-[10px] w-full h-[50px] mlarge:h-[30px] ${getSpecificGameTimeColor()}`}
                       >
-                        <h3 className="w-full text-[#000000] text-[1.5rem] mlarge:text-[1rem] text-center font-['Exo2'] font-bold">
+                        <h3 className="w-full text-[#000000] text-[1.5rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] text-center font-['Exo2'] font-bold">
                           {stratagemStore.currentStratagem.name}
                         </h3>
                       </div>
 
-                      <div className="flex justify-center items-center pl-[30px] mlarge:pl-[12.5px] w-full h-[120px] mlarge:h-[70px]">
+                      <div className="flex justify-center items-center pl-[30px] mlarge:pl-[12.5px] mmedium:pl-[10px] w-full h-[120px] mlarge:h-[70px] mmedium:h-[65px] msmall:h-[60px]">
                         <div className="flex">
                           {stratagemStore.currentStratagem.directions?.map(
                             (direction) => getTargetInlineRotate(direction),
@@ -330,6 +380,67 @@ const TheStratagemsTrainingContent = observer(() => {
                         className={`h-[30px] mlarge:h-[20px] ${getSpecificGameTimeColor()}`}
                       ></div>
                     </div>
+
+                    {mobileStore.isMobileDevice && (
+                      <div
+                        id="SwipeBlock"
+                        className={`w-full ${stratagemTrainingStore.isButtonsChoosen ? "grid justify-items-center mt-[30px] h-auto" : "flex justify-center items-center mt-[10px] h-[280px] bg-[#646464] border-[6px] border-[#2a2a2a]"}`}
+                      >
+                        {stratagemTrainingStore.isButtonsChoosen ? (
+                          <>
+                            <button
+                              onClick={() => simulateKeyPress(87)}
+                              className="flex justify-center items-center w-[70px] h-[70px] bg-[#00000066] rounded-[10px]"
+                            >
+                              <img
+                                src="/static/GeneralIcons/ArrowIcon.svg"
+                                alt=""
+                                className="w-[40px] h-[40px]"
+                              />
+                            </button>
+
+                            <div className="flex justify-between items-center mt-[10px] w-[210px]">
+                              <button
+                                onClick={() => simulateKeyPress(65)}
+                                className="flex justify-center items-center w-[70px] h-[70px] bg-[#00000066] rounded-[10px]"
+                              >
+                                <img
+                                  src="/static/GeneralIcons/ArrowIcon.svg"
+                                  alt=""
+                                  className="w-[40px] h-[40px] -rotate-90"
+                                />
+                              </button>
+
+                              <button
+                                onClick={() => simulateKeyPress(68)}
+                                className="flex justify-center items-center w-[70px] h-[70px] bg-[#00000066] rounded-[10px]"
+                              >
+                                <img
+                                  src="/static/GeneralIcons/ArrowIcon.svg"
+                                  alt=""
+                                  className="w-[40px] h-[40px] rotate-90"
+                                />
+                              </button>
+                            </div>
+
+                            <button
+                              onClick={() => simulateKeyPress(83)}
+                              className="flex justify-center items-center mt-[10px] w-[70px] h-[70px] bg-[#00000066] rounded-[10px]"
+                            >
+                              <img
+                                src="/static/GeneralIcons/ArrowIcon.svg"
+                                alt=""
+                                className="w-[40px] h-[40px] rotate-180"
+                              />
+                            </button>
+                          </>
+                        ) : (
+                          <p className="w-[80%] text-[#2a2a2a] text-[3rem] mmedium:text-[2.75rem] msmall:text-[2.5rem] text-center font-['Exo2'] font-bold select-none">
+                            СВАЙПАЙТЕ ЗДЕСЬ
+                          </p>
+                        )}
+                      </div>
+                    )}
 
                     {!mobileStore.isMobileDevice && (
                       <span className="ml-[100px]">
@@ -350,31 +461,29 @@ const TheStratagemsTrainingContent = observer(() => {
                       </span>
                     )}
                   </div>
-
-                  {mobileStore.isMobileDevice && <div className=""></div>}
                 </>
               )}
 
             {stratagemTrainingStore.isRoundEnded &&
               stratagemTrainingStore.isRoundLost && (
                 <div className="grid justify-items-center mt-[-100px] mlarge:mt-[-10px] w-auto min-w-[550px] mlarge:min-w-[calc(100vw-70px)]">
-                  <h2 className="text-[#ffffff] text-[2.5rem] mlarge:text-[2rem] font-['Exo2'] font-bold">
+                  <h2 className="text-[#ffffff] text-[2.5rem] mlarge:text-[1.875rem] mmedium:text-[1.75rem] msmall:text-[1.625rem] font-['Exo2'] font-bold">
                     Игра окончена
                   </h2>
 
                   <div className="flex justify-between items-center mt-[30px] mlarge:mt-[20px] w-full h-auto">
-                    <span className="text-[#ffffff] text-[1.5rem] mlarge:text-[1.125rem] text-left font-['Exo2'] font-bold">
+                    <span className="text-[#ffffff] text-[1.5rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] text-left font-['Exo2'] font-bold">
                       <p>ФИНАЛЬНЫЙ СЧЕТ</p>
 
-                      <p className="text-[#ffe702] text-[2rem] mlarge:text-[1.375rem]">
+                      <p className="text-[#ffe702] text-[2rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem]">
                         {stratagemTrainingStore.finalGameScore}
                       </p>
                     </span>
 
-                    <span className="text-[#ffffff] text-[1.5rem] mlarge:text-[1.125rem] text-right font-['Exo2'] font-bold">
+                    <span className="text-[#ffffff] text-[1.5rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] text-right font-['Exo2'] font-bold">
                       <p>МАКС. РЕЗУЛЬТАТ</p>
 
-                      <p className="text-[2rem] mlarge:text-[1.375rem]">
+                      <p className="text-[2rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem]">
                         {stratagemTrainingStore.highestGameScore}
                       </p>
                     </span>
@@ -432,15 +541,15 @@ const TheStratagemsTrainingContent = observer(() => {
               !stratagemTrainingStore.isResultsShowed &&
               !stratagemTrainingStore.isRoundLost && (
                 <div className="grid justify-items-center mt-[-100px] w-auto">
-                  <h2 className="text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold">
+                  <h2 className="text-[#ffffff] text-[2.5rem] mlarge:text-[1.75rem] mmedium:text-[1.625rem] msmall:text-[1.5rem] font-['Exo2'] font-bold">
                     Приготовьтесь
                   </h2>
 
-                  <p className="mt-[30px] text-[#ffffff] text-[2.25rem] font-['Exo2'] font-bold">
+                  <p className="mt-[30px] text-[#ffffff] text-[2.25rem] mlarge:text-[1.5rem] mmedium:text-[1.375rem] msmall:text-[1.25rem] font-['Exo2'] font-bold">
                     Раунд
                   </p>
 
-                  <p className="text-[#ffe702] text-[3rem] font-['Insignia'] font-bold">
+                  <p className="text-[#ffe702] text-[3rem] mlarge:text-[2rem] mmedium:text-[1.875rem] msmall:text-[1.75rem] font-['Insignia'] font-bold">
                     {stratagemTrainingStore.currentRoundNumber}
                   </p>
                 </div>

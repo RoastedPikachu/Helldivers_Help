@@ -3,11 +3,17 @@ import { makeAutoObservable } from "mobx";
 import { makePersistable } from "mobx-persist-store";
 
 import { stratagemStore } from "@/store/StratagemStore";
+import { mobileStore } from "@/store/MobileStore";
 
-import { getRandomEntity } from "@/utils/generalFunctions";
+import { getRandomEntity, simulateKeyPress } from "@/utils/generalFunctions";
 
 class StratagemTrainingStore {
   secondsInterval: ReturnType<typeof setInterval> | undefined;
+
+  initialX = 0;
+  initialY = 0;
+  finalX = 0;
+  finalY = 0;
 
   currentStratagemKeyIndex = 0;
 
@@ -34,13 +40,15 @@ class StratagemTrainingStore {
   isStratagemInputSuccessful = false;
   isStratagemInputFail = false;
 
+  isButtonsChoosen = true;
+
   constructor() {
     makeAutoObservable(this);
 
     if (typeof window !== "undefined") {
       makePersistable(this, {
         name: "StratagemTrainingStore",
-        properties: ["highestGameScore"],
+        properties: ["highestGameScore", "isButtonsChoosen"],
         storage: window.localStorage,
       });
     }
@@ -50,6 +58,22 @@ class StratagemTrainingStore {
 
   setSecondsInterval = (interval: ReturnType<typeof setInterval>) => {
     this.secondsInterval = interval;
+  };
+
+  setInitialX = (coordinate: number) => {
+    this.initialX = coordinate;
+  };
+
+  setInitialY = (coordinate: number) => {
+    this.initialY = coordinate;
+  };
+
+  setFinalX = (coordinate: number) => {
+    this.finalX = coordinate;
+  };
+
+  setFinalY = (coordinate: number) => {
+    this.finalY = coordinate;
   };
 
   setCurrentStratagemKeyIndex = (index: number) => {
@@ -116,7 +140,40 @@ class StratagemTrainingStore {
     this.isStratagemInputFail = status;
   };
 
+  changeIsButtonChoosenStatus = (status: boolean) => {
+    this.isButtonsChoosen = status;
+  };
+
   // Методы с логикой игры
+
+  handleTouchStart = (event: TouchEvent) => {
+    this.setInitialX(event.touches[0].clientX);
+    this.setInitialY(event.touches[0].clientY);
+  };
+
+  handleTouchMove = (event: TouchEvent) => {
+    this.setFinalX(event.touches[0].clientX);
+    this.setFinalY(event.touches[0].clientY);
+  };
+
+  handleTouchEnd = () => {
+    const deltaX = this.finalX - this.initialX;
+    const deltaY = this.finalY - this.initialY;
+
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+      if (deltaX > 0) {
+        simulateKeyPress(68);
+      } else {
+        simulateKeyPress(65);
+      }
+    } else {
+      if (deltaY > 0) {
+        simulateKeyPress(83);
+      } else {
+        simulateKeyPress(87);
+      }
+    }
+  };
 
   clearCurrentStratagemDirections = () => {
     const { currentStratagem } = stratagemStore;
@@ -202,6 +259,19 @@ class StratagemTrainingStore {
     if ((event.keyCode === 38 || event.keyCode === 87) && !this.isGameStarted) {
       if (typeof document !== "undefined") {
         document.removeEventListener("keydown", this.handleGameStart);
+
+        if (mobileStore.isMobileDevice) {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+
+          if (!this.isButtonsChoosen) {
+            document.addEventListener("touchstart", this.handleTouchStart);
+            document.addEventListener("touchmove", this.handleTouchMove);
+            document.addEventListener("touchend", this.handleTouchEnd);
+          }
+        }
       }
 
       this.changeIsRequiredKeyPressedStatus(true);
@@ -243,6 +313,12 @@ class StratagemTrainingStore {
       this.changeIsRequiredKeyPressedStatus(false);
 
       stratagemStore.setNextStratagemsArray([]);
+
+      document.addEventListener("keydown", this.handleGameStart);
+
+      document.removeEventListener("touchstart", this.handleTouchStart);
+      document.removeEventListener("touchmove", this.handleTouchMove);
+      document.removeEventListener("touchend", this.handleTouchEnd);
 
       clearInterval(this.secondsInterval);
     }, 5);
@@ -305,6 +381,8 @@ class StratagemTrainingStore {
   };
 
   handleRoundWin = () => {
+    document.removeEventListener("keydown", this.handleStratagemKeyPress);
+
     this.changeIsRoundEndedStatus(true);
     this.changeIsResultsShowedStatus(true);
 

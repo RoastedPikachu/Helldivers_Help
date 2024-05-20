@@ -11,7 +11,9 @@ interface MajorOrderProps {
   description: string;
   targetPlanets: any[];
   targetCount: number;
+  targetKillsCount: number;
   completedPlanets: number[];
+  currentKillsCount: number;
   reward: number;
 }
 
@@ -21,11 +23,16 @@ const MajorOrder: React.FC<MajorOrderProps> = ({
   description,
   targetPlanets,
   targetCount,
+  targetKillsCount,
   completedPlanets,
+  currentKillsCount,
   reward,
 }) => {
   const getProgressWidth = () => {
-    return (completedPlanets[0] / targetCount) * 100;
+    if (targetCount && !targetPlanets.length) {
+      return (completedPlanets[0] / targetCount) * 100;
+    }
+    return (currentKillsCount / targetKillsCount) * 100;
   };
 
   return (
@@ -46,7 +53,7 @@ const MajorOrder: React.FC<MajorOrderProps> = ({
 
           <p className="rootMajorOrderWidget_TaskDescription">{title}</p>
 
-          {targetPlanets.length && (
+          {targetPlanets.length && targetKillsCount === 0 && (
             <div className="rootMajorOrderWidget_PlanetsBlock">
               {targetPlanets.map((targetPlanet: any, index) => (
                 <div
@@ -74,14 +81,22 @@ const MajorOrder: React.FC<MajorOrderProps> = ({
             </div>
           )}
 
-          {targetCount && !targetPlanets.length && (
-            <div className="rootMajorOrderWidget_LiberationProgress">
-              <div
-                style={{ width: `${getProgressWidth()}%` }}
-                className="rootMajorOrderWidget_LiberationProgress_ProgressBar"
-              ></div>
-            </div>
-          )}
+          {(targetCount && !targetPlanets.length) ||
+            (targetKillsCount !== 0 && (
+              <div className="rootMajorOrderWidget_LiberationProgress">
+                <div
+                  style={{ width: `${getProgressWidth()}%` }}
+                  className="rootMajorOrderWidget_LiberationProgress_ProgressBar mix-blend-[#000000]"
+                ></div>
+
+                {targetKillsCount !== 0 && (
+                  <p className="absolute top-[1.5px] right-[20px] text-[#2cc388] text-[1.125rem] font-['Insignia'] font-bold mix-blend-difference">
+                    {currentKillsCount.toLocaleString("ru")} /{" "}
+                    {targetKillsCount.toLocaleString("ru")}
+                  </p>
+                )}
+              </div>
+            ))}
 
           <div className="rootMajorOrderWidget_Bottom">
             <p className="rootMajorOrderWidget_Bottom_LeftText">Награда:</p>

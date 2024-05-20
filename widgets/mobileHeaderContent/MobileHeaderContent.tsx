@@ -40,7 +40,7 @@ const MobileHeaderContent = () => {
       </div>
 
       <div
-        className={`absolute top-[115px] msmall:top-[110px] w-full h-[calc(100vh+115px)] bg-[#01212f] duration-[400ms] ease-in-out overscroll-contain ${isAdditionalHeaderInfoOpened ? "left-0" : "left-[-100vw]"}`}
+        className={`absolute w-full bg-[#01212f] duration-[400ms] ease-in-out overflow-y-scroll overscroll-contain ${window.location.href.includes("/stratagemTraining") ? "top-[50px] h-[calc(100vh+50px)]" : "top-[115px] msmall:top-[110px] h-[calc(100vh+115px)] msmall:h-[calc(100vh+110px)]"} ${isAdditionalHeaderInfoOpened ? "left-0" : "left-[-100vw]"}`}
       >
         <nav className="mt-[30px] px-[calc(2.5%+10px)]">
           <div className="flex justify-between items-center w-full">
@@ -62,6 +62,15 @@ const MobileHeaderContent = () => {
               className="headerNavBlock_Link py-[10px] msmall:py-[5px] px-[15px] msmall:px-[10px] border-2 border-[#2cc388] rounded-[10px]"
             >
               ВОЙНА
+            </Link>
+          </div>
+
+          <div className="flex justify-center items-center mt-[20px] w-full">
+            <Link
+              href="/stratagemTraining"
+              className="headerNavBlock_Link py-[10px] msmall:py-[5px] px-[15px] msmall:px-[10px] border-2 border-[#2cc388] rounded-[10px]"
+            >
+              ТРЕНИРОВКА СТРАТАГЕМ
             </Link>
           </div>
 

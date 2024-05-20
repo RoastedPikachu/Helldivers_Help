@@ -30,14 +30,6 @@ interface SuperDestroyerStratagem extends Stratagem {
   reloadTime: number;
 }
 
-// id: 1,
-//     iconPath: "/static/Stratagems/ReinforceIcon.png",
-//     type: stratagemTypes.mission,
-//     name: "Подкрепление",
-//     description:
-// "Подкрепление из 1 нового и готового к тяжелой битве Адского Десантника.",
-//     keyCodes: [87, 83, 68, 65, 87],
-
 class StratagemStore {
   currentStratagem = {} as Stratagem;
   nextStratagemsArray = [] as Stratagem[];

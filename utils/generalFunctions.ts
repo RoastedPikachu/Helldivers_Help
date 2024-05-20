@@ -28,12 +28,20 @@ export const getTargetRotate = (direction: number) => {
     case 2:
       return "rotate-90";
     case 3:
-      console.log(direction);
       return "rotate-180";
     case 4:
-      console.log(direction);
       return "-rotate-90";
   }
+};
+
+export const simulateKeyPress = (keyCode: number) => {
+  const event = new KeyboardEvent("keydown", {
+    keyCode: keyCode,
+    bubbles: true,
+    cancelable: true,
+  });
+
+  document.dispatchEvent(event);
 };
 
 export const getEnemyFractionPageLink = () => {

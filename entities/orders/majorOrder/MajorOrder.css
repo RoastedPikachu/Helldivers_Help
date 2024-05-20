@@ -47,7 +47,7 @@
 }
 
 .rootMajorOrderWidget_LiberationProgress {
-    @apply relative mlarge:mt-[10px] mx-[20px] mlarge:mx-[10px] py-[2px] px-[2px] w-[calc(100%-40px)] mlarge:w-[calc(100%-20px)] h-[34px] mlarge:h-[30px] mmedium:h-[26px] msmall:h-[24px] border-2 border-[#2cc388];
+    @apply relative mt-[20px] mlarge:mt-[10px] mx-[20px] mlarge:mx-[10px] py-[2px] px-[2px] w-[calc(100%-40px)] mlarge:w-[calc(100%-20px)] h-[34px] mlarge:h-[30px] mmedium:h-[26px] msmall:h-[24px] border-2 border-[#2cc388];
 }
 
 .rootMajorOrderWidget_LiberationProgress_ProgressBar {
