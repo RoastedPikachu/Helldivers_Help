@@ -229,10 +229,13 @@ class StratagemTrainingStore {
   };
 
   handleCorrectStratagemInput = () => {
+    document.removeEventListener("keydown", this.handleStratagemKeyPress);
+
     this.setCurrentScore(this.currentScore + 20);
     this.setCurrentStratagemKeyIndex(0);
 
     if (stratagemStore.nextStratagemsArray.length) {
+      document.addEventListener("keydown", this.handleStratagemKeyPress);
       setTimeout(() => {
         stratagemStore.currentStratagem.directions.forEach(
           (direction) => (direction.isPressed = false),
@@ -321,7 +324,11 @@ class StratagemTrainingStore {
       document.removeEventListener("touchmove", this.handleTouchMove);
       document.removeEventListener("touchend", this.handleTouchEnd);
 
-      clearInterval(this.secondsInterval);
+      if (this.secondsInterval !== 0) {
+        clearInterval(this.secondsInterval);
+
+        this.setSecondsInterval(0);
+      }
     }, 5);
   };
 
@@ -362,22 +369,29 @@ class StratagemTrainingStore {
       getRandomEntity(stratagemsArray, currentStratagem),
     );
 
-    for (let i = 0; i < 4 + this.currentRoundNumber; i++) {
-      stratagemStore.setNextStratagemsArray([
-        ...stratagemStore.nextStratagemsArray,
-        getRandomEntity(stratagemsArray, currentStratagem),
-      ]);
+    if (
+      stratagemStore.nextStratagemsArray.length &&
+      stratagemStore.nextStratagemsArray.length === 4 + this.currentRoundNumber
+    ) {
+      for (let i = 0; i < 4 + this.currentRoundNumber; i++) {
+        stratagemStore.setNextStratagemsArray([
+          ...stratagemStore.nextStratagemsArray,
+          getRandomEntity(stratagemsArray, currentStratagem),
+        ]);
+      }
     }
 
-    this.setSecondsInterval(
-      setInterval(() => {
-        this.setSecondsLeftCount(this.secondsLeft - 0.01);
+    if (!this.secondsInterval) {
+      this.setSecondsInterval(
+        setInterval(() => {
+          this.setSecondsLeftCount(this.secondsLeft - 0.01);
 
-        if (this.secondsLeft < 0) {
-          this.handleGameLost();
-        }
-      }, 10),
-    );
+          if (this.secondsLeft <= 0) {
+            this.handleGameLost();
+          }
+        }, 10),
+      );
+    }
 
     Object.keys(stratagemStore.stratagems).map((key) =>
       this.clearStratagemsDirections(key),
@@ -387,14 +401,16 @@ class StratagemTrainingStore {
   };
 
   handleRoundWin = () => {
-    document.removeEventListener("keydown", this.handleStratagemKeyPress);
-
     this.changeIsRoundEndedStatus(true);
     this.changeIsResultsShowedStatus(true);
 
     this.setCurrentRoundNumber(this.currentRoundNumber + 1);
 
-    clearInterval(this.secondsInterval);
+    if (this.secondsInterval !== 0) {
+      clearInterval(this.secondsInterval);
+
+      this.setSecondsInterval(0);
+    }
 
     this.setRoundTimeBonus(10 * this.secondsLeft);
     this.setCurrentScore(
