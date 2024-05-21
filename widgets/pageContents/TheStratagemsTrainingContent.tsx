@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { observer, Observer } from "mobx-react-lite";
 
@@ -12,6 +12,8 @@ import { simulateKeyPress } from "@/utils/generalFunctions";
 import "./TheStratagemsTrainingContent.css";
 
 const TheStratagemsTrainingContent = observer(() => {
+  const [highestGameScore, setHighestGameScore] = useState(0);
+
   const getSpecificGameTimeColor = () => {
     if (stratagemTrainingStore.secondsLeft > 2) {
       return "bg-[#ffe702]";
@@ -184,6 +186,8 @@ const TheStratagemsTrainingContent = observer(() => {
   }, [stratagemTrainingStore.isGameStarted]);
 
   useEffect(() => {
+    setHighestGameScore(stratagemTrainingStore.highestGameScore);
+
     document.addEventListener(
       "keydown",
       stratagemTrainingStore.handleGameStart,
@@ -254,7 +258,7 @@ const TheStratagemsTrainingContent = observer(() => {
                   </p>
 
                   <p className="text-[#ffffff] text-[1rem] mlarge:text-[0.875rem] mmedium:text-[0.75rem] msmall:text-[0.625rem] text-center font-['Insignia'] brightness-50">
-                    {stratagemTrainingStore.highestGameScore}
+                    {highestGameScore}
                   </p>
 
                   <p className="mt-[20px] text-[#ffffff] text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] text-center font-['Exo2'] brightness-75">
@@ -361,7 +365,7 @@ const TheStratagemsTrainingContent = observer(() => {
                         className={`flex items-center mt-[10px] w-full h-[50px] mlarge:h-[30px] ${getSpecificGameTimeColor()}`}
                       >
                         <h3 className="w-full text-[#000000] text-[1.5rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] text-center font-['Exo2'] font-bold">
-                          {stratagemStore.currentStratagem.name}
+                          {stratagemStore.currentStratagem?.name}
                         </h3>
                       </div>
 
