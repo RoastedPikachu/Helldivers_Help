@@ -10,7 +10,7 @@ export interface Direction {
   isPressed: boolean;
 }
 
-interface Stratagem {
+export interface Stratagem {
   id: number;
   iconPath: string;
   type: StratagemType;
@@ -20,7 +20,7 @@ interface Stratagem {
   directions: Direction[];
 }
 
-interface SuperDestroyerStratagem extends Stratagem {
+export interface SuperDestroyerStratagem extends Stratagem {
   videoPath: string;
   videoPreviewPath: string;
   price: number;

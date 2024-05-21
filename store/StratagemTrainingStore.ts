@@ -2,13 +2,18 @@ import { makeAutoObservable } from "mobx";
 
 import { makePersistable } from "mobx-persist-store";
 
-import { Direction, stratagemStore } from "@/store/StratagemStore";
+import {
+  Direction,
+  Stratagem,
+  stratagemStore,
+  SuperDestroyerStratagem,
+} from "@/store/StratagemStore";
 import { mobileStore } from "@/store/MobileStore";
 
 import { getRandomEntity, simulateKeyPress } from "@/utils/generalFunctions";
 
 class StratagemTrainingStore {
-  secondsInterval: ReturnType<typeof setInterval> | undefined;
+  secondsInterval: ReturnType<typeof setInterval> | undefined | number;
 
   initialX = 0;
   initialY = 0;
@@ -37,7 +42,7 @@ class StratagemTrainingStore {
 
   isClearInputRound = true;
 
-  isStratagemInputSuccessful = false;
+  isStratagemInputSuccessful = true;
   isStratagemInputFail = false;
 
   isButtonsChoosen = true;
@@ -146,6 +151,8 @@ class StratagemTrainingStore {
 
   // Методы с логикой игры
 
+  // Методы отслеживания свайпов
+
   handleTouchStart = (event: TouchEvent) => {
     this.setInitialX(event.touches[0].clientX);
     this.setInitialY(event.touches[0].clientY);
@@ -175,17 +182,19 @@ class StratagemTrainingStore {
     }
   };
 
-  clearCurrentStratagemDirections = () => {
-    const { currentStratagem } = stratagemStore;
-
-    stratagemStore.setCurrentStratagem({
-      ...currentStratagem,
-      directions: currentStratagem.directions.map((direction) => ({
-        ...direction,
-        isPressed: false,
-      })),
-    });
+  setTouchEventListeners = () => {
+    document.addEventListener("touchstart", this.handleTouchStart);
+    document.addEventListener("touchmove", this.handleTouchMove);
+    document.addEventListener("touchend", this.handleTouchEnd);
   };
+
+  clearTouchEventListeners = () => {
+    document.removeEventListener("touchstart", this.handleTouchStart);
+    document.removeEventListener("touchmove", this.handleTouchMove);
+    document.removeEventListener("touchend", this.handleTouchEnd);
+  };
+
+  // Метод получения кода нажатой клавиши
 
   getKeyCode = (event: KeyboardEvent) => {
     switch (event.keyCode) {
@@ -205,27 +214,59 @@ class StratagemTrainingStore {
     }
   };
 
-  clearStratagemsDirections = (propName: string) => {
-    const { stratagems } = stratagemStore;
+  // Методы возвращения значений к первоначальным
 
-    // @ts-ignore
-    stratagems[propName] = stratagems[propName].map((stratagem) => ({
-      ...stratagem,
-      directions: stratagem.directions.map((direction: Direction) => {
-        return { ...direction, isPressed: false };
-      }),
-    }));
+  resetCurrentStratagemDirections = () => {
+    stratagemStore.currentStratagem = {
+      ...stratagemStore.currentStratagem,
+      directions: stratagemStore.currentStratagem.directions.map(
+        (direction: Direction) => {
+          return { ...direction, isPressed: false };
+        },
+      ),
+    };
   };
 
+  // TODO: Пофиксить работоспособность этой функции
+
+  resetStratagemsDirections = () => {
+    Object.keys(stratagemStore.stratagems).forEach((key) => {
+      // @ts-ignore
+      stratagemStore.stratagems[key] = stratagemStore.stratagems[key].map(
+        (stratagem: Stratagem | SuperDestroyerStratagem) => ({
+          ...stratagem,
+          directions: stratagem.directions.map((direction: Direction) => {
+            return { ...direction, isPressed: false };
+          }),
+        }),
+      );
+    });
+  };
+
+  // Методы, отвечающие за ввод стратагем и их логику
+
   restartStratagemInput = () => {
+    this.setCurrentStratagemKeyIndex(0);
+
     this.changeIsStratagemInputFailStatus(true);
     this.changeIsClearInputRoundStatus(false);
 
     setTimeout(() => {
-      this.clearCurrentStratagemDirections();
+      this.resetCurrentStratagemDirections();
 
       this.changeIsStratagemInputFailStatus(false);
     }, 150);
+  };
+
+  getNextStratagem = () => {
+    document.addEventListener("keydown", this.handleStratagemKeyPress);
+
+    this.resetStratagemsDirections();
+
+    stratagemStore.setCurrentStratagem(stratagemStore.nextStratagemsArray[0]);
+    stratagemStore.setNextStratagemsArray(
+      stratagemStore.nextStratagemsArray.slice(1),
+    );
   };
 
   handleCorrectStratagemInput = () => {
@@ -235,28 +276,16 @@ class StratagemTrainingStore {
     this.setCurrentStratagemKeyIndex(0);
 
     if (stratagemStore.nextStratagemsArray.length) {
-      document.addEventListener("keydown", this.handleStratagemKeyPress);
-      setTimeout(() => {
-        stratagemStore.currentStratagem.directions.forEach(
-          (direction) => (direction.isPressed = false),
-        );
+      this.secondsLeft > 9
+        ? this.setSecondsLeftCount(10)
+        : this.setSecondsLeftCount(this.secondsLeft + 1);
 
-        stratagemStore.setCurrentStratagem(
-          stratagemStore.nextStratagemsArray[0],
-        );
-        stratagemStore.setNextStratagemsArray(
-          stratagemStore.nextStratagemsArray.slice(1),
-        );
-      }, 250);
+      setTimeout(() => {
+        this.getNextStratagem();
+      }, 150);
     } else {
       this.handleRoundWin();
     }
-
-    this.secondsLeft > 9
-      ? this.setSecondsLeftCount(10)
-      : this.setSecondsLeftCount(this.secondsLeft + 1);
-
-    this.changeIsStratagemInputSuccessfulStatus(true);
   };
 
   handleGameStart = (event: KeyboardEvent) => {
@@ -271,9 +300,7 @@ class StratagemTrainingStore {
           });
 
           if (!this.isButtonsChoosen) {
-            document.addEventListener("touchstart", this.handleTouchStart);
-            document.addEventListener("touchmove", this.handleTouchMove);
-            document.addEventListener("touchend", this.handleTouchEnd);
+            this.setTouchEventListeners();
           }
         }
       }
@@ -287,6 +314,8 @@ class StratagemTrainingStore {
   };
 
   handleGameLost = () => {
+    this.resetStratagemsDirections();
+
     this.changeIsRoundEndedStatus(true);
     this.changeIsRoundLostStatus(true);
     this.changeIsStratagemInputSuccessfulStatus(false);
@@ -320,14 +349,12 @@ class StratagemTrainingStore {
 
       document.removeEventListener("keydown", this.handleGameStart);
 
-      document.removeEventListener("touchstart", this.handleTouchStart);
-      document.removeEventListener("touchmove", this.handleTouchMove);
-      document.removeEventListener("touchend", this.handleTouchEnd);
+      this.clearTouchEventListeners();
 
       if (this.secondsInterval !== 0) {
         clearInterval(this.secondsInterval);
 
-        this.setSecondsInterval(0);
+        this.setSecondsInterval(0 as unknown as ReturnType<typeof setInterval>);
       }
     }, 5);
   };
@@ -370,8 +397,8 @@ class StratagemTrainingStore {
     );
 
     if (
-      stratagemStore.nextStratagemsArray.length &&
-      stratagemStore.nextStratagemsArray.length === 4 + this.currentRoundNumber
+      !stratagemStore.nextStratagemsArray.length &&
+      stratagemStore.nextStratagemsArray.length !== this.currentRoundNumber + 4
     ) {
       for (let i = 0; i < 4 + this.currentRoundNumber; i++) {
         stratagemStore.setNextStratagemsArray([
@@ -393,10 +420,6 @@ class StratagemTrainingStore {
       );
     }
 
-    Object.keys(stratagemStore.stratagems).map((key) =>
-      this.clearStratagemsDirections(key),
-    );
-
     document.addEventListener("keydown", this.handleStratagemKeyPress);
   };
 
@@ -409,7 +432,7 @@ class StratagemTrainingStore {
     if (this.secondsInterval !== 0) {
       clearInterval(this.secondsInterval);
 
-      this.setSecondsInterval(0);
+      this.setSecondsInterval(0 as unknown as ReturnType<typeof setInterval>);
     }
 
     this.setRoundTimeBonus(10 * this.secondsLeft);
@@ -423,9 +446,7 @@ class StratagemTrainingStore {
       this.setCurrentScore(this.currentScore + 100);
     }
 
-    Object.keys(stratagemStore.stratagems).map((key) =>
-      this.clearStratagemsDirections(key),
-    );
+    this.resetStratagemsDirections();
 
     setTimeout(() => this.changeIsResultsShowedStatus(false), 3000);
 
@@ -442,8 +463,6 @@ class StratagemTrainingStore {
       if (this.getKeyCode(event) === targetKey) {
         this.handleCorrectKeyInput();
       } else {
-        this.setCurrentStratagemKeyIndex(0);
-
         this.restartStratagemInput();
       }
     };
