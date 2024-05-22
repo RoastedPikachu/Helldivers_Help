@@ -388,6 +388,13 @@ const TheStratagemsTrainingContent = observer(() => {
                     {mobileStore.isMobileDevice && (
                       <div
                         id="SwipeBlock"
+                        onTouchStart={(event) =>
+                          stratagemTrainingStore.handleTouchStart(event)
+                        }
+                        onTouchMove={(event) =>
+                          stratagemTrainingStore.handleTouchMove(event)
+                        }
+                        onTouchEnd={stratagemTrainingStore.handleTouchEnd}
                         className={`w-full ${stratagemTrainingStore.isButtonsChoosen ? "grid justify-items-center mt-[30px] h-auto" : "flex justify-center items-center mt-[10px] h-[280px] bg-[#646464] border-[6px] border-[#2a2a2a]"}`}
                       >
                         {stratagemTrainingStore.isButtonsChoosen ? (

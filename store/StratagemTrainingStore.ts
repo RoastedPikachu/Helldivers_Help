@@ -2,12 +2,7 @@ import { makeAutoObservable } from "mobx";
 
 import { makePersistable } from "mobx-persist-store";
 
-import {
-  Direction,
-  Stratagem,
-  stratagemStore,
-  SuperDestroyerStratagem,
-} from "@/store/StratagemStore";
+import { stratagemStore } from "@/store/StratagemStore";
 import { mobileStore } from "@/store/MobileStore";
 
 import { getRandomEntity, simulateKeyPress } from "@/utils/generalFunctions";
@@ -153,45 +148,35 @@ class StratagemTrainingStore {
 
   // Методы отслеживания свайпов
 
-  handleTouchStart = (event: TouchEvent) => {
+  handleTouchStart = (event: any) => {
     this.setInitialX(event.touches[0].clientX);
     this.setInitialY(event.touches[0].clientY);
   };
 
-  handleTouchMove = (event: TouchEvent) => {
+  handleTouchMove = (event: any) => {
     this.setFinalX(event.touches[0].clientX);
     this.setFinalY(event.touches[0].clientY);
   };
 
   handleTouchEnd = () => {
-    const deltaX = this.finalX - this.initialX;
-    const deltaY = this.finalY - this.initialY;
+    if (!this.isButtonsChoosen) {
+      const deltaX = this.finalX - this.initialX;
+      const deltaY = this.finalY - this.initialY;
 
-    if (Math.abs(deltaX) > Math.abs(deltaY)) {
-      if (deltaX > 0) {
-        simulateKeyPress(68);
+      if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        if (deltaX > 0) {
+          simulateKeyPress(68);
+        } else {
+          simulateKeyPress(65);
+        }
       } else {
-        simulateKeyPress(65);
-      }
-    } else {
-      if (deltaY > 0) {
-        simulateKeyPress(83);
-      } else {
-        simulateKeyPress(87);
+        if (deltaY > 0) {
+          simulateKeyPress(83);
+        } else {
+          simulateKeyPress(87);
+        }
       }
     }
-  };
-
-  setTouchEventListeners = () => {
-    document.addEventListener("touchstart", this.handleTouchStart);
-    document.addEventListener("touchmove", this.handleTouchMove);
-    document.addEventListener("touchend", this.handleTouchEnd);
-  };
-
-  clearTouchEventListeners = () => {
-    document.removeEventListener("touchstart", this.handleTouchStart);
-    document.removeEventListener("touchmove", this.handleTouchMove);
-    document.removeEventListener("touchend", this.handleTouchEnd);
   };
 
   // Метод получения кода нажатой клавиши
@@ -235,8 +220,6 @@ class StratagemTrainingStore {
     stratagemStore.setNextStratagemsArray([]);
 
     document.removeEventListener("keydown", this.handleGameStart);
-
-    this.clearTouchEventListeners();
 
     this.resetSecondsInterval();
   };
@@ -311,10 +294,6 @@ class StratagemTrainingStore {
             top: 0,
             behavior: "smooth",
           });
-
-          if (!this.isButtonsChoosen) {
-            this.setTouchEventListeners();
-          }
         }
       }
 
