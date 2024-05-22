@@ -3,6 +3,7 @@ import { makeAutoObservable } from "mobx";
 import { stratagemTypes } from "@/data/stratagemTypes";
 
 import { StratagemType } from "@/utils/dataInterfaces";
+import { stratagemTrainingStore } from "@/store/StratagemTrainingStore";
 
 export interface Direction {
   id: number;
@@ -2640,11 +2641,23 @@ class StratagemStore {
     makeAutoObservable(this);
   }
 
-  setCurrentStratagem = (stratagem: Stratagem) => {
-    this.currentStratagem = stratagem;
+  setCurrentStratagem = (
+    stratagem: Stratagem | SuperDestroyerStratagem,
+    isNewStratagem: boolean,
+  ) => {
+    isNewStratagem
+      ? (this.currentStratagem = {
+          ...stratagem,
+          directions: stratagem.directions.map((direction: Direction) => {
+            return { ...direction, isPressed: false };
+          }),
+        })
+      : (this.currentStratagem = stratagem);
   };
 
-  setNextStratagemsArray = (stratagemsArray: Stratagem[]) => {
+  setNextStratagemsArray = (
+    stratagemsArray: Stratagem[] | SuperDestroyerStratagem[],
+  ) => {
     this.nextStratagemsArray = stratagemsArray;
   };
 }

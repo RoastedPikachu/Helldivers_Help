@@ -214,36 +214,45 @@ class StratagemTrainingStore {
     }
   };
 
-  // Методы возвращения значений к первоначальным
+  // Методы, отвечающий за возврат состояния к первоначальному
 
-  resetCurrentStratagemDirections = () => {
-    stratagemStore.currentStratagem = {
-      ...stratagemStore.currentStratagem,
-      directions: stratagemStore.currentStratagem.directions.map(
-        (direction: Direction) => {
-          return { ...direction, isPressed: false };
-        },
-      ),
-    };
+  resetSecondsInterval = () => {
+    if (this.secondsInterval !== 0) {
+      clearInterval(this.secondsInterval);
+
+      this.setSecondsInterval(0 as unknown as ReturnType<typeof setInterval>);
+    }
   };
 
-  // TODO: Пофиксить работоспособность этой функции
+  resetGameVariables = () => {
+    this.setCurrentRoundNumber(1);
+    this.setCurrentRoundBonus(75);
+    this.setCurrentScore(0);
 
-  resetStratagemsDirections = () => {
-    Object.keys(stratagemStore.stratagems).forEach((key) => {
-      // @ts-ignore
-      stratagemStore.stratagems[key] = stratagemStore.stratagems[key].map(
-        (stratagem: Stratagem | SuperDestroyerStratagem) => ({
-          ...stratagem,
-          directions: stratagem.directions.map((direction: Direction) => {
-            return { ...direction, isPressed: false };
-          }),
-        }),
-      );
-    });
+    this.changeIsGameStartedStatus(false);
+    this.changeIsRequiredKeyPressedStatus(false);
+
+    stratagemStore.setNextStratagemsArray([]);
+
+    document.removeEventListener("keydown", this.handleGameStart);
+
+    this.clearTouchEventListeners();
+
+    this.resetSecondsInterval();
   };
 
-  // Методы, отвечающие за ввод стратагем и их логику
+  // Метод, отвечающий за закрытие игрового окна
+
+  closeGameResultsWindow = () => {
+    this.changeIsRoundEndedStatus(false);
+    this.changeIsRoundLostStatus(false);
+
+    this.setFinalScore(0);
+
+    document.addEventListener("keydown", this.handleGameStart);
+  };
+
+  // Методы, отвечающие за логику игры
 
   restartStratagemInput = () => {
     this.setCurrentStratagemKeyIndex(0);
@@ -252,18 +261,21 @@ class StratagemTrainingStore {
     this.changeIsClearInputRoundStatus(false);
 
     setTimeout(() => {
-      this.resetCurrentStratagemDirections();
+      this.setCurrentStratagemKeyIndex(0);
 
       this.changeIsStratagemInputFailStatus(false);
+
+      stratagemStore.setCurrentStratagem(stratagemStore.currentStratagem, true);
     }, 150);
   };
 
   getNextStratagem = () => {
     document.addEventListener("keydown", this.handleStratagemKeyPress);
 
-    this.resetStratagemsDirections();
-
-    stratagemStore.setCurrentStratagem(stratagemStore.nextStratagemsArray[0]);
+    stratagemStore.setCurrentStratagem(
+      stratagemStore.nextStratagemsArray[0],
+      true,
+    );
     stratagemStore.setNextStratagemsArray(
       stratagemStore.nextStratagemsArray.slice(1),
     );
@@ -273,6 +285,7 @@ class StratagemTrainingStore {
     document.removeEventListener("keydown", this.handleStratagemKeyPress);
 
     this.setCurrentScore(this.currentScore + 20);
+
     this.setCurrentStratagemKeyIndex(0);
 
     if (stratagemStore.nextStratagemsArray.length) {
@@ -314,8 +327,6 @@ class StratagemTrainingStore {
   };
 
   handleGameLost = () => {
-    this.resetStratagemsDirections();
-
     this.changeIsRoundEndedStatus(true);
     this.changeIsRoundLostStatus(true);
     this.changeIsStratagemInputSuccessfulStatus(false);
@@ -329,33 +340,11 @@ class StratagemTrainingStore {
     }
 
     setTimeout(() => {
-      this.changeIsRoundEndedStatus(false);
-      this.changeIsRoundLostStatus(false);
-
-      this.setFinalScore(0);
-
-      document.addEventListener("keydown", this.handleGameStart);
+      this.closeGameResultsWindow();
     }, 3500);
 
     setTimeout(() => {
-      this.setCurrentRoundNumber(1);
-      this.setCurrentRoundBonus(75);
-      this.setCurrentScore(0);
-
-      this.changeIsGameStartedStatus(false);
-      this.changeIsRequiredKeyPressedStatus(false);
-
-      stratagemStore.setNextStratagemsArray([]);
-
-      document.removeEventListener("keydown", this.handleGameStart);
-
-      this.clearTouchEventListeners();
-
-      if (this.secondsInterval !== 0) {
-        clearInterval(this.secondsInterval);
-
-        this.setSecondsInterval(0 as unknown as ReturnType<typeof setInterval>);
-      }
+      this.resetGameVariables();
     }, 5);
   };
 
@@ -371,10 +360,13 @@ class StratagemTrainingStore {
       this.handleCorrectStratagemInput();
     }
 
-    stratagemStore.setCurrentStratagem({
-      ...currentStratagem,
-      directions: updatedDirections,
-    });
+    stratagemStore.setCurrentStratagem(
+      {
+        ...currentStratagem,
+        directions: updatedDirections,
+      },
+      false,
+    );
   };
 
   handleRoundStart = () => {
@@ -394,7 +386,10 @@ class StratagemTrainingStore {
 
     stratagemStore.setCurrentStratagem(
       getRandomEntity(stratagemsArray, currentStratagem),
+      true,
     );
+
+    this.setCurrentStratagemKeyIndex(0);
 
     if (
       !stratagemStore.nextStratagemsArray.length &&
@@ -429,11 +424,7 @@ class StratagemTrainingStore {
 
     this.setCurrentRoundNumber(this.currentRoundNumber + 1);
 
-    if (this.secondsInterval !== 0) {
-      clearInterval(this.secondsInterval);
-
-      this.setSecondsInterval(0 as unknown as ReturnType<typeof setInterval>);
-    }
+    this.resetSecondsInterval();
 
     this.setRoundTimeBonus(10 * this.secondsLeft);
     this.setCurrentScore(
@@ -445,8 +436,6 @@ class StratagemTrainingStore {
     if (this.isClearInputRound) {
       this.setCurrentScore(this.currentScore + 100);
     }
-
-    this.resetStratagemsDirections();
 
     setTimeout(() => this.changeIsResultsShowedStatus(false), 3000);
 

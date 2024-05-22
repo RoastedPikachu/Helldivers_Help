@@ -214,7 +214,7 @@ const TheStratagemsTrainingContent = observer(() => {
           <img
             src="/static/GeneralIcons/SuperEarthBackgroundIcon.svg"
             alt=""
-            className="absolute top-[-50px] deskWide:top-0 mlarge:top-[-30px] mmedium:top-[-10px] msmall:top-[10px] left-0 w-[700px] mlarge:w-full h-[450px] mlarge:h-[300px] mmedium:h-[260px] msmall:h-[230px] mt-[calc(50vh-150px)] mlarge:mt-[calc(50vh-220px)] mx-[calc((100%-700px)/2)] mlarge:mx-0"
+            className="absolute top-[-10px] deskWide:top-[-50px] mlarge:top-[-30px] mmedium:top-[-10px] msmall:top-[10px] left-0 w-[700px] mlarge:w-full h-[450px] mlarge:h-[300px] mmedium:h-[260px] msmall:h-[230px] mt-[calc(50vh-150px)] mlarge:mt-[calc(50vh-220px)] mx-[calc((100%-700px)/2)] mlarge:mx-0"
           />
 
           <section className="relative flex justify-center items-center w-full h-[calc(100vh-310px)] mlarge:min-h-[calc(100vh-310px)] mlarge:h-auto">

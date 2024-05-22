@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 
 import { Observer, observer } from "mobx-react-lite";
 
@@ -44,4 +44,6 @@ const TheTopPageBlock = observer(() => {
   );
 });
 
-export default TheTopPageBlock;
+const MemoizedTheTopPageBlock = memo(TheTopPageBlock);
+
+export default MemoizedTheTopPageBlock;
