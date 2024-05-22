@@ -171,21 +171,6 @@ const TheStratagemsTrainingContent = observer(() => {
   };
 
   useEffect(() => {
-    document.addEventListener(
-      "keydown",
-      stratagemTrainingStore.handleGameStart,
-    );
-    if (mobileStore.isMobileDevice && stratagemTrainingStore.isGameStarted) {
-      document.body.style.overflow = "hidden";
-    } else if (
-      mobileStore.isMobileDevice &&
-      !stratagemTrainingStore.isGameStarted
-    ) {
-      document.body.style.overflow = "auto";
-    }
-  }, [stratagemTrainingStore.isGameStarted]);
-
-  useEffect(() => {
     setHighestGameScore(stratagemTrainingStore.highestGameScore);
 
     document.addEventListener(

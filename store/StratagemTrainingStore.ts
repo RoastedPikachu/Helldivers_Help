@@ -233,6 +233,10 @@ class StratagemTrainingStore {
     this.setFinalScore(0);
 
     document.addEventListener("keydown", this.handleGameStart);
+
+    if (mobileStore.isMobileDevice && !this.isButtonsChoosen) {
+      document.body.style.overflow = "auto";
+    }
   };
 
   // Методы, отвечающие за логику игры
@@ -294,6 +298,10 @@ class StratagemTrainingStore {
             top: 0,
             behavior: "smooth",
           });
+
+          if (!this.isButtonsChoosen) {
+            document.body.style.overflow = "hidden";
+          }
         }
       }
 
