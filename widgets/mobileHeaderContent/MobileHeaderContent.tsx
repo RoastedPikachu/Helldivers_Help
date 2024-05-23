@@ -1,9 +1,11 @@
 "use client";
 import React, { useState } from "react";
 
-import "./MobileHeaderContent.css";
 import Link from "next/link";
+
 import { pages } from "@/data/pages/pages";
+
+import "./MobileHeaderContent.css";
 
 const MobileHeaderContent = () => {
   const [

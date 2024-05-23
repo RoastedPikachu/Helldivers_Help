@@ -1,6 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
+import MediaQuery from "react-responsive";
+
 import { observer, Observer } from "mobx-react-lite";
 
 import { mobileStore } from "@/store/MobileStore";
@@ -251,7 +253,7 @@ const TheStratagemsTrainingContent = observer(() => {
                     стратагем
                   </p>
 
-                  {mobileStore.isMobileDevice && (
+                  <MediaQuery maxWidth={480}>
                     <div className="relative flex justify-center items-center mt-[20px] ml-[-12px] w-full h-auto">
                       <p className="text-[#ffffff] text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold">
                         Кнопки
@@ -277,7 +279,7 @@ const TheStratagemsTrainingContent = observer(() => {
                         Свайп
                       </p>
                     </div>
-                  )}
+                  </MediaQuery>
                 </div>
               )}
 
@@ -285,46 +287,50 @@ const TheStratagemsTrainingContent = observer(() => {
               stratagemTrainingStore.isGameStarted && (
                 <>
                   <div className="flex mlarge:block items-start mlarge:mt-[20px]">
-                    {mobileStore.isMobileDevice ? (
-                      <div className="flex justify-between items-start w-full h-auto">
-                        <span className="mr-[100px] mlarge:mr-0">
-                          <p className="mt-[-10px] text-[#ffffff] text-[2rem] mlarge:text-[1.5rem] mmedium:text-[1.375rem] msmall:text-[1.25rem] text-left font-['Exo2'] font-semibold">
-                            Раунд
-                          </p>
+                    <MediaQuery maxWidth={480}>
+                      {(matches) =>
+                        matches ? (
+                          <div className="flex justify-between items-start w-full h-auto">
+                            <span className="mr-[100px] mlarge:mr-0">
+                              <p className="mt-[-10px] text-[#ffffff] text-[2rem] mlarge:text-[1.5rem] mmedium:text-[1.375rem] msmall:text-[1.25rem] text-left font-['Exo2'] font-semibold">
+                                Раунд
+                              </p>
 
-                          <p className="mt-[-7.5px] text-[#ffe702] text-[3rem] mlarge:text-[2rem] mmedium:text-[1.75rem] msmall:text-[1.625rem] text-left font-['Insignia'] font-extrabold">
-                            {stratagemTrainingStore.currentRoundNumber}
-                          </p>
-                        </span>
+                              <p className="mt-[-7.5px] text-[#ffe702] text-[3rem] mlarge:text-[2rem] mmedium:text-[1.75rem] msmall:text-[1.625rem] text-left font-['Insignia'] font-extrabold">
+                                {stratagemTrainingStore.currentRoundNumber}
+                              </p>
+                            </span>
 
-                        <span className="ml-[100px] mlarge:ml-0">
-                          <p className="mt-[-12.5px] text-[#ffe702] text-[3rem] mlarge:text-[2rem] mmedium:text-[1.75rem] msmall:text-[1.625rem] text-right font-['Insignia'] font-extrabold">
-                            {stratagemTrainingStore.currentScore}
-                          </p>
+                            <span className="ml-[100px] mlarge:ml-0">
+                              <p className="mt-[-12.5px] text-[#ffe702] text-[3rem] mlarge:text-[2rem] mmedium:text-[1.75rem] msmall:text-[1.625rem] text-right font-['Insignia'] font-extrabold">
+                                {stratagemTrainingStore.currentScore}
+                              </p>
 
-                          <p className="mt-[-17.5px] mmedium:mt-[-15px] msmall:mt-[-12.5px] text-[#ffffff] text-[2rem] mlarge:text-[1.5rem] mmedium:text-[1.375rem] msmall:text-[1.25rem] text-right font-['Exo2'] font-semibold">
-                            Счет
-                          </p>
+                              <p className="mt-[-17.5px] mmedium:mt-[-15px] msmall:mt-[-12.5px] text-[#ffffff] text-[2rem] mlarge:text-[1.5rem] mmedium:text-[1.375rem] msmall:text-[1.25rem] text-right font-['Exo2'] font-semibold">
+                                Счет
+                              </p>
 
-                          <p className="mmedium:mt-[-5px] text-[#ffffff] text-[1rem] mlarge:text-[0.875rem] mmedium:text-[0.75rem] msmall:text-[0.625rem] text-right font-['Exo2'] font-semibold brightness-50">
-                            Ваш рекорд:{" "}
-                            <b className="font-['Insignia']">
-                              {stratagemTrainingStore.highestGameScore}
-                            </b>
-                          </p>
-                        </span>
-                      </div>
-                    ) : (
-                      <span className="mr-[100px]">
-                        <p className="mt-[-10px] text-[#ffffff] text-[2rem] mlarge:text-[1.5rem] text-left font-['Exo2'] font-semibold">
-                          Раунд
-                        </p>
+                              <p className="mmedium:mt-[-5px] text-[#ffffff] text-[1rem] mlarge:text-[0.875rem] mmedium:text-[0.75rem] msmall:text-[0.625rem] text-right font-['Exo2'] font-semibold brightness-50">
+                                Ваш рекорд:{" "}
+                                <b className="font-['Insignia']">
+                                  {stratagemTrainingStore.highestGameScore}
+                                </b>
+                              </p>
+                            </span>
+                          </div>
+                        ) : (
+                          <span className="mr-[100px]">
+                            <p className="mt-[-10px] text-[#ffffff] text-[2rem] mlarge:text-[1.5rem] text-left font-['Exo2'] font-semibold">
+                              Раунд
+                            </p>
 
-                        <p className="mt-[-7.5px] text-[#ffe702] text-[3rem] mlarge:text-[2rem] text-left font-['Insignia'] font-extrabold">
-                          {stratagemTrainingStore.currentRoundNumber}
-                        </p>
-                      </span>
-                    )}
+                            <p className="mt-[-7.5px] text-[#ffe702] text-[3rem] mlarge:text-[2rem] text-left font-['Insignia'] font-extrabold">
+                              {stratagemTrainingStore.currentRoundNumber}
+                            </p>
+                          </span>
+                        )
+                      }
+                    </MediaQuery>
 
                     <div className="relative p-[4px] w-auto min-w-[735px] mlarge:min-w-[calc(100vw-20px)] h-auto">
                       <div className="flex items-center w-full h-[120px] mlarge:h-[70px] mmedium:h-[65px] msmall:h-[60px]">
@@ -370,7 +376,7 @@ const TheStratagemsTrainingContent = observer(() => {
                       ></div>
                     </div>
 
-                    {mobileStore.isMobileDevice && (
+                    <MediaQuery maxWidth={480}>
                       <div
                         id="SwipeBlock"
                         onTouchStart={(event) =>
@@ -436,9 +442,9 @@ const TheStratagemsTrainingContent = observer(() => {
                           </p>
                         )}
                       </div>
-                    )}
+                    </MediaQuery>
 
-                    {!mobileStore.isMobileDevice && (
+                    <MediaQuery minWidth={480}>
                       <span className="ml-[100px]">
                         <p className="mt-[-12.5px] text-[#ffe702] text-[3rem] text-right font-['Insignia'] font-extrabold">
                           {stratagemTrainingStore.currentScore}
@@ -455,7 +461,7 @@ const TheStratagemsTrainingContent = observer(() => {
                           </b>
                         </p>
                       </span>
-                    )}
+                    </MediaQuery>
                   </div>
                 </>
               )}

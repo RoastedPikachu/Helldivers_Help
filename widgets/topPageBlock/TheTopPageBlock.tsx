@@ -1,5 +1,5 @@
 "use client";
-import React, { memo, useEffect, useState } from "react";
+import React, { useMemo } from "react";
 
 import { Observer, observer } from "mobx-react-lite";
 
@@ -12,25 +12,12 @@ import RunningLine from "@/shared/runningLine/RunningLine";
 import "./TheTopPageBlock.css";
 
 const TheTopPageBlock = observer(() => {
-  const [isRunningLineShowed, changeIsRunningLineShowedStatus] = useState(true);
-
-  useEffect(() => {
-    let runningLineShowedStatusInterval: ReturnType<typeof setInterval>;
-
+  const isRunningLineShowed = useMemo(() => {
     if (typeof window !== "undefined" && mobileStore.isMobileDevice) {
-      runningLineShowedStatusInterval = setInterval(
-        () =>
-          changeIsRunningLineShowedStatus(
-            !window.location.href.includes("/stratagemTraining"),
-          ),
-        1000,
-      );
+      return !window.location.href.includes("/stratagemTraining");
     }
-
-    return () => {
-      clearInterval(runningLineShowedStatusInterval);
-    };
-  }, []);
+    return true;
+  }, [mobileStore.isMobileDevice]);
   return (
     <Observer>
       {() => (
@@ -44,6 +31,4 @@ const TheTopPageBlock = observer(() => {
   );
 });
 
-const MemoizedTheTopPageBlock = memo(TheTopPageBlock);
-
-export default MemoizedTheTopPageBlock;
+export default TheTopPageBlock;
