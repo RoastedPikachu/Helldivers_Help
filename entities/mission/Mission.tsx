@@ -39,6 +39,7 @@ const Mission: React.FC<MissionProps> = ({
   return (
     <div className="rootShipModuleBlock">
       <div
+        onClick={() => changeIsAdditionalInfoOpened((prev) => !prev)}
         className={`rootShipModuleBlock_Top ${isAdditionalInfoOpened ? "" : "z-30"}`}
       >
         <div className="rootShipModuleBlock_Top_Left">
@@ -53,10 +54,7 @@ const Mission: React.FC<MissionProps> = ({
           <h4 className="rootShipModuleBlock_Top_Left_Title">{title}</h4>
         </div>
 
-        <button
-          onClick={() => changeIsAdditionalInfoOpened((prev) => !prev)}
-          className="rootShipModuleBlock_Top_Button"
-        >
+        <button className="rootShipModuleBlock_Top_Button">
           <img
             src="/static/GeneralIcons/ArrowDownIcon.svg"
             alt=""

@@ -41,7 +41,7 @@
 }
 
 .rootShipModuleBlock_Top {
-    @apply relative flex justify-between items-center px-[30px] mlarge:px-[15px] w-full h-[80px] mlarge:h-[72.5px];
+    @apply relative flex justify-between items-center px-[30px] mlarge:px-[15px] w-full h-[80px] mlarge:h-[72.5px] cursor-pointer;
 }
 
 .rootShipModuleBlock_Top_Title {
@@ -49,7 +49,7 @@
 }
 
 .rootShipModuleBlock_Top_Button {
-    @apply relative flex justify-center items-center w-[30px] mlarge:w-[25px] mmedium:w-[22.5px] msmall:w-[20px] mlarge:min-w-[25px] mmedium:min-w-[22.5px] msmall:min-w-[20px] h-[30px] mlarge:h-[25px] mmedium:h-[22.5px] msmall:h-[20px] mlarge:min-h-[25px] mmedium:min-h-[22.5px] msmall:min-h-[20px];
+    @apply relative flex justify-center items-center w-[30px] mlarge:w-[25px] mmedium:w-[22.5px] msmall:w-[20px] mlarge:min-w-[25px] mmedium:min-w-[22.5px] msmall:min-w-[20px] h-[30px] mlarge:h-[25px] mmedium:h-[22.5px] msmall:h-[20px] mlarge:min-h-[25px] mmedium:min-h-[22.5px] msmall:min-h-[20px] outline-none;
 }
 
 .rootShipModuleBlock_Top_Button_Image {

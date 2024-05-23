@@ -72,6 +72,7 @@ const Stratagem: React.FC<StratagemProps> = ({
       className={`rootStratagemBlock ${isAdditionalInfoOpened ? "" : "max-h-[85px] mlarge:max-h-[80px] mmedium:max-h-[70px]"}`}
     >
       <div
+        onClick={() => changeIsAdditionalInfoOpened((prev) => !prev)}
         className={`rootStratagemBlock_Top ${isAdditionalInfoOpened ? "" : "z-30"}`}
       >
         <div className="rootStratagemBlock_Top_Left">
@@ -84,10 +85,7 @@ const Stratagem: React.FC<StratagemProps> = ({
           <h4 className="rootStratagemBlock_Top_Left_Title">{name}</h4>
         </div>
 
-        <button
-          onClick={() => changeIsAdditionalInfoOpened((prev) => !prev)}
-          className="rootStratagemBlock_Top_Button"
-        >
+        <button className="rootStratagemBlock_Top_Button">
           <img
             src="/static/GeneralIcons/ArrowDownIcon.svg"
             alt=""

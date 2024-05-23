@@ -73,14 +73,12 @@ const ShipModule: React.FC<ShipModuleProps> = ({
       className={`rootShipModuleBlock ${isAdditionalInfoOpened ? "" : "mlarge:max-h-[72.5px]"}`}
     >
       <div
+        onClick={() => changeIsAdditionalInfoOpened((prev) => !prev)}
         className={`rootShipModuleBlock_Top ${isAdditionalInfoOpened ? "" : "z-30"}`}
       >
         <p className="rootShipModuleBlock_Top_Title">{title}</p>
 
-        <button
-          onClick={() => changeIsAdditionalInfoOpened((prev) => !prev)}
-          className="rootShipModuleBlock_Top_Button"
-        >
+        <button className="rootShipModuleBlock_Top_Button">
           <img
             src="/static/GeneralIcons/ArrowDownIcon.svg"
             alt=""

@@ -1,7 +1,7 @@
 .buttonWrapper {
-    @apply fixed bottom-[210px] right-[15px] deskWide:right-[30px] duration-[600ms] ease-in-out z-30;
+    @apply fixed flex justify-center items-center bottom-[150px] right-[10px] deskWide:right-[30px] w-[50px] h-[50px] bg-[#00000066] border-2 border-[--theme-color] rounded-[10px] duration-[600ms] ease-in-out z-30;
 }
 
 .buttonImage {
-    @apply rotate-180 w-[40px] scale-y-[1.2];
+    @apply rotate-180 w-[30px] scale-y-[1.2];
 }

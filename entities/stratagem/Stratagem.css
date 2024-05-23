@@ -3,7 +3,7 @@
 }
 
 .rootStratagemBlock_Top {
-    @apply relative flex justify-between items-center px-[30px] mlarge:px-[15px] msmall:px-[10px] w-full h-[80px] mmedium:h-[70px];
+    @apply relative flex justify-between items-center px-[30px] mlarge:px-[15px] msmall:px-[10px] w-full h-[80px] mmedium:h-[70px] cursor-pointer;
 }
 
 .rootStratagemBlock_Top_Left {
@@ -19,7 +19,7 @@
 }
 
 .rootStratagemBlock_Top_Button {
-    @apply relative flex justify-center items-center w-[30px] mlarge:w-[25px] mmedium:w-[22.5px] msmall:w-[20px] mlarge:min-w-[25px] mmedium:min-w-[22.5px] msmall:min-w-[20px] h-[30px] mlarge:h-[25px] mmedium:h-[22.5px] msmall:h-[20px] mlarge:min-h-[25px] mmedium:min-h-[22.5px] msmall:min-h-[20px];
+    @apply relative flex justify-center items-center w-[30px] mlarge:w-[25px] mmedium:w-[22.5px] msmall:w-[20px] mlarge:min-w-[25px] mmedium:min-w-[22.5px] msmall:min-w-[20px] h-[30px] mlarge:h-[25px] mmedium:h-[22.5px] msmall:h-[20px] mlarge:min-h-[25px] mmedium:min-h-[22.5px] msmall:min-h-[20px] outline-none;
 }
 
 .rootStratagemBlock_Top_Button_Image {
