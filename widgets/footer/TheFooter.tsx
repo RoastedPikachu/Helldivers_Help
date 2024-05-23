@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 import MediaQuery from "react-responsive";
@@ -33,6 +34,14 @@ const TheFooter = () => {
                 >
                   Дискорд сервер
                 </a>
+
+                <a
+                  href="https://github.com/RoastedPikachu/Helldivers_Help"
+                  target="_blank"
+                  className="footerTop_TextBlock_Link_EngLink mt-[10px]"
+                >
+                  Github
+                </a>
               </div>
 
               <img
@@ -47,9 +56,17 @@ const TheFooter = () => {
                 <a
                   href="https://boosty.to/helldivers.help"
                   target="_blank"
-                  className="footerTop_TextBlock_Link_EngLink"
+                  className="footerTop_TextBlock_Link_EngLink text-right mlarge:text-left"
                 >
                   Boosty
+                </a>
+
+                <a
+                  href="https://patreon.com/helldivers_help?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink"
+                  target="_blank"
+                  className="footerTop_TextBlock_Link_EngLink mt-[10px] text-right mlarge:text-left"
+                >
+                  Patreon
                 </a>
               </div>
             </div>
