@@ -1,0 +1,19 @@
+.leaflet-control-container {
+    @apply !h-[100px];
+}
+
+.leaflet-bar {
+    @apply !border-[#2cc388];
+}
+
+.leaflet-control-zoom-in {
+    @apply !h-[32px] !bg-[#01212f] !border-b-2 !border-[#2cc388] !text-[#2cc388];
+}
+
+.leaflet-control-zoom-out {
+    @apply !h-[30px] !bg-[#01212f] !text-[#2cc388];
+}
+
+.leaflet-bottom {
+    @apply hidden;
+}

@@ -1,31 +1,58 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-import maplibregl from "maplibre-gl";
+import {
+  ImageOverlay,
+  LayersControl,
+  MapContainer,
+  TileLayer,
+} from "react-leaflet";
 
-import "maplibre-gl/dist/maplibre-gl.css";
-
+import "leaflet/dist/leaflet.css";
 import "./GalaxyMap.css";
+import Image from "next/image";
 
 const GalaxyMap = () => {
-  const [zoom, setZoom] = useState(14);
-  const [lattitude, setLattitude] = useState(0);
-  const [longtitude, setLongtitude] = useState(0);
-
-  useEffect(() => {
-    const map = new maplibregl.Map({
-      container: "GalaxyMap",
-      style: `https://api.maptiler.com/maps/streets-v2`,
-      center: [longtitude, lattitude],
-      zoom: zoom,
-    });
-  }, []);
-
   return (
-    <div
-      id="GalaxyMap"
-      className="absolute w-full h-full bg-[url('/static/GalaxyMapBackgroundImage.jpg')]"
-    ></div>
+    <MapContainer
+      center={[10, 10]}
+      zoom={15}
+      minZoom={10}
+      maxBounds={[
+        [2.5, 12.5],
+        [2.5, 12.5],
+      ]}
+      scrollWheelZoom={true}
+      className="w-full h-full"
+    >
+      <TileLayer
+        attribution="stars"
+        url={`/static/GalaxyMapBackgroundImage.jpg`}
+        tileSize={3000}
+      />
+      <ImageOverlay
+        attribution="ellipsis"
+        url={`/static/GalaxyEllipsisImage.png`}
+        bounds={[
+          [10, 10],
+          [10, 10],
+        ]}
+      />
+      <ImageOverlay
+        attribution="superEarth"
+        url={`/static/SuperEarthMapImage.png`}
+        bounds={[
+          [10, 10],
+          [10, 10],
+        ]}
+      />
+
+      <LayersControl position="bottomleft">
+        <LayersControl.Overlay name="Marker with popup">
+          <div></div>
+        </LayersControl.Overlay>
+      </LayersControl>
+    </MapContainer>
   );
 };
 

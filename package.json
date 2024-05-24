@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "maplibre-gl": "^4.3.2",
+    "leaflet": "^1.9.4",
     "mobx": "^6.12.0",
     "mobx-persist-store": "^1.1.5",
     "mobx-react-lite": "^4.0.6",
@@ -17,10 +17,12 @@
     "react": "^18",
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.4",
+    "react-leaflet": "^4.2.1",
     "react-responsive": "^10.0.0",
     "swiper": "^11.0.7"
   },
   "devDependencies": {
+    "@types/leaflet": "^1.9.12",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
