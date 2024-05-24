@@ -1,5 +1,7 @@
 "use client";
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
+
+import { useParams } from "react-router";
 
 import { Observer, observer } from "mobx-react-lite";
 
@@ -12,12 +14,16 @@ import RunningLine from "@/shared/runningLine/RunningLine";
 import "./TheTopPageBlock.css";
 
 const TheTopPageBlock = observer(() => {
+  const params = useParams();
+
   const isRunningLineShowed = useMemo(() => {
     if (typeof window !== "undefined" && mobileStore.isMobileDevice) {
       return !window.location.href.includes("/stratagemTraining");
     }
     return true;
-  }, [mobileStore.isMobileDevice]);
+  }, []);
+
+  useEffect(() => {}, []);
   return (
     <Observer>
       {() => (

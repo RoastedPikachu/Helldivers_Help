@@ -3,7 +3,7 @@
 }
 
 .galaxyMap_Wrapper {
-    @apply flex justify-center items-center mt-[25px] mb-[20px] w-full h-[600px] bg-[#000000] border-2 border-[#2cc388] rounded-[10px] overflow-hidden;
+    @apply relative flex justify-center items-center mt-[25px] mb-[20px] w-full h-[600px] bg-[#000000] border-2 border-[#2cc388] rounded-[10px] overflow-hidden;
 }
 
 .galaxyMap_Wrapper_BlankBlock {

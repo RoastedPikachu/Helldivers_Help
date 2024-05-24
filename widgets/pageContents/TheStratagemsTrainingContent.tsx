@@ -207,7 +207,7 @@ const TheStratagemsTrainingContent = observer(() => {
           <section className="relative flex justify-center items-center w-full h-[calc(100vh-310px)] mlarge:min-h-[calc(100vh-310px)] mlarge:h-auto">
             {!stratagemTrainingStore.isGameStarted &&
               !stratagemTrainingStore.isRoundEnded && (
-                <div className="relative grid justify-items-center mlarge:mt-[80px] mmedium:mt-[90px] msmall:mt-[85px] w-auto h-auto">
+                <div className="relative grid justify-items-center mlarge:mt-[60px] mmedium:mt-[65px] msmall:mt-[70px] w-auto h-auto">
                   <svg
                     width="50"
                     height="45"
@@ -479,7 +479,7 @@ const TheStratagemsTrainingContent = observer(() => {
 
             {stratagemTrainingStore.isRoundEnded &&
               stratagemTrainingStore.isRoundLost && (
-                <div className="grid justify-items-center mt-[-100px] mlarge:mt-[-10px] w-auto min-w-[550px] mlarge:min-w-[calc(100vw-70px)]">
+                <div className="grid justify-items-center mt-[-100px] mlarge:mt-[-30px] w-auto min-w-[550px] mlarge:min-w-[calc(100vw-70px)]">
                   <h2 className="text-[#ffffff] text-[2.5rem] mlarge:text-[1.875rem] mmedium:text-[1.75rem] msmall:text-[1.625rem] font-['Exo2'] font-bold">
                     Игра окончена
                   </h2>
@@ -507,7 +507,7 @@ const TheStratagemsTrainingContent = observer(() => {
             {stratagemTrainingStore.isRoundEnded &&
               stratagemTrainingStore.isResultsShowed &&
               !stratagemTrainingStore.isRoundLost && (
-                <div className="relative mt-[-100px] mlarge:mt-[20px] w-[600px] mlarge:w-full">
+                <div className="relative mt-[-100px] mlarge:mt-[-20px] w-[600px] mlarge:w-full">
                   <div className="flex justify-between items-center w-full">
                     <p className="text-[#ffffff] text-[2rem] mlarge:text-[1.375rem] mmedium:text-[1.25rem] msmall:text-[1.125rem] font-['Exo2'] font-bold">
                       Бонус за раунд

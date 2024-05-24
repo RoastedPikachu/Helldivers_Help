@@ -10,17 +10,16 @@ import {
 
 import "leaflet/dist/leaflet.css";
 import "./GalaxyMap.css";
-import Image from "next/image";
 
 const GalaxyMap = () => {
   return (
     <MapContainer
-      center={[10, 10]}
-      zoom={15}
+      center={[0, 0]}
+      zoom={10}
       minZoom={10}
       maxBounds={[
-        [2.5, 12.5],
-        [2.5, 12.5],
+        [2, 12],
+        [12, -12],
       ]}
       scrollWheelZoom={true}
       className="w-full h-full"
@@ -34,16 +33,16 @@ const GalaxyMap = () => {
         attribution="ellipsis"
         url={`/static/GalaxyEllipsisImage.png`}
         bounds={[
-          [10, 10],
-          [10, 10],
+          [2.8, -0.475],
+          [2.025, 0.475],
         ]}
       />
       <ImageOverlay
         attribution="superEarth"
         url={`/static/SuperEarthMapImage.png`}
         bounds={[
-          [10, 10],
-          [10, 10],
+          [2.5025, -0.022],
+          [2.4575, 0.022],
         ]}
       />
 
