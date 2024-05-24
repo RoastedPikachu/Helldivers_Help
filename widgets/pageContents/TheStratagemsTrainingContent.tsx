@@ -50,7 +50,7 @@ const TheStratagemsTrainingContent = observer(() => {
             viewBox="0 0 65 60"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={`mr-[30px] mlarge:mr-[12.5px] mlarge:w-[37.5px] mmedium:w-[35px] msmall:w-[32.5px] mlarge:h-[37.5px] mmedium:h-[35px] msmall:h-[32.5px] rotate-0 ${getArrowBrightness(direction)}`}
+            className={`mr-[30px] mlarge:mr-[12.5px] mlarge:w-[35px] mmedium:w-[32.5px] msmall:w-[30px] mlarge:h-[35px] mmedium:h-[32.5px] msmall:h-[30px] rotate-0 ${getArrowBrightness(direction)}`}
           >
             <g clipPath="url(#clip0_1_4)">
               <path
@@ -82,7 +82,7 @@ const TheStratagemsTrainingContent = observer(() => {
             viewBox="0 0 65 60"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={`mr-[30px] mlarge:mr-[12.5px] mlarge:w-[37.5px] mmedium:w-[35px] msmall:w-[32.5px] mlarge:h-[37.5px] mmedium:h-[35px] msmall:h-[32.5px] rotate-90 ${getArrowBrightness(direction)}`}
+            className={`mr-[30px] mlarge:mr-[12.5px] mlarge:w-[35px] mmedium:w-[32.5px] msmall:w-[30px] mlarge:h-[35px] mmedium:h-[32.5px] msmall:h-[30px] rotate-90 ${getArrowBrightness(direction)}`}
           >
             <g clipPath="url(#clip0_1_4)">
               <path
@@ -114,7 +114,7 @@ const TheStratagemsTrainingContent = observer(() => {
             viewBox="0 0 65 60"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={`mr-[30px] mlarge:mr-[12.5px] mlarge:w-[37.5px] mmedium:w-[35px] msmall:w-[32.5px] mlarge:h-[37.5px] mmedium:h-[35px] msmall:h-[32.5px] rotate-180 ${getArrowBrightness(direction)}`}
+            className={`mr-[30px] mlarge:mr-[12.5px] mlarge:w-[35px] mmedium:w-[32.5px] msmall:w-[30px] mlarge:h-[35px] mmedium:h-[32.5px] msmall:h-[30px] rotate-180 ${getArrowBrightness(direction)}`}
           >
             <g clipPath="url(#clip0_1_4)">
               <path
@@ -146,7 +146,7 @@ const TheStratagemsTrainingContent = observer(() => {
             viewBox="0 0 65 60"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={`mr-[30px] mlarge:mr-[12.5px] mlarge:w-[37.5px] mmedium:w-[35px] msmall:w-[32.5px] mlarge:h-[37.5px] mmedium:h-[35px] msmall:h-[32.5px] -rotate-90 ${getArrowBrightness(direction)}`}
+            className={`mr-[30px] mlarge:mr-[12.5px] mlarge:w-[35px] mmedium:w-[32.5px] msmall:w-[30px] mlarge:h-[35px] mmedium:h-[32.5px] msmall:h-[30px] -rotate-90 ${getArrowBrightness(direction)}`}
           >
             <g clipPath="url(#clip0_1_4)">
               <path
@@ -201,13 +201,13 @@ const TheStratagemsTrainingContent = observer(() => {
           <img
             src="/static/GeneralIcons/SuperEarthBackgroundIcon.svg"
             alt=""
-            className="absolute top-[-10px] deskWide:top-[-50px] mlarge:top-[-30px] mmedium:top-[-10px] msmall:top-[10px] left-0 w-[700px] mlarge:w-full h-[450px] mlarge:h-[300px] mmedium:h-[260px] msmall:h-[230px] mt-[calc(50vh-150px)] mlarge:mt-[calc(50vh-220px)] mx-[calc((100%-700px)/2)] mlarge:mx-0"
+            className="absolute top-[-10px] deskWide:top-[-50px] mlarge:top-0 mmedium:top-[10px] msmall:top-[20px] left-0 w-[700px] mlarge:w-full h-[450px] mlarge:h-[300px] mmedium:h-[260px] msmall:h-[230px] mt-[calc(50vh-150px)] mlarge:mt-[calc(50vh-220px)] mx-[calc((100%-700px)/2)] mlarge:mx-0"
           />
 
           <section className="relative flex justify-center items-center w-full h-[calc(100vh-310px)] mlarge:min-h-[calc(100vh-310px)] mlarge:h-auto">
             {!stratagemTrainingStore.isGameStarted &&
               !stratagemTrainingStore.isRoundEnded && (
-                <div className="relative grid justify-items-center mlarge:mt-[50px] w-auto h-auto">
+                <div className="relative grid justify-items-center mlarge:mt-[80px] mmedium:mt-[90px] msmall:mt-[85px] w-auto h-auto">
                   <svg
                     width="50"
                     height="45"
@@ -248,10 +248,21 @@ const TheStratagemsTrainingContent = observer(() => {
                     {highestGameScore}
                   </p>
 
-                  <p className="mt-[20px] text-[#ffffff] text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] text-center font-['Exo2'] brightness-75">
-                    Используйте WASD или стрелки на клавиатуре для ввода
-                    стратагем
-                  </p>
+                  <MediaQuery maxWidth={480}>
+                    {(matches) =>
+                      matches ? (
+                        <p className="mt-[20px] text-[#ffffff] text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] text-center font-['Exo2'] brightness-75">
+                          Используйте кнопки в виде стрелок или свапайте в
+                          нужную сторону для ввода стратагем
+                        </p>
+                      ) : (
+                        <p className="mt-[20px] text-[#ffffff] text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] text-center font-['Exo2'] brightness-75">
+                          Используйте WASD или стрелки на клавиатуре для ввода
+                          стратагем
+                        </p>
+                      )
+                    }
+                  </MediaQuery>
 
                   <MediaQuery maxWidth={480}>
                     <div className="relative flex justify-center items-center mt-[20px] ml-[-12px] w-full h-auto">
@@ -292,25 +303,25 @@ const TheStratagemsTrainingContent = observer(() => {
                         matches ? (
                           <div className="flex justify-between items-start w-full h-auto">
                             <span className="mr-[100px] mlarge:mr-0">
-                              <p className="mt-[-10px] text-[#ffffff] text-[2rem] mlarge:text-[1.5rem] mmedium:text-[1.375rem] msmall:text-[1.25rem] text-left font-['Exo2'] font-semibold">
+                              <p className="mt-[-10px] text-[#ffffff] text-[2rem] mlarge:text-[1.375rem] mmedium:text-[1.25rem] msmall:text-[1.125rem] text-left font-['Exo2'] font-semibold">
                                 Раунд
                               </p>
 
-                              <p className="mt-[-7.5px] text-[#ffe702] text-[3rem] mlarge:text-[2rem] mmedium:text-[1.75rem] msmall:text-[1.625rem] text-left font-['Insignia'] font-extrabold">
+                              <p className="mt-[-7.5px] text-[#ffe702] text-[3rem] mlarge:text-[1.75rem] mmedium:text-[1.625rem] msmall:text-[1.5rem] text-left font-['Insignia'] font-extrabold">
                                 {stratagemTrainingStore.currentRoundNumber}
                               </p>
                             </span>
 
                             <span className="ml-[100px] mlarge:ml-0">
-                              <p className="mt-[-12.5px] text-[#ffe702] text-[3rem] mlarge:text-[2rem] mmedium:text-[1.75rem] msmall:text-[1.625rem] text-right font-['Insignia'] font-extrabold">
+                              <p className="mt-[-12.5px] text-[#ffe702] text-[3rem] mlarge:text-[1.75rem] mmedium:text-[1.625rem] msmall:text-[1.5rem] text-right font-['Insignia'] font-extrabold">
                                 {stratagemTrainingStore.currentScore}
                               </p>
 
-                              <p className="mt-[-17.5px] mmedium:mt-[-15px] msmall:mt-[-12.5px] text-[#ffffff] text-[2rem] mlarge:text-[1.5rem] mmedium:text-[1.375rem] msmall:text-[1.25rem] text-right font-['Exo2'] font-semibold">
+                              <p className="mt-[-17.5px] mmedium:mt-[-15px] msmall:mt-[-12.5px] text-[#ffffff] mlarge:text-[1.375rem] mmedium:text-[1.25rem] msmall:text-[1.125rem] text-right font-['Exo2'] font-semibold">
                                 Счет
                               </p>
 
-                              <p className="mmedium:mt-[-5px] text-[#ffffff] text-[1rem] mlarge:text-[0.875rem] mmedium:text-[0.75rem] msmall:text-[0.625rem] text-right font-['Exo2'] font-semibold brightness-50">
+                              <p className="mlarge:mt-[-5px] text-[#ffffff] text-[1rem] mlarge:text-[0.875rem] mmedium:text-[0.75rem] msmall:text-[0.625rem] text-right font-['Exo2'] font-semibold brightness-50">
                                 Ваш рекорд:{" "}
                                 <b className="font-['Insignia']">
                                   {stratagemTrainingStore.highestGameScore}
@@ -332,7 +343,7 @@ const TheStratagemsTrainingContent = observer(() => {
                       }
                     </MediaQuery>
 
-                    <div className="relative p-[4px] w-auto min-w-[735px] mlarge:min-w-[calc(100vw-20px)] h-auto">
+                    <div className="relative p-0 w-auto min-w-[735px] mlarge:min-w-[calc(100vw-40px)] mlarge:max-w-[calc(100vw-40px)] h-auto overflow-x-hidden">
                       <div className="flex items-center w-full h-[120px] mlarge:h-[70px] mmedium:h-[65px] msmall:h-[60px]">
                         <img
                           src={`${stratagemStore.currentStratagem?.iconPath}`}
@@ -353,9 +364,9 @@ const TheStratagemsTrainingContent = observer(() => {
                       </div>
 
                       <div
-                        className={`flex items-center mt-[10px] w-full h-[50px] mlarge:h-[30px] ${getSpecificGameTimeColor()}`}
+                        className={`flex items-center mt-[10px] w-full h-[50px] mlarge:h-[30px] mmedium:h-[27.5px] msmall:h-[25px] ${getSpecificGameTimeColor()}`}
                       >
-                        <h3 className="w-full text-[#000000] text-[1.5rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] text-center font-['Exo2'] font-bold">
+                        <h3 className="w-full text-[#000000] text-[1.5rem] mlarge:text-[0.875rem] mmedium:text-[0.75rem] msmall:text-[0.625rem] text-center font-['Exo2'] font-bold">
                           {stratagemStore.currentStratagem?.name}
                         </h3>
                       </div>
@@ -372,7 +383,7 @@ const TheStratagemsTrainingContent = observer(() => {
                         style={{
                           width: `${stratagemTrainingStore.secondsLeft * 10}%`,
                         }}
-                        className={`h-[30px] mlarge:h-[20px] ${getSpecificGameTimeColor()}`}
+                        className={`h-[30px] mlarge:h-[20px] mmedium:h-[17.5px] msmall:h-[15px] ${getSpecificGameTimeColor()}`}
                       ></div>
                     </div>
 
@@ -386,13 +397,13 @@ const TheStratagemsTrainingContent = observer(() => {
                           stratagemTrainingStore.handleTouchMove(event)
                         }
                         onTouchEnd={stratagemTrainingStore.handleTouchEnd}
-                        className={`w-full ${stratagemTrainingStore.isButtonsChoosen ? "grid justify-items-center mt-[30px] h-auto" : "flex justify-center items-center mt-[10px] h-[280px] bg-[#646464] border-[6px] border-[#2a2a2a]"}`}
+                        className={`w-full ${stratagemTrainingStore.isButtonsChoosen ? "grid justify-items-center mt-[30px] h-auto" : "flex justify-center items-center mt-[10px] h-[280px] mmedium:h-[260px] msmall:h-[240px] bg-[#646464] border-[6px] border-[#2a2a2a]"}`}
                       >
                         {stratagemTrainingStore.isButtonsChoosen ? (
                           <>
                             <button
                               onClick={() => simulateKeyPress(87)}
-                              className="flex justify-center items-center w-[70px] h-[70px] bg-[#00000066] rounded-[10px]"
+                              className="flex justify-center items-center w-[70px] mmedium:w-[65px] msmall:w-[60px] h-[70px] mmedium:h-[65px] msmall:h-[60px] bg-[#00000066] rounded-[10px] outline-none"
                             >
                               <img
                                 src="/static/GeneralIcons/ArrowIcon.svg"
@@ -401,10 +412,10 @@ const TheStratagemsTrainingContent = observer(() => {
                               />
                             </button>
 
-                            <div className="flex justify-between items-center mt-[10px] w-[210px]">
+                            <div className="flex justify-between items-center mt-[10px] w-[230px] mmedium:w-[220px] msmall:w-[210px]">
                               <button
                                 onClick={() => simulateKeyPress(65)}
-                                className="flex justify-center items-center w-[70px] h-[70px] bg-[#00000066] rounded-[10px]"
+                                className="flex justify-center items-center w-[70px] mmedium:w-[65px] msmall:w-[60px] h-[70px] mmedium:h-[65px] msmall:h-[60px] bg-[#00000066] rounded-[10px] outline-none"
                               >
                                 <img
                                   src="/static/GeneralIcons/ArrowIcon.svg"
@@ -415,7 +426,7 @@ const TheStratagemsTrainingContent = observer(() => {
 
                               <button
                                 onClick={() => simulateKeyPress(68)}
-                                className="flex justify-center items-center w-[70px] h-[70px] bg-[#00000066] rounded-[10px]"
+                                className="flex justify-center items-center w-[70px] mmedium:w-[65px] msmall:w-[60px] h-[70px] mmedium:h-[65px] msmall:h-[60px] bg-[#00000066] rounded-[10px] outline-none"
                               >
                                 <img
                                   src="/static/GeneralIcons/ArrowIcon.svg"
@@ -427,7 +438,7 @@ const TheStratagemsTrainingContent = observer(() => {
 
                             <button
                               onClick={() => simulateKeyPress(83)}
-                              className="flex justify-center items-center mt-[10px] w-[70px] h-[70px] bg-[#00000066] rounded-[10px]"
+                              className="flex justify-center items-center mt-[10px] w-[70px] mmedium:w-[65px] msmall:w-[60px] h-[70px] mmedium:h-[65px] msmall:h-[60px] bg-[#00000066] rounded-[10px] outline-none"
                             >
                               <img
                                 src="/static/GeneralIcons/ArrowIcon.svg"

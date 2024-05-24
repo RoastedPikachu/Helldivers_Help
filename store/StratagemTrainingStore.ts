@@ -234,7 +234,7 @@ class StratagemTrainingStore {
 
     document.addEventListener("keydown", this.handleGameStart);
 
-    if (mobileStore.isMobileDevice && !this.isButtonsChoosen) {
+    if (mobileStore.isMobileDevice) {
       document.body.style.overflow = "auto";
     }
   };
@@ -299,9 +299,7 @@ class StratagemTrainingStore {
             behavior: "smooth",
           });
 
-          if (!this.isButtonsChoosen) {
-            document.body.style.overflow = "hidden";
-          }
+          document.body.style.overflow = "hidden";
         }
       }
 

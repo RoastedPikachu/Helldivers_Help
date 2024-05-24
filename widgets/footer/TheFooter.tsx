@@ -62,7 +62,7 @@ const TheFooter = () => {
                 </a>
 
                 <a
-                  href="https://patreon.com/helldivers_help?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink"
+                  href="https://patreon.com/helldivershelp?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink"
                   target="_blank"
                   className="footerTop_TextBlock_Link_EngLink mt-[10px] text-right mlarge:text-left"
                 >
