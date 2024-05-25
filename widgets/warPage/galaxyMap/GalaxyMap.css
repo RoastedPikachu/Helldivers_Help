@@ -17,3 +17,7 @@
 .leaflet-bottom {
     @apply hidden;
 }
+
+img.leaflet-tile {
+    mix-blend-mode: hard-light !important;
+}
