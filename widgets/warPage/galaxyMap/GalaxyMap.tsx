@@ -1,12 +1,11 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 
 import {
   ImageOverlay,
   LayersControl,
   MapContainer,
-  Marker,
-  Popup,
+  LayerGroup,
   TileLayer,
 } from "react-leaflet";
 
@@ -14,7 +13,6 @@ import "leaflet/dist/leaflet.css";
 import "./GalaxyMap.css";
 
 const GalaxyMap = () => {
-  useEffect(() => {}, []);
   return (
     <MapContainer
       center={[0, 0]}
@@ -31,12 +29,12 @@ const GalaxyMap = () => {
     >
       <TileLayer
         attribution="stars"
-        url={`/static/GalaxyMapBackgroundImage.png`}
+        url={`/static/GalaxyMap/GalaxyMapBackgroundImage.png`}
         tileSize={1300}
       />
       <ImageOverlay
         attribution="nebula"
-        url={`/static/NebulaImage.png`}
+        url={`/static/GalaxyMap/NebulaImage.png`}
         bounds={[
           [17, -12.5],
           [-3, 12.5],
@@ -45,7 +43,7 @@ const GalaxyMap = () => {
       />
       <ImageOverlay
         attribution="ellipsis"
-        url={`/static/GalaxyEllipsisImage.png`}
+        url={`/static/GalaxyMap/GalaxyEllipsisImage.svg`}
         bounds={[
           [19, -15.5],
           [-5, 15.5],
@@ -53,7 +51,7 @@ const GalaxyMap = () => {
       />
       <ImageOverlay
         attribution="superEarth"
-        url={`/static/SuperEarthMapImage.svg`}
+        url={`/static/GalaxyMap/SuperEarthMapImage.svg`}
         bounds={[
           [10, -0.75],
           [8.5, 0.75],
@@ -61,16 +59,20 @@ const GalaxyMap = () => {
       />
 
       <LayersControl position="bottomleft">
-        <LayersControl.Overlay name="Marker with popup">
+        <LayersControl.Overlay name="Marker with popup" checked={true}>
           <ImageOverlay
             attribution="supplyLines"
-            url={`/static/SupplyLinesImage.svg`}
+            url={`/static/GalaxyMap/SupplyLinesImage.svg`}
             bounds={[
               [18.5, -14.5],
               [-4.5, 14.5],
             ]}
           />
         </LayersControl.Overlay>
+
+          <LayersControl.Overlay name="Marker with popup" checked={true}>
+              <LayerGroup></LayerGroup>
+          </LayersControl.Overlay>
       </LayersControl>
     </MapContainer>
   );
