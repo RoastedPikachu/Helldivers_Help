@@ -1,5 +1,9 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+
+// import Map from "react-map-gl/maplibre";
+//
+// import "maplibre-gl/dist/maplibre-gl.css";
 
 import {
   ImageOverlay,
@@ -13,9 +17,26 @@ import "leaflet/dist/leaflet.css";
 import "./GalaxyMap.css";
 
 const GalaxyMap = () => {
+  // const mapContainer = useRef(null);
+  //
+  // const [viewState, setViewState] = useState({
+  //   center: [0, 0],
+  //   zoom: 5,
+  //   pitch: 50,
+  // });
+
   return (
+    // <Map
+    //   initialViewState={viewState}
+    //   style={{ width: "100%", height: "100%" }}
+    //   mapStyle=""
+    // />
+    // <div
+    //   ref={mapContainer}
+    //   style={{ position: "absolute", width: "100%", height: "100%" }}
+    // ></div>
     <MapContainer
-      center={[0, 0]}
+      center={[-10, 0]}
       zoom={5}
       minZoom={5}
       maxZoom={7.5}
@@ -30,7 +51,7 @@ const GalaxyMap = () => {
       <TileLayer
         attribution="stars"
         url={`/static/GalaxyMap/GalaxyMapBackgroundImage.png`}
-        tileSize={1300}
+        tileSize={1800}
       />
       <ImageOverlay
         attribution="nebula"
@@ -58,8 +79,8 @@ const GalaxyMap = () => {
         ]}
       />
 
-      <LayersControl position="bottomleft">
-        <LayersControl.Overlay name="Marker with popup" checked={true}>
+      <LayersControl position="topright" collapsed={true}>
+        <LayersControl.Overlay name="" checked={true}>
           <ImageOverlay
             attribution="supplyLines"
             url={`/static/GalaxyMap/SupplyLinesImage.svg`}
@@ -70,9 +91,9 @@ const GalaxyMap = () => {
           />
         </LayersControl.Overlay>
 
-          <LayersControl.Overlay name="Marker with popup" checked={true}>
-              <LayerGroup></LayerGroup>
-          </LayersControl.Overlay>
+        <LayersControl.Overlay name="" checked={true}>
+          <LayerGroup></LayerGroup>
+        </LayersControl.Overlay>
       </LayersControl>
     </MapContainer>
   );

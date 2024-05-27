@@ -18,6 +18,37 @@
     @apply hidden;
 }
 
-img.leaflet-tile {
-    mix-blend-mode: hard-light !important;
+.leaflet-container img.leaflet-tile {
+    /* See: https://bugs.chromium.org/p/chromium/issues/detail?id=600120 */
+    mix-blend-mode: plus-lighter !important;
+}
+
+.leaflet-control-layers {
+    @apply !py-[7.5px] !px-[12.5px] bg-[#07212f] !border-2 !border-[#2cc388] rounded-[5px];
+}
+
+.leaflet-control-layers-selector {
+    @apply opacity-0;
+}
+
+.leaflet-control-layers-overlays > label > span > span {
+    @apply ml-[-15px] bg-[url('/static/GalaxyMap/LayersControlCheckboxIcon.svg')] bg-no-repeat cursor-pointer;
+}
+
+.leaflet-control-layers-overlays > label > span > .leaflet-control-layers-selector:checked + span {
+    @apply ml-[-15px] bg-[url('/static/GalaxyMap/LayersControlCheckboxCheckedIcon.svg')] bg-no-repeat cursor-pointer;
+}
+
+.leaflet-control-layers-overlays > label:nth-child(2) {
+    @apply mt-[7.5px];
+}
+
+.leaflet-control-layers-overlays > label:nth-child(1) > span > span:after {
+    content: "Показать линии снабжения";
+    @apply ml-[22.5px] text-[#2cc388] font-['Exo2'] font-medium;
+}
+
+.leaflet-control-layers-overlays > label:nth-child(2) > span > span:after {
+    content: "Показать захваченные сектора";
+    @apply ml-[22.5px] text-[#2cc388] font-['Exo2'] font-medium;
 }
