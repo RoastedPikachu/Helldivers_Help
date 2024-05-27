@@ -2308,6 +2308,60 @@ class StratagemStore {
           },
         ],
       },
+      {
+        id: 9,
+        iconPath: "/static/Stratagems/EmancipatorExosuitIcon.png",
+        videoPath: "/static/StratagemVideos/EmancipatorExosuitVideo.mp4",
+        videoPreviewPath:
+          "/static/StratagemVideoPreviews/EmancipatorExosuitPreview.webp",
+        type: stratagemTypes.roboticsWorkshop,
+        name: "EXO-48 Экзокостюм «благодетель»",
+        description:
+          "Тяжелобронированный экзокостюм, оснащенный спаренными автопушками.",
+        price: 20000,
+        obtainingLevel: 25,
+        callTime: 0,
+        useCount: 2,
+        reloadTime: 600,
+        keyCodes: [65, 83, 68, 87, 65, 83, 87],
+        directions: [
+          {
+            id: 1,
+            orientation: 4,
+            isPressed: false,
+          },
+          {
+            id: 2,
+            orientation: 3,
+            isPressed: false,
+          },
+          {
+            id: 3,
+            orientation: 2,
+            isPressed: false,
+          },
+          {
+            id: 4,
+            orientation: 1,
+            isPressed: false,
+          },
+          {
+            id: 5,
+            orientation: 4,
+            isPressed: false,
+          },
+          {
+            id: 6,
+            orientation: 3,
+            isPressed: false,
+          },
+          {
+            id: 7,
+            orientation: 1,
+            isPressed: false,
+          },
+        ],
+      },
     ],
     general: [
       {
