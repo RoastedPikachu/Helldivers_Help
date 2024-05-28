@@ -621,6 +621,21 @@ class ArmorKitsStore {
         staminaRegen: 125,
         bonus: armorBonuses.servoAssisted,
       },
+      {
+        id: 17,
+        imagePath: "/static/ArmorKits/Cw9WhiteWolfImage.webp",
+        type: "Средняя броня",
+        name: "CW-9 «Белый волк»",
+        obtainingType: obtainingType["6"],
+        obtainingMethod: "Покупается в Супермагазине",
+        description:
+          "Узор этой брони является результатом Инициативы по Улучшению Зимнего Камуфляжа, в рамках которой было рассмотрено 136 предложений, после чего было установлено, что белый цвет лучше остальных цветов сливается со снегом.",
+        price: 450,
+        armorRating: 150,
+        speed: 500,
+        staminaRegen: 100,
+        bonus: armorBonuses.extraArmor,
+      },
     ],
     preOrder: [
       {
