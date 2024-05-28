@@ -17,8 +17,14 @@ export type BiomesObject = {
   [key: string]: Biome;
 };
 
+interface GalaxySector {
+  name: string;
+  terminidsImage: string;
+  automatonsImage: string;
+}
+
 export type GalaxySectorsObject = {
-  [key: string]: string;
+  [key: string]: GalaxySector;
 };
 
 export type WeatherConditionsObject = {

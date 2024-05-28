@@ -27,7 +27,7 @@ const ThePlanetsContent = observer(() => {
   const getTargetPlanetArray = () => {
     return Object.values(planetsStore.planets).filter(
       (planetValue) =>
-        planetValue.sector === planetsStore.currentPlanetInfo.sector,
+        planetValue.sector.name === planetsStore.currentPlanetInfo.sector,
     );
   };
   return (
@@ -60,12 +60,12 @@ const ThePlanetsContent = observer(() => {
 
           {Object.values(galaxySectors).map((value, i) => (
             <EntitySection
-              key={i}
-              title={value}
+              key={i + 1}
+              title={value.name}
               gridStyles={"grid-cols-3 mlarge:grid-cols-1"}
             >
               {Object.values(planetsStore.planets)
-                .filter((planetValue) => planetValue.sector === value)
+                .filter((planetValue) => planetValue.sector.name === value.name)
                 .map((planet) => (
                   <Planet
                     key={planet.id}
@@ -73,7 +73,7 @@ const ThePlanetsContent = observer(() => {
                     name={planet.name}
                     biome={planet.biome}
                     weatherConditions={planet.weatherConditions}
-                    sector={planet.sector}
+                    sector={planet.sector.name}
                   />
                 ))}
             </EntitySection>
