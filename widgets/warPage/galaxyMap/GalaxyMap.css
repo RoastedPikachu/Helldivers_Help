@@ -28,7 +28,7 @@
 }
 
 .leaflet-control-layers-selector {
-    @apply opacity-0;
+    @apply opacity-0 cursor-pointer;
 }
 
 .leaflet-control-layers-overlays > label > span > span {

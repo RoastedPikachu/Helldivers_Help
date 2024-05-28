@@ -1,40 +1,91 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
-
-// import Map from "react-map-gl/maplibre";
-//
-// import "maplibre-gl/dist/maplibre-gl.css";
+import React, { useEffect, useState } from "react";
 
 import {
+  MapContainer,
+  TileLayer,
   ImageOverlay,
   LayersControl,
-  MapContainer,
   LayerGroup,
-  TileLayer,
 } from "react-leaflet";
 
 import "leaflet/dist/leaflet.css";
 import "./GalaxyMap.css";
+import axios from "axios";
+import { galaxySectors } from "@/data/galaxySectors";
+
+interface CapturedSector {
+  name: string;
+  fraction: string;
+}
 
 const GalaxyMap = () => {
-  // const mapContainer = useRef(null);
-  //
-  // const [viewState, setViewState] = useState({
-  //   center: [0, 0],
-  //   zoom: 5,
-  //   pitch: 50,
-  // });
+  const [capturedSectors, setCapturedSectors] = useState(
+    [] as CapturedSector[],
+  );
 
+  const formatSectorName = (string: string) => {
+    // Удаление пробелов
+    string = string.replace(/\s+/g, "");
+
+    // Удаление символа '
+    string = string.replace("'", "");
+
+    // Преобразование первой буквы в Lowercase
+    string = string.charAt(0).toLowerCase() + string.slice(1);
+
+    return string;
+  };
+
+  const getUniqueCapturedSectors = () => {
+    const uniqueSectors = {};
+
+    for (const sector of capturedSectors) {
+      const sectorName = sector.name;
+
+      if (!uniqueSectors.hasOwnProperty(sectorName)) {
+        uniqueSectors[sectorName] = sector as CapturedSector;
+      }
+    }
+
+    return Object.values(uniqueSectors);
+  };
+
+  const getCapturedSectors = () => {
+    axios
+      .get("https://api.helldivers2.dev/api/v1/planets", {
+        headers: {
+          "Accept-Language": "ru-RU",
+          "X-Super-Client": "Helldivers Help",
+          "X-Super-Contact": "gh/RoastedPikachu",
+        },
+      })
+      .then((response) => {
+        setCapturedSectors(
+          response.data
+            .filter((planetInfo: any) => planetInfo.currentOwner !== "Humans")
+            .map((planetInfo: any) => {
+              return {
+                name: formatSectorName(planetInfo.sector),
+                fraction: planetInfo.currentOwner,
+              };
+            }),
+        );
+      });
+  };
+
+  const getSectorImage = (sector: CapturedSector) => {
+    return sector.fraction === "Terminids"
+      ? galaxySectors[sector.name]?.terminidsImage
+      : galaxySectors[sector.name]?.automatonsImage;
+  };
+
+  useEffect(() => {
+    const galaxySectorsInterval = setInterval(() => getCapturedSectors(), 5000);
+
+    return () => clearInterval(galaxySectorsInterval);
+  }, []);
   return (
-    // <Map
-    //   initialViewState={viewState}
-    //   style={{ width: "100%", height: "100%" }}
-    //   mapStyle=""
-    // />
-    // <div
-    //   ref={mapContainer}
-    //   style={{ position: "absolute", width: "100%", height: "100%" }}
-    // ></div>
     <MapContainer
       center={[-10, 0]}
       zoom={5}
@@ -63,8 +114,33 @@ const GalaxyMap = () => {
         opacity={0.5}
       />
       <ImageOverlay
+        attribution="superEarthDecoration"
+        url={`/static/GalaxyMap/SuperEarthDecorationImage.png`}
+        bounds={[
+          [10.9, -2.5],
+          [7.4, 2.5],
+        ]}
+        opacity={0.5}
+      />
+      <ImageOverlay
         attribution="ellipsis"
         url={`/static/GalaxyMap/GalaxyEllipsisImage.svg`}
+        bounds={[
+          [19, -15.5],
+          [-5, 15.5],
+        ]}
+      />
+      <ImageOverlay
+        attribution="automatonsText"
+        url={`/static/GalaxyMap/AutomatonsTextImage.svg`}
+        bounds={[
+          [19, -15.5],
+          [-5, 15.5],
+        ]}
+      />
+      <ImageOverlay
+        attribution="terminidsText"
+        url={`/static/GalaxyMap/TerminidsTextImage.svg`}
         bounds={[
           [19, -15.5],
           [-5, 15.5],
@@ -74,12 +150,12 @@ const GalaxyMap = () => {
         attribution="superEarth"
         url={`/static/GalaxyMap/SuperEarthMapImage.svg`}
         bounds={[
-          [10, -0.75],
-          [8.5, 0.75],
+          [10, -1.25],
+          [8.25, 1.25],
         ]}
       />
 
-      <LayersControl position="topright" collapsed={true}>
+      <LayersControl position="topright" collapsed={false}>
         <LayersControl.Overlay name="" checked={true}>
           <ImageOverlay
             attribution="supplyLines"
@@ -92,7 +168,19 @@ const GalaxyMap = () => {
         </LayersControl.Overlay>
 
         <LayersControl.Overlay name="" checked={true}>
-          <LayerGroup></LayerGroup>
+          <LayerGroup>
+            {getUniqueCapturedSectors().map((sector, index) => (
+              <ImageOverlay
+                key={index + 1}
+                attribution={sector.name}
+                url={`${getSectorImage(sector)}`}
+                bounds={[
+                  [19, -15.5],
+                  [-5, 15.5],
+                ]}
+              />
+            ))}
+          </LayerGroup>
         </LayersControl.Overlay>
       </LayersControl>
     </MapContainer>
