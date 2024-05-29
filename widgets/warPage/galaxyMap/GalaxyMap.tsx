@@ -101,8 +101,8 @@ const GalaxyMap = () => {
     >
       <TileLayer
         attribution="stars"
-        url={`/static/GalaxyMap/GalaxyMapBackgroundImage.png`}
-        tileSize={1800}
+        url={`/static/GalaxyMap/StarfieldMapBackgroundImage.webp`}
+        tileSize={2024}
       />
       <ImageOverlay
         attribution="nebula"
@@ -147,11 +147,19 @@ const GalaxyMap = () => {
         ]}
       />
       <ImageOverlay
+        attribution="planets"
+        url={`/static/GalaxyMap/PlanetsImage.svg`}
+        bounds={[
+          [19, -15.5],
+          [-5, 15.5],
+        ]}
+      />
+      <ImageOverlay
         attribution="superEarth"
         url={`/static/GalaxyMap/SuperEarthMapImage.svg`}
         bounds={[
-          [10, -1.25],
-          [8.25, 1.25],
+          [10.1, -1.15],
+          [8.35, 1.35],
         ]}
       />
 

@@ -32,11 +32,11 @@
 }
 
 .leaflet-control-layers-overlays > label > span > span {
-    @apply ml-[-15px] bg-[url('/static/GalaxyMap/LayersControlCheckboxIcon.svg')] bg-no-repeat cursor-pointer;
+    @apply ml-[-15px] bg-[url('/static/GalaxyMap/LayersControlCheckboxIcon.svg')] bg-no-repeat cursor-pointer select-none;
 }
 
 .leaflet-control-layers-overlays > label > span > .leaflet-control-layers-selector:checked + span {
-    @apply ml-[-15px] bg-[url('/static/GalaxyMap/LayersControlCheckboxCheckedIcon.svg')] bg-no-repeat cursor-pointer;
+    @apply ml-[-15px] bg-[url('/static/GalaxyMap/LayersControlCheckboxCheckedIcon.svg')] bg-no-repeat cursor-pointer select-none;
 }
 
 .leaflet-control-layers-overlays > label:nth-child(2) {
