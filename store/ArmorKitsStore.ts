@@ -428,6 +428,21 @@ class ArmorKitsStore {
       },
       {
         id: 4,
+        imagePath: "/static/ArmorKits/Ce64GrenadierImage.webp",
+        type: "Тяжелая броня",
+        name: "CE-64 «Гренадер»",
+        obtainingType: obtainingType["6"],
+        obtainingMethod: "Покупается в Супермагазине",
+        description:
+          'Классический рекламный слоган "Гранату пробовали?" не менялся вот уже 70 лет.',
+        price: 450,
+        armorRating: 150,
+        speed: 450,
+        staminaRegen: 50,
+        bonus: armorBonuses.engineerKit,
+      },
+      {
+        id: 5,
         imagePath: "/static/ArmorKits/Ce67TitanImage.webp",
         type: "Легкая броня",
         name: "CE-67 «Титан»",
@@ -442,7 +457,7 @@ class ArmorKitsStore {
         bonus: armorBonuses.engineerKit,
       },
       {
-        id: 5,
+        id: 6,
         imagePath: "/static/ArmorKits/Ce74BreakerImage.webp",
         type: "Легкая броня",
         name: "CE-74 «Крушитель»",
@@ -457,7 +472,7 @@ class ArmorKitsStore {
         bonus: armorBonuses.engineerKit,
       },
       {
-        id: 6,
+        id: 7,
         imagePath: "/static/ArmorKits/Ce81JuggernautImage.webp",
         type: "Средняя броня",
         name: "CE-81 «Джаггернаут»",
@@ -472,7 +487,7 @@ class ArmorKitsStore {
         bonus: armorBonuses.engineerKit,
       },
       {
-        id: 7,
+        id: 8,
         imagePath: "/static/ArmorKits/Cm10ClinicianImage.webp",
         type: "Средняя броня",
         name: "CM-10 «Клиницист»",
@@ -487,7 +502,7 @@ class ArmorKitsStore {
         bonus: armorBonuses.medKit,
       },
       {
-        id: 8,
+        id: 9,
         imagePath: "/static/ArmorKits/Cm17ButcherImage.webp",
         type: "Тяжелая броня",
         name: "CM-17 «Мясник»",
@@ -502,7 +517,7 @@ class ArmorKitsStore {
         bonus: armorBonuses.medKit,
       },
       {
-        id: 9,
+        id: 10,
         imagePath: "/static/ArmorKits/Cm21TrenchParamedicImage.webp",
         type: "Легкая броня",
         name: "CM-21 «Траншейный медик»",
@@ -517,7 +532,7 @@ class ArmorKitsStore {
         bonus: armorBonuses.medKit,
       },
       {
-        id: 10,
+        id: 11,
         imagePath: "/static/ArmorKits/Fs11ExecutionerImage.webp",
         type: "Тяжелая броня",
         name: "FS-11 «Палач»",
@@ -532,7 +547,7 @@ class ArmorKitsStore {
         bonus: armorBonuses.fortification,
       },
       {
-        id: 11,
+        id: 12,
         imagePath: "/static/ArmorKits/Fs34ExterminatorImage.webp",
         type: "Средняя броня",
         name: "FS-34 «Истребитель»",
@@ -547,7 +562,7 @@ class ArmorKitsStore {
         bonus: armorBonuses.fortification,
       },
       {
-        id: 12,
+        id: 13,
         imagePath: "/static/ArmorKits/Fs37RavagerImage.webp",
         type: "Легкая броня",
         name: "FS-37 «Разоритель»",
@@ -562,7 +577,7 @@ class ArmorKitsStore {
         bonus: armorBonuses.engineerKit,
       },
       {
-        id: 13,
+        id: 14,
         imagePath: "/static/ArmorKits/Fs38EradicatorImage.webp",
         type: "Легкая броня",
         name: "FS-38 «Искоренитель»",
@@ -577,7 +592,7 @@ class ArmorKitsStore {
         bonus: armorBonuses.fortification,
       },
       {
-        id: 14,
+        id: 15,
         imagePath: "/static/ArmorKits/Fs61DreadnoughtImage.webp",
         type: "Тяжелая броня",
         name: "FS-61 «Дредноут»",
@@ -592,7 +607,7 @@ class ArmorKitsStore {
         bonus: armorBonuses.servoAssisted,
       },
       {
-        id: 15,
+        id: 16,
         imagePath: "/static/ArmorKits/Sc15DroneMasterImage.webp",
         type: "Средняя броня",
         name: "SС-15 «Мастер дронов»",
@@ -607,7 +622,7 @@ class ArmorKitsStore {
         bonus: armorBonuses.engineerKit,
       },
       {
-        id: 16,
+        id: 17,
         imagePath: "/static/ArmorKits/Sc37LegionnaireImage.webp",
         type: "Легкая броня",
         name: "SС-37 «Легионер»",
@@ -622,7 +637,7 @@ class ArmorKitsStore {
         bonus: armorBonuses.servoAssisted,
       },
       {
-        id: 17,
+        id: 18,
         imagePath: "/static/ArmorKits/Cw9WhiteWolfImage.webp",
         type: "Средняя броня",
         name: "CW-9 «Белый волк»",

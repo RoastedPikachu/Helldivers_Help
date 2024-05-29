@@ -985,11 +985,8 @@ class PlanetsStore {
       id: 1,
       name: "Колодцы вернена",
       sector: galaxySectors.hydra,
-      biome: biomes.toxic,
-      weatherConditions: [
-        weatherConditions.intenseHeat,
-        weatherConditions.acidStorms,
-      ],
+      biome: biomes.canyon,
+      weatherConditions: [weatherConditions.tremors],
     },
     114: {
       id: 2,
