@@ -876,6 +876,19 @@ class WeaponsStore {
       penetration: 7,
       radius: 2,
     },
+    {
+      id: 8,
+      imagePath: "/static/Weaponry/grenades/ImpactIncendiaryImage.webp",
+      weaponType: weaponTypes.grenade,
+      name: "G-13 «Зажигательная ударная»",
+      description:
+        "Зажигательная граната, поджигающая любые цели и ландшафт в области взрыва. Использовать с осторожностью.",
+      price: 25,
+      damage: 150,
+      fuseTime: 0.0,
+      penetration: 3,
+      radius: 7,
+    },
   ] as Grenade[];
 
   constructor() {
