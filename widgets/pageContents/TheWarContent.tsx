@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 
+import dynamic from "next/dynamic";
+
 import { observer, Observer } from "mobx-react-lite";
 
 import { mobileStore } from "@/store/MobileStore";
@@ -11,7 +13,11 @@ import CampaignsSection from "@/widgets/warPage/campaignsSection/CampaignsSectio
 import SectionTitle from "@/shared/sectionTitle/SectionTitle";
 
 import "./TheWarContent.css";
-import GalaxyMap from "@/widgets/warPage/galaxyMap/GalaxyMap";
+
+const DynamicGalaxyMap = dynamic(
+  () => import("@/widgets/warPage/galaxyMap/GalaxyMap"),
+  { ssr: false },
+);
 
 const TheWarContent = observer(() => {
   const [targetContentPage, setTargetContentPage] = useState(1);
@@ -33,18 +39,7 @@ const TheWarContent = observer(() => {
                 <SectionTitle text={"КАРТА ГАЛАКТИКИ"} />
 
                 <div className="galaxyMap_Wrapper">
-                  {/*<div className="galaxyMap_Wrapper_BlankBlock">*/}
-                  {/*  <p className="galaxyMap_Wrapper_BlankBlock_Text">*/}
-                  {/*    Здесь будет карта*/}
-                  {/*  </p>*/}
-
-                  {/*  <img*/}
-                  {/*    src="/static/GeneralIcons/BuildIcon.svg"*/}
-                  {/*    alt=""*/}
-                  {/*    className="galaxyMap_Wrapper_BlankBlock_Icon"*/}
-                  {/*  />*/}
-                  {/*</div>*/}
-                  <GalaxyMap />
+                  <DynamicGalaxyMap />
                 </div>
 
                 <MajorOrderSection />

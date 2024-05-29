@@ -1,7 +1,3 @@
-.leaflet-control-container {
-    @apply !h-[100px];
-}
-
 .leaflet-bar {
     @apply !border-[#2cc388];
 }
@@ -43,12 +39,12 @@
     @apply mt-[7.5px];
 }
 
-.leaflet-control-layers-overlays > label:nth-child(1) > span > span:after {
+.leaflet-control-layers-overlays > label:nth-child(2) > span > span:after {
     content: "Показать линии снабжения";
     @apply ml-[22.5px] text-[#2cc388] font-['Exo2'] font-medium;
 }
 
-.leaflet-control-layers-overlays > label:nth-child(2) > span > span:after {
+.leaflet-control-layers-overlays > label:nth-child(1) > span > span:after {
     content: "Показать захваченные сектора";
     @apply ml-[22.5px] text-[#2cc388] font-['Exo2'] font-medium;
 }

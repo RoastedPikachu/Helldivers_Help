@@ -38,13 +38,13 @@ const GalaxyMap = () => {
   };
 
   const getUniqueCapturedSectors = () => {
-    const uniqueSectors = {};
+    const uniqueSectors = {} as { [key: string]: CapturedSector };
 
     for (const sector of capturedSectors) {
       const sectorName = sector.name;
 
       if (!uniqueSectors.hasOwnProperty(sectorName)) {
-        uniqueSectors[sectorName] = sector as CapturedSector;
+        uniqueSectors[sectorName] = sector;
       }
     }
 
@@ -81,21 +81,22 @@ const GalaxyMap = () => {
   };
 
   useEffect(() => {
-    const galaxySectorsInterval = setInterval(() => getCapturedSectors(), 5000);
+    getCapturedSectors();
+
+    const galaxySectorsInterval = setInterval(
+      () => getCapturedSectors(),
+      10000,
+    );
 
     return () => clearInterval(galaxySectorsInterval);
   }, []);
   return (
     <MapContainer
-      center={[-10, 0]}
-      zoom={5}
-      minZoom={5}
-      maxZoom={7.5}
+      center={[-35.05, 35]}
+      zoom={4.2}
+      minZoom={4.2}
+      maxZoom={6.5}
       zoomSnap={0.1}
-      maxBounds={[
-        [2, 12],
-        [12, -12],
-      ]}
       scrollWheelZoom={true}
       className="w-full h-full"
     >
@@ -108,8 +109,8 @@ const GalaxyMap = () => {
         attribution="nebula"
         url={`/static/GalaxyMap/NebulaImage.png`}
         bounds={[
-          [17, -12.5],
-          [-3, 12.5],
+          [-16.875, 15.78],
+          [-45.075, 54.62],
         ]}
         opacity={0.5}
       />
@@ -126,32 +127,24 @@ const GalaxyMap = () => {
         attribution="ellipsis"
         url={`/static/GalaxyMap/GalaxyEllipsisImage.svg`}
         bounds={[
-          [19, -15.5],
-          [-5, 15.5],
+          [-14.875, 7.78],
+          [-51.075, 62.62],
         ]}
       />
       <ImageOverlay
         attribution="automatonsText"
         url={`/static/GalaxyMap/AutomatonsTextImage.svg`}
         bounds={[
-          [19, -15.5],
-          [-5, 15.5],
+          [-14.875, 7.78],
+          [-51.075, 62.62],
         ]}
       />
       <ImageOverlay
         attribution="terminidsText"
         url={`/static/GalaxyMap/TerminidsTextImage.svg`}
         bounds={[
-          [19, -15.5],
-          [-5, 15.5],
-        ]}
-      />
-      <ImageOverlay
-        attribution="planets"
-        url={`/static/GalaxyMap/PlanetsImage.svg`}
-        bounds={[
-          [19, -15.5],
-          [-5, 15.5],
+          [-14.875, 7.78],
+          [-51.075, 62.62],
         ]}
       />
       <ImageOverlay
@@ -165,17 +158,6 @@ const GalaxyMap = () => {
 
       <LayersControl position="topright" collapsed={false}>
         <LayersControl.Overlay name="" checked={true}>
-          <ImageOverlay
-            attribution="supplyLines"
-            url={`/static/GalaxyMap/SupplyLinesImage.svg`}
-            bounds={[
-              [18.5, -14.5],
-              [-4.5, 14.5],
-            ]}
-          />
-        </LayersControl.Overlay>
-
-        <LayersControl.Overlay name="" checked={true}>
           <LayerGroup>
             {getUniqueCapturedSectors().map((sector, index) => (
               <ImageOverlay
@@ -183,14 +165,35 @@ const GalaxyMap = () => {
                 attribution={sector.name}
                 url={`${getSectorImage(sector)}`}
                 bounds={[
-                  [19, -15.5],
-                  [-5, 15.5],
+                  [-14.875, 7.78],
+                  [-51.075, 62.62],
                 ]}
               />
             ))}
           </LayerGroup>
         </LayersControl.Overlay>
+
+        <LayersControl.Overlay name="" checked={true}>
+          <ImageOverlay
+            attribution="supplyLines"
+            url={`/static/GalaxyMap/SupplyLinesImage.svg`}
+            bounds={[
+              [-14.875, 7.78],
+              [-51.075, 62.62],
+            ]}
+          />
+        </LayersControl.Overlay>
       </LayersControl>
+
+      <ImageOverlay
+        attribution="planets"
+        url={`/static/GalaxyMap/PlanetsImage.svg`}
+        bounds={[
+          [-14.875, 7.78],
+          [-51.075, 62.62],
+        ]}
+        zIndex={10}
+      />
     </MapContainer>
   );
 };
