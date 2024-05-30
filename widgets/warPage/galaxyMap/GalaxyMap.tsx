@@ -20,11 +20,10 @@ interface CapturedSector {
 }
 
 const GalaxyMap = () => {
-  const [capturedSectors, setCapturedSectors] = useState(
+  const [activeSectors, setActiveSectors] = useState([] as CapturedSector[]);
+  const [inactiveSectors, setInactiveSectors] = useState(
     [] as CapturedSector[],
   );
-
-  const getEllipsisBounds = () => {};
 
   const formatSectorName = (string: string) => {
     // Удаление пробелов
@@ -39,10 +38,10 @@ const GalaxyMap = () => {
     return string;
   };
 
-  const getUniqueCapturedSectors = () => {
+  const getUniqueCapturedSectors = (sectors: CapturedSector[]) => {
     const uniqueSectors = {} as { [key: string]: CapturedSector };
 
-    for (const sector of capturedSectors) {
+    for (const sector of sectors) {
       const sectorName = sector.name;
 
       if (!uniqueSectors.hasOwnProperty(sectorName)) {
@@ -55,7 +54,7 @@ const GalaxyMap = () => {
 
   const getCapturedSectors = () => {
     axios
-      .get("https://api.helldivers2.dev/api/v1/planets", {
+      .get("https://api.helldivers2.dev/api/v1/campaigns", {
         headers: {
           "Accept-Language": "ru-RU",
           "X-Super-Client": "Helldivers Help",
@@ -63,24 +62,60 @@ const GalaxyMap = () => {
         },
       })
       .then((response) => {
-        setCapturedSectors(
-          response.data
-            .filter((planetInfo: any) => planetInfo.currentOwner !== "Humans")
-            .map((planetInfo: any) => {
-              return {
-                name: formatSectorName(planetInfo.sector),
-                fraction: planetInfo.currentOwner,
-              };
-            }),
+        setActiveSectors(
+          response.data.map((campaign: any) => {
+            return {
+              name: formatSectorName(campaign.planet.sector),
+              fraction: campaign.planet.currentOwner,
+            };
+          }),
         );
       });
   };
 
-  const getSectorImage = (sector: CapturedSector) => {
+  const getSectorImage = (sector: CapturedSector, isActiveSectors: boolean) => {
+    if (isActiveSectors) {
+      return sector.fraction === "Terminids"
+        ? galaxySectors[sector.name]?.terminidsActiveImage
+        : galaxySectors[sector.name]?.automatonsActiveImage;
+    }
+
     return sector.fraction === "Terminids"
-      ? galaxySectors[sector.name]?.terminidsImage
-      : galaxySectors[sector.name]?.automatonsImage;
+      ? galaxySectors[sector.name]?.terminidsInactiveImage
+      : galaxySectors[sector.name]?.automatonsInactiveImage;
   };
+
+  useEffect(() => {
+    axios
+      .get("https://api.helldivers2.dev/api/v1/planets", {
+        headers: {
+          "Accept-Language": "ru-RU",
+          "X-Super-Client": "Helldivers Help",
+          "X-Super-Contact": "gh/RoastedPikachu",
+        },
+      })
+      .then((response) =>
+        setInactiveSectors(
+          getUniqueCapturedSectors(
+            response.data
+              .filter((planetInfo: any) => planetInfo.currentOwner !== "Humans")
+              .map((planetInfo: any) => {
+                return {
+                  name: formatSectorName(planetInfo.sector),
+                  fraction: planetInfo.currentOwner,
+                };
+              }),
+          ).filter(
+            (sector) =>
+              !activeSectors.some(
+                (activeSector) =>
+                  activeSector.name === sector.name &&
+                  activeSector.fraction === sector.fraction,
+              ),
+          ),
+        ),
+      );
+  }, [activeSectors]);
 
   useEffect(() => {
     getCapturedSectors();
@@ -157,11 +192,23 @@ const GalaxyMap = () => {
       <LayersControl position="topright" collapsed={false}>
         <LayersControl.Overlay name="" checked={true}>
           <LayerGroup>
-            {getUniqueCapturedSectors().map((sector, index) => (
+            {getUniqueCapturedSectors(activeSectors).map((sector, index) => (
               <ImageOverlay
                 key={index + 1}
                 attribution={sector.name}
-                url={`${getSectorImage(sector)}`}
+                url={`${getSectorImage(sector, true)}`}
+                bounds={[
+                  [-14.875, 7.78],
+                  [-51.075, 62.62],
+                ]}
+              />
+            ))}
+
+            {inactiveSectors.map((sector, index) => (
+              <ImageOverlay
+                key={index + 1}
+                attribution={sector.name}
+                url={`${getSectorImage(sector, false)}`}
                 bounds={[
                   [-14.875, 7.78],
                   [-51.075, 62.62],
