@@ -826,7 +826,7 @@ class PlanetsStore {
     },
     94: {
       id: 1,
-      name: "Новый стокгольм",
+      name: "Новый Cтокгольм",
       sector: galaxySectors.hanzo,
       biome: biomes.winter,
       weatherConditions: [
@@ -983,7 +983,7 @@ class PlanetsStore {
     },
     113: {
       id: 1,
-      name: "Колодцы вернена",
+      name: "Колодцы Вернена",
       sector: galaxySectors.hydra,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
