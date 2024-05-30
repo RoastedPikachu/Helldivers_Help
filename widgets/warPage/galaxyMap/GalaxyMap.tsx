@@ -24,6 +24,8 @@ const GalaxyMap = () => {
     [] as CapturedSector[],
   );
 
+  const getEllipsisBounds = () => {};
+
   const formatSectorName = (string: string) => {
     // Удаление пробелов
     string = string.replace(/\s+/g, "");
@@ -97,6 +99,10 @@ const GalaxyMap = () => {
       minZoom={4.2}
       maxZoom={6.5}
       zoomSnap={0.1}
+      maxBounds={[
+        [-14.875, 7.78],
+        [-51.075, 62.62],
+      ]}
       scrollWheelZoom={true}
       className="w-full h-full"
     >
@@ -147,14 +153,6 @@ const GalaxyMap = () => {
           [-51.075, 62.62],
         ]}
       />
-      <ImageOverlay
-        attribution="superEarth"
-        url={`/static/GalaxyMap/SuperEarthMapImage.svg`}
-        bounds={[
-          [10.1, -1.15],
-          [8.35, 1.35],
-        ]}
-      />
 
       <LayersControl position="topright" collapsed={false}>
         <LayersControl.Overlay name="" checked={true}>
@@ -193,6 +191,24 @@ const GalaxyMap = () => {
           [-51.075, 62.62],
         ]}
         zIndex={10}
+      />
+      <ImageOverlay
+        attribution="superEarth"
+        url={`/static/GalaxyMap/SuperEarthPlanetImage.svg`}
+        bounds={[
+          [-14.875, 7.78],
+          [-51.075, 62.62],
+        ]}
+        zIndex={10}
+      />
+      <ImageOverlay
+        attribution="planetsText"
+        url={`/static/GalaxyMap/PlanetsTextImage.svg`}
+        bounds={[
+          [-14.875, 7.78],
+          [-51.075, 62.62],
+        ]}
+        zIndex={11}
       />
     </MapContainer>
   );
