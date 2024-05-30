@@ -19,8 +19,10 @@ export type BiomesObject = {
 
 interface GalaxySector {
   name: string;
-  terminidsImage: string;
-  automatonsImage: string;
+  terminidsActiveImage: string;
+  terminidsInactiveImage: string;
+  automatonsActiveImage: string;
+  automatonsInactiveImage: string;
 }
 
 export type GalaxySectorsObject = {

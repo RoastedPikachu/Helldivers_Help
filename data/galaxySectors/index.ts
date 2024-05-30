@@ -3,277 +3,603 @@ import { GalaxySectorsObject } from "@/utils/dataInterfaces";
 export const galaxySectors: GalaxySectorsObject = {
   akira: {
     name: "Акира",
-    terminidsImage: "/static/GalaxyMap/terminids/AkiraSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/AkiraSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/AkiraSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/AkiraSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/AkiraSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/AkiraSectorImage.svg",
   },
   alstrad: {
     name: "Алстрад",
-    terminidsImage: "/static/GalaxyMap/terminids/AlstradSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/AlstradSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/AlstradSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/AlstradSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/AlstradSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/AlstradSectorImage.svg",
   },
   altus: {
     name: "Алтус",
-    terminidsImage: "/static/GalaxyMap/terminids/AltusSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/AltusSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/AltusSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/AltusSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/AltusSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/AltusSectorImage.svg",
   },
   andromeda: {
     name: "Андромеда",
-    terminidsImage: "/static/GalaxyMap/terminids/AndromedaSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/AndromedaSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/AndromedaSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/AndromedaSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/AndromedaSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/AndromedaSectorImage.svg",
   },
   arturion: {
     name: "Артурион",
-    terminidsImage: "/static/GalaxyMap/terminids/ArturionSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/ArturionSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/ArturionSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/ArturionSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/ArturionSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/ArturionSectorImage.svg",
   },
   barnard: {
     name: "Барнард",
-    terminidsImage: "/static/GalaxyMap/terminids/BarnardSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/BarnardSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/BarnardSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/BarnardSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/BarnardSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/BarnardSectorImage.svg",
   },
   borgus: {
     name: "Боргус",
-    terminidsImage: "/static/GalaxyMap/terminids/BorgusSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/BorgusSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/BorgusSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/BorgusSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/BorgusSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/BorgusSectorImage.svg",
   },
   cancri: {
     name: "Канкри",
-    terminidsImage: "/static/GalaxyMap/terminids/CancriSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/CancriSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/CancriSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/CancriSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/CancriSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/CancriSectorImage.svg",
   },
   cantolus: {
     name: "Кантолус",
-    terminidsImage: "/static/GalaxyMap/terminids/CantolusSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/CantolusSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/CantolusSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/CantolusSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/CantolusSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/CantolusSectorImage.svg",
   },
   celeste: {
     name: "Целесте",
-    terminidsImage: "/static/GalaxyMap/terminids/CelesteSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/CelesteSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/CelesteSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/CelesteSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/CelesteSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/CelesteSectorImage.svg",
   },
   draco: {
     name: "Драко",
-    terminidsImage: "/static/GalaxyMap/terminids/DracoSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/DracoSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/DracoSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/DracoSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/DracoSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/DracoSectorImage.svg",
   },
   falstaff: {
     name: "Фальстаф",
-    terminidsImage: "/static/GalaxyMap/terminids/FalstaffSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/FalstaffSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/FalstaffSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/FalstaffSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/FalstaffSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/FalstaffSectorImage.svg",
   },
   farsight: {
     name: "Фарсайт",
-    terminidsImage: "/static/GalaxyMap/terminids/FarsightSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/FarsightSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/FarsightSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/FarsightSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/FarsightSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/FarsightSectorImage.svg",
   },
   ferris: {
     name: "Феррис",
-    terminidsImage: "/static/GalaxyMap/terminids/FerrisSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/FerrisSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/FerrisSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/FerrisSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/FerrisSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/FerrisSectorImage.svg",
   },
   gallux: {
     name: "Галлукс",
-    terminidsImage: "/static/GalaxyMap/terminids/GalluxSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/GalluxSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/GalluxSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/GalluxSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/GalluxSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/GalluxSectorImage.svg",
   },
   gellert: {
     name: "Геллерт",
-    terminidsImage: "/static/GalaxyMap/terminids/GellertSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/GellertSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/GellertSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/GellertSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/GellertSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/GellertSectorImage.svg",
   },
   gothmar: {
     name: "Готмар",
-    terminidsImage: "/static/GalaxyMap/terminids/GothmarSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/GothmarSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/GothmarSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/GothmarSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/GothmarSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/GothmarSectorImage.svg",
   },
   guang: {
     name: "Гуан",
-    terminidsImage: "/static/GalaxyMap/terminids/GuangSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/GuangSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/GuangSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/GuangSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/GuangSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/GuangSectorImage.svg",
   },
   hanzo: {
     name: "Ханзо",
-    terminidsImage: "/static/GalaxyMap/terminids/HanzoSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/HanzoSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/HanzoSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/HanzoSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/HanzoSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/HanzoSectorImage.svg",
   },
   hawking: {
     name: "Хокинг",
-    terminidsImage: "/static/GalaxyMap/terminids/HawkingSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/HawkingSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/HawkingSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/HawkingSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/HawkingSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/HawkingSectorImage.svg",
   },
   hydra: {
     name: "Гидра",
-    terminidsImage: "/static/GalaxyMap/terminids/HydraSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/HydraSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/HydraSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/HydraSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/HydraSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/HydraSectorImage.svg",
   },
   idun: {
     name: "Идун",
-    terminidsImage: "/static/GalaxyMap/terminids/IdunSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/IdunSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/IdunSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/IdunSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/IdunSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/IdunSectorImage.svg",
   },
   iptus: {
     name: "Иптус",
-    terminidsImage: "/static/GalaxyMap/terminids/IptusSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/IptusSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/IptusSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/IptusSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/IptusSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/IptusSectorImage.svg",
   },
   jinXi: {
     name: "Цзинь Си",
-    terminidsImage: "/static/GalaxyMap/terminids/JinXiSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/JinXiSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/JinXiSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/JinXiSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/JinXiSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/JinXiSectorImage.svg",
   },
   kelvin: {
     name: "Кельвин",
-    terminidsImage: "/static/GalaxyMap/terminids/KelvinSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/KelvinSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/KelvinSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/KelvinSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/KelvinSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/KelvinSectorImage.svg",
   },
   korpus: {
     name: "Корпус",
-    terminidsImage: "/static/GalaxyMap/terminids/KorpusSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/KorpusSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/KorpusSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/KorpusSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/KorpusSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/KorpusSectorImage.svg",
   },
   lestrade: {
     name: "Эстрада",
-    terminidsImage: "/static/GalaxyMap/terminids/LestradeSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/LestradeSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/LestradeSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/LestradeSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/LestradeSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/LestradeSectorImage.svg",
   },
   lacaille: {
     name: "Лакайлли",
-    terminidsImage: "/static/GalaxyMap/terminids/LacailleSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/LacailleSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/LacailleSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/LacailleSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/LacailleSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/LacailleSectorImage.svg",
   },
   leo: {
     name: "Лео",
-    terminidsImage: "/static/GalaxyMap/terminids/LeoSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/LeoSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/LeoSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/LeoSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/LeoSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/LeoSectorImage.svg",
   },
   marspira: {
     name: "Марспира",
-    terminidsImage: "/static/GalaxyMap/terminids/MarspiraSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/MarspiraSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/MarspiraSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/MarspiraSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/MarspiraSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/MarspiraSectorImage.svg",
   },
   meridian: {
     name: "Меридиан",
-    terminidsImage: "/static/GalaxyMap/terminids/MeridianSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/MeridianSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/MeridianSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/MeridianSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/MeridianSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/MeridianSectorImage.svg",
   },
   mirin: {
     name: "Мирин",
-    terminidsImage: "/static/GalaxyMap/terminids/MirinSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/MirinSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/MirinSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/MirinSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/MirinSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/MirinSectorImage.svg",
   },
   morgon: {
     name: "Моргон",
-    terminidsImage: "/static/GalaxyMap/terminids/MorgonSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/MorgonSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/MorgonSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/MorgonSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/MorgonSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/MorgonSectorImage.svg",
   },
   nanos: {
     name: "Нанос",
-    terminidsImage: "/static/GalaxyMap/terminids/NanosSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/NanosSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/NanosSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/NanosSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/NanosSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/NanosSectorImage.svg",
   },
   omega: {
     name: "Омега",
-    terminidsImage: "/static/GalaxyMap/terminids/OmegaSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/OmegaSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/OmegaSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/OmegaSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/OmegaSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/OmegaSectorImage.svg",
   },
   orion: {
     name: "Орион",
-    terminidsImage: "/static/GalaxyMap/terminids/OrionSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/OrionSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/OrionSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/OrionSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/OrionSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/OrionSectorImage.svg",
   },
   quintus: {
     name: "Квинтус",
-    terminidsImage: "/static/GalaxyMap/terminids/QuintusSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/QuintusSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/QuintusSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/QuintusSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/QuintusSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/QuintusSectorImage.svg",
   },
   rictus: {
     name: "Риктус",
-    terminidsImage: "/static/GalaxyMap/terminids/RictusSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/RictusSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/RictusSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/RictusSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/RictusSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/RictusSectorImage.svg",
   },
   rigel: {
     name: "Ригель",
-    terminidsImage: "/static/GalaxyMap/terminids/RigelSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/RigelSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/RigelSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/RigelSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/RigelSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/RigelSectorImage.svg",
   },
   sagan: {
     name: "Саган",
-    terminidsImage: "/static/GalaxyMap/terminids/SaganSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/SaganSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/SaganSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/SaganSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/SaganSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/SaganSectorImage.svg",
   },
   saleria: {
     name: "Салерия",
-    terminidsImage: "/static/GalaxyMap/terminids/SaleriaSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/SaleriaSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/SaleriaSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/SaleriaSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/SaleriaSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/SaleriaSectorImage.svg",
   },
   severin: {
     name: "Северин",
-    terminidsImage: "/static/GalaxyMap/terminids/SeverinSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/SeverinSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/SeverinSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/SeverinSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/SeverinSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/SeverinSectorImage.svg",
   },
   sol: {
     name: "Солнечная система",
-    terminidsImage: "",
-    automatonsImage: "",
+    terminidsActiveImage: "",
+    terminidsInactiveImage: "",
+    automatonsActiveImage: "",
+    automatonsInactiveImage: "",
   },
   sten: {
     name: "Стен",
-    terminidsImage: "/static/GalaxyMap/terminids/StenSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/StenSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/StenSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/StenSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/StenSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/StenSectorImage.svg",
   },
   talus: {
     name: "Талус",
-    terminidsImage: "/static/GalaxyMap/terminids/TalusSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/TalusSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/TalusSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/TalusSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/TalusSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/TalusSectorImage.svg",
   },
   tanis: {
     name: "Танис",
-    terminidsImage: "/static/GalaxyMap/terminids/TanisSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/TanisSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/TanisSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/TanisSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/TanisSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/TanisSectorImage.svg",
   },
   tarragon: {
     name: "Таррагон",
-    terminidsImage: "/static/GalaxyMap/terminids/TarragonSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/TarragonSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/TarragonSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/TarragonSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/TarragonSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/TarragonSectorImage.svg",
   },
   theseus: {
     name: "Тезей",
-    terminidsImage: "/static/GalaxyMap/terminids/TheseusSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/TheseusSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/TheseusSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/TheseusSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/TheseusSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/TheseusSectorImage.svg",
   },
   trigon: {
     name: "Тригон",
-    terminidsImage: "/static/GalaxyMap/terminids/TrigonSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/TrigonSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/TrigonSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/TrigonSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/TrigonSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/TrigonSectorImage.svg",
   },
   umlaut: {
     name: "Умлаут",
-    terminidsImage: "/static/GalaxyMap/terminids/UmlautSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/UmlautSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/UmlautSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/UmlautSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/UmlautSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/UmlautSectorImage.svg",
   },
   ursa: {
     name: "Урса",
-    terminidsImage: "/static/GalaxyMap/terminids/UrsaSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/UrsaSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/UrsaSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/UrsaSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/UrsaSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/UrsaSectorImage.svg",
   },
   valdis: {
     name: "Валдис",
-    terminidsImage: "/static/GalaxyMap/terminids/ValdisSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/ValdisSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/ValdisSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/ValdisSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/ValdisSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/ValdisSectorImage.svg",
   },
   xiTauri: {
     name: "Си Таури",
-    terminidsImage: "/static/GalaxyMap/terminids/XiTauriSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/XiTauriSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/XiTauriSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/XiTauriSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/XiTauriSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/XiTauriSectorImage.svg",
   },
   xzar: {
     name: "Кзар",
-    terminidsImage: "/static/GalaxyMap/terminids/XzarSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/XzarSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/XzarSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/XzarSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/XzarSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/XzarSectorImage.svg",
   },
   ymir: {
     name: "Имир",
-    terminidsImage: "/static/GalaxyMap/terminids/YmirSectorImage.svg",
-    automatonsImage: "/static/GalaxyMap/automatons/YmirSectorImage.svg",
+    terminidsActiveImage:
+      "/static/GalaxyMap/terminids/active/YmirSectorImage.svg",
+    terminidsInactiveImage:
+      "/static/GalaxyMap/terminids/inactive/YmirSectorImage.svg",
+    automatonsActiveImage:
+      "/static/GalaxyMap/automatons/active/YmirSectorImage.svg",
+    automatonsInactiveImage:
+      "/static/GalaxyMap/automatons/inactive/YmirSectorImage.svg",
   },
 };
