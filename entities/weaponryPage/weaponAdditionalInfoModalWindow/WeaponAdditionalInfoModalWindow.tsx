@@ -204,7 +204,7 @@ const WeaponAdditionalInfoModa: React.FC<WeaponAdditionalInfoModaProps> =
 
               <div className="currentWeapon_Modal_Top">
                 <div
-                  className={`currentWeapon_Modal_Top_ImageWrapper ${directions ? "" : "flex justify-center items-center"} ${fuseTime ? "w-[400px] mlarge:w-full" : "w-[640px] mlarge:w-full"}`}
+                  className={`currentWeapon_Modal_Top_ImageWrapper ${directions ? "" : "flex justify-center items-center"} ${fuseTime || fuseTime === 0 ? "w-[400px] mlarge:w-full" : "w-[640px] mlarge:w-full"}`}
                 >
                   <img
                     src={imagePath}
