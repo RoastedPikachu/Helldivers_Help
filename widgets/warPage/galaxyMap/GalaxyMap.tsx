@@ -139,7 +139,7 @@ const GalaxyMap = () => {
         [-51.075, 62.62],
       ]}
       scrollWheelZoom={true}
-      className="w-full h-full"
+      className="mlarge:mt-[25px] w-full h-full mlarge:border-2 mlarge:border-[#2cc388] mlarge:rounded-[10px]"
     >
       <TileLayer
         attribution="stars"

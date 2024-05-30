@@ -1,10 +1,13 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
-import "./TheScrollToUpButton.css";
+import { observer, Observer } from "mobx-react-lite";
+
 import { mobileStore } from "@/store/MobileStore";
 
-const TheScrollToUpButton = () => {
+import "./TheScrollToUpButton.css";
+
+const TheScrollToUpButton = observer(() => {
   const [isScrollButtonShowed, changeIsScrollButtonShowed] = useState(false);
 
   useEffect(() => {
@@ -19,22 +22,26 @@ const TheScrollToUpButton = () => {
     };
   }, []);
   return (
-    <button
-      onClick={() =>
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        })
-      }
-      className={`${isScrollButtonShowed ? "opacity-1" : "opacity-0 scroll-default"} ${mobileStore.isMobileDevice ? "hidden" : "block"} buttonWrapper`}
-    >
-      <img
-        src="/static/GeneralIcons/ArrowDownIcon.svg"
-        alt="Кнопка: Вернуться к верху страницы"
-        className="buttonImage"
-      />
-    </button>
+    <Observer>
+      {() => (
+        <button
+          onClick={() =>
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            })
+          }
+          className={`${isScrollButtonShowed ? "opacity-1" : "opacity-0 scroll-default"} ${mobileStore.isMobileDevice ? "hidden" : "block"} buttonWrapper`}
+        >
+          <img
+            src="/static/GeneralIcons/ArrowDownIcon.svg"
+            alt="Кнопка: Вернуться к верху страницы"
+            className="buttonImage"
+          />
+        </button>
+      )}
+    </Observer>
   );
-};
+});
 
 export default TheScrollToUpButton;
