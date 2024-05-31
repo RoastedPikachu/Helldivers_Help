@@ -19,6 +19,7 @@
     "react-fast-marquee": "^1.6.4",
     "react-leaflet": "^4.2.1",
     "react-responsive": "^10.0.0",
+    "react-zoom-pan-pinch": "^3.4.4",
     "swiper": "^11.0.7"
   },
   "devDependencies": {
