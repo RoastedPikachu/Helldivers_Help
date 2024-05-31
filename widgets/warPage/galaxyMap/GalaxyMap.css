@@ -1,3 +1,7 @@
+.transformWrapper {
+    @apply relative flex justify-center items-center mlarge:mt-[25px] w-full h-full bg-[url('/static/GalaxyMap/StarfieldMapBackgroundImage.webp')] mlarge:border-2 mlarge:border-[#2cc388] mlarge:rounded-[10px] cursor-pointer;
+}
+
 .leaflet-bar {
     @apply !border-[#2cc388];
 }
