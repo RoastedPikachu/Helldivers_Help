@@ -149,7 +149,7 @@ const GalaxyMap = () => {
 
     const galaxySectorsInterval = setInterval(
       () => getCapturedSectors(),
-      10000,
+      60000,
     );
 
     return () => clearInterval(galaxySectorsInterval);

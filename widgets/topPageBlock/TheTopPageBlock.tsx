@@ -17,8 +17,8 @@ const TheTopPageBlock = observer(() => {
   const pathname = usePathname();
 
   const isRunningLineShowed = useMemo(() => {
-    if (typeof window !== "undefined" && mobileStore.isMobileDevice) {
-      return !window.location.href.includes("/stratagemTraining");
+    if (mobileStore.isMobileDevice) {
+      return pathname !== "/stratagemTraining/";
     }
     return true;
   }, [pathname]);
