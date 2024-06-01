@@ -258,6 +258,14 @@ export const terminidMissions = [
     description: "Позвольте Шаттлам собрать ценный Э-710.",
     level: "2-9",
   },
+  {
+    id: 8,
+    imagePath: "/static/Missions/DarkFluidIcon.svg",
+    title: "Заложите темную жидкость",
+    description:
+      "Заложите темную жидкость в кору под суперколонией, чтобы раз и навсегда уничтожить ее.",
+    level: "1-9",
+  },
 ] as Mission[];
 
 export const automatonMissions = [
