@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "leaflet": "^1.9.4",
     "mobx": "^6.12.0",
     "mobx-persist-store": "^1.1.5",
     "mobx-react-lite": "^4.0.6",
@@ -17,7 +16,6 @@
     "react": "^18",
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.4",
-    "react-leaflet": "^4.2.1",
     "react-responsive": "^10.0.0",
     "react-zoom-pan-pinch": "^3.4.4",
     "swiper": "^11.0.7"
