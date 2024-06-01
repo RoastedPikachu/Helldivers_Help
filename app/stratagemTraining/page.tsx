@@ -7,7 +7,8 @@ import TheStratagemsTrainingContent from "@/widgets/pageContents/TheStratagemsTr
 
 export const metadata: Metadata = {
   title: "HELLDIVERS 2: Тренировка стратагем",
-  description: "",
+  description:
+    "Улучшайте свой навык быстрого ввода стратагем в постоянных тренировках, чтобы как можно эффективнее продвигать управляемую демократию в галактике и стремительнее убивать ненавистных врагов Супер-Земли.",
 };
 
 const Page = () => {
