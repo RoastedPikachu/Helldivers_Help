@@ -21,6 +21,7 @@ import {
 
 import "leaflet/dist/leaflet.css";
 import "./GalaxyMap.css";
+import SectionTitle from "@/shared/sectionTitle/SectionTitle";
 
 interface CapturedSector {
   name: string;
@@ -34,6 +35,12 @@ const GalaxyMap = () => {
   const [inactiveSectors, setInactiveSectors] = useState(
     [] as CapturedSector[],
   );
+
+  const [isSupplyLinesShowed, changeIsSupplyLinesShowedStatus] = useState(true);
+  const [isCapturedSectorsShowed, changeIsCapturedSectorsShowedStatus] =
+    useState(true);
+  const [isActivePlanetsShowed, changeIsActivePlanetsShowedStatus] =
+    useState(true);
 
   const formatPlanetName = (string: string) => {
     // Преобразование строки в Lowercase
@@ -156,204 +163,163 @@ const GalaxyMap = () => {
     return () => clearInterval(galaxySectorsInterval);
   }, []);
   return (
-    <TransformWrapper
-      initialScale={1}
-      initialPositionX={0}
-      initialPositionY={0}
-      minPositionX={100}
-      centerOnInit={true}
-      centerZoomedOut={true}
-    >
-      <GalaxyMapControls />
+    <>
+      <SectionTitle text={"КАРТА ГАЛАКТИКИ"} />
 
-      <TransformComponent wrapperClass="transformWrapper">
-        <div className="relative w-[718px] h-[581px]">
-          <img
-            src="/static/GalaxyMap/GalaxyEllipsisImage.svg"
-            alt=""
-            className="absolute w-full h-full"
-          />
+      <div className="galaxyMap_Wrapper">
+        <TransformWrapper
+          initialScale={1}
+          initialPositionX={0}
+          initialPositionY={0}
+          minPositionX={100}
+          centerOnInit={true}
+          centerZoomedOut={true}
+        >
+          <GalaxyMapControls />
 
-          <img
-            src="/static/GalaxyMap/SupplyLinesImage.svg"
-            alt=""
-            className="absolute w-full h-full z-[10]"
-          />
-
-          {Object.values(planetsStore.planets)
-            .slice(2)
-            .map((planet, index) => (
+          <TransformComponent wrapperClass="transformWrapper">
+            <div className="relative flex justify-center items-center w-[718px] h-[581px]">
               <img
-                src={`${planet.image}`}
-                alt=""
-                key={index + 1}
-                className={`absolute w-full h-full z-[11] ${activePlanets.includes(planet.name) ? "" : "brightness-50"}`}
+                src="/static/GalaxyMap/NebulaImage.png"
+                className="absolute w-[80%] h-[80%] opacity-50 z-0"
               />
-            ))}
 
-          <img
-            src={`/static/GalaxyMap/SuperEarthPlanetImage.svg`}
-            alt=""
-            className="absolute w-full h-full z-[11]"
+              <img
+                src="/static/GalaxyMap/GalaxyEllipsisImage.svg"
+                alt=""
+                className="absolute w-full h-full"
+              />
+
+              {isSupplyLinesShowed && (
+                <img
+                  src="/static/GalaxyMap/SupplyLinesImage.svg"
+                  alt=""
+                  className="absolute w-full h-full z-[10]"
+                />
+              )}
+
+              {Object.values(planetsStore.planets)
+                .slice(2)
+                .map((planet, index) => (
+                  <img
+                    src={`${planet.image}`}
+                    alt=""
+                    key={index + 1}
+                    className={`absolute w-full h-full z-[11] ${activePlanets.includes(planet.name) ? "" : `${isActivePlanetsShowed ? "brightness-50" : "hidden"}`}`}
+                  />
+                ))}
+
+              <img
+                src={`/static/GalaxyMap/SuperEarthPlanetImage.svg`}
+                alt=""
+                className="absolute w-full h-full z-[11]"
+              />
+
+              {isCapturedSectorsShowed && (
+                <>
+                  {getUniqueCapturedSectors(activeSectors).map(
+                    (sector, index) => (
+                      <img
+                        src={`${getSectorImage(sector, true)}`}
+                        alt=""
+                        key={index + 1}
+                        className="absolute w-full h-full"
+                      />
+                    ),
+                  )}
+
+                  {inactiveSectors.map((sector, index) => (
+                    <img
+                      src={`${getSectorImage(sector, false)}`}
+                      alt=""
+                      key={index + 1}
+                      className="absolute w-full h-full"
+                    />
+                  ))}
+
+                  <img
+                    src="/static/GalaxyMap/AutomatonsTextImage.svg"
+                    className="absolute w-full h-full"
+                  />
+
+                  <img
+                    src="/static/GalaxyMap/TerminidsTextImage.svg"
+                    className="absolute w-full h-full"
+                  />
+                </>
+              )}
+            </div>
+          </TransformComponent>
+        </TransformWrapper>
+      </div>
+
+      <div className="flex justify-around items-center w-full h-[50px] bg-[#07212f] border-2 border-t-0 border-[#2cc388] rounded-b-[10px]">
+        <label className="flex items-center cursor-pointer">
+          <input
+            type="checkbox"
+            onChange={() => changeIsSupplyLinesShowedStatus((prev) => !prev)}
+            checked={isSupplyLinesShowed}
+            className="hidden"
           />
 
-          <img
-            src="/static/GalaxyMap/PlanetsTextImage.svg"
-            alt=""
-            className="absolute w-full h-full z-[12]"
+          <span className="relative block w-[17.5px] h-[17.5px]">
+            <img
+              src={`${isSupplyLinesShowed ? "/static/GalaxyMap/LayersControlCheckboxCheckedIcon.svg" : "/static/GalaxyMap/LayersControlCheckboxIcon.svg"}`}
+              alt=""
+              className="w-full h-full"
+            />
+          </span>
+
+          <p className="pl-[15px] text-[#2cc388] text-[1rem] font-['Exo2'] font-medium cursor-pointer">
+            Показать линии снабжения
+          </p>
+        </label>
+
+        <label className="flex items-center cursor-pointer">
+          <input
+            type="checkbox"
+            onChange={() =>
+              changeIsCapturedSectorsShowedStatus((prev) => !prev)
+            }
+            checked={isCapturedSectorsShowed}
+            className="hidden"
           />
 
-          {getUniqueCapturedSectors(activeSectors).map((sector, index) => (
+          <span className="relative block w-[17.5px] h-[17.5px]">
             <img
-              src={`${getSectorImage(sector, true)}`}
+              src={`${isCapturedSectorsShowed ? "/static/GalaxyMap/LayersControlCheckboxCheckedIcon.svg" : "/static/GalaxyMap/LayersControlCheckboxIcon.svg"}`}
               alt=""
-              key={index + 1}
-              className="absolute w-full h-full"
+              className="w-full h-full"
             />
-          ))}
+          </span>
 
-          {inactiveSectors.map((sector, index) => (
+          <p className="pl-[15px] text-[#2cc388] text-[1rem] font-['Exo2'] font-medium cursor-pointer">
+            Показать захваченные сектора
+          </p>
+        </label>
+
+        <label className="flex items-center cursor-pointer">
+          <input
+            type="checkbox"
+            onChange={() => changeIsActivePlanetsShowedStatus((prev) => !prev)}
+            checked={isActivePlanetsShowed}
+            className="hidden"
+          />
+
+          <span className="relative block w-[17.5px] h-[17.5px]">
             <img
-              src={`${getSectorImage(sector, false)}`}
+              src={`${isActivePlanetsShowed ? "/static/GalaxyMap/LayersControlCheckboxCheckedIcon.svg" : "/static/GalaxyMap/LayersControlCheckboxIcon.svg"}`}
               alt=""
-              key={index + 1}
-              className="absolute w-full h-full"
+              className="w-full h-full"
             />
-          ))}
-        </div>
-      </TransformComponent>
-    </TransformWrapper>
+          </span>
 
-    // <MapContainer
-    //   center={[-35.05, 35]}
-    //   zoom={4.2}
-    //   minZoom={4.2}
-    //   maxZoom={6.5}
-    //   zoomSnap={0.1}
-    //   maxBounds={[
-    //     [-14.875, 7.78],
-    //     [-51.075, 62.62],
-    //   ]}
-    //   scrollWheelZoom={true}
-    //   className="mlarge:mt-[25px] w-full h-full mlarge:border-2 mlarge:border-[#2cc388] mlarge:rounded-[10px]"
-    // >
-    //   <TileLayer
-    //     attribution="stars"
-    //     url={`/static/GalaxyMap/StarfieldMapBackgroundImage.webp`}
-    //     tileSize={2024}
-    //   />
-    //   <ImageOverlay
-    //     attribution="nebula"
-    //     url={`/static/GalaxyMap/NebulaImage.png`}
-    //     bounds={[
-    //       [-16.875, 15.78],
-    //       [-45.075, 54.62],
-    //     ]}
-    //     opacity={0.5}
-    //   />
-    //   <ImageOverlay
-    //     attribution="superEarthDecoration"
-    //     url={`/static/GalaxyMap/SuperEarthDecorationImage.png`}
-    //     bounds={[
-    //       [10.9, -2.5],
-    //       [7.4, 2.5],
-    //     ]}
-    //     opacity={0.5}
-    //   />
-    //   <ImageOverlay
-    //     attribution="ellipsis"
-    //     url={`/static/GalaxyMap/GalaxyEllipsisImage.svg`}
-    //     bounds={[
-    //       [-14.875, 7.78],
-    //       [-51.075, 62.62],
-    //     ]}
-    //   />
-    //   <ImageOverlay
-    //     attribution="automatonsText"
-    //     url={`/static/GalaxyMap/AutomatonsTextImage.svg`}
-    //     bounds={[
-    //       [-14.875, 7.78],
-    //       [-51.075, 62.62],
-    //     ]}
-    //   />
-    //   <ImageOverlay
-    //     attribution="terminidsText"
-    //     url={`/static/GalaxyMap/TerminidsTextImage.svg`}
-    //     bounds={[
-    //       [-14.875, 7.78],
-    //       [-51.075, 62.62],
-    //     ]}
-    //   />
-    //
-    //   <LayersControl position="topright" collapsed={false}>
-    //     <LayersControl.Overlay name="" checked={true}>
-    //       <LayerGroup>
-    //         {getUniqueCapturedSectors(activeSectors).map((sector, index) => (
-    //           <ImageOverlay
-    //             key={index + 1}
-    //             attribution={sector.name}
-    //             url={`${getSectorImage(sector, true)}`}
-    //             bounds={[
-    //               [-14.875, 7.78],
-    //               [-51.075, 62.62],
-    //             ]}
-    //           />
-    //         ))}
-    //
-    //         {inactiveSectors.map((sector, index) => (
-    //           <ImageOverlay
-    //             key={index + 1}
-    //             attribution={sector.name}
-    //             url={`${getSectorImage(sector, false)}`}
-    //             bounds={[
-    //               [-14.875, 7.78],
-    //               [-51.075, 62.62],
-    //             ]}
-    //           />
-    //         ))}
-    //       </LayerGroup>
-    //     </LayersControl.Overlay>
-    //
-    //     <LayersControl.Overlay name="" checked={true}>
-    //       <ImageOverlay
-    //         attribution="supplyLines"
-    //         url={`/static/GalaxyMap/SupplyLinesImage.svg`}
-    //         bounds={[
-    //           [-14.875, 7.78],
-    //           [-51.075, 62.62],
-    //         ]}
-    //       />
-    //     </LayersControl.Overlay>
-    //   </LayersControl>
-    //
-    //   <ImageOverlay
-    //     attribution="planets"
-    //     url={`/static/GalaxyMap/PlanetsImage.svg`}
-    //     bounds={[
-    //       [-14.875, 7.78],
-    //       [-51.075, 62.62],
-    //     ]}
-    //     zIndex={10}
-    //   />
-    //   <ImageOverlay
-    //     attribution="superEarth"
-    //     url={`/static/GalaxyMap/SuperEarthPlanetImage.svg`}
-    //     bounds={[
-    //       [-14.875, 7.78],
-    //       [-51.075, 62.62],
-    //     ]}
-    //     zIndex={10}
-    //   />
-    //   <ImageOverlay
-    //     attribution="planetsText"
-    //     url={`/static/GalaxyMap/PlanetsTextImage.svg`}
-    //     bounds={[
-    //       [-14.875, 7.78],
-    //       [-51.075, 62.62],
-    //     ]}
-    //     zIndex={11}
-    //   />
-    // </MapContainer>
+          <p className="pl-[15px] text-[#2cc388] text-[1rem] font-['Exo2'] font-medium">
+            Показать неактивные планеты
+          </p>
+        </label>
+      </div>
+    </>
   );
 };
 

@@ -48,9 +48,7 @@ const TheWarContent = observer(() => {
               <aside className="galaxyMap">
                 <SectionTitle text={"КАРТА ГАЛАКТИКИ"} />
 
-                <div className="galaxyMap_Wrapper">
-                  <DynamicGalaxyMap />
-                </div>
+                <DynamicGalaxyMap />
 
                 <MajorOrderSection />
               </aside>
