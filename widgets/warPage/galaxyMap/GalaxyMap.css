@@ -3,7 +3,11 @@
 }
 
 .transformWrapper {
-    @apply relative flex justify-center items-center mlarge:mt-[25px] w-[718px] h-[581px];
+    @apply relative flex justify-center items-center mlarge:mt-[25px] w-full h-full;
+}
+
+.react-transform-component {
+    @apply flex justify-center items-center w-full h-full;
 }
 
 .leaflet-bar {

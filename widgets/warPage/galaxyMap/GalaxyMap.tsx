@@ -9,6 +9,8 @@ import { galaxySectors } from "@/data/galaxySectors";
 
 import { planetsStore } from "@/store/PlanetsStore";
 
+import GalaxyMapControls from "@/widgets/warPage/galaxyMap/GalaxyMapControls";
+
 import {
   MapContainer,
   TileLayer,
@@ -158,10 +160,11 @@ const GalaxyMap = () => {
       initialScale={1}
       initialPositionX={0}
       initialPositionY={0}
+      minPositionX={100}
       centerOnInit={true}
       centerZoomedOut={true}
     >
-      {/*<GalaxyMapControls />*/}
+      <GalaxyMapControls />
 
       <TransformComponent wrapperClass="transformWrapper">
         <div className="relative w-[718px] h-[581px]">
@@ -220,6 +223,7 @@ const GalaxyMap = () => {
         </div>
       </TransformComponent>
     </TransformWrapper>
+
     // <MapContainer
     //   center={[-35.05, 35]}
     //   zoom={4.2}

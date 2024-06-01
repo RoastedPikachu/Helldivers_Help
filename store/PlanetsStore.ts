@@ -16,6 +16,7 @@ class PlanetsStore {
       sector: galaxySectors.sol,
       biome: biomes.superEarth,
       weatherConditions: [],
+      image: "",
     },
     1: {
       id: 2,
@@ -23,6 +24,7 @@ class PlanetsStore {
       sector: galaxySectors.sol,
       biome: null,
       weatherConditions: [],
+      image: "",
     },
     2: {
       id: 1,
