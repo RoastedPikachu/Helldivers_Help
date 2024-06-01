@@ -1,6 +1,14 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
+import axios from "axios";
+
+import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
+
+import { galaxySectors } from "@/data/galaxySectors";
+
+import { planetsStore } from "@/store/PlanetsStore";
+
 import {
   MapContainer,
   TileLayer,
@@ -11,10 +19,6 @@ import {
 
 import "leaflet/dist/leaflet.css";
 import "./GalaxyMap.css";
-import axios from "axios";
-import { galaxySectors } from "@/data/galaxySectors";
-import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
-import GalaxyMapControls from "@/widgets/warPage/galaxyMap/GalaxyMapControls";
 
 interface CapturedSector {
   name: string;
@@ -22,10 +26,25 @@ interface CapturedSector {
 }
 
 const GalaxyMap = () => {
+  const [activePlanets, setActivePlanets] = useState([] as string[]);
+
   const [activeSectors, setActiveSectors] = useState([] as CapturedSector[]);
   const [inactiveSectors, setInactiveSectors] = useState(
     [] as CapturedSector[],
   );
+
+  const formatPlanetName = (string: string) => {
+    // Преобразование строки в Lowercase
+    string = string.toLowerCase();
+
+    // Преобразование первой буквы в Uppercase
+    string = string.charAt(0).toUpperCase() + string.slice(1);
+
+    // Преобразование символов римских цифр в Uppercase
+    string = string.replace(/[ivx]/g, (match) => match.toUpperCase());
+
+    return string;
+  };
 
   const formatSectorName = (string: string) => {
     // Удаление пробелов
@@ -64,6 +83,11 @@ const GalaxyMap = () => {
         },
       })
       .then((response) => {
+        setActivePlanets(
+          response.data.map((campaign: any) =>
+            formatPlanetName(campaign.planet.name),
+          ),
+        );
         setActiveSectors(
           response.data.map((campaign: any) => {
             return {
@@ -134,6 +158,8 @@ const GalaxyMap = () => {
       initialScale={1}
       initialPositionX={0}
       initialPositionY={0}
+      centerOnInit={true}
+      centerZoomedOut={true}
     >
       {/*<GalaxyMapControls />*/}
 
@@ -148,25 +174,30 @@ const GalaxyMap = () => {
           <img
             src="/static/GalaxyMap/SupplyLinesImage.svg"
             alt=""
-            className="absolute w-full h-full"
+            className="absolute w-full h-full z-[10]"
           />
 
-          <img
-            src="/static/GalaxyMap/PlanetsImage.svg"
-            alt=""
-            className="absolute w-full h-full"
-          />
+          {Object.values(planetsStore.planets)
+            .slice(2)
+            .map((planet, index) => (
+              <img
+                src={`${planet.image}`}
+                alt=""
+                key={index + 1}
+                className={`absolute w-full h-full z-[11] ${activePlanets.includes(planet.name) ? "" : "brightness-50"}`}
+              />
+            ))}
 
           <img
             src={`/static/GalaxyMap/SuperEarthPlanetImage.svg`}
             alt=""
-            className="absolute w-full h-full"
+            className="absolute w-full h-full z-[11]"
           />
 
           <img
             src="/static/GalaxyMap/PlanetsTextImage.svg"
             alt=""
-            className="absolute w-full h-full"
+            className="absolute w-full h-full z-[12]"
           />
 
           {getUniqueCapturedSectors(activeSectors).map((sector, index) => (

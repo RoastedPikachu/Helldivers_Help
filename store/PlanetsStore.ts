@@ -33,6 +33,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
       ],
+      image: "/static/GalaxyMap/planets/Клен_Дахт_II.svg",
     },
     3: {
       id: 2,
@@ -43,6 +44,7 @@ class PlanetsStore {
         weatherConditions.thickFog,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Следопыт_V.svg",
     },
     4: {
       id: 3,
@@ -53,6 +55,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.meteorStorms,
       ],
+      image: "/static/GalaxyMap/planets/Вдовья_гавань.svg",
     },
     5: {
       id: 4,
@@ -60,6 +63,7 @@ class PlanetsStore {
       sector: galaxySectors.altus,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Новая_гавань.svg",
     },
     6: {
       id: 5,
@@ -70,6 +74,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.tremors,
       ],
+      image: "/static/GalaxyMap/planets/Пилен_V.svg",
     },
     7: {
       id: 1,
@@ -77,6 +82,7 @@ class PlanetsStore {
       sector: galaxySectors.barnard,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
+      image: "/static/GalaxyMap/planets/Гидропад_прайм.svg",
     },
     8: {
       id: 1,
@@ -87,6 +93,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.tremors,
       ],
+      image: "/static/GalaxyMap/planets/Зея_ругозия.svg",
     },
     9: {
       id: 2,
@@ -97,6 +104,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
       ],
+      image: "/static/GalaxyMap/planets/Дерроуспорт.svg",
     },
     10: {
       id: 3,
@@ -107,6 +115,7 @@ class PlanetsStore {
         weatherConditions.volcanicActivity,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Форнскогур_II.svg",
     },
     11: {
       id: 4,
@@ -114,6 +123,7 @@ class PlanetsStore {
       sector: galaxySectors.barnard,
       biome: biomes.tundra,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Мидасбург.svg",
     },
     12: {
       id: 1,
@@ -124,6 +134,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.tremors,
       ],
+      image: "/static/GalaxyMap/planets/Цербер_IIIc.svg",
     },
     13: {
       id: 2,
@@ -131,6 +142,7 @@ class PlanetsStore {
       sector: galaxySectors.cancri,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Водопады_процветания.svg",
     },
     14: {
       id: 1,
@@ -141,6 +153,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.blizzards,
       ],
+      image: "/static/GalaxyMap/planets/Окул_VI.svg",
     },
     15: {
       id: 1,
@@ -148,6 +161,7 @@ class PlanetsStore {
       sector: galaxySectors.cantolus,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
+      image: "/static/GalaxyMap/planets/Залив_мучеников.svg",
     },
     16: {
       id: 2,
@@ -155,6 +169,7 @@ class PlanetsStore {
       sector: galaxySectors.cantolus,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Пик_свободы.svg",
     },
     17: {
       id: 1,
@@ -165,6 +180,7 @@ class PlanetsStore {
         weatherConditions.thickFog,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Форт_единения.svg",
     },
     18: {
       id: 3,
@@ -175,6 +191,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.blizzards,
       ],
+      image: "/static/GalaxyMap/planets/Кельвинор.svg",
     },
     19: {
       id: 1,
@@ -185,6 +202,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
       ],
+      image: "/static/GalaxyMap/planets/Призрак.svg",
     },
     20: {
       id: 1,
@@ -192,6 +210,7 @@ class PlanetsStore {
       sector: galaxySectors.kelvin,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
+      image: "/static/GalaxyMap/planets/Игла.svg",
     },
     21: {
       id: 2,
@@ -202,6 +221,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.blizzards,
       ],
+      image: "/static/GalaxyMap/planets/Новая_кируна.svg",
     },
     22: {
       id: 3,
@@ -209,6 +229,7 @@ class PlanetsStore {
       sector: galaxySectors.kelvin,
       biome: biomes.tundra,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Форт_правосудия.svg",
     },
     23: {
       id: 4,
@@ -219,6 +240,7 @@ class PlanetsStore {
         weatherConditions.volcanicActivity,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Загемский_рай.svg",
     },
     24: {
       id: 1,
@@ -226,6 +248,7 @@ class PlanetsStore {
       sector: galaxySectors.iptus,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Провидение.svg",
     },
     25: {
       id: 2,
@@ -236,6 +259,7 @@ class PlanetsStore {
         weatherConditions.volcanicActivity,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Примортия.svg",
     },
     26: {
       id: 1,
@@ -243,6 +267,7 @@ class PlanetsStore {
       sector: galaxySectors.celeste,
       biome: biomes.ethereal,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Сульфура.svg",
     },
     27: {
       id: 2,
@@ -253,6 +278,7 @@ class PlanetsStore {
         weatherConditions.volcanicActivity,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Нублария_I.svg",
     },
     28: {
       id: 3,
@@ -260,6 +286,7 @@ class PlanetsStore {
       sector: galaxySectors.celeste,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
+      image: "/static/GalaxyMap/planets/Кракату.svg",
     },
     29: {
       id: 1,
@@ -270,6 +297,7 @@ class PlanetsStore {
         weatherConditions.thickFog,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Вольтерра.svg",
     },
     30: {
       id: 2,
@@ -277,6 +305,7 @@ class PlanetsStore {
       sector: galaxySectors.korpus,
       biome: biomes.tundra,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Горн.svg",
     },
     31: {
       id: 5,
@@ -284,6 +313,7 @@ class PlanetsStore {
       sector: galaxySectors.barnard,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
+      image: "/static/GalaxyMap/planets/Вуаль.svg",
     },
     32: {
       id: 6,
@@ -294,6 +324,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.fireTornadoes,
       ],
+      image: "/static/GalaxyMap/planets/Марр_IV.svg",
     },
     33: {
       id: 3,
@@ -301,6 +332,7 @@ class PlanetsStore {
       sector: galaxySectors.cancri,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Форт_безопасности.svg",
     },
     34: {
       id: 4,
@@ -308,6 +340,7 @@ class PlanetsStore {
       sector: galaxySectors.cancri,
       biome: biomes.ethereal,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Сейшельский_пляж.svg",
     },
     35: {
       id: 1,
@@ -319,6 +352,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.fireTornadoes,
       ],
+      image: "/static/GalaxyMap/planets/Хеллмейр.svg",
     },
     36: {
       id: 5,
@@ -326,6 +360,7 @@ class PlanetsStore {
       sector: galaxySectors.cancri,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
+      image: "/static/GalaxyMap/planets/Эффлувия.svg",
     },
     37: {
       id: 2,
@@ -333,6 +368,7 @@ class PlanetsStore {
       sector: galaxySectors.gothmar,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
+      image: "/static/GalaxyMap/planets/Солгаст.svg",
     },
     38: {
       id: 3,
@@ -340,6 +376,7 @@ class PlanetsStore {
       sector: galaxySectors.gothmar,
       biome: biomes.tundra,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Дилувия.svg",
     },
     39: {
       id: 4,
@@ -350,6 +387,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
       ],
+      image: "/static/GalaxyMap/planets/Виридия-прайм.svg",
     },
     40: {
       id: 5,
@@ -360,6 +398,7 @@ class PlanetsStore {
         weatherConditions.thickFog,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Обари.svg",
     },
     41: {
       id: 2,
@@ -370,6 +409,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.tremors,
       ],
+      image: "/static/GalaxyMap/planets/Мирадеш.svg",
     },
     42: {
       id: 3,
@@ -377,6 +417,7 @@ class PlanetsStore {
       sector: galaxySectors.idun,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Атрама.svg",
     },
     43: {
       id: 5,
@@ -384,6 +425,7 @@ class PlanetsStore {
       sector: galaxySectors.kelvin,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
+      image: "/static/GalaxyMap/planets/Эмерия.svg",
     },
     44: {
       id: 1,
@@ -391,6 +433,7 @@ class PlanetsStore {
       sector: galaxySectors.marspira,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
+      image: "/static/GalaxyMap/planets/Барабос.svg",
     },
     45: {
       id: 2,
@@ -401,6 +444,7 @@ class PlanetsStore {
         weatherConditions.thickFog,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Фенмейр.svg",
     },
     46: {
       id: 3,
@@ -411,6 +455,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
       ],
+      image: "/static/GalaxyMap/planets/Мастия.svg",
     },
     47: {
       id: 1,
@@ -418,6 +463,7 @@ class PlanetsStore {
       sector: galaxySectors.talus,
       biome: biomes.ethereal,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Шаллус.svg",
     },
     48: {
       id: 3,
@@ -425,6 +471,7 @@ class PlanetsStore {
       sector: galaxySectors.iptus,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
+      image: "/static/GalaxyMap/planets/Кракабос.svg",
     },
     49: {
       id: 4,
@@ -432,6 +479,7 @@ class PlanetsStore {
       sector: galaxySectors.iptus,
       biome: biomes.ethereal,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Иридика.svg",
     },
     50: {
       id: 2,
@@ -439,6 +487,7 @@ class PlanetsStore {
       sector: galaxySectors.orion,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
+      image: "/static/GalaxyMap/planets/Астерра.svg",
     },
     51: {
       id: 1,
@@ -449,6 +498,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.tremors,
       ],
+      image: "/static/GalaxyMap/planets/Азур_II.svg",
     },
     52: {
       id: 4,
@@ -459,6 +509,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.blizzards,
       ],
+      image: "/static/GalaxyMap/planets/Айвис.svg",
     },
     53: {
       id: 5,
@@ -469,6 +520,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
       ],
+      image: "/static/GalaxyMap/planets/Слиф.svg",
     },
     54: {
       id: 3,
@@ -479,6 +531,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
       ],
+      image: "/static/GalaxyMap/planets/Карамур.svg",
     },
     55: {
       id: 1,
@@ -486,6 +539,7 @@ class PlanetsStore {
       sector: galaxySectors.gallux,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Кхарст.svg",
     },
     56: {
       id: 1,
@@ -493,6 +547,7 @@ class PlanetsStore {
       sector: galaxySectors.morgon,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
+      image: "/static/GalaxyMap/planets/Юкория.svg",
     },
     57: {
       id: 2,
@@ -500,6 +555,7 @@ class PlanetsStore {
       sector: galaxySectors.morgon,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
+      image: "/static/GalaxyMap/planets/Мириум.svg",
     },
     58: {
       id: 1,
@@ -507,6 +563,7 @@ class PlanetsStore {
       sector: galaxySectors.rictus,
       biome: biomes.tundra,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Керт_II.svg",
     },
     59: {
       id: 2,
@@ -517,6 +574,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.blizzards,
       ],
+      image: "/static/GalaxyMap/planets/Парш.svg",
     },
     60: {
       id: 1,
@@ -527,6 +585,7 @@ class PlanetsStore {
         weatherConditions.thickFog,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Риф.svg",
     },
     61: {
       id: 2,
@@ -537,6 +596,7 @@ class PlanetsStore {
         weatherConditions.volcanicActivity,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Ирулта.svg",
     },
     62: {
       id: 1,
@@ -544,6 +604,7 @@ class PlanetsStore {
       sector: galaxySectors.meridian,
       biome: biomes.ethereal,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Эморат.svg",
     },
     63: {
       id: 2,
@@ -551,6 +612,7 @@ class PlanetsStore {
       sector: galaxySectors.meridian,
       biome: biomes.tundra,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Илдуна-прайм.svg",
     },
     64: {
       id: 4,
@@ -561,6 +623,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.fireTornadoes,
       ],
+      image: "/static/GalaxyMap/planets/Утроба.svg",
     },
     65: {
       id: 1,
@@ -572,6 +635,7 @@ class PlanetsStore {
         weatherConditions.volcanicActivity,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Меридия.svg",
     },
     66: {
       id: 1,
@@ -582,6 +646,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.blizzards,
       ],
+      image: "/static/GalaxyMap/planets/Борея.svg",
     },
     67: {
       id: 4,
@@ -592,6 +657,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.meteorStorms,
       ],
+      image: "/static/GalaxyMap/planets/Курия.svg",
     },
     68: {
       id: 5,
@@ -602,6 +668,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.blizzards,
       ],
+      image: "/static/GalaxyMap/planets/Тарш.svg",
     },
     69: {
       id: 2,
@@ -609,6 +676,7 @@ class PlanetsStore {
       sector: galaxySectors.talus,
       biome: biomes.tundra,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Шелт.svg",
     },
     70: {
       id: 3,
@@ -619,6 +687,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.fireTornadoes,
       ],
+      image: "/static/GalaxyMap/planets/Имбер.svg",
     },
     71: {
       id: 1,
@@ -629,6 +698,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.fireTornadoes,
       ],
+      image: "/static/GalaxyMap/planets/Блистика.svg",
     },
     72: {
       id: 5,
@@ -639,6 +709,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
       ],
+      image: "/static/GalaxyMap/planets/Ратч.svg",
     },
     73: {
       id: 1,
@@ -649,6 +720,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.blizzards,
       ],
+      image: "/static/GalaxyMap/planets/Юльхейм.svg",
     },
     74: {
       id: 6,
@@ -656,6 +728,7 @@ class PlanetsStore {
       sector: galaxySectors.iptus,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Валгаард.svg",
     },
     75: {
       id: 1,
@@ -666,6 +739,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.blizzards,
       ],
+      image: "/static/GalaxyMap/planets/Арктур.svg",
     },
     76: {
       id: 1,
@@ -676,6 +750,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
       ],
+      image: "/static/GalaxyMap/planets/Эскер.svg",
     },
     77: {
       id: 3,
@@ -686,6 +761,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.meteorStorms,
       ],
+      image: "/static/GalaxyMap/planets/Терек.svg",
     },
     78: {
       id: 4,
@@ -693,6 +769,7 @@ class PlanetsStore {
       sector: galaxySectors.orion,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
+      image: "/static/GalaxyMap/planets/Сиррус.svg",
     },
     79: {
       id: 1,
@@ -701,6 +778,7 @@ class PlanetsStore {
       sector: galaxySectors.draco,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Кримсика.svg",
     },
     80: {
       id: 5,
@@ -711,6 +789,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.blizzards,
       ],
+      image: "/static/GalaxyMap/planets/Хиит.svg",
     },
     81: {
       id: 6,
@@ -718,6 +797,7 @@ class PlanetsStore {
       sector: galaxySectors.orion,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Вельд.svg",
     },
     82: {
       id: 4,
@@ -728,6 +808,7 @@ class PlanetsStore {
         weatherConditions.volcanicActivity,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Альта_V.svg",
     },
     83: {
       id: 1,
@@ -735,6 +816,7 @@ class PlanetsStore {
       sector: galaxySectors.borgus,
       biome: biomes.ethereal,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Урсика_XI.svg",
     },
     84: {
       id: 5,
@@ -742,6 +824,7 @@ class PlanetsStore {
       sector: galaxySectors.korpus,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
+      image: "/static/GalaxyMap/planets/Инари.svg",
     },
     85: {
       id: 1,
@@ -752,6 +835,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
       ],
+      image: "/static/GalaxyMap/planets/Скааш.svg",
     },
     86: {
       id: 6,
@@ -762,6 +846,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
       ],
+      image: "/static/GalaxyMap/planets/Морадеш.svg",
     },
     87: {
       id: 2,
@@ -772,6 +857,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.meteorStorms,
       ],
+      image: "/static/GalaxyMap/planets/Расп.svg",
     },
     88: {
       id: 3,
@@ -779,6 +865,7 @@ class PlanetsStore {
       sector: galaxySectors.gallux,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
+      image: "/static/GalaxyMap/planets/Башир.svg",
     },
     89: {
       id: 3,
@@ -789,6 +876,7 @@ class PlanetsStore {
         weatherConditions.volcanicActivity,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Регнус.svg",
     },
     90: {
       id: 4,
@@ -799,6 +887,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.blizzards,
       ],
+      image: "/static/GalaxyMap/planets/Мог.svg",
     },
     91: {
       id: 3,
@@ -806,6 +895,7 @@ class PlanetsStore {
       sector: galaxySectors.rictus,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Вальмокс.svg",
     },
     92: {
       id: 4,
@@ -816,6 +906,7 @@ class PlanetsStore {
         weatherConditions.thickFog,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Иро.svg",
     },
     93: {
       id: 5,
@@ -823,6 +914,7 @@ class PlanetsStore {
       sector: galaxySectors.rictus,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
+      image: "/static/GalaxyMap/planets/Графмер.svg",
     },
     94: {
       id: 1,
@@ -833,6 +925,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.blizzards,
       ],
+      image: "/static/GalaxyMap/planets/Новый_Стокгольм.svg",
     },
     95: {
       id: 6,
@@ -843,6 +936,7 @@ class PlanetsStore {
         weatherConditions.volcanicActivity,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Оазис.svg",
     },
     96: {
       id: 7,
@@ -850,6 +944,7 @@ class PlanetsStore {
       sector: galaxySectors.rictus,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Генезис-прайм.svg",
     },
     97: {
       id: 3,
@@ -860,6 +955,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
       ],
+      image: "/static/GalaxyMap/planets/Аванпост_32.svg",
     },
     98: {
       id: 4,
@@ -867,6 +963,7 @@ class PlanetsStore {
       sector: galaxySectors.saleria,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
+      image: "/static/GalaxyMap/planets/Калипсо.svg",
     },
     99: {
       id: 1,
@@ -874,6 +971,7 @@ class PlanetsStore {
       sector: galaxySectors.guang,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Луга_элизия.svg",
     },
     100: {
       id: 2,
@@ -881,6 +979,7 @@ class PlanetsStore {
       sector: galaxySectors.guang,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
+      image: "/static/GalaxyMap/planets/Пещера_альдеридж.svg",
     },
     101: {
       id: 2,
@@ -888,16 +987,18 @@ class PlanetsStore {
       sector: galaxySectors.sten,
       biome: biomes.tundra,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Трандор.svg",
     },
     102: {
       id: 1,
-      name: "Восточный иридиевый торговый залив",
+      name: "ВИТЗ",
       sector: galaxySectors.tarragon,
       biome: biomes.jungle,
       weatherConditions: [
         weatherConditions.volcanicActivity,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/ВИТЗ.svg",
     },
     103: {
       id: 3,
@@ -905,6 +1006,7 @@ class PlanetsStore {
       sector: galaxySectors.meridian,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Хребет_свободы.svg",
     },
     104: {
       id: 4,
@@ -915,6 +1017,7 @@ class PlanetsStore {
         weatherConditions.volcanicActivity,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Болдрик-прайм.svg",
     },
     105: {
       id: 1,
@@ -925,6 +1028,7 @@ class PlanetsStore {
         weatherConditions.thickFog,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Вир.svg",
     },
     106: {
       id: 2,
@@ -932,6 +1036,7 @@ class PlanetsStore {
       sector: galaxySectors.theseus,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Купер.svg",
     },
     107: {
       id: 2,
@@ -939,6 +1044,7 @@ class PlanetsStore {
       sector: galaxySectors.sagan,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
+      image: "/static/GalaxyMap/planets/Станция_«Осло».svg",
     },
     108: {
       id: 1,
@@ -949,6 +1055,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.fireTornadoes,
       ],
+      image: "/static/GalaxyMap/planets/Пепли_IX.svg",
     },
     109: {
       id: 3,
@@ -956,6 +1063,7 @@ class PlanetsStore {
       sector: galaxySectors.sagan,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Гюнвальд.svg",
     },
     110: {
       id: 2,
@@ -966,6 +1074,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.meteorStorms,
       ],
+      image: "/static/GalaxyMap/planets/Дольф.svg",
     },
     111: {
       id: 3,
@@ -973,6 +1082,7 @@ class PlanetsStore {
       sector: galaxySectors.nanos,
       biome: biomes.ethereal,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Беквам_III.svg",
     },
     112: {
       id: 4,
@@ -980,13 +1090,15 @@ class PlanetsStore {
       sector: galaxySectors.nanos,
       biome: biomes.tundra,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Дума_тюр.svg",
     },
     113: {
       id: 1,
-      name: "Колодцы Вернена",
+      name: "Колодцы вернена",
       sector: galaxySectors.hydra,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
+      image: "/static/GalaxyMap/planets/Колодцы_Вернена.svg",
     },
     114: {
       id: 2,
@@ -994,6 +1106,7 @@ class PlanetsStore {
       sector: galaxySectors.hydra,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
+      image: "/static/GalaxyMap/planets/Перевал_асов.svg",
     },
     115: {
       id: 1,
@@ -1001,6 +1114,7 @@ class PlanetsStore {
       sector: galaxySectors.valdis,
       biome: biomes.tundra,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Залив_авроры.svg",
     },
     116: {
       id: 1,
@@ -1008,6 +1122,7 @@ class PlanetsStore {
       sector: galaxySectors.lacaille,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
+      image: "/static/GalaxyMap/planets/Пента.svg",
     },
     117: {
       id: 4,
@@ -1018,6 +1133,7 @@ class PlanetsStore {
         weatherConditions.volcanicActivity,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Елливаре.svg",
     },
     118: {
       id: 1,
@@ -1028,6 +1144,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.blizzards,
       ],
+      image: "/static/GalaxyMap/planets/Вог-сойот.svg",
     },
     119: {
       id: 2,
@@ -1038,6 +1155,7 @@ class PlanetsStore {
         weatherConditions.volcanicActivity,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Киррик.svg",
     },
     120: {
       id: 3,
@@ -1048,6 +1166,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.tremors,
       ],
+      image: "/static/GalaxyMap/planets/Мортакс-прайм.svg",
     },
     121: {
       id: 4,
@@ -1058,6 +1177,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
       ],
+      image: "/static/GalaxyMap/planets/Станция_«Уилфорд».svg",
     },
     122: {
       id: 5,
@@ -1065,6 +1185,7 @@ class PlanetsStore {
       sector: galaxySectors.arturion,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
+      image: "/static/GalaxyMap/planets/Первопроходец_II.svg",
     },
     123: {
       id: 2,
@@ -1075,6 +1196,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.tremors,
       ],
+      image: "/static/GalaxyMap/planets/Пески_эрсона.svg",
     },
     124: {
       id: 3,
@@ -1082,6 +1204,7 @@ class PlanetsStore {
       sector: galaxySectors.falstaff,
       biome: biomes.ethereal,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Сокорро_III.svg",
     },
     125: {
       id: 4,
@@ -1092,6 +1215,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.fireTornadoes,
       ],
+      image: "/static/GalaxyMap/planets/Буровой_камень.svg",
     },
     126: {
       id: 2,
@@ -1103,6 +1227,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.meteorStorms,
       ],
+      image: "/static/GalaxyMap/planets/Фенрир_III.svg",
     },
     127: {
       id: 3,
@@ -1111,6 +1236,7 @@ class PlanetsStore {
       sector: galaxySectors.umlaut,
       biome: biomes.ethereal,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Тьюринг.svg",
     },
     128: {
       id: 7,
@@ -1118,6 +1244,7 @@ class PlanetsStore {
       sector: galaxySectors.orion,
       biome: biomes.tundra,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Ангельский_риск.svg",
     },
     129: {
       id: 2,
@@ -1128,6 +1255,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
       ],
+      image: "/static/GalaxyMap/planets/Дарий_II.svg",
     },
     130: {
       id: 1,
@@ -1138,6 +1266,7 @@ class PlanetsStore {
         weatherConditions.thickFog,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Акамар_IV.svg",
     },
     131: {
       id: 3,
@@ -1148,6 +1277,7 @@ class PlanetsStore {
         weatherConditions.thickFog,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Ахернар_II.svg",
     },
     132: {
       id: 4,
@@ -1155,6 +1285,7 @@ class PlanetsStore {
       sector: galaxySectors.borgus,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
+      image: "/static/GalaxyMap/planets/Ахирд_III.svg",
     },
     133: {
       id: 2,
@@ -1162,6 +1293,7 @@ class PlanetsStore {
       sector: galaxySectors.ursa,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Акраб_XI.svg",
     },
     134: {
       id: 3,
@@ -1169,6 +1301,7 @@ class PlanetsStore {
       sector: galaxySectors.ursa,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
+      image: "/static/GalaxyMap/planets/Акрукс_IX.svg",
     },
     135: {
       id: 4,
@@ -1176,6 +1309,7 @@ class PlanetsStore {
       sector: galaxySectors.gallux,
       biome: biomes.ethereal,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Акубенс-прайм.svg",
     },
     136: {
       id: 5,
@@ -1186,6 +1320,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.fireTornadoes,
       ],
+      image: "/static/GalaxyMap/planets/Эдхара.svg",
     },
     137: {
       id: 6,
@@ -1196,6 +1331,7 @@ class PlanetsStore {
         weatherConditions.thickFog,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Афойя-бэй.svg",
     },
     138: {
       id: 2,
@@ -1203,6 +1339,7 @@ class PlanetsStore {
       sector: galaxySectors.hanzo,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
+      image: "/static/GalaxyMap/planets/Айн-5.svg",
     },
     139: {
       id: 3,
@@ -1210,6 +1347,7 @@ class PlanetsStore {
       sector: galaxySectors.hanzo,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Алаирт_III.svg",
     },
     140: {
       id: 4,
@@ -1217,6 +1355,7 @@ class PlanetsStore {
       sector: galaxySectors.hanzo,
       biome: biomes.ethereal,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Аламак_VII.svg",
     },
     141: {
       id: 1,
@@ -1224,6 +1363,7 @@ class PlanetsStore {
       sector: galaxySectors.akira,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
+      image: "/static/GalaxyMap/planets/Алараф.svg",
     },
     142: {
       id: 2,
@@ -1234,6 +1374,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.blizzards,
       ],
+      image: "/static/GalaxyMap/planets/Алатфар_XI.svg",
     },
     143: {
       id: 3,
@@ -1241,6 +1382,7 @@ class PlanetsStore {
       sector: galaxySectors.akira,
       biome: biomes.tundra,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Эндар.svg",
     },
     144: {
       id: 4,
@@ -1251,6 +1393,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.fireTornadoes,
       ],
+      image: "/static/GalaxyMap/planets/Асперот-прайм.svg",
     },
     145: {
       id: 3,
@@ -1261,6 +1404,7 @@ class PlanetsStore {
         weatherConditions.thickFog,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Беллатрикс.svg",
     },
     146: {
       id: 4,
@@ -1271,6 +1415,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
       ],
+      image: "/static/GalaxyMap/planets/Ботейн.svg",
     },
     147: {
       id: 2,
@@ -1281,6 +1426,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
       ],
+      image: "/static/GalaxyMap/planets/Осупсам.svg",
     },
     148: {
       id: 3,
@@ -1288,6 +1434,7 @@ class PlanetsStore {
       sector: galaxySectors.tarragon,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Бринк-2.svg",
     },
     149: {
       id: 4,
@@ -1295,6 +1442,7 @@ class PlanetsStore {
       sector: galaxySectors.tarragon,
       biome: biomes.tundra,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Бунда_II.svg",
     },
     150: {
       id: 5,
@@ -1305,6 +1453,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.tremors,
       ],
+      image: "/static/GalaxyMap/planets/Канопус.svg",
     },
     151: {
       id: 3,
@@ -1315,6 +1464,7 @@ class PlanetsStore {
         weatherConditions.volcanicActivity,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Каф.svg",
     },
     152: {
       id: 4,
@@ -1322,6 +1472,7 @@ class PlanetsStore {
       sector: galaxySectors.theseus,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
+      image: "/static/GalaxyMap/planets/Кастор.svg",
     },
     153: {
       id: 1,
@@ -1332,6 +1483,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
       ],
+      image: "/static/GalaxyMap/planets/Дирген.svg",
     },
     154: {
       id: 2,
@@ -1342,6 +1494,7 @@ class PlanetsStore {
         weatherConditions.thickFog,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Дропнир.svg",
     },
     155: {
       id: 3,
@@ -1349,6 +1502,7 @@ class PlanetsStore {
       sector: galaxySectors.xzar,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
+      image: "/static/GalaxyMap/planets/Морт.svg",
     },
     156: {
       id: 4,
@@ -1356,6 +1510,7 @@ class PlanetsStore {
       sector: galaxySectors.xzar,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Ингмар.svg",
     },
     157: {
       id: 1,
@@ -1366,6 +1521,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
       ],
+      image: "/static/GalaxyMap/planets/Чарбол_VII.svg",
     },
     158: {
       id: 2,
@@ -1373,6 +1529,7 @@ class PlanetsStore {
       sector: galaxySectors.andromeda,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Харон-прайм.svg",
     },
     159: {
       id: 1,
@@ -1380,6 +1537,7 @@ class PlanetsStore {
       sector: galaxySectors.trigon,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
+      image: "/static/GalaxyMap/planets/Хепесса_IV.svg",
     },
     160: {
       id: 2,
@@ -1390,6 +1548,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.tremors,
       ],
+      image: "/static/GalaxyMap/planets/Чухи.svg",
     },
     161: {
       id: 3,
@@ -1400,6 +1559,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
       ],
+      image: "/static/GalaxyMap/planets/Хорт-бэй.svg",
     },
     162: {
       id: 2,
@@ -1410,6 +1570,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.meteorStorms,
       ],
+      image: "/static/GalaxyMap/planets/Клаорелл.svg",
     },
     163: {
       id: 3,
@@ -1420,6 +1581,7 @@ class PlanetsStore {
         weatherConditions.volcanicActivity,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Класа.svg",
     },
     164: {
       id: 4,
@@ -1427,6 +1589,7 @@ class PlanetsStore {
       sector: galaxySectors.tanis,
       biome: biomes.tundra,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Демиург.svg",
     },
     165: {
       id: 6,
@@ -1434,6 +1597,7 @@ class PlanetsStore {
       sector: galaxySectors.arturion,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
+      image: "/static/GalaxyMap/planets/Денеб_II.svg",
     },
     166: {
       id: 7,
@@ -1444,6 +1608,7 @@ class PlanetsStore {
         weatherConditions.thickFog,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Электра-бэй.svg",
     },
     167: {
       id: 1,
@@ -1451,6 +1616,7 @@ class PlanetsStore {
       sector: galaxySectors.lestrade,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Энулиале.svg",
     },
     168: {
       id: 2,
@@ -1461,6 +1627,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.blizzards,
       ],
+      image: "/static/GalaxyMap/planets/Эпсилон-финсис_VI.svg",
     },
     169: {
       id: 4,
@@ -1472,6 +1639,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.tremors,
       ],
+      image: "/static/GalaxyMap/planets/Эрата-прайм.svg",
     },
     170: {
       id: 2,
@@ -1479,6 +1647,7 @@ class PlanetsStore {
       sector: galaxySectors.draco,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
+      image: "/static/GalaxyMap/planets/Эстану.svg",
     },
     171: {
       id: 3,
@@ -1486,6 +1655,7 @@ class PlanetsStore {
       sector: galaxySectors.draco,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
+      image: "/static/GalaxyMap/planets/Фори-прайм.svg",
     },
     172: {
       id: 2,
@@ -1493,6 +1663,7 @@ class PlanetsStore {
       sector: galaxySectors.jinXi,
       biome: biomes.tundra,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Гакрукс.svg",
     },
     173: {
       id: 3,
@@ -1503,6 +1674,7 @@ class PlanetsStore {
         weatherConditions.volcanicActivity,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Гар-харен.svg",
     },
     174: {
       id: 4,
@@ -1510,6 +1682,7 @@ class PlanetsStore {
       sector: galaxySectors.jinXi,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Гатрия.svg",
     },
     175: {
       id: 4,
@@ -1517,6 +1690,7 @@ class PlanetsStore {
       sector: galaxySectors.ursa,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Гемма.svg",
     },
     176: {
       id: 1,
@@ -1527,6 +1701,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.fireTornadoes,
       ],
+      image: "/static/GalaxyMap/planets/Гранд_Эррант.svg",
     },
     177: {
       id: 2,
@@ -1537,6 +1712,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.blizzards,
       ],
+      image: "/static/GalaxyMap/planets/Хадар.svg",
     },
     178: {
       id: 1,
@@ -1544,6 +1720,7 @@ class PlanetsStore {
       sector: galaxySectors.leo,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
+      image: "/static/GalaxyMap/planets/Хака.svg",
     },
     179: {
       id: 3,
@@ -1554,6 +1731,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.meteorStorms,
       ],
+      image: "/static/GalaxyMap/planets/Хальдус.svg",
     },
     180: {
       id: 2,
@@ -1561,6 +1739,7 @@ class PlanetsStore {
       sector: galaxySectors.leo,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
+      image: "/static/GalaxyMap/planets/Порт-галье.svg",
     },
     181: {
       id: 4,
@@ -1571,6 +1750,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.fireTornadoes,
       ],
+      image: "/static/GalaxyMap/planets/Хартон_II.svg",
     },
     182: {
       id: 1,
@@ -1581,6 +1761,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.blizzards,
       ],
+      image: "/static/GalaxyMap/planets/Хесоэ-прайм.svg",
     },
     183: {
       id: 5,
@@ -1591,6 +1772,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
       ],
+      image: "/static/GalaxyMap/planets/Хезе-бэй.svg",
     },
     184: {
       id: 2,
@@ -1601,6 +1783,7 @@ class PlanetsStore {
         weatherConditions.thickFog,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Хорт.svg",
     },
     185: {
       id: 1,
@@ -1611,6 +1794,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.tremors,
       ],
+      image: "/static/GalaxyMap/planets/Гидробиус.svg",
     },
     186: {
       id: 2,
@@ -1621,6 +1805,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.fireTornadoes,
       ],
+      image: "/static/GalaxyMap/planets/Карлия.svg",
     },
     187: {
       id: 5,
@@ -1631,6 +1816,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
       ],
+      image: "/static/GalaxyMap/planets/Кейд.svg",
     },
     188: {
       id: 5,
@@ -1641,6 +1827,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.blizzards,
       ],
+      image: "/static/GalaxyMap/planets/Хандарк.svg",
     },
     189: {
       id: 1,
@@ -1651,6 +1838,7 @@ class PlanetsStore {
         weatherConditions.volcanicActivity,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Клака_5.svg",
     },
     190: {
       id: 2,
@@ -1661,6 +1849,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.fireTornadoes,
       ],
+      image: "/static/GalaxyMap/planets/Порт-кнет.svg",
     },
     191: {
       id: 3,
@@ -1668,6 +1857,7 @@ class PlanetsStore {
       sector: galaxySectors.alstrad,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
+      image: "/static/GalaxyMap/planets/Краз.svg",
     },
     192: {
       id: 1,
@@ -1675,6 +1865,7 @@ class PlanetsStore {
       sector: galaxySectors.hawking,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
+      image: "/static/GalaxyMap/planets/Кума.svg",
     },
     193: {
       id: 5,
@@ -1685,6 +1876,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
       ],
+      image: "/static/GalaxyMap/planets/Ластоф.svg",
     },
     194: {
       id: 1,
@@ -1695,6 +1887,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
       ],
+      image: "/static/GalaxyMap/planets/Ленг_II.svg",
     },
     195: {
       id: 4,
@@ -1702,6 +1895,7 @@ class PlanetsStore {
       sector: galaxySectors.lacaille,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
+      image: "/static/GalaxyMap/planets/Лесат.svg",
     },
     196: {
       id: 2,
@@ -1712,6 +1906,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.meteorStorms,
       ],
+      image: "/static/GalaxyMap/planets/Майя.svg",
     },
     197: {
       id: 3,
@@ -1719,6 +1914,7 @@ class PlanetsStore {
       sector: galaxySectors.severin,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Малевелон_крик.svg",
     },
     198: {
       id: 5,
@@ -1729,6 +1925,7 @@ class PlanetsStore {
         weatherConditions.volcanicActivity,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Мантес.svg",
     },
     199: {
       id: 3,
@@ -1739,6 +1936,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.blizzards,
       ],
+      image: "/static/GalaxyMap/planets/Марфарк.svg",
     },
     200: {
       id: 4,
@@ -1746,6 +1944,7 @@ class PlanetsStore {
       sector: galaxySectors.andromeda,
       biome: biomes.tundra,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Мартале.svg",
     },
     201: {
       id: 5,
@@ -1756,6 +1955,7 @@ class PlanetsStore {
         weatherConditions.thickFog,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Матар-бэй.svg",
     },
     202: {
       id: 1,
@@ -1766,6 +1966,7 @@ class PlanetsStore {
         weatherConditions.volcanicActivity,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Мейсса.svg",
     },
     203: {
       id: 2,
@@ -1773,6 +1974,7 @@ class PlanetsStore {
       sector: galaxySectors.valdis,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
+      image: "/static/GalaxyMap/planets/Мекбуда.svg",
     },
     204: {
       id: 3,
@@ -1783,6 +1985,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.fireTornadoes,
       ],
+      image: "/static/GalaxyMap/planets/Менкент.svg",
     },
     205: {
       id: 3,
@@ -1793,6 +1996,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
       ],
+      image: "/static/GalaxyMap/planets/Мерак.svg",
     },
     206: {
       id: 4,
@@ -1803,6 +2007,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.blizzards,
       ],
+      image: "/static/GalaxyMap/planets/Марга_IV.svg",
     },
     207: {
       id: 2,
@@ -1810,6 +2015,7 @@ class PlanetsStore {
       sector: galaxySectors.gellert,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Минхир.svg",
     },
     208: {
       id: 3,
@@ -1820,6 +2026,7 @@ class PlanetsStore {
         weatherConditions.thickFog,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Минтория.svg",
     },
     209: {
       id: 2,
@@ -1827,6 +2034,7 @@ class PlanetsStore {
       sector: galaxySectors.hawking,
       biome: biomes.ethereal,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Мордия-9.svg",
     },
     210: {
       id: 3,
@@ -1834,6 +2042,7 @@ class PlanetsStore {
       sector: galaxySectors.lestrade,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Нанбатея_II.svg",
     },
     211: {
       id: 4,
@@ -1844,6 +2053,7 @@ class PlanetsStore {
         weatherConditions.volcanicActivity,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Нави_VII.svg",
     },
     212: {
       id: 2,
@@ -1851,6 +2061,7 @@ class PlanetsStore {
       sector: galaxySectors.mirin,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
+      image: "/static/GalaxyMap/planets/Нивель_43.svg",
     },
     213: {
       id: 3,
@@ -1862,6 +2073,7 @@ class PlanetsStore {
         weatherConditions.thickFog,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Ошоне.svg",
     },
     214: {
       id: 3,
@@ -1869,6 +2081,7 @@ class PlanetsStore {
       sector: galaxySectors.sten,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Оверго-прайм.svg",
     },
     215: {
       id: 5,
@@ -1876,6 +2089,7 @@ class PlanetsStore {
       sector: galaxySectors.jinXi,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
+      image: "/static/GalaxyMap/planets/Пандион_XXIV.svg",
     },
     216: {
       id: 4,
@@ -1886,6 +2100,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.fireTornadoes,
       ],
+      image: "/static/GalaxyMap/planets/Партион.svg",
     },
     217: {
       id: 5,
@@ -1893,6 +2108,7 @@ class PlanetsStore {
       sector: galaxySectors.sten,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Пикок.svg",
     },
     218: {
       id: 6,
@@ -1903,6 +2119,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
       ],
+      image: "/static/GalaxyMap/planets/Факт-бэй.svg",
     },
     219: {
       id: 2,
@@ -1913,6 +2130,7 @@ class PlanetsStore {
         weatherConditions.thickFog,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Феркад_II.svg",
     },
     220: {
       id: 3,
@@ -1923,6 +2141,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.tremors,
       ],
+      image: "/static/GalaxyMap/planets/Полярис-прайм.svg",
     },
     221: {
       id: 4,
@@ -1933,6 +2152,7 @@ class PlanetsStore {
         weatherConditions.volcanicActivity,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Поллукс-31.svg",
     },
     222: {
       id: 5,
@@ -1940,6 +2160,7 @@ class PlanetsStore {
       sector: galaxySectors.farsight,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
+      image: "/static/GalaxyMap/planets/Праса.svg",
     },
     223: {
       id: 3,
@@ -1950,6 +2171,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
       ],
+      image: "/static/GalaxyMap/planets/Пропус.svg",
     },
     224: {
       id: 4,
@@ -1957,6 +2179,7 @@ class PlanetsStore {
       sector: galaxySectors.leo,
       biome: biomes.tundra,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Рас-альгети.svg",
     },
     225: {
       id: 3,
@@ -1967,6 +2190,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.meteorStorms,
       ],
+      image: "/static/GalaxyMap/planets/Арди-4.svg",
     },
     226: {
       id: 4,
@@ -1977,6 +2201,7 @@ class PlanetsStore {
         weatherConditions.volcanicActivity,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Роуг_5.svg",
     },
     227: {
       id: 5,
@@ -1987,6 +2212,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
       ],
+      image: "/static/GalaxyMap/planets/Рирга-бэй.svg",
     },
     228: {
       id: 3,
@@ -1994,6 +2220,7 @@ class PlanetsStore {
       sector: galaxySectors.omega,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Сиэсс.svg",
     },
     229: {
       id: 4,
@@ -2001,6 +2228,7 @@ class PlanetsStore {
       sector: galaxySectors.omega,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
+      image: "/static/GalaxyMap/planets/Сиэсс.svg",
     },
     230: {
       id: 5,
@@ -2011,6 +2239,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
       ],
+      image: "/static/GalaxyMap/planets/Сетия.svg",
     },
     231: {
       id: 1,
@@ -2021,6 +2250,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
       ],
+      image: "/static/GalaxyMap/planets/Шете.svg",
     },
     232: {
       id: 2,
@@ -2028,6 +2258,7 @@ class PlanetsStore {
       sector: galaxySectors.xiTauri,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Симнот.svg",
     },
     233: {
       id: 3,
@@ -2038,6 +2269,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.meteorStorms,
       ],
+      image: "/static/GalaxyMap/planets/Сириус.svg",
     },
     234: {
       id: 4,
@@ -2045,6 +2277,7 @@ class PlanetsStore {
       sector: galaxySectors.xiTauri,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
+      image: "/static/GalaxyMap/planets/Скат-бэй.svg",
     },
     235: {
       id: 2,
@@ -2055,6 +2288,7 @@ class PlanetsStore {
         weatherConditions.volcanicActivity,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Сферион.svg",
     },
     236: {
       id: 3,
@@ -2062,6 +2296,7 @@ class PlanetsStore {
       sector: galaxySectors.quintus,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
+      image: "/static/GalaxyMap/planets/Стор_та-прайм.svg",
     },
     237: {
       id: 4,
@@ -2069,6 +2304,7 @@ class PlanetsStore {
       sector: galaxySectors.quintus,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Стаут.svg",
     },
     238: {
       id: 5,
@@ -2079,6 +2315,7 @@ class PlanetsStore {
         weatherConditions.thickFog,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Термодон.svg",
     },
     239: {
       id: 4,
@@ -2086,6 +2323,7 @@ class PlanetsStore {
       sector: galaxySectors.severin,
       biome: biomes.ethereal,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Тибит.svg",
     },
     240: {
       id: 6,
@@ -2100,6 +2338,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.meteorStorms,
       ],
+      image: "/static/GalaxyMap/planets/Тьен-кван.svg",
     },
     241: {
       id: 2,
@@ -2107,6 +2346,7 @@ class PlanetsStore {
       sector: galaxySectors.trigon,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
+      image: "/static/GalaxyMap/planets/Труст.svg",
     },
     242: {
       id: 5,
@@ -2114,6 +2354,7 @@ class PlanetsStore {
       sector: galaxySectors.severin,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Убанея.svg",
     },
     243: {
       id: 3,
@@ -2124,6 +2365,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.tremors,
       ],
+      image: "/static/GalaxyMap/planets/Устоту.svg",
     },
     244: {
       id: 4,
@@ -2134,6 +2376,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.blizzards,
       ],
+      image: "/static/GalaxyMap/planets/Вандалон_IV.svg",
     },
     245: {
       id: 5,
@@ -2144,6 +2387,7 @@ class PlanetsStore {
         weatherConditions.thickFog,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Верилия-5.svg",
     },
     246: {
       id: 2,
@@ -2154,6 +2398,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.acidStorms,
       ],
+      image: "/static/GalaxyMap/planets/Васат.svg",
     },
     247: {
       id: 3,
@@ -2164,6 +2409,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.blizzards,
       ],
+      image: "/static/GalaxyMap/planets/Вега-бэй.svg",
     },
     248: {
       id: 4,
@@ -2174,6 +2420,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.fireTornadoes,
       ],
+      image: "/static/GalaxyMap/planets/Везен.svg",
     },
     249: {
       id: 5,
@@ -2181,6 +2428,7 @@ class PlanetsStore {
       sector: galaxySectors.valdis,
       biome: biomes.ethereal,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Виндемитарикс-прайм.svg",
     },
     250: {
       id: 5,
@@ -2188,6 +2436,7 @@ class PlanetsStore {
       sector: galaxySectors.ymir,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
+      image: "/static/GalaxyMap/planets/Экс-45.svg",
     },
     251: {
       id: 5,
@@ -2195,6 +2444,7 @@ class PlanetsStore {
       sector: galaxySectors.tanis,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
+      image: "/static/GalaxyMap/planets/Йед-приор.svg",
     },
     252: {
       id: 6,
@@ -2202,6 +2452,7 @@ class PlanetsStore {
       sector: galaxySectors.tanis,
       biome: biomes.ethereal,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Зефия.svg",
     },
     253: {
       id: 4,
@@ -2212,6 +2463,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.meteorStorms,
       ],
+      image: "/static/GalaxyMap/planets/Зосма.svg",
     },
     254: {
       id: 5,
@@ -2222,6 +2474,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
       ],
+      image: "/static/GalaxyMap/planets/Зания-прайм.svg",
     },
     255: {
       id: 3,
@@ -2232,6 +2485,7 @@ class PlanetsStore {
         weatherConditions.thickFog,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Скиттер.svg",
     },
     256: {
       id: 4,
@@ -2242,6 +2496,7 @@ class PlanetsStore {
         weatherConditions.extremeCold,
         weatherConditions.meteorStorms,
       ],
+      image: "/static/GalaxyMap/planets/Эйфория_III.svg",
     },
     257: {
       id: 5,
@@ -2252,6 +2507,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
       ],
+      image: "/static/GalaxyMap/planets/Диаспора_X.svg",
     },
     258: {
       id: 6,
@@ -2262,6 +2518,7 @@ class PlanetsStore {
         weatherConditions.thickFog,
         weatherConditions.rainstorms,
       ],
+      image: "/static/GalaxyMap/planets/Самоцветные_утесы.svg",
     },
     259: {
       id: 4,
@@ -2272,6 +2529,7 @@ class PlanetsStore {
         weatherConditions.intenseHeat,
         weatherConditions.sandstorms,
       ],
+      image: "/static/GalaxyMap/planets/Загон-прайм.svg",
     },
     260: {
       id: 7,
@@ -2279,6 +2537,7 @@ class PlanetsStore {
       sector: galaxySectors.lestrade,
       biome: biomes.tundra,
       weatherConditions: [],
+      image: "/static/GalaxyMap/planets/Омикрон.svg",
     },
     261: {
       id: 6,
@@ -2286,6 +2545,7 @@ class PlanetsStore {
       sector: galaxySectors.valdis,
       biome: biomes.cyberstan,
       weatherConditions: [weatherConditions.extremeCold],
+      image: "/static/GalaxyMap/planets/Киберстан.svg",
     },
   };
 
