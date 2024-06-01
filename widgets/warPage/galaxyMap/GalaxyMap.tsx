@@ -11,17 +11,9 @@ import { planetsStore } from "@/store/PlanetsStore";
 
 import GalaxyMapControls from "@/widgets/warPage/galaxyMap/GalaxyMapControls";
 
-import {
-  MapContainer,
-  TileLayer,
-  ImageOverlay,
-  LayersControl,
-  LayerGroup,
-} from "react-leaflet";
-
-import "leaflet/dist/leaflet.css";
-import "./GalaxyMap.css";
 import SectionTitle from "@/shared/sectionTitle/SectionTitle";
+
+import "./GalaxyMap.css";
 
 interface CapturedSector {
   name: string;
@@ -178,10 +170,10 @@ const GalaxyMap = () => {
           <GalaxyMapControls />
 
           <TransformComponent wrapperClass="transformWrapper">
-            <div className="relative flex justify-center items-center w-[718px] h-[581px]">
+            <div className="relative flex justify-center items-center w-[718px] h-[581px] mlarge:h-full">
               <img
                 src="/static/GalaxyMap/NebulaImage.png"
-                className="absolute w-[80%] h-[80%] opacity-50 z-0"
+                className="absolute w-[80%] mlarge:w-[60%] h-[80%] mlarge:h-[60%] opacity-50 z-0"
               />
 
               <img
@@ -253,7 +245,7 @@ const GalaxyMap = () => {
         </TransformWrapper>
       </div>
 
-      <div className="flex justify-around items-center w-full h-[50px] bg-[#07212f] border-2 border-t-0 border-[#2cc388] rounded-b-[10px]">
+      <div className="flex mlarge:block justify-around items-center mlarge:py-[15px] mmedium:py-[10px] mlarge:px-[20px] mmedium:px-[15px] w-full h-[50px] mlarge:h-auto bg-[#07212f] border-2 border-t-0 border-[#2cc388] rounded-b-[10px]">
         <label className="flex items-center cursor-pointer">
           <input
             type="checkbox"
@@ -262,7 +254,7 @@ const GalaxyMap = () => {
             className="hidden"
           />
 
-          <span className="relative block w-[17.5px] h-[17.5px]">
+          <span className="relative block w-[17.5px] mmedium:w-[15px] h-[17.5px] mmedium:h-[15px]">
             <img
               src={`${isSupplyLinesShowed ? "/static/GalaxyMap/LayersControlCheckboxCheckedIcon.svg" : "/static/GalaxyMap/LayersControlCheckboxIcon.svg"}`}
               alt=""
@@ -270,12 +262,12 @@ const GalaxyMap = () => {
             />
           </span>
 
-          <p className="pl-[15px] text-[#2cc388] text-[1rem] font-['Exo2'] font-medium cursor-pointer">
+          <p className="pl-[15px] mmedium:pl-[10px] text-[#2cc388] text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] font-['Exo2'] font-medium cursor-pointer">
             Показать линии снабжения
           </p>
         </label>
 
-        <label className="flex items-center cursor-pointer">
+        <label className="flex items-center cursor-pointer mlarge:mt-[10px]">
           <input
             type="checkbox"
             onChange={() =>
@@ -285,7 +277,7 @@ const GalaxyMap = () => {
             className="hidden"
           />
 
-          <span className="relative block w-[17.5px] h-[17.5px]">
+          <span className="relative block w-[17.5px] mmedium:w-[15px] h-[17.5px] mmedium:h-[15px]">
             <img
               src={`${isCapturedSectorsShowed ? "/static/GalaxyMap/LayersControlCheckboxCheckedIcon.svg" : "/static/GalaxyMap/LayersControlCheckboxIcon.svg"}`}
               alt=""
@@ -293,12 +285,12 @@ const GalaxyMap = () => {
             />
           </span>
 
-          <p className="pl-[15px] text-[#2cc388] text-[1rem] font-['Exo2'] font-medium cursor-pointer">
+          <p className="pl-[15px] mmedium:pl-[10px] text-[#2cc388] text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] font-['Exo2'] font-medium cursor-pointer">
             Показать захваченные сектора
           </p>
         </label>
 
-        <label className="flex items-center cursor-pointer">
+        <label className="flex items-center cursor-pointer mlarge:mt-[10px]">
           <input
             type="checkbox"
             onChange={() => changeIsActivePlanetsShowedStatus((prev) => !prev)}
@@ -306,7 +298,7 @@ const GalaxyMap = () => {
             className="hidden"
           />
 
-          <span className="relative block w-[17.5px] h-[17.5px]">
+          <span className="relative block w-[17.5px] mmedium:w-[15px] h-[17.5px] mmedium:h-[15px]">
             <img
               src={`${isActivePlanetsShowed ? "/static/GalaxyMap/LayersControlCheckboxCheckedIcon.svg" : "/static/GalaxyMap/LayersControlCheckboxIcon.svg"}`}
               alt=""
@@ -314,7 +306,7 @@ const GalaxyMap = () => {
             />
           </span>
 
-          <p className="pl-[15px] text-[#2cc388] text-[1rem] font-['Exo2'] font-medium">
+          <p className="pl-[15px] mmedium:pl-[10px] text-[#2cc388] text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] font-['Exo2'] font-medium">
             Показать неактивные планеты
           </p>
         </label>

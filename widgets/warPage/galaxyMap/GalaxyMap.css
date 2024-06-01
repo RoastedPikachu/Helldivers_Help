@@ -1,11 +1,11 @@
 .react-transform-wrapper {
-    @apply !w-full !h-full bg-[url('/static/GalaxyMap/StarfieldMapBackgroundImage.webp')] mlarge:border-2 mlarge:border-[#2cc388] mlarge:rounded-[10px] cursor-pointer;
+    @apply !w-full !h-full bg-[url('/static/GalaxyMap/StarfieldMapBackgroundImage.webp')] cursor-pointer;
 }
 
 .transformWrapper {
-    @apply relative flex justify-center items-center mlarge:mt-[25px] w-full h-full;
+    @apply relative flex justify-center items-center w-full h-full;
 }
 
 .react-transform-component {
-    @apply flex justify-center items-center w-full h-full;
+    @apply flex justify-center items-center !w-full !h-full;
 }

@@ -28,8 +28,6 @@ const TheWarContent = observer(() => {
       case 2:
         return (
           <section className="relative mlarge:mt-[25px] w-full h-auto">
-            <SectionTitle text={"КАРТА ГАЛАКТИКИ"} />
-
             <div className="w-full h-[90vw]">
               <DynamicGalaxyMap />
             </div>
@@ -46,8 +44,6 @@ const TheWarContent = observer(() => {
           {!mobileStore.isMobileDevice ? (
             <>
               <aside className="galaxyMap">
-                <SectionTitle text={"КАРТА ГАЛАКТИКИ"} />
-
                 <DynamicGalaxyMap />
 
                 <MajorOrderSection />
