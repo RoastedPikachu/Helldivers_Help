@@ -2688,6 +2688,52 @@ class StratagemStore {
           },
         ],
       },
+      {
+        id: 10,
+        iconPath: "/static/Stratagems/DarkFluidIcon.png",
+        type: stratagemTypes.mission,
+        name: "Емкость с темной жидкостью",
+        description:
+          "Емкость с темной жидкостью, которая необходима для уничтожения супер колонии Терминидов на Меридии.",
+        keyCodes: [87, 65, 68, 68, 83, 87, 87],
+        directions: [
+          {
+            id: 1,
+            orientation: 1,
+            isPressed: false,
+          },
+          {
+            id: 2,
+            orientation: 4,
+            isPressed: false,
+          },
+          {
+            id: 3,
+            orientation: 2,
+            isPressed: false,
+          },
+          {
+            id: 4,
+            orientation: 2,
+            isPressed: false,
+          },
+          {
+            id: 5,
+            orientation: 3,
+            isPressed: false,
+          },
+          {
+            id: 6,
+            orientation: 1,
+            isPressed: false,
+          },
+          {
+            id: 7,
+            orientation: 1,
+            isPressed: false,
+          },
+        ],
+      },
     ],
   };
 
