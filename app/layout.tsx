@@ -12,12 +12,12 @@ export const metadata: Metadata = {
     url: "https://helldivers.help",
     images: [
       {
-        url: "https://opengraph.b-cdn.net/production/documents/b6abc398-b62a-4ca3-be93-ed8964096447.png?token=Xx2BnhRVlWJOvfcF69nnqP-PeXQrmZ0KB-L7_XAoMSM&height=630&width=1200&expires=33247969668",
+        url: "https://i.imgur.com/IKNpzmt.png",
         width: 1200,
         height: 630,
       },
       {
-        url: "https://opengraph.b-cdn.net/production/documents/b6abc398-b62a-4ca3-be93-ed8964096447.png?token=Xx2BnhRVlWJOvfcF69nnqP-PeXQrmZ0KB-L7_XAoMSM&height=1260&width=2400&expires=33247969668",
+        url: "https://i.imgur.com/V9ngT26.png",
         width: 2400,
         height: 1260,
       },
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description:
       "Helldiver.help — это сайт-помощник каждому Адскому Десантнику, который сражается за продвижение демократии, свободы и процветания по всей галактике.",
     images: {
-      url: "https://opengraph.b-cdn.net/production/documents/b6abc398-b62a-4ca3-be93-ed8964096447.png?token=Xx2BnhRVlWJOvfcF69nnqP-PeXQrmZ0KB-L7_XAoMSM&height=630&width=1200&expires=33247969668",
+      url: "https://imgur.com/cda1931d-f4fd-44a4-8ce1-2d4810066ce8",
     },
   },
 };
