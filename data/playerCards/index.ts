@@ -22,7 +22,7 @@ export const playerCards = [
   {
     id: 4,
     name: "Плащ звезд и голосования",
-    image: "/static/PlayerCards/StarsAndVotinCapeImage.webp",
+    image: "/static/PlayerCards/StarsAndVotingCapeImage.webp",
     price: 2,
   },
   {
