@@ -94,3 +94,10 @@ export interface StratagemType {
   name: string;
   typeNumber: number;
 }
+
+export interface PlayerCard {
+  id: number;
+  name: string;
+  image: string;
+  price: number;
+}

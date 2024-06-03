@@ -1,0 +1,136 @@
+import { PlayerCard } from "@/utils/dataInterfaces";
+
+export const playerCards = [
+  {
+    id: 1,
+    name: "Вестник независимости",
+    image: "/static/PlayerCards/IndependenceBringerImage.webp",
+    price: 1,
+  },
+  {
+    id: 2,
+    name: "Вестник воли",
+    image: "/static/PlayerCards/WillHeraldImage.webp",
+    price: 1,
+  },
+  {
+    id: 3,
+    name: "Вдохновитель",
+    image: "/static/PlayerCards/InspiratorImage.webp",
+    price: 2,
+  },
+  {
+    id: 4,
+    name: "Плащ звезд и голосования",
+    image: "/static/PlayerCards/StarsAndVotinCapeImage.webp",
+    price: 2,
+  },
+  {
+    id: 5,
+    name: "Безупречная верность",
+    image: "/static/PlayerCards/ImmaculateFidelityImage.webp",
+    price: 4,
+  },
+  {
+    id: 6,
+    name: "Судный день",
+    image: "/static/PlayerCards/DoomsdayImage.webp",
+    price: 6,
+  },
+  {
+    id: 7,
+    name: "Гребень чести",
+    image: "/static/PlayerCards/HonorCrestImage.webp",
+    price: 7,
+  },
+  {
+    id: 8,
+    name: "Мантия истинного гражданина",
+    image: "/static/PlayerCards/TrueCitizenMantieImage.webp",
+    price: 10,
+  },
+  {
+    id: 9,
+    name: "Пылающий самаритянин",
+    image: "/static/PlayerCards/FlamingSamaritanImage.webp",
+    price: 15,
+  },
+  {
+    id: 10,
+    name: "Свет истинной свободы",
+    image: "/static/PlayerCards/TrueLibertyLightImage.webp",
+    price: 20,
+  },
+  {
+    id: 11,
+    name: "Охотник на тиранов",
+    image: "/static/PlayerCards/TyrantsHunterImage.webp",
+    price: 2,
+  },
+  {
+    id: 12,
+    name: "Плащ благодарных потомков",
+    image: "/static/PlayerCards/GratefulDescendantsCoatImage.webp",
+    price: 5,
+  },
+  {
+    id: 13,
+    name: "Бастион целостности",
+    image: "/static/PlayerCards/IntegrityBastionImage.webp",
+    price: 16,
+  },
+  {
+    id: 14,
+    name: "Убийца ботов",
+    image: "/static/PlayerCards/BotsSlayerImage.webp",
+    price: 2,
+  },
+  {
+    id: 15,
+    name: "Великий мученик",
+    image: "/static/PlayerCards/GreatMartyrImage.webp",
+    price: 5,
+  },
+  {
+    id: 16,
+    name: "Агент забвения",
+    image: "/static/PlayerCards/OblivionAgentImage.webp",
+    price: 16,
+  },
+  {
+    id: 17,
+    name: "Предвестник истинного равенства",
+    image: "/static/PlayerCards/TrueEqualityHarbingerImage.webp",
+    price: 2,
+  },
+  {
+    id: 18,
+    name: "Ярость орла",
+    image: "/static/PlayerCards/EagleFuryImage.webp",
+    price: 5,
+  },
+  {
+    id: 19,
+    name: "Гобелен свободы",
+    image: "/static/PlayerCards/LibertyGobelinImage.webp",
+    price: 16,
+  },
+  {
+    id: 20,
+    name: "Кошмар диссидента",
+    image: "/static/PlayerCards/DissidentNightmareImage.webp",
+    price: 2,
+  },
+  {
+    id: 21,
+    name: "Вечная слава",
+    image: "/static/PlayerCards/EternalGloryImage.webp",
+    price: 5,
+  },
+  {
+    id: 22,
+    name: "Орден достопочтенного бюллетеня",
+    image: "/static/PlayerCards/VunerableBulletinOrderImage.webp",
+    price: 16,
+  },
+] as PlayerCard[];
