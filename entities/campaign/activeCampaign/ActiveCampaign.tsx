@@ -298,7 +298,7 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
           <div className="rootActiveCampaignWidget_Bottom_Wrapper justify-between">
             <div className="rootActiveCampaignWidget_Bottom_Wrapper_Block">
               <img
-                src="/static/GeneralIcons/HelldiverIcon.png"
+                src="/static/GeneralIcons/HelldiverIcon.svg"
                 alt=""
                 className="rootActiveCampaignWidget_Bottom_Wrapper_Block_Icon"
               />

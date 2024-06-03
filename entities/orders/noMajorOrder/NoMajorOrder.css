@@ -3,5 +3,5 @@
 }
 
 .rootNoMajorOrderWidget_Text {
-    @apply text-[#2cc388] text-[2rem] mlarge:text-[1.5rem] mmedium:text-[1.375rem] msmall:text-[1.25rem] mlarge:text-center font-['Exo2'] font-bold;
+    @apply text-[#2cc388] text-[2rem] mlarge:text-[1.5rem] mmedium:text-[1.375rem] msmall:text-[1.25rem] text-center font-['Exo2'] font-bold;
 }

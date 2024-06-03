@@ -55,4 +55,9 @@ export const pages = [
     link: "/planets",
     title: "Планеты",
   },
+  {
+    id: 13,
+    link: "/playerCards",
+    title: "Карточки игрока",
+  },
 ];
