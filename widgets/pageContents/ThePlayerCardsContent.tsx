@@ -30,6 +30,8 @@ const ThePlayerCardsContent = () => {
             name={playerCard.name}
             image={playerCard.image}
             price={playerCard.price}
+            warbondName={playerCard.warbondName}
+            warbondImage={playerCard.warbondImage}
           />
         ))}
       </EntitySection>

@@ -100,4 +100,5 @@ export interface PlayerCard {
   name: string;
   image: string;
   price: number;
+  warbondImage: string;
 }
