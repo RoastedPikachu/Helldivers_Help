@@ -102,3 +102,9 @@ export interface PlayerCard {
   price: number;
   warbondImage: string;
 }
+
+export interface Warbond {
+  id: number;
+  name: string;
+  icon: string;
+}
