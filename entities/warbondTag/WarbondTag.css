@@ -1,5 +1,5 @@
 .warbondTagBlock {
-    @apply absolute flex justify-center items-center top-[10px] left-[10px] w-[46px] h-[46px] bg-[#00000080] rounded-[7.5px] mlarge:rounded-[5px] cursor-pointer;
+    @apply absolute flex justify-center items-center top-[10px] left-[10px] w-[46px] h-[46px] bg-[#00000080] rounded-[7.5px] mlarge:rounded-[5px];
 }
 
 .warbondTagBlock_Image {

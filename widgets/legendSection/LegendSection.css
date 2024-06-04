@@ -1,0 +1,19 @@
+.legendSection {
+    @apply relative mt-[30px] w-[60%] h-auto bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] overflow-hidden;
+}
+
+.legendSection_TopBlock {
+    @apply flex justify-between items-center px-[30px] mlarge:px-[15px] msmall:px-[10px] w-full h-[70px] min-h-[70px] mlarge:min-h-[65px] mmedium:min-h-[60px] cursor-pointer;
+}
+
+.legendSection_TopBlock_Title {
+    @apply mlarge:w-[75%] text-[--theme-color] text-[1.75rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold;
+}
+
+.legendSection_TopBlock_Button {
+    @apply relative flex justify-stretch items-stretch w-[30px] mlarge:w-[25px] mmedium:w-[22.5px] msmall:w-[20px] mlarge:min-w-[25px] mmedium:min-w-[22.5px] msmall:min-w-[20px] h-[30px] mlarge:h-[25px] mmedium:h-[22.5px] msmall:h-[20px] mlarge:min-h-[25px] mmedium:min-h-[22.5px] msmall:min-h-[20px] outline-none z-30;
+}
+
+.legendSection_TopBlock_Button_Image {
+    @apply relative duration-500 ease-in-out;
+}

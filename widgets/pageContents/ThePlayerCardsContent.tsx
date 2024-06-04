@@ -3,6 +3,7 @@ import React from "react";
 import { playerCards } from "@/data/playerCards";
 
 import EntitySection from "@/widgets/EntitySection";
+import LegendSection from "@/widgets/legendSection/LegendSection";
 
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
@@ -20,6 +21,8 @@ const ThePlayerCardsContent = () => {
         }
       />
 
+      <LegendSection />
+
       <EntitySection
         title={""}
         gridStyles={"mt-[50px] mlarge:mt-[30px] grid-cols-6 mlarge:grid-cols-2"}
@@ -30,7 +33,6 @@ const ThePlayerCardsContent = () => {
             name={playerCard.name}
             image={playerCard.image}
             price={playerCard.price}
-            warbondName={playerCard.warbondName}
             warbondImage={playerCard.warbondImage}
           />
         ))}

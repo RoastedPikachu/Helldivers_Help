@@ -9,7 +9,6 @@ interface PlayerCardProps {
   name: string;
   image: string;
   price: number;
-  warbondName: string;
   warbondImage: string;
 }
 
@@ -17,14 +16,13 @@ const PlayerCard: React.FC<PlayerCardProps> = ({
   name,
   image,
   price,
-  warbondName,
   warbondImage,
 }) => {
   return (
     <div className="playerCard">
       <img src={`${image}`} alt="" className="playerCard_BackgroundImage" />
 
-      <WarbondTag name={warbondName} image={warbondImage} />
+      <WarbondTag image={warbondImage} />
 
       <div className="playerCard_PriceBlock">
         <p className="playerCard_PriceBlock_Text">{price}</p>

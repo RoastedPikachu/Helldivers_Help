@@ -23,7 +23,7 @@
 }
 
 .rootShipModuleBlock_Top_Button {
-    @apply relative flex justify-stretch items-stretch w-[30px] mlarge:w-[25px] mmedium:w-[22.5px] msmall:w-[20px] mlarge:min-w-[25px] mmedium:min-w-[22.5px] msmall:min-w-[20px] h-[30px] mlarge:h-[25px] mmedium:h-[22.5px] msmall:h-[20px] mlarge:min-h-[25px] mmedium:min-h-[22.5px] msmall:min-h-[20px] outline-none z-30;
+    @apply relative flex justify-stretch items-stretch w-[30px] mlarge:w-[25px] mmedium:w-[22.5px] msmall:w-[20px] mlarge:min-w-[25px] mmedium:min-w-[22.5px] msmall:min-w-[20px] h-[30px] mlarge:h-[25px] mmedium:h-[22.5px] msmall:h-[20px] mlarge:min-h-[25px] mmedium:min-h-[22.5px] msmall:min-h-[20px] outline-none overflow-hidden z-30;
 }
 
 .rootShipModuleBlock_Top_Button_Image {

@@ -64,7 +64,7 @@ const Mission: React.FC<MissionProps> = ({
       </div>
 
       <div
-        className={`rootShipModuleBlock_Bottom ${isAdditionalInfoOpened ? "mt-[10px] mlarge:mt-[-5px] msmall:mt-[-10px] opacity-1" : `${targetMissionCompletionCount?.length ? "mt-[-600px]" : "mt-[-150px] mlarge:mt-[-170px]"} ml-[-400px] opacity-0`}`}
+        className={`rootShipModuleBlock_Bottom ${isAdditionalInfoOpened ? "" : `${targetMissionCompletionCount?.length ? "mt-[-600px]" : "mt-[-150px] mlarge:mt-[-170px]"} ml-[-400px] opacity-0`}`}
       >
         {description && (
           <>

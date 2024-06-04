@@ -1,5 +1,5 @@
 .playerCard {
-    @apply relative w-full h-[300px] mlarge:h-[280px] mmedium:h-[260px] msmall:h-[220px] border-2 border-[#2cc388] rounded-[10px];
+    @apply relative w-full h-[320px] mlarge:h-[280px] mmedium:h-[260px] msmall:h-[220px] border-2 border-[#2cc388] rounded-[10px];
 }
 
 .playerCard_BackgroundImage {
@@ -19,5 +19,5 @@
 }
 
 .playerCard_Title {
-    @apply absolute bottom-[10px] mlarge:bottom-[7.5px] msmall:bottom-[5px] left-[10px] mlarge:left-[7.5px] mmedium:left-[5px] py-[5px] msmall:py-[2.5px] px-[10px] msmall:px-[7.5px] max-w-[90%] bg-[#00000080] rounded-[7.5px] mlarge:rounded-[5px] text-[--theme-color] text-[1.125rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] font-['Exo2'] font-medium;
+    @apply absolute bottom-[10px] mlarge:bottom-[7.5px] msmall:bottom-[5px] left-[10px] mlarge:left-[7.5px] mmedium:left-[5px] py-[5px] msmall:py-[2.5px] px-[10px] msmall:px-[7.5px] max-w-[90%] bg-[#00000080] rounded-[7.5px] mlarge:rounded-[5px] text-[--theme-color] text-[1.125rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] font-['Exo2'] font-bold;
 }
