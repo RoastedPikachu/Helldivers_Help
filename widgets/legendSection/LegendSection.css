@@ -1,19 +1,35 @@
 .legendSection {
-    @apply relative mt-[30px] w-[60%] h-auto bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] overflow-hidden;
+    @apply relative mt-[30px] mlarge:mt-[20px] w-[60%] mlarge:w-full h-auto min-h-[70px] mlarge:min-h-[60px] mmedium:min-h-[55px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] overflow-hidden;
 }
 
 .legendSection_TopBlock {
-    @apply flex justify-between items-center px-[30px] mlarge:px-[15px] msmall:px-[10px] w-full h-[70px] min-h-[70px] mlarge:min-h-[65px] mmedium:min-h-[60px] cursor-pointer;
+    @apply relative flex justify-between items-center px-[30px] mlarge:px-[15px] msmall:px-[10px] w-full h-[66px] mlarge:h-[56px] mmedium:h-[51px] bg-[#00293a] cursor-pointer z-[20];
 }
 
 .legendSection_TopBlock_Title {
-    @apply mlarge:w-[75%] text-[--theme-color] text-[1.75rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold;
+    @apply mlarge:w-[75%] text-[--theme-color] text-[1.75rem] mlarge:text-[1.375rem] mmedium:text-[1.25rem] msmall:text-[1.125rem] font-['Exo2'] font-bold;
 }
 
 .legendSection_TopBlock_Button {
-    @apply relative flex justify-stretch items-stretch w-[30px] mlarge:w-[25px] mmedium:w-[22.5px] msmall:w-[20px] mlarge:min-w-[25px] mmedium:min-w-[22.5px] msmall:min-w-[20px] h-[30px] mlarge:h-[25px] mmedium:h-[22.5px] msmall:h-[20px] mlarge:min-h-[25px] mmedium:min-h-[22.5px] msmall:min-h-[20px] outline-none z-30;
+    @apply relative flex justify-stretch items-stretch mlarge:mt-[5px] msmall:mt-[2.5px] w-[30px] mlarge:w-[25px] mmedium:w-[22.5px] msmall:w-[20px] mlarge:min-w-[25px] mmedium:min-w-[22.5px] msmall:min-w-[20px] h-[30px] mlarge:h-[25px] mmedium:h-[22.5px] msmall:h-[20px] mlarge:min-h-[25px] mmedium:min-h-[22.5px] msmall:min-h-[20px] outline-none z-30;
 }
 
 .legendSection_TopBlock_Button_Image {
     @apply relative duration-500 ease-in-out;
+}
+
+.legendSection_BottomBlock {
+    @apply pb-[25px] mlarge:pb-[15px] mmedium:pb-[10px] px-[15px] mlarge:px-0 w-full h-auto duration-1000 ease-in-out;
+}
+
+.legendSection_BottomBlock_WarbondBlock {
+    @apply flex items-center mlarge:py-[2.5px];
+}
+
+.legendSection_BottomBlock_WarbondBlock_Icon {
+    @apply w-[75px] mlarge:w-[70px] mmedium:w-[60px] msmall:w-[55px] h-[75px] mlarge:h-[70px] mmedium:h-[60px] msmall:h-[55px];
+}
+
+.legendSection_BottomBlock_WarbondBlock_Title {
+    @apply ml-[15px] mlarge:ml-[10px] text-[--theme-color] text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold;
 }

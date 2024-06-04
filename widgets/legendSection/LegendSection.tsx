@@ -25,13 +25,20 @@ const LegendSection = () => {
       </div>
 
       <div
-        className={`pb-[25px] mlarge:pb-[15px] mmedium:pb-[10px] px-[15px] mlarge:px-[15px] msmall:px-[10px] w-full h-auto duration-1000 ease-in-out ${isLegendInfoOpened ? "mt-[10px] mlarge:mt-[-5px] msmall:mt-[-10px] opacity-100" : "mt-[-400px] opacity-0"}`}
+        className={`legendSection_BottomBlock ${isLegendInfoOpened ? "mt-[10px] mlarge:mt-[-5px] msmall:mt-[-10px] opacity-100" : "mt-[-400px] opacity-0"}`}
       >
         {warbonds.map((warbond) => (
-          <div key={warbond.id} className="flex items-center ">
-            <img src={`${warbond.icon}`} alt="" className="w-[75px] h-[75px]" />
+          <div
+            key={warbond.id}
+            className="legendSection_BottomBlock_WarbondBlock"
+          >
+            <img
+              src={`${warbond.icon}`}
+              alt=""
+              className="legendSection_BottomBlock_WarbondBlock_Icon"
+            />
 
-            <p className="ml-[15px] text-[--theme-color] text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold">
+            <p className="legendSection_BottomBlock_WarbondBlock_Title">
               {warbond.name}
             </p>
           </div>
