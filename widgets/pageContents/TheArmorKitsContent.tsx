@@ -7,6 +7,7 @@ import { SwiperSlide } from "swiper/react";
 
 import { armorStore } from "@/store/ArmorKitsStore";
 
+import LegendSection from "@/widgets/legendSection/LegendSection";
 import ModalSlider from "@/widgets/modalSlider/ModalSlider";
 import EntitySection from "@/widgets/EntitySection";
 
@@ -36,6 +37,8 @@ const TheArmorKitsContent = observer(() => {
               "Броня для Адского Десантника в игре Helldivers 2 играет критически важную роль в обеспечении выживаемости и эффективности на поле боя. Она защищает от дальнобойных лазеров автоматонов, от когтей и жвал терминидов, также комплект брони предоставляет определенные бонусы, способствующие выполнению задания."
             }
           />
+
+          <LegendSection />
 
           <ModalSlider
             closeFunction={() => armorStore.clearCurrentArmorInfo()}

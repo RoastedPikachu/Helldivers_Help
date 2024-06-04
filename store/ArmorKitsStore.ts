@@ -5,6 +5,7 @@ import { armorBonuses } from "@/data/armor/bonuses";
 
 import { ArmorKit, CurrentArmorInfo } from "@/utils/storeInterfaces";
 import { ArmorObtainingType } from "@/utils/dataInterfaces";
+import { warbonds } from "@/data/warbonds";
 
 class ArmorKitsStore {
   currentArmorInfo = {} as CurrentArmorInfo;
@@ -25,6 +26,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.extraArmor,
+        warbondIcon: "",
       },
     ],
     helldiversMobilize: [
@@ -43,6 +45,7 @@ class ArmorKitsStore {
         speed: 530,
         staminaRegen: 115,
         bonus: armorBonuses.scout,
+        warbondIcon: warbonds[0].icon,
       },
       {
         id: 2,
@@ -59,6 +62,7 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.fortification,
+        warbondIcon: warbonds[0].icon,
       },
       {
         id: 3,
@@ -75,6 +79,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.engineerKit,
+        warbondIcon: warbonds[0].icon,
       },
       {
         id: 4,
@@ -91,6 +96,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.medKit,
+        warbondIcon: warbonds[0].icon,
       },
       {
         id: 5,
@@ -107,6 +113,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.democracyProtects,
+        warbondIcon: warbonds[0].icon,
       },
       {
         id: 6,
@@ -123,6 +130,7 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.fortification,
+        warbondIcon: warbonds[0].icon,
       },
       {
         id: 7,
@@ -139,6 +147,7 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.scout,
+        warbondIcon: warbonds[0].icon,
       },
       {
         id: 8,
@@ -155,6 +164,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.scout,
+        warbondIcon: warbonds[0].icon,
       },
       {
         id: 9,
@@ -171,6 +181,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.medKit,
+        warbondIcon: warbonds[0].icon,
       },
       {
         id: 10,
@@ -187,6 +198,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.democracyProtects,
+        warbondIcon: warbonds[0].icon,
       },
     ],
     steeledVeterans: [
@@ -204,6 +216,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.servoAssisted,
+        warbondIcon: warbonds[1].icon,
       },
       {
         id: 2,
@@ -219,6 +232,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.servoAssisted,
+        warbondIcon: warbonds[1].icon,
       },
       {
         id: 3,
@@ -234,6 +248,7 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.servoAssisted,
+        warbondIcon: warbonds[1].icon,
       },
     ],
     cuttingEdge: [
@@ -251,6 +266,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.electricalCondult,
+        warbondIcon: warbonds[2].icon,
       },
       {
         id: 2,
@@ -266,6 +282,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.electricalCondult,
+        warbondIcon: warbonds[2].icon,
       },
       {
         id: 3,
@@ -281,6 +298,7 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.electricalCondult,
+        warbondIcon: warbonds[2].icon,
       },
     ],
     democraticDetonation: [
@@ -299,6 +317,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.engineerKit,
+        warbondIcon: warbonds[3].icon,
       },
       {
         id: 2,
@@ -315,6 +334,7 @@ class ArmorKitsStore {
         speed: 536,
         staminaRegen: 118,
         bonus: armorBonuses.engineerKit,
+        warbondIcon: warbonds[3].icon,
       },
       {
         id: 3,
@@ -331,6 +351,7 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.fortification,
+        warbondIcon: warbonds[3].icon,
       },
     ],
     polarPatriots: [
@@ -348,6 +369,7 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.servoAssisted,
+        warbondIcon: warbonds[4].icon,
       },
       {
         id: 2,
@@ -363,6 +385,7 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.fortification,
+        warbondIcon: warbonds[4].icon,
       },
       {
         id: 3,
@@ -378,6 +401,7 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.scout,
+        warbondIcon: warbonds[4].icon,
       },
     ],
     superstore: [
@@ -395,6 +419,7 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.fortification,
+        warbondIcon: "",
       },
       {
         id: 2,
@@ -410,6 +435,7 @@ class ArmorKitsStore {
         speed: 471,
         staminaRegen: 71,
         bonus: armorBonuses.fortification,
+        warbondIcon: "",
       },
       {
         id: 3,
@@ -425,6 +451,7 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.extraArmor,
+        warbondIcon: "",
       },
       {
         id: 4,
@@ -440,6 +467,7 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.engineerKit,
+        warbondIcon: "",
       },
       {
         id: 5,
@@ -455,6 +483,7 @@ class ArmorKitsStore {
         speed: 521,
         staminaRegen: 111,
         bonus: armorBonuses.engineerKit,
+        warbondIcon: "",
       },
       {
         id: 6,
@@ -470,6 +499,7 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.engineerKit,
+        warbondIcon: "",
       },
       {
         id: 7,
@@ -485,6 +515,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.engineerKit,
+        warbondIcon: "",
       },
       {
         id: 8,
@@ -500,6 +531,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.medKit,
+        warbondIcon: "",
       },
       {
         id: 9,
@@ -515,6 +547,7 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.medKit,
+        warbondIcon: "",
       },
       {
         id: 10,
@@ -530,6 +563,7 @@ class ArmorKitsStore {
         speed: 536,
         staminaRegen: 118,
         bonus: armorBonuses.medKit,
+        warbondIcon: "",
       },
       {
         id: 11,
@@ -545,6 +579,7 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.fortification,
+        warbondIcon: "",
       },
       {
         id: 12,
@@ -560,6 +595,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.fortification,
+        warbondIcon: "",
       },
       {
         id: 13,
@@ -575,6 +611,7 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.engineerKit,
+        warbondIcon: "",
       },
       {
         id: 14,
@@ -590,6 +627,7 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.fortification,
+        warbondIcon: "",
       },
       {
         id: 15,
@@ -605,6 +643,7 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.servoAssisted,
+        warbondIcon: "",
       },
       {
         id: 16,
@@ -620,6 +659,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.engineerKit,
+        warbondIcon: "",
       },
       {
         id: 17,
@@ -635,6 +675,7 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.servoAssisted,
+        warbondIcon: "",
       },
       {
         id: 18,
@@ -650,6 +691,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.extraArmor,
+        warbondIcon: "",
       },
     ],
     preOrder: [
@@ -667,6 +709,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.extraArmor,
+        warbondIcon: "",
       },
       {
         id: 2,
@@ -682,6 +725,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.democracyProtects,
+        warbondIcon: "",
       },
       {
         id: 3,
@@ -697,6 +741,7 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.servoAssisted,
+        warbondIcon: "",
       },
     ],
     superCitizen: [
@@ -714,6 +759,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.democracyProtects,
+        warbondIcon: "",
       },
     ],
     twitchDrops: [
@@ -731,6 +777,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.medKit,
+        warbondIcon: "",
       },
     ],
   };

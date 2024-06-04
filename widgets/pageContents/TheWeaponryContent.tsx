@@ -7,6 +7,7 @@ import { SwiperSlide } from "swiper/react";
 
 import { weaponsStore } from "@/store/WeaponsStore";
 
+import LegendSection from "@/widgets/legendSection/LegendSection";
 import ModalSlider from "@/widgets/modalSlider/ModalSlider";
 import EntitySection from "@/widgets/EntitySection";
 
@@ -107,6 +108,8 @@ const TheWeaponryContent = observer(() => {
               "Когда жуки начнут ползти, а машины — стрелять, не стойте в стороне. Возьмите оружие, и покажите врагам Супер-Земли, на что способны настоящие Адские Десантники. С демократией на вашей стороне и вашими товарищами рядом, вы непобедимы!"
             }
           />
+
+          <LegendSection />
 
           <ModalSlider
             closeFunction={() => weaponsStore.clearCurrentWeaponInfo()}
