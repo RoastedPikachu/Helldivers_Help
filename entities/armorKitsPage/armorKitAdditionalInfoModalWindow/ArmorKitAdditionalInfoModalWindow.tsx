@@ -4,17 +4,16 @@ import React from "react";
 import { observer, Observer } from "mobx-react-lite";
 
 import { armorStore } from "@/store/ArmorKitsStore";
+import { mobileStore } from "@/store/MobileStore";
 
 import { Bonus } from "@/utils/dataInterfaces";
 
 import "./ArmorKitAdditionalInfoModalWindow.css";
-import { mobileStore } from "@/store/MobileStore";
 
 interface ArmorKitAdditionalInfoModalWindowProps {
   imagePath: string;
   type: string;
   name: string;
-  obtainingMethod: string;
   description: string;
   price: number;
   armorRating: number;
@@ -29,7 +28,6 @@ const ArmorKitAdditionalInfoModalWindow: React.FC<ArmorKitAdditionalInfoModalWin
       imagePath,
       type,
       name,
-      obtainingMethod,
       description,
       price,
       armorRating,
@@ -98,18 +96,8 @@ const ArmorKitAdditionalInfoModalWindow: React.FC<ArmorKitAdditionalInfoModalWin
                     </div>
                   </div>
 
-                  <div className="mt-[20px] mlarge:mt-[10px]">
-                    <p className="currentArmor_Modal_Top_TextBlock_Characteristic_Name">
-                      СПОСОБ ПОЛУЧЕНИЯ:
-                    </p>
-
-                    <p className="currentArmor_Modal_Top_TextBlock_Characteristic_Value">
-                      {obtainingMethod}
-                    </p>
-                  </div>
-
                   {!mobileStore.isMobileDevice && (
-                    <div className="mt-[20px] mlarge:mt-[10px]">
+                    <div className="mt-[10px] mlarge:mt-[10px]">
                       <p className="currentArmor_Modal_Top_TextBlock_Characteristic_Name">
                         ЭФФЕКТ:
                       </p>

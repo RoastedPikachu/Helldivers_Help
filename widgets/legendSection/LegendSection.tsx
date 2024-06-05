@@ -25,7 +25,7 @@ const LegendSection = () => {
       </div>
 
       <div
-        className={`legendSection_BottomBlock ${isLegendInfoOpened ? "mt-[10px] mlarge:mt-[-5px] msmall:mt-[-10px] opacity-100" : "mt-[-400px] opacity-0"}`}
+        className={`legendSection_BottomBlock ${isLegendInfoOpened ? "mt-[10px] mlarge:mt-[-5px] msmall:mt-[-10px] opacity-100" : "mt-[-1000px] opacity-0"}`}
       >
         {warbonds.map((warbond) => (
           <div

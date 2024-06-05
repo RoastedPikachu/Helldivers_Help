@@ -23,6 +23,18 @@ import "swiper/css/navigation";
 import "@/app/modalsSlider.css";
 
 const TheArmorKitsContent = observer(() => {
+  const getWeaponType = (type: string) => {
+    switch (type) {
+      case "Легкая броня":
+        return "light";
+      case "Средняя броня":
+        return "medium";
+      case "Тяжелая броня":
+        return "heavy";
+      default:
+        return "";
+    }
+  };
   return (
     <Observer>
       {() => (
@@ -45,7 +57,7 @@ const TheArmorKitsContent = observer(() => {
             currentEntityId={armorStore.currentArmorInfo.id}
           >
             {armorStore.armorKits[
-              armorStore.currentArmorInfo.obtainingType?.name
+              getWeaponType(armorStore.currentArmorInfo.type)
             ]?.map((armorKit) => (
               <SwiperSlide key={armorKit.id}>
                 <ArmorKitAdditionalInfoModalWindow
@@ -65,151 +77,49 @@ const TheArmorKitsContent = observer(() => {
           </ModalSlider>
 
           <EntitySection
-            title={"ОБУЧЕНИЕ"}
+            title={"ЛЕГКАЯ БРОНЯ"}
             gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
           >
-            {armorStore.armorKits.tutorial.map((armorKit) => (
+            {armorStore.armorKits.light.map((armorKit) => (
               <ArmorKit
                 key={armorKit.id}
                 id={armorKit.id}
-                obtainingType={armorKit.obtainingType}
                 imagePath={armorKit.imagePath}
+                type={armorKit.type}
                 name={armorKit.name}
+                warbondIcon={armorKit.warbondIcon}
               />
             ))}
           </EntitySection>
 
           <EntitySection
-            title={"БОЕВОЙ ПРОПУСК «АДСКИЕ ДЕСАНТНИКИ, В БОЙ!»"}
+            title={"СРЕДНЯЯ БРОНЯ"}
             gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
           >
-            {armorStore.armorKits.helldiversMobilize.map((armorKit) => (
+            {armorStore.armorKits.medium.map((armorKit) => (
               <ArmorKit
                 key={armorKit.id}
                 id={armorKit.id}
-                obtainingType={armorKit.obtainingType}
                 imagePath={armorKit.imagePath}
+                type={armorKit.type}
                 name={armorKit.name}
+                warbondIcon={armorKit.warbondIcon}
               />
             ))}
           </EntitySection>
 
           <EntitySection
-            title={"БОЕВОЙ ПРОПУСК «ЗАКАЛЕННЫЕ ВЕТЕРАНЫ»"}
+            title={"ТЯЖЕЛАЯ БРОНЯ"}
             gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
           >
-            {armorStore.armorKits.steeledVeterans.map((armorKit) => (
+            {armorStore.armorKits.heavy.map((armorKit) => (
               <ArmorKit
                 key={armorKit.id}
                 id={armorKit.id}
-                obtainingType={armorKit.obtainingType}
                 imagePath={armorKit.imagePath}
+                type={armorKit.type}
                 name={armorKit.name}
-              />
-            ))}
-          </EntitySection>
-
-          <EntitySection
-            title={"БОЕВОЙ ПРОПУСК «НА ОСТРИЕ»"}
-            gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
-          >
-            {armorStore.armorKits.cuttingEdge.map((armorKit) => (
-              <ArmorKit
-                key={armorKit.id}
-                id={armorKit.id}
-                obtainingType={armorKit.obtainingType}
-                imagePath={armorKit.imagePath}
-                name={armorKit.name}
-              />
-            ))}
-          </EntitySection>
-
-          <EntitySection
-            title={"БОЕВОЙ ПРОПУСК «ДЕМОКРАТИЧЕСКИЙ ПОДРЫВ»"}
-            gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
-          >
-            {armorStore.armorKits.democraticDetonation.map((armorKit) => (
-              <ArmorKit
-                key={armorKit.id}
-                id={armorKit.id}
-                obtainingType={armorKit.obtainingType}
-                imagePath={armorKit.imagePath}
-                name={armorKit.name}
-              />
-            ))}
-          </EntitySection>
-
-          <EntitySection
-            title={"БОЕВОЙ ПРОПУСК «ПОЛЯРНЫЕ ПАТРИОТЫ»"}
-            gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
-          >
-            {armorStore.armorKits.polarPatriots.map((armorKit) => (
-              <ArmorKit
-                key={armorKit.id}
-                id={armorKit.id}
-                obtainingType={armorKit.obtainingType}
-                imagePath={armorKit.imagePath}
-                name={armorKit.name}
-              />
-            ))}
-          </EntitySection>
-
-          <EntitySection
-            title={"СУПЕРМАГАЗИН"}
-            gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
-          >
-            {armorStore.armorKits.superstore.map((armorKit) => (
-              <ArmorKit
-                key={armorKit.id}
-                id={armorKit.id}
-                obtainingType={armorKit.obtainingType}
-                imagePath={armorKit.imagePath}
-                name={armorKit.name}
-              />
-            ))}
-          </EntitySection>
-
-          <EntitySection
-            title={"ПРЕДЗАКАЗ"}
-            gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
-          >
-            {armorStore.armorKits.preOrder.map((armorKit) => (
-              <ArmorKit
-                key={armorKit.id}
-                id={armorKit.id}
-                obtainingType={armorKit.obtainingType}
-                imagePath={armorKit.imagePath}
-                name={armorKit.name}
-              />
-            ))}
-          </EntitySection>
-
-          <EntitySection
-            title={"ИЗДАНИЕ SUPER CITIZEN"}
-            gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
-          >
-            {armorStore.armorKits.superCitizen.map((armorKit) => (
-              <ArmorKit
-                key={armorKit.id}
-                id={armorKit.id}
-                obtainingType={armorKit.obtainingType}
-                imagePath={armorKit.imagePath}
-                name={armorKit.name}
-              />
-            ))}
-          </EntitySection>
-
-          <EntitySection
-            title={"TWITCH DROPS"}
-            gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
-          >
-            {armorStore.armorKits.twitchDrops.map((armorKit) => (
-              <ArmorKit
-                key={armorKit.id}
-                id={armorKit.id}
-                obtainingType={armorKit.obtainingType}
-                imagePath={armorKit.imagePath}
-                name={armorKit.name}
+                warbondIcon={armorKit.warbondIcon}
               />
             ))}
           </EntitySection>

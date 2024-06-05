@@ -80,11 +80,6 @@ export interface WeaponType {
   typeNumber: number;
 }
 
-export interface ArmorObtainingType {
-  name: string;
-  typeNumber: number;
-}
-
 export interface Bonus {
   name: string;
   description: string;

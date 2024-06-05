@@ -1,4 +1,4 @@
-import { ArmorObtainingType, Bonus, WeaponType } from "@/utils/dataInterfaces";
+import { Bonus, WeaponType } from "@/utils/dataInterfaces";
 
 export interface Achievement {
   id: number;
@@ -66,7 +66,6 @@ export interface ArmorKit {
   imagePath: string;
   type: string;
   name: string;
-  obtainingType: ArmorObtainingType;
   obtainingMethod: string;
   description: string;
   price: number;
@@ -74,9 +73,10 @@ export interface ArmorKit {
   speed: number;
   staminaRegen: number;
   bonus: Bonus;
+  warbondIcon: string;
 }
 
 export interface CurrentArmorInfo {
   id: number;
-  obtainingType: ArmorObtainingType;
+  type: string;
 }
