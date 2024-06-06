@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 
 import { Swiper } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -27,21 +27,26 @@ const ModalSlider: React.FC<ModalSliderProps> = ({
     setCurrentSlideIndex(swiper?.activeIndex);
   };
 
+  const handleClickOutsideSlider = useCallback(
+    (event: Event) => {
+      if (
+        sliderRef.current &&
+        !sliderRef.current.contains(event.target) &&
+        currentEntityId
+      ) {
+        closeFunction();
+
+        document.removeEventListener("click", handleClickOutsideSlider);
+      }
+    },
+    [sliderRef, currentEntityId, closeFunction],
+  );
+
   useEffect(() => {
     if (currentEntityId) {
-      document.addEventListener("click", (event) =>
-        slidersStore.handleClickOutsideSlider(
-          event,
-          sliderRef,
-          currentEntityId,
-          closeFunction,
-        ),
-      );
+      document.addEventListener("click", handleClickOutsideSlider);
     } else {
-      document.removeEventListener(
-        "click",
-        () => slidersStore.handleClickOutsideSlider,
-      );
+      document.removeEventListener("click", handleClickOutsideSlider);
     }
   }, [currentEntityId]);
   return (
