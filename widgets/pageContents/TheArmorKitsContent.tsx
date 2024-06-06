@@ -64,7 +64,6 @@ const TheArmorKitsContent = observer(() => {
                   imagePath={armorKit.imagePath}
                   type={armorKit.type}
                   name={armorKit.name}
-                  obtainingMethod={armorKit.obtainingMethod}
                   description={armorKit.description}
                   price={armorKit.price}
                   armorRating={armorKit.armorRating}
