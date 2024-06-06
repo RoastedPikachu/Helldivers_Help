@@ -80,3 +80,19 @@ export interface CurrentArmorInfo {
   id: number;
   type: string;
 }
+
+export interface Coat {
+  id: number;
+  imagePath: string;
+  name: string;
+  description: string;
+  price: number;
+  armorRating: number;
+  speed: number;
+  staminaRegen: number;
+  warbondIcon: string;
+}
+
+export interface CurrentCoatInfo {
+  id: number;
+}
