@@ -27,20 +27,21 @@ const ModalSlider: React.FC<ModalSliderProps> = ({
     setCurrentSlideIndex(swiper?.activeIndex);
   };
 
-  const handleClickOutsideSlider = (event: Event) => {
-    if (
-      sliderRef.current &&
-      !sliderRef.current.contains(event.target) &&
-      currentEntityId
-    ) {
-      closeFunction();
-      document.removeEventListener("click", handleClickOutsideSlider);
-    }
-  };
-
   useEffect(() => {
     if (currentEntityId) {
-      document.addEventListener("click", handleClickOutsideSlider);
+      document.addEventListener("click", (event) =>
+        slidersStore.handleClickOutsideSlider(
+          event,
+          sliderRef,
+          currentEntityId,
+          closeFunction,
+        ),
+      );
+    } else {
+      document.removeEventListener(
+        "click",
+        () => slidersStore.handleClickOutsideSlider,
+      );
     }
   }, [currentEntityId]);
   return (

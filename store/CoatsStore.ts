@@ -229,7 +229,7 @@ class CoatsStore {
     makeAutoObservable(this);
   }
 
-  changeCurrentCoatInfo(id: number) {
+  setCurrentCoatInfo(id: number) {
     this.currentCoatInfo = { id: id };
   }
 

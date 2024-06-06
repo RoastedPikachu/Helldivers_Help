@@ -44,22 +44,6 @@ class ArmorKitsStore {
       },
       {
         id: 3,
-        imagePath: "/static/ArmorKits/Sa04CombatTechnicianImage.webp",
-        type: "Средняя броня",
-        name: "SA-04 «Боевой техник»",
-        obtainingMethod:
-          "Покупается в боевом пропуске «Адские Десантники, в бой!»",
-        description:
-          "Этот костюм увеличивает силу носителя, поэтому в нем рекомендуется с осторожностью открывать двери или обнимать коллег.",
-        price: 100,
-        armorRating: 100,
-        speed: 500,
-        staminaRegen: 100,
-        bonus: armorBonuses.scout,
-        warbondIcon: warbonds[1].icon,
-      },
-      {
-        id: 4,
         imagePath: "/static/ArmorKits/Cw4ArcticRangerImage.webp",
         type: "Легкая броня",
         name: "CW-4 «Арктический рейнджер»",
@@ -74,7 +58,7 @@ class ArmorKitsStore {
         warbondIcon: warbonds[5].icon,
       },
       {
-        id: 5,
+        id: 4,
         imagePath: "/static/ArmorKits/Ce07DemolitionSpecialistImage.webp",
         type: "Легкая броня",
         name: "CE-07 «Мастер-подрывник»",
@@ -90,7 +74,7 @@ class ArmorKitsStore {
         warbondIcon: warbonds[4].icon,
       },
       {
-        id: 6,
+        id: 5,
         imagePath: "/static/ArmorKits/Ce67TitanImage.webp",
         type: "Легкая броня",
         name: "CE-67 «Титан»",
@@ -105,7 +89,7 @@ class ArmorKitsStore {
         warbondIcon: warbonds[6].icon,
       },
       {
-        id: 7,
+        id: 6,
         imagePath: "/static/ArmorKits/Ce74BreakerImage.webp",
         type: "Легкая броня",
         name: "CE-74 «Крушитель»",
@@ -120,7 +104,7 @@ class ArmorKitsStore {
         warbondIcon: warbonds[6].icon,
       },
       {
-        id: 8,
+        id: 7,
         imagePath: "/static/ArmorKits/Fs37RavagerImage.webp",
         type: "Легкая броня",
         name: "FS-37 «Разоритель»",
@@ -135,7 +119,7 @@ class ArmorKitsStore {
         warbondIcon: warbonds[6].icon,
       },
       {
-        id: 9,
+        id: 8,
         imagePath: "/static/ArmorKits/B08LightGunnerImage.webp",
         type: "Легкая броня",
         name: "B-08 «Легкий стрелок»",
@@ -150,7 +134,7 @@ class ArmorKitsStore {
         warbondIcon: warbonds[6].icon,
       },
       {
-        id: 11,
+        id: 9,
         imagePath: "/static/ArmorKits/Fs38EradicatorImage.webp",
         type: "Легкая броня",
         name: "FS-38 «Искоренитель»",
@@ -165,7 +149,7 @@ class ArmorKitsStore {
         warbondIcon: warbonds[6].icon,
       },
       {
-        id: 12,
+        id: 10,
         imagePath: "/static/ArmorKits/Cm21TrenchParamedicImage.webp",
         type: "Легкая броня",
         name: "CM-21 «Траншейный медик»",
@@ -180,7 +164,7 @@ class ArmorKitsStore {
         warbondIcon: warbonds[6].icon,
       },
       {
-        id: 13,
+        id: 11,
         imagePath: "/static/ArmorKits/Sc37LegionnaireImage.webp",
         type: "Легкая броня",
         name: "SС-37 «Легионер»",
@@ -193,6 +177,21 @@ class ArmorKitsStore {
         staminaRegen: 125,
         bonus: armorBonuses.servoAssisted,
         warbondIcon: warbonds[6].icon,
+      },
+      {
+        id: 12,
+        imagePath: "/static/ArmorKits/Ex00PrototypeXImage.webp",
+        type: "Легкая броня",
+        name: "EX-00 «Прототип X»",
+        obtainingMethod: "Покупается в боевом пропуске «На острие»",
+        description:
+          "Результат траты нескольких миллиардов суперкредитов и 12 лет разработки «Солдата будущего».",
+        price: 112,
+        armorRating: 50,
+        speed: 550,
+        staminaRegen: 125,
+        bonus: armorBonuses.electricalCondult,
+        warbondIcon: warbonds[3].icon,
       },
     ],
     medium: [
@@ -489,21 +488,6 @@ class ArmorKitsStore {
       },
       {
         id: 20,
-        imagePath: "/static/ArmorKits/Ex00PrototypeXImage.webp",
-        type: "Легкая броня",
-        name: "EX-00 «Прототип X»",
-        obtainingMethod: "Покупается в боевом пропуске «На острие»",
-        description:
-          "Результат траты нескольких миллиардов суперкредитов и 12 лет разработки «Солдата будущего».",
-        price: 112,
-        armorRating: 50,
-        speed: 550,
-        staminaRegen: 125,
-        bonus: armorBonuses.electricalCondult,
-        warbondIcon: warbonds[3].icon,
-      },
-      {
-        id: 21,
         imagePath: "/static/ArmorKits/Fs34ExterminatorImage.webp",
         type: "Средняя броня",
         name: "FS-34 «Истребитель»",
@@ -518,7 +502,7 @@ class ArmorKitsStore {
         warbondIcon: warbonds[6].icon,
       },
       {
-        id: 22,
+        id: 21,
         imagePath: "/static/ArmorKits/B24EnforcerImage.webp",
         type: "Средняя броня",
         name: "B-24 «Вышибала»",
@@ -531,6 +515,22 @@ class ArmorKitsStore {
         staminaRegen: 71,
         bonus: armorBonuses.fortification,
         warbondIcon: warbonds[6].icon,
+      },
+      {
+        id: 22,
+        imagePath: "/static/ArmorKits/Sa04CombatTechnicianImage.webp",
+        type: "Средняя броня",
+        name: "SA-04 «Боевой техник»",
+        obtainingMethod:
+          "Покупается в боевом пропуске «Адские Десантники, в бой!»",
+        description:
+          "Этот костюм увеличивает силу носителя, поэтому в нем рекомендуется с осторожностью открывать двери или обнимать коллег.",
+        price: 100,
+        armorRating: 100,
+        speed: 500,
+        staminaRegen: 100,
+        bonus: armorBonuses.scout,
+        warbondIcon: warbonds[1].icon,
       },
     ],
     heavy: [

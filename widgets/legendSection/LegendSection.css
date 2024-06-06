@@ -1,5 +1,5 @@
 .legendSection {
-    @apply relative mt-[30px] mlarge:mt-[20px] w-[60%] mlarge:w-full h-auto min-h-[70px] mlarge:min-h-[60px] mmedium:min-h-[55px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] overflow-hidden;
+    @apply relative mt-[30px] mlarge:mt-[20px] mb-[50px] mlarge:mb-[30px] w-[60%] mlarge:w-full h-auto min-h-[70px] mlarge:min-h-[60px] mmedium:min-h-[55px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] overflow-hidden;
 }
 
 .legendSection_TopBlock {
