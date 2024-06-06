@@ -9,6 +9,7 @@ import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 
 import PlayerCard from "@/entities/playerCard/PlayerCard";
+import SearchBar from "@/widgets/searchBar/SearchBar";
 
 const ThePlayerCardsContent = () => {
   return (
@@ -22,6 +23,8 @@ const ThePlayerCardsContent = () => {
       />
 
       <LegendSection />
+
+      <SearchBar />
 
       <EntitySection
         title={""}
