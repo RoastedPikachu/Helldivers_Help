@@ -142,6 +142,42 @@ class CoatsStore {
     },
     {
       id: 12,
+      imagePath: "/static/Coats/TyrantsHunterImage.webp",
+      name: "Охотник на тиранов",
+      description:
+        "Искромсанный подол плаща предвещает неугасимую свирепость, с которой его носитель обрашится на врагов свободы.",
+      price: 8,
+      armorRating: 100,
+      speed: 100,
+      staminaRegen: 100,
+      warbondIcon: warbonds[2].icon,
+    },
+    {
+      id: 13,
+      imagePath: "/static/Coats/GratefulDescendantsImage.webp",
+      name: "Плащ благодарных потомков",
+      description:
+        "Воплощение благодарности бесконечного множества потомков, чье освобожденное существование мы стараемся обеспечить.",
+      price: 20,
+      armorRating: 100,
+      speed: 100,
+      staminaRegen: 100,
+      warbondIcon: warbonds[2].icon,
+    },
+    {
+      id: 14,
+      imagePath: "/static/Coats/IntegrityBastionImage.webp",
+      name: "Бастион целостности",
+      description:
+        "В основе дизайна — сигнальный плащ ВССЗ, облегчавший воздушным командам поиски павших героев.",
+      price: 30,
+      armorRating: 100,
+      speed: 100,
+      staminaRegen: 100,
+      warbondIcon: warbonds[2].icon,
+    },
+    {
+      id: 15,
       imagePath: "/static/Coats/BotslayerImage.webp",
       name: "Убийца ботов",
       description:
@@ -153,7 +189,7 @@ class CoatsStore {
       warbondIcon: warbonds[3].icon,
     },
     {
-      id: 13,
+      id: 16,
       imagePath: "/static/Coats/GreatMartyrImage.webp",
       name: "Великий мученик",
       description:
@@ -165,7 +201,7 @@ class CoatsStore {
       warbondIcon: warbonds[3].icon,
     },
     {
-      id: 14,
+      id: 17,
       imagePath: "/static/Coats/OblivionAgentImage.webp",
       name: "Агент забвения",
       description:
@@ -177,7 +213,43 @@ class CoatsStore {
       warbondIcon: warbonds[3].icon,
     },
     {
-      id: 15,
+      id: 18,
+      imagePath: "/static/Coats/TrueEqualityHarbingerImage.webp",
+      name: "Предвестник истинного равенства",
+      description:
+        "Владельцы этого плаща знают, что даже враги Свободы достойны равенства. Посмертно.",
+      price: 8,
+      armorRating: 100,
+      speed: 100,
+      staminaRegen: 100,
+      warbondIcon: warbonds[4].icon,
+    },
+    {
+      id: 19,
+      imagePath: "/static/Coats/EagleFuryImage.webp",
+      name: "Ярость орла",
+      description:
+        "Один из первых поступивших в массовое производство плащей. Он оказался последним, что видели бесчисленные враги свободы.",
+      price: 20,
+      armorRating: 100,
+      speed: 100,
+      staminaRegen: 100,
+      warbondIcon: warbonds[4].icon,
+    },
+    {
+      id: 20,
+      imagePath: "/static/Coats/LibertyGobelinImage.webp",
+      name: "Гобелен свободы",
+      description:
+        "Путь всех узревших этот плащ поразит красота Свободы или пули Воли.",
+      price: 30,
+      armorRating: 100,
+      speed: 100,
+      staminaRegen: 100,
+      warbondIcon: warbonds[4].icon,
+    },
+    {
+      id: 21,
       imagePath: "/static/Coats/DissidentNightmareImage.webp",
       name: "Кошмар диссидента",
       description:
@@ -189,7 +261,7 @@ class CoatsStore {
       warbondIcon: warbonds[5].icon,
     },
     {
-      id: 16,
+      id: 22,
       imagePath: "/static/Coats/EternalGloryImage.webp",
       name: "Вечная слава",
       description:
@@ -201,7 +273,7 @@ class CoatsStore {
       warbondIcon: warbonds[5].icon,
     },
     {
-      id: 17,
+      id: 23,
       imagePath: "/static/Coats/VunerableBulletinOrderImage.webp",
       name: "Орден достопочтенного бюллетеня",
       description:
@@ -213,7 +285,7 @@ class CoatsStore {
       warbondIcon: warbonds[5].icon,
     },
     {
-      id: 18,
+      id: 24,
       imagePath: "/static/Coats/FallenHeroRevengeImage.webp",
       name: "Месть павшего героя",
       description:
