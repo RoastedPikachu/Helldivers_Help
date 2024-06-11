@@ -65,4 +65,9 @@ export const pages = [
     link: "/playerCards",
     title: "Карточки игрока",
   },
+  {
+    id: 15,
+    link: "/emotes",
+    title: "Эмоции",
+  },
 ];
