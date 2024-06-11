@@ -103,3 +103,12 @@ export interface Warbond {
   name: string;
   icon: string;
 }
+
+export interface Emote {
+  id: number;
+  name: string;
+  videoPath: string;
+  videoPreviewPath: string;
+  price: number;
+  warbondIcon: string;
+}
