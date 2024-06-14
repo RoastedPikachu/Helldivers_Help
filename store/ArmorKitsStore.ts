@@ -1,7 +1,7 @@
 import { makeAutoObservable } from "mobx";
 
 import { armorBonuses } from "@/data/armor/bonuses";
-import { warbonds } from "@/data/warbonds";
+import { obtainingTypes } from "@/data/obtainingTypes";
 
 import { ArmorKit, CurrentArmorInfo } from "@/utils/storeInterfaces";
 
@@ -24,7 +24,7 @@ class ArmorKitsStore {
         speed: 530,
         staminaRegen: 115,
         bonus: armorBonuses.scout,
-        warbondIcon: warbonds[1].icon,
+        warbondIcon: obtainingTypes[5].icon,
       },
       {
         id: 2,
@@ -40,7 +40,7 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.scout,
-        warbondIcon: warbonds[1].icon,
+        warbondIcon: obtainingTypes[5].icon,
       },
       {
         id: 3,
@@ -55,7 +55,7 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.scout,
-        warbondIcon: warbonds[5].icon,
+        warbondIcon: obtainingTypes[9].icon,
       },
       {
         id: 4,
@@ -71,7 +71,7 @@ class ArmorKitsStore {
         speed: 536,
         staminaRegen: 118,
         bonus: armorBonuses.engineerKit,
-        warbondIcon: warbonds[4].icon,
+        warbondIcon: obtainingTypes[8].icon,
       },
       {
         id: 5,
@@ -86,7 +86,7 @@ class ArmorKitsStore {
         speed: 521,
         staminaRegen: 111,
         bonus: armorBonuses.engineerKit,
-        warbondIcon: warbonds[6].icon,
+        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 6,
@@ -101,7 +101,7 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.engineerKit,
-        warbondIcon: warbonds[6].icon,
+        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 7,
@@ -116,7 +116,7 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.engineerKit,
-        warbondIcon: warbonds[6].icon,
+        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 8,
@@ -131,7 +131,7 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.fortification,
-        warbondIcon: warbonds[6].icon,
+        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 9,
@@ -146,7 +146,7 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.fortification,
-        warbondIcon: warbonds[6].icon,
+        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 10,
@@ -161,7 +161,7 @@ class ArmorKitsStore {
         speed: 536,
         staminaRegen: 118,
         bonus: armorBonuses.medKit,
-        warbondIcon: warbonds[6].icon,
+        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 11,
@@ -176,7 +176,7 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.servoAssisted,
-        warbondIcon: warbonds[6].icon,
+        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 12,
@@ -191,7 +191,22 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.electricalCondult,
-        warbondIcon: warbonds[3].icon,
+        warbondIcon: obtainingTypes[7].icon,
+      },
+      {
+        id: 13,
+        imagePath: "/static/ArmorKits/Ph9PredatorImage.webp",
+        type: "Легкая броня",
+        name: "PH-9 «Хищник»",
+        obtainingMethod: "Покупается в боевом пропуске «Змеи-коммандос»",
+        description:
+          "Эта броня вдохновлена формой Джекли-6, ветерана змеев-коммандос, который во время Первой галактической войны остановил наступление целого роя терминидов на Нубларии, имея только пулемет, перочинный нож и орбитальные лазерные удары.",
+        price: 112,
+        armorRating: 50,
+        speed: 550,
+        staminaRegen: 125,
+        bonus: armorBonuses.electricalCondult,
+        warbondIcon: obtainingTypes[10].icon,
       },
     ],
     medium: [
@@ -208,7 +223,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.extraArmor,
-        warbondIcon: warbonds[0].icon,
+        warbondIcon: obtainingTypes[0].icon,
       },
       {
         id: 2,
@@ -223,7 +238,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.extraArmor,
-        warbondIcon: warbonds[6].icon,
+        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 3,
@@ -238,7 +253,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.extraArmor,
-        warbondIcon: warbonds[7].icon,
+        warbondIcon: obtainingTypes[2].icon,
       },
       {
         id: 4,
@@ -254,7 +269,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.engineerKit,
-        warbondIcon: warbonds[1].icon,
+        warbondIcon: obtainingTypes[5].icon,
       },
       {
         id: 5,
@@ -270,7 +285,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.engineerKit,
-        warbondIcon: warbonds[4].icon,
+        warbondIcon: obtainingTypes[8].icon,
       },
       {
         id: 6,
@@ -285,7 +300,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.engineerKit,
-        warbondIcon: warbonds[6].icon,
+        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 7,
@@ -300,7 +315,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.engineerKit,
-        warbondIcon: warbonds[6].icon,
+        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 8,
@@ -316,7 +331,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.medKit,
-        warbondIcon: warbonds[1].icon,
+        warbondIcon: obtainingTypes[5].icon,
       },
       {
         id: 9,
@@ -332,7 +347,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.medKit,
-        warbondIcon: warbonds[1].icon,
+        warbondIcon: obtainingTypes[5].icon,
       },
       {
         id: 10,
@@ -347,7 +362,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.medKit,
-        warbondIcon: warbonds[6].icon,
+        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 11,
@@ -362,7 +377,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.medKit,
-        warbondIcon: warbonds[9].icon,
+        warbondIcon: obtainingTypes[4].icon,
       },
       {
         id: 12,
@@ -378,7 +393,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.democracyProtects,
-        warbondIcon: warbonds[1].icon,
+        warbondIcon: obtainingTypes[5].icon,
       },
       {
         id: 13,
@@ -394,7 +409,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.democracyProtects,
-        warbondIcon: warbonds[1].icon,
+        warbondIcon: obtainingTypes[5].icon,
       },
       {
         id: 14,
@@ -409,7 +424,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.democracyProtects,
-        warbondIcon: warbonds[7].icon,
+        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 15,
@@ -424,7 +439,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.democracyProtects,
-        warbondIcon: warbonds[8].icon,
+        warbondIcon: obtainingTypes[3].icon,
       },
       {
         id: 16,
@@ -439,7 +454,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.servoAssisted,
-        warbondIcon: warbonds[2].icon,
+        warbondIcon: obtainingTypes[6].icon,
       },
       {
         id: 17,
@@ -454,7 +469,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.servoAssisted,
-        warbondIcon: warbonds[2].icon,
+        warbondIcon: obtainingTypes[6].icon,
       },
       {
         id: 18,
@@ -469,7 +484,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.electricalCondult,
-        warbondIcon: warbonds[3].icon,
+        warbondIcon: obtainingTypes[7].icon,
       },
       {
         id: 19,
@@ -484,7 +499,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.electricalCondult,
-        warbondIcon: warbonds[3].icon,
+        warbondIcon: obtainingTypes[7].icon,
       },
       {
         id: 20,
@@ -499,7 +514,7 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.fortification,
-        warbondIcon: warbonds[6].icon,
+        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 21,
@@ -514,7 +529,7 @@ class ArmorKitsStore {
         speed: 471,
         staminaRegen: 71,
         bonus: armorBonuses.fortification,
-        warbondIcon: warbonds[6].icon,
+        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 22,
@@ -530,7 +545,22 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.scout,
-        warbondIcon: warbonds[1].icon,
+        warbondIcon: obtainingTypes[5].icon,
+      },
+      {
+        id: 23,
+        imagePath: "/static/ArmorKits/Ph56JaguarImage.webp",
+        type: "Средняя броня",
+        name: "PH-56 «Ягуар»",
+        obtainingMethod: "Покупается в Супермагазине",
+        description:
+          "«Двигайся как ягуар, бей как змей» — таким был девиз легендарного отряда спецназа ВССЗ, чьи реальные подвиги описаны в классической серии комиксов «Истории змей-коммандос».",
+        price: 225,
+        armorRating: 100,
+        speed: 500,
+        staminaRegen: 100,
+        bonus: armorBonuses.scout,
+        warbondIcon: obtainingTypes[1].icon,
       },
     ],
     heavy: [
@@ -548,7 +578,7 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.fortification,
-        warbondIcon: warbonds[1].icon,
+        warbondIcon: obtainingTypes[5].icon,
       },
       {
         id: 2,
@@ -564,7 +594,7 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.fortification,
-        warbondIcon: warbonds[1].icon,
+        warbondIcon: obtainingTypes[5].icon,
       },
       {
         id: 3,
@@ -580,7 +610,7 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.fortification,
-        warbondIcon: warbonds[4].icon,
+        warbondIcon: obtainingTypes[8].icon,
       },
       {
         id: 4,
@@ -595,7 +625,7 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.fortification,
-        warbondIcon: warbonds[5].icon,
+        warbondIcon: obtainingTypes[9].icon,
       },
       {
         id: 5,
@@ -610,7 +640,7 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.fortification,
-        warbondIcon: warbonds[6].icon,
+        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 6,
@@ -625,7 +655,7 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.servoAssisted,
-        warbondIcon: warbonds[2].icon,
+        warbondIcon: obtainingTypes[6].icon,
       },
       {
         id: 7,
@@ -640,7 +670,7 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.servoAssisted,
-        warbondIcon: warbonds[5].icon,
+        warbondIcon: obtainingTypes[9].icon,
       },
       {
         id: 8,
@@ -655,7 +685,7 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.servoAssisted,
-        warbondIcon: warbonds[6].icon,
+        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 9,
@@ -670,7 +700,7 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.servoAssisted,
-        warbondIcon: warbonds[7].icon,
+        warbondIcon: obtainingTypes[2].icon,
       },
       {
         id: 10,
@@ -685,7 +715,7 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.extraArmor,
-        warbondIcon: warbonds[6].icon,
+        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 11,
@@ -700,7 +730,7 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.engineerKit,
-        warbondIcon: warbonds[6].icon,
+        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 12,
@@ -715,7 +745,22 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.medKit,
-        warbondIcon: warbonds[6].icon,
+        warbondIcon: obtainingTypes[1].icon,
+      },
+      {
+        id: 13,
+        imagePath: "/static/ArmorKits/Ph202SticksBreakerImage.webp",
+        type: "Тяжелая броня",
+        name: "PH-202 «Палколом»",
+        obtainingMethod: "Покупается в боевом пропуске «Змеи-коммандос»",
+        description:
+          "Отсутствие покрытия на верхних конечностях обеспечивает повышенную свободу движения, улучшенное отведение влаги и возможность демонстрировать силу рук своим товарищам.",
+        price: 375,
+        armorRating: 150,
+        speed: 450,
+        staminaRegen: 50,
+        bonus: armorBonuses.medKit,
+        warbondIcon: obtainingTypes[10].icon,
       },
     ],
   };

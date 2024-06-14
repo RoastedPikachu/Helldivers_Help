@@ -98,7 +98,7 @@ export interface PlayerCard {
   warbondImage: string;
 }
 
-export interface Warbond {
+export interface ObtainingType {
   id: number;
   name: string;
   icon: string;

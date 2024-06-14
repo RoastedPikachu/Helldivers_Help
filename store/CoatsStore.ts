@@ -2,7 +2,7 @@ import { makeAutoObservable } from "mobx";
 
 import { Coat, CurrentCoatInfo } from "@/utils/storeInterfaces";
 
-import { warbonds } from "@/data/warbonds";
+import { obtainingTypes } from "@/data/obtainingTypes";
 
 class CoatsStore {
   currentCoatInfo = {} as CurrentCoatInfo;
@@ -18,7 +18,7 @@ class CoatsStore {
       armorRating: 100,
       speed: 100,
       staminaRegen: 100,
-      warbondIcon: warbonds[0].icon,
+      warbondIcon: obtainingTypes[0].icon,
     },
     {
       id: 2,
@@ -30,7 +30,7 @@ class CoatsStore {
       armorRating: 100,
       speed: 100,
       staminaRegen: 100,
-      warbondIcon: warbonds[1].icon,
+      warbondIcon: obtainingTypes[5].icon,
     },
     {
       id: 3,
@@ -42,7 +42,7 @@ class CoatsStore {
       armorRating: 100,
       speed: 100,
       staminaRegen: 100,
-      warbondIcon: warbonds[1].icon,
+      warbondIcon: obtainingTypes[5].icon,
     },
     {
       id: 4,
@@ -54,7 +54,7 @@ class CoatsStore {
       armorRating: 100,
       speed: 100,
       staminaRegen: 100,
-      warbondIcon: warbonds[1].icon,
+      warbondIcon: obtainingTypes[5].icon,
     },
     {
       id: 5,
@@ -66,7 +66,7 @@ class CoatsStore {
       armorRating: 100,
       speed: 100,
       staminaRegen: 100,
-      warbondIcon: warbonds[1].icon,
+      warbondIcon: obtainingTypes[5].icon,
     },
     {
       id: 6,
@@ -78,7 +78,7 @@ class CoatsStore {
       armorRating: 100,
       speed: 100,
       staminaRegen: 100,
-      warbondIcon: warbonds[1].icon,
+      warbondIcon: obtainingTypes[5].icon,
     },
     {
       id: 7,
@@ -90,7 +90,7 @@ class CoatsStore {
       armorRating: 100,
       speed: 100,
       staminaRegen: 100,
-      warbondIcon: warbonds[1].icon,
+      warbondIcon: obtainingTypes[5].icon,
     },
     {
       id: 8,
@@ -102,7 +102,7 @@ class CoatsStore {
       armorRating: 100,
       speed: 100,
       staminaRegen: 100,
-      warbondIcon: warbonds[1].icon,
+      warbondIcon: obtainingTypes[5].icon,
     },
     {
       id: 9,
@@ -114,7 +114,7 @@ class CoatsStore {
       armorRating: 100,
       speed: 100,
       staminaRegen: 100,
-      warbondIcon: warbonds[1].icon,
+      warbondIcon: obtainingTypes[5].icon,
     },
     {
       id: 10,
@@ -126,7 +126,7 @@ class CoatsStore {
       armorRating: 100,
       speed: 100,
       staminaRegen: 100,
-      warbondIcon: warbonds[1].icon,
+      warbondIcon: obtainingTypes[5].icon,
     },
     {
       id: 11,
@@ -138,7 +138,7 @@ class CoatsStore {
       armorRating: 100,
       speed: 100,
       staminaRegen: 100,
-      warbondIcon: warbonds[1].icon,
+      warbondIcon: obtainingTypes[5].icon,
     },
     {
       id: 12,
@@ -150,7 +150,7 @@ class CoatsStore {
       armorRating: 100,
       speed: 100,
       staminaRegen: 100,
-      warbondIcon: warbonds[2].icon,
+      warbondIcon: obtainingTypes[6].icon,
     },
     {
       id: 13,
@@ -162,7 +162,7 @@ class CoatsStore {
       armorRating: 100,
       speed: 100,
       staminaRegen: 100,
-      warbondIcon: warbonds[2].icon,
+      warbondIcon: obtainingTypes[6].icon,
     },
     {
       id: 14,
@@ -174,7 +174,7 @@ class CoatsStore {
       armorRating: 100,
       speed: 100,
       staminaRegen: 100,
-      warbondIcon: warbonds[2].icon,
+      warbondIcon: obtainingTypes[6].icon,
     },
     {
       id: 15,
@@ -186,7 +186,7 @@ class CoatsStore {
       armorRating: 100,
       speed: 100,
       staminaRegen: 100,
-      warbondIcon: warbonds[3].icon,
+      warbondIcon: obtainingTypes[7].icon,
     },
     {
       id: 16,
@@ -198,7 +198,7 @@ class CoatsStore {
       armorRating: 100,
       speed: 100,
       staminaRegen: 100,
-      warbondIcon: warbonds[3].icon,
+      warbondIcon: obtainingTypes[7].icon,
     },
     {
       id: 17,
@@ -210,7 +210,7 @@ class CoatsStore {
       armorRating: 100,
       speed: 100,
       staminaRegen: 100,
-      warbondIcon: warbonds[3].icon,
+      warbondIcon: obtainingTypes[7].icon,
     },
     {
       id: 18,
@@ -222,7 +222,7 @@ class CoatsStore {
       armorRating: 100,
       speed: 100,
       staminaRegen: 100,
-      warbondIcon: warbonds[4].icon,
+      warbondIcon: obtainingTypes[8].icon,
     },
     {
       id: 19,
@@ -234,7 +234,7 @@ class CoatsStore {
       armorRating: 100,
       speed: 100,
       staminaRegen: 100,
-      warbondIcon: warbonds[4].icon,
+      warbondIcon: obtainingTypes[8].icon,
     },
     {
       id: 20,
@@ -246,7 +246,7 @@ class CoatsStore {
       armorRating: 100,
       speed: 100,
       staminaRegen: 100,
-      warbondIcon: warbonds[4].icon,
+      warbondIcon: obtainingTypes[8].icon,
     },
     {
       id: 21,
@@ -258,7 +258,7 @@ class CoatsStore {
       armorRating: 100,
       speed: 100,
       staminaRegen: 100,
-      warbondIcon: warbonds[5].icon,
+      warbondIcon: obtainingTypes[9].icon,
     },
     {
       id: 22,
@@ -270,7 +270,7 @@ class CoatsStore {
       armorRating: 100,
       speed: 100,
       staminaRegen: 100,
-      warbondIcon: warbonds[5].icon,
+      warbondIcon: obtainingTypes[9].icon,
     },
     {
       id: 23,
@@ -282,10 +282,34 @@ class CoatsStore {
       armorRating: 100,
       speed: 100,
       staminaRegen: 100,
-      warbondIcon: warbonds[5].icon,
+      warbondIcon: obtainingTypes[9].icon,
     },
     {
       id: 24,
+      imagePath: "/static/Coats/CrimsonFangMarkImage.webp",
+      name: "Маска багряного клыка",
+      description:
+        "Метка самых послушных из всех послушных тех, кто готов впиться в вены тирании и ввести сладкое противоядие Свободы.",
+      price: 8,
+      armorRating: 100,
+      speed: 100,
+      staminaRegen: 100,
+      warbondIcon: obtainingTypes[10].icon,
+    },
+    {
+      id: 25,
+      imagePath: "/static/Coats/HangmanVeilImage.webp",
+      name: "Покров палача",
+      description:
+        "Укрывает плечи тех, кто наносит последний и самый значимый удар Правосудия.",
+      price: 20,
+      armorRating: 100,
+      speed: 100,
+      staminaRegen: 100,
+      warbondIcon: obtainingTypes[10].icon,
+    },
+    {
+      id: 26,
       imagePath: "/static/Coats/FallenHeroRevengeImage.webp",
       name: "Месть павшего героя",
       description:
