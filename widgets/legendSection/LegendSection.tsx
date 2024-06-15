@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-import { warbonds } from "@/data/warbonds";
+import { obtainingTypes } from "@/data/obtainingTypes";
 
 import "./LegendSection.css";
 
@@ -27,19 +27,19 @@ const LegendSection = () => {
       <div
         className={`legendSection_BottomBlock ${isLegendInfoOpened ? "mt-[10px] mlarge:mt-[-5px] msmall:mt-[-10px] opacity-100" : "mt-[-1000px] opacity-0"}`}
       >
-        {warbonds.map((warbond) => (
+        {obtainingTypes.map((obtainingType) => (
           <div
-            key={warbond.id}
+            key={obtainingType.id}
             className="legendSection_BottomBlock_WarbondBlock"
           >
             <img
-              src={`${warbond.icon}`}
+              src={`${obtainingType.icon}`}
               alt=""
               className="legendSection_BottomBlock_WarbondBlock_Icon"
             />
 
             <p className="legendSection_BottomBlock_WarbondBlock_Title">
-              {warbond.name}
+              {obtainingType.name}
             </p>
           </div>
         ))}
