@@ -34,6 +34,23 @@ class WeaponsStore {
     },
     {
       id: 2,
+      imagePath: "/static/Weaponry/primary/AR23AImage.png",
+      weaponType: weaponTypes.primary,
+      name: "AR-23A Карабин «Освободитель»",
+      description:
+        "Компактная версия «Освободителя», отличающаяся повышенной эффективностью на ближней дистанции. Скорострельность повышена за счет увеличения разброса.",
+      price: 20,
+      damage: 60,
+      magsCount: 7,
+      roundsPerMag: 45,
+      totalRounds: 315,
+      recoil: 26,
+      fireRate: 920,
+      totalDamage: 18900,
+      dps: 526,
+    },
+    {
+      id: 3,
       imagePath: "/static/Weaponry/primary/LibConcImage.webp",
       weaponType: weaponTypes.primary,
       name: "AR-23Е «Взрывной освободитель»",
@@ -50,7 +67,7 @@ class WeaponsStore {
       dps: 296,
     },
     {
-      id: 3,
+      id: 4,
       imagePath: "/static/Weaponry/primary/LibPenImage.webp",
       weaponType: weaponTypes.primary,
       name: "AR-23P «Пробойный освободитель»",
@@ -67,7 +84,7 @@ class WeaponsStore {
       dps: 372,
     },
     {
-      id: 4,
+      id: 5,
       imagePath: "/static/Weaponry/primary/Br14Image.webp",
       weaponType: weaponTypes.primary,
       name: "BR-14 «Эксперт»",
@@ -84,7 +101,7 @@ class WeaponsStore {
       dps: 577,
     },
     {
-      id: 5,
+      id: 6,
       imagePath: "/static/Weaponry/primary/Ar61Image.webp",
       weaponType: weaponTypes.primary,
       name: "AR-61 «Размягчитель»",
@@ -101,7 +118,7 @@ class WeaponsStore {
       dps: 475,
     },
     {
-      id: 6,
+      id: 7,
       imagePath: "/static/Weaponry/primary/R63CsDiligenceImage.webp",
       weaponType: weaponTypes.primary,
       name: "R-63 «Рвение»",
@@ -118,7 +135,7 @@ class WeaponsStore {
       dps: 581,
     },
     {
-      id: 7,
+      id: 8,
       imagePath: "/static/Weaponry/primary/R63CsImage.webp",
       weaponType: weaponTypes.primary,
       name: "R-63 «Рвение антиснайпер»",
@@ -135,7 +152,7 @@ class WeaponsStore {
       dps: 622,
     },
     {
-      id: 8,
+      id: 9,
       imagePath: "/static/Weaponry/primary/Smg37Image.webp",
       weaponType: weaponTypes.primary,
       name: "SMG-37 «Защитник»",
@@ -152,7 +169,7 @@ class WeaponsStore {
       dps: 519,
     },
     {
-      id: 9,
+      id: 10,
       imagePath: "/static/Weaponry/primary/Smg72Image.webp",
       weaponType: weaponTypes.primary,
       name: "SMG-72 «Трамбовщик»",
@@ -169,7 +186,7 @@ class WeaponsStore {
       dps: 426,
     },
     {
-      id: 10,
+      id: 11,
       imagePath: "/static/Weaponry/primary/Mp98Image.webp",
       weaponType: weaponTypes.primary,
       name: "MP-98 «Рыцарь»",
@@ -186,7 +203,7 @@ class WeaponsStore {
       dps: 871,
     },
     {
-      id: 11,
+      id: 12,
       imagePath: "/static/Weaponry/primary/Sg8Image.webp",
       weaponType: weaponTypes.primary,
       name: "SG-8 «Каратель»",
@@ -203,7 +220,7 @@ class WeaponsStore {
       dps: 447,
     },
     {
-      id: 12,
+      id: 13,
       imagePath: "/static/Weaponry/primary/Sg8SImage.webp",
       weaponType: weaponTypes.primary,
       name: "SG-8S «Крушила»",
@@ -220,7 +237,7 @@ class WeaponsStore {
       dps: 276,
     },
     {
-      id: 13,
+      id: 14,
       imagePath: "/static/Weaponry/primary/Sg225Image.webp",
       weaponType: weaponTypes.primary,
       name: "SG-225 «Крушитель»",
@@ -237,7 +254,7 @@ class WeaponsStore {
       dps: 1263,
     },
     {
-      id: 14,
+      id: 15,
       imagePath: "/static/Weaponry/primary/Sg225IeImage.webp",
       weaponType: weaponTypes.primary,
       name: "SG-225IE «Зажигательный крушитель»",
@@ -254,7 +271,7 @@ class WeaponsStore {
       dps: 1011,
     },
     {
-      id: 15,
+      id: 16,
       imagePath: "/static/Weaponry/primary/Sg225SpImage.webp",
       weaponType: weaponTypes.primary,
       name: "SG-225SP «Крушитель ураган»",
@@ -271,7 +288,7 @@ class WeaponsStore {
       dps: 851,
     },
     {
-      id: 16,
+      id: 17,
       imagePath: "/static/Weaponry/primary/Jar5Image.webp",
       weaponType: weaponTypes.primary,
       name: "JAR-5 «Угнетатель»",
@@ -288,7 +305,7 @@ class WeaponsStore {
       dps: 876,
     },
     {
-      id: 17,
+      id: 18,
       imagePath: "/static/Weaponry/primary/Cb9Image.webp",
       weaponType: weaponTypes.primary,
       name: "CB-9 «Взрывной арбалет»",
@@ -305,7 +322,7 @@ class WeaponsStore {
       dps: 299,
     },
     {
-      id: 18,
+      id: 19,
       imagePath: "/static/Weaponry/primary/R36Image.webp",
       weaponType: weaponTypes.primary,
       name: "R-36 «Извергатель»",
@@ -322,7 +339,7 @@ class WeaponsStore {
       dps: 157,
     },
     {
-      id: 19,
+      id: 20,
       imagePath: "/static/Weaponry/primary/Las5Image.webp",
       weaponType: weaponTypes.primary,
       name: "LAS-5 «Коса»",
@@ -339,7 +356,7 @@ class WeaponsStore {
       dps: 322,
     },
     {
-      id: 20,
+      id: 21,
       imagePath: "/static/Weaponry/primary/Las16Image.webp",
       weaponType: weaponTypes.primary,
       name: "LAS-16 «Серп»",
@@ -356,7 +373,7 @@ class WeaponsStore {
       dps: 433,
     },
     {
-      id: 21,
+      id: 22,
       imagePath: "/static/Weaponry/primary/Plas1Image.webp",
       weaponType: weaponTypes.primary,
       name: "PLAS-1 «Поджигатель»",
@@ -373,7 +390,7 @@ class WeaponsStore {
       dps: 671,
     },
     {
-      id: 22,
+      id: 23,
       imagePath: "/static/Weaponry/primary/Plas101Image.webp",
       weaponType: weaponTypes.primary,
       name: "PLAS-101 «Очиститель»",
@@ -390,7 +407,7 @@ class WeaponsStore {
       dps: 847,
     },
     {
-      id: 23,
+      id: 24,
       imagePath: "/static/Weaponry/primary/Sg8PImage.webp",
       weaponType: weaponTypes.primary,
       name: "SG-8P «Плазменный каратель»",
@@ -407,7 +424,7 @@ class WeaponsStore {
       dps: 289,
     },
     {
-      id: 24,
+      id: 25,
       imagePath: "/static/Weaponry/primary/Arc12Image.webp",
       weaponType: weaponTypes.primary,
       name: "ARC-12 «Налетчик»",
@@ -513,7 +530,7 @@ class WeaponsStore {
     },
     {
       id: 6,
-      imagePath: "/static/Weaponry/secondary/bbb.png",
+      imagePath: "/static/Weaponry/secondary/P113Image.webp",
       weaponType: weaponTypes.secondary,
       name: "P-113 «Вердикт»",
       description:
@@ -525,6 +542,23 @@ class WeaponsStore {
       totalRounds: 80,
       recoil: 40,
       fireRate: 450,
+      totalDamage: 10000,
+      dps: 695,
+    },
+    {
+      id: 7,
+      imagePath: "/static/Weaponry/secondary/Sg22Image.webp",
+      weaponType: weaponTypes.secondary,
+      name: "SG-22 «Партизан»",
+      description:
+        "Трехствольный обрез-переломка. Переключите режим стрельбы, чтобы выстрелить из всех трех стволов одновременно.",
+      price: 50,
+      damage: 405,
+      magsCount: 8,
+      roundsPerMag: 3,
+      totalRounds: 30,
+      recoil: 170,
+      fireRate: 650,
       totalDamage: 10000,
       dps: 695,
     },
