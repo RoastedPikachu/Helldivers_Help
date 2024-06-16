@@ -21,9 +21,55 @@ const TheAchievementsContent = () => {
       />
 
       <EntitySection
+        title="ЛЕГКИЕ"
         gridStyles={"mt-[50px] mlarge:mt-[30px] grid-cols-2 mlarge:grid-cols-1"}
       >
-        {achievementsStore.achievements.map((achievement) => (
+        {achievementsStore.achievements.easy.map((achievement) => (
+          <Achievement
+            key={achievement.id}
+            iconPath={achievement.iconPath}
+            title={achievement.title}
+            description={achievement.description}
+            accomplishmentWay={achievement.accomplishmentWay}
+          />
+        ))}
+      </EntitySection>
+
+      <EntitySection
+        title="ЭКСТРИМ"
+        gridStyles={"mt-[50px] mlarge:mt-[30px] grid-cols-2 mlarge:grid-cols-1"}
+      >
+        {achievementsStore.achievements.extreme.map((achievement) => (
+          <Achievement
+            key={achievement.id}
+            iconPath={achievement.iconPath}
+            title={achievement.title}
+            description={achievement.description}
+            accomplishmentWay={achievement.accomplishmentWay}
+          />
+        ))}
+      </EntitySection>
+
+      <EntitySection
+        title="ПРЯМО В АД"
+        gridStyles={"mt-[50px] mlarge:mt-[30px] grid-cols-2 mlarge:grid-cols-1"}
+      >
+        {achievementsStore.achievements.helldive.map((achievement) => (
+          <Achievement
+            key={achievement.id}
+            iconPath={achievement.iconPath}
+            title={achievement.title}
+            description={achievement.description}
+            accomplishmentWay={achievement.accomplishmentWay}
+          />
+        ))}
+      </EntitySection>
+
+      <EntitySection
+        title="ДОЛГИЙ ПУТЬ"
+        gridStyles={"mt-[50px] mlarge:mt-[30px] grid-cols-2 mlarge:grid-cols-1"}
+      >
+        {achievementsStore.achievements.longWay.map((achievement) => (
           <Achievement
             key={achievement.id}
             iconPath={achievement.iconPath}
