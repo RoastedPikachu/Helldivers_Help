@@ -135,6 +135,7 @@ const TheWeaponryContent = observer(() => {
                 weaponType={primaryWeapon.weaponType}
                 imagePath={primaryWeapon.imagePath}
                 name={primaryWeapon.name}
+                obtainingTypeIcon={primaryWeapon.obtainingTypeIcon}
               />
             ))}
           </EntitySection>
@@ -150,6 +151,7 @@ const TheWeaponryContent = observer(() => {
                 weaponType={primaryWeapon.weaponType}
                 imagePath={primaryWeapon.imagePath}
                 name={primaryWeapon.name}
+                obtainingTypeIcon={primaryWeapon.obtainingTypeIcon}
               />
             ))}
           </EntitySection>
@@ -165,6 +167,7 @@ const TheWeaponryContent = observer(() => {
                 weaponType={primaryWeapon.weaponType}
                 imagePath={primaryWeapon.imagePath}
                 name={primaryWeapon.name}
+                obtainingTypeIcon={primaryWeapon.obtainingTypeIcon}
               />
             ))}
           </EntitySection>
@@ -180,6 +183,7 @@ const TheWeaponryContent = observer(() => {
                 weaponType={primaryWeapon.weaponType}
                 imagePath={primaryWeapon.imagePath}
                 name={primaryWeapon.name}
+                obtainingTypeIcon={primaryWeapon.obtainingTypeIcon}
               />
             ))}
           </EntitySection>

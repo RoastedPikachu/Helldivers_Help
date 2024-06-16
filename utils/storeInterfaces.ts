@@ -24,6 +24,7 @@ interface Weapon {
   description: string;
   price: number | string;
   damage: number;
+  obtainingTypeIcon: string;
 }
 
 export interface WeaponWithAmmo extends Weapon {

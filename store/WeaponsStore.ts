@@ -10,6 +10,7 @@ import {
 } from "@/utils/storeInterfaces";
 import { WeaponType } from "@/utils/dataInterfaces";
 import { stratagemStore } from "@/store/StratagemStore";
+import { obtainingTypes } from "@/data/obtainingTypes";
 
 class WeaponsStore {
   currentWeaponInfo = {} as CurrentWeaponInfo;
@@ -31,6 +32,7 @@ class WeaponsStore {
       fireRate: 320,
       totalDamage: 18900,
       dps: 526,
+      obtainingTypeIcon: obtainingTypes[0].icon,
     },
     {
       id: 2,
@@ -48,6 +50,7 @@ class WeaponsStore {
       fireRate: 920,
       totalDamage: 18900,
       dps: 526,
+      obtainingTypeIcon: obtainingTypes[10].icon,
     },
     {
       id: 3,
@@ -65,6 +68,7 @@ class WeaponsStore {
       fireRate: 320,
       totalDamage: 19500,
       dps: 296,
+      obtainingTypeIcon: obtainingTypes[6].icon,
     },
     {
       id: 4,
@@ -82,6 +86,7 @@ class WeaponsStore {
       fireRate: 640,
       totalDamage: 13500,
       dps: 372,
+      obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
       id: 5,
@@ -99,6 +104,7 @@ class WeaponsStore {
       fireRate: 550,
       totalDamage: 16000,
       dps: 577,
+      obtainingTypeIcon: obtainingTypes[8].icon,
     },
     {
       id: 6,
@@ -116,6 +122,7 @@ class WeaponsStore {
       fireRate: 600,
       totalDamage: 21000,
       dps: 475,
+      obtainingTypeIcon: obtainingTypes[9].icon,
     },
     {
       id: 7,
@@ -133,6 +140,7 @@ class WeaponsStore {
       fireRate: 350,
       totalDamage: 20000,
       dps: 581,
+      obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
       id: 8,
@@ -150,6 +158,7 @@ class WeaponsStore {
       fireRate: 350,
       totalDamage: 12600,
       dps: 622,
+      obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
       id: 9,
@@ -167,6 +176,7 @@ class WeaponsStore {
       fireRate: 520,
       totalDamage: 22050,
       dps: 519,
+      obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
       id: 10,
@@ -184,6 +194,7 @@ class WeaponsStore {
       fireRate: 475,
       totalDamage: 20475,
       dps: 426,
+      obtainingTypeIcon: obtainingTypes[9].icon,
     },
     {
       id: 11,
@@ -201,6 +212,7 @@ class WeaponsStore {
       fireRate: 1380,
       totalDamage: 17500,
       dps: 871,
+      obtainingTypeIcon: obtainingTypes[3].icon,
     },
     {
       id: 12,
@@ -218,6 +230,7 @@ class WeaponsStore {
       fireRate: 80,
       totalDamage: 24300,
       dps: 447,
+      obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
       id: 13,
@@ -235,6 +248,7 @@ class WeaponsStore {
       fireRate: 80,
       totalDamage: 15000,
       dps: 276,
+      obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
       id: 14,
@@ -252,6 +266,7 @@ class WeaponsStore {
       fireRate: 300,
       totalDamage: 30030,
       dps: 1263,
+      obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
       id: 15,
@@ -269,6 +284,7 @@ class WeaponsStore {
       fireRate: 300,
       totalDamage: 36000,
       dps: 1011,
+      obtainingTypeIcon: obtainingTypes[6].icon,
     },
     {
       id: 16,
@@ -286,6 +302,7 @@ class WeaponsStore {
       fireRate: 330,
       totalDamage: 39936,
       dps: 851,
+      obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
       id: 17,
@@ -303,6 +320,7 @@ class WeaponsStore {
       fireRate: 250,
       totalDamage: 24750,
       dps: 876,
+      obtainingTypeIcon: obtainingTypes[6].icon,
     },
     {
       id: 18,
@@ -320,6 +338,7 @@ class WeaponsStore {
       fireRate: 50,
       totalDamage: 16800,
       dps: 299,
+      obtainingTypeIcon: obtainingTypes[8].icon,
     },
     {
       id: 19,
@@ -337,6 +356,7 @@ class WeaponsStore {
       fireRate: 25,
       totalDamage: 12600,
       dps: 157,
+      obtainingTypeIcon: obtainingTypes[8].icon,
     },
     {
       id: 20,
@@ -354,6 +374,7 @@ class WeaponsStore {
       fireRate: 1,
       totalDamage: 22400,
       dps: 322,
+      obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
       id: 21,
@@ -371,6 +392,7 @@ class WeaponsStore {
       fireRate: 750,
       totalDamage: 1485,
       dps: 433,
+      obtainingTypeIcon: obtainingTypes[7].icon,
     },
     {
       id: 22,
@@ -388,6 +410,7 @@ class WeaponsStore {
       fireRate: 250,
       totalDamage: 18000,
       dps: 671,
+      obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
       id: 23,
@@ -405,6 +428,7 @@ class WeaponsStore {
       fireRate: 250,
       totalDamage: 22500,
       dps: 847,
+      obtainingTypeIcon: obtainingTypes[9].icon,
     },
     {
       id: 24,
@@ -422,6 +446,7 @@ class WeaponsStore {
       fireRate: 80,
       totalDamage: 16000,
       dps: 289,
+      obtainingTypeIcon: obtainingTypes[7].icon,
     },
     {
       id: 25,
@@ -439,6 +464,7 @@ class WeaponsStore {
       fireRate: 45,
       totalDamage: Infinity,
       dps: 142,
+      obtainingTypeIcon: obtainingTypes[7].icon,
     },
   ] as PrimaryOrSecondaryWeapon[];
 
@@ -459,6 +485,7 @@ class WeaponsStore {
       fireRate: 900,
       totalDamage: 3600,
       dps: 643,
+      obtainingTypeIcon: obtainingTypes[0].icon,
     },
     {
       id: 2,
@@ -476,6 +503,7 @@ class WeaponsStore {
       fireRate: 1100,
       totalDamage: 7440,
       dps: 841,
+      obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
       id: 3,
@@ -493,6 +521,7 @@ class WeaponsStore {
       fireRate: 200,
       totalDamage: 3000,
       dps: 299,
+      obtainingTypeIcon: obtainingTypes[6].icon,
     },
     {
       id: 4,
@@ -510,6 +539,7 @@ class WeaponsStore {
       fireRate: 1,
       totalDamage: 1350,
       dps: 127,
+      obtainingTypeIcon: obtainingTypes[7].icon,
     },
     {
       id: 5,
@@ -527,6 +557,7 @@ class WeaponsStore {
       fireRate: 900,
       totalDamage: 4800,
       dps: 734,
+      obtainingTypeIcon: obtainingTypes[8].icon,
     },
     {
       id: 6,
@@ -544,6 +575,7 @@ class WeaponsStore {
       fireRate: 450,
       totalDamage: 10000,
       dps: 695,
+      obtainingTypeIcon: obtainingTypes[9].icon,
     },
     {
       id: 7,
@@ -561,6 +593,7 @@ class WeaponsStore {
       fireRate: 650,
       totalDamage: 10000,
       dps: 695,
+      obtainingTypeIcon: obtainingTypes[10].icon,
     },
   ] as PrimaryOrSecondaryWeapon[];
 
@@ -581,6 +614,7 @@ class WeaponsStore {
       directions:
         stratagemStore.stratagems.patrioticAdministrationCenter[0].directions,
       features: ["Оружие поддержки", "Адская капсула"],
+      obtainingTypeIcon: "",
     },
     {
       id: 2,
@@ -598,6 +632,7 @@ class WeaponsStore {
       directions:
         stratagemStore.stratagems.patrioticAdministrationCenter[1].directions,
       features: ["Оружие поддержки", "Адская капсула"],
+      obtainingTypeIcon: "",
     },
     {
       id: 3,
@@ -615,6 +650,7 @@ class WeaponsStore {
       directions:
         stratagemStore.stratagems.patrioticAdministrationCenter[2].directions,
       features: ["Оружие поддержки", "Адская капсула"],
+      obtainingTypeIcon: "",
     },
     {
       id: 4,
@@ -632,6 +668,7 @@ class WeaponsStore {
       directions:
         stratagemStore.stratagems.patrioticAdministrationCenter[3].directions,
       features: ["Оружие поддержки", "Адская капсула"],
+      obtainingTypeIcon: "",
     },
     {
       id: 5,
@@ -649,6 +686,7 @@ class WeaponsStore {
       directions:
         stratagemStore.stratagems.patrioticAdministrationCenter[4].directions,
       features: ["Оружие поддержки", "Адская капсула"],
+      obtainingTypeIcon: "",
     },
     {
       id: 6,
@@ -666,6 +704,7 @@ class WeaponsStore {
       directions:
         stratagemStore.stratagems.patrioticAdministrationCenter[5].directions,
       features: ["Оружие поддержки", "Адская капсула"],
+      obtainingTypeIcon: "",
     },
     {
       id: 7,
@@ -683,6 +722,7 @@ class WeaponsStore {
       directions:
         stratagemStore.stratagems.patrioticAdministrationCenter[6].directions,
       features: ["Оружие поддержки", "Адская капсула"],
+      obtainingTypeIcon: "",
     },
     {
       id: 8,
@@ -700,6 +740,7 @@ class WeaponsStore {
       directions:
         stratagemStore.stratagems.patrioticAdministrationCenter[7].directions,
       features: ["Оружие поддержки", "Адская капсула"],
+      obtainingTypeIcon: "",
     },
     {
       id: 9,
@@ -717,6 +758,7 @@ class WeaponsStore {
       directions:
         stratagemStore.stratagems.patrioticAdministrationCenter[8].directions,
       features: ["Оружие поддержки", "Адская капсула"],
+      obtainingTypeIcon: "",
     },
     {
       id: 10,
@@ -734,6 +776,7 @@ class WeaponsStore {
       directions:
         stratagemStore.stratagems.patrioticAdministrationCenter[9].directions,
       features: ["Оружие поддержки", "Адская капсула"],
+      obtainingTypeIcon: "",
     },
     {
       id: 11,
@@ -751,6 +794,7 @@ class WeaponsStore {
       directions:
         stratagemStore.stratagems.patrioticAdministrationCenter[10].directions,
       features: ["Оружие поддержки", "Адская капсула"],
+      obtainingTypeIcon: "",
     },
     {
       id: 12,
@@ -767,6 +811,7 @@ class WeaponsStore {
       callTime: 3,
       directions: stratagemStore.stratagems.engineerBay[2].directions,
       features: ["Оружие поддержки", "Адская капсула", "Взрывчатка"],
+      obtainingTypeIcon: "",
     },
     {
       id: 13,
@@ -783,6 +828,7 @@ class WeaponsStore {
       callTime: 7,
       directions: stratagemStore.stratagems.engineerBay[3].directions,
       features: ["Оружие поддержки", "Адская капсула"],
+      obtainingTypeIcon: "",
     },
     {
       id: 14,
@@ -799,6 +845,7 @@ class WeaponsStore {
       callTime: 3,
       directions: stratagemStore.stratagems.engineerBay[7].directions,
       features: ["Оружие поддержки", "Адская капсула"],
+      obtainingTypeIcon: "",
     },
     {
       id: 15,
@@ -816,6 +863,7 @@ class WeaponsStore {
       directions:
         stratagemStore.stratagems.patrioticAdministrationCenter[9].directions,
       features: ["Оружие поддержки", "Адская капсула"],
+      obtainingTypeIcon: "",
     },
   ] as SupportWeapon[];
 
@@ -832,6 +880,7 @@ class WeaponsStore {
       fuseTime: 3.5,
       penetration: 4,
       radius: 7,
+      obtainingTypeIcon: obtainingTypes[0].icon,
     },
     {
       id: 2,
@@ -845,6 +894,7 @@ class WeaponsStore {
       fuseTime: 2.4,
       penetration: 3,
       radius: 8,
+      obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
       id: 3,
@@ -858,6 +908,7 @@ class WeaponsStore {
       fuseTime: 0,
       penetration: 4,
       radius: 7,
+      obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
       id: 4,
@@ -871,6 +922,7 @@ class WeaponsStore {
       fuseTime: 2.9,
       penetration: 1,
       radius: 7,
+      obtainingTypeIcon: obtainingTypes[6].icon,
     },
     {
       id: 5,
@@ -884,6 +936,7 @@ class WeaponsStore {
       fuseTime: 2.4,
       penetration: 0,
       radius: 5,
+      obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
       id: 6,
@@ -896,6 +949,7 @@ class WeaponsStore {
       fuseTime: 1.8,
       penetration: 6,
       radius: 10,
+      obtainingTypeIcon: obtainingTypes[7].icon,
     },
     {
       id: 7,
@@ -909,6 +963,7 @@ class WeaponsStore {
       fuseTime: 2.9,
       penetration: 7,
       radius: 2,
+      obtainingTypeIcon: obtainingTypes[8].icon,
     },
     {
       id: 8,
@@ -922,6 +977,7 @@ class WeaponsStore {
       fuseTime: 0.0,
       penetration: 3,
       radius: 7,
+      obtainingTypeIcon: obtainingTypes[9].icon,
     },
   ] as Grenade[];
 
