@@ -7,6 +7,8 @@ import Head from "next/head";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  generator: "Next.js",
+  manifest: "/manifest.json",
   metadataBase: new URL("https://helldivers.help"),
   openGraph: {
     url: "https://helldivers.help",

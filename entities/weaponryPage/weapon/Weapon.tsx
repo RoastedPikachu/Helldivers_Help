@@ -6,8 +6,9 @@ import { weaponsStore } from "@/store/WeaponsStore";
 
 import { WeaponType } from "@/utils/dataInterfaces";
 
-import "./Weapon.css";
 import ObtainingTypeTag from "@/entities/obtainingTypeTag/ObtainingTypeTag";
+
+import "./Weapon.css";
 
 interface WeaponProps {
   id: number;
