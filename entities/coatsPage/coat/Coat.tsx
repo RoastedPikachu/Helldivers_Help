@@ -3,7 +3,7 @@ import React from "react";
 import { slidersStore } from "@/store/SlidersStore";
 import { coatsStore } from "@/store/CoatsStore";
 
-import WarbondTag from "@/entities/warbondTag/WarbondTag";
+import ObtainingTypeTag from "@/entities/obtainingTypeTag/ObtainingTypeTag";
 
 import "./Coat.css";
 
@@ -22,7 +22,7 @@ const Coat: React.FC<CoatProps> = ({ id, imagePath, name, warbondIcon }) => {
   };
   return (
     <div onClick={() => handleCurrentCoatInfoChange()} className="coatWidget">
-      {warbondIcon && <WarbondTag image={warbondIcon} />}
+      {warbondIcon && <ObtainingTypeTag image={warbondIcon} />}
 
       <img src={imagePath} alt="" className="w-full h-full" />
 

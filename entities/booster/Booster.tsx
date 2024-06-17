@@ -2,12 +2,15 @@
 import React from "react";
 
 import "./Booster.css";
+import ObtainingTypeTag from "@/entities/obtainingTypeTag/ObtainingTypeTag";
+import { obtainingTypes } from "@/data/obtainingTypes";
 
 interface BoosterProps {
   iconPath: string;
   title: string;
   effect: string;
   price: number;
+  obtainingTypeIcon: string;
 }
 
 const Booster: React.FC<BoosterProps> = ({
@@ -15,9 +18,14 @@ const Booster: React.FC<BoosterProps> = ({
   title,
   effect,
   price,
+  obtainingTypeIcon,
 }) => {
   return (
     <div className="boosterWidget">
+      <div className="boosterWidget_ObtainingTypeTag">
+        <ObtainingTypeTag image={obtainingTypeIcon} />
+      </div>
+
       <div className="boosterWidget_Top">
         <img src={iconPath} alt="" className="boosterWidget_Top_Image" />
 

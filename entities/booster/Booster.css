@@ -2,6 +2,10 @@
     @apply relative px-[30px] mlarge:px-[15px] msmall:px-[10px] py-[30px] mlarge:py-[15px] msmall:py-[10px] w-full h-auto bg-[#00293a] border-2 border-[--theme-color] rounded-[10px];
 }
 
+.boosterWidget_ObtainingTypeTag {
+    @apply absolute top-0 mlarge:top-auto mlarge:bottom-[65px] right-[65px];
+}
+
 .boosterWidget_Top {
     @apply flex items-center;
 }

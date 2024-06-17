@@ -27,77 +27,15 @@ const TheBoostersContent = () => {
         }
       />
 
-      <EntitySection
-        title={"БОЕВОЙ ПРОПУСК «АДСКИЕ ДЕСАНТНИКИ, В БОЙ!»"}
-        gridStyles={"grid-cols-2 mlarge:grid-cols-1"}
-      >
-        {boostersStore.boosters.helldiversMobilize.map((booster) => (
+      <EntitySection title={""} gridStyles={"grid-cols-2 mlarge:grid-cols-1"}>
+        {boostersStore.boosters.map((booster) => (
           <Booster
             key={booster.id}
             iconPath={booster.iconPath}
             title={booster.title}
             effect={booster.effect}
             price={booster.price}
-          />
-        ))}
-      </EntitySection>
-
-      <EntitySection
-        title={"БОЕВОЙ ПРОПУСК «ЗАКАЛЕННЫЕ ВЕТЕРАНЫ»"}
-        gridStyles={"grid-cols-2 mlarge:grid-cols-1"}
-      >
-        {boostersStore.boosters.steeledVeterans.map((booster) => (
-          <Booster
-            key={booster.id}
-            iconPath={booster.iconPath}
-            title={booster.title}
-            effect={booster.effect}
-            price={booster.price}
-          />
-        ))}
-      </EntitySection>
-
-      <EntitySection
-        title={"БОЕВОЙ ПРОПУСК «НА ОСТРИЕ»"}
-        gridStyles={"grid-cols-2 mlarge:grid-cols-1"}
-      >
-        {boostersStore.boosters.cuttingEdge.map((booster) => (
-          <Booster
-            key={booster.id}
-            iconPath={booster.iconPath}
-            title={booster.title}
-            effect={booster.effect}
-            price={booster.price}
-          />
-        ))}
-      </EntitySection>
-
-      <EntitySection
-        title={"БОЕВОЙ ПРОПУСК «ДЕМОКРАТИЧЕСКИЙ ПОДРЫВ»"}
-        gridStyles={"grid-cols-2 mlarge:grid-cols-1"}
-      >
-        {boostersStore.boosters.democraticDetonation.map((booster) => (
-          <Booster
-            key={booster.id}
-            iconPath={booster.iconPath}
-            title={booster.title}
-            effect={booster.effect}
-            price={booster.price}
-          />
-        ))}
-      </EntitySection>
-
-      <EntitySection
-        title={"БОЕВОЙ ПРОПУСК «ПОЛЯРНЫЕ ПАТРИОТЫ»"}
-        gridStyles={"grid-cols-2 mlarge:grid-cols-1"}
-      >
-        {boostersStore.boosters.polarPatriots.map((booster) => (
-          <Booster
-            key={booster.id}
-            iconPath={booster.iconPath}
-            title={booster.title}
-            effect={booster.effect}
-            price={booster.price}
+            obtainingTypeIcon={booster.obtainingTypeIcon}
           />
         ))}
       </EntitySection>

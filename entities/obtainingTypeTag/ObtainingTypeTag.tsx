@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
 
-import "./ObtainingMethodTag.css";
+import "./ObtainingTypeTag.css";
 
 interface WarbondTagProps {
   image: string;
 }
 
-const ObtainingMethodTag: React.FC<WarbondTagProps> = ({ image }) => {
+const ObtainingTypeTag: React.FC<WarbondTagProps> = ({ image }) => {
   return (
     <>
       {image.length && (
@@ -19,4 +19,4 @@ const ObtainingMethodTag: React.FC<WarbondTagProps> = ({ image }) => {
   );
 };
 
-export default ObtainingMethodTag;
+export default ObtainingTypeTag;

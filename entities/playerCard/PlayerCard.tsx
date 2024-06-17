@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-import WarbondTag from "@/entities/warbondTag/WarbondTag";
+import ObtainingTypeTag from "@/entities/obtainingTypeTag/ObtainingTypeTag";
 
 import "./PlayerCard.css";
 
@@ -22,7 +22,7 @@ const PlayerCard: React.FC<PlayerCardProps> = ({
     <div className="playerCard">
       <img src={`${image}`} alt="" className="playerCard_BackgroundImage" />
 
-      <WarbondTag image={warbondImage} />
+      <ObtainingTypeTag image={warbondImage} />
 
       <div className="playerCard_PriceBlock">
         <p className="playerCard_PriceBlock_Text">{price}</p>
