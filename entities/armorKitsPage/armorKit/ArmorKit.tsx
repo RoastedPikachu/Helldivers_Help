@@ -4,7 +4,7 @@ import React from "react";
 import { armorStore } from "@/store/ArmorKitsStore";
 import { slidersStore } from "@/store/SlidersStore";
 
-import WarbondTag from "@/entities/warbondTag/WarbondTag";
+import ObtainingTypeTag from "@/entities/obtainingTypeTag/ObtainingTypeTag";
 
 import "./ArmorKit.css";
 
@@ -33,7 +33,7 @@ const ArmorKit: React.FC<ArmorKitProps> = ({
       onClick={() => handleCurrentArmorInfoChange()}
       className="armorKitWidget"
     >
-      <WarbondTag image={warbondIcon} />
+      <ObtainingTypeTag image={warbondIcon} />
 
       <img src={imagePath} alt="" className="w-full h-full" />
 

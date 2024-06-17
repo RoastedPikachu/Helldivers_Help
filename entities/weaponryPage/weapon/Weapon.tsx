@@ -6,8 +6,9 @@ import { weaponsStore } from "@/store/WeaponsStore";
 
 import { WeaponType } from "@/utils/dataInterfaces";
 
+import ObtainingTypeTag from "@/entities/obtainingTypeTag/ObtainingTypeTag";
+
 import "./Weapon.css";
-import ObtainingMethodTag from "@/entities/obtainingMethodTag/ObtainingMethodTag";
 
 interface WeaponProps {
   id: number;
@@ -58,7 +59,7 @@ const Weapon: React.FC<WeaponProps> = ({
   };
   return (
     <div onClick={handleCurrentWeaponInfoChange} className="weaponWidget">
-      <ObtainingMethodTag image={obtainingTypeIcon} />
+      <ObtainingTypeTag image={obtainingTypeIcon} />
 
       <img
         src={imagePath}

@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 
-import WarbondTag from "@/entities/warbondTag/WarbondTag";
+import ObtainingTypeTag from "@/entities/obtainingTypeTag/ObtainingTypeTag";
 
 import "./Emote.css";
 
@@ -47,7 +47,7 @@ const Emote: React.FC<EmoteProps> = ({
         className="emote_Video"
       ></video>
 
-      <WarbondTag image={warbondIcon} />
+      <ObtainingTypeTag image={warbondIcon} />
 
       <div className="emote_PriceBlock">
         <p className="emote_PriceBlock_Text">{price}</p>
