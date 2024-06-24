@@ -10,7 +10,9 @@ interface RankProps {
 
 const Rank: React.FC<RankProps> = ({ iconPath, title, fromLevel, xpCount }) => {
   return (
-    <div className="relative flex items-center px-[30px] mlarge:px-[15px] pt-[20px] mlarge:pt-[10px] pb-[30px] mlarge:pb-[25px] w-full h-auto bg-[#00293a] border-2 border-[--theme-color] rounded-[10px]">
+    <div
+      className={`relative flex items-center px-[30px] mlarge:px-[15px] w-full h-auto bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] ${typeof fromLevel === "string" ? "pt-[25px] mlarge:pt-[15px] pb-[25px] mlarge:pb-[20px]" : "pt-[20px] mlarge:pt-[10px] pb-[30px] mlarge:pb-[25px]"}`}
+    >
       <img
         src={`${iconPath}`}
         alt=""

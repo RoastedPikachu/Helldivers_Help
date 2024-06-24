@@ -32,7 +32,7 @@ const TheProgressionContent = () => {
 
       <LevelsSection />
 
-      <EntitySection title={"РАНГИ"} gridStyles={"grid-cols-1"}>
+      <EntitySection title={"ТИТУЛЫ"} gridStyles={"grid-cols-1"}>
         {ranks.map((rank) => (
           <Rank
             key={rank.id}
