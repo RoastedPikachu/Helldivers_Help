@@ -6,7 +6,7 @@ export const generalMissions = [
     imagePath: "/static/Missions/BringDemocracyIcon.svg",
     title: "Несите демократию",
     description: "Поднимите флаг Супер-Земли как негасимый маяк свободы.",
-    level: "1-2",
+    level: "1-9",
   },
   {
     id: 2,
@@ -264,6 +264,14 @@ export const terminidMissions = [
     title: "Заложите темную жидкость",
     description:
       "Заложите темную жидкость в кору под суперколонией, чтобы раз и навсегда уничтожить ее.",
+    level: "1-9",
+  },
+  {
+    id: 9,
+    imagePath: "/static/Missions/NukeNurseryIcon.svg",
+    title: "Взорвите инкубатор ядерной бомбой",
+    description:
+      "Заложите ядерный заряд во всех инкубационных залах и ликвидируйте терминидский молодняк.",
     level: "1-9",
   },
 ] as Mission[];

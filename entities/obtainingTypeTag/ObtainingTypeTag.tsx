@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-import "./ObtainingMethodTag.css";
+import "./ObtainingTypeTag.css";
 
 interface WarbondTagProps {
   image: string;

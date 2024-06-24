@@ -150,6 +150,13 @@ export const ranks = [
   },
   {
     id: 22,
+    iconPath: "/static/Ranks/ViperCommandosIcon.svg",
+    title: "Змей-коммандос",
+    fromLevel: "Боевой пропуск «Змеи-коммандос»",
+    xpCount: 0,
+  },
+  {
+    id: 23,
     iconPath: "/static/Ranks/SuperCitizenIcon.svg",
     title: "Супер гражданин",
     fromLevel: "Super Citizen издание",
