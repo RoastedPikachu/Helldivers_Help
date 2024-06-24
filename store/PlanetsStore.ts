@@ -112,11 +112,8 @@ class PlanetsStore {
       id: 3,
       name: "Форнскогур II",
       sector: galaxySectors.barnard,
-      biome: biomes.jungle,
-      weatherConditions: [
-        weatherConditions.volcanicActivity,
-        weatherConditions.rainstorms,
-      ],
+      biome: biomes.newJungle,
+      weatherConditions: [weatherConditions.rainstorms],
       image: "/static/GalaxyMap/planets/Форнскогур_II.svg",
     },
     11: {
@@ -433,8 +430,8 @@ class PlanetsStore {
       id: 1,
       name: "Барабос",
       sector: galaxySectors.marspira,
-      biome: biomes.iceMoss,
-      weatherConditions: [weatherConditions.extremeCold],
+      biome: biomes.newJungle,
+      weatherConditions: [weatherConditions.rainstorms],
       image: "/static/GalaxyMap/planets/Барабос.svg",
     },
     45: {
@@ -471,8 +468,8 @@ class PlanetsStore {
       id: 3,
       name: "Кракабос",
       sector: galaxySectors.iptus,
-      biome: biomes.iceMoss,
-      weatherConditions: [weatherConditions.extremeCold],
+      biome: biomes.newJungle,
+      weatherConditions: [weatherConditions.rainstorms],
       image: "/static/GalaxyMap/planets/Кракабос.svg",
     },
     49: {
@@ -506,11 +503,8 @@ class PlanetsStore {
       id: 4,
       name: "Айвис",
       sector: galaxySectors.celeste,
-      biome: biomes.winter,
-      weatherConditions: [
-        weatherConditions.extremeCold,
-        weatherConditions.blizzards,
-      ],
+      biome: biomes.newJungle,
+      weatherConditions: [weatherConditions.rainstorms],
       image: "/static/GalaxyMap/planets/Айвис.svg",
     },
     53: {
@@ -571,11 +565,8 @@ class PlanetsStore {
       id: 2,
       name: "Парш",
       sector: galaxySectors.rictus,
-      biome: biomes.winter,
-      weatherConditions: [
-        weatherConditions.extremeCold,
-        weatherConditions.blizzards,
-      ],
+      biome: biomes.newJungle,
+      weatherConditions: [weatherConditions.rainstorms],
       image: "/static/GalaxyMap/planets/Парш.svg",
     },
     60: {
@@ -995,11 +986,8 @@ class PlanetsStore {
       id: 1,
       name: "ВИТЗ",
       sector: galaxySectors.tarragon,
-      biome: biomes.jungle,
-      weatherConditions: [
-        weatherConditions.volcanicActivity,
-        weatherConditions.rainstorms,
-      ],
+      biome: biomes.newJungle,
+      weatherConditions: [weatherConditions.rainstorms],
       image: "/static/GalaxyMap/planets/ВИТЗ.svg",
     },
     103: {
@@ -1212,11 +1200,8 @@ class PlanetsStore {
       id: 4,
       name: "Буровой камень",
       sector: galaxySectors.falstaff,
-      biome: biomes.desolate,
-      weatherConditions: [
-        weatherConditions.intenseHeat,
-        weatherConditions.fireTornadoes,
-      ],
+      biome: biomes.newJungle,
+      weatherConditions: [weatherConditions.rainstorms],
       image: "/static/GalaxyMap/planets/Буровой_камень.svg",
     },
     126: {
@@ -1390,11 +1375,8 @@ class PlanetsStore {
       id: 4,
       name: "Асперот-прайм",
       sector: galaxySectors.akira,
-      biome: biomes.desolate,
-      weatherConditions: [
-        weatherConditions.intenseHeat,
-        weatherConditions.fireTornadoes,
-      ],
+      biome: biomes.newJungle,
+      weatherConditions: [weatherConditions.rainstorms],
       image: "/static/GalaxyMap/planets/Асперот-прайм.svg",
     },
     145: {
@@ -1461,11 +1443,8 @@ class PlanetsStore {
       id: 3,
       name: "Каф",
       sector: galaxySectors.theseus,
-      biome: biomes.jungle,
-      weatherConditions: [
-        weatherConditions.volcanicActivity,
-        weatherConditions.rainstorms,
-      ],
+      biome: biomes.newJungle,
+      weatherConditions: [weatherConditions.rainstorms],
       image: "/static/GalaxyMap/planets/Каф.svg",
     },
     152: {
@@ -1578,11 +1557,8 @@ class PlanetsStore {
       id: 3,
       name: "Класа",
       sector: galaxySectors.tanis,
-      biome: biomes.jungle,
-      weatherConditions: [
-        weatherConditions.volcanicActivity,
-        weatherConditions.rainstorms,
-      ],
+      biome: biomes.newJungle,
+      weatherConditions: [weatherConditions.rainstorms],
       image: "/static/GalaxyMap/planets/Класа.svg",
     },
     164: {
@@ -1663,8 +1639,8 @@ class PlanetsStore {
       id: 2,
       name: "Гакрукс",
       sector: galaxySectors.jinXi,
-      biome: biomes.tundra,
-      weatherConditions: [],
+      biome: biomes.newJungle,
+      weatherConditions: [weatherConditions.rainstorms],
       image: "/static/GalaxyMap/planets/Гакрукс.svg",
     },
     173: {
@@ -1728,11 +1704,8 @@ class PlanetsStore {
       id: 3,
       name: "Хальдус",
       sector: galaxySectors.ferris,
-      biome: biomes.moon,
-      weatherConditions: [
-        weatherConditions.extremeCold,
-        weatherConditions.meteorStorms,
-      ],
+      biome: biomes.newJungle,
+      weatherConditions: [weatherConditions.rainstorms],
       image: "/static/GalaxyMap/planets/Хальдус.svg",
     },
     180: {
@@ -2042,8 +2015,8 @@ class PlanetsStore {
       id: 3,
       name: "Нанбатея II",
       sector: galaxySectors.lestrade,
-      biome: biomes.rainForest,
-      weatherConditions: [weatherConditions.ionStorms],
+      biome: biomes.newJungle,
+      weatherConditions: [weatherConditions.rainstorms],
       image: "/static/GalaxyMap/planets/Нанбатея_II.svg",
     },
     211: {
@@ -2127,11 +2100,8 @@ class PlanetsStore {
       id: 2,
       name: "Феркад II",
       sector: galaxySectors.farsight,
-      biome: biomes.highlands,
-      weatherConditions: [
-        weatherConditions.thickFog,
-        weatherConditions.rainstorms,
-      ],
+      biome: biomes.newJungle,
+      weatherConditions: [weatherConditions.rainstorms],
       image: "/static/GalaxyMap/planets/Феркад_II.svg",
     },
     220: {
@@ -2220,8 +2190,8 @@ class PlanetsStore {
       id: 3,
       name: "Сиэсс",
       sector: galaxySectors.omega,
-      biome: biomes.rainForest,
-      weatherConditions: [weatherConditions.ionStorms],
+      biome: biomes.newJungle,
+      weatherConditions: [weatherConditions.rainstorms],
       image: "/static/GalaxyMap/planets/Сиэсс.svg",
     },
     229: {
@@ -2436,8 +2406,8 @@ class PlanetsStore {
       id: 5,
       name: "Экс-45",
       sector: galaxySectors.ymir,
-      biome: biomes.swamp,
-      weatherConditions: [weatherConditions.thickFog],
+      biome: biomes.newJungle,
+      weatherConditions: [weatherConditions.rainstorms],
       image: "/static/GalaxyMap/planets/Экс-45.svg",
     },
     251: {

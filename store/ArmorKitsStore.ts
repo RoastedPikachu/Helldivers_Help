@@ -130,7 +130,7 @@ class ArmorKitsStore {
         armorRating: 100,
         speed: 550,
         staminaRegen: 125,
-        bonus: armorBonuses.fortification,
+        bonus: armorBonuses.extraArmor,
         warbondIcon: obtainingTypes[1].icon,
       },
       {

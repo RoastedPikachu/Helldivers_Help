@@ -36,7 +36,7 @@ class WeaponsStore {
     },
     {
       id: 2,
-      imagePath: "/static/Weaponry/primary/AR23AImage.png",
+      imagePath: "/static/Weaponry/primary/AR23AImage.webp",
       weaponType: weaponTypes.primary,
       name: "AR-23A Карабин «Освободитель»",
       description:

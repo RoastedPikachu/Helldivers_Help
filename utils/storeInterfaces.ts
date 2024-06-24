@@ -14,6 +14,7 @@ export interface Booster {
   title: string;
   effect: string;
   price: number;
+  obtainingTypeIcon: string;
 }
 
 interface Weapon {
