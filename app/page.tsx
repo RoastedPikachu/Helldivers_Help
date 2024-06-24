@@ -11,7 +11,7 @@ import TheScrollToUpButton from "@/shared/theScrollToUpButton/TheScrollToUpButto
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 
-import ManualSection from "@/entities/ManualSection";
+import ManualPage from "@/entities/manualPage/ManualPage";
 
 export const metadata: Metadata = {
   title: "Helldivers.help — Helldivers 2 помощник: Вики & другое",
@@ -51,7 +51,7 @@ const Page = () => {
 
         <section className="relative mlarge:hidden grid grid-cols-4 gap-y-[30px] gap-x-[30px] mt-[50px] w-full h-auto z-[20]">
           {pages.map((page) => (
-            <ManualSection
+            <ManualPage
               key={page.id}
               id={page.id}
               link={page.link}

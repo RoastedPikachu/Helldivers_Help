@@ -69,7 +69,7 @@ const TheWarContent = observer(() => {
                 className="px-[5px] w-[50px] h-[50px]"
               >
                 <img
-                  src="/static/GeneralIcons/GalaxyMapIcon.svg"
+                  src="/GeneralIcons/GalaxyMapIcon.svg"
                   alt=""
                   className="w-full h-full scale-[1.2]"
                 />

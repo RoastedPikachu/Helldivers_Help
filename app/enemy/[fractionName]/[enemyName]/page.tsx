@@ -7,7 +7,7 @@ import { enemiesStore } from "@/store/EnemiesStore";
 import { toSlug } from "@/utils/generalFunctions";
 
 import ThePageContent from "@/widgets/pageContents/ThePageContent";
-import TheEnemyContent from "@/widgets/pageContents/TheEnemyContent";
+import TheEnemyContent from "@/widgets/pageContents/enemyContent/TheEnemyContent";
 
 import "./EnemyAdditionalInfo.css";
 

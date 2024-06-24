@@ -199,7 +199,7 @@ const TheStratagemsTrainingContent = observer(() => {
           </div>
 
           <img
-            src="/static/GeneralIcons/SuperEarthBackgroundIcon.svg"
+            src="/GeneralIcons/SuperEarthBackgroundIcon.svg"
             alt=""
             className="absolute top-[-10px] deskWide:top-[-50px] mlarge:top-0 mmedium:top-[10px] msmall:top-[20px] left-0 w-[700px] mlarge:w-full h-[450px] mlarge:h-[300px] mmedium:h-[260px] msmall:h-[230px] mt-[calc(50vh-150px)] mlarge:mt-[calc(50vh-220px)] mx-[calc((100%-700px)/2)] mlarge:mx-0"
           />
@@ -406,7 +406,7 @@ const TheStratagemsTrainingContent = observer(() => {
                               className="flex justify-center items-center w-[70px] mmedium:w-[65px] msmall:w-[60px] h-[70px] mmedium:h-[65px] msmall:h-[60px] bg-[#00000066] rounded-[10px] outline-none"
                             >
                               <img
-                                src="/static/GeneralIcons/ArrowIcon.svg"
+                                src="/GeneralIcons/ArrowIcon.svg"
                                 alt=""
                                 className="w-[40px] h-[40px]"
                               />
@@ -418,7 +418,7 @@ const TheStratagemsTrainingContent = observer(() => {
                                 className="flex justify-center items-center w-[70px] mmedium:w-[65px] msmall:w-[60px] h-[70px] mmedium:h-[65px] msmall:h-[60px] bg-[#00000066] rounded-[10px] outline-none"
                               >
                                 <img
-                                  src="/static/GeneralIcons/ArrowIcon.svg"
+                                  src="/GeneralIcons/ArrowIcon.svg"
                                   alt=""
                                   className="w-[40px] h-[40px] -rotate-90"
                                 />
@@ -429,7 +429,7 @@ const TheStratagemsTrainingContent = observer(() => {
                                 className="flex justify-center items-center w-[70px] mmedium:w-[65px] msmall:w-[60px] h-[70px] mmedium:h-[65px] msmall:h-[60px] bg-[#00000066] rounded-[10px] outline-none"
                               >
                                 <img
-                                  src="/static/GeneralIcons/ArrowIcon.svg"
+                                  src="/GeneralIcons/ArrowIcon.svg"
                                   alt=""
                                   className="w-[40px] h-[40px] rotate-90"
                                 />
@@ -441,7 +441,7 @@ const TheStratagemsTrainingContent = observer(() => {
                               className="flex justify-center items-center mt-[10px] w-[70px] mmedium:w-[65px] msmall:w-[60px] h-[70px] mmedium:h-[65px] msmall:h-[60px] bg-[#00000066] rounded-[10px] outline-none"
                             >
                               <img
-                                src="/static/GeneralIcons/ArrowIcon.svg"
+                                src="/GeneralIcons/ArrowIcon.svg"
                                 alt=""
                                 className="w-[40px] h-[40px] rotate-180"
                               />

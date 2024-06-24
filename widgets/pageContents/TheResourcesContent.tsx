@@ -10,8 +10,8 @@ import ResourceTable from "@/widgets/resourceTable/ResourceTable";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 
-import Resource from "@/entities/Resource";
-import CurrentResourceInfo from "@/entities/CurrentResourceInfo";
+import Resource from "@/entities/resource/Resource";
+import CurrentResourceInfo from "@/entities/currentResourceInfo/CurrentResourceInfo";
 
 const TheResourcesContent = () => {
   const [currentResource, setCurrentResource] = useState({} as IResource);

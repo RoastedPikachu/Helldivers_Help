@@ -7,7 +7,7 @@ import EntitySection from "@/widgets/EntitySection";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 
-import CodeRule from "@/entities/CodeRule";
+import CodeRule from "@/entities/codeRule/CodeRule";
 
 const TheCodeContent = () => {
   return (

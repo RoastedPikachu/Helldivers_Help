@@ -8,7 +8,7 @@ import EntitySection from "@/widgets/EntitySection";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 
-import Rank from "@/entities/Rank";
+import Rank from "@/entities/rank/Rank";
 
 const TheProgressionContent = () => {
   return (
