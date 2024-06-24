@@ -10,7 +10,7 @@ import { Stratagem } from "@/utils/generalInterfaces";
 
 import Typewriter from "@/shared/Typewriter";
 
-import ShipModuleStratagem from "@/entities/ShipModuleStratagem";
+import ShipModuleStratagem from "@/entities/shipModuleStratagem/ShipModuleStratagem";
 
 import "swiper/css/pagination";
 import "./ShipModule.css";

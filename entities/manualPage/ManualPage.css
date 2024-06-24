@@ -1,0 +1,11 @@
+.manualPageBlock {
+    @apply px-[30px] pt-[20px] pb-[30px] w-full h-auto bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] cursor-pointer;
+}
+
+.manualPageBlock_Number {
+    @apply text-[--theme-color] text-[2.5rem] font-['Exo2'] font-bold;
+}
+
+.manualPageBlock_Title {
+    @apply mt-[15px] text-[#ffffff] text-[1.75rem] font-['Exo2'] font-bold;
+}
