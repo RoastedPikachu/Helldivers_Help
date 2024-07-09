@@ -14,24 +14,28 @@ class ShipModulesStore {
         "/static/ShipModules/PatrioticAdministrationCenterLvl2.webp",
         "/static/ShipModules/PatrioticAdministrationCenterLvl3.webp",
         "/static/ShipModules/PatrioticAdministrationCenterLvl4.webp",
+        "/static/ShipModules/PatrioticAdministrationCenterLvl5.webp",
       ],
       improvementTitles: [
         "ЛИЦЕНЗИЯ НА БЛАГОТВОРИТЕЛЬНОСТЬ",
         "УПРОЩЕННАЯ ПОДАЧА ДОКУМЕНТОВ",
         "РУЧНЫЕ ТЕЛЕЖКИ",
         "ПЕРЕДОВЫЕ МЕТОДЫ УПАКОВКИ",
+        "СИСТЕМА УПРАВЛЕНИЯ ОПЛАТОЙ ТРУДА",
       ],
       improvementDescriptions: [
         "Приобретает постоянный доступ к боеприпасам от благотворительного фонда «Поддержи героя», позволяющего патриотично настроенным членам семей обеспечить снабжение своих родных на поле боя.",
         "Заранее утверждает следующие справки, которые используются в процессе утверждения оружия поддержки: справка 99-С («Необходимость боеприпасов»), справка 88-1 (анкета «Вклад в демократию») и справка 104 («Отказ от рисков сопутствующих потерь»).",
         "Снабжает бойцов ручными тележками, на которых можно перемещать несколько стратагем рюкзака одновременно. Это позволяет сократить время перезарядки и избежать поясничных травм.",
         "Санкционирует проведение 8-недельного курса обучения команды передовым методам упаковки (ПМУ), в результате чего увеличивается вместимость ящиков с припасами.",
+        "Самое современное бухгалтерское ПО автоматизирует процесс расчета оплаты труда, что снимает нагрузку с работников отдела кадров и позволяет им смазывать оружие поддержки в свободное время.",
       ],
       improvementEffects: [
         "Увеличивает количество магазинов, поставляемых с оружием поддержки.",
         "Сокращает время перезарядки стратагемы Оружие поддержки на 10%.",
         "Сокращает время перезарядки всех стратагем рюкзака на 10%.",
         "Ящики с припасами восполняют запас магазинов для оружия поддержки до максимума.",
+        "Сокращает время перезарядки всего оружия поддержки на 10%.",
       ],
       improvementPrices: [
         {
@@ -51,6 +55,12 @@ class ShipModulesStore {
           rareSampleCount: 150,
           superSampleCount: 15,
           requisites: 20000,
+        },
+        {
+          commonSampleCount: 200,
+          rareSampleCount: 200,
+          superSampleCount: 20,
+          requisites: 30000,
         },
       ],
       improvementAffectedStratagems: {
@@ -103,6 +113,23 @@ class ShipModulesStore {
           stratagemStore.stratagems.patrioticAdministrationCenter[4],
           stratagemStore.stratagems.patrioticAdministrationCenter[1],
         ],
+        fifthLevel: [
+          stratagemStore.stratagems.patrioticAdministrationCenter[2],
+          stratagemStore.stratagems.patrioticAdministrationCenter[6],
+          stratagemStore.stratagems.patrioticAdministrationCenter[7],
+          stratagemStore.stratagems.patrioticAdministrationCenter[8],
+          stratagemStore.stratagems.patrioticAdministrationCenter[9],
+          stratagemStore.stratagems.engineerBay[3],
+          stratagemStore.stratagems.engineerBay[7],
+          stratagemStore.stratagems.patrioticAdministrationCenter[9],
+          stratagemStore.stratagems.engineerBay[2],
+          stratagemStore.stratagems.patrioticAdministrationCenter[0],
+          stratagemStore.stratagems.patrioticAdministrationCenter[5],
+          stratagemStore.stratagems.patrioticAdministrationCenter[4],
+          stratagemStore.stratagems.patrioticAdministrationCenter[1],
+          stratagemStore.stratagems.patrioticAdministrationCenter[3],
+          stratagemStore.stratagems.engineerBay[8],
+        ],
       },
     },
     {
@@ -113,24 +140,28 @@ class ShipModulesStore {
         "/static/ShipModules/OrbitalCannonLvl2.webp",
         "/static/ShipModules/OrbitalCannonLvl3.webp",
         "/static/ShipModules/OrbitalCannonLvl4.webp",
+        "/static/ShipModules/OrbitalCannonLvl5.webp",
       ],
       improvementTitles: [
         "ВЗРЫВНАЯ ШРАПНЕЛЬ",
         "БОЛЬШЕ ПУШЕК",
         "ПЕРЕЗАРЯДКА В НЕВЕСОМОСТИ",
         "МОНИТОРИНГ АТМОСФЕРЫ",
+        "ВЗРЫВЧАТЫЕ ВЕЩЕСТВА ВЫСОКОЙ ПЛОТНОСТИ",
       ],
       improvementDescriptions: [
         "Контрольные военные группы назвали взрывную шрапнель «жестокой», «беспощадной» и «отлично подходящей» для распространения демократии.",
         "Спустя годы исследований, потраченных на улучшение эффективности и боевой мощи суперэсминца, Министерство науки сделало вывод, что нужно добавить больше пушек.",
         "Заменяет ручную перезарядку пушек со стороны дула на более быструю фронтальную загрузку.",
         "Дает подписку на прямой эфир сводок погоды, что позволяет повысить точность орбитального прицеливания.",
+        "Убирает стабилизирующие флегматиты из состава взрывчатых веществ, использующихся в орбитальных снарядах, что увеличивает их мощность.",
       ],
       improvementEffects: [
         "Уменьшает снижение урона, распространяющегося от центра взрывов орбитальных стратагем.",
         "Орбитальные залпы выстреливают дополнительно 1 шт. снарядов за каждый залп.",
         "Время перезарядки орбитальных стратагем уменьшено на 10%.",
         "Разброс орбитального залпа ОФ уменьшен на 15%.",
+        "На 10% увеличивает радиус поражения взрывов, вызванных орбитальными стратагемами.",
       ],
       improvementPrices: [
         {
@@ -150,6 +181,12 @@ class ShipModulesStore {
           rareSampleCount: 150,
           superSampleCount: 15,
           requisites: 25000,
+        },
+        {
+          commonSampleCount: 250,
+          rareSampleCount: 200,
+          superSampleCount: 20,
+          requisites: 35000,
         },
       ],
       improvementAffectedStratagems: {
@@ -183,6 +220,12 @@ class ShipModulesStore {
           stratagemStore.stratagems.orbitalCannon[3],
           stratagemStore.stratagems.orbitalCannon[2],
         ],
+        fifthLevel: [
+          stratagemStore.stratagems.orbitalCannon[4],
+          stratagemStore.stratagems.bridge[0],
+          stratagemStore.stratagems.orbitalCannon[3],
+          stratagemStore.stratagems.orbitalCannon[2],
+        ],
       },
     },
     {
@@ -193,24 +236,28 @@ class ShipModulesStore {
         "/static/ShipModules/HangarLvl2.webp",
         "/static/ShipModules/HangarLvl3.webp",
         "/static/ShipModules/HangarLvl4.webp",
+        "/static/ShipModules/HangarLvl5.webp",
       ],
       improvementTitles: [
         "ЖИДКОСТНАЯ ВЕНТИЛЯЦИЯ КАБИНЫ",
         "НАДБАВКА МЕХАНИКАМ",
         "РАСШИРЕННЫЙ БОЕВОЙ ОТСЕК",
         "БОЕВОЙ ОТСЕК XXL",
+        "ПРОДВИНУТАЯ ТРЕНИРОВКА КОМАНДЫ",
       ],
       improvementDescriptions: [
         "Наполняет кабины перфторуглеродами, которые поглощают перегрузки и позволяют пилотам совершать более резкие маневры, не теряя при этом сознание.",
         "Официально одобренная доплата за риск позволяет механикам пополнять боезапасы «Орла» во время космических полетов.",
         "Уменьшает пространство для ног в кабине, что позволяет снарядить «Орла» дополнительным боезапасом.",
         "Еще больше увеличивает вместимость боевого отсека «Орла», исключая из конструкции лишние элементы, например, системы пожаротушения и катапультирования, а также воздушные подушки.",
+        "Обучает механиков учитывать текущие условия при выполнении работ, например, оставлять неиспользованные боеприпасы заряженными, а не заменять их.",
       ],
       improvementEffects: [
         "Сокращает время перезарядки стратагемы «Орла» на 50%.",
         "Сокращает время пополнения боеприпасов «Орла» на 20%.",
         "Позволяет дополнительно использовать 1 шт. стратагем «Орла» до реактивации.",
         "Стратагемы «Орла», сбрасывающие по несколько бомб, сбрасывают дополнительные бомбы (1).",
+        "Сокращает время пополнения боеприпасов «Орла» еще на 10%, если он вызван, когда количество его использований не исчерпано.",
       ],
       improvementPrices: [
         {
@@ -230,6 +277,12 @@ class ShipModulesStore {
           rareSampleCount: 150,
           superSampleCount: 15,
           requisites: 25000,
+        },
+        {
+          commonSampleCount: 200,
+          rareSampleCount: 250,
+          superSampleCount: 25,
+          requisites: 30000,
         },
       ],
       improvementAffectedStratagems: {
@@ -258,6 +311,7 @@ class ShipModulesStore {
           stratagemStore.stratagems.hangar[3],
           stratagemStore.stratagems.hangar[2],
         ],
+        fifthLevel: [],
       },
     },
     {
@@ -268,24 +322,28 @@ class ShipModulesStore {
         "/static/ShipModules/BridgeLvl2.webp",
         "/static/ShipModules/BridgeLvl3.webp",
         "/static/ShipModules/BridgeLvl4.webp",
+        "/static/ShipModules/BridgeLvl5.webp",
       ],
       improvementTitles: [
         "ОБНОВЛЕНИЕ ПРОГРАММ ПРИЦЕЛИВАНИЯ",
         "ЯДЕРНЫЙ РАДАР",
         "УСИЛИТЕЛЬ РУЛЯ",
         "ИНТЕНСИВНОЕ ГОРЕНИЕ",
+        "УКРЕПЛЕНИЕ БОЕВОГО ДУХА",
       ],
       improvementDescriptions: [
         "Сокращает время, необходимое для орбитального прицеливания, благодаря обновлению программного обеспечения до премиум-версии.",
         "Увеличивает радиус действия радара Адского Десантника за счет новой мощной батареи на плутонии-210.",
         "Устанавливает электронные приводы, которые дополняют стандартный ножной способ управления Адскими Капсулами.",
         "Повышает температуру пламени зажигательного оружия, обогащая горючее точно рассчитанным составом из термита, белого фосфора, капсаицина, аллилгорчичного масла и еще 19 горючих веществ.",
+        "Повышает общую эффективность команды с помощью таких проверенных временем мер усиления энтузиазма, как празднование годовщины получения гражданства и оплачиваемые перерывы на поход в уборную.",
       ],
       improvementEffects: [
         "Сокращает время, необходимое для запуска орбитальных ударных стратагем на 1 сек.",
         "Увеличивает дальность обнаружения врагов на мини-карте на 50м.",
         "Улучшает управление Адскими Капсулами во время сброса.",
         "Огненный урон стратагем увеличен на 25%.",
+        "Сокращает время перезарядки всех стратагем на 5%.",
       ],
       improvementPrices: [
         {
@@ -305,6 +363,12 @@ class ShipModulesStore {
           rareSampleCount: 150,
           superSampleCount: 15,
           requisites: 25000,
+        },
+        {
+          commonSampleCount: 250,
+          rareSampleCount: 200,
+          superSampleCount: 20,
+          requisites: 35000,
         },
       ],
       improvementAffectedStratagems: {
@@ -328,6 +392,7 @@ class ShipModulesStore {
           stratagemStore.stratagems.hangar[3],
           stratagemStore.stratagems.engineerBay[4],
         ],
+        fifthLevel: [],
       },
     },
     {
@@ -338,24 +403,28 @@ class ShipModulesStore {
         "/static/ShipModules/EngineerBayLvl2.webp",
         "/static/ShipModules/EngineerBayLvl3.webp",
         "/static/ShipModules/EngineerBayLvl4.webp",
+        "/static/ShipModules/EngineerBayLvl5.webp",
       ],
       improvementTitles: [
         "ИСКУССТВЕННОЕ ДОПОЛНЕНИЕ",
         "УЛУЧШЕННАЯ КОНСТРУКЦИЯ",
         "СИСТЕМА БЫСТРОГО ЗАПУСКА",
         "УДЛИНЕННАЯ ЦЕПЬ",
+        "УПРОЩЕННЫЙ ПРОЦЕСС ЗАПУСКА",
       ],
       improvementDescriptions: [
         "Внедряет умеренные дозы амфетамина и андрогенных стероидов в рацион заряжающих. Вдобавок к прочим эффектам увеличивает их скорость, выносливость и концентрацию.",
         "Укрепляет турели и повышает их долговечность с помощью современных цианоакриловых связующих веществ.",
         "Запускает снаряды Адской Капсулы с помощью мгновенного подрыва стартового заряда.",
         "Повышает мощность электрического оружия, надежно соединяя множество внутренних удлинителей дуговых устройств в одну длинную линейную цепь.",
+        "Сокращает время запуска стратагем оружия поддержки за счет удаления диалогового окна подтверждения применения.",
       ],
       improvementEffects: [
         "Сокращает время презарядки для турелей, пополнения запасов и позиционных стратагем на 10%.",
         "Увеличивает прочность стратагем турелей на 50%.",
         "Сокращает время развертывания позиционных стратагем до нуля.",
         "Электрические дуги из оружия и турелей поражают на одного врага больше.",
+        "Все стратагемы оружия поддержки запускаются сразу после вызова, что сокращает общее время развертывания.",
       ],
       improvementPrices: [
         {
@@ -377,6 +446,12 @@ class ShipModulesStore {
           rareSampleCount: 150,
           superSampleCount: 20,
           requisites: 20000,
+        },
+        {
+          commonSampleCount: 250,
+          rareSampleCount: 200,
+          superSampleCount: 25,
+          requisites: 30000,
         },
       ],
       improvementAffectedStratagems: {
@@ -413,6 +488,23 @@ class ShipModulesStore {
           stratagemStore.stratagems.engineerBay[7],
           stratagemStore.stratagems.bridge[6],
         ],
+        fifthLevel: [
+          stratagemStore.stratagems.patrioticAdministrationCenter[2],
+          stratagemStore.stratagems.patrioticAdministrationCenter[6],
+          stratagemStore.stratagems.patrioticAdministrationCenter[7],
+          stratagemStore.stratagems.patrioticAdministrationCenter[8],
+          stratagemStore.stratagems.patrioticAdministrationCenter[9],
+          stratagemStore.stratagems.engineerBay[3],
+          stratagemStore.stratagems.engineerBay[7],
+          stratagemStore.stratagems.patrioticAdministrationCenter[9],
+          stratagemStore.stratagems.engineerBay[2],
+          stratagemStore.stratagems.patrioticAdministrationCenter[0],
+          stratagemStore.stratagems.patrioticAdministrationCenter[5],
+          stratagemStore.stratagems.patrioticAdministrationCenter[4],
+          stratagemStore.stratagems.patrioticAdministrationCenter[1],
+          stratagemStore.stratagems.patrioticAdministrationCenter[3],
+          stratagemStore.stratagems.engineerBay[8],
+        ],
       },
     },
     {
@@ -423,24 +515,28 @@ class ShipModulesStore {
         "/static/ShipModules/RoboticsWorkshopLvl2.webp",
         "/static/ShipModules/RoboticsWorkshopLvl3.webp",
         "/static/ShipModules/RoboticsWorkshopLvl4.webp",
+        "/static/ShipModules/RoboticsWorkshopLvl5.webp",
       ],
       improvementTitles: [
         "ДИНАМИЧЕСКОЕ ОТСЛЕЖИВАНИЕ",
         "АМОРТИЗИРУЮЩИЙ ГЕЛЬ",
         "ВЫСОКОКАЧЕСТВЕННАЯ СМАЗКА",
         "ПОГЛОЩЕННЫЙ ВЗРЫВ",
+        "КРОССПЛАТФОРМЕННАЯ СОВМЕСТИМОСТЬ",
       ],
       improvementDescriptions: [
         "Модернизированная система наблюдения непрерывно отслеживает пользователя вне зависимости от того, где он находится и что делает, постоянно поддерживая турельную пушку в режиме боеготовности.",
         "Выстилает капсулы турелей амортизирующим гидрогелем, что позволяет заполнить освободившиеся от амортизаторов место дополнительным боезапасом.",
         "Наносит смазку Супержеле на станины турелей, которая практически полностью избавляет их от трения и способствует плавным механическим движениям.",
         "Укрепляет турели щитками из полистирола в форме восьмерки. Щитки поглощают термическую энергию и энергию взрыва.",
+        "Позволяет платформе прицеливания миномета подключаться к экосистеме интерфейса Адского Десантника посредством стороннего преобразующего ПО.",
       ],
       improvementEffects: [
         "Снижает время, необходимое для запуска всех стратагем турелей.",
         "Увеличивает боезапас всех стратагем турелей на 50%.",
         "Позволяет стратагемам турелей быстрее вращаться и находить цели.",
         "Турели получают на 50% меньше урона от взрывов.",
+        "«Турели с минометами» в первую очередь стреляют по отмеченным целям.",
       ],
       improvementPrices: [
         {
@@ -462,6 +558,12 @@ class ShipModulesStore {
           rareSampleCount: 150,
           superSampleCount: 20,
           requisites: 25000,
+        },
+        {
+          commonSampleCount: 250,
+          rareSampleCount: 200,
+          superSampleCount: 30,
+          requisites: 35000,
         },
       ],
       improvementAffectedStratagems: {
@@ -497,6 +599,10 @@ class ShipModulesStore {
           stratagemStore.stratagems.roboticsWorkshop[2],
           stratagemStore.stratagems.roboticsWorkshop[0],
           stratagemStore.stratagems.roboticsWorkshop[4],
+        ],
+        fifthLevel: [
+          stratagemStore.stratagems.roboticsWorkshop[6],
+          stratagemStore.stratagems.roboticsWorkshop[2],
         ],
       },
     },

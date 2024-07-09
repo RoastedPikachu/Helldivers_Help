@@ -12,7 +12,10 @@ import Typewriter from "@/shared/Typewriter";
 
 import ShipModuleStratagem from "@/entities/shipModuleStratagem/ShipModuleStratagem";
 
+import "swiper/css";
+import "swiper/css/navigation";
 import "swiper/css/pagination";
+
 import "./ShipModule.css";
 
 interface ShipModuleProps {
@@ -53,6 +56,9 @@ const ShipModule: React.FC<ShipModuleProps> = ({
         break;
       case 3:
         setCurrentSlideStratagems(improvementAffectedStratagems.fourthLevel);
+        break;
+      case 4:
+        setCurrentSlideStratagems(improvementAffectedStratagems.fifthLevel);
         break;
     }
   };
@@ -116,6 +122,10 @@ const ShipModule: React.FC<ShipModuleProps> = ({
 
             <SwiperSlide>
               <img src={`${levelImages[3]}`} alt="" className="slideImage" />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <img src={`${levelImages[4]}`} alt="" className="slideImage" />
             </SwiperSlide>
           </Swiper>
 
