@@ -55,12 +55,7 @@ const Page: React.FC<{ params: { locale: string } }> = ({
 
         <section className="relative mlarge:hidden grid grid-cols-4 gap-y-[30px] gap-x-[30px] mt-[50px] w-full h-auto z-[20]">
           {pages.map((page) => (
-            <ManualPage
-              key={page.id}
-              id={page.id}
-              link={page.link}
-              title={page.title}
-            />
+            <ManualPage key={page.id} id={page.id} link={page.link} />
           ))}
         </section>
       </main>

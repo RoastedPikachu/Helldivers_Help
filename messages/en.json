@@ -5,9 +5,32 @@
     "pageAdditionalTitle": "manual",
     "pageDescription": "Welcome to the Helldivers 2 Manual! Get ready to plunge into the exciting world of global war with hostile invaders: Automatons and Terminids. In this manual you will find all the necessary information to make it easier to navigate the features of your equipment, enemies and planets of the galaxy and emerge victorious from all the missions you complete."
   },
+  "Pages": {
+    "1Link": "Weaponry",
+    "2Link": "Armor",
+    "3Link": "Coats",
+    "4Link": "Stratagems",
+    "5Link": "Boosters",
+    "6Link": "Resources",
+    "7Link": "Ship modules",
+    "8Link": "Progression",
+    "9Link": "Achievements",
+    "10Link": "Terminids",
+    "11Link": "Automatons",
+    "12Link": "Missions",
+    "13Link": "Planets",
+    "14Link": "Player cards",
+    "15Link": "Emotes"
+  },
   "Header": {
     "firstLink": "CODE",
     "secondLink": "GALAXY WAR",
     "thirdLink": "STRATAGEM TRAINING"
+  },
+  "Footer": {
+    "firstLinkTitle": "LINKS",
+    "secondLinkTitle": "SUPPORT SITE",
+    "firstLink": "Telegram",
+    "secondLink": "Discord server"
   }
 }

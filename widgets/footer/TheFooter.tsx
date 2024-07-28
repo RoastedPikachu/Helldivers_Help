@@ -3,11 +3,15 @@ import React from "react";
 
 import MediaQuery from "react-responsive";
 
+import { useTranslations } from "next-intl";
+
 import MobileFooterContent from "@/widgets/mobileFooterContent/MobileFooterContent";
 
 import "./TheFooter.css";
 
 const TheFooter = () => {
+  const t = useTranslations("Footer");
+
   return (
     <MediaQuery maxWidth={480}>
       {(matches) =>
@@ -17,14 +21,16 @@ const TheFooter = () => {
           <footer>
             <div className="footerTop">
               <div className="footerTop_TextBlock">
-                <h3 className="footerTop_TextBlock_Title">ССЫЛКИ</h3>
+                <h3 className="footerTop_TextBlock_Title">
+                  {t("firstLinkTitle")}
+                </h3>
 
                 <a
                   href="https://t.me/helldivers_help_support"
                   target="_blank"
                   className="footerTop_TextBlock_RusLink"
                 >
-                  Телеграм
+                  {t("firstLink")}
                 </a>
 
                 <a
@@ -32,7 +38,7 @@ const TheFooter = () => {
                   target="_blank"
                   className="footerTop_TextBlock_RusLink mt-[10px]"
                 >
-                  Дискорд сервер
+                  {t("secondLink")}
                 </a>
 
                 <a
@@ -51,7 +57,9 @@ const TheFooter = () => {
               />
 
               <div className="footerTop_TextBlock">
-                <h3 className="footerTop_TextBlock_Title">ПОДДЕРЖАТЬ САЙТ</h3>
+                <h3 className="footerTop_TextBlock_Title">
+                  {t("secondLinkTitle")}
+                </h3>
 
                 <a
                   href="https://boosty.to/helldivers.help"
