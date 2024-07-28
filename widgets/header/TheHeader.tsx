@@ -1,7 +1,11 @@
 "use client";
 import React, { useEffect } from "react";
 
+import MediaQuery from "react-responsive";
+
 import { Observer, observer } from "mobx-react-lite";
+
+import { useTranslations } from "next-intl";
 
 import Link from "next/link";
 
@@ -10,9 +14,10 @@ import { mobileStore } from "@/store/MobileStore";
 import MobileHeaderContent from "@/widgets/mobileHeaderContent/MobileHeaderContent";
 
 import "./TheHeader.css";
-import MediaQuery from "react-responsive";
 
 const TheHeader = observer(() => {
+  const t = useTranslations("Header");
+
   useEffect(() => {
     mobileStore.changeIsMobileDeviceStatus();
   }, []);
@@ -38,19 +43,19 @@ const TheHeader = observer(() => {
                 </Link>
 
                 <nav className="headerNavBlock">
-                  <Link href="/code" className="headerNavBlock_Link">
-                    КОДЕКС
+                  <Link href="/code" className="headerNavBlock_Link mr-[50px]">
+                    {t("firstLink")}
                   </Link>
 
-                  <Link href="/war" className="headerNavBlock_Link">
-                    ВОЙНА
+                  <Link href="/war" className="headerNavBlock_Link mr-[50px]">
+                    {t("secondLink")}
                   </Link>
 
                   <Link
                     href="/stratagemTraining"
                     className="headerNavBlock_Link col-span-2"
                   >
-                    ТРЕНИРОВКА СТРАТАГЕМ
+                    {t("thirdLink")}
                   </Link>
                 </nav>
               </header>

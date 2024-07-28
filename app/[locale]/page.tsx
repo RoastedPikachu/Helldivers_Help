@@ -2,6 +2,9 @@ import React from "react";
 
 import { Metadata } from "next";
 
+import { useTranslations } from "next-intl";
+import { unstable_setRequestLocale } from "next-intl/server";
+
 import { pages } from "@/data/pages/pages";
 
 import TheTopPageBlock from "@/widgets/topPageBlock/TheTopPageBlock";
@@ -19,7 +22,12 @@ export const metadata: Metadata = {
     "Helldiver.help — это сайт-помощник каждому Адскому Десантнику, который сражается за продвижение демократии, свободы и процветания по всей галактике.",
 };
 
-const Page = () => {
+const Page: React.FC<{ params: { locale: string } }> = ({
+  params: { locale },
+}) => {
+  unstable_setRequestLocale(locale);
+
+  const t = useTranslations("HomePage");
   return (
     <>
       <TheTopPageBlock />
@@ -34,20 +42,16 @@ const Page = () => {
           </h1>
 
           <p className="w-[35%] mlarge:w-[80%] mmedium:w-[90%] text-[#ffffff] text-[2rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-['Exo2'] font-semibold brightness-125">
-            Снаряжение, стратагемы, бестиарий и многое другое
+            {t("imageTitleDescription")}
           </p>
         </div>
 
         <ThePageTitle
-          title={"справочник"}
-          additionalTitle={"адского десантника"}
+          title={t("pageTitle")}
+          additionalTitle={t("pageAdditionalTitle")}
         />
 
-        <PageDescription
-          description={
-            "Добро пожаловать в справочник по Helldivers 2! Приготовьтесь погрузиться в захватывающий мир глобальной войны с враждебными захватчиками: автоматонами и терминидами. В этом руководстве вы найдете всю необходимую информацию, чтобы легче ориентироваться в особенностях вашего снаряжения, противников и планет галактики и выходить победителем из всех выполняемых вами миссий."
-          }
-        />
+        <PageDescription description={t("pageDescription")} />
 
         <section className="relative mlarge:hidden grid grid-cols-4 gap-y-[30px] gap-x-[30px] mt-[50px] w-full h-auto z-[20]">
           {pages.map((page) => (
