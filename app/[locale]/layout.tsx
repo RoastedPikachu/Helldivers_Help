@@ -1,10 +1,22 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+
 import Script from "next/script";
 import Head from "next/head";
 
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages, unstable_setRequestLocale } from "next-intl/server";
+
+import { Inter } from "next/font/google";
+
+import { locales } from "@/i18n";
+
+import "@/app/globals.css";
+
 const inter = Inter({ subsets: ["latin"] });
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 export const metadata: Metadata = {
   generator: "Next.js",
@@ -38,18 +50,29 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
+  unstable_setRequestLocale(locale);
+
+  const messages = await getMessages();
+
   return (
-    <html lang="ru">
+    <html lang={locale}>
       <Head>
-        <link rel="icon" href="/icon.png" type="image/png" sizes="512x512" />
+        <link
+          rel="icon"
+          href="@/app/icon.png"
+          type="image/png"
+          sizes="512x512"
+        />
         <link
           rel="apple-touch-icon"
-          href="/apple-touch-icon.png"
+          href="@/app/apple-touch-icon.png"
           sizes="180x180"
         />
       </Head>
@@ -57,7 +80,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <Script src="/static/metric/index.js" strategy="lazyOnload" />
 
-        {children}
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
