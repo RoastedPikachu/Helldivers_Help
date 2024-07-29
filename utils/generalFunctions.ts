@@ -49,3 +49,9 @@ export const getEnemyFractionPageLink = () => {
     ? "/enemy/terminids"
     : "/enemy/automatons";
 };
+
+export const getUserLocale = () => {
+  if (typeof window !== "undefined") {
+    return window.navigator.languages[0].slice(0, 2);
+  }
+};
