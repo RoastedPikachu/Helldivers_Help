@@ -4,20 +4,23 @@ import React from "react";
 import ObtainingTypeTag from "@/entities/obtainingTypeTag/ObtainingTypeTag";
 
 import "./PlayerCard.css";
+import { useTranslations } from "next-intl";
 
 interface PlayerCardProps {
-  name: string;
+  id: number;
   image: string;
   price: number;
   warbondImage: string;
 }
 
 const PlayerCard: React.FC<PlayerCardProps> = ({
-  name,
+  id,
   image,
   price,
   warbondImage,
 }) => {
+  const t = useTranslations("PlayerCards");
+
   return (
     <div className="playerCard">
       <img src={`${image}`} alt="" className="playerCard_BackgroundImage" />
@@ -34,7 +37,7 @@ const PlayerCard: React.FC<PlayerCardProps> = ({
         />
       </div>
 
-      <p className="playerCard_Title">{name}</p>
+      <p className="playerCard_Title">{t(`${id}Name`)}</p>
     </div>
   );
 };

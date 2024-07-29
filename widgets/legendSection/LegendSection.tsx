@@ -1,19 +1,25 @@
 "use client";
 import React, { useState } from "react";
 
+import { useTranslations } from "next-intl";
+
 import { obtainingTypes } from "@/data/obtainingTypes";
 
 import "./LegendSection.css";
 
 const LegendSection = () => {
+  const t = useTranslations("Legend");
+  const t1 = useTranslations("ObtainingTypes");
+
   const [isLegendInfoOpened, changeIsLegendInfoOpenedStatus] = useState(false);
+
   return (
     <section className="legendSection">
       <div
         onClick={() => changeIsLegendInfoOpenedStatus((prev) => !prev)}
         className="legendSection_TopBlock"
       >
-        <h4 className="legendSection_TopBlock_Title">Легенда</h4>
+        <h4 className="legendSection_TopBlock_Title">{t("title")}</h4>
 
         <button className="legendSection_TopBlock_Button">
           <img
@@ -39,7 +45,7 @@ const LegendSection = () => {
             />
 
             <p className="legendSection_BottomBlock_WarbondBlock_Title">
-              {obtainingType.name}
+              {t1(`${obtainingType.id}Name`)}
             </p>
           </div>
         ))}

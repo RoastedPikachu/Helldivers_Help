@@ -1,9 +1,11 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+import Link from "next/link";
 
 import { useTranslations } from "next-intl";
 
-import Link from "next/link";
+import { getUserLocale } from "@/utils/generalFunctions";
 
 import "./ManualPage.css";
 
@@ -14,8 +16,15 @@ interface ManualSectionProps {
 
 const ManualPage: React.FC<ManualSectionProps> = ({ id, link }) => {
   const t = useTranslations("Pages");
+
+  const [userLocale, setUserLocale] = useState("");
+
+  useEffect(() => {
+    setUserLocale(getUserLocale()!);
+  }, []);
+
   return (
-    <Link href={link}>
+    <Link href={link} locale={userLocale}>
       <div className="manualPageBlock">
         <p className="manualPageBlock_Number">{id}.</p>
 

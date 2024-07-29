@@ -10,17 +10,19 @@ import PageDescription from "@/shared/PageDescription";
 
 import PlayerCard from "@/entities/playerCard/PlayerCard";
 import SearchBar from "@/widgets/searchBar/SearchBar";
+import { useTranslations } from "next-intl";
 
 const ThePlayerCardsContent = () => {
+  const t = useTranslations("PlayerCardsPage");
+
   return (
     <main>
-      <ThePageTitle title={"Карточки"} additionalTitle={"игрока"} />
-
-      <PageDescription
-        description={
-          "Каждый Адский десантник может добавить себе оттенок индивидуальности выбрав себе одну из уникальных карточек игрока. Они будут лучше акцентировать внимание на вашей броне и выделять вас среди ваших боевых товарищей."
-        }
+      <ThePageTitle
+        title={t("pageTitle")}
+        additionalTitle={t("pageAdditionalTitle")}
       />
+
+      <PageDescription description={t("pageDescription")} />
 
       <LegendSection />
 
@@ -33,7 +35,7 @@ const ThePlayerCardsContent = () => {
         {playerCards.map((playerCard) => (
           <PlayerCard
             key={playerCard.id}
-            name={playerCard.name}
+            id={playerCard.id}
             image={playerCard.image}
             price={playerCard.price}
             warbondImage={playerCard.warbondImage}

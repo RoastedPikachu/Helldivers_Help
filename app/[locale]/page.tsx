@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Metadata } from "next";
+import Head from "next/head";
 
 import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
@@ -16,12 +16,6 @@ import PageDescription from "@/shared/PageDescription";
 
 import ManualPage from "@/entities/manualPage/ManualPage";
 
-export const metadata: Metadata = {
-  title: "Helldivers.help — Helldivers 2 помощник: Вики & другое",
-  description:
-    "Helldiver.help — это сайт-помощник каждому Адскому Десантнику, который сражается за продвижение демократии, свободы и процветания по всей галактике.",
-};
-
 const Page: React.FC<{ params: { locale: string } }> = ({
   params: { locale },
 }) => {
@@ -30,6 +24,12 @@ const Page: React.FC<{ params: { locale: string } }> = ({
   const t = useTranslations("HomePage");
   return (
     <>
+      <Head>
+        <title>{t("metadataTitle")}</title>
+
+        <meta name="description" content={t("metadataDescription")} />
+      </Head>
+
       <TheTopPageBlock />
 
       <TheScrollToUpButton />

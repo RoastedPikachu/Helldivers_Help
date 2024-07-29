@@ -92,7 +92,6 @@ export interface StratagemType {
 
 export interface PlayerCard {
   id: number;
-  name: string;
   image: string;
   price: number;
   warbondImage: string;
@@ -100,7 +99,6 @@ export interface PlayerCard {
 
 export interface ObtainingType {
   id: number;
-  name: string;
   icon: string;
 }
 

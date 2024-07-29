@@ -1,9 +1,18 @@
 {
   "HomePage": {
+    "metadataTitle": "HELLDIVERS.HELP — Helldivers 2 Assistant: Wiki & Other",
+    "metadataDescription": "Helldiver.help is an assistant site for each Helldiver who fights to ensure democracy, freedom and prosperity throughout the galaxy.",
     "imageTitleDescription": "Equipment, stratagems, bestiary and more",
     "pageTitle": "helldiver",
     "pageAdditionalTitle": "manual",
     "pageDescription": "Welcome to the Helldivers 2 Manual! Get ready to plunge into the exciting world of global war with hostile invaders: Automatons and Terminids. In this manual you will find all the necessary information to make it easier to navigate the features of your equipment, enemies and planets of the galaxy and emerge victorious from all the missions you complete."
+  },
+  "PlayerCardsPage": {
+    "metadataTitle": "HELLDIVERS.HELP: Player Cards",
+    "metadataDescription": "Each Helldiver can add a touch of personality by choosing one of the player's unique cards. They will better highlight your armor and you among the comrades.",
+    "pageTitle": "player",
+    "pageAdditionalTitle": "cards",
+    "pageDescription": "Each Helldiver can add a touch of personality by choosing one of the player's unique cards. They will better highlight your armor and you among the comrades."
   },
   "Pages": {
     "1Link": "Weaponry",
@@ -22,6 +31,32 @@
     "14Link": "Player cards",
     "15Link": "Emotes"
   },
+  "PlayerCards": {
+    "1Name": "Independence Bringer",
+    "2Name": "Liberty's Herald",
+    "3Name": "Tideturner",
+    "4Name": "The Cape of Stars and Suffrage",
+    "5Name": "Unblemished Allegiance",
+    "6Name": "Judgment Day",
+    "7Name": "Cresting Honor",
+    "8Name": "Mantle of True Citizenship",
+    "9Name": "Blazing Samaritan",
+    "10Name": "Light of Eternal Liberty",
+    "11Name": "Tyrant Hunter",
+    "12Name": "Cloak of Posterity's Gratitude",
+    "13Name": "Bastion of Integrity",
+    "14Name": "Botslayer",
+    "15Name": "Martyris Rex",
+    "16Name": "Agent of Oblivion",
+    "17Name": "Harbinger of True Equality",
+    "18Name": "Eagles Fury",
+    "19Name": "Freedom's Tapestry",
+    "20Name": "Dissident's Nightmare",
+    "21Name": "Pinions of Everlasting Glory",
+    "22Name": "Order of The Venerated Ballot",
+    "23Name": "Mark of The Crimson Fang",
+    "24Name": "Executioner's Canopy"
+  },
   "Header": {
     "firstLink": "CODE",
     "secondLink": "GALAXY WAR",
@@ -32,5 +67,21 @@
     "secondLinkTitle": "SUPPORT SITE",
     "firstLink": "Telegram",
     "secondLink": "Discord server"
+  },
+  "Legend": {
+    "title": "Legend"
+  },
+  "ObtainingTypes": {
+    "1Name": "Tutorial",
+    "2Name": "Superstore",
+    "3Name": "Pre-order",
+    "4Name": "Super Citizen Edition",
+    "5Name": "Twitch Drops",
+    "6Name": "Helldivers Mobilize Warbond",
+    "7Name": "Steeled Veterans Warbond",
+    "8Name": "Cutting Edge Warbond",
+    "9Name": "Democratic Detonation Warbond",
+    "10Name": "Polar Patriots Warbond",
+    "11Name": "Viper Commandos Warbond"
   }
 }
