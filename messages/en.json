@@ -7,6 +7,13 @@
     "pageAdditionalTitle": "manual",
     "pageDescription": "Welcome to the Helldivers 2 Manual! Get ready to plunge into the exciting world of global war with hostile invaders: Automatons and Terminids. In this manual you will find all the necessary information to make it easier to navigate the features of your equipment, enemies and planets of the galaxy and emerge victorious from all the missions you complete."
   },
+  "ProgressionPage": {
+    "pageTitle": "helldiver",
+    "pageAdditionalTitle": "progression",
+    "pageDescription": "When you go into battle, remember that your courage and dedication will be noticed. Thanks to your diligence and dedication to the cause of the Super Earth, you will receive promotions and honorary titles for your heroic deeds in promoting a managed democracy.",
+    "pageAdditionalDescription": "Starting with the Cadet title, you need to demonstrate your loyalty by proving yourself on the battlefield as a true defender of democracy. Each title you receive reflects your desire for greatness through feats, bravery and skill. May your name become a symbol of the power that will shake the galaxy!",
+    "firstSectionTitle": "TITLES"
+  },
   "AchievementsPage": {
     "pageTitle": "achievements",
     "pageAdditionalTitle": "",
@@ -213,6 +220,46 @@
     "20Name": "Welcome Adoration",
     "21Name": "Guns of Liberty"
   },
+  "ObtainingTypes": {
+    "1Name": "Tutorial",
+    "2Name": "Superstore",
+    "3Name": "Pre-order",
+    "4Name": "Super Citizen Edition",
+    "5Name": "Twitch Drops",
+    "6Name": "Helldivers Mobilize Warbond",
+    "7Name": "Steeled Veterans Warbond",
+    "8Name": "Cutting Edge Warbond",
+    "9Name": "Democratic Detonation Warbond",
+    "10Name": "Polar Patriots Warbond",
+    "11Name": "Viper Commandos Warbond"
+  },
+  "Ranks": {
+    "1Title": "Cadet",
+    "2Title": "Space Cadet",
+    "3Title": "Sergeant",
+    "4Title": "Master Sergeant",
+    "5Title": "Chief",
+    "6Title": "Space Chief Prime",
+    "7Title": "Death Captain",
+    "8Title": "Marshall",
+    "9Title": "Star Marshall",
+    "10Title": "Admiral",
+    "11Title": "Skull Admiral",
+    "12Title": "Fleet Admiral",
+    "13Title": "Admirable Admiral",
+    "14Title": "Commander",
+    "15Title": "Galactic Commander",
+    "16Title": "Hell Commander",
+    "17Title": "General",
+    "18Title": "5-Star General",
+    "19Title": "10-Star General",
+    "20Title": "Private",
+    "21Title": "Super Private",
+    "22Title": "Viper Commando",
+    "23Title": "Super Citizen",
+    "viperCommandos": "Viper Commandos Warbond",
+    "superCitizen": "Super Citizen Edition"
+  },
   "Header": {
     "firstLink": "CODE",
     "secondLink": "GALAXY WAR",
@@ -227,17 +274,11 @@
   "Legend": {
     "title": "Legend"
   },
-  "ObtainingTypes": {
-    "1Name": "Tutorial",
-    "2Name": "Superstore",
-    "3Name": "Pre-order",
-    "4Name": "Super Citizen Edition",
-    "5Name": "Twitch Drops",
-    "6Name": "Helldivers Mobilize Warbond",
-    "7Name": "Steeled Veterans Warbond",
-    "8Name": "Cutting Edge Warbond",
-    "9Name": "Democratic Detonation Warbond",
-    "10Name": "Polar Patriots Warbond",
-    "11Name": "Viper Commandos Warbond"
+  "LevelsSection": {
+    "title": "LEVEL CALCULATOR",
+    "startText": "Initial",
+    "endText": "Target",
+    "levelDesignation": "level",
+    "experienceDesignation": "exp"
   }
 }

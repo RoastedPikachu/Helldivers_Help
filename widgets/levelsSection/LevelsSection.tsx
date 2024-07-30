@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 
+import { useTranslations } from "next-intl";
+
 import { observer, Observer } from "mobx-react-lite";
 
 import { levels } from "@/data/levels";
@@ -12,6 +14,8 @@ import SectionTitle from "@/shared/sectionTitle/SectionTitle";
 import "./LevelsSection.css";
 
 const LevelsSection = observer(() => {
+  const t = useTranslations("LevelsSection");
+
   const [currentLevel, setCurrentLevel] = useState("");
   const [targetLevel, setTargetLevel] = useState("");
 
@@ -38,14 +42,14 @@ const LevelsSection = observer(() => {
     <Observer>
       {() => (
         <section className="levelsSection">
-          <SectionTitle text={"КАЛЬКУЛЯТОР УРОВНЕЙ"} />
+          <SectionTitle text={t("title")} />
 
           <form>
             <div className="formInputBlock">
               <input
                 type="text"
                 list="Levels"
-                placeholder={`Начальный ${mobileStore.isMobileDevice ? "" : "уровень"}`}
+                placeholder={`${t("startText")} ${mobileStore.isMobileDevice ? "" : t("levelDesignation")}`}
                 maxLength={10}
                 value={currentLevel}
                 onChange={(event) => setCurrentLevel(event.target.value)}
@@ -70,7 +74,7 @@ const LevelsSection = observer(() => {
               <input
                 type="text"
                 list="Levels"
-                placeholder={`Конечный ${mobileStore.isMobileDevice ? "" : "уровень"}`}
+                placeholder={`${t("endText")} ${mobileStore.isMobileDevice ? "" : t("levelDesignation")}`}
                 maxLength={10}
                 value={targetLevel}
                 onChange={(event) => setTargetLevel(event.target.value)}
@@ -96,7 +100,10 @@ const LevelsSection = observer(() => {
                 <option
                   key={level.id}
                   value={
-                    level.id + (mobileStore.isMobileDevice ? "" : " уровень")
+                    level.id +
+                    (mobileStore.isMobileDevice
+                      ? ""
+                      : ` ${t("levelDesignation")}`)
                   }
                 />
               ))}
@@ -104,7 +111,8 @@ const LevelsSection = observer(() => {
 
             <div className="formResultBlock">
               <p className="formResultBlock_Text">
-                {getTargetLevelXpTotal() - getCurrentLevelXpTotal() || 0} опыта
+                {getTargetLevelXpTotal() - getCurrentLevelXpTotal() || 0}{" "}
+                {t("experienceDesignation")}
               </p>
             </div>
           </form>

@@ -8,7 +8,6 @@ export interface Tip {
 export interface Rank {
   id: number;
   iconPath: string;
-  title: string;
   fromLevel: number;
   xpCount: number;
 }
