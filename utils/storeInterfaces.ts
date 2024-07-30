@@ -3,9 +3,6 @@ import { Bonus, WeaponType } from "@/utils/dataInterfaces";
 export interface Achievement {
   id: number;
   iconPath: string;
-  title: string;
-  description: string;
-  accomplishmentWay: string;
 }
 
 export interface Booster {

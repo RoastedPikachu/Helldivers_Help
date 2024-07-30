@@ -5,7 +5,6 @@ import { obtainingTypes } from "../obtainingTypes";
 export const emotes = [
   {
     id: 1,
-    name: "Обычное приветствие",
     videoPath: "/static/Emotes/GreetingsVideo.mp4",
     videoPreviewPath: "/static/EmotesVideoPreviews/GreetingsPreview.webp",
     price: 0,
@@ -13,7 +12,6 @@ export const emotes = [
   },
   {
     id: 2,
-    name: "Взрывное рукопожатие",
     videoPath: "/static/Emotes/ExplosiveHandshakeVideo.mp4",
     videoPreviewPath:
       "/static/EmotesVideoPreviews/ExplosiveHandshakePreview.webp",
@@ -22,7 +20,6 @@ export const emotes = [
   },
   {
     id: 3,
-    name: "Обнять",
     videoPath: "/static/Emotes/HugVideo.mp4",
     videoPreviewPath: "/static/EmotesVideoPreviews/HugPreview.webp",
     price: 20,
@@ -30,7 +27,6 @@ export const emotes = [
   },
   {
     id: 4,
-    name: "Дать пять",
     videoPath: "/static/Emotes/ScoutHandshakeVideo.mp4",
     videoPreviewPath: "/static/EmotesVideoPreviews/ScoutPreview.webp",
     price: 20,
@@ -38,7 +34,6 @@ export const emotes = [
   },
   {
     id: 5,
-    name: "Рукопожатие разведчика",
     videoPath: "/static/Emotes/ScoutHandshakeVideo.mp4",
     videoPreviewPath: "/static/EmotesVideoPreviews/ScoutPreview.webp",
     price: 35,
@@ -46,7 +41,6 @@ export const emotes = [
   },
   {
     id: 6,
-    name: "Камень-ножницы-бумага",
     videoPath: "/static/Emotes/RockPaperScissorsVideo.mp4",
     videoPreviewPath:
       "/static/EmotesVideoPreviews/RockPaperScissorsPreview.webp",
@@ -55,7 +49,6 @@ export const emotes = [
   },
   {
     id: 7,
-    name: "Проверка убежденности",
     videoPath: "/static/Emotes/ScoutHandshakeVideo.mp4",
     videoPreviewPath: "/static/EmotesVideoPreviews/ScoutPreview.webp",
     price: 70,

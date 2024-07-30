@@ -2,9 +2,11 @@ import { Emote } from "@/utils/dataInterfaces";
 
 import { obtainingTypes } from "@/data/obtainingTypes";
 
+// Поле id начинается с 8, чтобы не сломать интернационализацию
+
 export const victoryPoses = [
   {
-    id: 1,
+    id: 8,
     name: "Салют",
     videoPath: "/static/VictoryPoses/SaluteVideo.mp4",
     videoPreviewPath: "/static/VictoryPosesVideoPreviews/SalutePreview.webp",
@@ -12,7 +14,7 @@ export const victoryPoses = [
     warbondIcon: obtainingTypes[0].icon,
   },
   {
-    id: 2,
+    id: 9,
     name: "Аплодисменты",
     videoPath: "/static/VictoryPoses/ApplauseVideo.mp4",
     videoPreviewPath: "/static/VictoryPosesVideoPreviews/ApplausePreview.webp",
@@ -20,7 +22,7 @@ export const victoryPoses = [
     warbondIcon: obtainingTypes[5].icon,
   },
   {
-    id: 3,
+    id: 10,
     name: "Пальцы-пистолеты",
     videoPath: "/static/VictoryPoses/FingerPistolsVideo.mp4",
     videoPreviewPath:
@@ -29,7 +31,7 @@ export const victoryPoses = [
     warbondIcon: obtainingTypes[5].icon,
   },
   {
-    id: 4,
+    id: 11,
     name: "Напрячь мышцы",
     videoPath: "/static/VictoryPoses/StrainMusclesVideo.mp4",
     videoPreviewPath:
@@ -38,7 +40,7 @@ export const victoryPoses = [
     warbondIcon: obtainingTypes[5].icon,
   },
   {
-    id: 5,
+    id: 12,
     name: "Расслабься",
     videoPath: "/static/VictoryPoses/RelaxVideo.mp4",
     videoPreviewPath: "/static/VictoryPosesVideoPreviews/RelaxPreview.webp",
@@ -46,7 +48,7 @@ export const victoryPoses = [
     warbondIcon: obtainingTypes[5].icon,
   },
   {
-    id: 6,
+    id: 13,
     name: "Громкий возглас",
     videoPath: "/static/VictoryPoses/LoudExclamationVideo.mp4",
     videoPreviewPath:
@@ -55,7 +57,7 @@ export const victoryPoses = [
     warbondIcon: obtainingTypes[5].icon,
   },
   {
-    id: 7,
+    id: 14,
     name: "Представительный",
     videoPath: "/static/VictoryPoses/RepresentativeVideo.mp4",
     videoPreviewPath:
@@ -64,7 +66,7 @@ export const victoryPoses = [
     warbondIcon: obtainingTypes[7].icon,
   },
   {
-    id: 8,
+    id: 15,
     name: "Дробовик напоказ",
     videoPath: "/static/VictoryPoses/ShotgunForShowVideo.mp4",
     videoPreviewPath:
@@ -73,7 +75,7 @@ export const victoryPoses = [
     warbondIcon: obtainingTypes[7].icon,
   },
   {
-    id: 9,
+    id: 16,
     name: "Коснуться головы",
     videoPath: "/static/VictoryPoses/TouchHeadVideo.mp4",
     videoPreviewPath: "/static/VictoryPosesVideoPreviews/TouchHeadPreview.webp",
@@ -81,7 +83,7 @@ export const victoryPoses = [
     warbondIcon: obtainingTypes[7].icon,
   },
   {
-    id: 10,
+    id: 17,
     name: "Бюллетени всем!",
     videoPath: "/static/VictoryPoses/BulletinsForAllVideo.mp4",
     videoPreviewPath:
@@ -90,7 +92,7 @@ export const victoryPoses = [
     warbondIcon: obtainingTypes[9].icon,
   },
   {
-    id: 11,
+    id: 18,
     name: "Вызов Адского десанта",
     videoPath: "/static/VictoryPoses/HelldiversCallVideo.mp4",
     videoPreviewPath:
@@ -99,7 +101,7 @@ export const victoryPoses = [
     warbondIcon: obtainingTypes[9].icon,
   },
   {
-    id: 12,
+    id: 19,
     name: "Пантомима",
     videoPath: "/static/VictoryPoses/PantomimeVideo.mp4",
     videoPreviewPath: "/static/VictoryPosesVideoPreviews/PantomimePreview.webp",
@@ -107,7 +109,7 @@ export const victoryPoses = [
     warbondIcon: obtainingTypes[9].icon,
   },
   {
-    id: 13,
+    id: 20,
     name: "Высшая любовь",
     videoPath: "/static/VictoryPoses/HighestLoveVideo.mp4",
     videoPreviewPath:
@@ -116,7 +118,7 @@ export const victoryPoses = [
     warbondIcon: obtainingTypes[10].icon,
   },
   {
-    id: 14,
+    id: 21,
     name: "Пушки свободы",
     videoPath: "/static/VictoryPoses/GunsOfLibertyVideo.mp4",
     videoPreviewPath:

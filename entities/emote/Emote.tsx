@@ -1,12 +1,14 @@
 "use client";
 import React, { useRef } from "react";
 
+import { useTranslations } from "next-intl";
+
 import ObtainingTypeTag from "@/entities/obtainingTypeTag/ObtainingTypeTag";
 
 import "./Emote.css";
 
 interface EmoteProps {
-  name: string;
+  id: number;
   videoPreviewPath: string;
   videoPath: string;
   price: number;
@@ -14,12 +16,14 @@ interface EmoteProps {
 }
 
 const Emote: React.FC<EmoteProps> = ({
-  name,
+  id,
   videoPreviewPath,
   videoPath,
   price,
   warbondIcon,
 }) => {
+  const t = useTranslations("Emotes");
+
   const videoRef = useRef<HTMLVideoElement>();
 
   const playVideo = () => {
@@ -59,7 +63,7 @@ const Emote: React.FC<EmoteProps> = ({
         />
       </div>
 
-      <p className="emote_Title">{name}</p>
+      <p className="emote_Title">{t(`${id}Name`)}</p>
     </div>
   );
 };

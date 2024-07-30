@@ -104,7 +104,6 @@ export interface ObtainingType {
 
 export interface Emote {
   id: number;
-  name: string;
   videoPath: string;
   videoPreviewPath: string;
   price: number;

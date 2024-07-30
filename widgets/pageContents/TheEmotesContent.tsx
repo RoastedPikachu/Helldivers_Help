@@ -1,6 +1,9 @@
 import React from "react";
 
+import { useTranslations } from "next-intl";
+
 import { emotes } from "@/data/emotes";
+import { victoryPoses } from "@/data/victoryPoses";
 
 import LegendSection from "@/widgets/legendSection/LegendSection";
 import SearchBar from "@/widgets/searchBar/SearchBar";
@@ -10,18 +13,18 @@ import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 
 import Emote from "@/entities/emote/Emote";
-import { victoryPoses } from "@/data/victoryPoses";
 
 const TheEmotesContent = () => {
+  const t = useTranslations("EmotesPage");
+
   return (
     <main>
-      <ThePageTitle title={"эмоции"} additionalTitle={"адского десантника"} />
-
-      <PageDescription
-        description={
-          "Во время боев любой Адский Десантник накапливает определенную долю впечатлений или переживаний. Их можно легко выплеснуть в эмоциях! А победу и успешное возвращение отпраздновать красивой победной позой. Покажите всем свои мускулы или обнимите любимого товарища, главное сохраняйте рассудок для дальнейшего продолжения распространения демократии по всей галактике."
-        }
+      <ThePageTitle
+        title={t("pageTitle")}
+        additionalTitle={t("pageAdditionalTitle")}
       />
+
+      <PageDescription description={t("pageDescription")} />
 
       <LegendSection />
 
@@ -34,7 +37,7 @@ const TheEmotesContent = () => {
         {emotes.map((emote) => (
           <Emote
             key={emote.id}
-            name={emote.name}
+            id={emote.id}
             videoPreviewPath={emote.videoPreviewPath}
             videoPath={emote.videoPath}
             price={emote.price}
@@ -50,7 +53,7 @@ const TheEmotesContent = () => {
         {victoryPoses.map((victoryPose) => (
           <Emote
             key={victoryPose.id}
-            name={victoryPose.name}
+            id={victoryPose.id}
             videoPreviewPath={victoryPose.videoPreviewPath}
             videoPath={victoryPose.videoPath}
             price={victoryPose.price}
