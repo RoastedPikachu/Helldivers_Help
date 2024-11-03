@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 
+import { useTranslations } from "next-intl";
+
 import { IResource, ResourceTableTitle } from "@/utils/generalInterfaces";
 
 import { resources } from "@/data/resources";
@@ -14,6 +16,8 @@ import Resource from "@/entities/resource/Resource";
 import CurrentResourceInfo from "@/entities/currentResourceInfo/CurrentResourceInfo";
 
 const TheResourcesContent = () => {
+  const t = useTranslations("ResourcesPage");
+
   const [currentResource, setCurrentResource] = useState({} as IResource);
 
   const handleResourceBlockClick = (id: number) => {
@@ -59,19 +63,14 @@ const TheResourcesContent = () => {
   };
   return (
     <main>
-      <ThePageTitle title={"ресурсы"} additionalTitle={"галактики"} />
-
-      <PageDescription
-        description={
-          "Ресурсы — это топливо для повышения вашей личной эффективности в борьбе за продвижение управляемой демократии, свободы и процветания по всей галактике."
-        }
+      <ThePageTitle
+        title={t("pageTitle")}
+        additionalTitle={t("pageAdditionalTitle")}
       />
 
-      <PageDescription
-        description={
-          "Они позволяют улучшать корабль, покупать новое снаряжение и вооружение, а также открывать боевой пропуск."
-        }
-      />
+      <PageDescription description={t("pageDescription")} />
+
+      <PageDescription description={t("pageAdditionalDescription")} />
 
       <section
         id="ResourceInfo"
@@ -82,7 +81,6 @@ const TheResourcesContent = () => {
             key={resource.id}
             id={resource.id}
             iconPath={resource.iconPath}
-            title={resource.title}
             handleResourceBlockClick={handleResourceBlockClick}
           />
         ))}
@@ -91,11 +89,8 @@ const TheResourcesContent = () => {
       <section className="mt-[50px] mlarge:mt-[30px]">
         {currentResource.id && (
           <CurrentResourceInfo
-            title={currentResource.title}
-            difficulties={currentResource.difficulties}
+            id={currentResource.id}
             prices={currentResource.prices}
-            obtainingMethod={currentResource.obtainingMethod}
-            applicationScope={currentResource.applicationScope}
             maxAmount={currentResource.maxAmount}
           />
         )}

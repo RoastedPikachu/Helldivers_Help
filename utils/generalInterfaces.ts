@@ -21,12 +21,8 @@ export interface Level {
 export interface IResource {
   id: number;
   iconPath: string;
-  title: string;
-  difficulties: string;
   prices?: string[];
-  obtainingMethod: string;
-  applicationScope: string;
-  maxAmount: string;
+  maxAmount?: number;
   isDependsOnDifficulty: boolean;
 }
 

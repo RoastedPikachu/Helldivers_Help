@@ -7,6 +7,12 @@
     "pageAdditionalTitle": "manual",
     "pageDescription": "Welcome to the Helldivers 2 Manual! Get ready to plunge into the exciting world of global war with hostile invaders: Automatons and Terminids. In this manual you will find all the necessary information to make it easier to navigate the features of your equipment, enemies and planets of the galaxy and emerge victorious from all the missions you complete."
   },
+  "ResourcesPage": {
+    "pageTitle": "galaxy",
+    "pageAdditionalTitle": "resources",
+    "pageDescription": "Resources are the fuel to increase your personal effectiveness in the struggle to promote managed democracy, freedom and prosperity throughout the galaxy.",
+    "pageAdditionalDescription": "They allow you to upgrade your super destroyer, buy new equipment weapons, and warbonds."
+  },
   "ProgressionPage": {
     "pageTitle": "helldiver",
     "pageAdditionalTitle": "progression",
@@ -260,6 +266,33 @@
     "viperCommandos": "Viper Commandos Warbond",
     "superCitizen": "Super Citizen Edition"
   },
+  "Resources": {
+    "1Title": "Common Samples",
+    "2Title": "Rare Samples",
+    "3Title": "Super Rare Sample",
+    "4Title": "Super Credits",
+    "5Title": "Metals",
+    "6Title": "Requisition Slips",
+    "1Difficulties": "All difficulties",
+    "2Difficulties": "Starting from the 4th level of difficulty",
+    "3Difficulties": "Starting from the 6th level of difficulty",
+    "4Difficulties": "All difficulties",
+    "5Difficulties": "All difficulties",
+    "6Difficulties": "All difficulties",
+    "1ObtainingMethod": "Points of interest, outposts of Terminids and Automatons",
+    "2ObtainingMethod": "Points of interest, outposts of Terminids and Automatons, also in the wild, in the shape of a flower",
+    "3ObtainingMethod": "Point of interest with a high stone",
+    "4ObtainingMethod": "Buying in-game store or points of interest",
+    "5ObtainingMethod": "Completing missions, points of interest, completing major and personal orders from Super Earth",
+    "6ObtainingMethod": "Completing missions, successful evacuation from the mission, points of interest",
+    "1ApplicationScope": "Ship modules upgrade",
+    "2ApplicationScope": "Ship modules upgrade",
+    "3ApplicationScope": "Ship modules upgrade",
+    "4ApplicationScope": "Purchase items from the Super Store or purchase of a warbond",
+    "5ApplicationScope": "Purchase of the contents of a warbond",
+    "6ApplicationScope": "Stratagem unlock",
+    "superCreditsMaxAmount": "It depends on the size of your wallet or your time"
+  },
   "Header": {
     "firstLink": "CODE",
     "secondLink": "GALAXY WAR",
@@ -280,5 +313,11 @@
     "endText": "Target",
     "levelDesignation": "level",
     "experienceDesignation": "exp"
+  },
+  "CurrentResourceInfo": {
+    "difficultiesText": "From which difficulty appears",
+    "obtainingMethodText": "Obtaining method",
+    "applicationScopeText": "Application scope",
+    "maxAmountText": "Max cap"
   }
 }

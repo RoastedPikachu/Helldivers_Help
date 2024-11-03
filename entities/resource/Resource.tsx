@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 
+import { useTranslations } from "next-intl";
+
 import Link from "next/link";
 
 import "./Resource.css";
@@ -8,16 +10,16 @@ import "./Resource.css";
 interface ResourceProps {
   id: number;
   iconPath: string;
-  title: string;
   handleResourceBlockClick: (id: number) => void;
 }
 
 const Resource: React.FC<ResourceProps> = ({
   id,
   iconPath,
-  title,
   handleResourceBlockClick,
 }) => {
+  const t = useTranslations("Resources");
+
   return (
     <Link
       href="/resources#ResourceInfo"
@@ -26,7 +28,7 @@ const Resource: React.FC<ResourceProps> = ({
     >
       <img src={`${iconPath}`} alt="" className="resource_Icon" />
 
-      <p className="resource_Title">{title}</p>
+      <p className="resource_Title">{t(`${id}Title`)}</p>
     </Link>
   );
 };

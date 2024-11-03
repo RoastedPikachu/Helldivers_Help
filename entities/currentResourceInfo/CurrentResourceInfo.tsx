@@ -4,34 +4,32 @@ import React from "react";
 import Typewriter from "@/shared/Typewriter";
 
 import "./CurrentResourceInfo.css";
+import { useTranslations } from "next-intl";
 
 interface TargetResourceInfoProps {
-  title: string;
-  difficulties: string;
+  id: number;
   prices?: string[];
-  obtainingMethod: string;
-  applicationScope: string;
-  maxAmount: string;
+  maxAmount?: number;
 }
 
 const CurrentResourceInfo: React.FC<TargetResourceInfoProps> = ({
-  title,
-  difficulties,
+  id,
   prices,
-  obtainingMethod,
-  applicationScope,
   maxAmount,
 }) => {
+  const t = useTranslations("Resources");
+  const t1 = useTranslations("CurrentResourceInfo");
+
   return (
     <div className="currentResourceinfo">
       <h3 className="currentResourceinfo_Title">
-        <Typewriter text={title} delay={60} />
+        <Typewriter text={t(`${id}Title`)} delay={60} />
       </h3>
 
       {!prices?.length ? (
         <p className="currentResourceinfo_Text">
-          <b className="mlarge:w-full">На каких сложностях встречается:</b>{" "}
-          <Typewriter text={difficulties} delay={20} />
+          <b className="mlarge:w-full">{t1("difficultiesText")}:</b>{" "}
+          <Typewriter text={t(`${id}Difficulties`)} delay={20} />
         </p>
       ) : (
         <>
@@ -58,19 +56,21 @@ const CurrentResourceInfo: React.FC<TargetResourceInfoProps> = ({
       )}
 
       <p className="currentResourceinfo_Text">
-        <b className="mlarge:block mlarge:w-full">Способ получения:</b>{" "}
-        <Typewriter text={obtainingMethod} delay={20} />
-      </p>
-
-      <p className="currentResourceinfo_Text">
-        <b className="mlarge:block mlarge:w-full">Сфера применения:</b>{" "}
-        <Typewriter text={applicationScope} delay={20} />
+        <b className="mlarge:block mlarge:w-full">
+          {t1("obtainingMethodText")}:
+        </b>{" "}
+        <Typewriter text={t(`${id}ObtainingMethod`)} delay={20} />
       </p>
 
       <p className="currentResourceinfo_Text">
         <b className="mlarge:block mlarge:w-full">
-          Какое максимальное значение ресурса на корабле:
+          {t1("applicationScopeText")}:
         </b>{" "}
+        <Typewriter text={t(`${id}ApplicationScope`)} delay={20} />
+      </p>
+
+      <p className="currentResourceinfo_Text">
+        <b className="mlarge:block mlarge:w-full">{t1("maxAmountText")}:</b>{" "}
         <Typewriter text={maxAmount} delay={40} />
       </p>
     </div>

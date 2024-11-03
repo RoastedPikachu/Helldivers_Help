@@ -208,10 +208,55 @@ class ArmorKitsStore {
         bonus: armorBonuses.peakPhisique,
         warbondIcon: obtainingTypes[10].icon,
       },
+      {
+        id: 14,
+        imagePath: "/static/ArmorKits/AF50.webp",
+        type: "Легкая броня",
+        name: "AF-50 «Инспектор»",
+        obtainingMethod: "Покупается в боевом пропуске «Химзащита»",
+        description:
+          "«Мы не боимся ни смерти, ни яда. Стенания врагов нам отрада». — Цитата из популярного мюзикла «Надбавка за вредность».",
+        price: 75,
+        armorRating: 50,
+        speed: 550,
+        staminaRegen: 125,
+        bonus: armorBonuses.peakPhisique,
+        warbondIcon: obtainingTypes[10].icon,
+      },
+      {
+        id: 15,
+        imagePath: "/static/ArmorKits/UF16.webp",
+        type: "Легкая броня",
+        name: "UF-16 «Инспектор»",
+        obtainingMethod: "Покупается в боевом пропуске «Блюстители правды»",
+        description:
+          "Эту броню прославила серия детективных романов «Блюстители правды: правдивые блюстители», где ее носил главный герой, настоящий образец патриотизма, защищавший нас от предательской лжи.",
+        price: 140,
+        armorRating: 50,
+        speed: 550,
+        staminaRegen: 125,
+        bonus: armorBonuses.peakPhisique,
+        warbondIcon: obtainingTypes[10].icon,
+      },
     ],
     medium: [
       {
         id: 1,
+        imagePath: "/static/ArmorKits/B00.webp",
+        type: "Средняя броня",
+        name: "B-00 «Тактик»",
+        obtainingMethod: "Подарок на День свободы 26.10.24",
+        description:
+          "Этот классический комплект брони узнают повсеместно — такой носили героические Адские Десантники, истребившие терминидов, киборгов и просветленных во времена первой галактической войны.",
+        price: 0,
+        armorRating: 100,
+        speed: 500,
+        staminaRegen: 100,
+        bonus: armorBonuses.democracyProtects,
+        warbondIcon: "",
+      },
+      {
+        id: 2,
         imagePath: "/static/ArmorKits/B01TacticalImage.webp",
         type: "Средняя броня",
         name: "B-01 «Тактик»",
@@ -226,7 +271,7 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[0].icon,
       },
       {
-        id: 2,
+        id: 3,
         imagePath: "/static/ArmorKits/Cw9WhiteWolfImage.webp",
         type: "Средняя броня",
         name: "CW-9 «Белый волк»",
@@ -241,7 +286,7 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[1].icon,
       },
       {
-        id: 3,
+        id: 4,
         imagePath: "/static/ArmorKits/Tr7AmbassadorOfTheBrandImage.webp",
         type: "Средняя броня",
         name: "TR-7 «Представитель бренда»",
@@ -256,7 +301,7 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[2].icon,
       },
       {
-        id: 4,
+        id: 5,
         imagePath: "/static/ArmorKits/Ce35TrenchEngineerImage.webp",
         type: "Средняя броня",
         name: "CE-35 «Траншейный инженер»",
@@ -272,7 +317,7 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[5].icon,
       },
       {
-        id: 5,
+        id: 6,
         imagePath: "/static/ArmorKits/Ce27GroundBreakerImage.webp",
         type: "Средняя броня",
         name: "CE-27 «Первопробиватель»",
@@ -288,7 +333,7 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[8].icon,
       },
       {
-        id: 6,
+        id: 7,
         imagePath: "/static/ArmorKits/Ce81JuggernautImage.webp",
         type: "Средняя броня",
         name: "CE-81 «Джаггернаут»",
@@ -303,7 +348,7 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[1].icon,
       },
       {
-        id: 7,
+        id: 8,
         imagePath: "/static/ArmorKits/Sc15DroneMasterImage.webp",
         type: "Средняя броня",
         name: "SС-15 «Мастер дронов»",
@@ -318,7 +363,7 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[1].icon,
       },
       {
-        id: 8,
+        id: 9,
         imagePath: "/static/ArmorKits/Сm09BonesnapperImage.webp",
         type: "Средняя броня",
         name: "CM-09 «Костолом»",
@@ -334,7 +379,7 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[5].icon,
       },
       {
-        id: 9,
+        id: 10,
         imagePath: "/static/ArmorKits/Cm14PhysicianImage.webp",
         type: "Средняя броня",
         name: "CM-14 «Врач»",
@@ -350,7 +395,7 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[5].icon,
       },
       {
-        id: 10,
+        id: 11,
         imagePath: "/static/ArmorKits/Cm10ClinicianImage.webp",
         type: "Средняя броня",
         name: "CM-10 «Клиницист»",
@@ -365,7 +410,7 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[1].icon,
       },
       {
-        id: 11,
+        id: 12,
         imagePath: "/static/ArmorKits/Tr117AlphaCommanderImage.webp",
         type: "Средняя броня",
         name: "TR-117 «Альфа командир»",
@@ -380,7 +425,7 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[4].icon,
       },
       {
-        id: 12,
+        id: 13,
         imagePath: "/static/ArmorKits/Dp40HeroOfTheFederationImage.webp",
         type: "Средняя броня",
         name: "DP-40 «Герой федерации»",
@@ -396,7 +441,7 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[5].icon,
       },
       {
-        id: 13,
+        id: 14,
         imagePath: "/static/ArmorKits/Dp11ChampionOfThePeopleImage.webp",
         type: "Средняя броня",
         name: "DP-11 «Защитник народа»",
@@ -412,7 +457,7 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[5].icon,
       },
       {
-        id: 14,
+        id: 15,
         imagePath: "/static/ArmorKits/Tr9CavalierOfDemocracyImage.webp",
         type: "Средняя броня",
         name: "TR-9 «Кавалер демократии»",
@@ -427,7 +472,7 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[1].icon,
       },
       {
-        id: 15,
+        id: 16,
         imagePath: "/static/ArmorKits/Dp53SaviourOfTheFreeImage.webp",
         type: "Средняя броня",
         name: "DP-53 «Спаситель свободных»",
@@ -442,7 +487,7 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[3].icon,
       },
       {
-        id: 16,
+        id: 17,
         imagePath: "/static/ArmorKits/Sa25SteelTrooperImage.webp",
         type: "Средняя броня",
         name: "SA-25 «Стальной кавалерист»",
@@ -457,7 +502,7 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[6].icon,
       },
       {
-        id: 17,
+        id: 18,
         imagePath: "/static/ArmorKits/Sa12ServoAssistedImage.webp",
         type: "Средняя броня",
         name: "SA-12 «Сервоприводная»",
@@ -472,7 +517,7 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[6].icon,
       },
       {
-        id: 18,
+        id: 19,
         imagePath: "/static/ArmorKits/Ex03Prototype3Image.webp",
         type: "Средняя броня",
         name: "EX-03 «Прототип 3»",
@@ -487,7 +532,7 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[7].icon,
       },
       {
-        id: 19,
+        id: 20,
         imagePath: "/static/ArmorKits/Ex16Prototype16Image.webp",
         type: "Средняя броня",
         name: "EX-16 «Прототип 16»",
@@ -502,7 +547,7 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[7].icon,
       },
       {
-        id: 20,
+        id: 21,
         imagePath: "/static/ArmorKits/Fs34ExterminatorImage.webp",
         type: "Средняя броня",
         name: "FS-34 «Истребитель»",
@@ -517,7 +562,7 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[1].icon,
       },
       {
-        id: 21,
+        id: 22,
         imagePath: "/static/ArmorKits/B24EnforcerImage.webp",
         type: "Средняя броня",
         name: "B-24 «Вышибала»",
@@ -532,7 +577,7 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[1].icon,
       },
       {
-        id: 22,
+        id: 23,
         imagePath: "/static/ArmorKits/Sa04CombatTechnicianImage.webp",
         type: "Средняя броня",
         name: "SA-04 «Боевой техник»",
@@ -548,7 +593,7 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[5].icon,
       },
       {
-        id: 23,
+        id: 24,
         imagePath: "/static/ArmorKits/Ph56JaguarImage.webp",
         type: "Средняя броня",
         name: "PH-56 «Ягуар»",
@@ -556,6 +601,36 @@ class ArmorKitsStore {
         description:
           "«Двигайся как ягуар, бей как змей» — таким был девиз легендарного отряда спецназа ВССЗ, чьи реальные подвиги описаны в классической серии комиксов «Истории змей-коммандос».",
         price: 225,
+        armorRating: 100,
+        speed: 500,
+        staminaRegen: 100,
+        bonus: armorBonuses.peakPhisique,
+        warbondIcon: obtainingTypes[1].icon,
+      },
+      {
+        id: 25,
+        imagePath: "/static/ArmorKits/UF50.webp",
+        type: "Средняя броня",
+        name: "UF-50 «Кровавая гончая»",
+        obtainingMethod: "Покупается в боевом пропуске «Блюстители правды»",
+        description:
+          "Пользователям не рекомендуется царапать лаковое покрытие, так как пигмент «Красный 20 000», придающий этой броне ее фирменный оттенок, может быть связан с ускоренным расплетением ДНК.",
+        price: 100,
+        armorRating: 100,
+        speed: 500,
+        staminaRegen: 100,
+        bonus: armorBonuses.peakPhisique,
+        warbondIcon: obtainingTypes[1].icon,
+      },
+      {
+        id: 26,
+        imagePath: "/static/ArmorKits/UF84.webp",
+        type: "Средняя броня",
+        name: "UF-84 «Убийца сомнений»",
+        obtainingMethod: "Покупается в Супермагазине",
+        description:
+          "Одного вида этой брони достаточно, чтобы даже самые закоренелые диссиденты сошли со своего порочного пути.",
+        price: 600,
         armorRating: 100,
         speed: 500,
         staminaRegen: 100,
