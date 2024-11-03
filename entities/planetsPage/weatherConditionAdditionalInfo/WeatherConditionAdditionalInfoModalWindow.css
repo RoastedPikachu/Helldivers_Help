@@ -3,9 +3,9 @@
 }
 
 .weatherConditionAdditionalInfoWindow_Title {
-    @apply text-[#ffffff] text-[1.25rem] font-['Exo2'] font-semibold;
+    @apply text-[#ffffff] text-[1.25rem] font-[--font-primary] font-semibold;
 }
 
 .weatherConditionAdditionalInfoWindow_Text {
-    @apply mt-[10px] text-[#ffffff] text-[1rem] font-['Exo2'] font-medium brightness-75;
+    @apply mt-[10px] text-[#ffffff] text-[1rem] font-[--font-primary] font-medium brightness-75;
 }

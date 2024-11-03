@@ -3,9 +3,9 @@
 }
 
 .manualPageBlock_Number {
-    @apply text-[--theme-color] text-[2.5rem] font-['Exo2'] font-bold;
+    @apply text-[--theme-color] text-[2.5rem] font-[--font-primary] font-bold;
 }
 
 .manualPageBlock_Title {
-    @apply mt-[15px] text-[#ffffff] text-[1.75rem] font-['Exo2'] font-bold;
+    @apply mt-[15px] text-[#ffffff] text-[1.75rem] font-[--font-primary] font-bold;
 }

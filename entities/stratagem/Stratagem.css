@@ -15,7 +15,7 @@
 }
 
 .rootStratagemBlock_Top_Left_Title {
-    @apply ml-[20px] mlarge:ml-[10px] mlarge:w-[77.5%] text-[#2cc388] text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-['Exo2'] font-bold break-all overflow-ellipsis;
+    @apply ml-[20px] mlarge:ml-[10px] mlarge:w-[77.5%] text-[#2cc388] text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-[--font-primary] font-bold break-all overflow-ellipsis;
 }
 
 .rootStratagemBlock_Top_Button {
@@ -75,7 +75,7 @@
 }
 
 .rootStratagemBlock_Bottom_Top_Right_Text {
-    @apply mt-[10px] mlarge:mt-[5px] text-[#ffffff] text-[1.5rem] mlarge:text-[1.2rem] mmedium:text-[1.075rem] msmall:text-[0.95rem] font-['Exo2'] font-semibold;
+    @apply mt-[10px] mlarge:mt-[5px] text-[#ffffff] text-[1.5rem] mlarge:text-[1.2rem] mmedium:text-[1.075rem] msmall:text-[0.95rem] font-[--font-primary] font-semibold;
 }
 
 .rootStratagemBlock_Bottom_Top_Right_Text_Bold {
@@ -83,5 +83,5 @@
 }
 
 .rootStratagemBlock_Bottom_Description {
-    @apply w-[75%] mlarge:w-full min-h-[30px] text-[#ffffff] text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-medium brightness-75;
+    @apply w-[75%] mlarge:w-full min-h-[30px] text-[#ffffff] text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-[--font-primary] font-medium brightness-75;
 }

@@ -7,5 +7,5 @@
 }
 
 .navBlock_buttonEnemyLink_Text {
-  @apply mlarge:w-full text-[#2cc388] text-[1.375rem] mlarge:text-[1rem] mmedium:text-[0.875rem] font-['Exo2'] font-semibold;
+  @apply mlarge:w-full text-[#2cc388] text-[1.375rem] mlarge:text-[1rem] mmedium:text-[0.875rem] font-[--font-primary] font-semibold;
 }

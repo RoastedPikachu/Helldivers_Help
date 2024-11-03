@@ -7,7 +7,7 @@
 }
 
 .pageSection_Block_Title {
-    @apply mt-[20px] text-[#ffffff] text-[2.5rem] font-['Exo2'] font-bold;
+    @apply mt-[20px] text-[#ffffff] text-[2.5rem] font-[--font-primary] font-bold;
 }
 
 .pageSection_Block_Wrapper {

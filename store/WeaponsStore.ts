@@ -162,6 +162,24 @@ class WeaponsStore {
     },
     {
       id: 9,
+      imagePath: "/static/Weaponry/primary/SMG32.webp",
+      weaponType: weaponTypes.primary,
+      name: "SMG-32 «Взыскание»",
+      description:
+        "Тяжелый пистолет-пулемет, использующий крупнокалиберные боеприпасы. Невысокая скорострельность помогает справиться с сильной отдачей. Отличное оружие для стрельбы на короткой и средней дистанции.",
+      price: 40,
+      damage: 140,
+      magsCount: 6,
+      roundsPerMag: 15,
+      totalRounds: 90,
+      recoil: 53,
+      fireRate: 350,
+      totalDamage: 12600,
+      dps: 622,
+      obtainingTypeIcon: obtainingTypes[5].icon,
+    },
+    {
+      id: 10,
       imagePath: "/static/Weaponry/primary/Smg37Image.webp",
       weaponType: weaponTypes.primary,
       name: "SMG-37 «Защитник»",
@@ -179,7 +197,7 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
-      id: 10,
+      id: 11,
       imagePath: "/static/Weaponry/primary/Smg72Image.webp",
       weaponType: weaponTypes.primary,
       name: "SMG-72 «Трамбовщик»",
@@ -197,7 +215,7 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[9].icon,
     },
     {
-      id: 11,
+      id: 12,
       imagePath: "/static/Weaponry/primary/Mp98Image.webp",
       weaponType: weaponTypes.primary,
       name: "MP-98 «Рыцарь»",
@@ -215,7 +233,7 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[3].icon,
     },
     {
-      id: 12,
+      id: 13,
       imagePath: "/static/Weaponry/primary/Sg8Image.webp",
       weaponType: weaponTypes.primary,
       name: "SG-8 «Каратель»",
@@ -233,7 +251,7 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
-      id: 13,
+      id: 14,
       imagePath: "/static/Weaponry/primary/Sg8SImage.webp",
       weaponType: weaponTypes.primary,
       name: "SG-8S «Крушила»",
@@ -251,7 +269,25 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
-      id: 14,
+      id: 15,
+      imagePath: "/static/Weaponry/primary/SG20.webp",
+      weaponType: weaponTypes.primary,
+      name: "SG-20 «Стоп»",
+      description:
+        "Гуманное несмертельное оружие с двумя отдельными магазинами: один для бронебойных игольчатых боеприпасов, второй — для оглушающих.",
+      price: 20,
+      damage: 280,
+      magsCount: 3.75,
+      roundsPerMag: 16,
+      totalRounds: 60,
+      recoil: 120,
+      fireRate: 80,
+      totalDamage: 15000,
+      dps: 276,
+      obtainingTypeIcon: obtainingTypes[5].icon,
+    },
+    {
+      id: 16,
       imagePath: "/static/Weaponry/primary/Sg225Image.webp",
       weaponType: weaponTypes.primary,
       name: "SG-225 «Крушитель»",
@@ -269,7 +305,7 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
-      id: 15,
+      id: 17,
       imagePath: "/static/Weaponry/primary/Sg225IeImage.webp",
       weaponType: weaponTypes.primary,
       name: "SG-225IE «Зажигательный крушитель»",
@@ -287,7 +323,7 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[6].icon,
     },
     {
-      id: 16,
+      id: 18,
       imagePath: "/static/Weaponry/primary/Sg225SpImage.webp",
       weaponType: weaponTypes.primary,
       name: "SG-225SP «Крушитель ураган»",
@@ -305,7 +341,7 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
-      id: 17,
+      id: 19,
       imagePath: "/static/Weaponry/primary/Jar5Image.webp",
       weaponType: weaponTypes.primary,
       name: "JAR-5 «Угнетатель»",
@@ -323,7 +359,7 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[6].icon,
     },
     {
-      id: 18,
+      id: 20,
       imagePath: "/static/Weaponry/primary/Cb9Image.webp",
       weaponType: weaponTypes.primary,
       name: "CB-9 «Взрывной арбалет»",
@@ -341,7 +377,7 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[8].icon,
     },
     {
-      id: 19,
+      id: 21,
       imagePath: "/static/Weaponry/primary/R36Image.webp",
       weaponType: weaponTypes.primary,
       name: "R-36 «Извергатель»",
@@ -359,7 +395,7 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[8].icon,
     },
     {
-      id: 20,
+      id: 22,
       imagePath: "/static/Weaponry/primary/Las5Image.webp",
       weaponType: weaponTypes.primary,
       name: "LAS-5 «Коса»",
@@ -377,7 +413,7 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
-      id: 21,
+      id: 23,
       imagePath: "/static/Weaponry/primary/Las16Image.webp",
       weaponType: weaponTypes.primary,
       name: "LAS-16 «Серп»",
@@ -395,7 +431,7 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[7].icon,
     },
     {
-      id: 22,
+      id: 24,
       imagePath: "/static/Weaponry/primary/Plas1Image.webp",
       weaponType: weaponTypes.primary,
       name: "PLAS-1 «Поджигатель»",
@@ -413,7 +449,7 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
-      id: 23,
+      id: 25,
       imagePath: "/static/Weaponry/primary/Plas101Image.webp",
       weaponType: weaponTypes.primary,
       name: "PLAS-101 «Очиститель»",
@@ -431,7 +467,7 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[9].icon,
     },
     {
-      id: 24,
+      id: 26,
       imagePath: "/static/Weaponry/primary/Sg8PImage.webp",
       weaponType: weaponTypes.primary,
       name: "SG-8P «Плазменный каратель»",
@@ -449,7 +485,7 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[7].icon,
     },
     {
-      id: 25,
+      id: 27,
       imagePath: "/static/Weaponry/primary/Arc12Image.webp",
       weaponType: weaponTypes.primary,
       name: "ARC-12 «Налетчик»",

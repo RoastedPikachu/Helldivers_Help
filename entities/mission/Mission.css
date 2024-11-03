@@ -19,7 +19,7 @@
 }
 
 .rootShipModuleBlock_Top_Left_Title {
-    @apply mlarge:block ml-[20px] mlarge:ml-[10px] mlarge:w-[75%] text-[--theme-color] text-[1.75rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold;
+    @apply mlarge:block ml-[20px] mlarge:ml-[10px] mlarge:w-[75%] text-[--theme-color] text-[1.75rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-[--font-primary] font-bold;
 }
 
 .rootShipModuleBlock_Top_Button {
@@ -35,11 +35,11 @@
 }
 
 .rootShipModuleBlock_Bottom_Description {
-    @apply w-[75%] mlarge:w-[90%] text-[#ffffff] text-[1.25rem] mlarge:text-[0.95rem] mmedium:text-[0.825rem] msmall:text-[0.7rem] font-['Exo2'] font-medium brightness-75;
+    @apply w-[75%] mlarge:w-[90%] text-[#ffffff] text-[1.25rem] mlarge:text-[0.95rem] mmedium:text-[0.825rem] msmall:text-[0.7rem] font-[--font-primary] font-medium brightness-75;
 }
 
 .rootShipModuleBlock_Bottom_Text {
-    @apply mt-[10px] mlarge:mt-[5px] text-[#ffffff] text-[1.25rem] mlarge:text-[1.075rem] mmedium:text-[0.95rem] msmall:text-[0.825rem] font-['Exo2'] font-semibold;
+    @apply mt-[10px] mlarge:mt-[5px] text-[#ffffff] text-[1.25rem] mlarge:text-[1.075rem] mmedium:text-[0.95rem] msmall:text-[0.825rem] font-[--font-primary] font-semibold;
 }
 
 .rootShipModuleBlock_Bottom_Text_Bold {
@@ -59,7 +59,7 @@
 }
 
 .rootShipModuleBlock_Bottom_TableBlock_Table_TopRow_Column {
-    @apply pb-[10px] text-[--theme-color] text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold text-center;
+    @apply pb-[10px] text-[--theme-color] text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-[--font-primary] font-bold text-center;
 }
 
 .rootShipModuleBlock_Bottom_TableBlock_Table_Body {
@@ -67,5 +67,5 @@
 }
 
 .rootShipModuleBlock_Bottom_TableBlock_Table_Body_Column {
-    @apply py-[10px] text-[--theme-color] text-[1.5rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] text-center font-['Insignia'] font-bold;
+    @apply py-[10px] text-[--theme-color] text-[1.5rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] text-center font-[--font-secondary] font-bold;
 }

@@ -11,7 +11,7 @@
 }
 
 .topTableRow_Column_Title {
-    @apply text-[--theme-color] text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-['Exo2'] font-bold;
+    @apply text-[--theme-color] text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-[--font-primary] font-bold;
 }
 
 .tableRow {
@@ -23,17 +23,17 @@
 }
 
 .tableRow_Column_Text {
-    @apply w-[80%] text-[--theme-color] text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] text-left font-['Insignia'];
+    @apply w-[80%] text-[--theme-color] text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] text-left font-[--font-secondary];
 }
 
 .tableRow_FirstColumn_Text {
-    @apply ml-[10%] w-[90%] text-[--theme-color] text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] text-left font-['Insignia'];
+    @apply ml-[10%] w-[90%] text-[--theme-color] text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] text-left font-[--font-secondary];
 }
 
 .tableRow_Column_Text_Count {
-    @apply text-[--theme-color] text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-['Insignia'] font-bold;
+    @apply text-[--theme-color] text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-[--font-secondary] font-bold;
 }
 
 .tableRow_Column_Text_Bold {
-    @apply font-['Exo2'];
+    @apply font-[--font-primary];
 }

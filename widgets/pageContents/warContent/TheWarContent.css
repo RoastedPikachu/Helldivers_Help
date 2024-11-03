@@ -11,7 +11,7 @@
 }
 
 .galaxyMap_Wrapper_BlankBlock_Text {
-    @apply text-[#ffffff] text-[3rem] font-['Exo2'] font-semibold;
+    @apply text-[#ffffff] text-[3rem] font-[--font-primary] font-semibold;
 }
 
 .galaxyMap_Wrapper_BlankBlock_Icon {

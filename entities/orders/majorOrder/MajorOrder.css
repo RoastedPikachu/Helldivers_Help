@@ -7,23 +7,23 @@
 }
 
 .rootMajorOrderWidget_Top_Title {
-    @apply text-[#ffffff] text-[2rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-['Exo2'] font-bold;
+    @apply text-[#ffffff] text-[2rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-[--font-primary] font-bold;
 }
 
 .rootMajorOrderWidget_Top_TimeLeft {
-    @apply text-[#ffffff] text-[2rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-['Exo2'] font-bold;
+    @apply text-[#ffffff] text-[2rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-[--font-primary] font-bold;
 }
 
 .rootMajorOrderWidget_Description {
-    @apply mt-[20px] mlarge:mt-[10px] px-[20px] mlarge:px-[10px] text-[#2cc388] text-[1.25rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] font-['Exo2'] font-medium;
+    @apply mt-[20px] mlarge:mt-[10px] px-[20px] mlarge:px-[10px] text-[#2cc388] text-[1.25rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] font-[--font-primary] font-medium;
 }
 
 .rootMajorOrderWidget_TaskTitle {
-    @apply mt-[20px] mlarge:mt-[10px] mx-[20px] mlarge:mx-[10px] text-[#ffffff] text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold;
+    @apply mt-[20px] mlarge:mt-[10px] mx-[20px] mlarge:mx-[10px] text-[#ffffff] text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-[--font-primary] font-bold;
 }
 
 .rootMajorOrderWidget_TaskDescription {
-    @apply mt-[10px] mlarge:mt-[5px] mx-[20px] mlarge:mx-[10px] text-[#2cc388] text-[1.25rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] font-['Exo2'] font-medium;
+    @apply mt-[10px] mlarge:mt-[5px] mx-[20px] mlarge:mx-[10px] text-[#2cc388] text-[1.25rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] font-[--font-primary] font-medium;
 }
 
 .rootMajorOrderWidget_PlanetsBlock {
@@ -39,11 +39,11 @@
 }
 
 .rootMajorOrderWidget_PlanetsBlock_TextWrapper_Block_PlanetName {
-    @apply text-[#ffffff] text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold z-30;
+    @apply text-[#ffffff] text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-[--font-primary] font-bold z-30;
 }
 
 .rootMajorOrderWidget_PlanetsBlock_TextWrapper_Block_BoolText {
-    @apply text-[1.125rem] mlarge:text-[0.875rem] mmedium:text-[0.75rem] msmall:text-[0.7rem] font-['Exo2'] font-semibold z-30 brightness-75;
+    @apply text-[1.125rem] mlarge:text-[0.875rem] mmedium:text-[0.75rem] msmall:text-[0.7rem] font-[--font-primary] font-semibold z-30 brightness-75;
 }
 
 .rootMajorOrderWidget_LiberationProgress {
@@ -59,13 +59,13 @@
 }
 
 .rootMajorOrderWidget_Bottom_LeftText {
-    @apply text-[#ffffff] text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold;
+    @apply text-[#ffffff] text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-[--font-primary] font-bold;
 }
 
 .rootMajorOrderWidget_Bottom_NumberText {
-    @apply ml-[10px] text-[#ffe702] text-[2rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-['Insignia'] font-bold;
+    @apply ml-[10px] text-[#ffe702] text-[2rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-[--font-secondary] font-bold;
 }
 
 .rootMajorOrderWidget_Bottom_RightText {
-    @apply ml-[10px] text-[#ffe702] text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold;
+    @apply ml-[10px] text-[#ffe702] text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-[--font-primary] font-bold;
 }
