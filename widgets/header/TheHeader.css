@@ -1,5 +1,5 @@
 header {
-    @apply relative flex justify-between items-center deskWide:mx-[calc((100%-1440px)/2)] px-[5%] deskWide:px-0 w-full max-w-[1440px] h-[65px];
+    @apply relative flex justify-between items-center deskWide:mx-[calc((100%-1440px)/2)] px-[5%] deskWide:px-0 w-full max-w-[1440px] h-[65px] bg-[--color-bg-primary];
 }
 
 .headerLogoLink {
@@ -11,11 +11,11 @@ header {
 }
 
 .headerLogoLink_Text {
-    @apply mmedium:mt-[2.5px] msmall:mt-[5px] ml-[10px] mlarge:ml-0 text-[#ffffff] text-[2rem] mlarge:text-[1.75rem] mmedium:text-[1.625rem] msmall:text-[1.5rem] font-[--font-secondary] font-bold;
+    @apply mmedium:mt-[2.5px] msmall:mt-[5px] ml-[10px] mlarge:ml-0 text-[--color-white] text-[2rem] mlarge:text-[1.75rem] mmedium:text-[1.625rem] msmall:text-[1.5rem] font-secondary font-bold;
 }
 
 .headerLogoLink_Text_Bold {
-    @apply text-[#2cc384];
+    @apply text-[--color-theme];
 }
 
 .headerNavBlock {
@@ -23,5 +23,9 @@ header {
 }
 
 .headerNavBlock_Link {
-    @apply w-auto text-[#ffffff] text-[1.375rem] msmall:text-[1.25rem] text-center font-[--font-primary] font-bold outline-none;
+    @apply w-auto text-[--color-white] text-[1.375rem] msmall:text-[1.25rem] text-center font-primary font-bold outline-none duration-300 ease-in-out;
+}
+
+.headerNavBlock_Link:hover {
+    @apply text-[--color-theme];
 }

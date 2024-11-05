@@ -32,7 +32,7 @@ const TheHeader = observer(() => {
               <header>
                 <Link href="/" className="headerLogoLink">
                   <img
-                    src="/static/GeneralIcons/SkullIcon.svg"
+                    src="/static/GeneralIcons/HelldiversHelmet.svg"
                     alt=""
                     className="headerLogoLink_Icon"
                   />

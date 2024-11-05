@@ -15,8 +15,9 @@
 :root {
   --swiper-navigation-color: #2cc388 !important;
   --theme-color: #2cc388;
-  --font-primary: 'Exo2';
-  --font-secondary: 'Insignia';
+  --color-theme: #ffe500;
+  --color-white: #ffffff;
+  --color-bg-primary: #111111;
 }
 
 * {
@@ -28,8 +29,10 @@ html {
   scroll-behavior: smooth !important;
 }
 
+/*bg-[#01212f]*/
+
 body {
-  @apply relative bg-[#01212f];
+  @apply relative bg-[--color-bg-primary];
 }
 
 main {
@@ -37,7 +40,7 @@ main {
 }
 
 .pageTitle {
-  @apply text-[#ffffff] text-[2.5rem] mlarge:text-[1.75rem] mmedium:text-[1.625rem] msmall:text-[1.5rem] font-[--font-primary] font-bold;
+  @apply text-[--color-white] text-[2.5rem] mlarge:text-[1.75rem] mmedium:text-[1.625rem] msmall:text-[1.5rem] font-primary font-bold;
 }
 
 .pageTitle_Bold {
@@ -45,7 +48,7 @@ main {
 }
 
 .pageDescription {
-  @apply mt-[20px] mlarge:mt-[10px] w-[80%] mlarge:w-full text-[#ffffff] text-[1.5rem] mlarge:text-[1.125rem] font-[--font-primary] font-medium brightness-75;
+  @apply mt-[20px] mlarge:mt-[10px] w-[80%] mlarge:w-full text-[--color-white] text-[1.5rem] mlarge:text-[1.125rem] font-primary font-medium brightness-75;
 }
 
 .sliderWrapper_Slider_Slide {

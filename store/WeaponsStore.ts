@@ -631,6 +631,24 @@ class WeaponsStore {
       dps: 695,
       obtainingTypeIcon: obtainingTypes[10].icon,
     },
+    {
+      id: 8,
+      imagePath: "/static/Weaponry/secondary/PLAS15.webp",
+      weaponType: weaponTypes.secondary,
+      name: "PLAS-15 «Верный»",
+      description:
+        "Плазменный пистолет, заряжающий каждый выстрел, пока вы не отпустите спусковой крючок. Плазменные заряды взрываются при попадании.",
+      price: 45,
+      damage: 405,
+      magsCount: 8,
+      roundsPerMag: 3,
+      totalRounds: 30,
+      recoil: 170,
+      fireRate: 650,
+      totalDamage: 10000,
+      dps: 695,
+      obtainingTypeIcon: obtainingTypes[10].icon,
+    },
   ] as PrimaryOrSecondaryWeapon[];
 
   supportWeapons = [

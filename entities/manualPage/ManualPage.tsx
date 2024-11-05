@@ -12,9 +12,10 @@ import "./ManualPage.css";
 interface ManualSectionProps {
   id: number;
   link: string;
+  image: string;
 }
 
-const ManualPage: React.FC<ManualSectionProps> = ({ id, link }) => {
+const ManualPage: React.FC<ManualSectionProps> = ({ id, link, image }) => {
   const t = useTranslations("Pages");
 
   const [userLocale, setUserLocale] = useState("");
@@ -26,10 +27,10 @@ const ManualPage: React.FC<ManualSectionProps> = ({ id, link }) => {
   return (
     <Link href={link} locale={userLocale}>
       <div className="manualPageBlock">
-        <p className="manualPageBlock_Number">{id}.</p>
-
-        <p className="manualPageBlock_Title">{t(`${id}Link`)}</p>
+        <img src={image} alt="" className="w-full h-full" />
       </div>
+
+      <p className="manualPageBlock_Title">{t(`${id}Link`)}</p>
     </Link>
   );
 };

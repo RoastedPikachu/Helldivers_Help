@@ -149,18 +149,30 @@ export const playerCards = [
   },
   {
     id: 25,
-    image: "/static/PlayerCards/TruthEnforcersCard1.webp",
+    image: "/static/PlayerCards/ChemicalAgentsCard1.webp",
     price: 5,
     warbondImage: obtainingTypes[10].icon,
   },
   {
     id: 26,
-    image: "/static/PlayerCards/TruthEnforcersCard2.webp",
+    image: "/static/PlayerCards/ChemicalAgentsCard2.webp",
     price: 15,
     warbondImage: obtainingTypes[10].icon,
   },
   {
     id: 27,
+    image: "/static/PlayerCards/TruthEnforcersCard1.webp",
+    price: 5,
+    warbondImage: obtainingTypes[10].icon,
+  },
+  {
+    id: 28,
+    image: "/static/PlayerCards/TruthEnforcersCard2.webp",
+    price: 15,
+    warbondImage: obtainingTypes[10].icon,
+  },
+  {
+    id: 29,
     image: "/static/PlayerCards/SuperStoreCard1.webp",
     price: 75,
     warbondImage: obtainingTypes[10].icon,
