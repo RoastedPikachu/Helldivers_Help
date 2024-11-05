@@ -12,21 +12,26 @@ export const pages = [
   },
   {
     id: 4,
-    link: "/shipModules",
-    image: "/static/SES.webp",
-  },
-  {
-    id: 5,
     link: "/enemy/terminids",
     image: "/static/SES.webp",
   },
   {
+    id: 5,
+    link: "/shipModules",
+    image: "/static/SES.webp",
+  },
+  {
     id: 6,
-    link: "/enemy/automatons",
+    link: "/warbonds",
     image: "/static/SES.webp",
   },
   {
     id: 7,
+    link: "/enemy/automatons",
+    image: "/static/SES.webp",
+  },
+  {
+    id: 8,
     link: "/planets",
     image: "/static/SES.webp",
   },
