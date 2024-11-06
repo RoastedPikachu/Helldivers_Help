@@ -12,6 +12,7 @@ const config: Config = {
     fontFamily: {
       primary: ["Exo2"],
       secondary: ["Insignia"],
+      "en-secondary": ["fsSinclaire"],
     },
     extend: {
       backgroundImage: {

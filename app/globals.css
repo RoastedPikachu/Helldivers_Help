@@ -12,12 +12,23 @@
   src: url('./fonts/Exo2-VariableFont_wght.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'swiss721';
+  src: url('./fonts/swiss721.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'fsSinclaire';
+  src: url('./fonts/FSSinclaireRegular.otf') format('truetype');
+}
+
 :root {
   --swiper-navigation-color: #2cc388 !important;
   --theme-color: #2cc388;
   --color-theme: #ffe500;
   --color-white: #ffffff;
   --color-bg-primary: #111111;
+  --color-border-grey: #95939e;
 }
 
 * {

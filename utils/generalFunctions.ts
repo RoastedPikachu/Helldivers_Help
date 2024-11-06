@@ -55,3 +55,7 @@ export const getUserLocale = () => {
     return window.navigator.languages[0].slice(0, 2);
   }
 };
+
+export const getIntlArray = (array: string) => {
+  return JSON.parse(array);
+};

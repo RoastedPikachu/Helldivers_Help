@@ -319,5 +319,8 @@
     "obtainingMethodText": "Obtaining method",
     "applicationScopeText": "Application scope",
     "maxAmountText": "Max cap"
+  },
+  "data": {
+    "warbonds": "[\"HELLDIVERS MOBILIZE!\", \"STEELED VETERANS\", \"CUTTING EDGE\", \"POLAR PATRIOTS\", \"VIPER COMMANDOS\", \"FREEDOM'S FLAME\", \"CHEMICAL AGENTS\", \"TRUTH ENFORCERS\"]"
   }
 }
