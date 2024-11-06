@@ -27,8 +27,10 @@
   --theme-color: #2cc388;
   --color-theme: #ffe500;
   --color-white: #ffffff;
+  --color-black: #000000;
   --color-bg-primary: #111111;
   --color-border-grey: #95939e;
+  --color-border-blue: #417c83;
 }
 
 * {

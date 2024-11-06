@@ -3,7 +3,7 @@ import React from "react";
 import { Metadata } from "next";
 
 import ThePageContent from "@/widgets/pageContents/ThePageContent";
-import TheWarbondsContent from "@/widgets/pageContents/warbondsContent/TheWarbondsContent";
+import TheWarbondsContent from "@/widgets/pageContents/TheWarbondsContent";
 
 export const metadata: Metadata = {
   title: "HELLDIVERS 2: Боевые заслуги",
