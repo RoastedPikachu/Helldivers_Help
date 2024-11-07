@@ -3,7 +3,7 @@
 }
 
 .warbondItem-innerBlock {
-    @apply relative w-full h-full bg-gradient-to-b from-[#003f48] to-[#086c88] overflow-hidden;
+    @apply relative flex justify-center items-center w-full h-full bg-gradient-to-b from-[#003f48] to-[#086c88] overflow-hidden;
 }
 
 .warbondItem-innerBlock-price {
