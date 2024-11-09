@@ -3,19 +3,24 @@ import React from "react";
 import "./WarbondItem.css";
 
 interface WarbondItem {
+  positionStyle: string;
   price: number;
   image: string;
 }
 
-const WarbondItem: React.FC<WarbondItem> = ({ price, image }) => {
+const WarbondItem: React.FC<WarbondItem> = ({
+  positionStyle,
+  price,
+  image,
+}) => {
   const getItemSize = () => {
     const smallBlockStyles = "w-[192px] h-[172px]";
 
     const verticalBlockStyles = "w-[192px] h-[351px]";
 
-    const horizontalBlockStyles = "w-[401px] h-[172px]";
+    const horizontalBlockStyles = "w-[400px] h-[172px]";
 
-    const squareBlockStyles = "w-[401px] h-[351px]";
+    const squareBlockStyles = "w-[400px] h-[351px]";
 
     if (image?.includes("boosters")) {
       return image?.includes("vertical")
@@ -31,7 +36,7 @@ const WarbondItem: React.FC<WarbondItem> = ({ price, image }) => {
       return verticalBlockStyles;
     } else if (image?.includes("emotes")) {
       if (image?.includes("horizontal")) {
-        return "horizontalBlockStyles";
+        return horizontalBlockStyles;
       } else if (image?.includes("huge")) {
         return squareBlockStyles;
       } else {
@@ -62,7 +67,7 @@ const WarbondItem: React.FC<WarbondItem> = ({ price, image }) => {
     return "w-auto";
   };
   return (
-    <div className={`warbondItem ${getItemSize()}`}>
+    <div className={`warbondItem ${positionStyle} ${getItemSize()}`}>
       <div className="warbondItem-innerBlock-price">
         <img
           src="/static/Resources/MedalIcon.svg"

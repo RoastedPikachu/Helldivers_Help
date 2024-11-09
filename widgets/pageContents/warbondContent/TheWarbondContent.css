@@ -1,0 +1,27 @@
+.warbondContainer {
+    @apply relative grid gap-y-[15px] mx-auto w-[1024px] h-auto;
+}
+
+.warbondContainer-page {
+    @apply relative mx-auto w-full h-auto;
+}
+
+.warbondContainer-page-top {
+    @apply relative flex justify-between items-center mb-[15px] w-full h-auto;
+}
+
+.warbondContainer-page-top-title {
+    @apply text-[--color-white] text-[1.5rem] text-left font-primary font-medium;
+}
+
+.warbondContainer-page-right {
+    @apply flex items-center gap-x-[10px];
+}
+
+.warbondContainer-page-right-text {
+    @apply text-[--color-white] text-[1.5rem] text-left font-primary font-medium;
+}
+
+.warbondContainer-page-right-itemsBought {
+    @apply flex flex-wrap justify-start gap-[5px] w-[95px] h-auto;
+}

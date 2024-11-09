@@ -1,5 +1,5 @@
 .warbondItem {
-    @apply relative p-[8px] bg-[--color-black] border-[1px] border-[--color-border-blue] hover:border-[--color-theme] duration-300 ease-in-out cursor-pointer;
+    @apply absolute p-[8px] bg-[--color-black] border-[1px] border-[--color-border-blue] hover:border-[--color-theme] duration-300 ease-in-out cursor-pointer;
 }
 
 .warbondItem-innerBlock {
