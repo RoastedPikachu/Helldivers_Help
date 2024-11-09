@@ -3,18 +3,51 @@ import React from "react";
 import "./WarbondItem.css";
 
 interface WarbondItem {
-  width: number;
-  height: number;
   price: number;
   image: string;
 }
 
-const WarbondItem: React.FC<WarbondItem> = ({
-  width,
-  height,
-  price,
-  image,
-}) => {
+const WarbondItem: React.FC<WarbondItem> = ({ price, image }) => {
+  const getItemSize = () => {
+    const smallBlockStyles = "w-[192px] h-[172px]";
+
+    const verticalBlockStyles = "w-[192px] h-[351px]";
+
+    const horizontalBlockStyles = "w-[401px] h-[172px]";
+
+    const squareBlockStyles = "w-[401px] h-[351px]";
+
+    if (image?.includes("boosters")) {
+      return image?.includes("vertical")
+        ? verticalBlockStyles
+        : smallBlockStyles;
+    } else if (image?.includes("armor")) {
+      if (image?.includes("Body")) {
+        return squareBlockStyles;
+      } else if (image?.includes("Helmet")) {
+        return smallBlockStyles;
+      }
+    } else if (image?.includes("Card")) {
+      return verticalBlockStyles;
+    } else if (image?.includes("emotes")) {
+      if (image?.includes("horizontal")) {
+        return "horizontalBlockStyles";
+      } else if (image?.includes("huge")) {
+        return squareBlockStyles;
+      } else {
+        return smallBlockStyles;
+      }
+    } else if (image?.includes("SuperCredits") || image?.includes("coats")) {
+      return smallBlockStyles;
+    } else if (image?.includes("weapons")) {
+      if (image?.includes("horizontal")) {
+        return horizontalBlockStyles;
+      } else if (image?.includes("vertical")) {
+        return verticalBlockStyles;
+      }
+    }
+  };
+
   const getImageStyles = () => {
     if (image?.includes("Card")) {
       return "absolute bottom-0 left-0 w-[95%]";
@@ -29,10 +62,7 @@ const WarbondItem: React.FC<WarbondItem> = ({
     return "w-auto";
   };
   return (
-    <div
-      style={{ width: `${width}px`, height: `${height}px` }}
-      className="warbondItem"
-    >
+    <div className={`warbondItem ${getItemSize()}`}>
       <div className="warbondItem-innerBlock-price">
         <img
           src="/static/Resources/MedalIcon.svg"
