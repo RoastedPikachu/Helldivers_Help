@@ -27,6 +27,7 @@
   --theme-color: #2cc388;
   --color-theme: #ffe500;
   --color-white: #ffffff;
+  --color-grey: #ffffff99;
   --color-black: #000000;
   --color-bg-primary: #111111;
   --color-border-grey: #95939e;
@@ -57,11 +58,15 @@ main {
 }
 
 .pageTitle_Bold {
-  @apply text-[--theme-color] font-bold;
+  @apply text-[--color-theme] font-bold;
 }
 
 .pageDescription {
-  @apply mt-[20px] mlarge:mt-[10px] w-[80%] mlarge:w-full text-[--color-white] text-[1.5rem] mlarge:text-[1.125rem] font-primary font-medium brightness-75;
+  @apply mt-[20px] mlarge:mt-[10px] w-[70%] mlarge:w-full text-[--color-grey] text-[1.25rem] mlarge:text-[1.125rem] font-primary font-medium;
+}
+
+.pageDescription-link {
+  @apply text-[--color-theme] font-semibold brightness-90 hover:brightness-100 no-underline duration-300 ease-in-out;
 }
 
 .sliderWrapper_Slider_Slide {

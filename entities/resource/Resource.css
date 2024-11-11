@@ -1,5 +1,5 @@
 .resource {
-    @apply flex items-center py-[30px] mlarge:py-[15px] px-[30px] mlarge:px-[15px] w-full h-auto bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] cursor-pointer;
+    @apply flex items-center py-[30px] mlarge:py-[15px] px-[30px] mlarge:px-[15px] w-full h-auto bg-[url('/static/ResourceBg.png')] bg-bottom border-2 border-[--color-theme] rounded-[10px] cursor-pointer;
 }
 
 .resource_Icon {
@@ -7,5 +7,5 @@
 }
 
 .resource_Title {
-    @apply ml-[20px] text-[#ffffff] text-[1.75rem] mlarge:text-[1.5rem] mmedium:text-[1.375rem] font-[--font-primary] font-bold;
+    @apply ml-[20px] text-[--color-white] text-[1.75rem] mlarge:text-[1.5rem] mmedium:text-[1.375rem] font-ru-primary font-bold;
 }

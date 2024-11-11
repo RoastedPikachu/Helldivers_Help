@@ -11,6 +11,7 @@ const config: Config = {
   theme: {
     fontFamily: {
       primary: ["Exo2"],
+      "ru-primary": ["Exo2"],
       secondary: ["Insignia"],
       "en-secondary": ["fsSinclaire"],
     },

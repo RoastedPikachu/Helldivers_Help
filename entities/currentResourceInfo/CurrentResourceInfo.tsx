@@ -21,58 +21,52 @@ const CurrentResourceInfo: React.FC<TargetResourceInfoProps> = ({
   const t1 = useTranslations("CurrentResourceInfo");
 
   return (
-    <div className="currentResourceinfo">
-      <h3 className="currentResourceinfo_Title">
-        <Typewriter text={t(`${id}Title`)} delay={60} />
-      </h3>
+    <div className="currentResourceInfo">
+      <h3 className="currentResourceInfo_Title">{t(`${id}Title`)}</h3>
 
       {!prices?.length ? (
-        <p className="currentResourceinfo_Text">
-          <b className="mlarge:w-full">{t1("difficultiesText")}:</b>{" "}
-          <Typewriter text={t(`${id}Difficulties`)} delay={20} />
-        </p>
+        <div className="currentResourceInfo-textBlock">
+          <p className="currentResourceInfo-textBlock-title">
+            {t1("difficultiesText")}
+          </p>
+
+          <p className="currentResourceInfo-textBlock-text">
+            {t(`${id}Difficulties`)}
+          </p>
+        </div>
       ) : (
-        <>
-          <p className="currentResourceinfo_Text">
-            <b>150 кредитов: </b>
-            <Typewriter text={prices[0]} delay={40} />
-          </p>
-
-          <p className="currentResourceinfo_Text">
-            <b>375 кредитов: </b>
-            <Typewriter text={prices[1]} delay={40} />
-          </p>
-
-          <p className="currentResourceinfo_Text">
-            <b>1000 кредитов: </b>
-            <Typewriter text={prices[2]} delay={40} />
-          </p>
-
-          <p className="currentResourceinfo_Text">
-            <b>2100 кредитов: </b>
-            <Typewriter text={prices[3]} delay={40} />
-          </p>
-        </>
+        <div className="currentResourceInfo-image" />
       )}
 
-      <p className="currentResourceinfo_Text">
-        <b className="mlarge:block mlarge:w-full">
-          {t1("obtainingMethodText")}:
-        </b>{" "}
-        <Typewriter text={t(`${id}ObtainingMethod`)} delay={20} />
-      </p>
+      <div className="currentResourceInfo-textBlock">
+        <p className="currentResourceInfo-textBlock-title">
+          {t1("obtainingMethodText")}
+        </p>
 
-      <p className="currentResourceinfo_Text">
-        <b className="mlarge:block mlarge:w-full">
-          {t1("applicationScopeText")}:
-        </b>{" "}
-        <Typewriter text={t(`${id}ApplicationScope`)} delay={20} />
-      </p>
+        <p className="currentResourceInfo-textBlock-text">
+          {t(`${id}ObtainingMethod`)}
+        </p>
+      </div>
 
-      <p className="currentResourceinfo_Text">
-        <b className="mlarge:block mlarge:w-full">{t1("maxAmountText")}:</b>{" "}
-        <Typewriter text={maxAmount} delay={40} />
-      </p>
+      <div className="currentResourceInfo-textBlock">
+        <p className="currentResourceInfo-textBlock-title">
+          {t1("applicationScopeText")}
+        </p>
+
+        <p className="currentResourceInfo-textBlock-text">
+          {t(`${id}ApplicationScope`)}
+        </p>
+      </div>
+
+      {!prices?.length && (
+        <div className="currentResourceInfo-textBlock">
+          <p className="currentResourceInfo-textBlock-title">
+            {t1("maxAmountText")}
+          </p>
+
+          <p className="currentResourceInfo-textBlock-text">{maxAmount}</p>
+        </div>
+      )}
     </div>
   );
 };

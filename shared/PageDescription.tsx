@@ -8,7 +8,7 @@ interface ThePageDescriptionProps {
 const PageDescription: React.FC<ThePageDescriptionProps> = ({
   description,
 }) => {
-  return <p className="pageDescription">{description}</p>;
+  return <span className="pageDescription">{description}</span>;
 };
 
 export default PageDescription;
