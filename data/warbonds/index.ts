@@ -32,16 +32,21 @@ export const warbonds: Warbond[] = [
   },
   {
     id: 6,
+    image: "/static/warbonds/ViperCommandos.webp",
+    title: "vipercommandos",
+  },
+  {
+    id: 7,
     image: "/static/warbonds/FreedomsFlame.webp",
     title: "freedomsflame",
   },
   {
-    id: 7,
+    id: 8,
     image: "/static/warbonds/ChemicalAgents.webp",
     title: "chemicalagents",
   },
   {
-    id: 8,
+    id: 9,
     image: "/static/warbonds/TruthEnforcers.webp",
     title: "truthenforcers",
   },

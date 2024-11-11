@@ -135,6 +135,24 @@ export const ranks = [
   },
   {
     id: 23,
+    iconPath: "/static/Ranks/FireSafetyOfficer.svg",
+    fromLevel: "",
+    xpCount: 0,
+  },
+  {
+    id: 24,
+    iconPath: "/static/Ranks/ExpertExterminator.svg",
+    fromLevel: "",
+    xpCount: 0,
+  },
+  {
+    id: 25,
+    iconPath: "/static/Ranks/FreeOfThought.svg",
+    fromLevel: "",
+    xpCount: 0,
+  },
+  {
+    id: 26,
     iconPath: "/static/Ranks/SuperCitizenIcon.svg",
     fromLevel: "",
     xpCount: 0,
