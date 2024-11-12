@@ -35,54 +35,56 @@ const TheWarbondContent = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-x-[17px] mx-auto w-[1000px] h-[540px]">
-            <div className="flex flex-wrap gap-x-[17px] gap-y-[17px] w-[401px] h-full">
-              <WarbondItem
-                price={2}
-                image={"/static/PlayerCards/SteeledVeteransCard1.webp"}
-              />
+          <div className="relative w-full h-[539px]">
+            <WarbondItem
+              positionStyle={"top-0 left-0"}
+              price={2}
+              image={"/static/PlayerCards/SteeledVeteransCard1.webp"}
+            />
 
-              <WarbondItem
-                price={15}
-                image={"/static/warbonds/weapons/vertical/P4.webp"}
-              />
+            <WarbondItem
+              positionStyle={"top-0 left-[208px]"}
+              price={15}
+              image={"/static/warbonds/weapons/vertical/P4.webp"}
+            />
 
-              <WarbondItem
-                price={8}
-                image={"/static/warbonds/emotes/SteeledVeteransEmote1.webp"}
-              />
-            </div>
+            <WarbondItem
+              positionStyle={"top-0 right-[416px]"}
+              price={7}
+              image={"/static/warbonds/SuperCredits.webp"}
+            />
 
-            <div className="flex flex-wrap gap-x-[17px] gap-y-[17px] w-[610px] h-full">
-              <div className="flex gap-x-[17px] w-full">
-                <WarbondItem
-                  price={7}
-                  image={"/static/warbonds/SuperCredits.webp"}
-                />
+            <WarbondItem
+              positionStyle={"top-0 right-0"}
+              price={20}
+              image={"/static/warbonds/weapons/horizontal/AR23C.webp"}
+            />
 
-                <WarbondItem
-                  price={20}
-                  image={"/static/warbonds/weapons/horizontal/AR23C.webp"}
-                />
-              </div>
+            <WarbondItem
+              positionStyle={"bottom-0 left-0"}
+              price={8}
+              image={
+                "/static/warbonds/emotes/horizontal/SteeledVeteransEmote1.webp"
+              }
+            />
 
-              <WarbondItem
-                price={18}
-                image={"/static/warbonds/armor/SA25Body.webp"}
-              />
+            <WarbondItem
+              positionStyle={"bottom-0 right-[208px]"}
+              price={18}
+              image={"/static/warbonds/armor/SA25Body.webp"}
+            />
 
-              <div className="grid gap-y-[17px] h-auto">
-                <WarbondItem
-                  price={12}
-                  image={"/static/warbonds/armor/SA25Helmet.webp"}
-                />
+            <WarbondItem
+              positionStyle={"bottom-[179px] right-0"}
+              price={12}
+              image={"/static/warbonds/armor/SA25Helmet.webp"}
+            />
 
-                <WarbondItem
-                  price={8}
-                  image={"/static/warbonds/coats/SteeledVeteransCoat1.webp"}
-                />
-              </div>
-            </div>
+            <WarbondItem
+              positionStyle={"bottom-0 right-0"}
+              price={8}
+              image={"/static/warbonds/coats/SteeledVeteransCoat1.webp"}
+            />
           </div>
         </div>
 
@@ -106,63 +108,60 @@ const TheWarbondContent = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-x-[17px] mx-auto w-[1000px] h-[540px]">
-            <div className="flex gap-x-[17px] gap-y-[17px] w-[401px] h-full">
-              <div className="grid gap-y-[17px] w-[192px] h-full">
-                <WarbondItem
-                  price={15}
-                  image={"/static/warbonds/emotes/SteeledVeteransEmote2.webp"}
-                />
+          <div className="relative w-full h-[539px]">
+            <WarbondItem
+              positionStyle={"top-0 left-0"}
+              price={15}
+              image={"/static/warbonds/emotes/SteeledVeteransEmote2.webp"}
+            />
 
-                <WarbondItem
-                  price={5}
-                  image={"/static/PlayerCards/SteeledVeteransCard2.webp"}
-                />
-              </div>
+            <WarbondItem
+              positionStyle={"top-0 left-[208px]"}
+              price={25}
+              image={"/static/warbonds/weapons/vertical/G10.webp"}
+            />
 
-              <div className="grid gap-y-[17px] w-[192px] h-full">
-                <WarbondItem
-                  price={25}
-                  image={"/static/warbonds/weapons/vertical/G10.webp"}
-                />
+            <WarbondItem
+              positionStyle={"top-0 right-[208px]"}
+              price={45}
+              image={"/static/warbonds/armor/SA12Body.webp"}
+            />
 
-                <WarbondItem
-                  price={16}
-                  image={"/static/warbonds/coats/SteeledVeteransCoat2.webp"}
-                />
-              </div>
-            </div>
+            <WarbondItem
+              positionStyle={"top-0 right-0"}
+              price={35}
+              image={"/static/warbonds/armor/SA12Helmet.webp"}
+            />
 
-            <div className="flex flex-wrap gap-x-[17px] gap-y-[17px] w-[610px] h-full">
-              <WarbondItem
-                price={45}
-                image={"/static/warbonds/armor/SA12Body.webp"}
-              />
+            <WarbondItem
+              positionStyle={"top-[179px] right-0"}
+              price={16}
+              image={"/static/warbonds/coats/SteeledVeteransCoat3.webp"}
+            />
 
-              <div className="grid gap-y-[17px] h-auto">
-                <WarbondItem
-                  price={35}
-                  image={"/static/warbonds/armor/SA12Helmet.webp"}
-                />
+            <WarbondItem
+              positionStyle={"bottom-0 left-0"}
+              price={5}
+              image={"/static/PlayerCards/SteeledVeteransCard2.webp"}
+            />
 
-                <WarbondItem
-                  price={16}
-                  image={"/static/warbonds/coats/SteeledVeteransCoat3.webp"}
-                />
-              </div>
+            <WarbondItem
+              positionStyle={"bottom-0 left-[208px]"}
+              price={16}
+              image={"/static/warbonds/coats/SteeledVeteransCoat2.webp"}
+            />
 
-              <div className="flex gap-x-[17px] w-full">
-                <WarbondItem
-                  price={12}
-                  image={"/static/warbonds/SuperCredits.webp"}
-                />
+            <WarbondItem
+              positionStyle={"bottom-0 right-[416px]"}
+              price={12}
+              image={"/static/warbonds/SuperCredits.webp"}
+            />
 
-                <WarbondItem
-                  price={60}
-                  image={"/static/warbonds/weapons/horizontal/SG225IE.webp"}
-                />
-              </div>
-            </div>
+            <WarbondItem
+              positionStyle={"bottom-0 right-0"}
+              price={60}
+              image={"/static/warbonds/weapons/horizontal/SG225IE.webp"}
+            />
           </div>
         </div>
 
@@ -186,54 +185,56 @@ const TheWarbondContent = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-x-[17px] mx-auto w-[1000px] h-[540px]">
-            <div className="flex flex-wrap gap-x-[17px] gap-y-[17px] w-[401px] h-full">
-              <WarbondItem
-                price={16}
-                image={"/static/PlayerCards/SteeledVeteransCard3.webp"}
-              />
+          <div className="relative w-full h-[539px]">
+            <WarbondItem
+              positionStyle={"top-0 left-0"}
+              price={16}
+              image={"/static/PlayerCards/SteeledVeteransCard3.webp"}
+            />
 
-              <WarbondItem
-                price={75}
-                image={"/static/warbonds/boosters/vertical/Booster.webp"}
-              />
+            <WarbondItem
+              positionStyle={"top-0 left-[208px]"}
+              price={75}
+              image={"/static/warbonds/boosters/vertical/Booster.webp"}
+            />
 
-              <WarbondItem
-                price={32}
-                image={"/static/warbonds/emotes/SteeledVeteransEmote3.webp"}
-              />
-            </div>
+            <WarbondItem
+              positionStyle={"top-0 right-[416px]"}
+              price={32}
+              image={"/static/warbonds/SuperCredits.webp"}
+            />
 
-            <div className="flex flex-wrap gap-x-[17px] gap-y-[17px] w-[610px] h-full">
-              <div className="flex gap-x-[17px] w-full">
-                <WarbondItem
-                  price={32}
-                  image={"/static/warbonds/SuperCredits.webp"}
-                />
+            <WarbondItem
+              positionStyle={"top-0 right-0"}
+              price={80}
+              image={"/static/warbonds/weapons/horizontal/JAR5.webp"}
+            />
 
-                <WarbondItem
-                  price={80}
-                  image={"/static/warbonds/weapons/horizontal/JAR5.webp"}
-                />
-              </div>
+            <WarbondItem
+              positionStyle={"bottom-0 left-0"}
+              price={32}
+              image={
+                "/static/warbonds/emotes/horizontal/SteeledVeteransEmote3.webp"
+              }
+            />
 
-              <WarbondItem
-                price={64}
-                image={"/static/warbonds/armor/SA32Body.webp"}
-              />
+            <WarbondItem
+              positionStyle={"bottom-0 right-[208px]"}
+              price={64}
+              image={"/static/warbonds/armor/SA32Body.webp"}
+            />
 
-              <div className="grid gap-y-[17px] h-auto">
-                <WarbondItem
-                  price={48}
-                  image={"/static/warbonds/armor/SA32Helmet.webp"}
-                />
+            <WarbondItem
+              positionStyle={"bottom-[179px] right-0"}
+              price={48}
+              image={"/static/warbonds/armor/SA32Helmet.webp"}
+            />
 
-                <WarbondItem
-                  price={20}
-                  image={"/static/warbonds/coats/SteeledVeteransCoat4.webp"}
-                />
-              </div>
-            </div>
+            <WarbondItem
+              positionStyle={"bottom-0 right-0"}
+              price={20}
+              image={"/static/warbonds/coats/SteeledVeteransCoat4.webp"}
+            />
           </div>
         </div>
       </div>
@@ -693,8 +694,9 @@ const TheWarbondContent = () => {
   };
 
   const getTargetWarbond = () => {
-    const warbondTitle = params.warbondTitle as string;
+    const warbondTitle = params.warbondTitle;
 
+    // @ts-ignore
     return warbondsHtmlContent[warbondTitle];
   };
   return (

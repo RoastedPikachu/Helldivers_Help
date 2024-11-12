@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 
+import { useTranslations } from "next-intl";
+
 import Link from "next/link";
 
 import { pages } from "@/data/pages/pages";
@@ -8,6 +10,8 @@ import { pages } from "@/data/pages/pages";
 import "./MobileHeaderContent.css";
 
 const MobileHeaderContent = () => {
+  const t = useTranslations("Pages");
+
   const [
     isAdditionalHeaderInfoOpened,
     changeIsAdditionalHeaderInfoOpenedStatus,
@@ -83,7 +87,7 @@ const MobileHeaderContent = () => {
                 href={`${page.link}`}
                 className="block text-[#ffffff] text-[1.25rem] msmall:text-[1.125rem] text-left font-['Exo2'] font-bold outline-none"
               >
-                {page.title.toUpperCase()}
+                {t(`${page.id}Link`).toUpperCase()}
               </Link>
             ))}
           </div>
