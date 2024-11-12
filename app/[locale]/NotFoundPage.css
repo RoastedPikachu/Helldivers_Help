@@ -3,7 +3,7 @@
 }
 
 .contentBlock_Title {
-    @apply row-span-3 text-[#2cc388] text-[10rem] text-center font-['Exo2'] font-bold;
+    @apply row-span-3 text-[--color-theme] text-[10rem] text-center font-ru-primary font-bold;
 }
 
 .contentBlock_Bottom {
@@ -11,18 +11,18 @@
 }
 
 .contentBlock_Bottom_Title {
-    @apply text-[#ffffff] text-[2rem] text-center font-['Exo2'] font-bold;
+    @apply text-[--color-white] text-[2rem] text-center font-ru-primary font-bold;
 }
 
 .contentBlock_Bottom_Title_Bold {
-    @apply text-[#2cc388] text-[2.5rem] font-['Insignia'];
+    @apply text-[--color-theme] text-[2.5rem] font-secondary;
 }
 
 .contentBlock_Bottom_Text {
-    @apply text-[#ffffff] text-[1.375rem] text-center font-['Exo2'] font-medium;
+    @apply text-[--color-white] text-[1.375rem] text-center font-ru-primary font-medium;
 }
 
 .contentBlock_Bottom_LinkButton {
-    @apply flex justify-center items-center w-[350px] h-[55px] bg-[#2cc388] rounded-[10px] text-[#ffffff] text-[1.5rem] font-semibold outline-none;
+    @apply flex justify-center items-center w-[350px] h-[55px] bg-[--color-theme] rounded-[10px] text-[--color-black] text-[1.5rem] font-semibold hover:opacity-90 outline-none duration-300 ease-in-out;
 }
 
