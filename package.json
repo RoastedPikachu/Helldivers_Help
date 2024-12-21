@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
@@ -22,6 +23,7 @@
     "react-instantsearch": "^7.11.0",
     "react-responsive": "^10.0.0",
     "react-zoom-pan-pinch": "^3.4.4",
+    "sqlite3": "^5.1.7",
     "swiper": "^11.0.7"
   },
   "devDependencies": {
