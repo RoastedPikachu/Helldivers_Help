@@ -43,19 +43,23 @@ const TheHeader = observer(() => {
                 </Link>
 
                 <nav className="headerNavBlock">
+                  <Link href="/news" className="headerNavBlock_Link mr-[50px]">
+                    {t("Link1")}
+                  </Link>
+
                   <Link href="/code" className="headerNavBlock_Link mr-[50px]">
-                    {t("firstLink")}
+                    {t("Link2")}
                   </Link>
 
                   <Link href="/war" className="headerNavBlock_Link mr-[50px]">
-                    {t("secondLink")}
+                    {t("Link3")}
                   </Link>
 
                   <Link
                     href="/stratagemTraining"
                     className="headerNavBlock_Link col-span-2"
                   >
-                    {t("thirdLink")}
+                    {t("Link4")}
                   </Link>
                 </nav>
               </header>

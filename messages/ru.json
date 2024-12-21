@@ -289,9 +289,10 @@
     "superCreditsMaxAmount": "Зависит от размеров кошелька или вашего времени"
   },
   "Header": {
-    "firstLink": "КОДЕКС",
-    "secondLink": "ВОЙНА",
-    "thirdLink": "ТРЕНИРОВКА СТРАТАГЕМ"
+    "Link1": "НОВОСТИ",
+    "Link2": "КОДЕКС",
+    "Link3": "ВОЙНА",
+    "Link4": "ТРЕНИРОВКА СТРАТАГЕМ"
   },
   "Footer": {
     "firstLinkTitle": "ССЫЛКИ",
