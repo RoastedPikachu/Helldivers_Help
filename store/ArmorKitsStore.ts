@@ -238,6 +238,21 @@ class ArmorKitsStore {
         bonus: armorBonuses.unflinching,
         warbondIcon: obtainingTypes[10].icon,
       },
+      {
+        id: 16,
+        imagePath: "/static/ArmorKits/AC2.webp",
+        type: "Легкая броня",
+        name: "AC-2 «Исполнительный»",
+        obtainingMethod: "Броня из коллаборации с Killzone",
+        description:
+          "Шлем оснащен гептафокальными линзами, что делает его одинаково популярным как среди снайперов, так и среди любителей миниатюрного моделирования.",
+        price: 0,
+        armorRating: 50,
+        speed: 550,
+        staminaRegen: 125,
+        bonus: armorBonuses.unflinching,
+        warbondIcon: obtainingTypes[10].icon,
+      },
     ],
     medium: [
       {
