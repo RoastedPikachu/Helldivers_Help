@@ -35,9 +35,9 @@ const ArmorKit: React.FC<ArmorKitProps> = ({
     >
       <ObtainingTypeTag image={warbondIcon} />
 
-      <img src={imagePath} alt="" className="w-full h-full" />
+      <img src={imagePath} alt="" className="armorKitWidget-image" />
 
-      <p className="armorKitWidget_Text">{name}</p>
+      <p className="armorKitWidget-text">{name}</p>
     </div>
   );
 };
