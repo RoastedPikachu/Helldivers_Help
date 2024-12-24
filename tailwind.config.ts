@@ -9,6 +9,13 @@ const config: Config = {
     "./entities/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      transparent: "transparent",
+      white: "#FFFFFF",
+      black: "#000000",
+      theme: "#FFE500",
+      "primary-bg": "#111111",
+    },
     fontFamily: {
       primary: ["Exo2"],
       "ru-primary": ["Exo2"],
