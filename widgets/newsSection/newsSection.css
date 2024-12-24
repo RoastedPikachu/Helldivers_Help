@@ -1,0 +1,7 @@
+.newsSection {
+    @apply mx-auto w-full max-w-[900px];
+}
+
+.newsSection-itemsContainer {
+    @apply relative grid gap-y-[30px] mt-[30px] h-auto;
+}

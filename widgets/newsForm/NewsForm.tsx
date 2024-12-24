@@ -1,12 +1,68 @@
 "use client";
 import React, { useState } from "react";
 
+import { createNewsItem } from "@/utils/api/routes/news";
+
+import { ConfigProvider, Tabs, TabsProps } from "antd";
+
 import "./newsForm.css";
 
 const NewsForm = () => {
-  const [title, setTitle] = useState("");
+  const [ruTitle, setRuTitle] = useState("");
+  const [enTitle, setEnTitle] = useState("");
   const [cover, setCover] = useState("");
-  const [content, setContent] = useState("");
+  const [ruContent, setRuContent] = useState("");
+  const [enContent, setEnContent] = useState("");
+
+  const titleItems: TabsProps["items"] = [
+    {
+      key: "1",
+      label: "RU",
+      children: (
+        <textarea
+          placeholder="Введите заголовок новости"
+          onChange={(event) => setRuTitle(event.target.value)}
+          className="newsForm-titleInput"
+        />
+      ),
+    },
+    {
+      key: "2",
+      label: "EN",
+      children: (
+        <textarea
+          placeholder="Введите заголовок новости"
+          onChange={(event) => setEnTitle(event.target.value)}
+          className="newsForm-titleInput"
+        />
+      ),
+    },
+  ];
+
+  const items: TabsProps["items"] = [
+    {
+      key: "1",
+      label: "RU",
+      children: (
+        <textarea
+          placeholder="Введите текст новости"
+          onChange={(event) => setRuContent(event.target.value)}
+          className="newsForm-contentInput"
+        />
+      ),
+    },
+    {
+      key: "2",
+      label: "EN",
+      children: (
+        <textarea
+          placeholder="Введите текст новости"
+          onChange={(event) => setEnContent(event.target.value)}
+          className="newsForm-contentInput"
+        />
+      ),
+    },
+  ];
 
   const handleImageChange = (event: any) => {
     const file = event.target.files[0];
@@ -21,18 +77,24 @@ const NewsForm = () => {
     reader.readAsDataURL(file);
   };
 
-  const addNewsItem = () => {
-    console.log(title, cover, content);
-  };
-
   return (
     <main>
       <form className="relative mx-auto w-full max-w-[900px]">
-        <textarea
-          placeholder="Введите заголовок новости"
-          onChange={(event) => setTitle(event.target.value)}
-          className="newsForm-titleInput"
-        />
+        <ConfigProvider
+          theme={{
+            token: {
+              colorPrimary: "#ffe500",
+            },
+            components: {
+              Tabs: {
+                itemColor: "#ffffff",
+                titleFontSize: 20,
+              },
+            },
+          }}
+        >
+          <Tabs defaultActiveKey="1" items={titleItems} />
+        </ConfigProvider>
 
         <label className="newsForm-coverInput">
           <input
@@ -52,15 +114,27 @@ const NewsForm = () => {
           )}
         </label>
 
-        <textarea
-          placeholder="Введите текст новости"
-          onChange={(event) => setContent(event.target.value)}
-          className="newsForm-contentInput"
-        />
+        <ConfigProvider
+          theme={{
+            token: {
+              colorPrimary: "#ffe500",
+            },
+            components: {
+              Tabs: {
+                itemColor: "#ffffff",
+                titleFontSize: 20,
+              },
+            },
+          }}
+        >
+          <Tabs defaultActiveKey="1" items={items} />
+        </ConfigProvider>
 
         <button
           type="button"
-          onClick={addNewsItem}
+          onClick={() =>
+            createNewsItem(ruTitle, enTitle, cover, ruContent, enContent)
+          }
           className="newsForm-submitButton"
         >
           Создать
