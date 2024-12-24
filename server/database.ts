@@ -17,10 +17,12 @@ db.serialize(() => {
     `
     CREATE TABLE IF NOT EXISTS news (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
-      createdAt TEXT NOT NULL,
-      title TEXT NOT NULL,
+      createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+      ruTitle TEXT NOT NULL,
+      enTitle TEXT NOT NULL,
       cover TEXT,
-      content TEXT NOT NULL
+      ruContent TEXT NOT NULL,
+      enContent TEXT NOT NULL
     )
   `,
     (err: Error) => {
