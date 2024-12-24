@@ -1,6 +1,6 @@
 input::-webkit-calendar-picker-indicator {
     @apply mt-[-10px] mlarge:mt-[-7.5px];
-    color: #2cc388;
+    color: #ffe500;
     opacity: 100;
 }
 
@@ -9,7 +9,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 form {
-    @apply relative flex justify-around mlarge:justify-between items-center mlarge:items-start mt-[20px] mlarge:py-[10px] mlarge:px-[10px] h-[80px] mlarge:h-[120px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px];
+    @apply relative flex justify-around mlarge:justify-between items-center mlarge:items-start mt-[20px] mlarge:py-[10px] mlarge:px-[10px] h-[80px] mlarge:h-[120px] bg-[#00293a] border-2 border-theme rounded-[10px];
 }
 
 .formInputBlock {
@@ -17,7 +17,7 @@ form {
 }
 
 .formInputBlock_Input {
-    @apply pl-[30px] mlarge:pl-[15px] w-full h-full bg-[#07212f] border-2 border-[--theme-color] rounded-[7.5px] text-[#ffffff] text-[1.5rem] mlarge:text-[1.25rem] mmedium:text-[1.075rem] msmall:text-[0.875rem] text-center font-[--font-primary] font-bold outline-none;
+    @apply pl-[30px] mlarge:pl-[15px] w-full h-full bg-[#07212f] border-2 border-theme rounded-[7.5px] text-white text-[1.5rem] mlarge:text-[1.25rem] mmedium:text-[1.075rem] msmall:text-[0.875rem] text-center font-ru-primary font-bold outline-none;
 }
 
 .formInputBlock_ClearButton {
@@ -29,9 +29,9 @@ form {
 }
 
 .formResultBlock {
-    @apply mlarge:absolute flex justify-center items-center mlarge:bottom-[10px] w-[400px] mlarge:w-[calc(100%-20px)] h-[50px] mlarge:h-[40px] bg-[#07212f] border-2 border-[#2cc388] rounded-[7.5px];
+    @apply mlarge:absolute flex justify-center items-center mlarge:bottom-[10px] w-[400px] mlarge:w-[calc(100%-20px)] h-[50px] mlarge:h-[40px] bg-[#07212f] border-2 border-theme rounded-[7.5px];
 }
 
 .formResultBlock_Text {
-    @apply text-[#ffffff] text-[1.5rem] mlarge:text-[1.375rem] mmedium:text-[1.25rem] msmall:text-[1rem] font-[--font-primary] font-bold;
+    @apply text-white text-[1.5rem] mlarge:text-[1.375rem] mmedium:text-[1.25rem] msmall:text-[1rem] font-ru-primary font-bold;
 }

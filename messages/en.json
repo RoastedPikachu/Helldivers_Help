@@ -264,8 +264,14 @@
     "20Title": "Private",
     "21Title": "Super Private",
     "22Title": "Viper Commando",
-    "23Title": "Super Citizen",
+    "23Title": "Fire safety officer",
+    "24Title": "Expert exterminator",
+    "25Title": "Free of thought",
+    "26Title": "Super Citizen",
     "viperCommandos": "Viper Commandos Warbond",
+    "freedomsFlame": "Freedom's Flame Warbond",
+    "chemicalAgents": "Chemical agents Warbond",
+    "truthEnforcers": "Truth enforcers warbond",
     "superCitizen": "Super Citizen Edition"
   },
   "Resources": {

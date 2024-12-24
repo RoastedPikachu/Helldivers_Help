@@ -21,6 +21,12 @@ const Rank: React.FC<RankProps> = ({ id, iconPath, fromLevel, xpCount }) => {
       case 22:
         return t("viperCommandos");
       case 23:
+        return t("freedomsFlame");
+      case 24:
+        return t("chemicalAgents");
+      case 25:
+        return t("truthEnforcers");
+      case 26:
         return t("superCitizen");
     }
   };
