@@ -296,9 +296,10 @@
     "superCreditsMaxAmount": "It depends on the size of your wallet or your time"
   },
   "Header": {
-    "firstLink": "CODE",
-    "secondLink": "GALAXY WAR",
-    "thirdLink": "STRATAGEM TRAINING"
+    "Link1": "News",
+    "Link2": "CODE",
+    "Link3": "GALAXY WAR",
+    "Link4": "STRATAGEM TRAINING"
   },
   "Footer": {
     "firstLinkTitle": "LINKS",
