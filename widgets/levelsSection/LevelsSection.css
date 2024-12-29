@@ -9,7 +9,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 form {
-    @apply relative flex justify-around mlarge:justify-between items-center mlarge:items-start mt-[20px] mlarge:py-[10px] mlarge:px-[10px] h-[80px] mlarge:h-[120px] bg-[#00293a] border-2 border-theme rounded-[10px];
+    @apply relative flex justify-around mlarge:justify-between items-center mlarge:items-start mt-[20px] mlarge:py-[10px] mlarge:px-[10px] h-[80px] mlarge:h-[120px] bg-[#00293a] border-2 border-theme  rounded-[10px];
 }
 
 .formInputBlock {
