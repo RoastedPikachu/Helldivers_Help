@@ -24,7 +24,6 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.scout,
-        warbondIcon: obtainingTypes[5].icon,
       },
       {
         id: 2,
@@ -40,7 +39,6 @@ class ArmorKitsStore {
         speed: 530,
         staminaRegen: 115,
         bonus: armorBonuses.scout,
-        warbondIcon: obtainingTypes[5].icon,
       },
       {
         id: 3,
@@ -55,7 +53,6 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.servoAssisted,
-        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 4,
@@ -71,7 +68,6 @@ class ArmorKitsStore {
         speed: 536,
         staminaRegen: 118,
         bonus: armorBonuses.engineerKit,
-        warbondIcon: obtainingTypes[8].icon,
       },
       {
         id: 5,
@@ -86,7 +82,6 @@ class ArmorKitsStore {
         speed: 521,
         staminaRegen: 111,
         bonus: armorBonuses.engineerKit,
-        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 6,
@@ -101,7 +96,6 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.engineerKit,
-        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 7,
@@ -116,7 +110,6 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.engineerKit,
-        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 8,
@@ -131,7 +124,6 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.fortification,
-        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 9,
@@ -145,8 +137,7 @@ class ArmorKitsStore {
         armorRating: 100,
         speed: 550,
         staminaRegen: 125,
-        bonus: armorBonuses.extraArmor,
-        warbondIcon: obtainingTypes[1].icon,
+        bonus: armorBonuses.extraPadding,
       },
       {
         id: 10,
@@ -161,7 +152,6 @@ class ArmorKitsStore {
         speed: 536,
         staminaRegen: 118,
         bonus: armorBonuses.medKit,
-        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 11,
@@ -176,7 +166,6 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.electricalCondult,
-        warbondIcon: obtainingTypes[7].icon,
       },
       {
         id: 12,
@@ -191,7 +180,6 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.scout,
-        warbondIcon: obtainingTypes[9].icon,
       },
       {
         id: 13,
@@ -206,14 +194,13 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.peakPhisique,
-        warbondIcon: obtainingTypes[10].icon,
       },
       {
         id: 14,
         imagePath: "/static/ArmorKits/I09.png",
         type: "Легкая броня",
         name: "I-09 «Самонаведение»",
-        obtainingMethod: "Покупается в боевом пропуске «Змеи-коммандос»",
+        obtainingMethod: "Покупается в боевом пропуске «Пламя свободы»",
         description:
             "Полированные кроваво-красные пластины выкованы в праведном пламени, как и герои, которых они должны защищать.",
         price: 70,
@@ -221,7 +208,6 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.inflammable,
-        warbondIcon: obtainingTypes[10].icon,
       },
       {
         id: 15,
@@ -236,7 +222,6 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.advancedFiltration,
-        warbondIcon: obtainingTypes[10].icon,
       },
       {
         id: 16,
@@ -251,7 +236,6 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.unflinching,
-        warbondIcon: obtainingTypes[10].icon,
       },
       {
         id: 17,
@@ -266,22 +250,20 @@ class ArmorKitsStore {
         speed: 550,
         staminaRegen: 125,
         bonus: armorBonuses.unflinching,
-        warbondIcon: obtainingTypes[10].icon,
       },
       {
         id: 18,
         imagePath: "/static/ArmorKits/SR24.png",
         type: "Легкая броня",
         name: "SR-24 «Уличный разведчик»",
-        obtainingMethod: "Броня из коллаборации с Killzone",
+        obtainingMethod: "Покупается в боевом пропуске «Городские легенды»",
         description:
             "Цветовая гамма брони навевает приятные воспоминания о колониальном прошлом и его атрибутах: бетонных жилищах в пограничье, гражданских комбинезонах цвета сланца и пироге космических поселенцев.",
         price: 30,
         armorRating: 50,
         speed: 550,
         staminaRegen: 125,
-        bonus: armorBonuses.unflinching,
-        warbondIcon: obtainingTypes[10].icon,
+        bonus: armorBonuses.siegeReady,
       },
     ],
     medium: [
@@ -297,8 +279,7 @@ class ArmorKitsStore {
         armorRating: 150,
         speed: 500,
         staminaRegen: 100,
-        bonus: armorBonuses.extraArmor,
-        warbondIcon: obtainingTypes[0].icon,
+        bonus: armorBonuses.extraPadding,
       },
       {
         id: 2,
@@ -313,7 +294,6 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.democracyProtects,
-        warbondIcon: obtainingTypes[0].icon,
       },
       {
         id: 3,
@@ -329,7 +309,6 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.democracyProtects,
-        warbondIcon: obtainingTypes[5].icon,
       },
       {
         id: 4,
@@ -345,7 +324,6 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.democracyProtects,
-        warbondIcon: obtainingTypes[5].icon,
       },
       {
         id: 5,
@@ -360,7 +338,6 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.democracyProtects,
-        warbondIcon: obtainingTypes[3].icon,
       },
       {
         id: 6,
@@ -374,8 +351,7 @@ class ArmorKitsStore {
         armorRating: 150,
         speed: 500,
         staminaRegen: 100,
-        bonus: armorBonuses.extraArmor,
-        warbondIcon: obtainingTypes[1].icon,
+        bonus: armorBonuses.extraPadding,
       },
       {
         id: 7,
@@ -391,7 +367,6 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.engineerKit,
-        warbondIcon: obtainingTypes[8].icon,
       },
       {
         id: 8,
@@ -407,7 +382,6 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.engineerKit,
-        warbondIcon: obtainingTypes[5].icon,
       },
       {
         id: 9,
@@ -422,7 +396,6 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.engineerKit,
-        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 10,
@@ -437,7 +410,6 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.engineerKit,
-        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 11,
@@ -453,7 +425,6 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.medKit,
-        warbondIcon: obtainingTypes[5].icon,
       },
       {
         id: 12,
@@ -468,7 +439,6 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.medKit,
-        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 13,
@@ -484,7 +454,6 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.medKit,
-        warbondIcon: obtainingTypes[5].icon,
       },
       {
         id: 14,
@@ -498,8 +467,7 @@ class ArmorKitsStore {
         armorRating: 150,
         speed: 500,
         staminaRegen: 100,
-        bonus: armorBonuses.extraArmor,
-        warbondIcon: obtainingTypes[2].icon,
+        bonus: armorBonuses.extraPadding,
       },
       {
         id: 15,
@@ -514,7 +482,6 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.democracyProtects,
-        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 16,
@@ -529,7 +496,6 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.extraPadding,
-        warbondIcon: obtainingTypes[4].icon,
       },
       {
         id: 17,
@@ -544,7 +510,6 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.medKit,
-        warbondIcon: obtainingTypes[4].icon,
       },
       {
         id: 18,
@@ -560,7 +525,6 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.scout,
-        warbondIcon: obtainingTypes[5].icon,
       },
       {
         id: 19,
@@ -575,7 +539,6 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.servoAssisted,
-        warbondIcon: obtainingTypes[6].icon,
       },
       {
         id: 20,
@@ -590,7 +553,6 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.servoAssisted,
-        warbondIcon: obtainingTypes[6].icon,
       },
       {
         id: 21,
@@ -605,7 +567,6 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.electricalCondult,
-        warbondIcon: obtainingTypes[7].icon,
       },
       {
         id: 22,
@@ -620,7 +581,6 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.electricalCondult,
-        warbondIcon: obtainingTypes[7].icon,
       },
       {
         id: 23,
@@ -635,7 +595,6 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.fortification,
-        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 24,
@@ -650,7 +609,6 @@ class ArmorKitsStore {
         speed: 471,
         staminaRegen: 71,
         bonus: armorBonuses.fortification,
-        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 25,
@@ -665,7 +623,6 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.peakPhisique,
-        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 26,
@@ -680,14 +637,13 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.inflammable,
-        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 27,
         imagePath: "/static/ArmorKits/I102.png",
         type: "Средняя броня",
         name: "I-102 «Драгонавт»",
-        obtainingMethod: "Покупается в Супермагазине",
+        obtainingMethod: "Покупается в боевом пропуске «Пламя свободы»",
         description:
             "Полностью покрыт слоем кварцево-волокнистой пены толщиной в 14 см за исключением тонких подходящих к ушам трубок, позволяющих слышать приятные вопли горящих врагов Свободы.",
         price: 375,
@@ -695,7 +651,6 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.inflammable,
-        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 28,
@@ -710,7 +665,6 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.advancedFiltration,
-        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 29,
@@ -725,7 +679,6 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.advancedFiltration,
-        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 30,
@@ -740,7 +693,6 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.unflinching,
-        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 31,
@@ -755,22 +707,20 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.unflinching,
-        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 32,
         imagePath: "/static/ArmorKits/AC1.png",
         type: "Средняя броня",
         name: "AC-1 «Добросовестный»",
-        obtainingMethod: "Покупается в Супермагазине",
+        obtainingMethod: "Броня из коллаборации с Killzone",
         description:
             "Дыхательный аппарат этой брони позволяет дышать полной грудью даже тем солдатам и колонистам, которые откомандированы на планеты с типами атмосферы «выше оптимального», «экстремальные условия» и «закаляющие характер».",
         price: 600,
         armorRating: 100,
         speed: 500,
         staminaRegen: 100,
-        bonus: armorBonuses.unflinching,
-        warbondIcon: obtainingTypes[1].icon,
+        bonus: armorBonuses.acclimated,
       },
     ],
     heavy: [
@@ -788,7 +738,6 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.fortification,
-        warbondIcon: obtainingTypes[5].icon,
       },
       {
         id: 2,
@@ -803,7 +752,6 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.fortification,
-        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 3,
@@ -819,7 +767,6 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.fortification,
-        warbondIcon: obtainingTypes[5].icon,
       },
       {
         id: 4,
@@ -835,7 +782,6 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.fortification,
-        warbondIcon: obtainingTypes[8].icon,
       },
       {
         id: 5,
@@ -850,7 +796,6 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.servoAssisted,
-        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 6,
@@ -865,7 +810,6 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.servoAssisted,
-        warbondIcon: obtainingTypes[6].icon,
       },
       {
         id: 7,
@@ -880,7 +824,6 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.fortification,
-        warbondIcon: obtainingTypes[9].icon,
       },
       {
         id: 8,
@@ -895,7 +838,6 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.servoAssisted,
-        warbondIcon: obtainingTypes[9].icon,
       },
       {
         id: 9,
@@ -910,7 +852,6 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.servoAssisted,
-        warbondIcon: obtainingTypes[2].icon,
       },
       {
         id: 10,
@@ -924,8 +865,7 @@ class ArmorKitsStore {
         armorRating: 200,
         speed: 450,
         staminaRegen: 50,
-        bonus: armorBonuses.extraArmor,
-        warbondIcon: obtainingTypes[1].icon,
+        bonus: armorBonuses.extraPadding,
       },
       {
         id: 11,
@@ -940,7 +880,6 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.engineerKit,
-        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 12,
@@ -955,7 +894,6 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.engineerKit,
-        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 13,
@@ -970,7 +908,6 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.medKit,
-        warbondIcon: obtainingTypes[1].icon,
       },
       {
         id: 14,
@@ -985,7 +922,6 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.peakPhisique,
-        warbondIcon: obtainingTypes[10].icon,
       },
       {
         id: 15,
@@ -1000,7 +936,6 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.inflammable,
-        warbondIcon: obtainingTypes[10].icon,
       },
       {
         id: 16,
@@ -1015,22 +950,20 @@ class ArmorKitsStore {
         speed: 450,
         staminaRegen: 50,
         bonus: armorBonuses.inflammable,
-        warbondIcon: obtainingTypes[10].icon,
       },
       {
         id: 17,
         imagePath: "/static/ArmorKits/SR18.png",
         type: "Тяжелая броня",
-        name: "SR-18 «Карантин»",
-        obtainingMethod: "Покупается в Супермагазине",
+        name: "SR-18 «Заграждение»",
+        obtainingMethod: "Покупается в боевом пропуске «Городские легенды»",
         description:
-            "Эта многослойная броня защищает от появления волдырей на глазах, разжижения подкожных тканей и разрушения желудочно-кишечного тракта и воплощает собой силу пошаговых улучшений на основе отзывов пользователей.",
+            "Для своих эмблема на плече этой брони символизирует приближение безопасной зоны, для чужих — что дальше им не пройти.",
         price: 650,
         armorRating: 150,
         speed: 450,
         staminaRegen: 50,
-        bonus: armorBonuses.inflammable,
-        warbondIcon: obtainingTypes[10].icon,
+        bonus: armorBonuses.siegeReady,
       },
       {
         id: 18,
@@ -1044,8 +977,7 @@ class ArmorKitsStore {
         armorRating: 150,
         speed: 450,
         staminaRegen: 50,
-        bonus: armorBonuses.inflammable,
-        warbondIcon: obtainingTypes[10].icon,
+        bonus: armorBonuses.siegeReady,
       },
     ],
   };

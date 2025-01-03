@@ -72,7 +72,6 @@ export interface ArmorKit {
   speed: number;
   staminaRegen: number;
   bonus: Bonus;
-  warbondIcon: string;
 }
 
 export interface CurrentArmorInfo {

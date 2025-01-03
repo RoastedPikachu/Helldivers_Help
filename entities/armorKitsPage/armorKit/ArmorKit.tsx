@@ -1,10 +1,14 @@
 "use client";
 import React from "react";
 
+import { ArmorBonus } from "@/data/armor/bonuses";
+
 import { armorStore } from "@/store/ArmorKitsStore";
 import { slidersStore } from "@/store/SlidersStore";
 
-import ObtainingTypeTag from "@/entities/obtainingTypeTag/ObtainingTypeTag";
+import Image from "next/image";
+
+import {Tooltip} from "antd";
 
 import "./ArmorKit.css";
 
@@ -13,7 +17,7 @@ interface ArmorKitProps {
   imagePath: string;
   type: string;
   name: string;
-  warbondIcon: string;
+  bonus: ArmorBonus;
 }
 
 const ArmorKit: React.FC<ArmorKitProps> = ({
@@ -21,7 +25,7 @@ const ArmorKit: React.FC<ArmorKitProps> = ({
   imagePath,
   type,
   name,
-  warbondIcon,
+  bonus,
 }) => {
   const handleCurrentArmorInfoChange = () => {
     slidersStore.handleCurrentSlideChange(id);
@@ -29,16 +33,20 @@ const ArmorKit: React.FC<ArmorKitProps> = ({
     armorStore.changeCurrentArmorInfo(id, type);
   };
   return (
-    <div
-      onClick={() => handleCurrentArmorInfoChange()}
-      className="armorKitWidget"
-    >
-      <ObtainingTypeTag image={warbondIcon} />
+      <div className="armorKit">
+        <div
+          onClick={() => handleCurrentArmorInfoChange()}
+          className="armorKitCard"
+        >
+          <Tooltip placement="top" title={(bonus.name + "\n" + bonus.description)} arrow={true} overlayStyle={{ whiteSpace: "pre-line" }} overlayInnerStyle={{ textAlign: "center" }}>
+              <Image src={bonus?.icon} alt={bonus?.name} width={40} height={40} className="armorKitCard-bonusIcon"/>
+          </Tooltip>
 
-      <img src={imagePath} alt="" className="armorKitWidget-image" />
+          <img src={imagePath} alt="" className="armorKitCard-image"/>
+        </div>
 
-      <p className="armorKitWidget-text">{name}</p>
-    </div>
+        <p className="armorKit-text">{name}</p>
+      </div>
   );
 };
 

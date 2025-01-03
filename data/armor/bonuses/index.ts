@@ -1,11 +1,11 @@
-interface ArmorBonus {
+export interface ArmorBonus {
   icon: string;
   name: string;
   description: string;
 }
 
 export const armorBonuses: { [key: string]: ArmorBonus } = {
-  extraArmor: {
+  extraPadding: {
     icon: "/static/armorBonuses/ExtraPadding.svg",
     name: "Экстра-уплотнение",
     description: "Обеспечивает более высокий рейтинг брони.",
@@ -34,7 +34,7 @@ export const armorBonuses: { [key: string]: ArmorBonus } = {
     description: "Дает 95% сопротивление урону от дуги.",
   },
   fortification: {
-    icon: "/static/armorBonuses/Fortification.svg",
+    icon: "/static/armorBonuses/Fortified.svg",
     name: "Укрепление",
     description:
       "Снижает отдачу в приседе и лежа еще на 30%. Дает 50% сопротивление урону от взрыва.",
@@ -73,8 +73,14 @@ export const armorBonuses: { [key: string]: ArmorBonus } = {
     name: "Непоколебимый",
     description: "Не дает Адским Десантникам дергаться, когда по ним попадают.",
   },
+  siegeReady: {
+    icon: "/static/armorBonuses/SiegeReady.svg",
+    name: "К осаде готов",
+    description:
+        "Повышает скорость перезарядки основого оружия на 30%. Повышает боезапас основного оружия на 20%.",
+  },
   acclimated: {
-    icon: "",
+    icon: "/static/armorBonuses/SiegeReady.svg",
     name: "Акклиматизированный",
     description:
       "Дает 50% сопротивления урону от огня, газа, кислоты и электричества.",
