@@ -12,7 +12,7 @@ class ArmorKitsStore {
     light: [
       {
         id: 1,
-        imagePath: "/static/ArmorKits/Sc30TrailblazerScoutImage.webp",
+        imagePath: "/static/ArmorKits/SC30.png",
         type: "Легкая броня",
         name: "SС-30 «Следопыт»",
         obtainingMethod:
@@ -28,9 +28,9 @@ class ArmorKitsStore {
       },
       {
         id: 2,
-        imagePath: "/static/ArmorKits/Sc34InfiltratorImage.webp",
+        imagePath: "/static/ArmorKits/SC34.png",
         type: "Легкая броня",
-        name: "SС-34 «Лазутчик»",
+        name: "SC-34 «Лазутчик»",
         obtainingMethod:
           "Покупается в боевом пропуске «Адские Десантники, в бой!»",
         description:
@@ -44,7 +44,7 @@ class ArmorKitsStore {
       },
       {
         id: 3,
-        imagePath: "/static/ArmorKits/Sc37LegionnaireImage.webp",
+        imagePath: "/static/ArmorKits/SC37.png",
         type: "Легкая броня",
         name: "SС-37 «Легионер»",
         obtainingMethod: "Покупается в Супермагазине",
@@ -75,7 +75,7 @@ class ArmorKitsStore {
       },
       {
         id: 5,
-        imagePath: "/static/ArmorKits/Ce67TitanImage.webp",
+        imagePath: "/static/ArmorKits/CE67.png",
         type: "Легкая броня",
         name: "CE-67 «Титан»",
         obtainingMethod: "Покупается в Супермагазине",
@@ -120,7 +120,7 @@ class ArmorKitsStore {
       },
       {
         id: 8,
-        imagePath: "/static/ArmorKits/Fs38EradicatorImage.webp",
+        imagePath: "/static/ArmorKits/FS38.png",
         type: "Легкая броня",
         name: "FS-38 «Искоренитель»",
         obtainingMethod: "Покупается в Супермагазине",
@@ -135,7 +135,7 @@ class ArmorKitsStore {
       },
       {
         id: 9,
-        imagePath: "/static/ArmorKits/B08LightGunnerImage.webp",
+        imagePath: "/static/ArmorKits/B08.png",
         type: "Легкая броня",
         name: "B-08 «Легкий стрелок»",
         obtainingMethod: "Покупается в Супермагазине",
@@ -150,7 +150,7 @@ class ArmorKitsStore {
       },
       {
         id: 10,
-        imagePath: "/static/ArmorKits/Cm21TrenchParamedicImage.webp",
+        imagePath: "/static/ArmorKits/CM21.png",
         type: "Легкая броня",
         name: "CM-21 «Траншейный медик»",
         obtainingMethod: "Покупается в Супермагазине",
@@ -165,7 +165,7 @@ class ArmorKitsStore {
       },
       {
         id: 11,
-        imagePath: "/static/ArmorKits/Ex00PrototypeXImage.webp",
+        imagePath: "/static/ArmorKits/EX00.png",
         type: "Легкая броня",
         name: "EX-00 «Прототип X»",
         obtainingMethod: "Покупается в боевом пропуске «На острие»",
@@ -180,7 +180,7 @@ class ArmorKitsStore {
       },
       {
         id: 12,
-        imagePath: "/static/ArmorKits/Cw4ArcticRangerImage.webp",
+        imagePath: "/static/ArmorKits/CW4.png",
         type: "Легкая броня",
         name: "CW-4 «Арктический рейнджер»",
         obtainingMethod: "Покупается в боевом пропуске «Полярные патриоты»",
@@ -195,7 +195,7 @@ class ArmorKitsStore {
       },
       {
         id: 13,
-        imagePath: "/static/ArmorKits/Ph9PredatorImage.webp",
+        imagePath: "/static/ArmorKits/PH9.png",
         type: "Легкая броня",
         name: "PH-9 «Хищник»",
         obtainingMethod: "Покупается в боевом пропуске «Змеи-коммандос»",
@@ -210,7 +210,22 @@ class ArmorKitsStore {
       },
       {
         id: 14,
-        imagePath: "/static/ArmorKits/AF50.webp",
+        imagePath: "/static/ArmorKits/I09.png",
+        type: "Легкая броня",
+        name: "I-09 «Самонаведение»",
+        obtainingMethod: "Покупается в боевом пропуске «Змеи-коммандос»",
+        description:
+            "Полированные кроваво-красные пластины выкованы в праведном пламени, как и герои, которых они должны защищать.",
+        price: 70,
+        armorRating: 50,
+        speed: 550,
+        staminaRegen: 125,
+        bonus: armorBonuses.inflammable,
+        warbondIcon: obtainingTypes[10].icon,
+      },
+      {
+        id: 15,
+        imagePath: "/static/ArmorKits/AF50.png",
         type: "Легкая броня",
         name: "AF-50 «Ядовитый рейнджер»",
         obtainingMethod: "Покупается в боевом пропуске «Химзащита»",
@@ -224,8 +239,8 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[10].icon,
       },
       {
-        id: 15,
-        imagePath: "/static/ArmorKits/UF16.webp",
+        id: 16,
+        imagePath: "/static/ArmorKits/UF16.png",
         type: "Легкая броня",
         name: "UF-16 «Инспектор»",
         obtainingMethod: "Покупается в боевом пропуске «Блюстители правды»",
@@ -239,8 +254,8 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[10].icon,
       },
       {
-        id: 16,
-        imagePath: "/static/ArmorKits/AC2.webp",
+        id: 17,
+        imagePath: "/static/ArmorKits/AC2.png",
         type: "Легкая броня",
         name: "AC-2 «Исполнительный»",
         obtainingMethod: "Броня из коллаборации с Killzone",
@@ -253,11 +268,26 @@ class ArmorKitsStore {
         bonus: armorBonuses.unflinching,
         warbondIcon: obtainingTypes[10].icon,
       },
+      {
+        id: 18,
+        imagePath: "/static/ArmorKits/SR24.png",
+        type: "Легкая броня",
+        name: "SR-24 «Уличный разведчик»",
+        obtainingMethod: "Броня из коллаборации с Killzone",
+        description:
+            "Цветовая гамма брони навевает приятные воспоминания о колониальном прошлом и его атрибутах: бетонных жилищах в пограничье, гражданских комбинезонах цвета сланца и пироге космических поселенцев.",
+        price: 30,
+        armorRating: 50,
+        speed: 550,
+        staminaRegen: 125,
+        bonus: armorBonuses.unflinching,
+        warbondIcon: obtainingTypes[10].icon,
+      },
     ],
     medium: [
       {
         id: 1,
-        imagePath: "/static/ArmorKits/B01TacticalImage.webp",
+        imagePath: "/static/ArmorKits/B01.png",
         type: "Средняя броня",
         name: "B-01 «Тактик»",
         obtainingMethod: "Пройдите обучение",
@@ -272,7 +302,7 @@ class ArmorKitsStore {
       },
       {
         id: 2,
-        imagePath: "/static/ArmorKits/DP00.webp",
+        imagePath: "/static/ArmorKits/DP00.png",
         type: "Средняя броня",
         name: "DP-00 «Тактик»",
         obtainingMethod: "Подарок на День свободы 26.10.24",
@@ -283,11 +313,11 @@ class ArmorKitsStore {
         speed: 500,
         staminaRegen: 100,
         bonus: armorBonuses.democracyProtects,
-        warbondIcon: "",
+        warbondIcon: obtainingTypes[0].icon,
       },
       {
         id: 3,
-        imagePath: "/static/ArmorKits/DP11.webp",
+        imagePath: "/static/ArmorKits/DP11.png",
         type: "Средняя броня",
         name: "DP-11 «Защитник народа»",
         obtainingMethod:
@@ -303,7 +333,7 @@ class ArmorKitsStore {
       },
       {
         id: 4,
-        imagePath: "/static/ArmorKits/DP40.webp",
+        imagePath: "/static/ArmorKits/DP40.png",
         type: "Средняя броня",
         name: "DP-40 «Герой федерации»",
         obtainingMethod:
@@ -334,7 +364,7 @@ class ArmorKitsStore {
       },
       {
         id: 6,
-        imagePath: "/static/ArmorKits/Cw9WhiteWolfImage.webp",
+        imagePath: "/static/ArmorKits/CW9.png",
         type: "Средняя броня",
         name: "CW-9 «Белый волк»",
         obtainingMethod: "Покупается в Супермагазине",
@@ -365,7 +395,7 @@ class ArmorKitsStore {
       },
       {
         id: 8,
-        imagePath: "/static/ArmorKits/Ce35TrenchEngineerImage.webp",
+        imagePath: "/static/ArmorKits/CE35.png",
         type: "Средняя броня",
         name: "CE-35 «Траншейный инженер»",
         obtainingMethod:
@@ -381,7 +411,7 @@ class ArmorKitsStore {
       },
       {
         id: 9,
-        imagePath: "/static/ArmorKits/Ce81JuggernautImage.webp",
+        imagePath: "/static/ArmorKits/CE81.png",
         type: "Средняя броня",
         name: "CE-81 «Джаггернаут»",
         obtainingMethod: "Покупается в Супермагазине",
@@ -411,7 +441,7 @@ class ArmorKitsStore {
       },
       {
         id: 11,
-        imagePath: "/static/ArmorKits/Сm09BonesnapperImage.webp",
+        imagePath: "/static/ArmorKits/CM09.png",
         type: "Средняя броня",
         name: "CM-09 «Костолом»",
         obtainingMethod:
@@ -427,7 +457,7 @@ class ArmorKitsStore {
       },
       {
         id: 12,
-        imagePath: "/static/ArmorKits/Cm10ClinicianImage.webp",
+        imagePath: "/static/ArmorKits/CM10.png",
         type: "Средняя броня",
         name: "CM-10 «Клиницист»",
         obtainingMethod: "Покупается в Супермагазине",
@@ -442,7 +472,7 @@ class ArmorKitsStore {
       },
       {
         id: 13,
-        imagePath: "/static/ArmorKits/Cm14PhysicianImage.webp",
+        imagePath: "/static/ArmorKits/CM14.png",
         type: "Средняя броня",
         name: "CM-14 «Врач»",
         obtainingMethod:
@@ -488,7 +518,7 @@ class ArmorKitsStore {
       },
       {
         id: 16,
-        imagePath: "/static/ArmorKits/TR40.webp",
+        imagePath: "/static/ArmorKits/TR40.png",
         type: "Средняя броня",
         name: "TR-40 «Золотой орел»",
         obtainingMethod: "Награда в честь выхода обновления Эскалация свободы",
@@ -503,7 +533,7 @@ class ArmorKitsStore {
       },
       {
         id: 17,
-        imagePath: "/static/ArmorKits/Tr117AlphaCommanderImage.webp",
+        imagePath: "/static/ArmorKits/TR117.png",
         type: "Средняя броня",
         name: "TR-117 «Альфа командир»",
         obtainingMethod: "Helldivers2 Twitch-drops",
@@ -518,7 +548,7 @@ class ArmorKitsStore {
       },
       {
         id: 18,
-        imagePath: "/static/ArmorKits/Sa04CombatTechnicianImage.webp",
+        imagePath: "/static/ArmorKits/SA04.png",
         type: "Средняя броня",
         name: "SA-04 «Боевой техник»",
         obtainingMethod:
@@ -534,7 +564,7 @@ class ArmorKitsStore {
       },
       {
         id: 19,
-        imagePath: "/static/ArmorKits/SA12.webp",
+        imagePath: "/static/ArmorKits/SA12.png",
         type: "Средняя броня",
         name: "SA-12 «Сервоприводная»",
         obtainingMethod: "Покупается в боевом пропуске «Закаленные ветераны»",
@@ -549,7 +579,7 @@ class ArmorKitsStore {
       },
       {
         id: 20,
-        imagePath: "/static/ArmorKits/SA25.webp",
+        imagePath: "/static/ArmorKits/SA25.png",
         type: "Средняя броня",
         name: "SA-25 «Стальной кавалерист»",
         obtainingMethod: "Покупается в боевом пропуске «Закаленные ветераны»",
@@ -564,7 +594,7 @@ class ArmorKitsStore {
       },
       {
         id: 21,
-        imagePath: "/static/ArmorKits/Ex03Prototype3Image.webp",
+        imagePath: "/static/ArmorKits/EX03.png",
         type: "Средняя броня",
         name: "EX-03 «Прототип 3»",
         obtainingMethod: "Покупается в боевом пропуске «На острие»",
@@ -579,7 +609,7 @@ class ArmorKitsStore {
       },
       {
         id: 22,
-        imagePath: "/static/ArmorKits/Ex16Prototype16Image.webp",
+        imagePath: "/static/ArmorKits/EX16.png",
         type: "Средняя броня",
         name: "EX-16 «Прототип 16»",
         obtainingMethod: "Покупается в боевом пропуске «На острие»",
@@ -594,7 +624,7 @@ class ArmorKitsStore {
       },
       {
         id: 23,
-        imagePath: "/static/ArmorKits/Fs34ExterminatorImage.webp",
+        imagePath: "/static/ArmorKits/FS34.png",
         type: "Средняя броня",
         name: "FS-34 «Истребитель»",
         obtainingMethod: "Покупается в Супермагазине",
@@ -609,7 +639,7 @@ class ArmorKitsStore {
       },
       {
         id: 24,
-        imagePath: "/static/ArmorKits/B24EnforcerImage.webp",
+        imagePath: "/static/ArmorKits/B24.png",
         type: "Средняя броня",
         name: "B-24 «Вышибала»",
         obtainingMethod: "Покупается в Супермагазине",
@@ -624,7 +654,7 @@ class ArmorKitsStore {
       },
       {
         id: 25,
-        imagePath: "/static/ArmorKits/Ph56JaguarImage.webp",
+        imagePath: "/static/ArmorKits/PH56.png",
         type: "Средняя броня",
         name: "PH-56 «Ягуар»",
         obtainingMethod: "Покупается в Супермагазине",
@@ -639,7 +669,7 @@ class ArmorKitsStore {
       },
       {
         id: 26,
-        imagePath: "/static/ArmorKits/I92.webp",
+        imagePath: "/static/ArmorKits/I92.png",
         type: "Средняя броня",
         name: "I-92 «Пожарный»",
         obtainingMethod: "Покупается в Супермагазине",
@@ -654,7 +684,22 @@ class ArmorKitsStore {
       },
       {
         id: 27,
-        imagePath: "/static/ArmorKits/AF02.webp",
+        imagePath: "/static/ArmorKits/I102.png",
+        type: "Средняя броня",
+        name: "I-102 «Драгонавт»",
+        obtainingMethod: "Покупается в Супермагазине",
+        description:
+            "Полностью покрыт слоем кварцево-волокнистой пены толщиной в 14 см за исключением тонких подходящих к ушам трубок, позволяющих слышать приятные вопли горящих врагов Свободы.",
+        price: 375,
+        armorRating: 100,
+        speed: 500,
+        staminaRegen: 100,
+        bonus: armorBonuses.inflammable,
+        warbondIcon: obtainingTypes[1].icon,
+      },
+      {
+        id: 28,
+        imagePath: "/static/ArmorKits/AF02.png",
         type: "Средняя броня",
         name: "AF-02 «Хим-мастер»",
         obtainingMethod: "Покупается в боевом пропуске «Химзащита»",
@@ -668,8 +713,8 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[1].icon,
       },
       {
-        id: 28,
-        imagePath: "/static/ArmorKits/AF91.webp",
+        id: 29,
+        imagePath: "/static/ArmorKits/AF91.png",
         type: "Средняя броня",
         name: "AF-91 «Полевой химик»",
         obtainingMethod: "Покупается в Супермагазине",
@@ -683,8 +728,8 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[1].icon,
       },
       {
-        id: 29,
-        imagePath: "/static/ArmorKits/UF50.webp",
+        id: 30,
+        imagePath: "/static/ArmorKits/UF50.png",
         type: "Средняя броня",
         name: "UF-50 «Кровавая гончая»",
         obtainingMethod: "Покупается в боевом пропуске «Блюстители правды»",
@@ -698,8 +743,8 @@ class ArmorKitsStore {
         warbondIcon: obtainingTypes[1].icon,
       },
       {
-        id: 30,
-        imagePath: "/static/ArmorKits/UF84.webp",
+        id: 31,
+        imagePath: "/static/ArmorKits/UF84.png",
         type: "Средняя броня",
         name: "UF-84 «Убийца сомнений»",
         obtainingMethod: "Покупается в Супермагазине",
@@ -712,11 +757,26 @@ class ArmorKitsStore {
         bonus: armorBonuses.unflinching,
         warbondIcon: obtainingTypes[1].icon,
       },
+      {
+        id: 32,
+        imagePath: "/static/ArmorKits/AC1.png",
+        type: "Средняя броня",
+        name: "AC-1 «Добросовестный»",
+        obtainingMethod: "Покупается в Супермагазине",
+        description:
+            "Дыхательный аппарат этой брони позволяет дышать полной грудью даже тем солдатам и колонистам, которые откомандированы на планеты с типами атмосферы «выше оптимального», «экстремальные условия» и «закаляющие характер».",
+        price: 600,
+        armorRating: 100,
+        speed: 500,
+        staminaRegen: 100,
+        bonus: armorBonuses.unflinching,
+        warbondIcon: obtainingTypes[1].icon,
+      },
     ],
     heavy: [
       {
         id: 1,
-        imagePath: "/static/ArmorKits/Fs05MarksmanImage.webp",
+        imagePath: "/static/ArmorKits/FS05.png",
         type: "Тяжелая броня",
         name: "FS-05 «Меткий стрелок»",
         obtainingMethod:
@@ -732,7 +792,7 @@ class ArmorKitsStore {
       },
       {
         id: 2,
-        imagePath: "/static/ArmorKits/Fs11ExecutionerImage.webp",
+        imagePath: "/static/ArmorKits/FS11.png",
         type: "Тяжелая броня",
         name: "FS-11 «Палач»",
         obtainingMethod: "Покупается в Супермагазине",
@@ -747,7 +807,7 @@ class ArmorKitsStore {
       },
       {
         id: 3,
-        imagePath: "/static/ArmorKits/Fs23BattleMasterImage.webp",
+        imagePath: "/static/ArmorKits/FS23.png",
         type: "Тяжелая броня",
         name: "FS-23 «Воевода»",
         obtainingMethod:
@@ -779,7 +839,7 @@ class ArmorKitsStore {
       },
       {
         id: 5,
-        imagePath: "/static/ArmorKits/Fs61DreadnoughtImage.webp",
+        imagePath: "/static/ArmorKits/FS61.png",
         type: "Тяжелая броня",
         name: "FS-61 «Дредноут»",
         obtainingMethod: "Покупается в Супермагазине",
@@ -794,7 +854,7 @@ class ArmorKitsStore {
       },
       {
         id: 6,
-        imagePath: "/static/ArmorKits/SA32.webp",
+        imagePath: "/static/ArmorKits/SA32.png",
         type: "Тяжелая броня",
         name: "SA-32 «Динамо»",
         obtainingMethod: "Покупается в боевом пропуске «Закаленные ветераны»",
@@ -809,7 +869,7 @@ class ArmorKitsStore {
       },
       {
         id: 7,
-        imagePath: "/static/ArmorKits/Cw22KadiaqImage.webp",
+        imagePath: "/static/ArmorKits/CW22.png",
         type: "Тяжелая броня",
         name: "CW-22 «Кадьяк»",
         obtainingMethod: "Покупается в боевом пропуске «Полярные патриоты»",
@@ -824,7 +884,7 @@ class ArmorKitsStore {
       },
       {
         id: 8,
-        imagePath: "/static/ArmorKits/Cw36WinterWarriorImage.webp",
+        imagePath: "/static/ArmorKits/CW36.png",
         type: "Тяжелая броня",
         name: "CW-36 «Зимний воин»",
         obtainingMethod: "Покупается в боевом пропуске «Полярные патриоты»",
@@ -854,7 +914,7 @@ class ArmorKitsStore {
       },
       {
         id: 10,
-        imagePath: "/static/ArmorKits/B27FortifiedCommandoImage.webp",
+        imagePath: "/static/ArmorKits/B27.png",
         type: "Тяжелая броня",
         name: "B-27 «Укрепленный коммандос»",
         obtainingMethod: "Покупается в Супермагазине",
@@ -869,7 +929,7 @@ class ArmorKitsStore {
       },
       {
         id: 11,
-        imagePath: "/static/ArmorKits/Ce64GrenadierImage.webp",
+        imagePath: "/static/ArmorKits/CE64.png",
         type: "Тяжелая броня",
         name: "CE-64 «Гренадер»",
         obtainingMethod: "Покупается в Супермагазине",
@@ -884,7 +944,7 @@ class ArmorKitsStore {
       },
       {
         id: 12,
-        imagePath: "/static/ArmorKits/Ce101GuerillaGorillaImage.webp",
+        imagePath: "/static/ArmorKits/CE101.png",
         type: "Тяжелая броня",
         name: "CE-101 «Горилла-партизан»",
         obtainingMethod: "Покупается в Супермагазине",
@@ -899,7 +959,7 @@ class ArmorKitsStore {
       },
       {
         id: 13,
-        imagePath: "/static/ArmorKits/Cm17ButcherImage.webp",
+        imagePath: "/static/ArmorKits/CM17.png",
         type: "Тяжелая броня",
         name: "CM-17 «Мясник»",
         obtainingMethod: "Покупается в Супермагазине",
@@ -914,7 +974,7 @@ class ArmorKitsStore {
       },
       {
         id: 14,
-        imagePath: "/static/ArmorKits/Ph202SticksBreakerImage.webp",
+        imagePath: "/static/ArmorKits/PH202.png",
         type: "Тяжелая броня",
         name: "PH-202 «Палколом»",
         obtainingMethod: "Покупается в боевом пропуске «Змеи-коммандос»",
@@ -929,7 +989,7 @@ class ArmorKitsStore {
       },
       {
         id: 15,
-        imagePath: "/static/ArmorKits/I44.webp",
+        imagePath: "/static/ArmorKits/I44.png",
         type: "Тяжелая броня",
         name: "I-44 «Саламандра»",
         obtainingMethod: "Покупается в Супермагазине",
@@ -944,12 +1004,42 @@ class ArmorKitsStore {
       },
       {
         id: 16,
-        imagePath: "/static/ArmorKits/AF52.webp",
+        imagePath: "/static/ArmorKits/AF52.png",
         type: "Тяжелая броня",
         name: "AF-52 «Карантин»",
         obtainingMethod: "Покупается в Супермагазине",
         description:
           "Эта многослойная броня защищает от появления волдырей на глазах, разжижения подкожных тканей и разрушения желудочно-кишечного тракта и воплощает собой силу пошаговых улучшений на основе отзывов пользователей.",
+        price: 650,
+        armorRating: 150,
+        speed: 450,
+        staminaRegen: 50,
+        bonus: armorBonuses.inflammable,
+        warbondIcon: obtainingTypes[10].icon,
+      },
+      {
+        id: 17,
+        imagePath: "/static/ArmorKits/SR18.png",
+        type: "Тяжелая броня",
+        name: "SR-18 «Карантин»",
+        obtainingMethod: "Покупается в Супермагазине",
+        description:
+            "Эта многослойная броня защищает от появления волдырей на глазах, разжижения подкожных тканей и разрушения желудочно-кишечного тракта и воплощает собой силу пошаговых улучшений на основе отзывов пользователей.",
+        price: 650,
+        armorRating: 150,
+        speed: 450,
+        staminaRegen: 50,
+        bonus: armorBonuses.inflammable,
+        warbondIcon: obtainingTypes[10].icon,
+      },
+      {
+        id: 18,
+        imagePath: "/static/ArmorKits/SR64.png",
+        type: "Тяжелая броня",
+        name: "SR-64 «Шлакоблок»",
+        obtainingMethod: "Покупается в Супермагазине",
+        description:
+            "Для изготовления этой брони использовался переработанный металл из проверенных источников, таких как упаковка из торговых автоматов и автоматоны, пущенные на металлолом. Идеальный выбор для экологически сознательных Адских Десантников.",
         price: 650,
         armorRating: 150,
         speed: 450,
