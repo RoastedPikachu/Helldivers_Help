@@ -1,15 +1,18 @@
 import React from "react";
 
-import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
 import ThePageContent from "@/widgets/pageContents/ThePageContent";
 import TheWeaponryContent from "@/widgets/pageContents/TheWeaponryContent";
 
-export const metadata: Metadata = {
-  title: "HELLDIVERS 2: Вооружение",
-  description:
-    "Вооружение — это ключ к успеху для любого Адского Десантника. От дробовиков до энергетического оружия — все это инструменты, которые помогут вам распространять управляемую демократию в галактике.",
-};
+export async function generateMetadata({ params: { locale } }: any) {
+  const t = await getTranslations("WeaponryPage");
+
+  return {
+    title: t("metadataTitle"),
+    description: t("metadataDescription"),
+  };
+}
 
 const Page = () => {
   return (

@@ -1,7 +1,7 @@
 .weaponWidget {
-    @apply relative flex justify-center pt-[20px] mlarge:pt-[10px] pb-[40px] mmedium:pb-[30px] px-[20px] mlarge:px-[10px] w-full h-auto bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] cursor-pointer;
+    @apply relative flex justify-center pt-[20px] mlarge:pt-[10px] pb-[40px] mmedium:pb-[30px] px-[20px] mlarge:px-[10px] w-full h-auto bg-primary-bg border-2 border-theme rounded-[10px] cursor-pointer;
 }
 
 .weaponWidget_Text {
-    @apply absolute bottom-[10px] mlarge:bottom-[7.5px] left-[20px] mlarge:left-[10px] text-[--theme-color] text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] text-left font-[--font-primary] font-bold brightness-125;
+    @apply absolute bottom-[10px] mlarge:bottom-[7.5px] left-[20px] mlarge:left-[10px] text-theme text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] text-left font-ru-primary font-bold brightness-125;
 }

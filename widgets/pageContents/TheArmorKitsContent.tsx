@@ -7,7 +7,6 @@ import { SwiperSlide } from "swiper/react";
 
 import { armorStore } from "@/store/ArmorKitsStore";
 
-import LegendSection from "@/widgets/legendSection/LegendSection";
 import ModalSlider from "@/widgets/modalSlider/ModalSlider";
 import EntitySection from "@/widgets/EntitySection";
 
@@ -50,8 +49,6 @@ const TheArmorKitsContent = observer(() => {
             }
           />
 
-          <LegendSection />
-
           <ModalSlider
             closeFunction={() => armorStore.clearCurrentArmorInfo()}
             currentEntityId={armorStore.currentArmorInfo.id}
@@ -86,7 +83,7 @@ const TheArmorKitsContent = observer(() => {
                 imagePath={armorKit.imagePath}
                 type={armorKit.type}
                 name={armorKit.name}
-                warbondIcon={armorKit.warbondIcon}
+                bonus={armorKit.bonus}
               />
             ))}
           </EntitySection>
@@ -102,7 +99,7 @@ const TheArmorKitsContent = observer(() => {
                 imagePath={armorKit.imagePath}
                 type={armorKit.type}
                 name={armorKit.name}
-                warbondIcon={armorKit.warbondIcon}
+                bonus={armorKit.bonus}
               />
             ))}
           </EntitySection>
@@ -118,7 +115,7 @@ const TheArmorKitsContent = observer(() => {
                 imagePath={armorKit.imagePath}
                 type={armorKit.type}
                 name={armorKit.name}
-                warbondIcon={armorKit.warbondIcon}
+                bonus={armorKit.bonus}
               />
             ))}
           </EntitySection>

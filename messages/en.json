@@ -1,4 +1,48 @@
 {
+  "ArmorPage": {
+    "metadataTitle": "HELLDIVERS.HELP: Armor",
+    "metadataDescription": "The armor for the Helldiver in Helldivers 2 plays a critical role in ensuring survivability and effectiveness on the battlefield. It protects against the long-range lasers of the Automatons, the claws and stings of the Terminids, and the armor set also provides certain mission-enhancing bonuses."
+  },
+  "BoostersPage": {
+    "metadataTitle": "HELLDIVERS.HELP: Boosters",
+    "metadataDescription": "To facilitate the advancement of democracy and freedom in the galaxy the leadership of Super Earth, with the help of scientists, was able to develop amplifiers."
+  },
+  "CoatsPage": {
+    "metadataTitle": "HELLDIVERS.HELP: Coats",
+    "metadataDescription": "The cape is the adornment of the Helldiver. It is a distinctive sign that they are all heroes, and heroes can't help but wear capes. It is as important an attribute to any Helldiver as a hat is to every self-respecting cowboy. So wear your cape with honor and dignity, lest you dishonor your comrades, democracy, and Super Earth."
+  },
+  "EnemiesPage": {
+    "metadataTitle": "HELLDIVERS.HELP. Enemies: All factions and their characteristics",
+    "metadataDescription": "A complete guide to the enemies in Helldivers 2. Learn weaknesses and tactics for fighting against Terminids, Automatons, and Illuminate. Prepare for battles with the enemies of democracy!"
+  },
+  "MissionsPage": {
+    "metadataTitle": "HELLDIVERS.HELP: Missions",
+    "metadataDescription": "Missions are what every Helldiver is in the business of accomplishing. It's the very purpose of their existence, after all, mission fulfillment is to help people, provide additional resources for Super Earth, and promote democracy in the galaxy."
+  },
+  "NewsPage": {
+    "metadataTitle": "HELLDIVERS.HELP: Updates, Events and Patches",
+    "metadataDescription": "All the latest Helldivers 2 news: patches, updates, events and more. Stay up to date with all the changes in the game and get ready for new challenges!"
+  },
+  "PlanetsPage": {
+    "metadataTitle": "HELLDIVERS.HELP: Planets",
+    "metadataDescription": "The Glossary of Planets contains information about the worlds involved in the galactic conflict. Each planet has its own characteristics, challenges, and strategic importance. Explore the unique characteristics of these celestial bodies to better understand the dynamics of the ongoing struggle for freedom, prosperity, and managed democracy."
+  },
+  "ShipModulesPage": {
+    "metadataTitle": "HELLDIVERS.HELP: Ship modules",
+    "metadataDescription": "The ship is your only safe place in the galaxy besides Super Earth. It is the place from which you embark on missions and to which you return, exhausted, tired, but satisfied with your progress. Your ship, just like you, needs improvements. Yes, each of these improvements is quite expensive, but the effects you get in return are worth it. You can turn your turrets into deadly firing units, or you can increase the frequency of attacking stratagems by showering democracy's enemies with a hail of bombs. The important thing to remember is that your ship is just as much a battle buddy as the other Hell Troopers!"
+  },
+  "StratagemsPage": {
+    "metadataTitle": "HELLDIVERS.HELP: Stratagems",
+    "metadataDescription": "Every Helldiver knows that on ruthless battlefields, survival depends not only on firepower, but also on strategy, cunning, and the judicious use of stratagems. These very useful 'things' in galactic warfare assert our dominance over the alien threat and uphold the values of freedom and guided democracy."
+  },
+  "StratagemTrainingPage": {
+    "metadataTitle": "HELLDIVERS.HELP: Stratagem Training",
+    "metadataDescription": "Improve your skill at rapid stratagem entry in constant training to advance a managed democracy in the galaxy as effectively as possible and kill the hated enemies of Super Earth more swiftly."
+  },
+  "WeaponryPage": {
+    "metadataTitle": "Helldivers.HELP. Weapons: A complete list of weapons and their characteristics",
+    "metadataDescription": "All about Helldivers 2 weapons: detailed descriptions and specifications. Rifles, shotguns, support weapons and other weapons."
+  },
   "HomePage": {
     "metadataTitle": "HELLDIVERS.HELP — Helldivers 2 Assistant: Wiki & Other",
     "metadataDescription": "Helldiver.help is an assistant site for each Helldiver who fights to ensure democracy, freedom and prosperity throughout the galaxy.",
@@ -8,11 +52,15 @@
     "pageDescription": "Welcome to the Helldivers 2 Manual! Get ready to plunge into the exciting world of global war with hostile invaders: Automatons and Terminids. In this manual you will find all the necessary information to make it easier to navigate the features of your equipment, enemies and planets of the galaxy and emerge victorious from all the missions you complete."
   },
   "ResourcesPage": {
+    "metadataTitle": "HELLDIVERS.HELP: Resources",
+    "metadataDescription": "Resources are the fuel to increase your personal effectiveness in the struggle to advance managed democracy, freedom and prosperity throughout the galaxy.",
     "pageTitle": "galaxy",
     "pageAdditionalTitle": "resources",
     "pageDescription": "Resources are the fuel to increase your personal effectiveness in the struggle to promote managed democracy, freedom and prosperity throughout the galaxy."
   },
   "ProgressionPage": {
+    "metadataTitle": "HELLDIVERS.HELP. Progression: Ranks, Levels and Titles",
+    "metadataDescription": "When you go into battle, remember that your courage and dedication will be recognized. Because of your diligence and loyalty to the cause of Super Earth, you will be promoted and honored for your heroic feats in advancing a managed democracy.",
     "pageTitle": "helldiver",
     "pageAdditionalTitle": "progression",
     "pageDescription": "When you go into battle, remember that your courage and dedication will be noticed. Thanks to your diligence and dedication to the cause of the Super Earth, you will receive promotions and honorary titles for your heroic deeds in promoting a managed democracy.",
@@ -20,6 +68,8 @@
     "firstSectionTitle": "TITLES"
   },
   "AchievementsPage": {
+    "metadataTitle":  "HELLDIVERS.HELP: Achievements",
+    "metadataDescription": "Full list of Helldivers 2 achievements: find out how to get all the trophies. Detailed description of each achievement and tips on how to complete them.",
     "pageTitle": "achievements",
     "pageAdditionalTitle": "",
     "pageDescription": "To encourage each Helldiver, the Super-Earth leadership has developed a list of achievements for which you will receive honor and respect from every citizen of a free and democratic galaxy.",
@@ -36,6 +86,8 @@
     "pageDescription": "Each Helldiver can add a touch of personality by choosing one of the player's unique cards. They will better highlight your armor and you among the comrades."
   },
   "EmotesPage": {
+    "metadataTitle": "HELLDIVERS.HELP: Emotes and victory poses.",
+    "metadataDescription": "During battles, any Helldiver accumulates a certain amount of impressions or experiences. They can easily be released in emotions! And celebrate victory and successful return with a beautiful victory pose. Show everyone your muscles or hug your favorite comrade, the main thing is to keep your sanity to continue spreading democracy throughout the galaxy.",
     "pageTitle": "helldiver",
     "pageAdditionalTitle": "emotes",
     "pageDescription": "During the battles, any Helldiver accumulates a certain share of impressions or experiences. They can be easily thrown out in emotions! You can celebrate the victory and successful return with a beautiful victory pose. Show everyone your muscles or hug your beloved comrade, the main thing is to keep your mind for the further continuation of the spread of democracy throughout the galaxy."

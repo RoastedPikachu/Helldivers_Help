@@ -1,15 +1,18 @@
 import React from "react";
 
-import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
 import ThePageContent from "@/widgets/pageContents/ThePageContent";
 import TheMissionsContent from "@/widgets/pageContents/TheMissionsContent";
 
-export const metadata: Metadata = {
-  title: "HELLDIVERS 2: Миссии",
-  description:
-    "Миссии — это то, выполнением чего занимается каждый Адский Десантник. Это сама цель их существования, ведь выполнение миссии — помощь людям, дополнительные ресурсы для Супер-Земли и продвижение демократии в галактике.",
-};
+export async function generateMetadata({ params: { locale } }: any) {
+  const t = await getTranslations("MissionsPage");
+
+  return {
+    title: t("metadataTitle"),
+    description: t("metadataDescription"),
+  };
+}
 
 const Page = () => {
   return (

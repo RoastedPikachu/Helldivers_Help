@@ -7,7 +7,7 @@ import bodyParser from "body-parser";
 import db from "./database";
 
 const app = express();
-const PORT = 3001;
+const PORT = 3002;
 
 app.use(bodyParser.json({ limit: "20mb" }));
 

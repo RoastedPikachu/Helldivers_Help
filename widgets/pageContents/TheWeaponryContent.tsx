@@ -7,7 +7,6 @@ import { SwiperSlide } from "swiper/react";
 
 import { weaponsStore } from "@/store/WeaponsStore";
 
-import LegendSection from "@/widgets/legendSection/LegendSection";
 import ModalSlider from "@/widgets/modalSlider/ModalSlider";
 import EntitySection from "@/widgets/EntitySection";
 
@@ -109,8 +108,6 @@ const TheWeaponryContent = observer(() => {
             }
           />
 
-          <LegendSection />
-
           <ModalSlider
             closeFunction={() => weaponsStore.clearCurrentWeaponInfo()}
             currentEntityId={weaponsStore.currentWeaponInfo.id}
@@ -135,7 +132,6 @@ const TheWeaponryContent = observer(() => {
                 weaponType={primaryWeapon.weaponType}
                 imagePath={primaryWeapon.imagePath}
                 name={primaryWeapon.name}
-                obtainingTypeIcon={primaryWeapon.obtainingTypeIcon}
               />
             ))}
           </EntitySection>
@@ -151,7 +147,6 @@ const TheWeaponryContent = observer(() => {
                 weaponType={primaryWeapon.weaponType}
                 imagePath={primaryWeapon.imagePath}
                 name={primaryWeapon.name}
-                obtainingTypeIcon={primaryWeapon.obtainingTypeIcon}
               />
             ))}
           </EntitySection>
@@ -167,7 +162,6 @@ const TheWeaponryContent = observer(() => {
                 weaponType={primaryWeapon.weaponType}
                 imagePath={primaryWeapon.imagePath}
                 name={primaryWeapon.name}
-                obtainingTypeIcon={primaryWeapon.obtainingTypeIcon}
               />
             ))}
           </EntitySection>
@@ -183,7 +177,6 @@ const TheWeaponryContent = observer(() => {
                 weaponType={primaryWeapon.weaponType}
                 imagePath={primaryWeapon.imagePath}
                 name={primaryWeapon.name}
-                obtainingTypeIcon={primaryWeapon.obtainingTypeIcon}
               />
             ))}
           </EntitySection>

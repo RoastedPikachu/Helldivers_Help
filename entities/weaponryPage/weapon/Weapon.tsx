@@ -6,8 +6,6 @@ import { weaponsStore } from "@/store/WeaponsStore";
 
 import { WeaponType } from "@/utils/dataInterfaces";
 
-import ObtainingTypeTag from "@/entities/obtainingTypeTag/ObtainingTypeTag";
-
 import "./Weapon.css";
 
 interface WeaponProps {
@@ -15,7 +13,6 @@ interface WeaponProps {
   weaponType: WeaponType;
   imagePath: string;
   name: string;
-  obtainingTypeIcon: string;
 }
 
 const Weapon: React.FC<WeaponProps> = ({
@@ -23,7 +20,6 @@ const Weapon: React.FC<WeaponProps> = ({
   weaponType,
   imagePath,
   name,
-  obtainingTypeIcon,
 }) => {
   const handleCurrentWeaponInfoChange = () => {
     slidersStore.handleCurrentSlideChange(id);
@@ -59,8 +55,6 @@ const Weapon: React.FC<WeaponProps> = ({
   };
   return (
     <div onClick={handleCurrentWeaponInfoChange} className="weaponWidget">
-      <ObtainingTypeTag image={obtainingTypeIcon} />
-
       <img
         src={imagePath}
         alt=""

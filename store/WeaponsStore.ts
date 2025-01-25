@@ -54,9 +54,9 @@ class WeaponsStore {
     },
     {
       id: 3,
-      imagePath: "/static/Weaponry/primary/LibConcImage.webp",
+      imagePath: "/static/Weaponry/primary/AR23C.webp",
       weaponType: weaponTypes.primary,
-      name: "AR-23Е «Взрывной освободитель»",
+      name: "AR-23C «Взрывной освободитель»",
       description:
         "Модифицированная винтовка «Освободитель», оснащенная разрывными патронами и коллиматорным прицелом. Обладает повышенным уроном и отдачей.",
       price: 20,
@@ -108,7 +108,7 @@ class WeaponsStore {
     },
     {
       id: 6,
-      imagePath: "/static/Weaponry/primary/Ar61Image.webp",
+      imagePath: "/static/Weaponry/primary/AR61.webp",
       weaponType: weaponTypes.primary,
       name: "AR-61 «Размягчитель»",
       description:
@@ -198,7 +198,7 @@ class WeaponsStore {
     },
     {
       id: 11,
-      imagePath: "/static/Weaponry/primary/Smg72Image.webp",
+      imagePath: "/static/Weaponry/primary/SMG72.webp",
       weaponType: weaponTypes.primary,
       name: "SMG-72 «Трамбовщик»",
       description:
@@ -306,7 +306,7 @@ class WeaponsStore {
     },
     {
       id: 17,
-      imagePath: "/static/Weaponry/primary/Sg225IeImage.webp",
+      imagePath: "/static/Weaponry/primary/SG225IE.webp",
       weaponType: weaponTypes.primary,
       name: "SG-225IE «Зажигательный крушитель»",
       description:
@@ -342,7 +342,7 @@ class WeaponsStore {
     },
     {
       id: 19,
-      imagePath: "/static/Weaponry/primary/Jar5Image.webp",
+      imagePath: "/static/Weaponry/primary/JAR5.webp",
       weaponType: weaponTypes.primary,
       name: "JAR-5 «Угнетатель»",
       description:
@@ -414,7 +414,7 @@ class WeaponsStore {
     },
     {
       id: 23,
-      imagePath: "/static/Weaponry/primary/Las16Image.webp",
+      imagePath: "/static/Weaponry/primary/LAS16.webp",
       weaponType: weaponTypes.primary,
       name: "LAS-16 «Серп»",
       description:
@@ -450,7 +450,7 @@ class WeaponsStore {
     },
     {
       id: 25,
-      imagePath: "/static/Weaponry/primary/Plas101Image.webp",
+      imagePath: "/static/Weaponry/primary/PLAS101.webp",
       weaponType: weaponTypes.primary,
       name: "PLAS-101 «Очиститель»",
       description:
@@ -468,7 +468,7 @@ class WeaponsStore {
     },
     {
       id: 26,
-      imagePath: "/static/Weaponry/primary/Sg8PImage.webp",
+      imagePath: "/static/Weaponry/primary/SG8P.webp",
       weaponType: weaponTypes.primary,
       name: "SG-8P «Плазменный каратель»",
       description:
@@ -486,7 +486,7 @@ class WeaponsStore {
     },
     {
       id: 27,
-      imagePath: "/static/Weaponry/primary/Arc12Image.webp",
+      imagePath: "/static/Weaponry/primary/ARC12.webp",
       weaponType: weaponTypes.primary,
       name: "ARC-12 «Налетчик»",
       description:
@@ -543,7 +543,7 @@ class WeaponsStore {
     },
     {
       id: 3,
-      imagePath: "/static/Weaponry/secondary/P4Image.webp",
+      imagePath: "/static/Weaponry/secondary/P4.webp",
       weaponType: weaponTypes.secondary,
       name: "P-4 «Сенатор»",
       description:
@@ -561,7 +561,7 @@ class WeaponsStore {
     },
     {
       id: 4,
-      imagePath: "/static/Weaponry/secondary/Las7Image.webp",
+      imagePath: "/static/Weaponry/secondary/LAS7.webp",
       weaponType: weaponTypes.secondary,
       name: "LAS-7 «Кинжал»",
       description:
@@ -597,7 +597,7 @@ class WeaponsStore {
     },
     {
       id: 6,
-      imagePath: "/static/Weaponry/secondary/P113Image.webp",
+      imagePath: "/static/Weaponry/secondary/P113.webp",
       weaponType: weaponTypes.secondary,
       name: "P-113 «Вердикт»",
       description:

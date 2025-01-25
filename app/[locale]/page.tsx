@@ -1,9 +1,7 @@
 import React from "react";
 
-import Head from "next/head";
-
 import { useTranslations } from "next-intl";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
 import { pages } from "@/data/pages/pages";
 
@@ -17,6 +15,15 @@ import PageDescription from "@/shared/PageDescription";
 import ManualPage from "@/entities/manualPage/ManualPage";
 import Link from "next/link";
 
+export async function generateMetadata({ params: { locale } }: any) {
+  const t = await getTranslations("HomePage");
+
+  return {
+    title: t("metadataTitle"),
+    description: t("metadataDescription"),
+  };
+}
+
 const Page: React.FC<{ params: { locale: string } }> = ({
   params: { locale },
 }) => {
@@ -25,12 +32,6 @@ const Page: React.FC<{ params: { locale: string } }> = ({
   const t = useTranslations("HomePage");
   return (
     <>
-      <Head>
-        <title>{t("metadataTitle")}</title>
-
-        <meta name="description" content={t("metadataDescription")} />
-      </Head>
-
       <TheTopPageBlock />
 
       <TheScrollToUpButton />

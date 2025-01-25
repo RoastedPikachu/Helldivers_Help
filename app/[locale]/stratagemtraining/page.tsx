@@ -3,10 +3,10 @@ import React from "react";
 import { getTranslations } from "next-intl/server";
 
 import ThePageContent from "@/widgets/pageContents/ThePageContent";
-import TheNewsContent from "@/widgets/pageContents/newsContent/TheNewsContent";
+import TheStratagemsTrainingContent from "@/widgets/pageContents/stratagemsTrainingContent/TheStratagemsTrainingContent";
 
 export async function generateMetadata({ params: { locale } }: any) {
-  const t = await getTranslations("NewsPage");
+  const t = await getTranslations("StratagemTrainingPage");
 
   return {
     title: t("metadataTitle"),
@@ -17,7 +17,7 @@ export async function generateMetadata({ params: { locale } }: any) {
 const Page = () => {
   return (
     <ThePageContent>
-      <TheNewsContent />
+      <TheStratagemsTrainingContent />
     </ThePageContent>
   );
 };

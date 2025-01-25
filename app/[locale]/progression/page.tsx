@@ -1,15 +1,18 @@
 import React from "react";
 
-import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
 import ThePageContent from "@/widgets/pageContents/ThePageContent";
 import TheProgressionContent from "@/widgets/pageContents/TheProgressionContent";
 
-export const metadata: Metadata = {
-  title: "HELLDIVERS 2: Прогрессия. Звания, уровни и титулы",
-  description:
-    "Когда вы отправляетесь в битву, помните, что ваше мужество и преданность будут отмечены. Благодаря вашему усердию и верности делу Супер-Земли, вы получите повышение и почетные звания за ваши героические подвиги в продвижении управляемой демократии.",
-};
+export async function generateMetadata({ params: { locale } }: any) {
+  const t = await getTranslations("ProgressionPage");
+
+  return {
+    title: t("metadataTitle"),
+    description: t("metadataDescription"),
+  };
+}
 
 const Page = () => {
   return (
