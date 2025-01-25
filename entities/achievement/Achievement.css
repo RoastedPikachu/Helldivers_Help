@@ -1,5 +1,5 @@
 .achievementWidget {
-    @apply px-[30px] mlarge:px-[15px] py-[30px] mlarge:py-[15px] w-full h-auto bg-[#00293a] border-2 border-[--theme-color] rounded-[10px];
+    @apply px-[30px] mlarge:px-[15px] py-[30px] mlarge:py-[15px] w-full h-auto bg-[url('/static/achievements/achievementBlockBackground.webp')] bg-cover border-2 border-theme rounded-[10px];
 }
 
 .achievementWidget_Top {
@@ -15,13 +15,13 @@
 }
 
 .achievementWidget_Top_Image_TextWrapper_Title {
-    @apply text-[#ffffff] text-[1.5rem] mlarge:text-[1.375rem] msmall:text-[1.25rem] font-[--font-primary] font-bold;
+    @apply text-theme text-[1.5rem] mlarge:text-[1.375rem] msmall:text-[1.25rem] font-primary font-bold;
 }
 
 .achievementWidget_Top_Image_TextWrapper_Description {
-    @apply mt-[10px] mlarge:mt-[10px] text-[--theme-color] text-[1.125rem] mlarge:text-[1rem] msmall:text-[0.875rem] font-[--font-primary] font-medium;
+    @apply mt-[10px] mlarge:mt-[10px] text-white text-[1.125rem] mlarge:text-[1rem] msmall:text-[0.875rem] font-primary font-medium;
 }
 
 .achievementWidget_Text {
-    @apply mt-[20px] mlarge:mt-[5px] text-[#ffffff] text-[1.375rem] mlarge:text-[1rem] msmall:text-[0.875rem] font-[--font-primary] font-medium brightness-75;
+    @apply mt-[20px] mlarge:mt-[5px] text-white text-[1.375rem] mlarge:text-[1rem] msmall:text-[0.875rem] font-primary font-medium brightness-75;
 }

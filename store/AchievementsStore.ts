@@ -7,165 +7,165 @@ class AchievementsStore {
     easy: [
       {
         id: 1,
-        iconPath: "/static/Achievements/TrainingIcon.webp",
+        iconPath: "/static/achievements/icons/TrainingIcon.webp",
       },
       {
         id: 2,
-        iconPath: "/static/Achievements/YoungLadIcon.webp",
+        iconPath: "/static/achievements/icons/YoungLadIcon.webp",
       },
       {
         id: 3,
-        iconPath: "/static/Achievements/BugStomperIcon.webp",
+        iconPath: "/static/achievements/icons/BugStomperIcon.webp",
       },
       {
         id: 4,
-        iconPath: "/static/Achievements/BotScrapperIcon.webp",
+        iconPath: "/static/achievements/icons/BotScrapperIcon.webp",
       },
       {
         id: 5,
-        iconPath: "/static/Achievements/TacticoolIcon.webp",
+        iconPath: "/static/achievements/icons/TacticoolIcon.webp",
       },
       {
         id: 6,
-        iconPath: "/static/Achievements/NightIcon.webp",
+        iconPath: "/static/achievements/icons/NightIcon.webp",
       },
       {
         id: 7,
-        iconPath: "/static/Achievements/CountrysideDefenceIcon.webp",
+        iconPath: "/static/achievements/icons/CountrysideDefenceIcon.webp",
       },
       {
         id: 8,
-        iconPath: "/static/Achievements/SpreadDemocracyIcon.webp",
+        iconPath: "/static/achievements/icons/SpreadDemocracyIcon.webp",
       },
       {
         id: 9,
-        iconPath: "/static/Achievements/JobIsDoneIcon.webp",
+        iconPath: "/static/achievements/icons/JobIsDoneIcon.webp",
       },
       {
         id: 10,
-        iconPath: "/static/Achievements/NickOfTimeIcon.webp",
+        iconPath: "/static/achievements/icons/NickOfTimeIcon.webp",
       },
       {
         id: 11,
-        iconPath: "/static/Achievements/LongArmIcon.webp",
+        iconPath: "/static/achievements/icons/LongArmIcon.webp",
       },
       {
         id: 12,
-        iconPath: "/static/Achievements/CoolGuysDontLookIcon.webp",
+        iconPath: "/static/achievements/icons/CoolGuysDontLookIcon.webp",
       },
       {
         id: 13,
-        iconPath: "/static/Achievements/HulkIcon.webp",
+        iconPath: "/static/achievements/icons/HulkIcon.webp",
       },
       {
         id: 14,
-        iconPath: "/static/Achievements/BileTitanIcon.webp",
+        iconPath: "/static/achievements/icons/BileTitanIcon.webp",
       },
       {
         id: 15,
-        iconPath: "/static/Achievements/EatThisIcon.webp",
+        iconPath: "/static/achievements/icons/EatThisIcon.webp",
       },
       {
         id: 16,
-        iconPath: "/static/Achievements/IllegalStalkingIcon.webp",
+        iconPath: "/static/achievements/icons/IllegalStalkingIcon.webp",
       },
       {
         id: 17,
-        iconPath: "/static/Achievements/HotPotatoIcon.webp",
+        iconPath: "/static/achievements/icons/HotPotatoIcon.webp",
       },
       {
         id: 18,
-        iconPath: "/static/Achievements/GetSomeIcon.webp",
+        iconPath: "/static/achievements/icons/GetSomeIcon.webp",
       },
       {
         id: 19,
-        iconPath: "/static/Achievements/InjuriesIcon.webp",
+        iconPath: "/static/achievements/icons/InjuriesIcon.webp",
       },
       {
         id: 20,
-        iconPath: "/static/Achievements/DemocracyStemIcon.webp",
+        iconPath: "/static/achievements/icons/DemocracyStemIcon.webp",
       },
       {
         id: 21,
-        iconPath: "/static/Achievements/PromoteSynergyIcon.webp",
+        iconPath: "/static/achievements/icons/PromoteSynergyIcon.webp",
       },
     ],
     extreme: [
       {
         id: 1,
-        iconPath: "/static/Achievements/ExtractamundoIcon.webp",
+        iconPath: "/static/achievements/icons/ExtractamundoIcon.webp",
       },
       {
         id: 2,
-        iconPath: "/static/Achievements/StratagemsIcon.webp",
+        iconPath: "/static/achievements/icons/StratagemsIcon.webp",
       },
       {
         id: 3,
-        iconPath: "/static/Achievements/DemocracyPowerIcon.webp",
+        iconPath: "/static/achievements/icons/DemocracyPowerIcon.webp",
       },
       {
         id: 4,
-        iconPath: "/static/Achievements/FireKillIcon.webp",
+        iconPath: "/static/achievements/icons/FireKillIcon.webp",
       },
       {
         id: 5,
-        iconPath: "/static/Achievements/QuantityScienceIcon.webp",
+        iconPath: "/static/achievements/icons/QuantityScienceIcon.webp",
       },
       {
         id: 6,
-        iconPath: "/static/Achievements/SamplesFriendIcon.webp",
+        iconPath: "/static/achievements/icons/SamplesFriendIcon.webp",
       },
       {
         id: 7,
-        iconPath: "/static/Achievements/HoldOnMyLiberTeaIcon.webp",
+        iconPath: "/static/achievements/icons/HoldOnMyLiberTeaIcon.webp",
       },
     ],
     helldive: [
       {
         id: 1,
-        iconPath: "/static/Achievements/DrawIcon.webp",
+        iconPath: "/static/achievements/icons/DrawIcon.webp",
       },
       {
         id: 2,
-        iconPath: "/static/Achievements/SuppliesIcon.webp",
+        iconPath: "/static/achievements/icons/SuppliesIcon.webp",
       },
       {
         id: 3,
-        iconPath: "/static/Achievements/HellDiveIcon.webp",
+        iconPath: "/static/achievements/icons/HellDiveIcon.webp",
       },
       {
         id: 4,
-        iconPath: "/static/Achievements/HoldMyPrimaryIcon.webp",
+        iconPath: "/static/achievements/icons/HoldMyPrimaryIcon.webp",
       },
       {
         id: 5,
-        iconPath: "/static/Achievements/360SecIcon.webp",
+        iconPath: "/static/achievements/icons/360SecIcon.webp",
       },
     ],
     longWay: [
       {
         id: 1,
-        iconPath: "/static/Achievements/GreaterGodIcon.webp",
+        iconPath: "/static/achievements/icons/GreaterGodIcon.webp",
       },
       {
         id: 2,
-        iconPath: "/static/Achievements/PatriotIcon.webp",
+        iconPath: "/static/achievements/icons/PatriotIcon.webp",
       },
       {
         id: 3,
-        iconPath: "/static/Achievements/DoingYourPartIcon.webp",
+        iconPath: "/static/achievements/icons/DoingYourPartIcon.webp",
       },
       {
         id: 4,
-        iconPath: "/static/Achievements/FullyOperationalIcon.webp",
+        iconPath: "/static/achievements/icons/FullyOperationalIcon.webp",
       },
       {
         id: 5,
-        iconPath: "/static/Achievements/ShipItIcon.webp",
+        iconPath: "/static/achievements/icons/ShipItIcon.webp",
       },
       {
         id: 6,
-        iconPath: "/static/Achievements/SuperEarthHeroIcon.webp",
+        iconPath: "/static/achievements/icons/SuperEarthHeroIcon.webp",
       },
     ],
   };

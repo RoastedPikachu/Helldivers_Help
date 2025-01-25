@@ -13,8 +13,7 @@ const ThePageTitle: React.FC<ThePageTitleProps> = ({
 }) => {
   return (
     <h2 className="pageTitle">
-      {title.toUpperCase()}{" "}
-      <b className="pageTitle_Bold">{additionalTitle.toUpperCase()}</b>
+      {title.toUpperCase()} {additionalTitle.toUpperCase()}
     </h2>
   );
 };
