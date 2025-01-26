@@ -1,43 +1,42 @@
 "use client";
 import React from "react";
 
-import ObtainingTypeTag from "@/entities/obtainingTypeTag/ObtainingTypeTag";
-
-import "./PlayerCard.css";
 import { useTranslations } from "next-intl";
+
+import { getIntlArray } from "@/utils/generalFunctions";
+
+import "./playerCard.css";
 
 interface PlayerCardProps {
   id: number;
   image: string;
   price: number;
-  warbondImage: string;
 }
 
-const PlayerCard: React.FC<PlayerCardProps> = ({
-  id,
-  image,
-  price,
-  warbondImage,
-}) => {
+const PlayerCard: React.FC<PlayerCardProps> = ({ id, image, price }) => {
   const t = useTranslations("PlayerCards");
 
   return (
     <div className="playerCard">
-      <img src={`${image}`} alt="" className="playerCard_BackgroundImage" />
-
-      <ObtainingTypeTag image={warbondImage} />
-
-      <div className="playerCard_PriceBlock">
-        <p className="playerCard_PriceBlock_Text">{price}</p>
-
+      <div className="playerCard-imageContainer">
         <img
-          src="/static/Resources/MedalIcon.svg"
+          src={`${image}`}
           alt=""
-          className="playerCard_PriceBlock_Icon"
+          className="playerCard-imageContainer-backgroundImage"
         />
+
+        <div className="playerCard-imageContainer-priceBlock">
+          <p className="playerCard-imageContainer-priceBlock-text">{price}</p>
+
+          <img
+            src="/static/Resources/MedalIcon.svg"
+            alt=""
+            className="playerCard-imageContainer-priceBlock-icon"
+          />
+        </div>
       </div>
 
-      <p className="playerCard_Title">{t(`${id}Name`)}</p>
+      <p className="playerCard-title">{getIntlArray(t("data"))[id - 1]}</p>
     </div>
   );
 };

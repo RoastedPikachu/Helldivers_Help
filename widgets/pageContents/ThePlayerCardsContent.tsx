@@ -24,10 +24,6 @@ const ThePlayerCardsContent = () => {
 
       <PageDescription description={t("pageDescription")} />
 
-      <LegendSection />
-
-      <SearchBar />
-
       <EntitySection
         title={""}
         gridStyles={"mt-[50px] mlarge:mt-[30px] grid-cols-6 mlarge:grid-cols-2"}
@@ -38,7 +34,6 @@ const ThePlayerCardsContent = () => {
             id={playerCard.id}
             image={playerCard.image}
             price={playerCard.price}
-            warbondImage={playerCard.warbondImage}
           />
         ))}
       </EntitySection>

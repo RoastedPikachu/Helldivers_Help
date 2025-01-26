@@ -118,30 +118,7 @@
     "accomplishmentWays": "[\"Now you're a Helldiver, congratulations!\",\"Use the arsenal and equip your Helldiver. Let your friends get jealous.\",\"Complete 1 task against Terminids. Death to the bugs!\",\"Complete 1 task against Automatons. Way to go, John Connor!\",\"Just complete 10 tactical objectives. Show your enemies what democracy is!\",\"Finish any mission on the night side of the planet.\",\"Play any mission on the planet that is currently under attack by one of the factions.\",\"Complete any task starting from 3 or 4 difficulty.\",\"Complete the task, but do not evacuate (spend all the reinforce stratagems). Don't worry, you're not the first, you're not the last.\",\"Just evacuate after the time runs out. A good time reference point would be the lack of the ability to call any stratagems.\",\"Kill the enemy from a long distance, you can use a weapon with an optical sight.\",\"Call the orbital stratagem or the Eagle stratagem while standing on some high ground.\",\"Start a 4+ difficulty mission and kill him. You can use the ventilation hole in the back or just call the stratagem.\",\"The Bile Titan appears as a constant enemy starting from the 6th difficulty. Use powerful stratagems and the entire arsenal. That still only counts as one!\",\"Let the terminid warrior get closer and fire the whole clip at it. You are the most important warrior here!\",\"Blow up the nest of stalkers. You can use a grenade, a stratagem, a grenade launcher or an autocannon.\",\"Just throw the grenade at your feet, and then throw it away.\",\"Take a machine gun stratagem and apply it on a group of enemies. The main thing is not to take your finger off the trigger, you're not a traitor, are you?\",\"Equip the armor with the property «Democracy protects» and try to explode. Maybe it won't work on the 1st attempt, but Helldivers never die!\",\"Go to the wounded ally, point at it and press the «E» key. Helldivers never die!\",\"Your partner should use an autocannon/recoilless rifle/spear, take his backpack with spare shells and help him load the weapon. The strength is in friendship!\",\"Follow the advice «Don't die» and the achievement will be received.\",\"Take your teammates and use the orbital stratagems at 1 point. I advise you to take 120 and 380 mm, as they will give you more time to use everything.\",\"Complete a task of 5+ difficulty, select a stratagem with a large damage area and challenge it to a group of enemies. I advise you to do this near nests/factories.\",\"Use incendiary weapons, as well as napalm airstrike. I advise you to complete the task against the Terminids. How about a bug BBQ?\",\"Any of your friends should evacuate with 15 ordinary samples in their pockets. The main thing is that 1 Helldiver should have this amount.\",\"Just go to the mission with a higher difficulty level, as there will be more samples.\",\"Throw a grenade at your feet and use a jumppack before it explodes.\",\"A Hulk is starting to appear from difficulty 4, just shoot off his hands with a railgun and warn your comrades, then evacuate.\",\"Deal a lot of damage to the Charger, then stun him (EMP kick or bang his head against the wall) and call a stratagem.\",\"Do this in short missions against Terminids. Don't forget about the stims, fighter!\",\"Forget about the 1st and 3rd keys, take a lot of attacking stratagems and choose a quick mission. May democracy help you!\",\"Grab your comrades, equip yourself with light armor, a jumppack, and also take explosive weapons. Don't forget to leave someone in the evacuation zone for a faster escape from the planet.\",\"5,000 Enemies? Super Earth is proud of you!\",\"Each mission brings the victory of a managed democracy closer!\",\"A monument should be erected in your honor!\",\"To get an achievement, you will need: 10 super samples, 160-200 common samples, 100-120 rare samples.\",\"It will take 400 common samples to achieve the achievement.\",\"Helldiver, you're a legend! You can walk through the bars of Super Earth with your head held high.\"]"
   },
   "PlayerCards": {
-    "1Name": "Independence Bringer",
-    "2Name": "Liberty's Herald",
-    "3Name": "Tideturner",
-    "4Name": "The Cape of Stars and Suffrage",
-    "5Name": "Unblemished Allegiance",
-    "6Name": "Judgment Day",
-    "7Name": "Cresting Honor",
-    "8Name": "Mantle of True Citizenship",
-    "9Name": "Blazing Samaritan",
-    "10Name": "Light of Eternal Liberty",
-    "11Name": "Tyrant Hunter",
-    "12Name": "Cloak of Posterity's Gratitude",
-    "13Name": "Bastion of Integrity",
-    "14Name": "Botslayer",
-    "15Name": "Martyris Rex",
-    "16Name": "Agent of Oblivion",
-    "17Name": "Harbinger of True Equality",
-    "18Name": "Eagles Fury",
-    "19Name": "Freedom's Tapestry",
-    "20Name": "Dissident's Nightmare",
-    "21Name": "Pinions of Everlasting Glory",
-    "22Name": "Order of The Venerated Ballot",
-    "23Name": "Mark of The Crimson Fang",
-    "24Name": "Executioner's Canopy"
+    "data": "[\"Independence Bringer\",\"Liberty's Herald\",\"Tideturner\",\"The Cape of Stars and Suffrage\",\"Unblemished Allegiance\",\"Judgment Day\",\"Cresting Honor\",\"Mantle of True Citizenship\",\"Blazing Samaritan\",\"Light of Eternal Liberty\",\"Tyrant Hunter\",\"Cloak of Posterity's Gratitude\",\"Bastion of Integrity\",\"Botslayer\",\"Martyris Rex\",\"Agent of Oblivion\",\"Harbinger of True Equality\",\"Eagles Fury\",\"Freedom's Tapestry\",\"Dissident's Nightmare\",\"Pinions of Everlasting Glory\",\"Order of The Venerated Ballot\",\"Mark of The Crimson Fang\",\"Executioner's Canopy\",\"Purifying Eclipse\",\"The Breach\",\"Standart of Safe Distance\",\"Patient Zero's Rememberance\",\"Pride of The Whistleblower\",\"Proof of Faultless Virtue\",\"Rebar Resolve\",\"Holder of The Yellow Line\"]"
   },
   "Emotes": {
     "data": "[\"Casual Salute\",\"Explosive Handshake\",\"Hug\",\"High-Five\",\"Scout Handshake\",\"Rock Paper Scissors\",\"Test of Conviction\",\"Salute\",\"Clapping\",\"Finger Guns\",\"Flex\",\"Loosen Up\",\"Big Whoop\",\"Presentable\",\"Shotgun Show\",\"Head Tap\",\"Distribute Ballots\",\"Call the Helldivers\",\"Mime Instrumentation\",\"Welcome Adoration\",\"Guns of Liberty\"]"
