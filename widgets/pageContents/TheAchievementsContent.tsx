@@ -27,52 +27,60 @@ const TheAchievementsContent = () => {
         title={t("firstSectionTitle")}
         gridStyles={"mt-[50px] mlarge:mt-[30px] grid-cols-2 mlarge:grid-cols-1"}
       >
-        {achievementsStore.achievements.easy.map((achievement) => (
-          <Achievement
-            key={achievement.id}
-            id={achievement.id}
-            iconPath={achievement.iconPath}
-          />
-        ))}
+        {achievementsStore.achievements
+          .filter((achivement) => achivement.type === "easy")
+          .map((achievement) => (
+            <Achievement
+              key={achievement.id}
+              id={achievement.id}
+              iconPath={achievement.iconPath}
+            />
+          ))}
       </EntitySection>
 
       <EntitySection
         title={t("secondSectionTitle")}
         gridStyles={"mt-[50px] mlarge:mt-[30px] grid-cols-2 mlarge:grid-cols-1"}
       >
-        {achievementsStore.achievements.extreme.map((achievement) => (
-          <Achievement
-            key={achievement.id}
-            id={achievement.id}
-            iconPath={achievement.iconPath}
-          />
-        ))}
+        {achievementsStore.achievements
+          .filter((achivement) => achivement.type === "extreme")
+          .map((achievement) => (
+            <Achievement
+              key={achievement.id}
+              id={achievement.id}
+              iconPath={achievement.iconPath}
+            />
+          ))}
       </EntitySection>
 
       <EntitySection
         title={t("thirdSectionTitle")}
         gridStyles={"mt-[50px] mlarge:mt-[30px] grid-cols-2 mlarge:grid-cols-1"}
       >
-        {achievementsStore.achievements.helldive.map((achievement) => (
-          <Achievement
-            key={achievement.id}
-            id={achievement.id}
-            iconPath={achievement.iconPath}
-          />
-        ))}
+        {achievementsStore.achievements
+          .filter((achivement) => achivement.type === "helldive")
+          .map((achievement) => (
+            <Achievement
+              key={achievement.id}
+              id={achievement.id}
+              iconPath={achievement.iconPath}
+            />
+          ))}
       </EntitySection>
 
       <EntitySection
         title={t("fourthSectionTitle")}
         gridStyles={"mt-[50px] mlarge:mt-[30px] grid-cols-2 mlarge:grid-cols-1"}
       >
-        {achievementsStore.achievements.longWay.map((achievement) => (
-          <Achievement
-            key={achievement.id}
-            id={achievement.id}
-            iconPath={achievement.iconPath}
-          />
-        ))}
+        {achievementsStore.achievements
+          .filter((achivement) => achivement.type === "longWay")
+          .map((achievement) => (
+            <Achievement
+              key={achievement.id}
+              id={achievement.id}
+              iconPath={achievement.iconPath}
+            />
+          ))}
       </EntitySection>
     </main>
   );

@@ -69,4 +69,22 @@ main {
   @apply relative flex justify-center items-center w-full h-full;
 }
 
+.desktop {
+  @apply block;
+}
+
+.mobile {
+  @apply hidden;
+}
+
+@media (max-width: 480px) {
+  .desktop {
+    @apply hidden;
+  }
+
+  .mobile {
+    @apply block;
+  }
+}
+
 

@@ -1,9 +1,13 @@
 "use client";
 import React from "react";
 
-import "./Achievement.css";
-import { mobileStore } from "@/store/MobileStore";
 import { useTranslations } from "next-intl";
+
+import { getIntlArray } from "@/utils/generalFunctions";
+
+import { mobileStore } from "@/store/MobileStore";
+
+import "./Achievement.css";
 
 interface AchievementProps {
   id: number;
@@ -15,29 +19,27 @@ const Achievement: React.FC<AchievementProps> = ({ id, iconPath }) => {
 
   return (
     <div className="achievementWidget">
-      <div className="achievementWidget_Top">
-        <img src={iconPath} alt="" className="achievementWidget_Top_Image" />
+      <div className="achievementWidget-top">
+        <img src={iconPath} alt="" className="achievementWidget-top-image" />
 
-        <span className="achievementWidget_Top_Image_TextWrapper">
-          <p className="achievementWidget_Top_Image_TextWrapper_Title">
-            {t(`${id}Title`)}
+        <span className="achievementWidget-top-image-textWrapper">
+          <p className="achievementWidget-top-image-textWrapper-title">
+            {getIntlArray(t("titles"))[id - 1]}
           </p>
 
-          {!mobileStore.isMobileDevice && (
-            <p className="achievementWidget_Top_Image_TextWrapper_Description">
-              {t(`${id}Description`)}
-            </p>
-          )}
+          <p className="achievementWidget-top-image-textWrapper-description desktop">
+            {getIntlArray(t("descriptions"))[id - 1]}
+          </p>
         </span>
       </div>
 
-      {mobileStore.isMobileDevice && (
-        <p className="achievementWidget_Top_Image_TextWrapper_Description">
-          {t(`${id}Description`)}
-        </p>
-      )}
+      <p className="achievementWidget-top-image-textWrapper-description mobile">
+        {getIntlArray(t("descriptions"))[id - 1]}
+      </p>
 
-      <p className="achievementWidget_Text">{t(`${id}AccomplishmentWay`)}</p>
+      <p className="achievementWidget-text">
+        {getIntlArray(t("accomplishmentWays"))[id - 1]}
+      </p>
     </div>
   );
 };
