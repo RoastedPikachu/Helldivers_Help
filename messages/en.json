@@ -144,30 +144,7 @@
     "24Name": "Executioner's Canopy"
   },
   "Emotes": {
-    "1Name": "Casual Salute",
-    "2Name": "Explosive Handshake",
-    "3Name": "Hug",
-    "4Name": "High-Five",
-    "5Name": "Scout Handshake",
-    "6Name": "Rock Paper Scissors",
-    "7Name": "Test of Conviction",
-    "8Name": "Salute",
-    "9Name": "Clapping",
-    "10Name": "Finger Guns",
-    "11Name": "Flex",
-    "12Name": "Loosen Up",
-    "13Name": "Big Whoop",
-    "14Name": "Presentable",
-    "15Name": "Shotgun Show",
-    "16Name": "Head Tap",
-    "17Name": "Distribute Ballots",
-    "18Name": "Call the Helldivers",
-    "19Name": "Mime Instrumentation",
-    "20Name": "Welcome Adoration",
-    "21Name": "Guns of Liberty"
-  },
-  "VictoryPoses": {
-    "names": "[\"Салют\", \"Аплодисменты\", \"Пальцы-пистолеты\", \"Напрячь мышцы\", \"Расслабься\", \"Громкий возглас\", \"Представительный\", \"Дробовик напоказ\", \"Коснуться головы\", \"Бюллетени всем!\", \"Вызов Адского десанта\", \"Пантомима\", \"Высшая любовь\", \"Пушки свободы\"]"
+    "data": "[\"Casual Salute\",\"Explosive Handshake\",\"Hug\",\"High-Five\",\"Scout Handshake\",\"Rock Paper Scissors\",\"Test of Conviction\",\"Salute\",\"Clapping\",\"Finger Guns\",\"Flex\",\"Loosen Up\",\"Big Whoop\",\"Presentable\",\"Shotgun Show\",\"Head Tap\",\"Distribute Ballots\",\"Call the Helldivers\",\"Mime Instrumentation\",\"Welcome Adoration\",\"Guns of Liberty\"]"
   },
   "ObtainingTypes": {
     "1Name": "Tutorial",
