@@ -1,5 +1,15 @@
 import { enemiesStore } from "@/store/EnemiesStore";
 
+export function getRandomEntityInArray(entities: any, currentEntity: any) {
+  let nextEntity = entities[Math.floor(Math.random() * entities.length)];
+
+  while (nextEntity === currentEntity) {
+    nextEntity = entities[Math.floor(Math.random() * entities.length)];
+  }
+
+  return nextEntity;
+}
+
 export function getRandomEntity<T extends { id: number }>(
   entities: T[],
   currentEntity: T,

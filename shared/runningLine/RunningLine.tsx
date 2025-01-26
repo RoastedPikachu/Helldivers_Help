@@ -1,25 +1,26 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
+import { useTranslations } from "next-intl";
+
 import Marquee from "react-fast-marquee";
 
-import { tipsStore } from "@/store/TipsStore";
-
-import { Tip } from "@/utils/generalInterfaces";
-import { getRandomEntity } from "@/utils/generalFunctions";
+import { getIntlArray, getRandomEntityInArray } from "@/utils/generalFunctions";
 
 import "./RunningLine.css";
 
 const RunningLine = () => {
-  const [currentTip, setCurrentTip] = useState({} as Tip);
+  const t = useTranslations("tips");
+
+  const [currentTip, setCurrentTip] = useState("");
 
   useEffect(() => {
-    setCurrentTip(getRandomEntity(tipsStore.tips, currentTip));
+    setCurrentTip(getRandomEntityInArray(getIntlArray(t("data")), currentTip));
   }, []);
 
   return (
     <Marquee direction="left" pauseOnHover={true} className="runningLine">
-      {currentTip.text}&nbsp;
+      {currentTip}&nbsp;
     </Marquee>
   );
 };

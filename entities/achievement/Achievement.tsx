@@ -5,8 +5,6 @@ import { useTranslations } from "next-intl";
 
 import { getIntlArray } from "@/utils/generalFunctions";
 
-import { mobileStore } from "@/store/MobileStore";
-
 import "./Achievement.css";
 
 interface AchievementProps {
