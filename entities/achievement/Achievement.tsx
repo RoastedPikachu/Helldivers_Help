@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 
 import { getIntlArray } from "@/utils/generalFunctions";
 
-import "./Achievement.css";
+import "./achievement.css";
 
 interface AchievementProps {
   id: number;

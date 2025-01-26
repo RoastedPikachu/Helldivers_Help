@@ -1,48 +1,43 @@
-"use client";
 import React from "react";
 
-import "./Booster.css";
-import ObtainingTypeTag from "@/entities/obtainingTypeTag/ObtainingTypeTag";
-import { obtainingTypes } from "@/data/obtainingTypes";
+import { useTranslations } from "next-intl";
+
+import { getIntlArray } from "@/utils/generalFunctions";
+
+import "./booster.css";
 
 interface BoosterProps {
+  id: number;
   iconPath: string;
-  title: string;
-  effect: string;
   price: number;
-  obtainingTypeIcon: string;
 }
 
-const Booster: React.FC<BoosterProps> = ({
-  iconPath,
-  title,
-  effect,
-  price,
-  obtainingTypeIcon,
-}) => {
+const Booster: React.FC<BoosterProps> = ({ id, iconPath, price }) => {
+  const t = useTranslations("boosters");
+
   return (
     <div className="boosterWidget">
-      <div className="boosterWidget_ObtainingTypeTag">
-        <ObtainingTypeTag image={obtainingTypeIcon} />
+      <div className="boosterWidget-top">
+        <img src={iconPath} alt="" className="boosterWidget-top-image" />
+
+        <p className="boosterWidget-top-title">
+          {getIntlArray(t("titles"))[id - 1]}
+        </p>
       </div>
 
-      <div className="boosterWidget_Top">
-        <img src={iconPath} alt="" className="boosterWidget_Top_Image" />
+      <p className="boosterWidget-effect">
+        {getIntlArray(t("descriptions"))[id - 1]}
+      </p>
 
-        <p className="boosterWidget_Top_Title">{title}</p>
-      </div>
+      <div className="boosterWidget-bottom">
+        <p className="boosterWidget-bottom-text">Стоимость:</p>
 
-      <p className="boosterWidget_Effect">{effect}</p>
-
-      <div className="boosterWidget_Bottom">
-        <p className="boosterWidget_Bottom_Text">Стоимость:</p>
-
-        <p className="boosterWidget_Bottom_Number">{price}</p>
+        <p className="boosterWidget-bottom-number">{price}</p>
 
         <img
           src="/static/Resources/MedalIcon.svg"
           alt=""
-          className="boosterWidget_Bottom_Image"
+          className="boosterWidget-bottom-image"
         />
       </div>
     </div>

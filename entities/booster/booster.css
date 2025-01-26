@@ -1,0 +1,35 @@
+.boosterWidget {
+    @apply relative px-[30px] mlarge:px-[15px] msmall:px-[10px] py-[30px] mlarge:py-[15px] msmall:py-[10px] w-full h-auto bg-[url('/static/boosters/boosterBlockBackground.webp')] bg-cover border-2 border-theme rounded-[10px];
+}
+
+.boosterWidget-top {
+    @apply flex items-center;
+}
+
+.boosterWidget-top-image {
+    @apply w-[90px] mlarge:w-[65px] mmedium:w-[60px] msmall:w-[55px] h-[90px] mlarge:h-[65px] mmedium:h-[60px] msmall:h-[55px];
+}
+
+.boosterWidget-top-title {
+    @apply ml-[20px] mlarge:ml-[10px] mmedium:ml-[5px] text-white text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-primary font-bold;
+}
+
+.boosterWidget-effect {
+    @apply mt-[10px] pb-[50px] mlarge:pb-[40px] mmedium:pb-[35px] msmall:pb-[30px] text-white text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-primary font-medium brightness-75;
+}
+
+.boosterWidget-bottom {
+    @apply absolute flex items-center bottom-[20px] mlarge:bottom-[10px] msmall:bottom-[7.5px];
+}
+
+.boosterWidget-bottom-text {
+    @apply text-theme text-[1.5rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-primary font-semibold;
+}
+
+.boosterWidget-bottom-number {
+    @apply ml-[20px] mlarge:ml-[15px] mmedium:ml-[10px] text-white text-[1.75rem] mlarge:text-[1.5rem] mmedium:text-[1.375rem] msmall:text-[1.25rem] font-secondary font-bold;
+}
+
+.boosterWidget-bottom-image {
+    @apply ml-[10px] mlarge:ml-[7.5px] mmedium:ml-[5px] w-[35px] mlarge:w-[27.5px] mmedium:w-[25px] msmall:w-[22.5px] h-[35px] mlarge:h-[27.5px] mmedium:h-[25px] msmall:h-[22.5px];
+}

@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 
+import { useTranslations } from "next-intl";
+
 import { boostersStore } from "@/store/BoostersStore";
 
 import EntitySection from "@/widgets/EntitySection";
@@ -11,31 +13,26 @@ import PageDescription from "@/shared/PageDescription";
 import Booster from "@/entities/booster/Booster";
 
 const TheBoostersContent = () => {
+  const t = useTranslations("BoostersPage");
+
   return (
     <main>
-      <ThePageTitle title={"усилители"} additionalTitle={""} />
+      <ThePageTitle title={t("pageTitle")} additionalTitle={""} />
 
-      <PageDescription
-        description={
-          "Чтобы упростить продвижение демократии и свободы в галактике руководство Супер-Земли с помощью ученых смогло разработать усилители."
-        }
-      />
+      <PageDescription description={t("pageDescription")} />
 
-      <PageDescription
-        description={
-          "Усилители - мощное средство, которое дает различные бонусы во время выполнения задания всей вашей команде Адских Десантников. Выбирайте их мудро и советуйтесь со своими боевыми товарищами, чтобы у противников демократии не осталось и шанса!"
-        }
-      />
+      <PageDescription description={t("pageAdditionalDescription")} />
 
-      <EntitySection title={""} gridStyles={"grid-cols-2 mlarge:grid-cols-1"}>
+      <EntitySection
+        title={""}
+        gridStyles={"mt-[30px] grid-cols-2 mlarge:grid-cols-1"}
+      >
         {boostersStore.boosters.map((booster) => (
           <Booster
             key={booster.id}
+            id={booster.id}
             iconPath={booster.iconPath}
-            title={booster.title}
-            effect={booster.effect}
             price={booster.price}
-            obtainingTypeIcon={booster.obtainingTypeIcon}
           />
         ))}
       </EntitySection>

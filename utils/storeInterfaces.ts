@@ -9,10 +9,7 @@ export interface Achievement {
 export interface Booster {
   id: number;
   iconPath: string;
-  title: string;
-  effect: string;
   price: number;
-  obtainingTypeIcon: string;
 }
 
 interface Weapon {
