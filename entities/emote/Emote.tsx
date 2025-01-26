@@ -3,16 +3,15 @@ import React, { useRef } from "react";
 
 import { useTranslations } from "next-intl";
 
-import ObtainingTypeTag from "@/entities/obtainingTypeTag/ObtainingTypeTag";
+import { getIntlArray } from "@/utils/generalFunctions";
 
-import "./Emote.css";
+import "./emote.css";
 
 interface EmoteProps {
   id: number;
   videoPreviewPath: string;
   videoPath: string;
   price: number;
-  warbondIcon: string;
 }
 
 const Emote: React.FC<EmoteProps> = ({
@@ -20,7 +19,6 @@ const Emote: React.FC<EmoteProps> = ({
   videoPreviewPath,
   videoPath,
   price,
-  warbondIcon,
 }) => {
   const t = useTranslations("Emotes");
 
@@ -39,31 +37,31 @@ const Emote: React.FC<EmoteProps> = ({
       onMouseOut={() => pauseVideo()}
       className="emote"
     >
-      <video
-        poster={`${videoPreviewPath}`}
-        src={`${videoPath}`}
-        preload="auto"
-        playsInline
-        loop
-        muted
-        // @ts-ignore
-        ref={videoRef}
-        className="emote_Video"
-      ></video>
+      <div className="emote-contentContainer">
+        <video
+          poster={`${videoPreviewPath}`}
+          src={`${videoPath}`}
+          preload="auto"
+          playsInline
+          loop
+          muted
+          // @ts-ignore
+          ref={videoRef}
+          className="emote-contentContainer-video"
+        ></video>
 
-      <ObtainingTypeTag image={warbondIcon} />
+        <div className="emote-contentContainer-priceBlock">
+          <p className="emote-contentContainer-priceBlock-text">{price}</p>
 
-      <div className="emote_PriceBlock">
-        <p className="emote_PriceBlock_Text">{price}</p>
-
-        <img
-          src="/static/Resources/MedalIcon.svg"
-          alt=""
-          className="emote_PriceBlock_Icon"
-        />
+          <img
+            src="/static/Resources/MedalIcon.svg"
+            alt=""
+            className="emote-contentContainer-priceBlock-icon"
+          />
+        </div>
       </div>
 
-      <p className="emote_Title">{t(`${id}Name`)}</p>
+      <p className="emote-title">{getIntlArray(t("data"))[id - 1]}</p>
     </div>
   );
 };

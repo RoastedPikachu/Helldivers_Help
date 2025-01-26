@@ -107,5 +107,6 @@ export interface Emote {
   videoPath: string;
   videoPreviewPath: string;
   price: number;
+  type: string;
   warbondIcon: string;
 }
