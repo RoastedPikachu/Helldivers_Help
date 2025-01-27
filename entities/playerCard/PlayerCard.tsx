@@ -25,15 +25,21 @@ const PlayerCard: React.FC<PlayerCardProps> = ({ id, image, price }) => {
           className="playerCard-imageContainer-backgroundImage"
         />
 
-        <div className="playerCard-imageContainer-priceBlock">
-          <p className="playerCard-imageContainer-priceBlock-text">{price}</p>
+        {price > 0 && (
+          <div className="playerCard-imageContainer-priceBlock">
+            <p className="playerCard-imageContainer-priceBlock-text">{price}</p>
 
-          <img
-            src="/static/Resources/MedalIcon.svg"
-            alt=""
-            className="playerCard-imageContainer-priceBlock-icon"
-          />
-        </div>
+            <img
+              src={
+                price >= 25
+                  ? "/static/Resources/SuperCreditIcon.svg"
+                  : "/static/Resources/MedalIcon.svg"
+              }
+              alt=""
+              className="playerCard-imageContainer-priceBlock-icon"
+            />
+          </div>
+        )}
       </div>
 
       <p className="playerCard-title">{getIntlArray(t("data"))[id - 1]}</p>

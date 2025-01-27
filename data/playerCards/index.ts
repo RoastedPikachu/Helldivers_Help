@@ -85,17 +85,17 @@ export const playerCards = [
   },
   {
     id: 17,
-    image: "/static/playerCards/TrueEqualityHarbingerImage.webp",
+    image: "/static/playerCards/DemocraticDetonation1.webp",
     price: 2,
   },
   {
     id: 18,
-    image: "/static/playerCards/EagleFuryImage.webp",
+    image: "/static/playerCards/DemocraticDetonation2.webp",
     price: 5,
   },
   {
     id: 19,
-    image: "/static/playerCards/LibertyGobelinImage.webp",
+    image: "/static/playerCards/DemocraticDetonation3.webp",
     price: 16,
   },
   {
@@ -110,7 +110,7 @@ export const playerCards = [
   },
   {
     id: 22,
-    image: "/static/playerCards/VunerableBulletinOrderImage.webp",
+    image: "/static/playerCards/PolarPatriots3.webp",
     price: 16,
   },
   {
@@ -125,27 +125,62 @@ export const playerCards = [
   },
   {
     id: 25,
-    image: "/static/playerCards/ChemicalAgentsCard1.webp",
-    price: 5,
+    image: "/static/playerCards/FreedomsFlame1.webp",
+    price: 2,
   },
   {
     id: 26,
-    image: "/static/playerCards/ChemicalAgentsCard2.webp",
-    price: 15,
-  },
-  {
-    id: 27,
-    image: "/static/playerCards/TruthEnforcersCard1.webp",
+    image: "/static/playerCards/FreedomsFlame2.webp",
     price: 5,
   },
   {
+    id: 27,
+    image: "/static/playerCards/ChemicalAgents1.webp",
+    price: 2,
+  },
+  {
     id: 28,
-    image: "/static/playerCards/TruthEnforcersCard2.webp",
-    price: 15,
+    image: "/static/playerCards/ChemicalAgents2.webp",
+    price: 5,
   },
   {
     id: 29,
-    image: "/static/playerCards/SuperStoreCard1.webp",
+    image: "/static/playerCards/TruthEnforcers1.webp",
+    price: 5,
+  },
+  {
+    id: 30,
+    image: "/static/playerCards/TruthEnforcers2.webp",
+    price: 15,
+  },
+  {
+    id: 31,
+    image: "/static/playerCards/SuperStore1.webp",
     price: 75,
+  },
+  {
+    id: 32,
+    image: "/static/playerCards/UrbanLegends1.webp",
+    price: 2,
+  },
+  {
+    id: 33,
+    image: "/static/playerCards/UrbanLegends2.webp",
+    price: 5,
+  },
+  {
+    id: 34,
+    image: "/static/playerCards/SuperStore2.webp",
+    price: 35,
+  },
+  {
+    id: 35,
+    image: "/static/playerCards/Killzone1.webp",
+    price: 90,
+  },
+  {
+    id: 36,
+    image: "/static/playerCards/Killzone2.webp",
+    price: 0,
   },
 ] as PlayerCard[];

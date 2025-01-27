@@ -7,7 +7,7 @@
 }
 
 .playerCard-imageContainer-backgroundImage {
-    @apply absolute w-full h-full rounded-[10px];
+    @apply absolute w-full h-full;
 }
 
 .playerCard-imageContainer-priceBlock {

@@ -85,7 +85,7 @@ class ArmorKitsStore {
       },
       {
         id: 6,
-        imagePath: "/static/ArmorKits/Ce74BreakerImage.webp",
+        imagePath: "/static/ArmorKits/CE74.webp",
         type: "Легкая броня",
         name: "CE-74 «Крушитель»",
         obtainingMethod: "Покупается в Супермагазине",
