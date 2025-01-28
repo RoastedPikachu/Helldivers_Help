@@ -1,17 +1,19 @@
 "use client";
 import React, { useState } from "react";
 
+import { useTranslations } from "next-intl";
+
+import { getIntlArray } from "@/utils/generalFunctions";
+
 import { planetsStore } from "@/store/PlanetsStore";
 import { slidersStore } from "@/store/SlidersStore";
 
 import WeatherConditionAdditionalInfoModalWindow from "@/entities/planetsPage/weatherConditionAdditionalInfo/WeatherConditionAdditionalInfoModalWindow";
 
-import "./Planet.css";
-import { mobileStore } from "@/store/MobileStore";
+import "./planet.css";
 
 interface PlanetProps {
   id: number;
-  name: string;
   biome: any;
   weatherConditions: any;
   sector: any;
@@ -19,11 +21,12 @@ interface PlanetProps {
 
 const Planet: React.FC<PlanetProps> = ({
   id,
-  name,
   biome,
   weatherConditions,
   sector,
 }) => {
+  const t = useTranslations("planets");
+
   const [targetWeatherConditionId, setTargetWeatherConditionId] = useState(0);
 
   const handleCurrentPlanetInfoChange = () => {
@@ -37,22 +40,22 @@ const Planet: React.FC<PlanetProps> = ({
       className="planetWidget"
     >
       {biome?.imagePath ? (
-        <img src={`${biome.imagePath}`} alt="" className="planetWidget_Image" />
+        <img src={`${biome.imagePath}`} alt="" className="planetWidget-image" />
       ) : (
         <img
           src="/static/Biomes/BlankImage.png"
           alt=""
-          className="planetWidget_Image"
+          className="planetWidget-image"
         />
       )}
 
-      <p className="planetWidget_Title">{name}</p>
+      <p className="planetWidget-title">{getIntlArray(t("names"))[id - 1]}</p>
 
-      <div className="planetWidget_WeatherConditions_Container">
+      <div className="planetWidget-weatherConditions-container">
         {weatherConditions.map((weatherCondition: any) => (
           <div
             key={weatherCondition.id}
-            className="planetWidget_WeatherConditions_Container_ImageWrapper"
+            className="planetWidget-weatherConditions-container-imageWrapper"
           >
             <img
               src={`${weatherCondition.iconPath}`}
@@ -61,17 +64,15 @@ const Planet: React.FC<PlanetProps> = ({
                 setTargetWeatherConditionId(weatherCondition.id)
               }
               onMouseLeave={() => setTargetWeatherConditionId(0)}
-              className="planetWidget_WeatherConditions_Container_ImageWrapper_Image"
+              className="planetWidget-weatherConditions-container-imageWrapper-image"
             />
 
-            {!mobileStore.isMobileDevice && (
-              <WeatherConditionAdditionalInfoModalWindow
-                isVisible={targetWeatherConditionId === weatherCondition.id}
-                borderStyle={"border-[--theme-color]"}
-                name={weatherCondition.name}
-                description={weatherCondition.description}
-              />
-            )}
+            <WeatherConditionAdditionalInfoModalWindow
+              isVisible={targetWeatherConditionId === weatherCondition.id}
+              borderStyle={"border-theme"}
+              name={weatherCondition.name}
+              description={weatherCondition.description}
+            />
           </div>
         ))}
       </div>

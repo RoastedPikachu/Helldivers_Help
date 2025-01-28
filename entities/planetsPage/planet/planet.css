@@ -1,0 +1,23 @@
+.planetWidget {
+    @apply relative px-[30px] mlarge:px-[15px] pt-[20px] mlarge:pt-[10px] pb-[30px] mlarge:pb-[15px] w-full h-auto min-h-[120px] mlarge:min-h-[100px] msmall:min-h-[90px] bg-[#00293a] border-2 border-theme rounded-[10px] mlarge:rounded-[7.5px] cursor-pointer;
+}
+
+.planetWidget-image {
+    @apply absolute top-0 left-0 w-full h-full rounded-[7.5px] mlarge:rounded-[5px];
+}
+
+.planetWidget-title {
+    @apply absolute bottom-[10px] mlarge:bottom-[7.5px] msmall:bottom-[5px] left-[20px] mlarge:left-[15px] mmedium:left-[10px] px-[10px] mmedium:px-[7.5px] w-auto max-w-[60%] h-auto bg-[#00000080] rounded-[7.5px] mlarge:rounded-[5px] text-theme text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] text-left font-primary font-semibold brightness-125;
+}
+
+.planetWidget-weatherConditions-container {
+    @apply absolute flex items-center bottom-[10px] mlarge:bottom-[7.5px] msmall:bottom-[5px] mmedium:right-[-5px] right-0 w-auto h-auto cursor-pointer;
+}
+
+.planetWidget-weatherConditions-container-imageWrapper {
+    @apply relative w-auto h-auto;
+}
+
+.planetWidget-weatherConditions-container-imageWrapper-image {
+    @apply mr-[20px] mlarge:mr-[15px] p-[2.5px] w-[45px] mlarge:w-[40px] mmedium:w-[37.5px] msmall:w-[35px] h-[45px] mlarge:h-[40px] mmedium:h-[37.5px] msmall:h-[35px] bg-white rounded-[7.5px] z-50;
+}

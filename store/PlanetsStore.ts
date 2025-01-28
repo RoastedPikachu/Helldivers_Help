@@ -12,7 +12,6 @@ class PlanetsStore {
   planets = {
     0: {
       id: 1,
-      name: "Супер-Земля",
       sector: galaxySectors.sol,
       biome: biomes.superEarth,
       weatherConditions: [],
@@ -20,7 +19,6 @@ class PlanetsStore {
     },
     1: {
       id: 2,
-      name: "Марс",
       sector: galaxySectors.sol,
       biome: null,
       weatherConditions: [],
@@ -28,7 +26,6 @@ class PlanetsStore {
     },
     2: {
       id: 1,
-      name: "Клен Дахт II",
       sector: galaxySectors.altus,
       biome: biomes.newDesert,
       weatherConditions: [
@@ -39,7 +36,6 @@ class PlanetsStore {
     },
     3: {
       id: 2,
-      name: "Следопыт V",
       sector: galaxySectors.altus,
       biome: biomes.highlands,
       weatherConditions: [
@@ -50,7 +46,6 @@ class PlanetsStore {
     },
     4: {
       id: 3,
-      name: "Вдовья гавань",
       sector: galaxySectors.altus,
       biome: biomes.moon,
       weatherConditions: [
@@ -61,7 +56,6 @@ class PlanetsStore {
     },
     5: {
       id: 4,
-      name: "Новая гавань",
       sector: galaxySectors.altus,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
@@ -69,7 +63,6 @@ class PlanetsStore {
     },
     6: {
       id: 5,
-      name: "Пилен V",
       sector: galaxySectors.altus,
       biome: biomes.desert,
       weatherConditions: [
@@ -80,7 +73,6 @@ class PlanetsStore {
     },
     7: {
       id: 1,
-      name: "Гидропад прайм",
       sector: galaxySectors.barnard,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
@@ -88,7 +80,6 @@ class PlanetsStore {
     },
     8: {
       id: 1,
-      name: "Зея ругозия",
       sector: galaxySectors.ferris,
       biome: biomes.desert,
       weatherConditions: [
@@ -99,7 +90,6 @@ class PlanetsStore {
     },
     9: {
       id: 2,
-      name: "Дерроуспорт",
       sector: galaxySectors.barnard,
       biome: biomes.toxic,
       weatherConditions: [
@@ -110,7 +100,6 @@ class PlanetsStore {
     },
     10: {
       id: 3,
-      name: "Форнскогур II",
       sector: galaxySectors.barnard,
       biome: biomes.newJungle,
       weatherConditions: [weatherConditions.rainstorms],
@@ -118,7 +107,6 @@ class PlanetsStore {
     },
     11: {
       id: 4,
-      name: "Мидасбург",
       sector: galaxySectors.barnard,
       biome: biomes.tundra,
       weatherConditions: [],
@@ -126,7 +114,6 @@ class PlanetsStore {
     },
     12: {
       id: 1,
-      name: "Цербер IIIc",
       sector: galaxySectors.cancri,
       biome: biomes.desert,
       weatherConditions: [
@@ -137,7 +124,6 @@ class PlanetsStore {
     },
     13: {
       id: 2,
-      name: "Водопады процветания",
       sector: galaxySectors.cancri,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
@@ -145,7 +131,6 @@ class PlanetsStore {
     },
     14: {
       id: 1,
-      name: "Окул VI",
       sector: galaxySectors.gothmar,
       biome: biomes.winter,
       weatherConditions: [
@@ -156,7 +141,6 @@ class PlanetsStore {
     },
     15: {
       id: 1,
-      name: "Залив мучеников",
       sector: galaxySectors.cantolus,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
@@ -164,7 +148,6 @@ class PlanetsStore {
     },
     16: {
       id: 2,
-      name: "Пик свободы",
       sector: galaxySectors.cantolus,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
@@ -172,7 +155,6 @@ class PlanetsStore {
     },
     17: {
       id: 1,
-      name: "Форт единения",
       sector: galaxySectors.orion,
       biome: biomes.highlands,
       weatherConditions: [
@@ -183,7 +165,6 @@ class PlanetsStore {
     },
     18: {
       id: 3,
-      name: "Кельвинор",
       sector: galaxySectors.cantolus,
       biome: biomes.winter,
       weatherConditions: [
@@ -194,7 +175,6 @@ class PlanetsStore {
     },
     19: {
       id: 1,
-      name: "Призрак",
       sector: galaxySectors.idun,
       biome: biomes.toxic,
       weatherConditions: [
@@ -205,7 +185,6 @@ class PlanetsStore {
     },
     20: {
       id: 1,
-      name: "Игла",
       sector: galaxySectors.kelvin,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
@@ -213,7 +192,6 @@ class PlanetsStore {
     },
     21: {
       id: 2,
-      name: "Новая кируна",
       sector: galaxySectors.kelvin,
       biome: biomes.winter,
       weatherConditions: [
@@ -224,7 +202,6 @@ class PlanetsStore {
     },
     22: {
       id: 3,
-      name: "Форт правосудия",
       sector: galaxySectors.kelvin,
       biome: biomes.tundra,
       weatherConditions: [],
@@ -232,7 +209,6 @@ class PlanetsStore {
     },
     23: {
       id: 4,
-      name: "Зегемский рай",
       sector: galaxySectors.kelvin,
       biome: biomes.jungle,
       weatherConditions: [
@@ -243,7 +219,6 @@ class PlanetsStore {
     },
     24: {
       id: 1,
-      name: "Провидение",
       sector: galaxySectors.iptus,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
@@ -251,7 +226,6 @@ class PlanetsStore {
     },
     25: {
       id: 2,
-      name: "Примортия",
       sector: galaxySectors.iptus,
       biome: biomes.jungle,
       weatherConditions: [
@@ -262,7 +236,6 @@ class PlanetsStore {
     },
     26: {
       id: 1,
-      name: "Сульфура",
       sector: galaxySectors.celeste,
       biome: biomes.ethereal,
       weatherConditions: [],
@@ -270,7 +243,6 @@ class PlanetsStore {
     },
     27: {
       id: 2,
-      name: "Нублария I",
       sector: galaxySectors.celeste,
       biome: biomes.jungle,
       weatherConditions: [
@@ -281,7 +253,6 @@ class PlanetsStore {
     },
     28: {
       id: 3,
-      name: "Кракату",
       sector: galaxySectors.celeste,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
@@ -289,7 +260,6 @@ class PlanetsStore {
     },
     29: {
       id: 1,
-      name: "Вольтерра",
       sector: galaxySectors.korpus,
       biome: biomes.highlands,
       weatherConditions: [
@@ -300,7 +270,6 @@ class PlanetsStore {
     },
     30: {
       id: 2,
-      name: "Горн",
       sector: galaxySectors.korpus,
       biome: biomes.tundra,
       weatherConditions: [],
@@ -308,7 +277,6 @@ class PlanetsStore {
     },
     31: {
       id: 5,
-      name: "Вуаль",
       sector: galaxySectors.barnard,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
@@ -316,7 +284,6 @@ class PlanetsStore {
     },
     32: {
       id: 6,
-      name: "Марр IV",
       sector: galaxySectors.barnard,
       biome: biomes.desolate,
       weatherConditions: [
@@ -327,7 +294,6 @@ class PlanetsStore {
     },
     33: {
       id: 3,
-      name: "Форт безопасности",
       sector: galaxySectors.cancri,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
@@ -335,7 +301,6 @@ class PlanetsStore {
     },
     34: {
       id: 4,
-      name: "Сейшельский пляж",
       sector: galaxySectors.cancri,
       biome: biomes.ethereal,
       weatherConditions: [],
@@ -343,7 +308,6 @@ class PlanetsStore {
     },
     35: {
       id: 1,
-      name: "Хеллмейр",
       imageCount: 3,
       sector: galaxySectors.mirin,
       biome: biomes.desolate,
@@ -355,7 +319,6 @@ class PlanetsStore {
     },
     36: {
       id: 5,
-      name: "Эффлувия",
       sector: galaxySectors.cancri,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
@@ -363,7 +326,6 @@ class PlanetsStore {
     },
     37: {
       id: 2,
-      name: "Солгаст",
       sector: galaxySectors.gothmar,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
@@ -371,7 +333,6 @@ class PlanetsStore {
     },
     38: {
       id: 3,
-      name: "Дилувия",
       sector: galaxySectors.gothmar,
       biome: biomes.tundra,
       weatherConditions: [],
@@ -379,7 +340,6 @@ class PlanetsStore {
     },
     39: {
       id: 4,
-      name: "Виридия-прайм",
       sector: galaxySectors.cantolus,
       biome: biomes.newDesert,
       weatherConditions: [
@@ -390,7 +350,6 @@ class PlanetsStore {
     },
     40: {
       id: 5,
-      name: "Обари",
       sector: galaxySectors.cantolus,
       biome: biomes.highlands,
       weatherConditions: [
@@ -401,7 +360,6 @@ class PlanetsStore {
     },
     41: {
       id: 2,
-      name: "Мирадеш",
       sector: galaxySectors.idun,
       biome: biomes.desert,
       weatherConditions: [
@@ -412,7 +370,6 @@ class PlanetsStore {
     },
     42: {
       id: 3,
-      name: "Атрама",
       sector: galaxySectors.idun,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
@@ -420,7 +377,6 @@ class PlanetsStore {
     },
     43: {
       id: 5,
-      name: "Эмерия",
       sector: galaxySectors.kelvin,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
@@ -428,7 +384,6 @@ class PlanetsStore {
     },
     44: {
       id: 1,
-      name: "Барабос",
       sector: galaxySectors.marspira,
       biome: biomes.newJungle,
       weatherConditions: [weatherConditions.rainstorms],
@@ -436,7 +391,6 @@ class PlanetsStore {
     },
     45: {
       id: 2,
-      name: "Фенмейр",
       sector: galaxySectors.marspira,
       biome: biomes.highlands,
       weatherConditions: [
@@ -447,7 +401,6 @@ class PlanetsStore {
     },
     46: {
       id: 3,
-      name: "Мастия",
       sector: galaxySectors.marspira,
       biome: biomes.newDesert,
       weatherConditions: [
@@ -458,7 +411,6 @@ class PlanetsStore {
     },
     47: {
       id: 1,
-      name: "Шаллус",
       sector: galaxySectors.talus,
       biome: biomes.ethereal,
       weatherConditions: [],
@@ -466,7 +418,6 @@ class PlanetsStore {
     },
     48: {
       id: 3,
-      name: "Кракабос",
       sector: galaxySectors.iptus,
       biome: biomes.newJungle,
       weatherConditions: [weatherConditions.rainstorms],
@@ -474,7 +425,6 @@ class PlanetsStore {
     },
     49: {
       id: 4,
-      name: "Иридика",
       sector: galaxySectors.iptus,
       biome: biomes.ethereal,
       weatherConditions: [],
@@ -482,7 +432,6 @@ class PlanetsStore {
     },
     50: {
       id: 2,
-      name: "Астерра",
       sector: galaxySectors.orion,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
@@ -490,7 +439,6 @@ class PlanetsStore {
     },
     51: {
       id: 1,
-      name: "Азур II",
       sector: galaxySectors.sten,
       biome: biomes.desert,
       weatherConditions: [
@@ -501,7 +449,6 @@ class PlanetsStore {
     },
     52: {
       id: 4,
-      name: "Айвис",
       sector: galaxySectors.celeste,
       biome: biomes.newJungle,
       weatherConditions: [weatherConditions.rainstorms],
@@ -509,7 +456,6 @@ class PlanetsStore {
     },
     53: {
       id: 5,
-      name: "Слиф",
       sector: galaxySectors.celeste,
       biome: biomes.toxic,
       weatherConditions: [
@@ -520,7 +466,6 @@ class PlanetsStore {
     },
     54: {
       id: 3,
-      name: "Карамур",
       sector: galaxySectors.korpus,
       biome: biomes.newDesert,
       weatherConditions: [
@@ -531,7 +476,6 @@ class PlanetsStore {
     },
     55: {
       id: 1,
-      name: "Кхарст",
       sector: galaxySectors.gallux,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
@@ -539,7 +483,6 @@ class PlanetsStore {
     },
     56: {
       id: 1,
-      name: "Юкория",
       sector: galaxySectors.morgon,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
@@ -547,7 +490,6 @@ class PlanetsStore {
     },
     57: {
       id: 2,
-      name: "Мириум",
       sector: galaxySectors.morgon,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
@@ -555,7 +497,6 @@ class PlanetsStore {
     },
     58: {
       id: 1,
-      name: "Керт II",
       sector: galaxySectors.rictus,
       biome: biomes.tundra,
       weatherConditions: [],
@@ -563,7 +504,6 @@ class PlanetsStore {
     },
     59: {
       id: 2,
-      name: "Парш",
       sector: galaxySectors.rictus,
       biome: biomes.newJungle,
       weatherConditions: [weatherConditions.rainstorms],
@@ -571,7 +511,6 @@ class PlanetsStore {
     },
     60: {
       id: 1,
-      name: "Риф",
       sector: galaxySectors.saleria,
       biome: biomes.highlands,
       weatherConditions: [
@@ -582,7 +521,6 @@ class PlanetsStore {
     },
     61: {
       id: 2,
-      name: "Ирулта",
       sector: galaxySectors.saleria,
       biome: biomes.jungle,
       weatherConditions: [
@@ -593,7 +531,6 @@ class PlanetsStore {
     },
     62: {
       id: 1,
-      name: "Эморат",
       sector: galaxySectors.meridian,
       biome: biomes.ethereal,
       weatherConditions: [],
@@ -601,7 +538,6 @@ class PlanetsStore {
     },
     63: {
       id: 2,
-      name: "Илдуна-прайм",
       sector: galaxySectors.meridian,
       biome: biomes.tundra,
       weatherConditions: [],
@@ -609,7 +545,6 @@ class PlanetsStore {
     },
     64: {
       id: 4,
-      name: "Утроба",
       sector: galaxySectors.idun,
       biome: biomes.desolate,
       weatherConditions: [
@@ -620,7 +555,6 @@ class PlanetsStore {
     },
     65: {
       id: 1,
-      name: "Меридия",
       tidbit: `<p>Одна из четырех планет, где была развернута система терминального контроля (TCS) - сеть массивных башен, которые покрывают планету нейротоксином, известным как Терминцид. Установка этих башен TCS потребовала совместных усилий многих Адских Десантников и в конечном итоге привела к тому, что терминиды были удалены навсегда.</p>`,
       sector: galaxySectors.umlaut,
       biome: biomes.meridia,
@@ -632,7 +566,6 @@ class PlanetsStore {
     },
     66: {
       id: 1,
-      name: "Борея",
       sector: galaxySectors.sagan,
       biome: biomes.winter,
       weatherConditions: [
@@ -643,7 +576,6 @@ class PlanetsStore {
     },
     67: {
       id: 4,
-      name: "Курия",
       sector: galaxySectors.marspira,
       biome: biomes.moon,
       weatherConditions: [
@@ -654,7 +586,6 @@ class PlanetsStore {
     },
     68: {
       id: 5,
-      name: "Тарш",
       sector: galaxySectors.marspira,
       biome: biomes.winter,
       weatherConditions: [
@@ -665,7 +596,6 @@ class PlanetsStore {
     },
     69: {
       id: 2,
-      name: "Шелт",
       sector: galaxySectors.talus,
       biome: biomes.tundra,
       weatherConditions: [],
@@ -673,7 +603,6 @@ class PlanetsStore {
     },
     70: {
       id: 3,
-      name: "Имбер",
       sector: galaxySectors.talus,
       biome: biomes.desolate,
       weatherConditions: [
@@ -684,7 +613,6 @@ class PlanetsStore {
     },
     71: {
       id: 1,
-      name: "Блистика",
       sector: galaxySectors.gellert,
       biome: biomes.desolate,
       weatherConditions: [
@@ -695,7 +623,6 @@ class PlanetsStore {
     },
     72: {
       id: 5,
-      name: "Ратч",
       sector: galaxySectors.iptus,
       biome: biomes.newDesert,
       weatherConditions: [
@@ -706,7 +633,6 @@ class PlanetsStore {
     },
     73: {
       id: 1,
-      name: "Юльхейм",
       sector: galaxySectors.nanos,
       biome: biomes.winter,
       weatherConditions: [
@@ -717,7 +643,6 @@ class PlanetsStore {
     },
     74: {
       id: 6,
-      name: "Валгаард",
       sector: galaxySectors.iptus,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
@@ -725,7 +650,6 @@ class PlanetsStore {
     },
     75: {
       id: 1,
-      name: "Арктур",
       sector: galaxySectors.arturion,
       biome: biomes.winter,
       weatherConditions: [
@@ -736,7 +660,6 @@ class PlanetsStore {
     },
     76: {
       id: 1,
-      name: "Эскер",
       sector: galaxySectors.falstaff,
       biome: biomes.toxic,
       weatherConditions: [
@@ -747,7 +670,6 @@ class PlanetsStore {
     },
     77: {
       id: 3,
-      name: "Терек",
       sector: galaxySectors.orion,
       biome: biomes.moon,
       weatherConditions: [
@@ -758,7 +680,6 @@ class PlanetsStore {
     },
     78: {
       id: 4,
-      name: "Сиррус",
       sector: galaxySectors.orion,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
@@ -766,7 +687,6 @@ class PlanetsStore {
     },
     79: {
       id: 1,
-      name: "Кримсика",
       imageCount: 3,
       sector: galaxySectors.draco,
       biome: biomes.crimsonMoor,
@@ -775,7 +695,6 @@ class PlanetsStore {
     },
     80: {
       id: 5,
-      name: "Хиит",
       sector: galaxySectors.orion,
       biome: biomes.winter,
       weatherConditions: [
@@ -786,7 +705,6 @@ class PlanetsStore {
     },
     81: {
       id: 6,
-      name: "Вельд",
       sector: galaxySectors.orion,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
@@ -794,7 +712,6 @@ class PlanetsStore {
     },
     82: {
       id: 4,
-      name: "Альта V",
       sector: galaxySectors.korpus,
       biome: biomes.jungle,
       weatherConditions: [
@@ -805,7 +722,6 @@ class PlanetsStore {
     },
     83: {
       id: 1,
-      name: "Урсика XI",
       sector: galaxySectors.borgus,
       biome: biomes.ethereal,
       weatherConditions: [],
@@ -813,7 +729,6 @@ class PlanetsStore {
     },
     84: {
       id: 5,
-      name: "Инари",
       sector: galaxySectors.korpus,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
@@ -821,7 +736,6 @@ class PlanetsStore {
     },
     85: {
       id: 1,
-      name: "Скааш",
       sector: galaxySectors.ursa,
       biome: biomes.toxic,
       weatherConditions: [
@@ -832,7 +746,6 @@ class PlanetsStore {
     },
     86: {
       id: 6,
-      name: "Морадеш",
       sector: galaxySectors.celeste,
       biome: biomes.newDesert,
       weatherConditions: [
@@ -843,7 +756,6 @@ class PlanetsStore {
     },
     87: {
       id: 2,
-      name: "Расп",
       sector: galaxySectors.gallux,
       biome: biomes.moon,
       weatherConditions: [
@@ -854,7 +766,6 @@ class PlanetsStore {
     },
     88: {
       id: 3,
-      name: "Башир",
       sector: galaxySectors.gallux,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
@@ -862,7 +773,6 @@ class PlanetsStore {
     },
     89: {
       id: 3,
-      name: "Регнус",
       sector: galaxySectors.morgon,
       biome: biomes.jungle,
       weatherConditions: [
@@ -873,7 +783,6 @@ class PlanetsStore {
     },
     90: {
       id: 4,
-      name: "Мог",
       sector: galaxySectors.morgon,
       biome: biomes.winter,
       weatherConditions: [
@@ -884,7 +793,6 @@ class PlanetsStore {
     },
     91: {
       id: 3,
-      name: "Вальмокс",
       sector: galaxySectors.rictus,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
@@ -892,7 +800,6 @@ class PlanetsStore {
     },
     92: {
       id: 4,
-      name: "Иро",
       sector: galaxySectors.rictus,
       biome: biomes.highlands,
       weatherConditions: [
@@ -903,7 +810,6 @@ class PlanetsStore {
     },
     93: {
       id: 5,
-      name: "Графмер",
       sector: galaxySectors.rictus,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
@@ -911,7 +817,6 @@ class PlanetsStore {
     },
     94: {
       id: 1,
-      name: "Новый Cтокгольм",
       sector: galaxySectors.hanzo,
       biome: biomes.winter,
       weatherConditions: [
@@ -922,7 +827,6 @@ class PlanetsStore {
     },
     95: {
       id: 6,
-      name: "Оазис",
       sector: galaxySectors.rictus,
       biome: biomes.jungle,
       weatherConditions: [
@@ -933,7 +837,6 @@ class PlanetsStore {
     },
     96: {
       id: 7,
-      name: "Генезис-прайм",
       sector: galaxySectors.rictus,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
@@ -941,7 +844,6 @@ class PlanetsStore {
     },
     97: {
       id: 3,
-      name: "Аванпост 32",
       sector: galaxySectors.saleria,
       biome: biomes.newDesert,
       weatherConditions: [
@@ -952,7 +854,6 @@ class PlanetsStore {
     },
     98: {
       id: 4,
-      name: "Калипсо",
       sector: galaxySectors.saleria,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
@@ -960,7 +861,6 @@ class PlanetsStore {
     },
     99: {
       id: 1,
-      name: "Луга элизия",
       sector: galaxySectors.guang,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
@@ -968,7 +868,6 @@ class PlanetsStore {
     },
     100: {
       id: 2,
-      name: "Пещера альдеридж",
       sector: galaxySectors.guang,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
@@ -976,7 +875,6 @@ class PlanetsStore {
     },
     101: {
       id: 2,
-      name: "Трандор",
       sector: galaxySectors.sten,
       biome: biomes.tundra,
       weatherConditions: [],
@@ -984,7 +882,6 @@ class PlanetsStore {
     },
     102: {
       id: 1,
-      name: "ВИТЗ",
       sector: galaxySectors.tarragon,
       biome: biomes.newJungle,
       weatherConditions: [weatherConditions.rainstorms],
@@ -992,7 +889,6 @@ class PlanetsStore {
     },
     103: {
       id: 3,
-      name: "Хребет свободы",
       sector: galaxySectors.meridian,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
@@ -1000,7 +896,6 @@ class PlanetsStore {
     },
     104: {
       id: 4,
-      name: "Болдрик-прайм",
       sector: galaxySectors.meridian,
       biome: biomes.jungle,
       weatherConditions: [
@@ -1011,7 +906,6 @@ class PlanetsStore {
     },
     105: {
       id: 1,
-      name: "Вир",
       sector: galaxySectors.theseus,
       biome: biomes.highlands,
       weatherConditions: [
@@ -1022,7 +916,6 @@ class PlanetsStore {
     },
     106: {
       id: 2,
-      name: "Купер",
       sector: galaxySectors.theseus,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
@@ -1030,7 +923,6 @@ class PlanetsStore {
     },
     107: {
       id: 2,
-      name: "Станция «Осло»",
       sector: galaxySectors.sagan,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
@@ -1038,7 +930,6 @@ class PlanetsStore {
     },
     108: {
       id: 1,
-      name: "Пепли IX",
       sector: galaxySectors.xzar,
       biome: biomes.desolate,
       weatherConditions: [
@@ -1049,7 +940,6 @@ class PlanetsStore {
     },
     109: {
       id: 3,
-      name: "Гюнвальд",
       sector: galaxySectors.sagan,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
@@ -1057,7 +947,6 @@ class PlanetsStore {
     },
     110: {
       id: 2,
-      name: "Дольф",
       sector: galaxySectors.nanos,
       biome: biomes.moon,
       weatherConditions: [
@@ -1068,7 +957,6 @@ class PlanetsStore {
     },
     111: {
       id: 3,
-      name: "Беквам III",
       sector: galaxySectors.nanos,
       biome: biomes.ethereal,
       weatherConditions: [],
@@ -1076,7 +964,6 @@ class PlanetsStore {
     },
     112: {
       id: 4,
-      name: "Дума тюр",
       sector: galaxySectors.nanos,
       biome: biomes.tundra,
       weatherConditions: [],
@@ -1084,7 +971,6 @@ class PlanetsStore {
     },
     113: {
       id: 1,
-      name: "Колодцы вернена",
       sector: galaxySectors.hydra,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
@@ -1092,7 +978,6 @@ class PlanetsStore {
     },
     114: {
       id: 2,
-      name: "Перевал асов",
       sector: galaxySectors.hydra,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
@@ -1100,7 +985,6 @@ class PlanetsStore {
     },
     115: {
       id: 1,
-      name: "Залив авроры",
       sector: galaxySectors.valdis,
       biome: biomes.tundra,
       weatherConditions: [],
@@ -1108,7 +992,6 @@ class PlanetsStore {
     },
     116: {
       id: 1,
-      name: "Пента",
       sector: galaxySectors.lacaille,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
@@ -1116,7 +999,6 @@ class PlanetsStore {
     },
     117: {
       id: 4,
-      name: "Елливаре",
       sector: galaxySectors.talus,
       biome: biomes.jungle,
       weatherConditions: [
@@ -1127,7 +1009,6 @@ class PlanetsStore {
     },
     118: {
       id: 1,
-      name: "Вог-сойот",
       sector: galaxySectors.tanis,
       biome: biomes.winter,
       weatherConditions: [
@@ -1138,7 +1019,6 @@ class PlanetsStore {
     },
     119: {
       id: 2,
-      name: "Киррик",
       sector: galaxySectors.arturion,
       biome: biomes.jungle,
       weatherConditions: [
@@ -1149,7 +1029,6 @@ class PlanetsStore {
     },
     120: {
       id: 3,
-      name: "Мортакс-прайм",
       sector: galaxySectors.arturion,
       biome: biomes.desert,
       weatherConditions: [
@@ -1160,7 +1039,6 @@ class PlanetsStore {
     },
     121: {
       id: 4,
-      name: "Станция «Уилфорд»",
       sector: galaxySectors.arturion,
       biome: biomes.toxic,
       weatherConditions: [
@@ -1171,7 +1049,6 @@ class PlanetsStore {
     },
     122: {
       id: 5,
-      name: "Первопроходец II",
       sector: galaxySectors.arturion,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
@@ -1179,7 +1056,6 @@ class PlanetsStore {
     },
     123: {
       id: 2,
-      name: "Пески эрсона",
       sector: galaxySectors.falstaff,
       biome: biomes.desert,
       weatherConditions: [
@@ -1190,7 +1066,6 @@ class PlanetsStore {
     },
     124: {
       id: 3,
-      name: "Сокорро III",
       sector: galaxySectors.falstaff,
       biome: biomes.ethereal,
       weatherConditions: [],
@@ -1198,7 +1073,6 @@ class PlanetsStore {
     },
     125: {
       id: 4,
-      name: "Буровой камень",
       sector: galaxySectors.falstaff,
       biome: biomes.newJungle,
       weatherConditions: [weatherConditions.rainstorms],
@@ -1206,7 +1080,6 @@ class PlanetsStore {
     },
     126: {
       id: 2,
-      name: "Фенрир III",
       tidbit: `<p>Одна из четырех планет, где была развернута система терминального контроля (TCS) - сеть массивных башен, которые покрывают планету нейротоксином, известным как Терминцид. Установка этих башен TCS потребовала совместных усилий многих Адских Десантников и в конечном итоге привела к тому, что терминиды были удалены навсегда.</p>`,
       sector: galaxySectors.umlaut,
       biome: biomes.moon,
@@ -1218,7 +1091,6 @@ class PlanetsStore {
     },
     127: {
       id: 3,
-      name: "Тьюринг",
       tidbit: `<p>Одна из четырех планет, где была развернута система терминального контроля (TCS) - сеть массивных башен, которые покрывают планету нейротоксином, известным как Терминцид. Установка этих башен TCS потребовала совместных усилий многих Адских Десантников и в конечном итоге привела к тому, что терминиды были удалены навсегда.</p>`,
       sector: galaxySectors.umlaut,
       biome: biomes.ethereal,
@@ -1227,7 +1099,6 @@ class PlanetsStore {
     },
     128: {
       id: 7,
-      name: "Ангельский риск",
       sector: galaxySectors.orion,
       biome: biomes.tundra,
       weatherConditions: [],
@@ -1235,7 +1106,6 @@ class PlanetsStore {
     },
     129: {
       id: 2,
-      name: "Дарий II",
       sector: galaxySectors.borgus,
       biome: biomes.toxic,
       weatherConditions: [
@@ -1246,7 +1116,6 @@ class PlanetsStore {
     },
     130: {
       id: 1,
-      name: "Акамар IV",
       sector: galaxySectors.jinXi,
       biome: biomes.highlands,
       weatherConditions: [
@@ -1257,7 +1126,6 @@ class PlanetsStore {
     },
     131: {
       id: 3,
-      name: "Ахернар II",
       sector: galaxySectors.borgus,
       biome: biomes.highlands,
       weatherConditions: [
@@ -1268,7 +1136,6 @@ class PlanetsStore {
     },
     132: {
       id: 4,
-      name: "Ахирд III",
       sector: galaxySectors.borgus,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
@@ -1276,7 +1143,6 @@ class PlanetsStore {
     },
     133: {
       id: 2,
-      name: "Акраб XI",
       sector: galaxySectors.ursa,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
@@ -1284,7 +1150,6 @@ class PlanetsStore {
     },
     134: {
       id: 3,
-      name: "Акрукс IX",
       sector: galaxySectors.ursa,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
@@ -1292,7 +1157,6 @@ class PlanetsStore {
     },
     135: {
       id: 4,
-      name: "Акубенс-прайм",
       sector: galaxySectors.gallux,
       biome: biomes.ethereal,
       weatherConditions: [],
@@ -1300,7 +1164,6 @@ class PlanetsStore {
     },
     136: {
       id: 5,
-      name: "Эдхара",
       sector: galaxySectors.gallux,
       biome: biomes.desolate,
       weatherConditions: [
@@ -1311,7 +1174,6 @@ class PlanetsStore {
     },
     137: {
       id: 6,
-      name: "Афойя-бэй",
       sector: galaxySectors.gallux,
       biome: biomes.highlands,
       weatherConditions: [
@@ -1322,7 +1184,6 @@ class PlanetsStore {
     },
     138: {
       id: 2,
-      name: "Айн-5",
       sector: galaxySectors.hanzo,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
@@ -1330,7 +1191,6 @@ class PlanetsStore {
     },
     139: {
       id: 3,
-      name: "Алаирт III",
       sector: galaxySectors.hanzo,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
@@ -1338,7 +1198,6 @@ class PlanetsStore {
     },
     140: {
       id: 4,
-      name: "Аламак VII",
       sector: galaxySectors.hanzo,
       biome: biomes.ethereal,
       weatherConditions: [],
@@ -1346,7 +1205,6 @@ class PlanetsStore {
     },
     141: {
       id: 1,
-      name: "Алараф",
       sector: galaxySectors.akira,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
@@ -1354,7 +1212,6 @@ class PlanetsStore {
     },
     142: {
       id: 2,
-      name: "Алатфар XI",
       sector: galaxySectors.akira,
       biome: biomes.winter,
       weatherConditions: [
@@ -1365,7 +1222,6 @@ class PlanetsStore {
     },
     143: {
       id: 3,
-      name: "Эндар",
       sector: galaxySectors.akira,
       biome: biomes.tundra,
       weatherConditions: [],
@@ -1373,7 +1229,6 @@ class PlanetsStore {
     },
     144: {
       id: 4,
-      name: "Асперот-прайм",
       sector: galaxySectors.akira,
       biome: biomes.newJungle,
       weatherConditions: [weatherConditions.rainstorms],
@@ -1381,7 +1236,6 @@ class PlanetsStore {
     },
     145: {
       id: 3,
-      name: "Беллатрикс",
       sector: galaxySectors.guang,
       biome: biomes.highlands,
       weatherConditions: [
@@ -1392,7 +1246,6 @@ class PlanetsStore {
     },
     146: {
       id: 4,
-      name: "Ботейн",
       sector: galaxySectors.guang,
       biome: biomes.toxic,
       weatherConditions: [
@@ -1403,7 +1256,6 @@ class PlanetsStore {
     },
     147: {
       id: 2,
-      name: "Осупсам",
       sector: galaxySectors.tarragon,
       biome: biomes.newDesert,
       weatherConditions: [
@@ -1414,7 +1266,6 @@ class PlanetsStore {
     },
     148: {
       id: 3,
-      name: "Бринк-2",
       sector: galaxySectors.tarragon,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
@@ -1422,7 +1273,6 @@ class PlanetsStore {
     },
     149: {
       id: 4,
-      name: "Бунда II",
       sector: galaxySectors.tarragon,
       biome: biomes.tundra,
       weatherConditions: [],
@@ -1430,7 +1280,6 @@ class PlanetsStore {
     },
     150: {
       id: 5,
-      name: "Канопус",
       sector: galaxySectors.tarragon,
       biome: biomes.desert,
       weatherConditions: [
@@ -1441,7 +1290,6 @@ class PlanetsStore {
     },
     151: {
       id: 3,
-      name: "Каф",
       sector: galaxySectors.theseus,
       biome: biomes.newJungle,
       weatherConditions: [weatherConditions.rainstorms],
@@ -1449,7 +1297,6 @@ class PlanetsStore {
     },
     152: {
       id: 4,
-      name: "Кастор",
       sector: galaxySectors.theseus,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
@@ -1457,7 +1304,6 @@ class PlanetsStore {
     },
     153: {
       id: 1,
-      name: "Дирген",
       sector: galaxySectors.severin,
       biome: biomes.newDesert,
       weatherConditions: [
@@ -1468,7 +1314,6 @@ class PlanetsStore {
     },
     154: {
       id: 2,
-      name: "Дропнир",
       sector: galaxySectors.xzar,
       biome: biomes.highlands,
       weatherConditions: [
@@ -1479,7 +1324,6 @@ class PlanetsStore {
     },
     155: {
       id: 3,
-      name: "Морт",
       sector: galaxySectors.xzar,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
@@ -1487,7 +1331,6 @@ class PlanetsStore {
     },
     156: {
       id: 4,
-      name: "Ингмар",
       sector: galaxySectors.xzar,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
@@ -1495,7 +1338,6 @@ class PlanetsStore {
     },
     157: {
       id: 1,
-      name: "Чарбол-VII",
       sector: galaxySectors.andromeda,
       biome: biomes.toxic,
       weatherConditions: [
@@ -1506,7 +1348,6 @@ class PlanetsStore {
     },
     158: {
       id: 2,
-      name: "Харон-прайм",
       sector: galaxySectors.andromeda,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
@@ -1514,7 +1355,6 @@ class PlanetsStore {
     },
     159: {
       id: 1,
-      name: "Хепесса IV",
       sector: galaxySectors.trigon,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
@@ -1522,7 +1362,6 @@ class PlanetsStore {
     },
     160: {
       id: 2,
-      name: "Чухи",
       sector: galaxySectors.lacaille,
       biome: biomes.desert,
       weatherConditions: [
@@ -1533,7 +1372,6 @@ class PlanetsStore {
     },
     161: {
       id: 3,
-      name: "Хорт-бэй",
       sector: galaxySectors.lacaille,
       biome: biomes.toxic,
       weatherConditions: [
@@ -1544,7 +1382,6 @@ class PlanetsStore {
     },
     162: {
       id: 2,
-      name: "Клаорелл",
       sector: galaxySectors.tanis,
       biome: biomes.moon,
       weatherConditions: [
@@ -1555,7 +1392,6 @@ class PlanetsStore {
     },
     163: {
       id: 3,
-      name: "Класа",
       sector: galaxySectors.tanis,
       biome: biomes.newJungle,
       weatherConditions: [weatherConditions.rainstorms],
@@ -1563,7 +1399,6 @@ class PlanetsStore {
     },
     164: {
       id: 4,
-      name: "Демиург",
       sector: galaxySectors.tanis,
       biome: biomes.tundra,
       weatherConditions: [],
@@ -1571,7 +1406,6 @@ class PlanetsStore {
     },
     165: {
       id: 6,
-      name: "Денеб II",
       sector: galaxySectors.arturion,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
@@ -1579,7 +1413,6 @@ class PlanetsStore {
     },
     166: {
       id: 7,
-      name: "Электра-бэй",
       sector: galaxySectors.arturion,
       biome: biomes.highlands,
       weatherConditions: [
@@ -1590,7 +1423,6 @@ class PlanetsStore {
     },
     167: {
       id: 1,
-      name: "Энулиале",
       sector: galaxySectors.lestrade,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
@@ -1598,7 +1430,6 @@ class PlanetsStore {
     },
     168: {
       id: 2,
-      name: "Эпсилон-финсис VI",
       sector: galaxySectors.lestrade,
       biome: biomes.winter,
       weatherConditions: [
@@ -1609,7 +1440,6 @@ class PlanetsStore {
     },
     169: {
       id: 4,
-      name: "Эрата-прайм",
       tidbit: `<p>Одна из четырех планет, где была развернута система терминального контроля (TCS) - сеть массивных башен, которые покрывают планету нейротоксином, известным как Терминцид. Установка этих башен TCS потребовала совместных усилий многих Адских Десантников и в конечном итоге привела к тому, что терминиды были удалены навсегда.</p>`,
       sector: galaxySectors.umlaut,
       biome: biomes.desert,
@@ -1621,7 +1451,6 @@ class PlanetsStore {
     },
     170: {
       id: 2,
-      name: "Эстану",
       sector: galaxySectors.draco,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
@@ -1629,7 +1458,6 @@ class PlanetsStore {
     },
     171: {
       id: 3,
-      name: "Фори-прайм",
       sector: galaxySectors.draco,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
@@ -1637,7 +1465,6 @@ class PlanetsStore {
     },
     172: {
       id: 2,
-      name: "Гакрукс",
       sector: galaxySectors.jinXi,
       biome: biomes.newJungle,
       weatherConditions: [weatherConditions.rainstorms],
@@ -1645,7 +1472,6 @@ class PlanetsStore {
     },
     173: {
       id: 3,
-      name: "Гар-харен",
       sector: galaxySectors.jinXi,
       biome: biomes.jungle,
       weatherConditions: [
@@ -1656,7 +1482,6 @@ class PlanetsStore {
     },
     174: {
       id: 4,
-      name: "Гатрия",
       sector: galaxySectors.jinXi,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
@@ -1664,7 +1489,6 @@ class PlanetsStore {
     },
     175: {
       id: 4,
-      name: "Гемма",
       sector: galaxySectors.ursa,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
@@ -1672,7 +1496,6 @@ class PlanetsStore {
     },
     176: {
       id: 1,
-      name: "Гранд Эррант",
       sector: galaxySectors.farsight,
       biome: biomes.desolate,
       weatherConditions: [
@@ -1683,7 +1506,6 @@ class PlanetsStore {
     },
     177: {
       id: 2,
-      name: "Хадар",
       sector: galaxySectors.ferris,
       biome: biomes.winter,
       weatherConditions: [
@@ -1694,7 +1516,6 @@ class PlanetsStore {
     },
     178: {
       id: 1,
-      name: "Хака",
       sector: galaxySectors.leo,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
@@ -1702,7 +1523,6 @@ class PlanetsStore {
     },
     179: {
       id: 3,
-      name: "Хальдус",
       sector: galaxySectors.ferris,
       biome: biomes.newJungle,
       weatherConditions: [weatherConditions.rainstorms],
@@ -1710,7 +1530,6 @@ class PlanetsStore {
     },
     180: {
       id: 2,
-      name: "Порт-галье",
       sector: galaxySectors.leo,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
@@ -1718,7 +1537,6 @@ class PlanetsStore {
     },
     181: {
       id: 4,
-      name: "Хартон II",
       sector: galaxySectors.ferris,
       biome: biomes.desolate,
       weatherConditions: [
@@ -1729,7 +1547,6 @@ class PlanetsStore {
     },
     182: {
       id: 1,
-      name: "Хесоэ-прайм",
       sector: galaxySectors.rigel,
       biome: biomes.winter,
       weatherConditions: [
@@ -1740,7 +1557,6 @@ class PlanetsStore {
     },
     183: {
       id: 5,
-      name: "Хезе-бэй",
       sector: galaxySectors.hanzo,
       biome: biomes.newDesert,
       weatherConditions: [
@@ -1751,7 +1567,6 @@ class PlanetsStore {
     },
     184: {
       id: 2,
-      name: "Хорт",
       sector: galaxySectors.rigel,
       biome: biomes.highlands,
       weatherConditions: [
@@ -1762,7 +1577,6 @@ class PlanetsStore {
     },
     185: {
       id: 1,
-      name: "Гидробиус",
       sector: galaxySectors.omega,
       biome: biomes.desert,
       weatherConditions: [
@@ -1773,7 +1587,6 @@ class PlanetsStore {
     },
     186: {
       id: 2,
-      name: "Карлия",
       sector: galaxySectors.omega,
       biome: biomes.desolate,
       weatherConditions: [
@@ -1784,7 +1597,6 @@ class PlanetsStore {
     },
     187: {
       id: 5,
-      name: "Кейд",
       sector: galaxySectors.akira,
       biome: biomes.newDesert,
       weatherConditions: [
@@ -1795,7 +1607,6 @@ class PlanetsStore {
     },
     188: {
       id: 5,
-      name: "Хандарк",
       sector: galaxySectors.guang,
       biome: biomes.winter,
       weatherConditions: [
@@ -1806,7 +1617,6 @@ class PlanetsStore {
     },
     189: {
       id: 1,
-      name: "Клака 5",
       sector: galaxySectors.alstrad,
       biome: biomes.jungle,
       weatherConditions: [
@@ -1817,7 +1627,6 @@ class PlanetsStore {
     },
     190: {
       id: 2,
-      name: "Порт-кнет",
       sector: galaxySectors.alstrad,
       biome: biomes.desolate,
       weatherConditions: [
@@ -1828,7 +1637,6 @@ class PlanetsStore {
     },
     191: {
       id: 3,
-      name: "Краз",
       sector: galaxySectors.alstrad,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
@@ -1836,7 +1644,6 @@ class PlanetsStore {
     },
     192: {
       id: 1,
-      name: "Кума",
       sector: galaxySectors.hawking,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
@@ -1844,7 +1651,6 @@ class PlanetsStore {
     },
     193: {
       id: 5,
-      name: "Ластоф",
       sector: galaxySectors.theseus,
       biome: biomes.newDesert,
       weatherConditions: [
@@ -1855,7 +1661,6 @@ class PlanetsStore {
     },
     194: {
       id: 1,
-      name: "Ленг II",
       sector: galaxySectors.quintus,
       biome: biomes.toxic,
       weatherConditions: [
@@ -1866,7 +1671,6 @@ class PlanetsStore {
     },
     195: {
       id: 4,
-      name: "Лесат",
       sector: galaxySectors.lacaille,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
@@ -1874,7 +1678,6 @@ class PlanetsStore {
     },
     196: {
       id: 2,
-      name: "Майя",
       sector: galaxySectors.severin,
       biome: biomes.moon,
       weatherConditions: [
@@ -1885,7 +1688,6 @@ class PlanetsStore {
     },
     197: {
       id: 3,
-      name: "Малевелон-крик",
       sector: galaxySectors.severin,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
@@ -1893,7 +1695,6 @@ class PlanetsStore {
     },
     198: {
       id: 5,
-      name: "Мантес",
       sector: galaxySectors.xzar,
       biome: biomes.jungle,
       weatherConditions: [
@@ -1904,7 +1705,6 @@ class PlanetsStore {
     },
     199: {
       id: 3,
-      name: "Марфарк",
       sector: galaxySectors.andromeda,
       biome: biomes.winter,
       weatherConditions: [
@@ -1915,7 +1715,6 @@ class PlanetsStore {
     },
     200: {
       id: 4,
-      name: "Мартале",
       sector: galaxySectors.andromeda,
       biome: biomes.tundra,
       weatherConditions: [],
@@ -1923,7 +1722,6 @@ class PlanetsStore {
     },
     201: {
       id: 5,
-      name: "Матар-бэй",
       sector: galaxySectors.andromeda,
       biome: biomes.highlands,
       weatherConditions: [
@@ -1934,7 +1732,6 @@ class PlanetsStore {
     },
     202: {
       id: 1,
-      name: "Мейсса",
       sector: galaxySectors.ymir,
       biome: biomes.jungle,
       weatherConditions: [
@@ -1945,7 +1742,6 @@ class PlanetsStore {
     },
     203: {
       id: 2,
-      name: "Мекбуда",
       sector: galaxySectors.valdis,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
@@ -1953,7 +1749,6 @@ class PlanetsStore {
     },
     204: {
       id: 3,
-      name: "Менкент",
       sector: galaxySectors.hydra,
       biome: biomes.desolate,
       weatherConditions: [
@@ -1964,7 +1759,6 @@ class PlanetsStore {
     },
     205: {
       id: 3,
-      name: "Мерак",
       sector: galaxySectors.valdis,
       biome: biomes.toxic,
       weatherConditions: [
@@ -1975,7 +1769,6 @@ class PlanetsStore {
     },
     206: {
       id: 4,
-      name: "Марга IV",
       sector: galaxySectors.valdis,
       biome: biomes.winter,
       weatherConditions: [
@@ -1986,7 +1779,6 @@ class PlanetsStore {
     },
     207: {
       id: 2,
-      name: "Минхир",
       sector: galaxySectors.gellert,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
@@ -1994,7 +1786,6 @@ class PlanetsStore {
     },
     208: {
       id: 3,
-      name: "Минтория",
       sector: galaxySectors.gellert,
       biome: biomes.highlands,
       weatherConditions: [
@@ -2005,7 +1796,6 @@ class PlanetsStore {
     },
     209: {
       id: 2,
-      name: "Мордия-9",
       sector: galaxySectors.hawking,
       biome: biomes.ethereal,
       weatherConditions: [],
@@ -2013,7 +1803,6 @@ class PlanetsStore {
     },
     210: {
       id: 3,
-      name: "Нанбатея II",
       sector: galaxySectors.lestrade,
       biome: biomes.newJungle,
       weatherConditions: [weatherConditions.rainstorms],
@@ -2021,7 +1810,6 @@ class PlanetsStore {
     },
     211: {
       id: 4,
-      name: "Нави VII",
       sector: galaxySectors.lestrade,
       biome: biomes.jungle,
       weatherConditions: [
@@ -2032,7 +1820,6 @@ class PlanetsStore {
     },
     212: {
       id: 2,
-      name: "Нивель 43",
       sector: galaxySectors.mirin,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
@@ -2040,7 +1827,6 @@ class PlanetsStore {
     },
     213: {
       id: 3,
-      name: "Ошоне",
       imageCount: 2,
       sector: galaxySectors.mirin,
       biome: biomes.highlands,
@@ -2052,7 +1838,6 @@ class PlanetsStore {
     },
     214: {
       id: 3,
-      name: "Оверго-прайм",
       sector: galaxySectors.sten,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
@@ -2060,7 +1845,6 @@ class PlanetsStore {
     },
     215: {
       id: 5,
-      name: "Пандион XXIV",
       sector: galaxySectors.jinXi,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
@@ -2068,7 +1852,6 @@ class PlanetsStore {
     },
     216: {
       id: 4,
-      name: "Партион",
       sector: galaxySectors.sten,
       biome: biomes.desolate,
       weatherConditions: [
@@ -2079,7 +1862,6 @@ class PlanetsStore {
     },
     217: {
       id: 5,
-      name: "Пикок",
       sector: galaxySectors.sten,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
@@ -2087,7 +1869,6 @@ class PlanetsStore {
     },
     218: {
       id: 6,
-      name: "Факт-бэй",
       sector: galaxySectors.jinXi,
       biome: biomes.newDesert,
       weatherConditions: [
@@ -2098,7 +1879,6 @@ class PlanetsStore {
     },
     219: {
       id: 2,
-      name: "Феркад II",
       sector: galaxySectors.farsight,
       biome: biomes.newJungle,
       weatherConditions: [weatherConditions.rainstorms],
@@ -2106,7 +1886,6 @@ class PlanetsStore {
     },
     220: {
       id: 3,
-      name: "Полярис-прайм",
       sector: galaxySectors.farsight,
       biome: biomes.desert,
       weatherConditions: [
@@ -2117,7 +1896,6 @@ class PlanetsStore {
     },
     221: {
       id: 4,
-      name: "Поллукс-31",
       sector: galaxySectors.farsight,
       biome: biomes.jungle,
       weatherConditions: [
@@ -2128,7 +1906,6 @@ class PlanetsStore {
     },
     222: {
       id: 5,
-      name: "Праса",
       sector: galaxySectors.farsight,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
@@ -2136,7 +1913,6 @@ class PlanetsStore {
     },
     223: {
       id: 3,
-      name: "Пропус",
       sector: galaxySectors.leo,
       biome: biomes.newDesert,
       weatherConditions: [
@@ -2147,7 +1923,6 @@ class PlanetsStore {
     },
     224: {
       id: 4,
-      name: "Рас-альгети",
       sector: galaxySectors.leo,
       biome: biomes.tundra,
       weatherConditions: [],
@@ -2155,7 +1930,6 @@ class PlanetsStore {
     },
     225: {
       id: 3,
-      name: "Арди-4",
       sector: galaxySectors.rigel,
       biome: biomes.moon,
       weatherConditions: [
@@ -2166,7 +1940,6 @@ class PlanetsStore {
     },
     226: {
       id: 4,
-      name: "Роуг 5",
       sector: galaxySectors.rigel,
       biome: biomes.jungle,
       weatherConditions: [
@@ -2177,7 +1950,6 @@ class PlanetsStore {
     },
     227: {
       id: 5,
-      name: "Рирга-бэй",
       sector: galaxySectors.rigel,
       biome: biomes.toxic,
       weatherConditions: [
@@ -2188,7 +1960,6 @@ class PlanetsStore {
     },
     228: {
       id: 3,
-      name: "Сиэсс",
       sector: galaxySectors.omega,
       biome: biomes.newJungle,
       weatherConditions: [weatherConditions.rainstorms],
@@ -2196,7 +1967,6 @@ class PlanetsStore {
     },
     229: {
       id: 4,
-      name: "Сенже-23",
       sector: galaxySectors.omega,
       biome: biomes.canyon,
       weatherConditions: [weatherConditions.tremors],
@@ -2204,7 +1974,6 @@ class PlanetsStore {
     },
     230: {
       id: 5,
-      name: "Сетия",
       sector: galaxySectors.omega,
       biome: biomes.newDesert,
       weatherConditions: [
@@ -2215,7 +1984,6 @@ class PlanetsStore {
     },
     231: {
       id: 1,
-      name: "Шете",
       sector: galaxySectors.xiTauri,
       biome: biomes.toxic,
       weatherConditions: [
@@ -2226,7 +1994,6 @@ class PlanetsStore {
     },
     232: {
       id: 2,
-      name: "Симнот",
       sector: galaxySectors.xiTauri,
       biome: biomes.rainForest,
       weatherConditions: [weatherConditions.ionStorms],
@@ -2234,7 +2001,6 @@ class PlanetsStore {
     },
     233: {
       id: 3,
-      name: "Сириус",
       sector: galaxySectors.xiTauri,
       biome: biomes.moon,
       weatherConditions: [
@@ -2245,7 +2011,6 @@ class PlanetsStore {
     },
     234: {
       id: 4,
-      name: "Скат-бэй",
       sector: galaxySectors.xiTauri,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
@@ -2253,7 +2018,6 @@ class PlanetsStore {
     },
     235: {
       id: 2,
-      name: "Сферион",
       sector: galaxySectors.quintus,
       biome: biomes.jungle,
       weatherConditions: [
@@ -2264,7 +2028,6 @@ class PlanetsStore {
     },
     236: {
       id: 3,
-      name: "Стор та-прайм",
       sector: galaxySectors.quintus,
       biome: biomes.iceMoss,
       weatherConditions: [weatherConditions.extremeCold],
@@ -2272,7 +2035,6 @@ class PlanetsStore {
     },
     237: {
       id: 4,
-      name: "Стаут",
       sector: galaxySectors.quintus,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
@@ -2280,7 +2042,6 @@ class PlanetsStore {
     },
     238: {
       id: 5,
-      name: "Термодон",
       sector: galaxySectors.quintus,
       biome: biomes.highlands,
       weatherConditions: [
@@ -2291,7 +2052,6 @@ class PlanetsStore {
     },
     239: {
       id: 4,
-      name: "Тибит",
       sector: galaxySectors.severin,
       biome: biomes.ethereal,
       weatherConditions: [],
@@ -2299,7 +2059,6 @@ class PlanetsStore {
     },
     240: {
       id: 6,
-      name: "Тьен-кван",
       tidbit: `
       <p>Тьен-кван - гордый дом знаменитого Моргантонского арсенала, где куют лучшие экзоскелеты! Эти ультрасовременные чудеса были на грани развертывания по всей галактике, пока не налетели эти надоедливые автоматоны, пытаясь забрать то, что принадлежит нам. Но демократия снова восторжествовала, поскольку наши отважные Адские Десантники быстро приступили к действиям, чтобы защитить эту сокровищницу технологий.</p>
       <p>Автоматоны, не подозревавшие о прекрасной возможности, на которую они наткнулись, были быстро уничтожены благодаря молниеносной реакции наших элитных сил. Верховное командование Супер-Земли издало коллективный вздох облегчения, когда 8 марта был освобожден Тьен-кван, обеспечив будущее экзоскелетов EXO-45 Patriot и обеспечив их немедленную доступность для реквизиции нашими доблестными войсками. Еще одна победа Супер-Земли, благодаря непоколебимому мужеству наших Адских Десантников!</p>
@@ -2314,7 +2073,6 @@ class PlanetsStore {
     },
     241: {
       id: 2,
-      name: "Труст",
       sector: galaxySectors.trigon,
       biome: biomes.swamp,
       weatherConditions: [weatherConditions.thickFog],
@@ -2322,7 +2080,6 @@ class PlanetsStore {
     },
     242: {
       id: 5,
-      name: "Убанея",
       sector: galaxySectors.severin,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
@@ -2330,7 +2087,6 @@ class PlanetsStore {
     },
     243: {
       id: 3,
-      name: "Устоту",
       sector: galaxySectors.trigon,
       biome: biomes.desert,
       weatherConditions: [
@@ -2341,7 +2097,6 @@ class PlanetsStore {
     },
     244: {
       id: 4,
-      name: "Вандалон IV",
       sector: galaxySectors.trigon,
       biome: biomes.winter,
       weatherConditions: [
@@ -2352,7 +2107,6 @@ class PlanetsStore {
     },
     245: {
       id: 5,
-      name: "Верилия-5",
       sector: galaxySectors.trigon,
       biome: biomes.highlands,
       weatherConditions: [
@@ -2363,7 +2117,7 @@ class PlanetsStore {
     },
     246: {
       id: 2,
-      name: "Васат",
+
       sector: galaxySectors.ymir,
       biome: biomes.toxic,
       weatherConditions: [
@@ -2374,7 +2128,6 @@ class PlanetsStore {
     },
     247: {
       id: 3,
-      name: "Вега-бэй",
       sector: galaxySectors.ymir,
       biome: biomes.winter,
       weatherConditions: [
@@ -2385,7 +2138,7 @@ class PlanetsStore {
     },
     248: {
       id: 4,
-      name: "Везен",
+
       sector: galaxySectors.ymir,
       biome: biomes.desolate,
       weatherConditions: [
@@ -2396,7 +2149,7 @@ class PlanetsStore {
     },
     249: {
       id: 5,
-      name: "Виндемитарикс-прайм",
+
       sector: galaxySectors.valdis,
       biome: biomes.ethereal,
       weatherConditions: [],
@@ -2404,7 +2157,6 @@ class PlanetsStore {
     },
     250: {
       id: 5,
-      name: "Экс-45",
       sector: galaxySectors.ymir,
       biome: biomes.newJungle,
       weatherConditions: [weatherConditions.rainstorms],
@@ -2412,7 +2164,6 @@ class PlanetsStore {
     },
     251: {
       id: 5,
-      name: "Йед-приор",
       sector: galaxySectors.tanis,
       biome: biomes.crimsonMoor,
       weatherConditions: [weatherConditions.ionStorms],
@@ -2420,7 +2171,7 @@ class PlanetsStore {
     },
     252: {
       id: 6,
-      name: "Зефия",
+
       sector: galaxySectors.tanis,
       biome: biomes.ethereal,
       weatherConditions: [],
@@ -2428,7 +2179,7 @@ class PlanetsStore {
     },
     253: {
       id: 4,
-      name: "Зосма",
+
       sector: galaxySectors.gellert,
       biome: biomes.moon,
       weatherConditions: [
@@ -2439,7 +2190,6 @@ class PlanetsStore {
     },
     254: {
       id: 5,
-      name: "Зания-прайм",
       sector: galaxySectors.gellert,
       biome: biomes.newDesert,
       weatherConditions: [
@@ -2450,7 +2200,6 @@ class PlanetsStore {
     },
     255: {
       id: 3,
-      name: "Скиттер",
       sector: galaxySectors.hawking,
       biome: biomes.highlands,
       weatherConditions: [
@@ -2461,7 +2210,6 @@ class PlanetsStore {
     },
     256: {
       id: 4,
-      name: "Эйфория III",
       sector: galaxySectors.hawking,
       biome: biomes.moon,
       weatherConditions: [
@@ -2472,7 +2220,6 @@ class PlanetsStore {
     },
     257: {
       id: 5,
-      name: "Диаспора X",
       sector: galaxySectors.lestrade,
       biome: biomes.newDesert,
       weatherConditions: [
@@ -2483,7 +2230,7 @@ class PlanetsStore {
     },
     258: {
       id: 6,
-      name: "Самоцветные утесы",
+
       sector: galaxySectors.lestrade,
       biome: biomes.highlands,
       weatherConditions: [
@@ -2494,7 +2241,6 @@ class PlanetsStore {
     },
     259: {
       id: 4,
-      name: "Загон-прайм",
       sector: galaxySectors.mirin,
       biome: biomes.newDesert,
       weatherConditions: [
@@ -2505,7 +2251,6 @@ class PlanetsStore {
     },
     260: {
       id: 7,
-      name: "Омикрон",
       sector: galaxySectors.lestrade,
       biome: biomes.tundra,
       weatherConditions: [],
@@ -2513,7 +2258,6 @@ class PlanetsStore {
     },
     261: {
       id: 6,
-      name: "Киберстан",
       sector: galaxySectors.valdis,
       biome: biomes.cyberstan,
       weatherConditions: [weatherConditions.extremeCold],
