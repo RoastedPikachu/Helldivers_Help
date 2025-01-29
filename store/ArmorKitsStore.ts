@@ -56,7 +56,7 @@ class ArmorKitsStore {
       },
       {
         id: 4,
-        imagePath: "/static/ArmorKits/Ce07DemolitionSpecialistImage.webp",
+        imagePath: "/static/ArmorKits/CE07.webp",
         type: "Легкая броня",
         name: "CE-07 «Мастер-подрывник»",
         obtainingMethod:
@@ -355,7 +355,7 @@ class ArmorKitsStore {
       },
       {
         id: 7,
-        imagePath: "/static/ArmorKits/Ce27GroundBreakerImage.webp",
+        imagePath: "/static/ArmorKits/CE27.webp",
         type: "Средняя броня",
         name: "CE-27 «Первопробиватель»",
         obtainingMethod:
