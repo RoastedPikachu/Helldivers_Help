@@ -1,23 +1,23 @@
-.rank {
-    @apply relative flex items-center px-[30px] mlarge:px-[15px] w-full h-auto bg-[#00293a] border-2 border-theme rounded-[10px];
+.title {
+    @apply relative flex items-center px-[30px] mlarge:px-[15px] w-full h-auto bg-[url('/static/TitleBackground.webp')] bg-cover border-2 border-theme rounded-[10px];
 }
 
-.rank_Icon {
+.title-icon {
     @apply w-[75px] mmedium:w-[65px] msmall:w-[50px] h-[75px] mmedium:h-[65px] msmall:h-[50px];
 }
 
-.rank_Title {
+.title-title {
     @apply ml-[20px] mlarge:ml-[5px] text-white text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-ru-primary font-bold;
 }
 
-.rank_LevelBlock {
+.title-levelBlock {
     @apply absolute grid mlarge:flex mlarge:items-center justify-items-center grid-rows-2 right-[30px] mlarge:right-[10px] mlarge:bottom-[5px] h-[40px] mlarge:h-auto;
 }
 
-.rank_LevelBlock_Level {
+.title-levelBlock-level {
     @apply text-white text-[1.75rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.825rem] font-ru-primary font-bold;
 }
 
-.rank_LevelBlock_Experience {
+.title-levelBlock-experience {
     @apply mt-[20px] mlarge:mt-0 mlarge:ml-[10px] text-white text-[1.25rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.825rem] font-ru-primary font-bold brightness-75;
 }

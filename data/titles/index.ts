@@ -1,6 +1,6 @@
 import { Rank } from "@/utils/generalInterfaces";
 
-export const ranks = [
+export const titles = [
   {
     id: 1,
     iconPath: "/static/Ranks/CadetIcon.svg",
@@ -129,31 +129,43 @@ export const ranks = [
   },
   {
     id: 22,
-    iconPath: "/static/Ranks/ViperCommandosIcon.svg",
+    iconPath: "/static/Ranks/SuperCitizenIcon.svg",
     fromLevel: "",
     xpCount: 0,
   },
   {
     id: 23,
-    iconPath: "/static/Ranks/FireSafetyOfficer.svg",
+    iconPath: "/static/Ranks/ViperCommandosIcon.svg",
     fromLevel: "",
     xpCount: 0,
   },
   {
     id: 24,
-    iconPath: "/static/Ranks/ExpertExterminator.svg",
+    iconPath: "/static/Ranks/FireSafetyOfficer.svg",
     fromLevel: "",
     xpCount: 0,
   },
   {
     id: 25,
-    iconPath: "/static/Ranks/FreeOfThought.svg",
+    iconPath: "/static/Ranks/ExpertExterminator.svg",
     fromLevel: "",
     xpCount: 0,
   },
   {
     id: 26,
-    iconPath: "/static/Ranks/SuperCitizenIcon.svg",
+    iconPath: "/static/Ranks/FreeOfThought.svg",
+    fromLevel: "",
+    xpCount: 0,
+  },
+  {
+    id: 27,
+    iconPath: "/static/Ranks/SuperPedestrian.svg",
+    fromLevel: "",
+    xpCount: 0,
+  },
+  {
+    id: 28,
+    iconPath: "/static/Ranks/AssaultInfantry.svg",
     fromLevel: "",
     xpCount: 0,
   },

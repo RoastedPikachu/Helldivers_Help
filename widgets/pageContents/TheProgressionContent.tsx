@@ -2,7 +2,7 @@ import React from "react";
 
 import { useTranslations } from "next-intl";
 
-import { ranks } from "@/data/ranks";
+import { titles } from "@/data/titles";
 
 import LevelsSection from "@/widgets/levelsSection/LevelsSection";
 import EntitySection from "@/widgets/EntitySection";
@@ -10,7 +10,7 @@ import EntitySection from "@/widgets/EntitySection";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 
-import Rank from "@/entities/rank/Rank";
+import Title from "@/entities/title/Title";
 
 const TheProgressionContent = () => {
   const t = useTranslations("ProgressionPage");
@@ -29,8 +29,8 @@ const TheProgressionContent = () => {
       <LevelsSection />
 
       <EntitySection title={t("firstSectionTitle")} gridStyles={"grid-cols-1"}>
-        {ranks.map((rank) => (
-          <Rank
+        {titles.map((rank) => (
+          <Title
             key={rank.id}
             id={rank.id}
             iconPath={rank.iconPath}

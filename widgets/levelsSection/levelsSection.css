@@ -1,0 +1,42 @@
+input::-webkit-calendar-picker-indicator {
+    @apply mt-[-10px] mlarge:mt-[-7.5px];
+    color: #ffe500;
+    opacity: 100;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    @apply appearance-none;
+}
+
+.levelsSection {
+    @apply relative mt-[30px] w-full;
+}
+
+form {
+    @apply relative grid grid-cols-3 mt-[20px] mlarge:py-[10px] mlarge:px-[10px] h-[80px] mlarge:h-[120px] bg-[#1b1b1b] border-2 border-theme rounded-[10px] overflow-hidden;
+}
+
+.formInputBlock {
+    @apply relative w-full mlarge:w-[47.5%] h-full mlarge:h-[40px];
+}
+
+.formInputBlock-input {
+    @apply pl-[30px] pr-[10px] mlarge:pl-[15px] w-full h-full bg-[#111111] border-r-2 border-theme text-white text-[1.5rem] mlarge:text-[1.25rem] mmedium:text-[1.075rem] msmall:text-[0.875rem] text-center font-ru-primary font-bold outline-none;
+}
+
+.formInputBlock-clearButton {
+    @apply absolute top-[18px] mlarge:top-[13px] right-[35px] mlarge:right-[30px] msmall:right-[25px] w-[18px] mmedium:w-[16px] msmall:w-[15px] h-[18px] mmedium:h-[16px] msmall:h-[15px] outline-none;
+}
+
+.formInputBlock-clearButton-icon {
+    @apply w-full h-full;
+}
+
+.formResultBlock {
+    @apply mlarge:absolute flex justify-center items-center mlarge:bottom-[10px] w-full mlarge:w-[calc(100%-20px)] h-full mlarge:h-[40px] bg-[#111111];
+}
+
+.formResultBlock-text {
+    @apply text-white text-[1.5rem] mlarge:text-[1.375rem] mmedium:text-[1.25rem] msmall:text-[1rem] font-ru-primary font-bold;
+}
