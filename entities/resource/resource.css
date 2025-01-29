@@ -2,10 +2,10 @@
     @apply flex items-center py-[30px] mlarge:py-[15px] px-[30px] mlarge:px-[15px] w-full h-auto bg-[url('/static/ResourceBg.png')] bg-bottom border-2 border-[--color-theme] rounded-[10px] cursor-pointer;
 }
 
-.resource_Icon {
+.resource-icon {
     @apply w-[50px] mlarge:w-[30px] mmedium:w-[27.5px] h-[50px] mlarge:h-[30px] mmedium:h-[27.5px];
 }
 
-.resource_Title {
+.resource-title {
     @apply ml-[20px] text-[--color-white] text-[1.75rem] mlarge:text-[1.5rem] mmedium:text-[1.375rem] font-ru-primary font-bold;
 }

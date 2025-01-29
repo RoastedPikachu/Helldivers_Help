@@ -1,10 +1,11 @@
 "use client";
 import React from "react";
 
-import Typewriter from "@/shared/Typewriter";
-
-import "./CurrentResourceInfo.css";
 import { useTranslations } from "next-intl";
+
+import { getIntlArray } from "@/utils/generalFunctions";
+
+import "./currentResourceInfo.css";
 
 interface TargetResourceInfoProps {
   id: number;
@@ -17,12 +18,14 @@ const CurrentResourceInfo: React.FC<TargetResourceInfoProps> = ({
   prices,
   maxAmount,
 }) => {
-  const t = useTranslations("Resources");
+  const t = useTranslations("resources");
   const t1 = useTranslations("CurrentResourceInfo");
 
   return (
     <div className="currentResourceInfo">
-      <h3 className="currentResourceInfo_Title">{t(`${id}Title`)}</h3>
+      <h3 className="currentResourceInfo-title">
+        {getIntlArray(t("names"))[id - 1]}
+      </h3>
 
       {!prices?.length ? (
         <div className="currentResourceInfo-textBlock">
@@ -31,7 +34,7 @@ const CurrentResourceInfo: React.FC<TargetResourceInfoProps> = ({
           </p>
 
           <p className="currentResourceInfo-textBlock-text">
-            {t(`${id}Difficulties`)}
+            {getIntlArray(t("difficulties"))[id - 1]}
           </p>
         </div>
       ) : (
@@ -44,7 +47,7 @@ const CurrentResourceInfo: React.FC<TargetResourceInfoProps> = ({
         </p>
 
         <p className="currentResourceInfo-textBlock-text">
-          {t(`${id}ObtainingMethod`)}
+          {getIntlArray(t("obtainingMethods"))[id - 1]}
         </p>
       </div>
 
@@ -54,7 +57,7 @@ const CurrentResourceInfo: React.FC<TargetResourceInfoProps> = ({
         </p>
 
         <p className="currentResourceInfo-textBlock-text">
-          {t(`${id}ApplicationScope`)}
+          {getIntlArray(t("applicationScopes"))[id - 1]}
         </p>
       </div>
 

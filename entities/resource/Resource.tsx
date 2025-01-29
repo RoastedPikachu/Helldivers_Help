@@ -3,9 +3,11 @@ import React from "react";
 
 import { useTranslations } from "next-intl";
 
+import { getIntlArray } from "@/utils/generalFunctions";
+
 import Link from "next/link";
 
-import "./Resource.css";
+import "./resource.css";
 
 interface ResourceProps {
   id: number;
@@ -18,7 +20,7 @@ const Resource: React.FC<ResourceProps> = ({
   iconPath,
   handleResourceBlockClick,
 }) => {
-  const t = useTranslations("Resources");
+  const t = useTranslations("resources");
 
   return (
     <Link
@@ -26,9 +28,9 @@ const Resource: React.FC<ResourceProps> = ({
       onClick={() => handleResourceBlockClick(id)}
       className="resource"
     >
-      <img src={`${iconPath}`} alt="" className="resource_Icon" />
+      <img src={`${iconPath}`} alt="" className="resource-icon" />
 
-      <p className="resource_Title">{t(`${id}Title`)}</p>
+      <p className="resource-title">{getIntlArray(t("names"))[id - 1]}</p>
     </Link>
   );
 };

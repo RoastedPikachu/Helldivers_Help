@@ -16,9 +16,11 @@ import PageDescription from "@/shared/PageDescription";
 
 import Resource from "@/entities/resource/Resource";
 import CurrentResourceInfo from "@/entities/currentResourceInfo/CurrentResourceInfo";
+import { getIntlArray } from "@/utils/generalFunctions";
 
 const TheResourcesContent = () => {
   const t = useTranslations("ResourcesPage");
+  const t1 = useTranslations("resources");
 
   const [currentResource, setCurrentResource] = useState({} as IResource);
 
@@ -33,34 +35,34 @@ const TheResourcesContent = () => {
       return [
         {
           id: 1,
-          name: "Сложность",
+          name: getIntlArray(t1("tablesTitles"))[0],
         },
         {
           id: 2,
-          name: "Количество",
+          name: getIntlArray(t1("tablesTitles"))[1],
         },
       ];
     } else if (currentResource.id === 5) {
       return [
         {
           id: 1,
-          name: "Сложность",
+          name: getIntlArray(t1("tablesTitles"))[0],
         },
         {
           id: 2,
-          name: "1 Миссия",
+          name: getIntlArray(t1("tablesTitles"))[2],
         },
         {
           id: 3,
-          name: "2 Миссия",
+          name: getIntlArray(t1("tablesTitles"))[3],
         },
         {
           id: 4,
-          name: "3 Миссия",
+          name: getIntlArray(t1("tablesTitles"))[4],
         },
         {
           id: 5,
-          name: "Всего",
+          name: getIntlArray(t1("tablesTitles"))[5],
         },
       ];
     }

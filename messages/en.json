@@ -143,32 +143,16 @@
     "names": "[\"Cadet\",\"Space Cadet\",\"Sergeant\",\"Master Sergeant\",\"Chief\",\"Space Chief Prime\",\"Death Captain\",\"Marshall\",\"Star Marshall\",\"Admiral\",\"Skull Admiral\",\"Fleet Admiral\",\"Admirable Admiral\",\"Commander\",\"Galactic Commander\",\"Hell Commander\",\"General\",\"5-Star General\",\"10-Star General\",\"Private\",\"Super Private\",\"Super Citizen\",\"Viper Commando\",\"Fire safety officer\",\"Expert exterminator\",\"Free of thought\",\"Super Pedestrian\",\"Assault Infantry\"]",
     "obtainingMethods": "[\"Super Citizen Edition\",\"Viper Commandos Warbond\",\"Freedom's Flame Warbond\",\"Chemical agents Warbond\",\"Truth enforcers Warbond\",\"Urban Legends Warbond\",\"Killzone Collaboration\"]"
   },
-  "Resources": {
-    "1Title": "Common Samples",
-    "2Title": "Rare Samples",
-    "3Title": "Super Rare Sample",
-    "4Title": "Super Credits",
-    "5Title": "Metals",
-    "6Title": "Requisition Slips",
-    "1Difficulties": "All difficulties",
-    "2Difficulties": "Starting from the 4th level of difficulty",
-    "3Difficulties": "Starting from the 6th level of difficulty",
-    "4Difficulties": "All difficulties",
-    "5Difficulties": "All difficulties",
-    "6Difficulties": "All difficulties",
-    "1ObtainingMethod": "Points of interest, outposts of Terminids and Automatons",
-    "2ObtainingMethod": "Points of interest, outposts of Terminids and Automatons, also in the wild, in the shape of a flower",
-    "3ObtainingMethod": "Point of interest with a high stone",
-    "4ObtainingMethod": "Buying in-game store or points of interest",
-    "5ObtainingMethod": "Completing missions, points of interest, completing major and personal orders from Super Earth",
-    "6ObtainingMethod": "Completing missions, successful evacuation from the mission, points of interest",
-    "1ApplicationScope": "Ship modules upgrade",
-    "2ApplicationScope": "Ship modules upgrade",
-    "3ApplicationScope": "Ship modules upgrade",
-    "4ApplicationScope": "Purchase items from the Super Store or purchase of a warbond",
-    "5ApplicationScope": "Purchase of the contents of a warbond",
-    "6ApplicationScope": "Stratagem unlock",
-    "superCreditsMaxAmount": "It depends on the size of your wallet or your time"
+  "resources": {
+    "names": "[\"Common Samples\",\"Rare Samples\",\"Super Rare Sample\",\"Super Credits\",\"Medals\",\"Requisition Slips\"]",
+    "difficulties": "[\"All difficulties\",\"Starting from the 4th level of difficulty\",\"Starting from the 6th level of difficulty\",\"All difficulties\",\"All difficulties\",\"All difficulties\"]",
+    "obtainingMethods": "[\"Points of interest, outposts of Terminids and Automatons\",\"Points of interest, outposts of Terminids and Automatons, also in the wild, in the shape of a flower\",\"Point of interest with a high stone\",\"Buying in-game store or points of interest\",\"Completing missions, points of interest, completing major and personal orders from Super Earth\",\"Completing missions, successful evacuation from the mission, points of interest\"]",
+    "applicationScopes": "[\"Ship modules upgrade\",\"Ship modules upgrade\",\"Ship modules upgrade\",\"Purchase items from the Super Store or purchase of a warbond\",\"Purchase of the contents of a warbond\",\"Stratagem unlock\"]",
+    "superCreditsMaxAmount": "It depends on the size of your wallet or your time",
+    "tablesTitles": "[\"Difficulty\",\"Count\",\"1 Mission\", \"2 Mission\", \"3 Mission\", \"Total\"]"
+  },
+  "difficulties": {
+    "names": "[\"Trivial\",\"Easy\",\"Medium\",\"Challenging\",\"Hard\",\"Extreme\",\"Suicide Mission\",\"Impossible\",\"Helldive\",\"Super Helldive\"]"
   },
   "Header": {
     "Link1": "News",
