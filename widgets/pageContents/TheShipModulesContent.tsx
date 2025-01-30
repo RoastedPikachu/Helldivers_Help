@@ -1,4 +1,7 @@
+"use client";
 import React from "react";
+
+import { useTranslations } from "next-intl";
 
 import { shipModulesStore } from "@/store/ShipModulesStore";
 
@@ -10,31 +13,25 @@ import PageDescription from "@/shared/PageDescription";
 import ShipModule from "@/entities/shipModule/ShipModule";
 
 const TheShipModulesContent = () => {
+  const t = useTranslations("ShipModulesPage");
+
   return (
     <main>
-      <ThePageTitle title={"модули"} additionalTitle={"корабля"} />
-
-      <PageDescription
-        description={
-          "Корабль — ваше единственное безопасное место в галактике, помимо Супер-Земли. Это место из которого вы отправляетесь в миссии и куда возвращаетесь, измученные, уставшие, но довольные своими успехами."
-        }
+      <ThePageTitle
+        title={t("pageTitle")}
+        additionalTitle={t("pageAdditionalTitle")}
       />
 
-      <PageDescription
-        description={
-          "Ваш корабль, также как и вы нуждается в улучшениях. Да, каждое из этих улучшений является довольно дорогим удовольствием, но эффекты, которые вы получаете взамен стоят того. Вы можете сделать из своих турелей смертоносные огневые единицы, или же увеличивать частоту вызова атакующих стратагем, поливая врагов демократии градом бомб. Главное помнить, что ваш корабль — такой же боевой товарищ, как и другие Адские Десантники!"
-        }
-      />
+      <PageDescription description={t("pageDescription")} />
+
+      <PageDescription description={t("pageAdditionalDescription")} />
 
       <EntitySection gridStyles={"grid-cols-1 mt-[50px] mlarge:mt-[30px]"}>
         {shipModulesStore.shipModules.map((shipModule) => (
           <ShipModule
             key={shipModule.id}
-            title={shipModule.title}
+            id={shipModule.id}
             levelImages={shipModule.levelImages}
-            improvementTitles={shipModule.improvementTitles}
-            improvementDescriptions={shipModule.improvementDescriptions}
-            improvementEffects={shipModule.improvementEffects}
             improvementPrices={shipModule.improvementPrices}
             improvementAffectedStratagems={
               shipModule.improvementAffectedStratagems

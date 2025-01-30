@@ -8,35 +8,31 @@ import { mobileStore } from "@/store/MobileStore";
 
 import { Stratagem } from "@/utils/generalInterfaces";
 
-import Typewriter from "@/shared/Typewriter";
-
 import ShipModuleStratagem from "@/entities/shipModuleStratagem/ShipModuleStratagem";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import "./ShipModule.css";
+import "./shipModule.css";
+import { useTranslations } from "next-intl";
+import { getIntlArray } from "@/utils/generalFunctions";
 
 interface ShipModuleProps {
-  title: string;
+  id: number;
   levelImages: string[];
-  improvementTitles: string[];
-  improvementDescriptions: string[];
-  improvementEffects: string[];
   improvementPrices: any[];
   improvementAffectedStratagems: any;
 }
 
 const ShipModule: React.FC<ShipModuleProps> = ({
-  title,
+  id,
   levelImages,
-  improvementTitles,
-  improvementDescriptions,
-  improvementEffects,
   improvementPrices,
   improvementAffectedStratagems,
 }) => {
+  const t = useTranslations("shipModules");
+
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [currentSlideStratagems, setCurrentSlideStratagems] = useState([]);
 
@@ -80,23 +76,25 @@ const ShipModule: React.FC<ShipModuleProps> = ({
     >
       <div
         onClick={() => changeIsAdditionalInfoOpened((prev) => !prev)}
-        className={`rootShipModuleBlock_Top ${isAdditionalInfoOpened ? "" : "z-30"}`}
+        className={`rootShipModuleBlock-top ${isAdditionalInfoOpened ? "" : "z-30"}`}
       >
-        <p className="rootShipModuleBlock_Top_Title">{title}</p>
+        <p className="rootShipModuleBlock-top-title">
+          {getIntlArray(t("names"))[id - 1]}
+        </p>
 
-        <button className="rootShipModuleBlock_Top_Button">
+        <button className="rootShipModuleBlock-top-button">
           <img
             src="/static/GeneralIcons/ArrowDownIcon.svg"
             alt=""
-            className={`rootShipModuleBlock_Top_Button_Image ${isAdditionalInfoOpened ? "rotate-180" : "rotate-0"}`}
+            className={`rootShipModuleBlock-top-button-image ${isAdditionalInfoOpened ? "rotate-180" : "rotate-0"}`}
           />
         </button>
       </div>
 
       <div
-        className={`rootShipModuleBlock_Bottom ${isAdditionalInfoOpened ? "mt-0 opacity-1" : `mt-[-630px] opacity-0`}`}
+        className={`rootShipModuleBlock-bottom ${isAdditionalInfoOpened ? "mt-0 opacity-1" : `mt-[-630px] opacity-0`}`}
       >
-        <div className="rootShipModuleBlock_Bottom_LeftBlock">
+        <div className="rootShipModuleBlock-bottom-leftBlock">
           <Swiper
             spaceBetween={50}
             slidesPerView={1}
@@ -106,7 +104,7 @@ const ShipModule: React.FC<ShipModuleProps> = ({
             navigation={!mobileStore.isMobileDevice}
             pagination={{ clickable: false }}
             onSlideChange={handleSlideChange}
-            className="rootShipModuleBlock_Bottom_LeftBlock_Slider"
+            className="rootShipModuleBlock-bottom-leftBlock-slider"
           >
             <SwiperSlide>
               <img src={`${levelImages[0]}`} alt="" className="slideImage" />
@@ -129,85 +127,81 @@ const ShipModule: React.FC<ShipModuleProps> = ({
             </SwiperSlide>
           </Swiper>
 
-          <span className="rootShipModuleBlock_Bottom_LeftBlock_Level">
-            <p className="rootShipModuleBlock_Bottom_LeftBlock_Level_Title">
-              {isAdditionalInfoOpened && (
-                <Typewriter
-                  text={improvementTitles[currentSlideIndex]}
-                  delay={60}
-                />
-              )}
+          <span className="rootShipModuleBlock-bottom-leftBlock-level">
+            <p className="rootShipModuleBlock-bottom-leftBlock-level-title">
+              {isAdditionalInfoOpened &&
+                getIntlArray(t("improvementNames"))[
+                  (id - 1) * 5 + currentSlideIndex
+                ]}
             </p>
 
-            <p className="rootShipModuleBlock_Bottom_LeftBlock_Level_Number">
-              <b className="rootShipModuleBlock_Bottom_LeftBlock_Level_Number_Bold">
+            <p className="rootShipModuleBlock-bottom-leftBlock-level-number">
+              <b className="rootShipModuleBlock-bottom-leftBlock-level-number-bold">
                 {currentSlideIndex + 1}
               </b>{" "}
-              уровень
+              {getIntlArray(t("titles"))[0]}
             </p>
           </span>
 
-          <div className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo">
-            <p className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_Description">
-              {isAdditionalInfoOpened && (
-                <Typewriter
-                  text={improvementDescriptions[currentSlideIndex]}
-                  delay={20}
-                />
-              )}
+          <div className="rootShipModuleBlock-bottom-leftBlock-additionalInfo">
+            <p className="rootShipModuleBlock-bottom-leftBlock-additionalInfo-description">
+              {isAdditionalInfoOpened &&
+                getIntlArray(t("improvementDescriptions"))[
+                  (id - 1) * 5 + currentSlideIndex
+                ]}
             </p>
 
-            <div className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer">
-              <div className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block">
-                <p className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block_Text">
+            <div className="rootShipModuleBlock-bottom-leftBlock-additionalInfo-samplesContainer">
+              <div className="rootShipModuleBlock-bottom-leftBlock-additionalInfo-samplesContainer-block">
+                <p className="rootShipModuleBlock-bottom-leftBlock-additionalInfo-samplesContainer-block-text">
                   {improvementPrices[currentSlideIndex].commonSampleCount}
                 </p>
 
                 <img
                   src="/static/Resources/CommonSampleIcon.svg"
                   alt=""
-                  className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block_Image"
+                  className="rootShipModuleBlock-bottom-leftBlock-additionalInfo-samplesContainer-block-image"
                 />
               </div>
 
               {improvementPrices[currentSlideIndex].rareSampleCount && (
-                <div className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block">
-                  <p className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block_Text">
+                <div className="rootShipModuleBlock-bottom-leftBlock-additionalInfo-samplesContainer-block">
+                  <p className="rootShipModuleBlock-bottom-leftBlock-additionalInfo-samplesContainer-block-text">
                     {improvementPrices[currentSlideIndex].rareSampleCount}
                   </p>
 
                   <img
                     src="/static/Resources/RareSampleIcon.svg"
                     alt=""
-                    className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block_Image"
+                    className="rootShipModuleBlock-bottom-leftBlock-additionalInfo-samplesContainer-block-image"
                   />
                 </div>
               )}
 
               {improvementPrices[currentSlideIndex].superSampleCount && (
-                <div className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block">
-                  <p className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block_Text">
+                <div className="rootShipModuleBlock-bottom-leftBlock-additionalInfo-samplesContainer-block">
+                  <p className="rootShipModuleBlock-bottom-leftBlock-additionalInfo-samplesContainer-block-text">
                     {improvementPrices[currentSlideIndex].superSampleCount}
                   </p>
 
                   <img
                     src="/static/Resources/UltraRareSampleIcon.svg"
                     alt=""
-                    className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block_Image"
+                    className="rootShipModuleBlock-bottom-leftBlock-additionalInfo-samplesContainer-block-image"
                   />
                 </div>
               )}
 
               {improvementPrices[currentSlideIndex].requisites && (
-                <div className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block">
-                  <p className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block_Text">
+                <div className="rootShipModuleBlock-bottom-leftBlock-additionalInfo-samplesContainer-block">
+                  <p className="rootShipModuleBlock-bottom-leftBlock-additionalInfo-samplesContainer-block-text">
                     {improvementPrices[currentSlideIndex].requisites}
                   </p>
 
                   <img
                     src="/static/Resources/RequisitesIcon.svg"
                     alt=""
-                    className="rootShipModuleBlock_Bottom_LeftBlock_AdditionalInfo_SamplesContainer_Block_Image"
+                    className="rootShipModuleBlock-bottom-leftBlock-additionalInfo-samplesContainer-block-image"
                   />
                 </div>
               )}
@@ -215,26 +209,24 @@ const ShipModule: React.FC<ShipModuleProps> = ({
           </div>
         </div>
 
-        <div className="rootShipModuleBlock_Bottom_RightBlock">
-          <p className="rootShipModuleBlock_Bottom_RightBlock_EffectTitle">
-            Эффект:
+        <div className="rootShipModuleBlock-bottom-rightBlock">
+          <p className="rootShipModuleBlock-bottom-rightBlock-effectTitle">
+            {getIntlArray(t("titles"))[1]}
           </p>
 
-          <p className="rootShipModuleBlock_Bottom_RightBlock_EffectText">
-            {isAdditionalInfoOpened && (
-              <Typewriter
-                text={improvementEffects[currentSlideIndex]}
-                delay={40}
-              />
-            )}
+          <p className="rootShipModuleBlock-bottom-rightBlock-effectText">
+            {isAdditionalInfoOpened &&
+              getIntlArray(t("improvementEffects"))[
+                (id - 1) * 5 + currentSlideIndex
+              ]}
           </p>
 
-          <div className="rootShipModuleBlock_Bottom_RightBlock_Stratagems">
-            <p className="rootShipModuleBlock_Bottom_RightBlock_StratagemsTitle">
-              Затрагиваемые стратагемы:
+          <div className="rootShipModuleBlock-bottom-rightBlock-stratagems">
+            <p className="rootShipModuleBlock-bottom-rightBlock-stratagemsTitle">
+              {getIntlArray(t("titles"))[2]}
             </p>
 
-            <div className="rootShipModuleBlock_Bottom_RightBlock_StratagemsBlock">
+            <div className="rootShipModuleBlock-bottom-rightBlock-stratagemsBlock">
               {currentSlideStratagems.map((stratagem: Stratagem, index) => (
                 <ShipModuleStratagem
                   key={index + 1}
