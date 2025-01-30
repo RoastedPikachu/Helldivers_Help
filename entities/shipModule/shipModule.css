@@ -9,35 +9,33 @@
 }
 
 .swiper-pagination-bullet {
-    background: #2cc388;
+    @apply bg-theme;
 }
 
 @media(min-width: 480px) {
-    ::-webkit-scrollbar {
-        width: 10px;
+    .rootShipModuleBlock ::-webkit-scrollbar {
+        @apply w-[8px];
     }
 
-    ::-webkit-scrollbar-track {
-        background: #ffffff;
-        border-radius: 0 7.5px 7.5px 0;
+    .rootShipModuleBlock ::-webkit-scrollbar-track {
+        @apply bg-white;
     }
 
-    ::-webkit-scrollbar-thumb {
-        background: #2cc388;
-        border-radius: 5px;
+    .rootShipModuleBlock ::-webkit-scrollbar-thumb {
+        @apply bg-theme rounded-[5px];
     }
 
-    ::-webkit-scrollbar-thumb:hover {
-        background: #1c7f59;
+    .rootShipModuleBlock ::-webkit-scrollbar-thumb:hover {
+        @apply bg-[#dfc800];
     }
 
-    .swiper-pagination {
-        display: none;
+    .rootShipModuleBlock .swiper-pagination {
+        @apply hidden;
     }
 }
 
 .rootShipModuleBlock {
-    @apply relative w-auto h-auto min-h-[80px] mlarge:min-h-[72.5px] bg-[#00293a] border-2 border-theme rounded-[10px];
+    @apply relative w-auto h-auto min-h-[80px] mlarge:min-h-[72.5px] bg-[url('/static/ShipModuleBackground.webp')] bg-cover border-2 border-theme rounded-[10px] overflow-hidden;
 }
 
 .rootShipModuleBlock-top {
@@ -65,11 +63,11 @@
 }
 
 .rootShipModuleBlock-bottom-leftBlock-slider {
-    @apply relative w-full h-[300px] mlarge:h-[190px] mmedium:h-[170px] msmall:h-[150px];
+    @apply relative w-full h-[320px] mlarge:h-[190px] mmedium:h-[170px] msmall:h-[150px];
 }
 
 .slideImage {
-    @apply h-full mlarge:h-[160px] mmedium:h-[140px] msmall:h-[120px] border-2 border-theme rounded-[7.5px];
+    @apply w-full h-full mlarge:h-[160px] mmedium:h-[140px] msmall:h-[120px] border-2 border-theme rounded-[7.5px];
 }
 
 .rootShipModuleBlock-bottom-leftBlock-level {
@@ -133,5 +131,5 @@
 }
 
 .rootShipModuleBlock-bottom-rightBlock-stratagemsBlock {
-    @apply relative mt-[10px] mlarge:mt-[5px] mmedium:mt-[7.5px] pb-[20px] mlarge:pb-[15px] px-[20px] mlarge:px-[15px] w-full h-[calc(100%-40px)] mlarge:h-[300px] border-2 border-theme rounded-[10px] overflow-y-scroll;
+    @apply relative mt-[10px] mlarge:mt-[5px] mmedium:mt-[7.5px] w-full h-[calc(100%-40px)] mlarge:h-[300px] bg-primary-bg border-2 border-theme rounded-[10px] overflow-hidden;
 }

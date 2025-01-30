@@ -9,11 +9,11 @@ class ShipModulesStore {
     {
       id: 1,
       levelImages: [
-        "/static/ShipModules/PatrioticAdministrationCenterLvl1.webp",
-        "/static/ShipModules/PatrioticAdministrationCenterLvl2.webp",
-        "/static/ShipModules/PatrioticAdministrationCenterLvl3.webp",
-        "/static/ShipModules/PatrioticAdministrationCenterLvl4.webp",
-        "/static/ShipModules/PatrioticAdministrationCenterLvl5.webp",
+        "/static/shipModules/PatrioticAdministrationCenterLvl1.webp",
+        "/static/shipModules/PatrioticAdministrationCenterLvl2.webp",
+        "/static/shipModules/PatrioticAdministrationCenterLvl3.webp",
+        "/static/shipModules/PatrioticAdministrationCenterLvl4.webp",
+        "/static/shipModules/PatrioticAdministrationCenterLvl5.webp",
       ],
       improvementPrices: [
         {
@@ -113,11 +113,11 @@ class ShipModulesStore {
     {
       id: 2,
       levelImages: [
-        "/static/ShipModules/OrbitalCannonLvl1.webp",
-        "/static/ShipModules/OrbitalCannonLvl2.webp",
-        "/static/ShipModules/OrbitalCannonLvl3.webp",
-        "/static/ShipModules/OrbitalCannonLvl4.webp",
-        "/static/ShipModules/OrbitalCannonLvl5.webp",
+        "/static/shipModules/OrbitalCannonsLvl1.webp",
+        "/static/shipModules/OrbitalCannonsLvl2.webp",
+        "/static/shipModules/OrbitalCannonsLvl3.webp",
+        "/static/shipModules/OrbitalCannonsLvl4.webp",
+        "/static/shipModules/OrbitalCannonsLvl5.webp",
       ],
       improvementPrices: [
         {
@@ -187,11 +187,11 @@ class ShipModulesStore {
     {
       id: 3,
       levelImages: [
-        "/static/ShipModules/HangarLvl1.webp",
-        "/static/ShipModules/HangarLvl2.webp",
-        "/static/ShipModules/HangarLvl3.webp",
-        "/static/ShipModules/HangarLvl4.webp",
-        "/static/ShipModules/HangarLvl5.webp",
+        "/static/shipModules/HangarLvl1.webp",
+        "/static/shipModules/HangarLvl2.webp",
+        "/static/shipModules/HangarLvl3.webp",
+        "/static/shipModules/HangarLvl4.webp",
+        "/static/shipModules/HangarLvl5.webp",
       ],
       improvementPrices: [
         {
@@ -251,11 +251,11 @@ class ShipModulesStore {
     {
       id: 4,
       levelImages: [
-        "/static/ShipModules/BridgeLvl1.webp",
-        "/static/ShipModules/BridgeLvl2.webp",
-        "/static/ShipModules/BridgeLvl3.webp",
-        "/static/ShipModules/BridgeLvl4.webp",
-        "/static/ShipModules/BridgeLvl5.webp",
+        "/static/shipModules/BridgeLvl1.webp",
+        "/static/shipModules/BridgeLvl2.webp",
+        "/static/shipModules/BridgeLvl3.webp",
+        "/static/shipModules/BridgeLvl4.webp",
+        "/static/shipModules/BridgeLvl5.webp",
       ],
       improvementPrices: [
         {
@@ -310,11 +310,11 @@ class ShipModulesStore {
     {
       id: 5,
       levelImages: [
-        "/static/ShipModules/EngineerBayLvl1.webp",
-        "/static/ShipModules/EngineerBayLvl2.webp",
-        "/static/ShipModules/EngineerBayLvl3.webp",
-        "/static/ShipModules/EngineerBayLvl4.webp",
-        "/static/ShipModules/EngineerBayLvl5.webp",
+        "/static/shipModules/EngineerBayLvl1.webp",
+        "/static/shipModules/EngineerBayLvl2.webp",
+        "/static/shipModules/EngineerBayLvl3.webp",
+        "/static/shipModules/EngineerBayLvl4.webp",
+        "/static/shipModules/EngineerBayLvl5.webp",
       ],
       improvementPrices: [
         {
@@ -400,11 +400,11 @@ class ShipModulesStore {
     {
       id: 6,
       levelImages: [
-        "/static/ShipModules/RoboticsWorkshopLvl1.webp",
-        "/static/ShipModules/RoboticsWorkshopLvl2.webp",
-        "/static/ShipModules/RoboticsWorkshopLvl3.webp",
-        "/static/ShipModules/RoboticsWorkshopLvl4.webp",
-        "/static/ShipModules/RoboticsWorkshopLvl5.webp",
+        "/static/shipModules/RoboticsWorkshopLvl1.webp",
+        "/static/shipModules/RoboticsWorkshopLvl2.webp",
+        "/static/shipModules/RoboticsWorkshopLvl3.webp",
+        "/static/shipModules/RoboticsWorkshopLvl4.webp",
+        "/static/shipModules/RoboticsWorkshopLvl5.webp",
       ],
       improvementPrices: [
         {

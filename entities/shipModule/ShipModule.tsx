@@ -227,13 +227,15 @@ const ShipModule: React.FC<ShipModuleProps> = ({
             </p>
 
             <div className="rootShipModuleBlock-bottom-rightBlock-stratagemsBlock">
-              {currentSlideStratagems.map((stratagem: Stratagem, index) => (
-                <ShipModuleStratagem
-                  key={index + 1}
-                  iconPath={stratagem.iconPath}
-                  name={stratagem.name}
-                />
-              ))}
+              <div className="relative pb-[20px] mlarge:pb-[15px] px-[20px] mlarge:px-[15px] w-full h-full overflow-y-scroll">
+                {currentSlideStratagems.map((stratagem: Stratagem, index) => (
+                  <ShipModuleStratagem
+                    key={index + 1}
+                    iconPath={stratagem.iconPath}
+                    name={stratagem.name}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
