@@ -25,8 +25,12 @@ export const stratagemTypes: { [key: string]: StratagemType } = {
     name: "Мастерская роботов",
     typeNumber: 5,
   },
+  warbonds: {
+    name: "Боевые заслуги",
+    typeNumber: 6,
+  },
   mission: {
     name: "Стратагемы миссий",
-    typeNumber: 6,
+    typeNumber: 7,
   },
 };

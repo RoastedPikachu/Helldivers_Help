@@ -2,18 +2,18 @@
 import React, { useState, useRef, useEffect } from "react";
 
 import { Direction } from "@/utils/generalInterfaces";
-import { getTargetRotate } from "@/utils/generalFunctions";
+import { getIntlArray, getTargetRotate } from "@/utils/generalFunctions";
 
 import LoadingSpinner from "@/shared/loadingSpinner/LoadingSpinner";
 
-import "./Stratagem.css";
+import "./stratagem.css";
+import { useTranslations } from "next-intl";
 
 interface StratagemProps {
+  id: number;
   iconPath: string;
   videoPath?: string | undefined;
   videoPreviewPath?: string | undefined;
-  name: string;
-  description: string;
   price?: number | undefined;
   obtainingLevel?: number | undefined;
   callTime?: number | undefined;
@@ -23,11 +23,10 @@ interface StratagemProps {
 }
 
 const Stratagem: React.FC<StratagemProps> = ({
+  id,
   iconPath,
   videoPath,
   videoPreviewPath,
-  name,
-  description,
   price,
   obtainingLevel,
   callTime,
@@ -35,6 +34,9 @@ const Stratagem: React.FC<StratagemProps> = ({
   reloadTime,
   directions,
 }) => {
+  const t = useTranslations("stratagems");
+  const t1 = useTranslations("StratagemsPage");
+
   const [isAdditionalInfoOpened, changeIsAdditionalInfoOpened] =
     useState(false);
   const [isVideoLoading, setIsVideoLoading] = useState(false);
@@ -73,34 +75,36 @@ const Stratagem: React.FC<StratagemProps> = ({
     >
       <div
         onClick={() => changeIsAdditionalInfoOpened((prev) => !prev)}
-        className={`rootStratagemBlock_Top ${isAdditionalInfoOpened ? "" : "z-30"}`}
+        className={`rootStratagemBlock-top ${isAdditionalInfoOpened ? "" : "z-30"}`}
       >
-        <div className="rootStratagemBlock_Top_Left">
+        <div className="rootStratagemBlock-top-left">
           <img
             src={`${iconPath}`}
             alt=""
-            className="rootStratagemBlock_Top_Left_ImageWrapper_Image"
+            className="rootStratagemBlock-top-left-imageWrapper-image"
           />
 
-          <h4 className="rootStratagemBlock_Top_Left_Title">{name}</h4>
+          <h4 className="rootStratagemBlock-top-left-title">
+            {getIntlArray(t("names"))[id - 1]}
+          </h4>
         </div>
 
-        <button className="rootStratagemBlock_Top_Button">
+        <button className="rootStratagemBlock-top-button">
           <img
             src="/static/GeneralIcons/ArrowDownIcon.svg"
             alt=""
-            className={`rootStratagemBlock_Top_Button_Image ${isAdditionalInfoOpened ? "rotate-180" : "rotate-0"}`}
+            className={`rootStratagemBlock-top-button-image ${isAdditionalInfoOpened ? "rotate-180" : "rotate-0"}`}
           />
         </button>
       </div>
 
       <div
-        className={`rootStratagemBlock_Bottom ${isAdditionalInfoOpened ? "opacity-1" : videoPath && videoPreviewPath ? "mt-[-315px] opacity-0 z-[-1]" : "mt-[-70px] opacity-0 z-[-1]"}`}
+        className={`rootStratagemBlock-bottom ${isAdditionalInfoOpened ? "opacity-1" : videoPath && videoPreviewPath ? "mt-[-315px] opacity-0 z-[-1]" : "mt-[-70px] opacity-0 z-[-1]"}`}
       >
         {videoPath && videoPreviewPath && (
-          <div className="rootStratagemBlock_Bottom_Top">
-            <div className="rootStratagemBlock_Bottom_Top_Left">
-              <div className="rootStratagemBlock_Bottom_Top_Left_VideoWrapper">
+          <div className="rootStratagemBlock-bottom-top">
+            <div className="rootStratagemBlock-bottom-top-left">
+              <div className="rootStratagemBlock-bottom-top-left-videoWrapper">
                 <video
                   poster={`${videoPreviewPath}`}
                   src={`${videoPath}`}
@@ -111,12 +115,12 @@ const Stratagem: React.FC<StratagemProps> = ({
                   onCanPlay={() => setIsVideoLoading(false)}
                   // @ts-ignore
                   ref={videoRef}
-                  className="rootStratagemBlock_Bottom_Top_Left_VideoWrapper_Video"
+                  className="rootStratagemBlock-bottom-top-left-videoWrapper-video"
                 ></video>
 
                 <button
                   onClick={handlePlayButtonClick}
-                  className="rootStratagemBlock_Bottom_Top_Left_VideoWrapper_Video_Button"
+                  className="rootStratagemBlock-bottom-top-left-videoWrapper-video-button"
                 >
                   {playButtonClicksCount % 2 === 0 ? (
                     isVideoLoading ? (
@@ -125,45 +129,45 @@ const Stratagem: React.FC<StratagemProps> = ({
                       <img
                         src="/static/GeneralIcons/PauseVideoIcon.svg"
                         alt=""
-                        className="rootStratagemBlock_Bottom_Top_Left_VideoWrapper_Video_Button_Pause"
+                        className="rootStratagemBlock-bottom-top-left-videoWrapper-video-button-pause"
                       />
                     )
                   ) : (
                     <img
                       src="/static/GeneralIcons/PlayVideoIcon.svg"
                       alt=""
-                      className="rootStratagemBlock_Bottom_Top_Left_VideoWrapper_Video_Button_Play"
+                      className="rootStratagemBlock-bottom-top-left-videoWrapper-video-button-play"
                     />
                   )}
                 </button>
               </div>
 
-              <div className="rootStratagemBlock_Bottom_Top_Left_ArrowsWrapper">
-                <div className="rootStratagemBlock_Bottom_Top_Left_ArrowsWrapper_Block">
+              <div className="rootStratagemBlock-bottom-top-left-arrowsWrapper">
+                <div className="rootStratagemBlock-bottom-top-left-arrowsWrapper-block">
                   {directions.map((direction) => (
                     <img
                       key={direction.id}
                       src="/static/GeneralIcons/ArrowIcon.svg"
                       alt=""
-                      className={`rootStratagemBlock_Bottom_Top_Left_ArrowsWrapper_Block_Arrow ${getTargetRotate(direction.orientation)}`}
+                      className={`rootStratagemBlock-bottom-top-left-arrowsWrapper-block-arrow ${getTargetRotate(direction.orientation)}`}
                     />
                   ))}
                 </div>
               </div>
             </div>
 
-            <div className="rootStratagemBlock_Bottom_Top_Right">
-              <p className="rootStratagemBlock_Bottom_Top_Right_Text mt-[-5px]">
-                <b className="rootStratagemBlock_Bottom_Top_Right_Text_Bold">
-                  Открывается на:{" "}
+            <div className="rootStratagemBlock-bottom-top-right">
+              <p className="rootStratagemBlock-bottom-top-right-text mt-[-5px]">
+                <b className="rootStratagemBlock-bottom-top-right-text-bold">
+                  {getIntlArray(t1("blockTitles"))[0]}{" "}
                 </b>
-                {obtainingLevel} уровне
+                {obtainingLevel} {getIntlArray(t1("blockTitles"))[1]}
               </p>
 
               <div className="flex items-center">
-                <p className="rootStratagemBlock_Bottom_Top_Right_Text">
-                  <b className="rootStratagemBlock_Bottom_Top_Right_Text_Bold">
-                    Цена:{" "}
+                <p className="rootStratagemBlock-bottom-top-right-text">
+                  <b className="rootStratagemBlock-bottom-top-right-text-bold">
+                    {getIntlArray(t1("blockTitles"))[2]}{" "}
                   </b>
                   {price}
                 </p>
@@ -175,31 +179,33 @@ const Stratagem: React.FC<StratagemProps> = ({
                 />
               </div>
 
-              <p className="rootStratagemBlock_Bottom_Top_Right_Text">
-                <b className="rootStratagemBlock_Bottom_Top_Right_Text_Bold">
-                  Время вызова:{" "}
+              <p className="rootStratagemBlock-bottom-top-right-text">
+                <b className="rootStratagemBlock-bottom-top-right-text-bold">
+                  {getIntlArray(t1("blockTitles"))[3]}{" "}
                 </b>
-                {callTime} сек.
+                {callTime} {getIntlArray(t1("blockTitles"))[4]}
               </p>
 
-              <p className="rootStratagemBlock_Bottom_Top_Right_Text">
-                <b className="rootStratagemBlock_Bottom_Top_Right_Text_Bold">
-                  Применения:{" "}
+              <p className="rootStratagemBlock-bottom-top-right-text">
+                <b className="rootStratagemBlock-bottom-top-right-text-bold">
+                  {getIntlArray(t1("blockTitles"))[5]}{" "}
                 </b>
-                {useCount === 0 ? "Неограниченно" : useCount}
+                {useCount === 0 ? getIntlArray(t1("blockTitles"))[6] : useCount}
               </p>
 
-              <p className="rootStratagemBlock_Bottom_Top_Right_Text">
-                <b className="rootStratagemBlock_Bottom_Top_Right_Text_Bold">
-                  Время перезарядки:{" "}
+              <p className="rootStratagemBlock-bottom-top-right-text">
+                <b className="rootStratagemBlock-bottom-top-right-text-bold">
+                  {getIntlArray(t1("blockTitles"))[7]}{" "}
                 </b>
-                {reloadTime} сек.
+                {reloadTime} {getIntlArray(t1("blockTitles"))[4]}
               </p>
             </div>
           </div>
         )}
 
-        <p className="rootStratagemBlock_Bottom_Description">{description}</p>
+        <p className="rootStratagemBlock-bottom-description">
+          {getIntlArray(t("descriptions"))[id - 1]}
+        </p>
       </div>
     </div>
   );
