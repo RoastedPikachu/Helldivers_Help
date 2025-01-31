@@ -47,7 +47,7 @@
 }
 
 .rootStratagemBlock-bottom-top-left-videoWrapper-video-button {
-    @apply absolute flex justify-center items-center right-[20px] mlarge:right-[10px] bottom-[20px] mlarge:bottom-[10px] w-[55px] mlarge:w-[47.5px] mmedium:w-[42.5px] msmall:w-[37.5px] h-[55px] mlarge:h-[47.5px] mmedium:h-[42.5px] msmall:h-[37.5px] bg-[#01212f] border-2 border-[#2cc388] rounded-[50%];
+    @apply absolute flex justify-center items-center right-[20px] mlarge:right-[10px] bottom-[20px] mlarge:bottom-[10px] w-[55px] mlarge:w-[47.5px] mmedium:w-[42.5px] msmall:w-[37.5px] h-[55px] mlarge:h-[47.5px] mmedium:h-[42.5px] msmall:h-[37.5px] bg-primary-bg border-2 border-theme rounded-[50%];
 }
 
 .rootStratagemBlock-bottom-top-left-videoWrapper-video-button-pause {

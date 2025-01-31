@@ -157,12 +157,14 @@ const Stratagem: React.FC<StratagemProps> = ({
             </div>
 
             <div className="rootStratagemBlock-bottom-top-right">
-              <p className="rootStratagemBlock-bottom-top-right-text mt-[-5px]">
-                <b className="rootStratagemBlock-bottom-top-right-text-bold">
-                  {getIntlArray(t1("blockTitles"))[0]}{" "}
-                </b>
-                {obtainingLevel} {getIntlArray(t1("blockTitles"))[1]}
-              </p>
+              {obtainingLevel !== 100 && (
+                <p className="rootStratagemBlock-bottom-top-right-text mt-[-5px]">
+                  <b className="rootStratagemBlock-bottom-top-right-text-bold">
+                    {getIntlArray(t1("blockTitles"))[0]}{" "}
+                  </b>
+                  {obtainingLevel} {getIntlArray(t1("blockTitles"))[1]}
+                </p>
+              )}
 
               <div className="flex items-center">
                 <p className="rootStratagemBlock-bottom-top-right-text">
@@ -173,7 +175,11 @@ const Stratagem: React.FC<StratagemProps> = ({
                 </p>
 
                 <img
-                  src="/static/Resources/RequisitesIcon.svg"
+                  src={
+                    price && price > 0 && price < 500
+                      ? "/static/Resources/MedalIcon.svg"
+                      : "/static/Resources/RequisitesIcon.svg"
+                  }
                   alt=""
                   className="mt-[10px] mlarge:mt-[5px] mmedium:mt-[7.5px] ml-[5px] w-[27.5px] mlarge:w-[25px] mmedium:w-[22.5px] msmall:w-[20px] h-[27.5px] mlarge:h-[25px] mmedium:h-[22.5px] msmall:h-[20px]"
                 />
