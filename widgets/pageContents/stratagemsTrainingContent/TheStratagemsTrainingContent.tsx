@@ -1,6 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
+import { useTranslations } from "next-intl";
+
 import MediaQuery from "react-responsive";
 
 import { observer, Observer } from "mobx-react-lite";
@@ -9,11 +11,14 @@ import { mobileStore } from "@/store/MobileStore";
 import { stratagemStore } from "@/store/StratagemStore";
 import { stratagemTrainingStore } from "@/store/StratagemTrainingStore";
 
-import { simulateKeyPress } from "@/utils/generalFunctions";
+import { getIntlArray, simulateKeyPress } from "@/utils/generalFunctions";
 
 import "./TheStratagemsTrainingContent.css";
 
 const TheStratagemsTrainingContent = observer(() => {
+  const t = useTranslations("stratagems");
+  const t1 = useTranslations("StratagemTrainingPage");
+
   const [highestGameScore, setHighestGameScore] = useState(0);
 
   const getSpecificGameTimeColor = () => {
@@ -193,13 +198,15 @@ const TheStratagemsTrainingContent = observer(() => {
         <main className="mt-0 mlarge:mt-[50px] pt-[50px] mlarge:pt-[30px] deskWide:mx-0 deskWide:px-[calc((100%-1440px)/2)] max-w-full bg-[#0e0e0e]">
           <div className="flex justify-center items-center w-full h-[60px]">
             <h2 className="pageTitle text-center">
-              ТРЕНИРОВКА{" "}
-              <b className="pageTitle_Bold !text-[#ffe702]">СТРАТАГЕМ</b>
+              {t1("pageTitle")}{" "}
+              <b className="pageTitle_Bold !text-[#ffe702]">
+                {t1("pageAdditionalTitle")}
+              </b>
             </h2>
           </div>
 
           <img
-            src="/GeneralIcons/SuperEarthBackgroundIcon.svg"
+            src="/static/GeneralIcons/SuperEarthBackgroundIcon.svg"
             alt=""
             className="absolute top-[-10px] deskWide:top-[-50px] mlarge:top-0 mmedium:top-[10px] msmall:top-[20px] left-0 w-[700px] mlarge:w-full h-[450px] mlarge:h-[300px] mmedium:h-[260px] msmall:h-[230px] mt-[calc(50vh-150px)] mlarge:mt-[calc(50vh-220px)] mx-[calc((100%-700px)/2)] mlarge:mx-0"
           />
@@ -241,24 +248,22 @@ const TheStratagemsTrainingContent = observer(() => {
                   ></div>
 
                   <p className="mt-[10px] w-full text-[#ffe702] text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] text-center font-['Exo2'] font-semibold">
-                    НАЧАТЬ
+                    {getIntlArray(t1("text"))[0]}
                   </p>
 
-                  <p className="text-[#ffffff] text-[1rem] mlarge:text-[0.875rem] mmedium:text-[0.75rem] msmall:text-[0.625rem] text-center font-['Insignia'] brightness-50">
+                  <p className="text-white text-[1rem] mlarge:text-[0.875rem] mmedium:text-[0.75rem] msmall:text-[0.625rem] text-center font-['Insignia'] brightness-50">
                     {highestGameScore}
                   </p>
 
                   <MediaQuery maxWidth={480}>
                     {(matches) =>
                       matches ? (
-                        <p className="mt-[20px] text-[#ffffff] text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] text-center font-['Exo2'] brightness-75">
-                          Используйте кнопки в виде стрелок или свапайте в
-                          нужную сторону для ввода стратагем
+                        <p className="mt-[20px] text-white text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] text-center font-['Exo2'] brightness-75">
+                          {getIntlArray(t1("text"))[1]}
                         </p>
                       ) : (
-                        <p className="mt-[20px] text-[#ffffff] text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] text-center font-['Exo2'] brightness-75">
-                          Используйте WASD или стрелки на клавиатуре для ввода
-                          стратагем
+                        <p className="mt-[20px] text-white text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] text-center font-['Exo2'] brightness-75">
+                          {getIntlArray(t1("text"))[2]}
                         </p>
                       )
                     }
@@ -267,7 +272,7 @@ const TheStratagemsTrainingContent = observer(() => {
                   <MediaQuery maxWidth={480}>
                     <div className="relative flex justify-center items-center mt-[20px] ml-[-12px] w-full h-auto">
                       <p className="text-[#ffffff] text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold">
-                        Кнопки
+                        {getIntlArray(t1("text"))[3]}
                       </p>
 
                       <label className="relative inline-block mx-[20px] w-[84px] mmedium:w-[74px] msmall:w-[64px] h-[38px] mmedium:h-[34px] msmall:h-[30px]">
@@ -287,7 +292,7 @@ const TheStratagemsTrainingContent = observer(() => {
                       </label>
 
                       <p className="text-[#ffffff] text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-['Exo2'] font-bold">
-                        Свайп
+                        {getIntlArray(t1("text"))[4]}
                       </p>
                     </div>
                   </MediaQuery>
@@ -304,7 +309,7 @@ const TheStratagemsTrainingContent = observer(() => {
                           <div className="flex justify-between items-start w-full h-auto">
                             <span className="mr-[100px] mlarge:mr-0">
                               <p className="mt-[-10px] text-[#ffffff] text-[2rem] mlarge:text-[1.375rem] mmedium:text-[1.25rem] msmall:text-[1.125rem] text-left font-['Exo2'] font-semibold">
-                                Раунд
+                                {getIntlArray(t1("text"))[5]}
                               </p>
 
                               <p className="mt-[-7.5px] text-[#ffe702] text-[3rem] mlarge:text-[1.75rem] mmedium:text-[1.625rem] msmall:text-[1.5rem] text-left font-['Insignia'] font-extrabold">
@@ -317,11 +322,11 @@ const TheStratagemsTrainingContent = observer(() => {
                                 {stratagemTrainingStore.currentScore}
                               </p>
 
-                              <p className="mt-[-17.5px] mmedium:mt-[-15px] msmall:mt-[-12.5px] text-[#ffffff] mlarge:text-[1.375rem] mmedium:text-[1.25rem] msmall:text-[1.125rem] text-right font-['Exo2'] font-semibold">
-                                Счет
+                              <p className="mt-[-17.5px] mmedium:mt-[-15px] msmall:mt-[-12.5px] text-white mlarge:text-[1.375rem] mmedium:text-[1.25rem] msmall:text-[1.125rem] text-right font-['Exo2'] font-semibold">
+                                {getIntlArray(t1("text"))[6]}
                               </p>
 
-                              <p className="mlarge:mt-[-5px] text-[#ffffff] text-[1rem] mlarge:text-[0.875rem] mmedium:text-[0.75rem] msmall:text-[0.625rem] text-right font-['Exo2'] font-semibold brightness-50">
+                              <p className="mlarge:mt-[-5px] text-white text-[1rem] mlarge:text-[0.875rem] mmedium:text-[0.75rem] msmall:text-[0.625rem] text-right font-['Exo2'] font-semibold brightness-50">
                                 Ваш рекорд:{" "}
                                 <b className="font-['Insignia']">
                                   {stratagemTrainingStore.highestGameScore}
@@ -331,8 +336,8 @@ const TheStratagemsTrainingContent = observer(() => {
                           </div>
                         ) : (
                           <span className="mr-[100px]">
-                            <p className="mt-[-10px] text-[#ffffff] text-[2rem] mlarge:text-[1.5rem] text-left font-['Exo2'] font-semibold">
-                              Раунд
+                            <p className="mt-[-10px] text-white text-[2rem] mlarge:text-[1.5rem] text-left font-['Exo2'] font-semibold">
+                              {getIntlArray(t1("text"))[5]}
                             </p>
 
                             <p className="mt-[-7.5px] text-[#ffe702] text-[3rem] mlarge:text-[2rem] text-left font-['Insignia'] font-extrabold">
@@ -366,8 +371,12 @@ const TheStratagemsTrainingContent = observer(() => {
                       <div
                         className={`flex items-center mt-[10px] w-full h-[50px] mlarge:h-[30px] mmedium:h-[27.5px] msmall:h-[25px] ${getSpecificGameTimeColor()}`}
                       >
-                        <h3 className="w-full text-[#000000] text-[1.5rem] mlarge:text-[0.875rem] mmedium:text-[0.75rem] msmall:text-[0.625rem] text-center font-['Exo2'] font-bold">
-                          {stratagemStore.currentStratagem?.name}
+                        <h3 className="w-full text-black text-[1.5rem] mlarge:text-[0.875rem] mmedium:text-[0.75rem] msmall:text-[0.625rem] text-center font-['Exo2'] font-bold">
+                          {
+                            getIntlArray(t("names"))[
+                              stratagemStore.currentStratagem?.id - 1
+                            ]
+                          }
                         </h3>
                       </div>
 
@@ -449,7 +458,7 @@ const TheStratagemsTrainingContent = observer(() => {
                           </>
                         ) : (
                           <p className="w-[80%] text-[#2a2a2a] text-[3rem] mmedium:text-[2.75rem] msmall:text-[2.5rem] text-center font-['Exo2'] font-bold select-none">
-                            СВАЙПАЙТЕ ЗДЕСЬ
+                            {getIntlArray(t1("text"))[7]}
                           </p>
                         )}
                       </div>
@@ -462,11 +471,11 @@ const TheStratagemsTrainingContent = observer(() => {
                         </p>
 
                         <p className="mt-[-17.5px] text-[#ffffff] text-[2rem] text-right font-['Exo2'] font-semibold">
-                          Счет
+                          {getIntlArray(t1("text"))[6]}
                         </p>
 
                         <p className="text-[#ffffff] text-[1rem] text-right font-['Exo2'] font-semibold brightness-50">
-                          Ваш рекорд:{" "}
+                          {getIntlArray(t1("text"))[8]}{" "}
                           <b className="font-['Insignia']">
                             {stratagemTrainingStore.highestGameScore}
                           </b>
@@ -481,12 +490,12 @@ const TheStratagemsTrainingContent = observer(() => {
               stratagemTrainingStore.isRoundLost && (
                 <div className="grid justify-items-center mt-[-100px] mlarge:mt-[-30px] w-auto min-w-[550px] mlarge:min-w-[calc(100vw-70px)]">
                   <h2 className="text-[#ffffff] text-[2.5rem] mlarge:text-[1.875rem] mmedium:text-[1.75rem] msmall:text-[1.625rem] font-['Exo2'] font-bold">
-                    Игра окончена
+                    {getIntlArray(t1("text"))[9]}
                   </h2>
 
                   <div className="flex justify-between items-center mt-[30px] mlarge:mt-[20px] w-full h-auto">
                     <span className="text-[#ffffff] text-[1.5rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] text-left font-['Exo2'] font-bold">
-                      <p>ФИНАЛЬНЫЙ СЧЕТ</p>
+                      <p>{getIntlArray(t1("text"))[10]}</p>
 
                       <p className="text-[#ffe702] text-[2rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem]">
                         {stratagemTrainingStore.finalGameScore}
@@ -494,7 +503,7 @@ const TheStratagemsTrainingContent = observer(() => {
                     </span>
 
                     <span className="text-[#ffffff] text-[1.5rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] text-right font-['Exo2'] font-bold">
-                      <p>МАКС. РЕЗУЛЬТАТ</p>
+                      <p>{getIntlArray(t1("text"))[11]}</p>
 
                       <p className="text-[2rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem]">
                         {stratagemTrainingStore.highestGameScore}
@@ -510,7 +519,7 @@ const TheStratagemsTrainingContent = observer(() => {
                 <div className="relative mt-[-100px] mlarge:mt-[-20px] w-[600px] mlarge:w-full">
                   <div className="flex justify-between items-center w-full">
                     <p className="text-[#ffffff] text-[2rem] mlarge:text-[1.375rem] mmedium:text-[1.25rem] msmall:text-[1.125rem] font-['Exo2'] font-bold">
-                      Бонус за раунд
+                      {getIntlArray(t1("text"))[12]}
                     </p>
 
                     <p className="mt-[5px] text-[#ffe702] text-[2.5rem] mlarge:text-[1.75rem] mmedium:text-[1.625rem] msmall:text-[1.5rem] font-['Insignia'] font-bold">
@@ -519,8 +528,8 @@ const TheStratagemsTrainingContent = observer(() => {
                   </div>
 
                   <span className="flex justify-between items-center w-full">
-                    <p className="text-[#ffffff] text-[2rem] mlarge:text-[1.375rem] mmedium:text-[1.25rem] msmall:text-[1.125rem] font-['Exo2'] font-bold">
-                      Бонус за время
+                    <p className="text-white text-[2rem] mlarge:text-[1.375rem] mmedium:text-[1.25rem] msmall:text-[1.125rem] font-['Exo2'] font-bold">
+                      {getIntlArray(t1("text"))[13]}
                     </p>
 
                     <p className="mt-[5px] text-[#ffe702] text-[2.5rem] mlarge:text-[1.75rem] mmedium:text-[1.625rem] msmall:text-[1.5rem] font-['Insignia'] font-bold">
@@ -529,8 +538,8 @@ const TheStratagemsTrainingContent = observer(() => {
                   </span>
 
                   <span className="flex justify-between items-center w-full">
-                    <p className="text-[#ffffff] text-[2rem] mlarge:text-[1.375rem] mmedium:text-[1.25rem] msmall:text-[1.125rem] font-['Exo2'] font-bold">
-                      Бонус за идеал
+                    <p className="text-white text-[2rem] mlarge:text-[1.375rem] mmedium:text-[1.25rem] msmall:text-[1.125rem] font-['Exo2'] font-bold">
+                      {getIntlArray(t1("text"))[14]}
                     </p>
 
                     <p className="mt-[5px] text-[#ffe702] text-[2.5rem] mlarge:text-[1.75rem] mmedium:text-[1.625rem] msmall:text-[1.5rem] font-['Insignia'] font-bold">
@@ -539,8 +548,8 @@ const TheStratagemsTrainingContent = observer(() => {
                   </span>
 
                   <span className="flex justify-between items-center w-full">
-                    <p className="text-[#ffffff] text-[2rem] mlarge:text-[1.375rem] mmedium:text-[1.25rem] msmall:text-[1.125rem] font-['Exo2'] font-bold">
-                      Итоговый счет
+                    <p className="text-white text-[2rem] mlarge:text-[1.375rem] mmedium:text-[1.25rem] msmall:text-[1.125rem] font-['Exo2'] font-bold">
+                      {getIntlArray(t1("text"))[15]}
                     </p>
 
                     <p className="mt-[5px] text-[#ffe702] text-[2.5rem] mlarge:text-[1.75rem] mmedium:text-[1.625rem] msmall:text-[1.5rem] font-['Insignia'] font-bold">
@@ -554,12 +563,12 @@ const TheStratagemsTrainingContent = observer(() => {
               !stratagemTrainingStore.isResultsShowed &&
               !stratagemTrainingStore.isRoundLost && (
                 <div className="grid justify-items-center mt-[-100px] w-auto">
-                  <h2 className="text-[#ffffff] text-[2.5rem] mlarge:text-[1.75rem] mmedium:text-[1.625rem] msmall:text-[1.5rem] font-['Exo2'] font-bold">
-                    Приготовьтесь
+                  <h2 className="text-white text-[2.5rem] mlarge:text-[1.75rem] mmedium:text-[1.625rem] msmall:text-[1.5rem] font-['Exo2'] font-bold">
+                    {getIntlArray(t1("text"))[16]}
                   </h2>
 
-                  <p className="mt-[30px] text-[#ffffff] text-[2.25rem] mlarge:text-[1.5rem] mmedium:text-[1.375rem] msmall:text-[1.25rem] font-['Exo2'] font-bold">
-                    Раунд
+                  <p className="mt-[30px] text-white text-[2.25rem] mlarge:text-[1.5rem] mmedium:text-[1.375rem] msmall:text-[1.25rem] font-['Exo2'] font-bold">
+                    {getIntlArray(t1("text"))[5]}
                   </p>
 
                   <p className="text-[#ffe702] text-[3rem] mlarge:text-[2rem] mmedium:text-[1.875rem] msmall:text-[1.75rem] font-['Insignia'] font-bold">

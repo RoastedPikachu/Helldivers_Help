@@ -53,7 +53,10 @@
   },
   "StratagemTrainingPage": {
     "metadataTitle": "HELLDIVERS.HELP: Stratagem Training",
-    "metadataDescription": "Improve your skill at rapid stratagem entry in constant training to advance a managed democracy in the galaxy as effectively as possible and kill the hated enemies of Super Earth more swiftly."
+    "metadataDescription": "Improve your skill at rapid stratagem entry in constant training to advance a managed democracy in the galaxy as effectively as possible and kill the hated enemies of Super Earth more swiftly.",
+    "pageTitle": "STRATAGEM",
+    "pageAdditionalTitle": "HERO",
+    "text": "[\"START\",\"Use the arrow buttons or swap to the correct side to enter stratagems\",\"Use WASD or arrows on your keyboard to enter stratagems\",\"Buttons\",\"Swipe\",\"Round\",\"Score\",\"SWIPE HERE\",\"Your record:\",\"Game over\",\"FINAL SCORE\",\"MAX RESULT\",\"Round bonus\",\"Time bonus\",\"Perfection bonus\",\"Total score\",\"Get ready\"]"
   },
   "WeaponryPage": {
     "metadataTitle": "Helldivers.HELP. Weapons: A complete list of weapons and their characteristics",
