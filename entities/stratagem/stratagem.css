@@ -1,5 +1,5 @@
 .rootStratagemBlock {
-    @apply relative w-auto h-auto min-h-[85px] mlarge:min-h-[80px] mmedium:min-h-[70px] bg-[#00293a] border-2 border-theme rounded-[10px] overflow-hidden;
+    @apply relative w-auto h-auto min-h-[85px] mlarge:min-h-[80px] mmedium:min-h-[70px] bg-[url('/static/StratagemBackground.webp')] bg-cover border-2 border-theme rounded-[10px] overflow-hidden;
 }
 
 .rootStratagemBlock-top {
@@ -63,7 +63,7 @@
 }
 
 .rootStratagemBlock-bottom-top-left-arrowsWrapper-block {
-    @apply relative flex justify-between items-center py-[15px] mlarge:py-[10px] pl-[40px] mlarge:pl-[20px] mlarge:pr-[20px] w-auto mlarge:w-full h-auto border-b-2 border-x-2 border-theme rounded-b-[10px];
+    @apply relative flex justify-between items-center py-[15px] mlarge:py-[10px] pl-[40px] mlarge:pl-[20px] mlarge:pr-[20px] w-auto mlarge:w-full h-auto bg-primary-bg border-b-2 border-x-2 border-theme rounded-b-[10px];
 }
 
 .rootStratagemBlock-bottom-top-left-arrowsWrapper-block-arrow {

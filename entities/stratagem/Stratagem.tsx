@@ -1,13 +1,14 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 
+import { useTranslations } from "next-intl";
+
 import { Direction } from "@/utils/generalInterfaces";
 import { getIntlArray, getTargetRotate } from "@/utils/generalFunctions";
 
 import LoadingSpinner from "@/shared/loadingSpinner/LoadingSpinner";
 
 import "./stratagem.css";
-import { useTranslations } from "next-intl";
 
 interface StratagemProps {
   id: number;
