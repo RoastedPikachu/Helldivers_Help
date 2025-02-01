@@ -77,10 +77,10 @@ export const armorBonuses: { [key: string]: ArmorBonus } = {
     icon: "/static/armorBonuses/SiegeReady.svg",
     name: "К осаде готов",
     description:
-        "Повышает скорость перезарядки основого оружия на 30%. Повышает боезапас основного оружия на 20%.",
+      "Повышает скорость перезарядки основого оружия на 30%. Повышает боезапас основного оружия на 20%.",
   },
   acclimated: {
-    icon: "/static/armorBonuses/SiegeReady.svg",
+    icon: "/static/armorBonuses/Inflammable.svg",
     name: "Акклиматизированный",
     description:
       "Дает 50% сопротивления урону от огня, газа, кислоты и электричества.",

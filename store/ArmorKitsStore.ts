@@ -249,7 +249,7 @@ class ArmorKitsStore {
         armorRating: 50,
         speed: 550,
         staminaRegen: 125,
-        bonus: armorBonuses.unflinching,
+        bonus: armorBonuses.acclimated,
       },
       {
         id: 18,
@@ -770,7 +770,7 @@ class ArmorKitsStore {
       },
       {
         id: 4,
-        imagePath: "/static/ArmorKits/Fs55DevastatorImage.webp",
+        imagePath: "/static/ArmorKits/FS55.png",
         type: "Тяжелая броня",
         name: "FS-55 «Разрушитель»",
         obtainingMethod:
