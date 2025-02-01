@@ -4,9 +4,12 @@ import { armorBonuses } from "@/data/armor/bonuses";
 import { obtainingTypes } from "@/data/obtainingTypes";
 
 import { ArmorKit, CurrentArmorInfo } from "@/utils/storeInterfaces";
+import { getIntlArray } from "@/utils/generalFunctions";
 
 class ArmorKitsStore {
   currentArmorInfo = {} as CurrentArmorInfo;
+
+  translationFunction = (key: string) => key;
 
   armorKits: { [key: string]: ArmorKit[] } = {
     light: [
@@ -14,11 +17,9 @@ class ArmorKitsStore {
         id: 1,
         imagePath: "/static/ArmorKits/SC30.png",
         type: "Легкая броня",
-        name: "SС-30 «Следопыт»",
-        obtainingMethod:
-          "Покупается в боевом пропуске «Адские Десантники, в бой!»",
-        description:
-          "Эта запатентованная ткань поглощает инфракрасное и ультрафиолетовое излучение, предотвращая обнаружение всеми известными видами детекторов.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[7],
         price: 85,
         armorRating: 50,
         speed: 550,
@@ -29,11 +30,9 @@ class ArmorKitsStore {
         id: 2,
         imagePath: "/static/ArmorKits/SC34.png",
         type: "Легкая броня",
-        name: "SC-34 «Лазутчик»",
-        obtainingMethod:
-          "Покупается в боевом пропуске «Адские Десантники, в бой!»",
-        description:
-          "Работающая на плутонии-238 ядерная батарея позволяет сканировать местность еще долгое время после того, как пользователь прекратил существование.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[7],
         price: 5,
         armorRating: 70,
         speed: 530,
@@ -44,10 +43,9 @@ class ArmorKitsStore {
         id: 3,
         imagePath: "/static/ArmorKits/SC37.png",
         type: "Легкая броня",
-        name: "SС-37 «Легионер»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          'Эта броня основана на старинной униформе "Легиона Суперземли", менее патриотичного предшественника "Адских Десантников".',
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 225,
         armorRating: 50,
         speed: 550,
@@ -58,11 +56,9 @@ class ArmorKitsStore {
         id: 4,
         imagePath: "/static/ArmorKits/CE07.webp",
         type: "Легкая броня",
-        name: "CE-07 «Мастер-подрывник»",
-        obtainingMethod:
-          "Покупается в боевом пропуске «Демократический подрыв»",
-        description:
-          "Эта броня была разработана для лунных терраформеров и способна выдержать резкие перепады давления, температуры и скорости перемещения.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[10],
         price: 80,
         armorRating: 64,
         speed: 536,
@@ -73,10 +69,9 @@ class ArmorKitsStore {
         id: 5,
         imagePath: "/static/ArmorKits/CE67.png",
         type: "Легкая броня",
-        name: "CE-67 «Титан»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          "Являясь качественным продуктом, эта броня может разрушить 300 000 километров ограждений без снижения эксплуатационной эффективности.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 225,
         armorRating: 79,
         speed: 521,
@@ -87,10 +82,9 @@ class ArmorKitsStore {
         id: 6,
         imagePath: "/static/ArmorKits/CE74.webp",
         type: "Легкая броня",
-        name: "CE-74 «Крушитель»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          "Отечественная версия этой брони доступна для граждан, которые хотят выполнить эффективные проекты по ремонту дома.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 375,
         armorRating: 50,
         speed: 550,
@@ -101,10 +95,9 @@ class ArmorKitsStore {
         id: 7,
         imagePath: "/static/ArmorKits/Fs37RavagerImage.webp",
         type: "Легкая броня",
-        name: "FS-37 «Разоритель»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          "Содержит множество маленьких карманов, позволяющих равномерно распределить вес боеприпасов, образцов и симпатичных камешков.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 375,
         armorRating: 50,
         speed: 550,
@@ -115,10 +108,9 @@ class ArmorKitsStore {
         id: 8,
         imagePath: "/static/ArmorKits/FS38.png",
         type: "Легкая броня",
-        name: "FS-38 «Искоренитель»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          "Впервые он был применен в шахтах Киберстана, где обеспечивал защиту от взрывов в богатых водородом пещерах.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 375,
         armorRating: 50,
         speed: 550,
@@ -129,10 +121,9 @@ class ArmorKitsStore {
         id: 9,
         imagePath: "/static/ArmorKits/B08.png",
         type: "Легкая броня",
-        name: "B-08 «Легкий стрелок»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          "Компактная и гибкая, эта кевларовая броня добавляет минимальную массу, что делает ее обычным выбором для фитнес-тестов Адских Десантников.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 225,
         armorRating: 100,
         speed: 550,
@@ -143,10 +134,9 @@ class ArmorKitsStore {
         id: 10,
         imagePath: "/static/ArmorKits/CM21.png",
         type: "Легкая броня",
-        name: "CM-21 «Траншейный медик»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          "Когда-то эта броня предназначалась для переноски медицинского оборудования на поле боя. Сейчас в ней можно носить большой запас стимов.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 375,
         armorRating: 64,
         speed: 536,
@@ -157,10 +147,9 @@ class ArmorKitsStore {
         id: 11,
         imagePath: "/static/ArmorKits/EX00.png",
         type: "Легкая броня",
-        name: "EX-00 «Прототип X»",
-        obtainingMethod: "Покупается в боевом пропуске «На острие»",
-        description:
-          "Результат траты нескольких миллиардов суперкредитов и 12 лет разработки «Солдата будущего».",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[9],
         price: 112,
         armorRating: 50,
         speed: 550,
@@ -171,10 +160,9 @@ class ArmorKitsStore {
         id: 12,
         imagePath: "/static/ArmorKits/CW4.png",
         type: "Легкая броня",
-        name: "CW-4 «Арктический рейнджер»",
-        obtainingMethod: "Покупается в боевом пропуске «Полярные патриоты»",
-        description:
-          "Оснащен разгрузочным поясом со множеством карманов, которые можно наполнить различными предметами: перочинными ножами, сувенирами из дома или интересными камнями.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[11],
         price: 112,
         armorRating: 50,
         speed: 550,
@@ -185,10 +173,9 @@ class ArmorKitsStore {
         id: 13,
         imagePath: "/static/ArmorKits/PH9.png",
         type: "Легкая броня",
-        name: "PH-9 «Хищник»",
-        obtainingMethod: "Покупается в боевом пропуске «Змеи-коммандос»",
-        description:
-          "Эта броня вдохновлена формой Джекли-6, ветерана змеев-коммандос, который во время Первой галактической войны остановил наступление целого роя терминидов на Нубларии, имея только пулемет, перочинный нож и орбитальные лазерные удары.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[12],
         price: 70,
         armorRating: 50,
         speed: 550,
@@ -199,10 +186,9 @@ class ArmorKitsStore {
         id: 14,
         imagePath: "/static/ArmorKits/I09.png",
         type: "Легкая броня",
-        name: "I-09 «Самонаведение»",
-        obtainingMethod: "Покупается в боевом пропуске «Пламя свободы»",
-        description:
-          "Полированные кроваво-красные пластины выкованы в праведном пламени, как и герои, которых они должны защищать.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[13],
         price: 70,
         armorRating: 50,
         speed: 550,
@@ -213,10 +199,9 @@ class ArmorKitsStore {
         id: 15,
         imagePath: "/static/ArmorKits/AF50.png",
         type: "Легкая броня",
-        name: "AF-50 «Ядовитый рейнджер»",
-        obtainingMethod: "Покупается в боевом пропуске «Химзащита»",
-        description:
-          "«Мы не боимся ни смерти, ни яда. Стенания врагов нам отрада». — Цитата из популярного мюзикла «Надбавка за вредность».",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[14],
         price: 75,
         armorRating: 50,
         speed: 550,
@@ -227,10 +212,9 @@ class ArmorKitsStore {
         id: 16,
         imagePath: "/static/ArmorKits/UF16.png",
         type: "Легкая броня",
-        name: "UF-16 «Инспектор»",
-        obtainingMethod: "Покупается в боевом пропуске «Блюстители правды»",
-        description:
-          "Эту броню прославила серия детективных романов «Блюстители правды: правдивые блюстители», где ее носил главный герой, настоящий образец патриотизма, защищавший нас от предательской лжи.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[15],
         price: 140,
         armorRating: 50,
         speed: 550,
@@ -241,10 +225,9 @@ class ArmorKitsStore {
         id: 17,
         imagePath: "/static/ArmorKits/AC2.png",
         type: "Легкая броня",
-        name: "AC-2 «Исполнительный»",
-        obtainingMethod: "Броня из коллаборации с Killzone",
-        description:
-          "Шлем оснащен гептафокальными линзами, что делает его одинаково популярным как среди снайперов, так и среди любителей миниатюрного моделирования.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[17],
         price: 0,
         armorRating: 50,
         speed: 550,
@@ -255,10 +238,9 @@ class ArmorKitsStore {
         id: 18,
         imagePath: "/static/ArmorKits/SR24.png",
         type: "Легкая броня",
-        name: "SR-24 «Уличный разведчик»",
-        obtainingMethod: "Покупается в боевом пропуске «Городские легенды»",
-        description:
-          "Цветовая гамма брони навевает приятные воспоминания о колониальном прошлом и его атрибутах: бетонных жилищах в пограничье, гражданских комбинезонах цвета сланца и пироге космических поселенцев.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[16],
         price: 30,
         armorRating: 50,
         speed: 550,
@@ -268,13 +250,12 @@ class ArmorKitsStore {
     ],
     medium: [
       {
-        id: 1,
+        id: 19,
         imagePath: "/static/ArmorKits/B01.png",
         type: "Средняя броня",
-        name: "B-01 «Тактик»",
-        obtainingMethod: "Пройдите обучение",
-        description:
-          "Это стандартная броня Супер-Земли, изготовленная из того же титанового сплава, что и корпус эсминца.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[0],
         price: 0,
         armorRating: 150,
         speed: 500,
@@ -282,13 +263,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.extraPadding,
       },
       {
-        id: 2,
+        id: 20,
         imagePath: "/static/ArmorKits/DP00.png",
         type: "Средняя броня",
-        name: "DP-00 «Тактик»",
-        obtainingMethod: "Подарок на День свободы 26.10.24",
-        description:
-          "Этот классический комплект брони узнают повсеместно — такой носили героические Адские Десантники, истребившие терминидов, киборгов и просветленных во времена первой галактической войны.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[1],
         price: 0,
         armorRating: 100,
         speed: 500,
@@ -296,14 +276,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.democracyProtects,
       },
       {
-        id: 3,
+        id: 21,
         imagePath: "/static/ArmorKits/DP11.png",
         type: "Средняя броня",
-        name: "DP-11 «Защитник народа»",
-        obtainingMethod:
-          "Покупается в боевом пропуске «Адские Десантники, в бой!»",
-        description:
-          "Три нашивки на наплечниках символизируют три принципа Супер-Земли: свободу, демократию и процветание.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[7],
         price: 175,
         armorRating: 100,
         speed: 500,
@@ -311,14 +289,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.democracyProtects,
       },
       {
-        id: 4,
+        id: 22,
         imagePath: "/static/ArmorKits/DP40.png",
         type: "Средняя броня",
-        name: "DP-40 «Герой федерации»",
-        obtainingMethod:
-          "Покупается в боевом пропуске «Адские Десантники, в бой!»",
-        description:
-          'Хотя изначально он предназначался исключительно для церемониального использования, его вдохновляющая энергия оказалась столь же полезной на поле боя (темный вариант набора "Кавалер демократии").',
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[7],
         price: 45,
         armorRating: 100,
         speed: 500,
@@ -326,13 +302,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.democracyProtects,
       },
       {
-        id: 5,
+        id: 23,
         imagePath: "/static/ArmorKits/DP53.webp",
         type: "Средняя броня",
-        name: "DP-53 «Спаситель свободных»",
-        obtainingMethod: "Покупка издания Super-Citizen",
-        description:
-          "Точная копия доспехов, которые носили в битве за Пик Свободы. Почитайте их наследие и носите его с гордостью.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[3],
         price: 0,
         armorRating: 100,
         speed: 500,
@@ -340,13 +315,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.democracyProtects,
       },
       {
-        id: 6,
+        id: 24,
         imagePath: "/static/ArmorKits/CW9.png",
         type: "Средняя броня",
-        name: "CW-9 «Белый волк»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          "Узор этой брони является результатом Инициативы по Улучшению Зимнего Камуфляжа, в рамках которой было рассмотрено 136 предложений, после чего было установлено, что белый цвет лучше остальных цветов сливается со снегом.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 450,
         armorRating: 150,
         speed: 500,
@@ -354,14 +328,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.extraPadding,
       },
       {
-        id: 7,
+        id: 25,
         imagePath: "/static/ArmorKits/CE27.webp",
         type: "Средняя броня",
-        name: "CE-27 «Первопробиватель»",
-        obtainingMethod:
-          "Покупается в боевом пропуске «Демократический подрыв»",
-        description:
-          "«Нет такой поверхности, которую нельзя пробить», — старшина Джанет Джонс, основательница землеройного корпуса.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[10],
         price: 30,
         armorRating: 100,
         speed: 500,
@@ -369,14 +341,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.engineerKit,
       },
       {
-        id: 8,
+        id: 26,
         imagePath: "/static/ArmorKits/CE35.png",
         type: "Средняя броня",
-        name: "CE-35 «Траншейный инженер»",
-        obtainingMethod:
-          "Покупается в боевом пропуске «Адские Десантники, в бой!»",
-        description:
-          "Когда колонисты из системы Хеллмейр нашли потерянный груз с этой броней, их любимым развлечением стало пробивание заборов.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[7],
         price: 17,
         armorRating: 100,
         speed: 500,
@@ -384,13 +354,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.engineerKit,
       },
       {
-        id: 9,
+        id: 27,
         imagePath: "/static/ArmorKits/CE81.png",
         type: "Средняя броня",
-        name: "CE-81 «Джаггернаут»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          "Один из самых долговечных видов инженерных брони. Каждый комплект прошел проверку взрослой особью жука-громилы.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 375,
         armorRating: 100,
         speed: 500,
@@ -398,13 +367,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.engineerKit,
       },
       {
-        id: 10,
+        id: 28,
         imagePath: "/static/ArmorKits/SC15.webp",
         type: "Средняя броня",
-        name: "SС-15 «Мастер дронов»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          "Некоторые солдаты сообщают о странных радиопомехах, появляющихся, если носить эту броню рядом с инопланетными артефактами.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 375,
         armorRating: 100,
         speed: 500,
@@ -412,14 +380,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.engineerKit,
       },
       {
-        id: 11,
+        id: 29,
         imagePath: "/static/ArmorKits/CM09.png",
         type: "Средняя броня",
-        name: "CM-09 «Костолом»",
-        obtainingMethod:
-          "Покупается в боевом пропуске «Адские Десантники, в бой!»",
-        description:
-          "Дизайн брони основан на костюме колониального хирурга, на чьи медицинские обязанности часто накладывается необходимость участвовать в обороне.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[7],
         price: 27,
         armorRating: 100,
         speed: 500,
@@ -427,13 +393,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.medKit,
       },
       {
-        id: 12,
+        id: 30,
         imagePath: "/static/ArmorKits/CM10.png",
         type: "Средняя броня",
-        name: "CM-10 «Клиницист»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          "Запатентованная технология обратного шва снижает риск попадания телесных жидкостей внутрь бронм.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 375,
         armorRating: 100,
         speed: 500,
@@ -441,14 +406,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.medKit,
       },
       {
-        id: 13,
+        id: 31,
         imagePath: "/static/ArmorKits/CM14.png",
         type: "Средняя броня",
-        name: "CM-14 «Врач»",
-        obtainingMethod:
-          "Покупается в боевом пропуске «Адские Десантники, в бой!»",
-        description:
-          "Уникальное сочетание красного, белого и зеленого цветов межгалактического лечебного корпуса извещает Адский Десант, помощь идет!.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[7],
         price: 120,
         armorRating: 100,
         speed: 500,
@@ -456,13 +419,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.medKit,
       },
       {
-        id: 14,
+        id: 32,
         imagePath: "/static/ArmorKits/Tr7AmbassadorOfTheBrandImage.webp",
         type: "Средняя броня",
-        name: "TR-7 «Представитель бренда»",
-        obtainingMethod: "Бонус за предзаказ",
-        description:
-          "Рекламная броня, изготовленная компанией SUMY Corp. в рамках весьма успешной маркетинговой кампании замороженного йогурта.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[2],
         price: 0,
         armorRating: 150,
         speed: 500,
@@ -470,13 +432,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.extraPadding,
       },
       {
-        id: 15,
+        id: 33,
         imagePath: "/static/ArmorKits/Tr9CavalierOfDemocracyImage.webp",
         type: "Средняя броня",
-        name: "TR-9 «Кавалер демократии»",
-        obtainingMethod: "Бонус за предзаказ",
-        description:
-          "Носители этих доспехов не ездят верхом на лошадях, но, тем не менее, отправляются в бой верхом на верном скакуне Свободы.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[2],
         price: 0,
         armorRating: 100,
         speed: 500,
@@ -484,13 +445,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.democracyProtects,
       },
       {
-        id: 16,
+        id: 34,
         imagePath: "/static/ArmorKits/TR40.png",
         type: "Средняя броня",
-        name: "TR-40 «Золотой орел»",
-        obtainingMethod: "Награда в честь выхода обновления Эскалация свободы",
-        description:
-          "Эта броня с сигнальными элементами позволяет легко замечать ее обладателя в дыму, тумане и разлетающихся внутренностях.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[4],
         price: 0,
         armorRating: 100,
         speed: 500,
@@ -498,13 +458,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.extraPadding,
       },
       {
-        id: 17,
+        id: 35,
         imagePath: "/static/ArmorKits/TR117.png",
         type: "Средняя броня",
-        name: "TR-117 «Альфа командир»",
-        obtainingMethod: "Helldivers2 Twitch-drops",
-        description:
-          "Для столь сильных и уверенных в себе воинов, что им не требуется какая-либо поддержка.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[5],
         price: 0,
         armorRating: 100,
         speed: 500,
@@ -512,14 +471,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.medKit,
       },
       {
-        id: 18,
+        id: 36,
         imagePath: "/static/ArmorKits/SA04.png",
         type: "Средняя броня",
-        name: "SA-04 «Боевой техник»",
-        obtainingMethod:
-          "Покупается в боевом пропуске «Адские Десантники, в бой!»",
-        description:
-          "Этот костюм увеличивает силу носителя, поэтому в нем рекомендуется с осторожностью открывать двери или обнимать коллег.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[7],
         price: 100,
         armorRating: 100,
         speed: 500,
@@ -527,13 +484,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.scout,
       },
       {
-        id: 19,
+        id: 37,
         imagePath: "/static/ArmorKits/SA12.png",
         type: "Средняя броня",
-        name: "SA-12 «Сервоприводная»",
-        obtainingMethod: "Покупается в боевом пропуске «Закаленные ветераны»",
-        description:
-          "Каждая конечность с сервоприводом содержит 138 крошечных моторчиков, которые поддерживают естественную походку и долгосрочное здоровье спины.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[8],
         price: 80,
         armorRating: 100,
         speed: 500,
@@ -541,13 +497,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.servoAssisted,
       },
       {
-        id: 20,
+        id: 38,
         imagePath: "/static/ArmorKits/SA25.png",
         type: "Средняя броня",
-        name: "SA-25 «Стальной кавалерист»",
-        obtainingMethod: "Покупается в боевом пропуске «Закаленные ветераны»",
-        description:
-          "Чтобы добиться оптимальной эффективности, производитель рекомендует избегать погружения брони в соленую воду на длительный срок.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[8],
         price: 30,
         armorRating: 100,
         speed: 500,
@@ -555,13 +510,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.servoAssisted,
       },
       {
-        id: 21,
+        id: 39,
         imagePath: "/static/ArmorKits/EX03.png",
         type: "Средняя броня",
-        name: "EX-03 «Прототип 3»",
-        obtainingMethod: "Покупается в боевом пропуске «На острие»",
-        description:
-          "Проводка этого прототипа находится под напряжением 400 000 вольт, поэтому он оснащен удобной изолирующей резиновой подкладкой.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[9],
         price: 30,
         armorRating: 100,
         speed: 500,
@@ -569,13 +523,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.electricalCondult,
       },
       {
-        id: 22,
+        id: 40,
         imagePath: "/static/ArmorKits/EX16.png",
         type: "Средняя броня",
-        name: "EX-16 «Прототип 16»",
-        obtainingMethod: "Покупается в боевом пропуске «На острие»",
-        description:
-          "Так как электрическая дуга создает мощное магнитное поле, пользователю не стоит активировать ее вблизи сшитых скобами документов.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[9],
         price: 80,
         armorRating: 100,
         speed: 500,
@@ -583,13 +536,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.electricalCondult,
       },
       {
-        id: 23,
+        id: 41,
         imagePath: "/static/ArmorKits/FS34.png",
         type: "Средняя броня",
-        name: "FS-34 «Истребитель»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          "Оснащена запатентованным неадгезивным покрытием, облегчающим очистку брони от внутренностей после долгой боевой смены.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 600,
         armorRating: 100,
         speed: 500,
@@ -597,13 +549,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.fortification,
       },
       {
-        id: 24,
+        id: 42,
         imagePath: "/static/ArmorKits/B24.png",
         type: "Средняя броня",
-        name: "B-24 «Вышибала»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          "В ходе полевых испытаний 84% пользователей заявили, что броня улучшила их осанку и самооценку.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 225,
         armorRating: 129,
         speed: 471,
@@ -611,13 +562,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.fortification,
       },
       {
-        id: 25,
+        id: 43,
         imagePath: "/static/ArmorKits/PH56.png",
         type: "Средняя броня",
-        name: "PH-56 «Ягуар»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          "«Двигайся как ягуар, бей как змей» — таким был девиз легендарного отряда спецназа ВССЗ, чьи реальные подвиги описаны в классической серии комиксов «Истории змей-коммандос».",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 225,
         armorRating: 100,
         speed: 500,
@@ -625,13 +575,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.peakPhisique,
       },
       {
-        id: 26,
+        id: 44,
         imagePath: "/static/ArmorKits/I92.png",
         type: "Средняя броня",
-        name: "I-92 «Пожарный»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          "Тяжелая резиновая накидка и отражающая защита для конечностей, первоначально разработанная для спасения граждан из горящих зданий, теперь позволяет без ограничений применять очищающее пламя Справедливости.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 375,
         armorRating: 100,
         speed: 500,
@@ -639,13 +588,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.inflammable,
       },
       {
-        id: 27,
+        id: 45,
         imagePath: "/static/ArmorKits/I102.png",
         type: "Средняя броня",
-        name: "I-102 «Драгонавт»",
-        obtainingMethod: "Покупается в боевом пропуске «Пламя свободы»",
-        description:
-          "Полностью покрыт слоем кварцево-волокнистой пены толщиной в 14 см за исключением тонких подходящих к ушам трубок, позволяющих слышать приятные вопли горящих врагов Свободы.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[13],
         price: 375,
         armorRating: 100,
         speed: 500,
@@ -653,13 +601,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.inflammable,
       },
       {
-        id: 28,
+        id: 46,
         imagePath: "/static/ArmorKits/AF02.png",
         type: "Средняя броня",
-        name: "AF-02 «Хим-мастер»",
-        obtainingMethod: "Покупается в боевом пропуске «Химзащита»",
-        description:
-          "Эта броня, разработанная министерством науки для изучения феномена, известного как «Мрак», непроницаема и не скрипит.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[14],
         price: 80,
         armorRating: 100,
         speed: 500,
@@ -667,13 +614,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.advancedFiltration,
       },
       {
-        id: 29,
+        id: 47,
         imagePath: "/static/ArmorKits/AF91.png",
         type: "Средняя броня",
-        name: "AF-91 «Полевой химик»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          "Вы наверняка уже видели эту броню и шлем с дружелюбным лицом в известном детском шоу «Джек Полатник Ученый Десантник».",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 375,
         armorRating: 100,
         speed: 500,
@@ -681,13 +627,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.advancedFiltration,
       },
       {
-        id: 30,
+        id: 48,
         imagePath: "/static/ArmorKits/UF50.png",
         type: "Средняя броня",
-        name: "UF-50 «Кровавая гончая»",
-        obtainingMethod: "Покупается в боевом пропуске «Блюстители правды»",
-        description:
-          "Пользователям не рекомендуется царапать лаковое покрытие, так как пигмент «Красный 20 000», придающий этой броне ее фирменный оттенок, может быть связан с ускоренным расплетением ДНК.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[15],
         price: 80,
         armorRating: 100,
         speed: 500,
@@ -695,13 +640,13 @@ class ArmorKitsStore {
         bonus: armorBonuses.unflinching,
       },
       {
-        id: 31,
+        id: 49,
         imagePath: "/static/ArmorKits/UF84.png",
         type: "Средняя броня",
         name: "UF-84 «Убийца сомнений»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          "Одного вида этой брони достаточно, чтобы даже самые закоренелые диссиденты сошли со своего порочного пути.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 600,
         armorRating: 100,
         speed: 500,
@@ -709,13 +654,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.unflinching,
       },
       {
-        id: 32,
+        id: 50,
         imagePath: "/static/ArmorKits/AC1.png",
         type: "Средняя броня",
-        name: "AC-1 «Добросовестный»",
-        obtainingMethod: "Броня из коллаборации с Killzone",
-        description:
-          "Дыхательный аппарат этой брони позволяет дышать полной грудью даже тем солдатам и колонистам, которые откомандированы на планеты с типами атмосферы «выше оптимального», «экстремальные условия» и «закаляющие характер».",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[17],
         price: 600,
         armorRating: 100,
         speed: 500,
@@ -725,14 +669,12 @@ class ArmorKitsStore {
     ],
     heavy: [
       {
-        id: 1,
+        id: 51,
         imagePath: "/static/ArmorKits/FS05.png",
         type: "Тяжелая броня",
-        name: "FS-05 «Меткий стрелок»",
-        obtainingMethod:
-          "Покупается в боевом пропуске «Адские Десантники, в бой!»",
-        description:
-          "В первых прототипах использовались амортизационные гели, но эта броня стабилизирует цель с помощью встроенных гироскопов.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[7],
         price: 11,
         armorRating: 150,
         speed: 450,
@@ -740,13 +682,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.fortification,
       },
       {
-        id: 2,
+        id: 52,
         imagePath: "/static/ArmorKits/FS11.png",
         type: "Тяжелая броня",
-        name: "FS-11 «Палач»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          'Эту броню популяризовал актер Чип Месситер, который носил ее в боевике-ромком-мюзикле "Мое сердце похитил человек в шлеме".',
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 225,
         armorRating: 150,
         speed: 450,
@@ -754,14 +695,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.fortification,
       },
       {
-        id: 3,
+        id: 53,
         imagePath: "/static/ArmorKits/FS23.png",
         type: "Тяжелая броня",
-        name: "FS-23 «Воевода»",
-        obtainingMethod:
-          "Покупается в боевом пропуске «Адские Десантники, в бой!»",
-        description:
-          "Бывшие в употреблении образцы этой стабилизирующей прицел брони неожиданно стали популярны среди любителей наблюдать за инопланетными птицами.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[7],
         price: 60,
         armorRating: 150,
         speed: 450,
@@ -769,14 +708,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.fortification,
       },
       {
-        id: 4,
+        id: 54,
         imagePath: "/static/ArmorKits/FS55.png",
         type: "Тяжелая броня",
-        name: "FS-55 «Разрушитель»",
-        obtainingMethod:
-          "Покупается в боевом пропуске «Демократический подрыв»",
-        description:
-          "Содержит множество маленьких карманов, позволяющих равномерно распределить вес боеприпасов, образцов и симпатичных камней.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[10],
         price: 112,
         armorRating: 150,
         speed: 450,
@@ -784,13 +721,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.fortification,
       },
       {
-        id: 5,
+        id: 55,
         imagePath: "/static/ArmorKits/FS61.png",
         type: "Тяжелая броня",
-        name: "FS-61 «Дредноут»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          "С помощью гражданских модификаций этой брони жители горных колоний зашвыривают наверх метеорологическое оборудование.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 375,
         armorRating: 150,
         speed: 450,
@@ -798,13 +734,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.servoAssisted,
       },
       {
-        id: 6,
+        id: 56,
         imagePath: "/static/ArmorKits/SA32.png",
         type: "Тяжелая броня",
-        name: "SA-32 «Динамо»",
-        obtainingMethod: "Покупается в боевом пропуске «Закаленные ветераны»",
-        description:
-          "С помощью гражданских модификаций этой брони жители горных колоний зашвыривают наверх метеорологическое оборудование.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[8],
         price: 112,
         armorRating: 150,
         speed: 450,
@@ -812,13 +747,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.servoAssisted,
       },
       {
-        id: 7,
+        id: 57,
         imagePath: "/static/ArmorKits/CW22.png",
         type: "Тяжелая броня",
-        name: "CW-22 «Кадьяк»",
-        obtainingMethod: "Покупается в боевом пропуске «Полярные патриоты»",
-        description:
-          "Броня CW-22 «Кадьяк» была тщательно испытана на герметичность патриотичными добровольцами в рамках программы продвижения граждан «Подопытные для Супер-Земли».",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[11],
         price: 80,
         armorRating: 150,
         speed: 450,
@@ -826,13 +760,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.fortification,
       },
       {
-        id: 8,
+        id: 58,
         imagePath: "/static/ArmorKits/CW36.png",
         type: "Тяжелая броня",
-        name: "CW-36 «Зимний воин»",
-        obtainingMethod: "Покупается в боевом пропуске «Полярные патриоты»",
-        description:
-          "Броня обеспечивает маскировку в заснеженных областях и пользуется популярностью среди фотографов-натуралистов и опытных охотников.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[11],
         price: 30,
         armorRating: 150,
         speed: 450,
@@ -840,13 +773,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.servoAssisted,
       },
       {
-        id: 9,
+        id: 59,
         imagePath: "/static/ArmorKits/Tr62KnightImage.webp",
         type: "Тяжелая броня",
-        name: "TR-62 «Рыцарь»",
-        obtainingMethod: "Бонус за предзаказ",
-        description:
-          "Создан для того, чтобы вершить правосудие в самых темных уголках галактики.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[2],
         price: 0,
         armorRating: 150,
         speed: 450,
@@ -854,13 +786,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.servoAssisted,
       },
       {
-        id: 10,
+        id: 60,
         imagePath: "/static/ArmorKits/B27.png",
         type: "Тяжелая броня",
-        name: "B-27 «Укрепленный коммандос»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          'Впервые эта броня появилась в клипе на летний хит "Наша любовь словно свобода (нерушима)".',
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 600,
         armorRating: 200,
         speed: 450,
@@ -868,13 +799,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.extraPadding,
       },
       {
-        id: 11,
+        id: 61,
         imagePath: "/static/ArmorKits/CE64.png",
         type: "Тяжелая броня",
-        name: "CE-64 «Гренадер»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          'Классический рекламный слоган "Гранату пробовали?" не менялся вот уже 70 лет.',
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 450,
         armorRating: 150,
         speed: 450,
@@ -882,13 +812,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.engineerKit,
       },
       {
-        id: 12,
+        id: 62,
         imagePath: "/static/ArmorKits/CE101.png",
         type: "Тяжелая броня",
-        name: "CE-101 «Горилла-партизан»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          "Тяжелая броня защищает от укусов животных, вражеского огня и напыщенных обличительных речей анархистов",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 375,
         armorRating: 150,
         speed: 450,
@@ -896,13 +825,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.engineerKit,
       },
       {
-        id: 13,
+        id: 63,
         imagePath: "/static/ArmorKits/CM17.png",
         type: "Тяжелая броня",
-        name: "CM-17 «Мясник»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          "Броня популярна у фронтовых хирургов, которые как искусно собирают тела, так и разбирают их по кусочкам.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 375,
         armorRating: 150,
         speed: 450,
@@ -910,13 +838,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.medKit,
       },
       {
-        id: 14,
+        id: 64,
         imagePath: "/static/ArmorKits/PH202.png",
         type: "Тяжелая броня",
-        name: "PH-202 «Палколом»",
-        obtainingMethod: "Покупается в боевом пропуске «Змеи-коммандос»",
-        description:
-          "Отсутствие покрытия на верхних конечностях обеспечивает повышенную свободу движения, улучшенное отведение влаги и возможность демонстрировать силу рук своим товарищам.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[12],
         price: 80,
         armorRating: 150,
         speed: 450,
@@ -924,13 +851,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.peakPhisique,
       },
       {
-        id: 15,
+        id: 65,
         imagePath: "/static/ArmorKits/I44.png",
         type: "Тяжелая броня",
-        name: "I-44 «Саламандра»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          "Фирменный оранжевый наплечник, позволяющий легко обнаруживать своего хозяина, живого или мертвого, среди покрытого пеплом поля боя.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 375,
         armorRating: 150,
         speed: 450,
@@ -938,13 +864,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.inflammable,
       },
       {
-        id: 16,
+        id: 66,
         imagePath: "/static/ArmorKits/AF52.png",
         type: "Тяжелая броня",
-        name: "AF-52 «Карантин»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          "Эта многослойная броня защищает от появления волдырей на глазах, разжижения подкожных тканей и разрушения желудочно-кишечного тракта и воплощает собой силу пошаговых улучшений на основе отзывов пользователей.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 650,
         armorRating: 150,
         speed: 450,
@@ -952,13 +877,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.inflammable,
       },
       {
-        id: 17,
+        id: 67,
         imagePath: "/static/ArmorKits/SR18.png",
         type: "Тяжелая броня",
-        name: "SR-18 «Заграждение»",
-        obtainingMethod: "Покупается в боевом пропуске «Городские легенды»",
-        description:
-          "Для своих эмблема на плече этой брони символизирует приближение безопасной зоны, для чужих — что дальше им не пройти.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[16],
         price: 650,
         armorRating: 150,
         speed: 450,
@@ -966,13 +890,12 @@ class ArmorKitsStore {
         bonus: armorBonuses.siegeReady,
       },
       {
-        id: 18,
+        id: 68,
         imagePath: "/static/ArmorKits/SR64.png",
         type: "Тяжелая броня",
-        name: "SR-64 «Шлакоблок»",
-        obtainingMethod: "Покупается в Супермагазине",
-        description:
-          "Для изготовления этой брони использовался переработанный металл из проверенных источников, таких как упаковка из торговых автоматов и автоматоны, пущенные на металлолом. Идеальный выбор для экологически сознательных Адских Десантников.",
+        obtainingMethod: getIntlArray(
+          this.translationFunction("obtainingMethods"),
+        )[6],
         price: 650,
         armorRating: 150,
         speed: 450,
@@ -984,6 +907,12 @@ class ArmorKitsStore {
 
   constructor() {
     makeAutoObservable(this);
+  }
+
+  setTranslationFunction(t: (key: string) => string) {
+    this.translationFunction = t;
+
+    console.log(t("obtainingMethods"));
   }
 
   changeCurrentArmorInfo(id: number, armorType: string) {

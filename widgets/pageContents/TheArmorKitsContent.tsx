@@ -1,5 +1,7 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
+
+import { useTranslations } from "next-intl";
 
 import { observer, Observer } from "mobx-react-lite";
 
@@ -22,6 +24,8 @@ import "swiper/css/navigation";
 import "@/app/modalsSlider.css";
 
 const TheArmorKitsContent = observer(() => {
+  const t1 = useTranslations("armor");
+
   const getWeaponType = (type: string) => {
     switch (type) {
       case "Легкая броня":
@@ -34,6 +38,10 @@ const TheArmorKitsContent = observer(() => {
         return "";
     }
   };
+
+  useEffect(() => {
+    armorStore.setTranslationFunction(t1);
+  }, []);
   return (
     <Observer>
       {() => (
