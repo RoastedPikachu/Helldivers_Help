@@ -81,6 +81,7 @@ export interface WeaponType {
 }
 
 export interface Bonus {
+  icon: string;
   name: string;
   description: string;
 }

@@ -1,20 +1,23 @@
 "use client";
 import React from "react";
 
+import { useTranslations } from "next-intl";
+
 import { observer, Observer } from "mobx-react-lite";
+
+import { Bonus } from "@/utils/dataInterfaces";
+import { getIntlArray } from "@/utils/generalFunctions";
 
 import { armorStore } from "@/store/ArmorKitsStore";
 import { mobileStore } from "@/store/MobileStore";
 
-import { Bonus } from "@/utils/dataInterfaces";
-
-import "./ArmorKitAdditionalInfoModalWindow.css";
+import "./armorKitAdditionalInfoModalWindow.css";
 
 interface ArmorKitAdditionalInfoModalWindowProps {
+  id: number;
   imagePath: string;
   type: string;
-  name: string;
-  description: string;
+  obtainingMethodIndex: number;
   price: number;
   armorRating: number;
   speed: number;
@@ -25,16 +28,58 @@ interface ArmorKitAdditionalInfoModalWindowProps {
 const ArmorKitAdditionalInfoModalWindow: React.FC<ArmorKitAdditionalInfoModalWindowProps> =
   observer(
     ({
+      id,
       imagePath,
       type,
-      name,
-      description,
+      obtainingMethodIndex,
       price,
       armorRating,
       speed,
       staminaRegen,
       bonus,
     }) => {
+      const t = useTranslations("armor");
+
+      const getCorrectObtainingMethod = () => {
+        switch (obtainingMethodIndex) {
+          case 0:
+            return getIntlArray(t("obtainingMethods"))[0];
+          case 1:
+            return getIntlArray(t("obtainingMethods"))[1];
+          case 2:
+            return getIntlArray(t("obtainingMethods"))[2];
+          case 3:
+            return getIntlArray(t("obtainingMethods"))[3];
+          case 4:
+            return getIntlArray(t("obtainingMethods"))[4];
+          case 5:
+            return getIntlArray(t("obtainingMethods"))[5];
+          case 6:
+            return getIntlArray(t("obtainingMethods"))[6];
+          case 7:
+            return getIntlArray(t("obtainingMethods"))[7];
+          case 8:
+            return getIntlArray(t("obtainingMethods"))[8];
+          case 9:
+            return getIntlArray(t("obtainingMethods"))[9];
+          case 10:
+            return getIntlArray(t("obtainingMethods"))[10];
+          case 11:
+            return getIntlArray(t("obtainingMethods"))[11];
+          case 12:
+            return getIntlArray(t("obtainingMethods"))[12];
+          case 13:
+            return getIntlArray(t("obtainingMethods"))[13];
+          case 14:
+            return getIntlArray(t("obtainingMethods"))[14];
+          case 15:
+            return getIntlArray(t("obtainingMethods"))[15];
+          case 16:
+            return getIntlArray(t("obtainingMethods"))[16];
+          case 17:
+            return getIntlArray(t("obtainingMethods"))[17];
+        }
+      };
       return (
         <Observer>
           {() => (
@@ -61,7 +106,7 @@ const ArmorKitAdditionalInfoModalWindow: React.FC<ArmorKitAdditionalInfoModalWin
 
                 <div className="currentArmor_Modal_Top_TextBlock">
                   <h2 className="currentArmor_Modal_Top_TextBlock_Title">
-                    {name}
+                    {getIntlArray(t("names"))[id - 1]}
                   </h2>
 
                   <p className="text-[#ffffff] text-[1.25rem] mlarge:text-[1rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] font-['Exo2'] font-semibold brightness-75">
@@ -137,7 +182,7 @@ const ArmorKitAdditionalInfoModalWindow: React.FC<ArmorKitAdditionalInfoModalWin
                   </h3>
 
                   <p className="currentArmor_Modal_Bottom_Top_Text">
-                    {description}
+                    {getIntlArray(t("descriptions"))[id - 1]}
                   </p>
                 </div>
 

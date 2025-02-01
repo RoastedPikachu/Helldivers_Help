@@ -1,7 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
-
-import { useTranslations } from "next-intl";
+import React from "react";
 
 import { observer, Observer } from "mobx-react-lite";
 
@@ -23,25 +21,24 @@ import "swiper/css/navigation";
 
 import "@/app/modalsSlider.css";
 
-const TheArmorKitsContent = observer(() => {
-  const t1 = useTranslations("armor");
-
+const TheArmorContent = observer(() => {
   const getWeaponType = (type: string) => {
     switch (type) {
       case "Легкая броня":
-        return "light";
+        return armorStore.armorKits.filter(
+          (armor) => armor.type === "Легкая броня",
+        );
       case "Средняя броня":
-        return "medium";
+        return armorStore.armorKits.filter(
+          (armor) => armor.type === "Средняя броня",
+        );
       case "Тяжелая броня":
-        return "heavy";
-      default:
-        return "";
+        return armorStore.armorKits.filter(
+          (armor) => armor.type === "Тяжелая броня",
+        );
     }
   };
 
-  useEffect(() => {
-    armorStore.setTranslationFunction(t1);
-  }, []);
   return (
     <Observer>
       {() => (
@@ -61,71 +58,76 @@ const TheArmorKitsContent = observer(() => {
             closeFunction={() => armorStore.clearCurrentArmorInfo()}
             currentEntityId={armorStore.currentArmorInfo.id}
           >
-            {armorStore.armorKits[
-              getWeaponType(armorStore.currentArmorInfo.type)
-            ]?.map((armorKit) => (
-              <SwiperSlide key={armorKit.id}>
-                <ArmorKitAdditionalInfoModalWindow
-                  imagePath={armorKit.imagePath}
-                  type={armorKit.type}
-                  name={armorKit.name}
-                  description={armorKit.description}
-                  price={armorKit.price}
-                  armorRating={armorKit.armorRating}
-                  speed={armorKit.speed}
-                  staminaRegen={armorKit.staminaRegen}
-                  bonus={armorKit.bonus}
-                />
-              </SwiperSlide>
-            ))}
+            {armorStore.armorKits
+              .filter(
+                (armor) => armor.type === armorStore.currentArmorInfo.type,
+              )
+              .map((armorKit) => (
+                <SwiperSlide key={armorKit.id}>
+                  <ArmorKitAdditionalInfoModalWindow
+                    id={armorKit.id}
+                    imagePath={armorKit.imagePath}
+                    type={armorKit.type}
+                    obtainingMethodIndex={armorKit.obtainingMethodIndex}
+                    price={armorKit.price}
+                    armorRating={armorKit.armorRating}
+                    speed={armorKit.speed}
+                    staminaRegen={armorKit.staminaRegen}
+                    bonus={armorKit.bonus}
+                  />
+                </SwiperSlide>
+              ))}
           </ModalSlider>
 
           <EntitySection
             title={"ЛЕГКАЯ БРОНЯ"}
             gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
           >
-            {armorStore.armorKits.light.map((armorKit) => (
-              <ArmorKit
-                key={armorKit.id}
-                id={armorKit.id}
-                imagePath={armorKit.imagePath}
-                type={armorKit.type}
-                name={armorKit.name}
-                bonus={armorKit.bonus}
-              />
-            ))}
+            {armorStore.armorKits
+              .filter((armor) => armor.type === "Легкая броня")
+              .map((armorKit) => (
+                <ArmorKit
+                  key={armorKit.id}
+                  id={armorKit.id}
+                  imagePath={armorKit.imagePath}
+                  type={armorKit.type}
+                  bonus={armorKit.bonus}
+                />
+              ))}
           </EntitySection>
 
           <EntitySection
             title={"СРЕДНЯЯ БРОНЯ"}
             gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
           >
-            {armorStore.armorKits.medium.map((armorKit) => (
-              <ArmorKit
-                key={armorKit.id}
-                id={armorKit.id}
-                imagePath={armorKit.imagePath}
-                type={armorKit.type}
-                name={armorKit.name}
-                bonus={armorKit.bonus}
-              />
-            ))}
+            {armorStore.armorKits
+              .filter((armor) => armor.type === "Средняя броня")
+              .map((armorKit) => (
+                <ArmorKit
+                  key={armorKit.id}
+                  id={armorKit.id}
+                  imagePath={armorKit.imagePath}
+                  type={armorKit.type}
+                  bonus={armorKit.bonus}
+                />
+              ))}
           </EntitySection>
 
           <EntitySection
             title={"ТЯЖЕЛАЯ БРОНЯ"}
             gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
           >
-            {armorStore.armorKits.heavy.map((armorKit) => (
-              <ArmorKit
-                key={armorKit.id}
-                id={armorKit.id}
-                imagePath={armorKit.imagePath}
-                type={armorKit.type}
-                name={armorKit.name}
-                bonus={armorKit.bonus}
-              />
-            ))}
+            {armorStore.armorKits
+              .filter((armor) => armor.type === "Тяжелая броня")
+              .map((armorKit) => (
+                <ArmorKit
+                  key={armorKit.id}
+                  id={armorKit.id}
+                  imagePath={armorKit.imagePath}
+                  type={armorKit.type}
+                  bonus={armorKit.bonus}
+                />
+              ))}
           </EntitySection>
         </main>
       )}
@@ -133,4 +135,4 @@ const TheArmorKitsContent = observer(() => {
   );
 });
 
-export default TheArmorKitsContent;
+export default TheArmorContent;

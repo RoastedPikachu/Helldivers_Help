@@ -1,14 +1,11 @@
 import { makeAutoObservable } from "mobx";
 
 import { ArmorKit, CurrentArmorInfo } from "@/utils/storeInterfaces";
-import { getIntlArray } from "@/utils/generalFunctions";
 
 import { armorBonuses } from "@/data/armor/bonuses";
 
 class ArmorKitsStore {
   currentArmorInfo = {} as CurrentArmorInfo;
-
-  translationFunction = (key: string) => key;
 
   armorKits: ArmorKit[] = [
     {
@@ -16,9 +13,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/SC30.png",
       type: "Легкая броня",
       devName: "SС-30 Trailblazer Scout",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[7],
+      obtainingMethodIndex: 7,
       price: 85,
       armorRating: 50,
       speed: 550,
@@ -30,9 +25,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/SC34.png",
       type: "Легкая броня",
       devName: "SC-34 Infiltrator",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[7],
+      obtainingMethodIndex: 7,
       price: 5,
       armorRating: 70,
       speed: 530,
@@ -44,9 +37,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/SC37.png",
       type: "Легкая броня",
       devName: "SС-37 Legionnaire",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 225,
       armorRating: 50,
       speed: 550,
@@ -58,9 +49,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/CE07.webp",
       type: "Легкая броня",
       devName: "CE-07 Demolition Specialist",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[10],
+      obtainingMethodIndex: 10,
       price: 80,
       armorRating: 64,
       speed: 536,
@@ -72,9 +61,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/CE67.png",
       type: "Легкая броня",
       devName: "CE-67 Titan",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 225,
       armorRating: 79,
       speed: 521,
@@ -86,9 +73,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/CE74.webp",
       type: "Легкая броня",
       devName: "CE-74 Breaker",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 375,
       armorRating: 50,
       speed: 550,
@@ -100,9 +85,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/Fs37RavagerImage.webp",
       type: "Легкая броня",
       devName: "FS-37 Ravager",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 375,
       armorRating: 50,
       speed: 550,
@@ -114,9 +97,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/FS38.png",
       type: "Легкая броня",
       devName: "FS-38 Eradicator",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 375,
       armorRating: 50,
       speed: 550,
@@ -128,9 +109,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/B08.png",
       type: "Легкая броня",
       devName: "B-08 Light Gunner",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 225,
       armorRating: 100,
       speed: 550,
@@ -142,9 +121,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/CM21.png",
       type: "Легкая броня",
       devName: "CM-21 Trench Paramedic",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 375,
       armorRating: 64,
       speed: 536,
@@ -156,9 +133,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/EX00.png",
       type: "Легкая броня",
       devName: "EX-00 Prototype X",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[9],
+      obtainingMethodIndex: 9,
       price: 112,
       armorRating: 50,
       speed: 550,
@@ -170,9 +145,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/CW4.png",
       type: "Легкая броня",
       devName: "CW-4 Arctic Ranger",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[11],
+      obtainingMethodIndex: 11,
       price: 112,
       armorRating: 50,
       speed: 550,
@@ -184,9 +157,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/PH9.png",
       type: "Легкая броня",
       devName: "PH-9 Predator",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[12],
+      obtainingMethodIndex: 12,
       price: 70,
       armorRating: 50,
       speed: 550,
@@ -198,9 +169,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/I09.png",
       type: "Легкая броня",
       devName: "I-09 Heatseeker",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[13],
+      obtainingMethodIndex: 13,
       price: 70,
       armorRating: 50,
       speed: 550,
@@ -212,9 +181,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/AF50.png",
       type: "Легкая броня",
       devName: "AF-50 Noxious Ranger",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[14],
+      obtainingMethodIndex: 14,
       price: 75,
       armorRating: 50,
       speed: 550,
@@ -226,9 +193,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/UF16.png",
       type: "Легкая броня",
       devName: "UF-16 Inspector",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[15],
+      obtainingMethodIndex: 15,
       price: 140,
       armorRating: 50,
       speed: 550,
@@ -240,9 +205,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/AC2.png",
       type: "Легкая броня",
       devName: "AC-2 Obedient",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[17],
+      obtainingMethodIndex: 17,
       price: 0,
       armorRating: 50,
       speed: 550,
@@ -254,9 +217,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/SR24.png",
       type: "Легкая броня",
       devName: "SR-24 Street Scout",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[16],
+      obtainingMethodIndex: 16,
       price: 30,
       armorRating: 50,
       speed: 550,
@@ -268,9 +229,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/B01.png",
       type: "Средняя броня",
       devName: "B-01 Tactical",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[0],
+      obtainingMethodIndex: 0,
       price: 0,
       armorRating: 150,
       speed: 500,
@@ -282,9 +241,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/DP00.png",
       type: "Средняя броня",
       devName: "DP-00 Tactical",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[1],
+      obtainingMethodIndex: 1,
       price: 0,
       armorRating: 100,
       speed: 500,
@@ -296,9 +253,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/DP11.png",
       type: "Средняя броня",
       devName: "DP-11 Champion of the People",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[7],
+      obtainingMethodIndex: 7,
       price: 175,
       armorRating: 100,
       speed: 500,
@@ -310,9 +265,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/DP40.png",
       type: "Средняя броня",
       devName: "DP-40 Hero of the Federation",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[7],
+      obtainingMethodIndex: 7,
       price: 45,
       armorRating: 100,
       speed: 500,
@@ -324,9 +277,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/DP53.webp",
       type: "Средняя броня",
       devName: "DP-53 Savior of the Free",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[3],
+      obtainingMethodIndex: 3,
       price: 0,
       armorRating: 100,
       speed: 500,
@@ -338,9 +289,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/CW9.png",
       type: "Средняя броня",
       devName: "CW-9 White Wolf",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 450,
       armorRating: 150,
       speed: 500,
@@ -352,9 +301,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/CE27.webp",
       type: "Средняя броня",
       devName: "CE-27 Ground Breaker",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[10],
+      obtainingMethodIndex: 10,
       price: 30,
       armorRating: 100,
       speed: 500,
@@ -366,9 +313,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/CE35.png",
       type: "Средняя броня",
       devName: "CE-35 Trench Engineer",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[7],
+      obtainingMethodIndex: 7,
       price: 17,
       armorRating: 100,
       speed: 500,
@@ -380,9 +325,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/CE81.png",
       type: "Средняя броня",
       devName: "CE-81 Juggernaut",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 375,
       armorRating: 100,
       speed: 500,
@@ -394,9 +337,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/SC15.webp",
       type: "Средняя броня",
       devName: "SС-15 Drone Master",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 375,
       armorRating: 100,
       speed: 500,
@@ -408,9 +349,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/CM09.png",
       type: "Средняя броня",
       devName: "CM-09 Bonesnapper",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[7],
+      obtainingMethodIndex: 7,
       price: 27,
       armorRating: 100,
       speed: 500,
@@ -422,9 +361,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/CM10.png",
       type: "Средняя броня",
       devName: "CM-10 Clinician",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 375,
       armorRating: 100,
       speed: 500,
@@ -436,9 +373,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/CM14.png",
       type: "Средняя броня",
       devName: "CM-14 Physician",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[7],
+      obtainingMethodIndex: 7,
       price: 120,
       armorRating: 100,
       speed: 500,
@@ -450,9 +385,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/Tr7AmbassadorOfTheBrandImage.webp",
       type: "Средняя броня",
       devName: "TR-7 Ambassador of the Brand",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[2],
+      obtainingMethodIndex: 2,
       price: 0,
       armorRating: 150,
       speed: 500,
@@ -464,9 +397,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/Tr9CavalierOfDemocracyImage.webp",
       type: "Средняя броня",
       devName: "TR-9 Cavalier of Democracy",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[2],
+      obtainingMethodIndex: 2,
       price: 0,
       armorRating: 100,
       speed: 500,
@@ -478,9 +409,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/TR40.png",
       type: "Средняя броня",
       devName: "TR-40 Gold Eagle",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[4],
+      obtainingMethodIndex: 4,
       price: 0,
       armorRating: 100,
       speed: 500,
@@ -492,9 +421,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/TR117.png",
       type: "Средняя броня",
       devName: "TR-117 Alpha Commander",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[5],
+      obtainingMethodIndex: 5,
       price: 0,
       armorRating: 100,
       speed: 500,
@@ -506,9 +433,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/SA04.png",
       type: "Средняя броня",
       devName: "SA-04 Combat Technician",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[7],
+      obtainingMethodIndex: 7,
       price: 100,
       armorRating: 100,
       speed: 500,
@@ -520,9 +445,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/SA12.png",
       type: "Средняя броня",
       devName: "SA-12 Servo Assisted",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[8],
+      obtainingMethodIndex: 8,
       price: 80,
       armorRating: 100,
       speed: 500,
@@ -534,9 +457,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/SA25.png",
       type: "Средняя броня",
       devName: "SA-25 Steel Trooper",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[8],
+      obtainingMethodIndex: 8,
       price: 30,
       armorRating: 100,
       speed: 500,
@@ -548,9 +469,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/EX03.png",
       type: "Средняя броня",
       devName: "EX-03 Prototype 3",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[9],
+      obtainingMethodIndex: 9,
       price: 30,
       armorRating: 100,
       speed: 500,
@@ -562,9 +481,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/EX16.png",
       type: "Средняя броня",
       devName: "EX-16 Prototype 16",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[9],
+      obtainingMethodIndex: 9,
       price: 80,
       armorRating: 100,
       speed: 500,
@@ -576,9 +493,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/FS34.png",
       type: "Средняя броня",
       devName: "FS-34 Exterminator",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 600,
       armorRating: 100,
       speed: 500,
@@ -590,9 +505,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/B24.png",
       type: "Средняя броня",
       devName: "B-24 Enforcer",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 225,
       armorRating: 129,
       speed: 471,
@@ -604,9 +517,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/PH56.png",
       type: "Средняя броня",
       devName: "PH-56 Jaguar",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 225,
       armorRating: 100,
       speed: 500,
@@ -618,9 +529,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/I92.png",
       type: "Средняя броня",
       devName: "I-92 Fire Fighter",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 375,
       armorRating: 100,
       speed: 500,
@@ -632,9 +541,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/I102.png",
       type: "Средняя броня",
       devName: "I-102 Draconaught",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[13],
+      obtainingMethodIndex: 13,
       price: 375,
       armorRating: 100,
       speed: 500,
@@ -646,9 +553,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/AF02.png",
       type: "Средняя броня",
       devName: "AF-02 Haz-Master",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[14],
+      obtainingMethodIndex: 14,
       price: 80,
       armorRating: 100,
       speed: 500,
@@ -660,9 +565,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/AF91.png",
       type: "Средняя броня",
       devName: "AF-91 Field Chemist",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 375,
       armorRating: 100,
       speed: 500,
@@ -674,9 +577,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/UF50.png",
       type: "Средняя броня",
       devName: "UF-50 Bloodhound",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[15],
+      obtainingMethodIndex: 15,
       price: 80,
       armorRating: 100,
       speed: 500,
@@ -688,9 +589,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/UF84.png",
       type: "Средняя броня",
       devName: "UF-84 Doubt Killer",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 600,
       armorRating: 100,
       speed: 500,
@@ -702,9 +601,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/AC1.png",
       type: "Средняя броня",
       devName: "AC-1 Dutiful",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[17],
+      obtainingMethodIndex: 17,
       price: 600,
       armorRating: 100,
       speed: 500,
@@ -716,9 +613,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/FS05.png",
       type: "Тяжелая броня",
       devName: "FS-05 Marksman",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[7],
+      obtainingMethodIndex: 7,
       price: 11,
       armorRating: 150,
       speed: 450,
@@ -730,9 +625,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/FS11.png",
       type: "Тяжелая броня",
       devName: "FS-11 Executioner",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 225,
       armorRating: 150,
       speed: 450,
@@ -744,9 +637,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/FS23.png",
       type: "Тяжелая броня",
       devName: "FS-23 Battle Master",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[7],
+      obtainingMethodIndex: 7,
       price: 60,
       armorRating: 150,
       speed: 450,
@@ -758,9 +649,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/FS55.png",
       type: "Тяжелая броня",
       devName: "FS-55 Devastator",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[10],
+      obtainingMethodIndex: 10,
       price: 112,
       armorRating: 150,
       speed: 450,
@@ -772,9 +661,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/FS61.png",
       type: "Тяжелая броня",
       devName: "FS-61 Dreadnought",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 375,
       armorRating: 150,
       speed: 450,
@@ -786,9 +673,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/SA32.png",
       type: "Тяжелая броня",
       devName: "SA-32 Dynamo",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[8],
+      obtainingMethodIndex: 8,
       price: 112,
       armorRating: 150,
       speed: 450,
@@ -800,9 +685,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/CW22.png",
       type: "Тяжелая броня",
       devName: "CW-22 Kodiak",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[11],
+      obtainingMethodIndex: 11,
       price: 80,
       armorRating: 150,
       speed: 450,
@@ -814,9 +697,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/CW36.png",
       type: "Тяжелая броня",
       devName: "CW-36 Winter Warrior",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[11],
+      obtainingMethodIndex: 11,
       price: 30,
       armorRating: 150,
       speed: 450,
@@ -828,9 +709,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/Tr62KnightImage.webp",
       type: "Тяжелая броня",
       devName: "TR-62 Knight",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[2],
+      obtainingMethodIndex: 2,
       price: 0,
       armorRating: 150,
       speed: 450,
@@ -842,9 +721,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/B27.png",
       type: "Тяжелая броня",
       devName: "B-27 Fortified Commando",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 600,
       armorRating: 200,
       speed: 450,
@@ -856,9 +733,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/CE64.png",
       type: "Тяжелая броня",
       devName: "CE-64 Grenadier",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 450,
       armorRating: 150,
       speed: 450,
@@ -870,9 +745,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/CE101.png",
       type: "Тяжелая броня",
       devName: "CE-101 Guerilla Gorilla",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 375,
       armorRating: 150,
       speed: 450,
@@ -884,9 +757,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/CM17.png",
       type: "Тяжелая броня",
       devName: "CM-17 Butcher",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 375,
       armorRating: 150,
       speed: 450,
@@ -898,9 +769,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/PH202.png",
       type: "Тяжелая броня",
       devName: "PH-202 Twigsnapper",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[12],
+      obtainingMethodIndex: 12,
       price: 80,
       armorRating: 150,
       speed: 450,
@@ -912,9 +781,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/I44.png",
       type: "Тяжелая броня",
       devName: "I-44 Salamander",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 375,
       armorRating: 150,
       speed: 450,
@@ -926,9 +793,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/AF52.png",
       type: "Тяжелая броня",
       devName: "AF-52 Lockdown",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 650,
       armorRating: 150,
       speed: 450,
@@ -940,9 +805,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/SR18.png",
       type: "Тяжелая броня",
       devName: "SR-18 Roadblock",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[16],
+      obtainingMethodIndex: 16,
       price: 650,
       armorRating: 150,
       speed: 450,
@@ -954,9 +817,7 @@ class ArmorKitsStore {
       imagePath: "/static/ArmorKits/SR64.png",
       type: "Тяжелая броня",
       devName: "SR-64 Cinderblock",
-      obtainingMethod: getIntlArray(
-        this.translationFunction("obtainingMethods"),
-      )[6],
+      obtainingMethodIndex: 6,
       price: 650,
       armorRating: 150,
       speed: 450,
@@ -967,12 +828,6 @@ class ArmorKitsStore {
 
   constructor() {
     makeAutoObservable(this);
-  }
-
-  setTranslationFunction(t: (key: string) => string) {
-    this.translationFunction = t;
-
-    console.log(t("obtainingMethods"));
   }
 
   changeCurrentArmorInfo(id: number, armorType: string) {

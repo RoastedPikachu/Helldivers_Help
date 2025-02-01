@@ -63,7 +63,7 @@ export interface ArmorKit {
   imagePath: string;
   type: string;
   devName: string;
-  obtainingMethod: string;
+  obtainingMethodIndex: number;
   price: number;
   armorRating: number;
   speed: number;
