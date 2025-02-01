@@ -31,6 +31,10 @@ export function toSlug(string = "") {
   return string.toLowerCase().replaceAll(" ", "_");
 }
 
+export function fromSlug(string = "") {
+  return string.replaceAll("_", " ");
+}
+
 export const getTargetRotate = (direction: number) => {
   switch (direction) {
     case 1:
