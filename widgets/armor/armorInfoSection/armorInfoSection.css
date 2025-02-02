@@ -42,6 +42,10 @@
     @apply text-white text-[1.5rem] font-primary font-medium brightness-[0.7];
 }
 
+.blockWhiteText {
+    @apply text-white text-[1.5rem] font-primary font-medium;
+}
+
 .blockNumber {
     @apply mt-[4px] text-white text-[1.625rem] font-secondary font-bold;
 }

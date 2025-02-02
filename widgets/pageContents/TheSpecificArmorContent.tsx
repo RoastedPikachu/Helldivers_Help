@@ -31,8 +31,10 @@ const TheSpecificArmorContent = () => {
       <section>
         <div className="w-[360px] h-[620px] border-2 border-theme rounded-[12.5px] overflow-hidden">
           <img
-            src={currentArmor.imagePath}
-            alt={getIntlArray(t("names"))[currentArmor.id - 1]}
+            src={currentArmor ? currentArmor.imagePath : ""}
+            alt={
+              getIntlArray(t("names"))[currentArmor ? currentArmor.id - 1 : 0]
+            }
             className="w-full h-full"
           />
         </div>

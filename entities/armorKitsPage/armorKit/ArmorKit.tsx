@@ -7,8 +7,6 @@ import { getIntlArray, toSlug } from "@/utils/generalFunctions";
 
 import { ArmorBonus } from "@/data/armor/bonuses";
 
-import { armorStore } from "@/store/ArmorKitsStore";
-
 import Link from "next/link";
 
 import Image from "next/image";
@@ -31,13 +29,18 @@ const ArmorKit: React.FC<ArmorKitProps> = ({
   bonus,
 }) => {
   const t = useTranslations("armor");
+  const t1 = useTranslations("armorBonuses");
   return (
     <Link href={`/equipment/armor/${toSlug(devName)}`}>
       <div className="armorKit">
         <div className="armorKitCard">
           <Tooltip
             placement="top"
-            title={bonus.name + "\n" + bonus.description}
+            title={
+              getIntlArray(t1("names"))[bonus.id - 1] +
+              "\n" +
+              getIntlArray(t1("descriptions"))[bonus.id - 1]
+            }
             arrow={true}
             overlayStyle={{ whiteSpace: "pre-line" }}
             overlayInnerStyle={{ textAlign: "center" }}
