@@ -1,0 +1,47 @@
+.armorInfoSection {
+    @apply relative w-[calc(100%-480px)] h-auto;
+}
+
+.armorInfoSection-top {
+    @apply relative flex items-center gap-x-[15px];
+}
+
+.armorInfoSection-top > h1 {
+    @apply text-theme text-[2.5rem] font-primary font-bold;
+}
+
+.armorInfoSection-top-right {
+    @apply flex items-center gap-x-[15px] mt-[11px] text-white font-primary;
+}
+
+.armorInfoSection-top-right-divider {
+    @apply text-[1.5rem] font-medium;
+}
+
+.armorInfoSection-top-right-text {
+    @apply text-[1.5rem] font-medium;
+}
+
+.armorInfoSection-mainInfoContainer {
+    @apply relative grid justify-items-start gap-y-[20px] mt-[30px] w-full h-auto;
+}
+
+.armorInfoSection-mainInfoContainer-blockWithNumber {
+    @apply flex items-center gap-x-[15px];
+}
+
+.armorInfoSection-mainInfoContainer-blockWithText {
+    @apply grid gap-y-[5px];
+}
+
+.blockTitle {
+    @apply text-theme text-[1.5rem] font-primary font-semibold;
+}
+
+.blockText {
+    @apply text-white text-[1.5rem] font-primary font-medium brightness-[0.7];
+}
+
+.blockNumber {
+    @apply mt-[4px] text-white text-[1.625rem] font-secondary font-bold;
+}
