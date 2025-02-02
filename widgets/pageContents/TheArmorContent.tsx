@@ -1,130 +1,80 @@
 "use client";
 import React from "react";
 
+import { useTranslations } from "next-intl";
+
 import { observer, Observer } from "mobx-react-lite";
 
-import { SwiperSlide } from "swiper/react";
+import { getIntlArray } from "@/utils/generalFunctions";
 
 import { armorStore } from "@/store/ArmorKitsStore";
 
-import ModalSlider from "@/widgets/modalSlider/ModalSlider";
 import EntitySection from "@/widgets/EntitySection";
 
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 
 import ArmorKit from "@/entities/armorKitsPage/armorKit/ArmorKit";
-import ArmorKitAdditionalInfoModalWindow from "@/entities/armorKitsPage/armorKitAdditionalInfoModalWindow/ArmorKitAdditionalInfoModalWindow";
-
-import "swiper/css";
-import "swiper/css/navigation";
-
-import "@/app/modalsSlider.css";
 
 const TheArmorContent = observer(() => {
-  const getWeaponType = (type: string) => {
-    switch (type) {
-      case "Легкая броня":
-        return armorStore.armorKits.filter(
-          (armor) => armor.type === "Легкая броня",
-        );
-      case "Средняя броня":
-        return armorStore.armorKits.filter(
-          (armor) => armor.type === "Средняя броня",
-        );
-      case "Тяжелая броня":
-        return armorStore.armorKits.filter(
-          (armor) => armor.type === "Тяжелая броня",
-        );
-    }
-  };
-
+  const t = useTranslations("ArmorPage");
   return (
     <Observer>
       {() => (
         <main>
           <ThePageTitle
-            title={"комплекты брони"}
-            additionalTitle={"адского десантника"}
+            title={t("pageTitle")}
+            additionalTitle={t("pageAdditionalTitle")}
           />
 
-          <PageDescription
-            description={
-              "Броня для Адского Десантника в игре Helldivers 2 играет критически важную роль в обеспечении выживаемости и эффективности на поле боя. Она защищает от дальнобойных лазеров автоматонов, от когтей и жвал терминидов, также комплект брони предоставляет определенные бонусы, способствующие выполнению задания."
-            }
-          />
-
-          <ModalSlider
-            closeFunction={() => armorStore.clearCurrentArmorInfo()}
-            currentEntityId={armorStore.currentArmorInfo.id}
-          >
-            {armorStore.armorKits
-              .filter(
-                (armor) => armor.type === armorStore.currentArmorInfo.type,
-              )
-              .map((armorKit) => (
-                <SwiperSlide key={armorKit.id}>
-                  <ArmorKitAdditionalInfoModalWindow
-                    id={armorKit.id}
-                    imagePath={armorKit.imagePath}
-                    type={armorKit.type}
-                    obtainingMethodIndex={armorKit.obtainingMethodIndex}
-                    price={armorKit.price}
-                    armorRating={armorKit.armorRating}
-                    speed={armorKit.speed}
-                    staminaRegen={armorKit.staminaRegen}
-                    bonus={armorKit.bonus}
-                  />
-                </SwiperSlide>
-              ))}
-          </ModalSlider>
+          <PageDescription description={t("pageDescription")} />
 
           <EntitySection
-            title={"ЛЕГКАЯ БРОНЯ"}
+            title={getIntlArray(t("sectionTitles"))[0]}
             gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
           >
             {armorStore.armorKits
-              .filter((armor) => armor.type === "Легкая броня")
+              .filter((armor) => armor.typeIndex === 0)
               .map((armorKit) => (
                 <ArmorKit
                   key={armorKit.id}
                   id={armorKit.id}
                   imagePath={armorKit.imagePath}
-                  type={armorKit.type}
+                  devName={armorKit.devName}
                   bonus={armorKit.bonus}
                 />
               ))}
           </EntitySection>
 
           <EntitySection
-            title={"СРЕДНЯЯ БРОНЯ"}
+            title={getIntlArray(t("sectionTitles"))[1]}
             gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
           >
             {armorStore.armorKits
-              .filter((armor) => armor.type === "Средняя броня")
+              .filter((armor) => armor.typeIndex === 1)
               .map((armorKit) => (
                 <ArmorKit
                   key={armorKit.id}
                   id={armorKit.id}
                   imagePath={armorKit.imagePath}
-                  type={armorKit.type}
+                  devName={armorKit.devName}
                   bonus={armorKit.bonus}
                 />
               ))}
           </EntitySection>
 
           <EntitySection
-            title={"ТЯЖЕЛАЯ БРОНЯ"}
+            title={getIntlArray(t("sectionTitles"))[2]}
             gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
           >
             {armorStore.armorKits
-              .filter((armor) => armor.type === "Тяжелая броня")
+              .filter((armor) => armor.typeIndex === 2)
               .map((armorKit) => (
                 <ArmorKit
                   key={armorKit.id}
                   id={armorKit.id}
                   imagePath={armorKit.imagePath}
-                  type={armorKit.type}
+                  devName={armorKit.devName}
                   bonus={armorKit.bonus}
                 />
               ))}
