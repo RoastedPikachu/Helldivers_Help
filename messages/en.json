@@ -7,6 +7,9 @@
     "pageDescription": "The armor for the Hell Trooper in Helldivers 2 plays a critical role in ensuring survivability and effectiveness on the battlefield. It protects against the long-range lasers of the Automatons, the claws and stings of the Terminids, and the armor set also provides certain mission-enhancing bonuses.",
     "sectionTitles": "[\"LIGHT ARMOR\",\"MEDIUM ARMOR\",\"HEAVY ARMOR\"]"
   },
+  "SpecificArmorPage": {
+    "titles": "[\"PRICE:\",\"DESCRIPTION:\",\"EFFECT:\",\"ARMOR RATING:\",\"SPEED:\",\"STAMINA REGEN:\"]"
+  },
   "BoostersPage": {
     "metadataTitle": "HELLDIVERS.HELP: Boosters",
     "metadataDescription": "To facilitate the advancement of democracy and freedom in the galaxy the leadership of Super Earth, with the help of scientists, was able to develop amplifiers.",

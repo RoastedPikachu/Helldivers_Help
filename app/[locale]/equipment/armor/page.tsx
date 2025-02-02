@@ -3,7 +3,7 @@ import React from "react";
 import { getTranslations } from "next-intl/server";
 
 import ThePageContent from "@/widgets/pageContents/ThePageContent";
-import TheArmorKitsContent from "@/widgets/pageContents/TheArmorKitsContent";
+import TheArmorContent from "@/widgets/pageContents/TheArmorContent";
 
 export async function generateMetadata({ params: { locale } }: any) {
   const t = await getTranslations("ArmorPage");
@@ -17,7 +17,7 @@ export async function generateMetadata({ params: { locale } }: any) {
 const Page = () => {
   return (
     <ThePageContent>
-      <TheArmorKitsContent />
+      <TheArmorContent />
     </ThePageContent>
   );
 };

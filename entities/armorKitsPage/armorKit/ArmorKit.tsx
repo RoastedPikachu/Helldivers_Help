@@ -20,7 +20,6 @@ import "./armorKit.css";
 interface ArmorKitProps {
   id: number;
   imagePath: string;
-  type: string;
   devName: string;
   bonus: ArmorBonus;
 }
@@ -28,22 +27,14 @@ interface ArmorKitProps {
 const ArmorKit: React.FC<ArmorKitProps> = ({
   id,
   imagePath,
-  type,
   devName,
   bonus,
 }) => {
   const t = useTranslations("armor");
-
-  const handleCurrentArmorInfoChange = () => {
-    armorStore.changeCurrentArmorInfo(id, type);
-  };
   return (
     <Link href={`/equipment/armor/${toSlug(devName)}`}>
       <div className="armorKit">
-        <div
-          onClick={() => handleCurrentArmorInfoChange()}
-          className="armorKitCard"
-        >
+        <div className="armorKitCard">
           <Tooltip
             placement="top"
             title={bonus.name + "\n" + bonus.description}
