@@ -41,7 +41,7 @@ const TheEnemyContent = observer(() => {
                     className={`pageEnemyAside_ImageWrapper_Image ${enemiesStore.currentEnemy.fraction === "Автоматоны" ? getSpecificAutomatonStyle(enemiesStore.currentEnemy.id) : getSpecificTerminidStyle(enemiesStore.currentEnemy.id)}`}
                   />
                 </div>
-              </aside>{" "}
+              </aside>
               <section className="pageEnemyInfoSection">
                 <h3 className="pageEnemyInfoSection_Title">
                   <b className="pageEnemyInfoSection_Title_Bold">

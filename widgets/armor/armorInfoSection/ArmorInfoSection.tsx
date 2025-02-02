@@ -18,7 +18,7 @@ const ArmorInfoSection: React.FC<ArmorInfoSectionProps> = ({
   const t2 = useTranslations("armorBonuses");
 
   return (
-    <section className="armorInfoSection">
+    <div className="armorInfoSection">
       <div className="armorInfoSection-top">
         <h1>
           {getIntlArray(t("names"))[currentArmor ? currentArmor.id - 1 : 0]}
@@ -133,7 +133,7 @@ const ArmorInfoSection: React.FC<ArmorInfoSectionProps> = ({
           </p>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

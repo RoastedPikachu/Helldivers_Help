@@ -5,8 +5,6 @@ import { useTranslations } from "next-intl";
 
 import { getIntlArray, toSlug } from "@/utils/generalFunctions";
 
-import { ArmorBonus } from "@/data/armor/bonuses";
-
 import Link from "next/link";
 
 import Image from "next/image";
@@ -19,7 +17,7 @@ interface ArmorKitProps {
   id: number;
   imagePath: string;
   devName: string;
-  bonus: ArmorBonus;
+  bonus: any;
 }
 
 const ArmorKit: React.FC<ArmorKitProps> = ({
