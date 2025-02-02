@@ -61,7 +61,7 @@ export type CurrentPlanetInfo = {
 export interface ArmorKit {
   id: number;
   imagePath: string;
-  type: string;
+  typeIndex: number;
   devName: string;
   obtainingMethodIndex: number;
   price: number;

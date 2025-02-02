@@ -11,7 +11,7 @@ class ArmorKitsStore {
     {
       id: 1,
       imagePath: "/static/ArmorKits/SC30.png",
-      type: "Легкая броня",
+      typeIndex: 0,
       devName: "SС-30 Trailblazer Scout",
       obtainingMethodIndex: 7,
       price: 85,
@@ -23,7 +23,7 @@ class ArmorKitsStore {
     {
       id: 2,
       imagePath: "/static/ArmorKits/SC34.png",
-      type: "Легкая броня",
+      typeIndex: 0,
       devName: "SC-34 Infiltrator",
       obtainingMethodIndex: 7,
       price: 5,
@@ -35,7 +35,7 @@ class ArmorKitsStore {
     {
       id: 3,
       imagePath: "/static/ArmorKits/SC37.png",
-      type: "Легкая броня",
+      typeIndex: 0,
       devName: "SС-37 Legionnaire",
       obtainingMethodIndex: 6,
       price: 225,
@@ -47,7 +47,7 @@ class ArmorKitsStore {
     {
       id: 4,
       imagePath: "/static/ArmorKits/CE07.webp",
-      type: "Легкая броня",
+      typeIndex: 0,
       devName: "CE-07 Demolition Specialist",
       obtainingMethodIndex: 10,
       price: 80,
@@ -59,7 +59,7 @@ class ArmorKitsStore {
     {
       id: 5,
       imagePath: "/static/ArmorKits/CE67.png",
-      type: "Легкая броня",
+      typeIndex: 0,
       devName: "CE-67 Titan",
       obtainingMethodIndex: 6,
       price: 225,
@@ -71,7 +71,7 @@ class ArmorKitsStore {
     {
       id: 6,
       imagePath: "/static/ArmorKits/CE74.webp",
-      type: "Легкая броня",
+      typeIndex: 0,
       devName: "CE-74 Breaker",
       obtainingMethodIndex: 6,
       price: 375,
@@ -83,7 +83,7 @@ class ArmorKitsStore {
     {
       id: 7,
       imagePath: "/static/ArmorKits/Fs37RavagerImage.webp",
-      type: "Легкая броня",
+      typeIndex: 0,
       devName: "FS-37 Ravager",
       obtainingMethodIndex: 6,
       price: 375,
@@ -95,7 +95,7 @@ class ArmorKitsStore {
     {
       id: 8,
       imagePath: "/static/ArmorKits/FS38.png",
-      type: "Легкая броня",
+      typeIndex: 0,
       devName: "FS-38 Eradicator",
       obtainingMethodIndex: 6,
       price: 375,
@@ -107,7 +107,7 @@ class ArmorKitsStore {
     {
       id: 9,
       imagePath: "/static/ArmorKits/B08.png",
-      type: "Легкая броня",
+      typeIndex: 0,
       devName: "B-08 Light Gunner",
       obtainingMethodIndex: 6,
       price: 225,
@@ -119,7 +119,7 @@ class ArmorKitsStore {
     {
       id: 10,
       imagePath: "/static/ArmorKits/CM21.png",
-      type: "Легкая броня",
+      typeIndex: 0,
       devName: "CM-21 Trench Paramedic",
       obtainingMethodIndex: 6,
       price: 375,
@@ -131,8 +131,8 @@ class ArmorKitsStore {
     {
       id: 11,
       imagePath: "/static/ArmorKits/EX00.png",
-      type: "Легкая броня",
-      devName: "EX-00 Prototype X",
+      typeIndex: 0,
+      devName: "EX-00 PrototypeIndex X",
       obtainingMethodIndex: 9,
       price: 112,
       armorRating: 50,
@@ -143,7 +143,7 @@ class ArmorKitsStore {
     {
       id: 12,
       imagePath: "/static/ArmorKits/CW4.png",
-      type: "Легкая броня",
+      typeIndex: 0,
       devName: "CW-4 Arctic Ranger",
       obtainingMethodIndex: 11,
       price: 112,
@@ -155,7 +155,7 @@ class ArmorKitsStore {
     {
       id: 13,
       imagePath: "/static/ArmorKits/PH9.png",
-      type: "Легкая броня",
+      typeIndex: 0,
       devName: "PH-9 Predator",
       obtainingMethodIndex: 12,
       price: 70,
@@ -167,7 +167,7 @@ class ArmorKitsStore {
     {
       id: 14,
       imagePath: "/static/ArmorKits/I09.png",
-      type: "Легкая броня",
+      typeIndex: 0,
       devName: "I-09 Heatseeker",
       obtainingMethodIndex: 13,
       price: 70,
@@ -179,7 +179,7 @@ class ArmorKitsStore {
     {
       id: 15,
       imagePath: "/static/ArmorKits/AF50.png",
-      type: "Легкая броня",
+      typeIndex: 0,
       devName: "AF-50 Noxious Ranger",
       obtainingMethodIndex: 14,
       price: 75,
@@ -191,7 +191,7 @@ class ArmorKitsStore {
     {
       id: 16,
       imagePath: "/static/ArmorKits/UF16.png",
-      type: "Легкая броня",
+      typeIndex: 0,
       devName: "UF-16 Inspector",
       obtainingMethodIndex: 15,
       price: 140,
@@ -203,7 +203,7 @@ class ArmorKitsStore {
     {
       id: 17,
       imagePath: "/static/ArmorKits/AC2.png",
-      type: "Легкая броня",
+      typeIndex: 0,
       devName: "AC-2 Obedient",
       obtainingMethodIndex: 17,
       price: 0,
@@ -215,7 +215,7 @@ class ArmorKitsStore {
     {
       id: 18,
       imagePath: "/static/ArmorKits/SR24.png",
-      type: "Легкая броня",
+      typeIndex: 0,
       devName: "SR-24 Street Scout",
       obtainingMethodIndex: 16,
       price: 30,
@@ -227,7 +227,7 @@ class ArmorKitsStore {
     {
       id: 19,
       imagePath: "/static/ArmorKits/B01.png",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "B-01 Tactical",
       obtainingMethodIndex: 0,
       price: 0,
@@ -239,7 +239,7 @@ class ArmorKitsStore {
     {
       id: 20,
       imagePath: "/static/ArmorKits/DP00.png",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "DP-00 Tactical",
       obtainingMethodIndex: 1,
       price: 0,
@@ -251,7 +251,7 @@ class ArmorKitsStore {
     {
       id: 21,
       imagePath: "/static/ArmorKits/DP11.png",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "DP-11 Champion of the People",
       obtainingMethodIndex: 7,
       price: 175,
@@ -263,7 +263,7 @@ class ArmorKitsStore {
     {
       id: 22,
       imagePath: "/static/ArmorKits/DP40.png",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "DP-40 Hero of the Federation",
       obtainingMethodIndex: 7,
       price: 45,
@@ -275,7 +275,7 @@ class ArmorKitsStore {
     {
       id: 23,
       imagePath: "/static/ArmorKits/DP53.webp",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "DP-53 Savior of the Free",
       obtainingMethodIndex: 3,
       price: 0,
@@ -287,7 +287,7 @@ class ArmorKitsStore {
     {
       id: 24,
       imagePath: "/static/ArmorKits/CW9.png",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "CW-9 White Wolf",
       obtainingMethodIndex: 6,
       price: 450,
@@ -299,7 +299,7 @@ class ArmorKitsStore {
     {
       id: 25,
       imagePath: "/static/ArmorKits/CE27.webp",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "CE-27 Ground Breaker",
       obtainingMethodIndex: 10,
       price: 30,
@@ -311,7 +311,7 @@ class ArmorKitsStore {
     {
       id: 26,
       imagePath: "/static/ArmorKits/CE35.png",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "CE-35 Trench Engineer",
       obtainingMethodIndex: 7,
       price: 17,
@@ -323,7 +323,7 @@ class ArmorKitsStore {
     {
       id: 27,
       imagePath: "/static/ArmorKits/CE81.png",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "CE-81 Juggernaut",
       obtainingMethodIndex: 6,
       price: 375,
@@ -335,7 +335,7 @@ class ArmorKitsStore {
     {
       id: 28,
       imagePath: "/static/ArmorKits/SC15.webp",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "SС-15 Drone Master",
       obtainingMethodIndex: 6,
       price: 375,
@@ -347,7 +347,7 @@ class ArmorKitsStore {
     {
       id: 29,
       imagePath: "/static/ArmorKits/CM09.png",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "CM-09 Bonesnapper",
       obtainingMethodIndex: 7,
       price: 27,
@@ -359,7 +359,7 @@ class ArmorKitsStore {
     {
       id: 30,
       imagePath: "/static/ArmorKits/CM10.png",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "CM-10 Clinician",
       obtainingMethodIndex: 6,
       price: 375,
@@ -371,7 +371,7 @@ class ArmorKitsStore {
     {
       id: 31,
       imagePath: "/static/ArmorKits/CM14.png",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "CM-14 Physician",
       obtainingMethodIndex: 7,
       price: 120,
@@ -383,7 +383,7 @@ class ArmorKitsStore {
     {
       id: 32,
       imagePath: "/static/ArmorKits/Tr7AmbassadorOfTheBrandImage.webp",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "TR-7 Ambassador of the Brand",
       obtainingMethodIndex: 2,
       price: 0,
@@ -395,7 +395,7 @@ class ArmorKitsStore {
     {
       id: 33,
       imagePath: "/static/ArmorKits/Tr9CavalierOfDemocracyImage.webp",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "TR-9 Cavalier of Democracy",
       obtainingMethodIndex: 2,
       price: 0,
@@ -407,7 +407,7 @@ class ArmorKitsStore {
     {
       id: 34,
       imagePath: "/static/ArmorKits/TR40.png",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "TR-40 Gold Eagle",
       obtainingMethodIndex: 4,
       price: 0,
@@ -419,7 +419,7 @@ class ArmorKitsStore {
     {
       id: 35,
       imagePath: "/static/ArmorKits/TR117.png",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "TR-117 Alpha Commander",
       obtainingMethodIndex: 5,
       price: 0,
@@ -431,7 +431,7 @@ class ArmorKitsStore {
     {
       id: 36,
       imagePath: "/static/ArmorKits/SA04.png",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "SA-04 Combat Technician",
       obtainingMethodIndex: 7,
       price: 100,
@@ -443,7 +443,7 @@ class ArmorKitsStore {
     {
       id: 37,
       imagePath: "/static/ArmorKits/SA12.png",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "SA-12 Servo Assisted",
       obtainingMethodIndex: 8,
       price: 80,
@@ -455,7 +455,7 @@ class ArmorKitsStore {
     {
       id: 38,
       imagePath: "/static/ArmorKits/SA25.png",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "SA-25 Steel Trooper",
       obtainingMethodIndex: 8,
       price: 30,
@@ -467,8 +467,8 @@ class ArmorKitsStore {
     {
       id: 39,
       imagePath: "/static/ArmorKits/EX03.png",
-      type: "Средняя броня",
-      devName: "EX-03 Prototype 3",
+      typeIndex: 1,
+      devName: "EX-03 PrototypeIndex 3",
       obtainingMethodIndex: 9,
       price: 30,
       armorRating: 100,
@@ -479,8 +479,8 @@ class ArmorKitsStore {
     {
       id: 40,
       imagePath: "/static/ArmorKits/EX16.png",
-      type: "Средняя броня",
-      devName: "EX-16 Prototype 16",
+      typeIndex: 1,
+      devName: "EX-16 PrototypeIndex 16",
       obtainingMethodIndex: 9,
       price: 80,
       armorRating: 100,
@@ -491,7 +491,7 @@ class ArmorKitsStore {
     {
       id: 41,
       imagePath: "/static/ArmorKits/FS34.png",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "FS-34 Exterminator",
       obtainingMethodIndex: 6,
       price: 600,
@@ -503,7 +503,7 @@ class ArmorKitsStore {
     {
       id: 42,
       imagePath: "/static/ArmorKits/B24.png",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "B-24 Enforcer",
       obtainingMethodIndex: 6,
       price: 225,
@@ -515,7 +515,7 @@ class ArmorKitsStore {
     {
       id: 43,
       imagePath: "/static/ArmorKits/PH56.png",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "PH-56 Jaguar",
       obtainingMethodIndex: 6,
       price: 225,
@@ -527,7 +527,7 @@ class ArmorKitsStore {
     {
       id: 44,
       imagePath: "/static/ArmorKits/I92.png",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "I-92 Fire Fighter",
       obtainingMethodIndex: 6,
       price: 375,
@@ -539,7 +539,7 @@ class ArmorKitsStore {
     {
       id: 45,
       imagePath: "/static/ArmorKits/I102.png",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "I-102 Draconaught",
       obtainingMethodIndex: 13,
       price: 375,
@@ -551,7 +551,7 @@ class ArmorKitsStore {
     {
       id: 46,
       imagePath: "/static/ArmorKits/AF02.png",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "AF-02 Haz-Master",
       obtainingMethodIndex: 14,
       price: 80,
@@ -563,7 +563,7 @@ class ArmorKitsStore {
     {
       id: 47,
       imagePath: "/static/ArmorKits/AF91.png",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "AF-91 Field Chemist",
       obtainingMethodIndex: 6,
       price: 375,
@@ -575,7 +575,7 @@ class ArmorKitsStore {
     {
       id: 48,
       imagePath: "/static/ArmorKits/UF50.png",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "UF-50 Bloodhound",
       obtainingMethodIndex: 15,
       price: 80,
@@ -587,7 +587,7 @@ class ArmorKitsStore {
     {
       id: 49,
       imagePath: "/static/ArmorKits/UF84.png",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "UF-84 Doubt Killer",
       obtainingMethodIndex: 6,
       price: 600,
@@ -599,7 +599,7 @@ class ArmorKitsStore {
     {
       id: 50,
       imagePath: "/static/ArmorKits/AC1.png",
-      type: "Средняя броня",
+      typeIndex: 1,
       devName: "AC-1 Dutiful",
       obtainingMethodIndex: 17,
       price: 600,
@@ -611,7 +611,7 @@ class ArmorKitsStore {
     {
       id: 51,
       imagePath: "/static/ArmorKits/FS05.png",
-      type: "Тяжелая броня",
+      typeIndex: 2,
       devName: "FS-05 Marksman",
       obtainingMethodIndex: 7,
       price: 11,
@@ -623,7 +623,7 @@ class ArmorKitsStore {
     {
       id: 52,
       imagePath: "/static/ArmorKits/FS11.png",
-      type: "Тяжелая броня",
+      typeIndex: 2,
       devName: "FS-11 Executioner",
       obtainingMethodIndex: 6,
       price: 225,
@@ -635,7 +635,7 @@ class ArmorKitsStore {
     {
       id: 53,
       imagePath: "/static/ArmorKits/FS23.png",
-      type: "Тяжелая броня",
+      typeIndex: 2,
       devName: "FS-23 Battle Master",
       obtainingMethodIndex: 7,
       price: 60,
@@ -647,7 +647,7 @@ class ArmorKitsStore {
     {
       id: 54,
       imagePath: "/static/ArmorKits/FS55.png",
-      type: "Тяжелая броня",
+      typeIndex: 2,
       devName: "FS-55 Devastator",
       obtainingMethodIndex: 10,
       price: 112,
@@ -659,7 +659,7 @@ class ArmorKitsStore {
     {
       id: 55,
       imagePath: "/static/ArmorKits/FS61.png",
-      type: "Тяжелая броня",
+      typeIndex: 2,
       devName: "FS-61 Dreadnought",
       obtainingMethodIndex: 6,
       price: 375,
@@ -671,7 +671,7 @@ class ArmorKitsStore {
     {
       id: 56,
       imagePath: "/static/ArmorKits/SA32.png",
-      type: "Тяжелая броня",
+      typeIndex: 2,
       devName: "SA-32 Dynamo",
       obtainingMethodIndex: 8,
       price: 112,
@@ -683,7 +683,7 @@ class ArmorKitsStore {
     {
       id: 57,
       imagePath: "/static/ArmorKits/CW22.png",
-      type: "Тяжелая броня",
+      typeIndex: 2,
       devName: "CW-22 Kodiak",
       obtainingMethodIndex: 11,
       price: 80,
@@ -695,7 +695,7 @@ class ArmorKitsStore {
     {
       id: 58,
       imagePath: "/static/ArmorKits/CW36.png",
-      type: "Тяжелая броня",
+      typeIndex: 2,
       devName: "CW-36 Winter Warrior",
       obtainingMethodIndex: 11,
       price: 30,
@@ -707,7 +707,7 @@ class ArmorKitsStore {
     {
       id: 59,
       imagePath: "/static/ArmorKits/Tr62KnightImage.webp",
-      type: "Тяжелая броня",
+      typeIndex: 2,
       devName: "TR-62 Knight",
       obtainingMethodIndex: 2,
       price: 0,
@@ -719,7 +719,7 @@ class ArmorKitsStore {
     {
       id: 60,
       imagePath: "/static/ArmorKits/B27.png",
-      type: "Тяжелая броня",
+      typeIndex: 2,
       devName: "B-27 Fortified Commando",
       obtainingMethodIndex: 6,
       price: 600,
@@ -731,7 +731,7 @@ class ArmorKitsStore {
     {
       id: 61,
       imagePath: "/static/ArmorKits/CE64.png",
-      type: "Тяжелая броня",
+      typeIndex: 2,
       devName: "CE-64 Grenadier",
       obtainingMethodIndex: 6,
       price: 450,
@@ -743,7 +743,7 @@ class ArmorKitsStore {
     {
       id: 62,
       imagePath: "/static/ArmorKits/CE101.png",
-      type: "Тяжелая броня",
+      typeIndex: 2,
       devName: "CE-101 Guerilla Gorilla",
       obtainingMethodIndex: 6,
       price: 375,
@@ -755,7 +755,7 @@ class ArmorKitsStore {
     {
       id: 63,
       imagePath: "/static/ArmorKits/CM17.png",
-      type: "Тяжелая броня",
+      typeIndex: 2,
       devName: "CM-17 Butcher",
       obtainingMethodIndex: 6,
       price: 375,
@@ -767,7 +767,7 @@ class ArmorKitsStore {
     {
       id: 64,
       imagePath: "/static/ArmorKits/PH202.png",
-      type: "Тяжелая броня",
+      typeIndex: 2,
       devName: "PH-202 Twigsnapper",
       obtainingMethodIndex: 12,
       price: 80,
@@ -779,7 +779,7 @@ class ArmorKitsStore {
     {
       id: 65,
       imagePath: "/static/ArmorKits/I44.png",
-      type: "Тяжелая броня",
+      typeIndex: 2,
       devName: "I-44 Salamander",
       obtainingMethodIndex: 6,
       price: 375,
@@ -791,7 +791,7 @@ class ArmorKitsStore {
     {
       id: 66,
       imagePath: "/static/ArmorKits/AF52.png",
-      type: "Тяжелая броня",
+      typeIndex: 2,
       devName: "AF-52 Lockdown",
       obtainingMethodIndex: 6,
       price: 650,
@@ -803,7 +803,7 @@ class ArmorKitsStore {
     {
       id: 67,
       imagePath: "/static/ArmorKits/SR18.png",
-      type: "Тяжелая броня",
+      typeIndex: 2,
       devName: "SR-18 Roadblock",
       obtainingMethodIndex: 16,
       price: 650,
@@ -815,7 +815,7 @@ class ArmorKitsStore {
     {
       id: 68,
       imagePath: "/static/ArmorKits/SR64.png",
-      type: "Тяжелая броня",
+      typeIndex: 2,
       devName: "SR-64 Cinderblock",
       obtainingMethodIndex: 6,
       price: 650,
@@ -828,10 +828,6 @@ class ArmorKitsStore {
 
   constructor() {
     makeAutoObservable(this);
-  }
-
-  changeCurrentArmorInfo(id: number, armorType: string) {
-    this.currentArmorInfo = { id: id, type: armorType };
   }
 
   clearCurrentArmorInfo() {
