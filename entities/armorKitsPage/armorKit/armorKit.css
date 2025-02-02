@@ -3,7 +3,11 @@
 }
 
 .armorKitCard {
-    @apply relative flex justify-center w-full h-[450px] mlarge:h-[300px] mmedium:h-[280px] msmall:h-[250px] bg-[#00293a] border-2 border-theme rounded-[10px] overflow-hidden cursor-pointer;
+    @apply relative flex justify-center w-full h-[450px] mlarge:h-[300px] mmedium:h-[280px] msmall:h-[250px] bg-primary-bg border-2 border-theme rounded-[10px] overflow-hidden cursor-pointer duration-300 ease-in-out;
+}
+
+.armorKitCard:hover {
+    @apply brightness-[1.15];
 }
 
 .armorKitCard-bonusIcon {
