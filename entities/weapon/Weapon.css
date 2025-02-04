@@ -1,5 +1,5 @@
 .weaponWidget {
-    @apply relative flex justify-center pt-[20px] mlarge:pt-[10px] pb-[40px] mmedium:pb-[30px] px-[20px] mlarge:px-[10px] w-full h-auto bg-primary-bg border-2 border-theme rounded-[10px] cursor-pointer;
+    @apply relative flex justify-center pb-[20px] w-full h-auto bg-primary-bg border-2 border-theme rounded-[10px] cursor-pointer;
 }
 
 .weaponWidget_Text {

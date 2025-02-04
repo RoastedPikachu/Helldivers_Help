@@ -15,12 +15,7 @@ interface WeaponProps {
   name: string;
 }
 
-const Weapon: React.FC<WeaponProps> = ({
-  id,
-  weaponType,
-  imagePath,
-  name,
-}) => {
+const Weapon: React.FC<WeaponProps> = ({ id, weaponType, imagePath, name }) => {
   const handleCurrentWeaponInfoChange = () => {
     slidersStore.handleCurrentSlideChange(id);
 
@@ -59,7 +54,7 @@ const Weapon: React.FC<WeaponProps> = ({
         src={imagePath}
         alt=""
         style={{ transform: "" }}
-        className={`${weaponType.typeNumber !== 4 ? "w-[400px] mlarge:w-[350px] mmedium:w-[300px] msmall:w-[250px] h-[160px] mlarge:h-[150px] mmedium:h-[140px] msmall:h-[120px]" : "w-[200px] mlarge:w-[175px] mmedium:w-[150px] msmall:w-[125px] h-[150px] mlarge:h-[140px] mmedium:h-[120px] msmall:h-[100px] scale-[0.9]"} ${weaponType.typeNumber === 3 ? getTargetSupportWeaponImageScale(id) : ""}`}
+        className={`${weaponType.typeNumber !== 4 ? "w-full h-[200px] mlarge:w-[350px] mmedium:w-[300px] msmall:w-[250px] mlarge:h-[150px] mmedium:h-[140px] msmall:h-[120px]" : "w-[200px] mlarge:w-[175px] mmedium:w-[150px] msmall:w-[125px] h-[150px] mlarge:h-[140px] mmedium:h-[120px] msmall:h-[100px] scale-[0.9]"} ${weaponType.typeNumber === 3 ? getTargetSupportWeaponImageScale(id) : ""}`}
       />
 
       <p className="weaponWidget_Text">{name}</p>

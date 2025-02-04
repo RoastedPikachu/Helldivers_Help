@@ -238,5 +238,8 @@
   "armorBonuses": {
     "names": "[\"Extra Padding\",\"Engineering Kit\",\"Med-Kit\",\"Democracy Protects\",\"Electrical Conduit\",\"Fortified\",\"Servo-Assisted\",\"Scout\",\"Peak Physique\",\"Inflammable\",\"Advanced Filtration\",\"Unflinching\",\"Siege-Ready\",\"Acclimated\"]",
     "descriptions": "[\"Provides a higher armor rating.\",\"Further reduces recoil when crouching or prone by 30%. Increases initial inventory and holding capacity of grenades by +2.\",\"Increases initial inventory and holding capacity of stims by +2. Increases stim effect duration by 2.0s.\",\"50% chance to not die when taking lethal damage. Prevents all damage from bleeding if chest hemorrhages.\",\"Provides 95% resistance to arc damage.\",\"Further reduces recoil when crouching or prone by 30%. Provides 50% resistance to explosive damage.\",\"Increases throwing range by 30%. Provides +50% limb health.\",\"Markers placed on the map will generate radar scans every 2.0s. Reduces range at which enemies can detect the wearer by 30%.\",\"Increases melee damage by 100%. Improves weapons handling with less drag on weapon movement.\",\"Provides 75% damage resistance to fire, allowing bearer to rest assured in their inflammability.\",\"Provides 80% resistance to gas damage and effects.\",\"Helps Prevent Helldivers from flinching when hit.\",\"Increases reload speed of primary weapons by 30%. Increases ammo capacity of primary weapons by 20%.\",\"Grants a 50% resistance to fire, gas, acid and electricial damage.\"]"
+  },
+  "weapons": {
+
   }
 }

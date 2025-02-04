@@ -180,7 +180,7 @@ class WeaponsStore {
     },
     {
       id: 10,
-      imagePath: "/static/Weaponry/primary/Smg37Image.webp",
+      imagePath: "/static/Weaponry/primary/SMG37.png",
       weaponType: weaponTypes.primary,
       name: "SMG-37 «Защитник»",
       description:
@@ -198,7 +198,7 @@ class WeaponsStore {
     },
     {
       id: 11,
-      imagePath: "/static/Weaponry/primary/SMG72.webp",
+      imagePath: "/static/Weaponry/primary/SMG72.png",
       weaponType: weaponTypes.primary,
       name: "SMG-72 «Трамбовщик»",
       description:
@@ -216,7 +216,7 @@ class WeaponsStore {
     },
     {
       id: 12,
-      imagePath: "/static/Weaponry/primary/Mp98Image.webp",
+      imagePath: "/static/Weaponry/primary/MP98.png",
       weaponType: weaponTypes.primary,
       name: "MP-98 «Рыцарь»",
       description:
@@ -234,7 +234,7 @@ class WeaponsStore {
     },
     {
       id: 13,
-      imagePath: "/static/Weaponry/primary/Sg8Image.webp",
+      imagePath: "/static/Weaponry/primary/SG8.png",
       weaponType: weaponTypes.primary,
       name: "SG-8 «Каратель»",
       description:
@@ -252,7 +252,7 @@ class WeaponsStore {
     },
     {
       id: 14,
-      imagePath: "/static/Weaponry/primary/Sg8SImage.webp",
+      imagePath: "/static/Weaponry/primary/SG8S.png",
       weaponType: weaponTypes.primary,
       name: "SG-8S «Крушила»",
       description:
@@ -270,7 +270,25 @@ class WeaponsStore {
     },
     {
       id: 15,
-      imagePath: "/static/Weaponry/primary/SG20.webp",
+      imagePath: "/static/Weaponry/primary/SG451.png",
+      weaponType: weaponTypes.primary,
+      name: "SG-451 «Крушила»",
+      description:
+        "Модифицированный дробовик «Каратель», стреляющий тяжелыми мощными пулями. Идеально подходит, чтобы пробивать большие дыры в больших целях.",
+      price: 60,
+      damage: 280,
+      magsCount: 3.75,
+      roundsPerMag: 16,
+      totalRounds: 60,
+      recoil: 120,
+      fireRate: 80,
+      totalDamage: 15000,
+      dps: 276,
+      obtainingTypeIcon: obtainingTypes[5].icon,
+    },
+    {
+      id: 16,
+      imagePath: "/static/Weaponry/primary/SG20.png",
       weaponType: weaponTypes.primary,
       name: "SG-20 «Стоп»",
       description:
@@ -287,8 +305,8 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
-      id: 16,
-      imagePath: "/static/Weaponry/primary/Sg225Image.webp",
+      id: 17,
+      imagePath: "/static/Weaponry/primary/SG225.png",
       weaponType: weaponTypes.primary,
       name: "SG-225 «Крушитель»",
       description:
@@ -305,8 +323,8 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
-      id: 17,
-      imagePath: "/static/Weaponry/primary/SG225IE.webp",
+      id: 18,
+      imagePath: "/static/Weaponry/primary/SG225IE.png",
       weaponType: weaponTypes.primary,
       name: "SG-225IE «Зажигательный крушитель»",
       description:
@@ -323,8 +341,8 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[6].icon,
     },
     {
-      id: 18,
-      imagePath: "/static/Weaponry/primary/Sg225SpImage.webp",
+      id: 19,
+      imagePath: "/static/Weaponry/primary/SG225SP.png",
       weaponType: weaponTypes.primary,
       name: "SG-225SP «Крушитель ураган»",
       description:
@@ -341,8 +359,8 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
-      id: 19,
-      imagePath: "/static/Weaponry/primary/JAR5.webp",
+      id: 20,
+      imagePath: "/static/Weaponry/primary/JAR5.png",
       weaponType: weaponTypes.primary,
       name: "JAR-5 «Угнетатель»",
       description:
@@ -359,8 +377,8 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[6].icon,
     },
     {
-      id: 20,
-      imagePath: "/static/Weaponry/primary/Cb9Image.webp",
+      id: 21,
+      imagePath: "/static/Weaponry/primary/Cb9.png",
       weaponType: weaponTypes.primary,
       name: "CB-9 «Взрывной арбалет»",
       description:
@@ -377,8 +395,8 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[8].icon,
     },
     {
-      id: 21,
-      imagePath: "/static/Weaponry/primary/R36Image.webp",
+      id: 22,
+      imagePath: "/static/Weaponry/primary/R36.png",
       weaponType: weaponTypes.primary,
       name: "R-36 «Извергатель»",
       description:
@@ -395,8 +413,8 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[8].icon,
     },
     {
-      id: 22,
-      imagePath: "/static/Weaponry/primary/Las5Image.webp",
+      id: 23,
+      imagePath: "/static/Weaponry/primary/LAS5.png",
       weaponType: weaponTypes.primary,
       name: "LAS-5 «Коса»",
       description:
@@ -413,8 +431,8 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
-      id: 23,
-      imagePath: "/static/Weaponry/primary/LAS16.webp",
+      id: 24,
+      imagePath: "/static/Weaponry/primary/LAS16.png",
       weaponType: weaponTypes.primary,
       name: "LAS-16 «Серп»",
       description:
@@ -431,8 +449,8 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[7].icon,
     },
     {
-      id: 24,
-      imagePath: "/static/Weaponry/primary/Plas1Image.webp",
+      id: 25,
+      imagePath: "/static/Weaponry/primary/PLAS1.png",
       weaponType: weaponTypes.primary,
       name: "PLAS-1 «Поджигатель»",
       description:
@@ -449,8 +467,8 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[5].icon,
     },
     {
-      id: 25,
-      imagePath: "/static/Weaponry/primary/PLAS101.webp",
+      id: 26,
+      imagePath: "/static/Weaponry/primary/PLAS101.png",
       weaponType: weaponTypes.primary,
       name: "PLAS-101 «Очиститель»",
       description:
@@ -467,8 +485,8 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[9].icon,
     },
     {
-      id: 26,
-      imagePath: "/static/Weaponry/primary/SG8P.webp",
+      id: 27,
+      imagePath: "/static/Weaponry/primary/SG8P.png",
       weaponType: weaponTypes.primary,
       name: "SG-8P «Плазменный каратель»",
       description:
@@ -485,8 +503,8 @@ class WeaponsStore {
       obtainingTypeIcon: obtainingTypes[7].icon,
     },
     {
-      id: 27,
-      imagePath: "/static/Weaponry/primary/ARC12.webp",
+      id: 28,
+      imagePath: "/static/Weaponry/primary/ARC12.png",
       weaponType: weaponTypes.primary,
       name: "ARC-12 «Налетчик»",
       description:
@@ -665,8 +683,7 @@ class WeaponsStore {
       roundsPerMag: 150,
       totalRounds: 300,
       callTime: 3,
-      directions:
-        stratagemStore.stratagems.patrioticAdministrationCenter[0].directions,
+      directions: stratagemStore.stratagems[0].directions,
       features: ["Оружие поддержки", "Адская капсула"],
       obtainingTypeIcon: "",
     },
@@ -683,8 +700,7 @@ class WeaponsStore {
       roundsPerMag: 7,
       totalRounds: 42,
       callTime: 7,
-      directions:
-        stratagemStore.stratagems.patrioticAdministrationCenter[1].directions,
+      directions: stratagemStore.stratagems[1].directions,
       features: ["Оружие поддержки", "Адская капсула"],
       obtainingTypeIcon: "",
     },
@@ -701,8 +717,7 @@ class WeaponsStore {
       roundsPerMag: 250,
       totalRounds: 750,
       callTime: 7,
-      directions:
-        stratagemStore.stratagems.patrioticAdministrationCenter[2].directions,
+      directions: stratagemStore.stratagems[2].directions,
       features: ["Оружие поддержки", "Адская капсула"],
       obtainingTypeIcon: "",
     },
@@ -719,8 +734,7 @@ class WeaponsStore {
       roundsPerMag: 1,
       totalRounds: 1,
       callTime: 6,
-      directions:
-        stratagemStore.stratagems.patrioticAdministrationCenter[3].directions,
+      directions: stratagemStore.stratagems[3].directions,
       features: ["Оружие поддержки", "Адская капсула"],
       obtainingTypeIcon: "",
     },
@@ -737,8 +751,7 @@ class WeaponsStore {
       roundsPerMag: 1,
       totalRounds: 10,
       callTime: 7,
-      directions:
-        stratagemStore.stratagems.patrioticAdministrationCenter[4].directions,
+      directions: stratagemStore.stratagems[4].directions,
       features: ["Оружие поддержки", "Адская капсула"],
       obtainingTypeIcon: "",
     },
@@ -755,8 +768,7 @@ class WeaponsStore {
       roundsPerMag: 100,
       totalRounds: 400,
       callTime: 3,
-      directions:
-        stratagemStore.stratagems.patrioticAdministrationCenter[5].directions,
+      directions: stratagemStore.stratagems[5].directions,
       features: ["Оружие поддержки", "Адская капсула"],
       obtainingTypeIcon: "",
     },
@@ -773,8 +785,7 @@ class WeaponsStore {
       roundsPerMag: 5,
       totalRounds: 50,
       callTime: 7,
-      directions:
-        stratagemStore.stratagems.patrioticAdministrationCenter[6].directions,
+      directions: stratagemStore.stratagems[6].directions,
       features: ["Оружие поддержки", "Адская капсула"],
       obtainingTypeIcon: "",
     },
@@ -791,8 +802,7 @@ class WeaponsStore {
       roundsPerMag: 75,
       totalRounds: 150,
       callTime: 7,
-      directions:
-        stratagemStore.stratagems.patrioticAdministrationCenter[7].directions,
+      directions: stratagemStore.stratagems[7].directions,
       features: ["Оружие поддержки", "Адская капсула"],
       obtainingTypeIcon: "",
     },
@@ -809,8 +819,7 @@ class WeaponsStore {
       roundsPerMag: 75,
       totalRounds: 150,
       callTime: 7,
-      directions:
-        stratagemStore.stratagems.patrioticAdministrationCenter[8].directions,
+      directions: stratagemStore.stratagems[8].directions,
       features: ["Оружие поддержки", "Адская капсула"],
       obtainingTypeIcon: "",
     },
@@ -827,8 +836,7 @@ class WeaponsStore {
       roundsPerMag: 1,
       totalRounds: 20,
       callTime: 7,
-      directions:
-        stratagemStore.stratagems.patrioticAdministrationCenter[9].directions,
+      directions: stratagemStore.stratagems[9].directions,
       features: ["Оружие поддержки", "Адская капсула"],
       obtainingTypeIcon: "",
     },
@@ -845,8 +853,7 @@ class WeaponsStore {
       roundsPerMag: 1,
       totalRounds: 3,
       callTime: 3,
-      directions:
-        stratagemStore.stratagems.patrioticAdministrationCenter[10].directions,
+      directions: stratagemStore.stratagems[10].directions,
       features: ["Оружие поддержки", "Адская капсула"],
       obtainingTypeIcon: "",
     },
@@ -863,7 +870,7 @@ class WeaponsStore {
       roundsPerMag: 1,
       totalRounds: 10,
       callTime: 3,
-      directions: stratagemStore.stratagems.engineerBay[2].directions,
+      directions: stratagemStore.stratagems[39].directions,
       features: ["Оружие поддержки", "Адская капсула", "Взрывчатка"],
       obtainingTypeIcon: "",
     },
@@ -880,7 +887,7 @@ class WeaponsStore {
       roundsPerMag: 1,
       totalRounds: 1,
       callTime: 7,
-      directions: stratagemStore.stratagems.engineerBay[3].directions,
+      directions: stratagemStore.stratagems[40].directions,
       features: ["Оружие поддержки", "Адская капсула"],
       obtainingTypeIcon: "",
     },
@@ -897,7 +904,7 @@ class WeaponsStore {
       roundsPerMag: 1,
       totalRounds: Infinity,
       callTime: 3,
-      directions: stratagemStore.stratagems.engineerBay[7].directions,
+      directions: stratagemStore.stratagems[44].directions,
       features: ["Оружие поддержки", "Адская капсула"],
       obtainingTypeIcon: "",
     },
@@ -914,8 +921,7 @@ class WeaponsStore {
       roundsPerMag: 1,
       totalRounds: Infinity,
       callTime: 7,
-      directions:
-        stratagemStore.stratagems.patrioticAdministrationCenter[9].directions,
+      directions: stratagemStore.stratagems[46].directions,
       features: ["Оружие поддержки", "Адская капсула"],
       obtainingTypeIcon: "",
     },

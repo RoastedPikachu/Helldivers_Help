@@ -13,7 +13,7 @@ import EntitySection from "@/widgets/EntitySection";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 
-import Weapon from "@/entities/weaponryPage/weapon/Weapon";
+import Weapon from "@/entities/weapon/Weapon";
 import WeaponAdditionalInfoModalWindow from "@/entities/weaponryPage/weaponAdditionalInfoModalWindow/WeaponAdditionalInfoModalWindow";
 
 import "swiper/css";
@@ -151,20 +151,20 @@ const TheWeaponryContent = observer(() => {
             ))}
           </EntitySection>
 
-          <EntitySection
-            title={"ВСПОМОГАТЕЛЬНОЕ"}
-            gridStyles={"grid-cols-3 mlarge:grid-cols-1"}
-          >
-            {getSpecificWeaponArray(3)?.map((primaryWeapon) => (
-              <Weapon
-                key={primaryWeapon.id}
-                id={primaryWeapon.id}
-                weaponType={primaryWeapon.weaponType}
-                imagePath={primaryWeapon.imagePath}
-                name={primaryWeapon.name}
-              />
-            ))}
-          </EntitySection>
+          {/*<EntitySection*/}
+          {/*  title={"ВСПОМОГАТЕЛЬНОЕ"}*/}
+          {/*  gridStyles={"grid-cols-3 mlarge:grid-cols-1"}*/}
+          {/*>*/}
+          {/*  {getSpecificWeaponArray(3)?.map((primaryWeapon) => (*/}
+          {/*    <Weapon*/}
+          {/*      key={primaryWeapon.id}*/}
+          {/*      id={primaryWeapon.id}*/}
+          {/*      weaponType={primaryWeapon.weaponType}*/}
+          {/*      imagePath={primaryWeapon.imagePath}*/}
+          {/*      name={primaryWeapon.name}*/}
+          {/*    />*/}
+          {/*  ))}*/}
+          {/*</EntitySection>*/}
 
           <EntitySection
             title={"ГРАНАТЫ"}

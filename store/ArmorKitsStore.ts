@@ -1,12 +1,10 @@
 import { makeAutoObservable } from "mobx";
 
-import { ArmorKit, CurrentArmorInfo } from "@/utils/storeInterfaces";
+import { ArmorKit } from "@/utils/storeInterfaces";
 
 import { armorBonuses } from "@/data/armor/bonuses";
 
 class ArmorKitsStore {
-  currentArmorInfo = {} as CurrentArmorInfo;
-
   armorKits: ArmorKit[] = [
     {
       id: 1,
@@ -828,10 +826,6 @@ class ArmorKitsStore {
 
   constructor() {
     makeAutoObservable(this);
-  }
-
-  clearCurrentArmorInfo() {
-    this.currentArmorInfo = {} as CurrentArmorInfo;
   }
 }
 

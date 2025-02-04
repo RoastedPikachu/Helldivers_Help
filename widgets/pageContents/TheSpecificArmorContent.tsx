@@ -54,8 +54,6 @@ const TheSpecificArmorContent = () => {
         targetId = currentArmor.id + 1;
       }
 
-      console.log(targetId);
-
       return armorArr.find((armor) => armor.id === targetId)!.devName;
     }
 
@@ -72,10 +70,20 @@ const TheSpecificArmorContent = () => {
   }, []);
   return (
     <main className="relative h-auto">
-      <section className="flex items-start gap-x-[120px]">
+      <section className="flex mlarge:block items-start gap-x-[120px]">
+        <div className="w-[80%] h-[300px] border-2 border-theme rounded-[12.5px] overflow-hidden mobile">
+          <img
+            src={currentArmor ? currentArmor.imagePath : ""}
+            alt={
+              getIntlArray(t("names"))[currentArmor ? currentArmor.id - 1 : 0]
+            }
+            className="w-full h-full"
+          />
+        </div>
+
         <ArmorInfoSection currentArmor={currentArmor} />
 
-        <div className="w-[360px] h-[620px] border-2 border-theme rounded-[12.5px] overflow-hidden">
+        <div className="w-[360px] h-[620px] border-2 border-theme rounded-[12.5px] overflow-hidden desktop">
           <img
             src={currentArmor ? currentArmor.imagePath : ""}
             alt={

@@ -14,7 +14,7 @@ import EntitySection from "@/widgets/EntitySection";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 
-import ArmorKit from "@/entities/armorKitsPage/armorKit/ArmorKit";
+import ArmorKit from "@/entities/armorKit/ArmorKit";
 
 const TheArmorContent = observer(() => {
   const t = useTranslations("ArmorPage");
