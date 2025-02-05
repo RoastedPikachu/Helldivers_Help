@@ -168,7 +168,7 @@ const TheWeaponryContent = observer(() => {
 
           <EntitySection
             title={"ГРАНАТЫ"}
-            gridStyles={"grid-cols-4 mlarge:grid-cols-1"}
+            gridStyles={"grid-cols-5 mlarge:grid-cols-1"}
           >
             {getSpecificWeaponArray(4)?.map((primaryWeapon) => (
               <Weapon
