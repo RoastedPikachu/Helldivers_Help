@@ -78,6 +78,7 @@ export default async function RootLayout({
       </Head>
 
       <body className={inter.className}>
+        <Script src="/static/googleAnalytics/index.js" strategy="lazyOnload" />
         <Script src="/static/metric/index.js" strategy="lazyOnload" />
 
         <NextIntlClientProvider messages={messages}>
