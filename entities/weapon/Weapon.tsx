@@ -1,26 +1,20 @@
 "use client";
 import React from "react";
 
-import { slidersStore } from "@/store/SlidersStore";
-import { weaponsStore } from "@/store/WeaponsStore";
-
-import { WeaponType } from "@/utils/dataInterfaces";
+import { useTranslations } from "next-intl";
 
 import "./Weapon.css";
+import { getIntlArray } from "@/utils/generalFunctions";
 
 interface WeaponProps {
   id: number;
-  weaponType: WeaponType;
+  typeIndex: number;
   imagePath: string;
   name: string;
 }
 
-const Weapon: React.FC<WeaponProps> = ({ id, weaponType, imagePath, name }) => {
-  const handleCurrentWeaponInfoChange = () => {
-    slidersStore.handleCurrentSlideChange(id);
-
-    weaponsStore.changeCurrentWeaponInfo(id, weaponType);
-  };
+const Weapon: React.FC<WeaponProps> = ({ id, typeIndex, imagePath, name }) => {
+  const t = useTranslations("weapons");
 
   const getTargetSupportWeaponImageScale = (id: number) => {
     switch (id) {
@@ -49,15 +43,15 @@ const Weapon: React.FC<WeaponProps> = ({ id, weaponType, imagePath, name }) => {
     }
   };
   return (
-    <div onClick={handleCurrentWeaponInfoChange} className="weaponWidget">
+    <div className="weaponWidget">
       <img
         src={imagePath}
         alt=""
         style={{ transform: "" }}
-        className={`${weaponType.typeNumber !== 4 ? "w-full h-[200px] mlarge:w-[350px] mmedium:w-[300px] msmall:w-[250px] mlarge:h-[150px] mmedium:h-[140px] msmall:h-[120px]" : "w-[200px] mlarge:w-[175px] mmedium:w-[150px] msmall:w-[125px] h-[150px] mlarge:h-[140px] mmedium:h-[120px] msmall:h-[100px] scale-[0.9]"} ${weaponType.typeNumber === 3 ? getTargetSupportWeaponImageScale(id) : ""}`}
+        className={`${typeIndex !== 3 ? "w-full h-[200px] mlarge:w-[350px] mmedium:w-[300px] msmall:w-[250px] mlarge:h-[150px] mmedium:h-[140px] msmall:h-[120px]" : "w-[200px] mlarge:w-[175px] mmedium:w-[150px] msmall:w-[125px] h-[150px] mlarge:h-[140px] mmedium:h-[120px] msmall:h-[100px] scale-[0.9]"} ${typeIndex === 4 ? getTargetSupportWeaponImageScale(id) : ""}`}
       />
 
-      <p className="weaponWidget_Text">{name}</p>
+      <p className="weaponWidget_Text">{getIntlArray(t("names"))[id - 1]}</p>
     </div>
   );
 };

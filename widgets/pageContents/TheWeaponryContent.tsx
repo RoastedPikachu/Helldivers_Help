@@ -78,11 +78,11 @@ const TheWeaponryContent = observer(() => {
   const getSpecificWeaponArray = (weaponType: number) => {
     switch (weaponType) {
       case 1:
-        return weaponsStore.primaryWeapons;
+        return weaponsStore.weapons.filter((weapon) => weapon.typeIndex === 1);
       case 2:
-        return weaponsStore.secondaryWeapons;
+        return weaponsStore.weapons.filter((weapon) => weapon.typeIndex === 2);
       case 3:
-        return weaponsStore.supportWeapons;
+        return weaponsStore.weapons.filter((weapon) => weapon.typeIndex === 3);
       case 4:
         return weaponsStore.grenades;
     }
@@ -129,7 +129,7 @@ const TheWeaponryContent = observer(() => {
               <Weapon
                 key={primaryWeapon.id}
                 id={primaryWeapon.id}
-                weaponType={primaryWeapon.weaponType}
+                typeIndex={primaryWeapon.typeIndex}
                 imagePath={primaryWeapon.imagePath}
                 name={primaryWeapon.name}
               />
@@ -144,7 +144,7 @@ const TheWeaponryContent = observer(() => {
               <Weapon
                 key={primaryWeapon.id}
                 id={primaryWeapon.id}
-                weaponType={primaryWeapon.weaponType}
+                typeIndex={primaryWeapon.typeIndex}
                 imagePath={primaryWeapon.imagePath}
                 name={primaryWeapon.name}
               />
@@ -170,11 +170,11 @@ const TheWeaponryContent = observer(() => {
             title={"ГРАНАТЫ"}
             gridStyles={"grid-cols-5 mlarge:grid-cols-1"}
           >
-            {getSpecificWeaponArray(4)?.map((primaryWeapon) => (
+            {getSpecificWeaponArray(3)?.map((primaryWeapon) => (
               <Weapon
                 key={primaryWeapon.id}
                 id={primaryWeapon.id}
-                weaponType={primaryWeapon.weaponType}
+                typeIndex={primaryWeapon.typeIndex}
                 imagePath={primaryWeapon.imagePath}
                 name={primaryWeapon.name}
               />
