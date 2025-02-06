@@ -3,7 +3,7 @@ import React from "react";
 
 import { useTranslations } from "next-intl";
 
-import "./Weapon.css";
+import "./weapon.css";
 import { getIntlArray } from "@/utils/generalFunctions";
 
 interface WeaponProps {
@@ -44,14 +44,18 @@ const Weapon: React.FC<WeaponProps> = ({ id, typeIndex, imagePath, name }) => {
   };
   return (
     <div className="weaponWidget">
-      <img
-        src={imagePath}
-        alt=""
-        style={{ transform: "" }}
-        className={`${typeIndex !== 3 ? "w-full h-[200px] mlarge:w-[350px] mmedium:w-[300px] msmall:w-[250px] mlarge:h-[150px] mmedium:h-[140px] msmall:h-[120px]" : "w-[200px] mlarge:w-[175px] mmedium:w-[150px] msmall:w-[125px] h-[150px] mlarge:h-[140px] mmedium:h-[120px] msmall:h-[100px] scale-[0.9]"} ${typeIndex === 4 ? getTargetSupportWeaponImageScale(id) : ""}`}
-      />
+      <div
+        className={`weaponWidgetCard ${typeIndex === 3 ? "w-full h-[200px] mlarge:h-[160px] mmedium:h-[140px] msmall:h-[120px] scale-[0.9] bg-center" : "w-full h-[200px] mmedium:h-[180px] msmall:h-[160px] bg-[center_top_-20px] mlarge:bg-[center_top_-5px] mmedium:bg-center"}`}
+      >
+        <img
+          src={imagePath}
+          alt=""
+          style={{ transform: "" }}
+          className={`w-full h-full ${typeIndex === 4 ? getTargetSupportWeaponImageScale(id) : ""}`}
+        />
+      </div>
 
-      <p className="weaponWidget_Text">{getIntlArray(t("names"))[id - 1]}</p>
+      <p className="weaponWidget-text">{getIntlArray(t("names"))[id - 1]}</p>
     </div>
   );
 };
