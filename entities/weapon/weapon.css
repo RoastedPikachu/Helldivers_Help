@@ -3,7 +3,11 @@
 }
 
 .weaponWidgetCard {
-    @apply relative flex justify-center bg-[url('/static/WeaponBackground.png')] bg-cover border-2 border-theme rounded-[10px] cursor-pointer;
+    @apply relative flex justify-center bg-[url('/static/WeaponBackground.png')] bg-cover border-2 border-theme rounded-[10px] cursor-pointer duration-300 ease-in-out;
+}
+
+.weaponWidgetCard:hover {
+    @apply brightness-[1.15];
 }
 
 .weaponWidget-text {
