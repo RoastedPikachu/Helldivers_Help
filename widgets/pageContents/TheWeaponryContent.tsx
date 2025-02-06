@@ -1,6 +1,10 @@
 "use client";
 import React from "react";
 
+import { useTranslations } from "next-intl";
+
+import { getIntlArray } from "@/utils/generalFunctions";
+
 import { weapons } from "@/data/weapons";
 
 import EntitySection from "@/widgets/EntitySection";
@@ -11,6 +15,8 @@ import PageDescription from "@/shared/PageDescription";
 import Weapon from "@/entities/weapon/Weapon";
 
 const TheWeaponryContent = () => {
+  const t = useTranslations("WeaponryPage");
+
   const getSpecificWeaponArray = (weaponType: number) => {
     switch (weaponType) {
       case 1:
@@ -24,24 +30,16 @@ const TheWeaponryContent = () => {
   return (
     <main>
       <ThePageTitle
-        title={"вооружение"}
-        additionalTitle={"адского десантника"}
+        title={t("pageTitle")}
+        additionalTitle={t("pageAdditionalTitle")}
       />
 
-      <PageDescription
-        description={
-          "Вооружение — это ключ к успеху для любого Адского Десантника. От дробовиков до энергетического оружия — все это инструменты, которые помогут вам распространять управляемую демократию в галактике."
-        }
-      />
+      <PageDescription description={t("pageDescription")} />
 
-      <PageDescription
-        description={
-          "Когда жуки начнут ползти, а машины — стрелять, не стойте в стороне. Возьмите оружие, и покажите врагам Супер-Земли, на что способны настоящие Адские Десантники. С демократией на вашей стороне и вашими товарищами рядом, вы непобедимы!"
-        }
-      />
+      <PageDescription description={t("pageAdditionalDescription")} />
 
       <EntitySection
-        title={"ОСНОВНОЕ"}
+        title={getIntlArray(t("sectionTitles"))[0]}
         gridStyles={"grid-cols-3 mlarge:grid-cols-1"}
       >
         {getSpecificWeaponArray(1)?.map((primaryWeapon) => (
@@ -56,7 +54,7 @@ const TheWeaponryContent = () => {
       </EntitySection>
 
       <EntitySection
-        title={"ВТОРИЧНОЕ"}
+        title={getIntlArray(t("sectionTitles"))[1]}
         gridStyles={"grid-cols-3 mlarge:grid-cols-1"}
       >
         {getSpecificWeaponArray(2)?.map((primaryWeapon) => (
@@ -86,7 +84,7 @@ const TheWeaponryContent = () => {
       {/*</EntitySection>*/}
 
       <EntitySection
-        title={"ГРАНАТЫ"}
+        title={getIntlArray(t("sectionTitles"))[2]}
         gridStyles={"grid-cols-5 mlarge:grid-cols-2"}
       >
         {getSpecificWeaponArray(3)?.map((primaryWeapon) => (

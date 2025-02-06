@@ -67,7 +67,12 @@
   },
   "WeaponryPage": {
     "metadataTitle": "Helldivers.HELP. Weapons: A complete list of weapons and their characteristics",
-    "metadataDescription": "All about Helldivers 2 weapons: detailed descriptions and specifications. Rifles, shotguns, support weapons and other weapons."
+    "metadataDescription": "All about Helldivers 2 weapons: detailed descriptions and specifications. Rifles, shotguns, support weapons and other weapons.",
+    "pageTitle": "helldiver",
+    "pageAdditionalTitle": "weaponry",
+    "pageDescription": "Weapons are the key to success for any Helldiver. From shotguns to energy weapons, these are all tools that will help you spread a managed democracy across the galaxy.",
+    "pageAdditionalDescription": "When the bugs start crawling and the machines start firing, don't stand by. Take up arms, and show the enemies of Super Earth what the real Helldivers can do. With democracy on your side and your comrades by your side, you are invincible!",
+    "sectionTitles": "[\"PRIMARY\",\"SECONDARY\",\"THROWABLE\"]"
   },
   "HomePage": {
     "metadataTitle": "HELLDIVERS.HELP — Helldivers 2 Assistant: Wiki & Other",
