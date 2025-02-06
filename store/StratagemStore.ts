@@ -373,7 +373,7 @@ class StratagemStore {
       id: 9,
       iconPath: "/static/stratagems/Rl77Icon.png",
       videoPath: "/static/stratagemVideos/Rl77Video.mp4",
-      videoPreviewPath: "/static/stratagemVideoPreviews/Rl77Preview.jpg",
+      videoPreviewPath: "/static/stratagemVideoPreviews/Rl77Preview.webp",
       type: stratagemTypes.supportWeapon,
       price: 8000,
       obtainingLevel: 15,
