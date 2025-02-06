@@ -3,17 +3,25 @@ import React from "react";
 
 import { useTranslations } from "next-intl";
 
+import { getIntlArray, toSlug } from "@/utils/generalFunctions";
+
+import Link from "next/link";
+
 import "./weapon.css";
-import { getIntlArray } from "@/utils/generalFunctions";
 
 interface WeaponProps {
   id: number;
   typeIndex: number;
   imagePath: string;
-  name: string;
+  devName: string;
 }
 
-const Weapon: React.FC<WeaponProps> = ({ id, typeIndex, imagePath, name }) => {
+const Weapon: React.FC<WeaponProps> = ({
+  id,
+  typeIndex,
+  imagePath,
+  devName,
+}) => {
   const t = useTranslations("weapons");
 
   const getTargetSupportWeaponImageScale = (id: number) => {
@@ -43,20 +51,22 @@ const Weapon: React.FC<WeaponProps> = ({ id, typeIndex, imagePath, name }) => {
     }
   };
   return (
-    <div className="weaponWidget">
-      <div
-        className={`weaponWidgetCard ${typeIndex === 3 ? "w-full h-[200px] mlarge:h-[160px] mmedium:h-[140px] msmall:h-[120px] scale-[0.9] bg-center" : "w-full h-[200px] mmedium:h-[180px] msmall:h-[160px] bg-[center_top_-20px] mlarge:bg-[center_top_-5px] mmedium:bg-center"}`}
-      >
-        <img
-          src={imagePath}
-          alt=""
-          style={{ transform: "" }}
-          className={`w-full h-full ${typeIndex === 4 ? getTargetSupportWeaponImageScale(id) : ""}`}
-        />
-      </div>
+    <Link href={`/weaponry/${toSlug(devName)}`}>
+      <div className="weaponWidget">
+        <div
+          className={`weaponWidgetCard ${typeIndex === 3 ? "w-full h-[200px] mlarge:h-[160px] mmedium:h-[140px] msmall:h-[120px] scale-[0.9] bg-center" : "w-full h-[200px] mmedium:h-[180px] msmall:h-[160px] bg-[center_top_-20px] mlarge:bg-[center_top_-5px] mmedium:bg-center"}`}
+        >
+          <img
+            src={imagePath}
+            alt=""
+            style={{ transform: "" }}
+            className={`w-full h-full ${typeIndex === 4 ? getTargetSupportWeaponImageScale(id) : ""}`}
+          />
+        </div>
 
-      <p className="weaponWidget-text">{getIntlArray(t("names"))[id - 1]}</p>
-    </div>
+        <p className="weaponWidget-text">{getIntlArray(t("names"))[id - 1]}</p>
+      </div>
+    </Link>
   );
 };
 
