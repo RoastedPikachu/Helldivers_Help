@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 
 import { fromSlug, getIntlArray, toSlug } from "@/utils/generalFunctions";
 
-import { armorStore } from "@/store/ArmorKitsStore";
+import { armorKits } from "@/data/armor";
 
 import Link from "next/link";
 
@@ -22,7 +22,7 @@ const TheSpecificArmorContent = () => {
 
   const getPreviousArmorName = () => {
     if (Object.entries(currentArmor).length) {
-      const armorArr = armorStore.armorKits.filter(
+      const armorArr = armorKits.filter(
         (armor) => armor.typeIndex === currentArmor.typeIndex,
       );
 
@@ -42,7 +42,7 @@ const TheSpecificArmorContent = () => {
 
   const getNextArmorName = () => {
     if (Object.entries(currentArmor).length) {
-      const armorArr = armorStore.armorKits.filter(
+      const armorArr = armorKits.filter(
         (armor) => armor.typeIndex === currentArmor.typeIndex,
       );
 
@@ -62,7 +62,7 @@ const TheSpecificArmorContent = () => {
 
   useEffect(() => {
     setCurrentArmor(
-      armorStore.armorKits.find(
+      armorKits.find(
         (armor) =>
           armor.devName.toLowerCase() === fromSlug(params.armorName as string),
       ),
