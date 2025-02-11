@@ -1,4 +1,12 @@
 {
+  "EquipmentPage": {
+    "pageTitle": "комплекты брони",
+    "pageAdditionalTitle": "адского десантника"
+  },
+  "CustomizationPage": {
+    "pageTitle": "комплекты брони",
+    "pageAdditionalTitle": "адского десантника"
+  },
   "ArmorPage": {
     "metadataTitle": "HELLDIVERS.HELP: Armor",
     "metadataDescription": "The armor for the Helldiver in Helldivers 2 plays a critical role in ensuring survivability and effectiveness on the battlefield. It protects against the long-range lasers of the Automatons, the claws and stings of the Terminids, and the armor set also provides certain mission-enhancing bonuses.",

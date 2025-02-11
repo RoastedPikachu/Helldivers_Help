@@ -1,3 +1,7 @@
 .topPageSection {
     @apply mlarge:fixed relative top-0 w-full mlarge:w-screen h-auto z-[40];
 }
+
+.topPageSection-breadcrumb {
+    @apply mt-[20px] deskWide:ml-[calc((100%-1440px)/2)] px-[5%] deskWide:px-0 w-full max-w-[1440px] text-[1.25rem] font-primary;
+}
