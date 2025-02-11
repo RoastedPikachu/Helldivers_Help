@@ -26,15 +26,15 @@ const TheSpecificArmorContent = () => {
         (armor) => armor.typeIndex === currentArmor.typeIndex,
       );
 
-      let targetId: number;
+      let targetIndex: number;
 
-      if (currentArmor.id - 1 < 1) {
-        targetId = armorArr.length;
+      if (armorArr.indexOf(currentArmor) - 1 < 0) {
+        targetIndex = armorArr.length - 1;
       } else {
-        targetId = currentArmor.id - 1;
+        targetIndex = armorArr.indexOf(currentArmor) - 1;
       }
 
-      return armorArr.find((armor) => armor.id === targetId)!.devName;
+      return armorArr.find((armor, index) => index === targetIndex)!.devName;
     }
 
     return "";
@@ -46,15 +46,15 @@ const TheSpecificArmorContent = () => {
         (armor) => armor.typeIndex === currentArmor.typeIndex,
       );
 
-      let targetId: number;
+      let targetIndex: number;
 
-      if (currentArmor.id + 1 > armorArr.length) {
-        targetId = 1;
+      if (armorArr.indexOf(currentArmor) + 1 === armorArr.length) {
+        targetIndex = 0;
       } else {
-        targetId = currentArmor.id + 1;
+        targetIndex = armorArr.indexOf(currentArmor) + 1;
       }
 
-      return armorArr.find((armor) => armor.id === targetId)!.devName;
+      return armorArr.find((armor, index) => index === targetIndex)!.devName;
     }
 
     return "";

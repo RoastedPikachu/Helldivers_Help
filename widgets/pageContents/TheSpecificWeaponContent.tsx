@@ -27,17 +27,15 @@ const TheSpecificWeaponContent = () => {
         (weapon) => weapon.typeIndex === currentWeapon.typeIndex,
       );
 
-      let targetId: number;
+      let targetIndex: number;
 
-      console.log(weaponArr.indexOf(currentWeapon));
-
-      if (weaponArr.indexOf(currentWeapon) - 1 < 0) {
-        targetId = weaponArr.length;
+      if (weaponArr.indexOf(currentWeapon) === 0) {
+        targetIndex = weaponArr.length - 1;
       } else {
-        targetId = weaponArr.indexOf(currentWeapon) - 1;
+        targetIndex = weaponArr.indexOf(currentWeapon) - 1;
       }
 
-      return weaponArr.find((weapon, index) => index === targetId)!.devName;
+      return weaponArr.find((weapon, index) => index === targetIndex)!.devName;
     }
 
     return "";
@@ -49,15 +47,15 @@ const TheSpecificWeaponContent = () => {
         (weapon) => weapon.typeIndex === currentWeapon.typeIndex,
       );
 
-      let targetId: number;
+      let targetIndex: number;
 
-      if (weaponArr.indexOf(currentWeapon) + 1 > weaponArr.length) {
-        targetId = 0;
+      if (weaponArr.indexOf(currentWeapon) + 1 === weaponArr.length) {
+        targetIndex = 0;
       } else {
-        targetId = weaponArr.indexOf(currentWeapon) + 1;
+        targetIndex = weaponArr.indexOf(currentWeapon) + 1;
       }
 
-      return weaponArr.find((weapon, index) => index === targetId)!.devName;
+      return weaponArr.find((weapon, index) => index === targetIndex)!.devName;
     }
 
     return "";
