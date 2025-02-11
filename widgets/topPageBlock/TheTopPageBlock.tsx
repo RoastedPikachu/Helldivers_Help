@@ -31,6 +31,8 @@ const TheTopPageBlock = observer(() => {
   const t4 = useTranslations("armor");
   const t5 = useTranslations("CustomizationPage");
   const t6 = useTranslations("PlayerCardsPage");
+  const t7 = useTranslations("BoostersPage");
+  const t8 = useTranslations("CapesPage");
 
   const isRunningLineShowed = useMemo(() => {
     if (mobileStore.isMobileDevice) {
@@ -70,9 +72,7 @@ const TheTopPageBlock = observer(() => {
         return [
           {
             title: (
-              <Link href={"/equipment"}>
-                {`${t2("pageTitle")} ${t2("pageAdditionalTitle")}`.toUpperCase()}
-              </Link>
+              <Link href={"/equipment"}>{t2("pageTitle").toUpperCase()}</Link>
             ),
           },
           {
@@ -82,13 +82,45 @@ const TheTopPageBlock = observer(() => {
         ];
       }
 
+      if (
+        pathname.includes("equipment") &&
+        pathname.includes("boosters") &&
+        Object.entries(params).length < 2
+      ) {
+        return [
+          {
+            title: (
+              <Link href={"/equipment"}>{t2("pageTitle").toUpperCase()}</Link>
+            ),
+          },
+          {
+            title: t7("pageTitle").toUpperCase(),
+          },
+        ];
+      }
+
+      if (
+        pathname.includes("equipment") &&
+        pathname.includes("capes") &&
+        Object.entries(params).length < 2
+      ) {
+        return [
+          {
+            title: (
+              <Link href={"/equipment"}>{t2("pageTitle").toUpperCase()}</Link>
+            ),
+          },
+          {
+            title: t8("pageTitle").toUpperCase(),
+          },
+        ];
+      }
+
       if (pathname.includes("equipment") && Object.entries(params).length > 1) {
         return [
           {
             title: (
-              <Link href={"/equipment"}>
-                {`${t2("pageTitle")} ${t2("pageAdditionalTitle")}`.toUpperCase()}
-              </Link>
+              <Link href={"/equipment"}>{t2("pageTitle").toUpperCase()}</Link>
             ),
           },
           {

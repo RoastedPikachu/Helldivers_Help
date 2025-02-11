@@ -1,7 +1,8 @@
 {
   "EquipmentPage": {
-    "pageTitle": "комплекты брони",
-    "pageAdditionalTitle": "адского десантника"
+    "pageTitle": "equipment",
+    "pageDescription": "Helldiver equipment is the key to survival and success in every mission. Armor protects, boosters give you a tactical advantage, and the right cape accentuates your personality on the battlefield.",
+    "links": "[\"Armor\",\"Boosters\",\"Capes\"]"
   },
   "CustomizationPage": {
     "pageTitle": "комплекты брони",
@@ -25,9 +26,10 @@
     "pageDescription": "To facilitate the advancement of democracy and freedom in the galaxy the leadership of Super Earth, with the help of scientists, was able to develop amplifiers.",
     "pageAdditionalDescription": "Boosters are powerful tools that grant various bonuses during a mission to your entire team of Helldivers. Choose them wisely and consult with your battle comrades so that the opponents of democracy don't stand a chance!"
   },
-  "CoatsPage": {
-    "metadataTitle": "HELLDIVERS.HELP: Coats",
-    "metadataDescription": "The cape is the adornment of the Helldiver. It is a distinctive sign that they are all heroes, and heroes can't help but wear capes. It is as important an attribute to any Helldiver as a hat is to every self-respecting cowboy. So wear your cape with honor and dignity, lest you dishonor your comrades, democracy, and Super Earth."
+  "CapesPage": {
+    "metadataTitle": "HELLDIVERS.HELP: Capes",
+    "metadataDescription": "The cape is the adornment of the Helldiver. It is a distinctive sign that they are all heroes, and heroes can't help but wear capes. It is as important an attribute to any Helldiver as a hat is to every self-respecting cowboy. So wear your cape with honor and dignity, lest you dishonor your comrades, democracy, and Super Earth.",
+    "pageTitle": "capes"
   },
   "EnemiesPage": {
     "metadataTitle": "HELLDIVERS.HELP. Enemies: All factions and their characteristics",
