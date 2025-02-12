@@ -1,5 +1,7 @@
 {
   "EquipmentPage": {
+    "metadataTitle": "HELLDIVERS 2: Equipment",
+    "metadataDescription": "Helldiver equipment is the key to survival and success in every mission. Armor protects, boosters give you a tactical advantage, and the right cape accentuates your personality on the battlefield.",
     "pageTitle": "equipment",
     "pageDescription": "Helldiver equipment is the key to survival and success in every mission. Armor protects, boosters give you a tactical advantage, and the right cape accentuates your personality on the battlefield.",
     "links": "[\"Armor\",\"Boosters\",\"Capes\"]"
@@ -9,7 +11,7 @@
     "pageAdditionalTitle": "адского десантника"
   },
   "ArmorPage": {
-    "metadataTitle": "HELLDIVERS.HELP: Armor",
+    "metadataTitle": "HELLDIVERS 2: Armor",
     "metadataDescription": "The armor for the Helldiver in Helldivers 2 plays a critical role in ensuring survivability and effectiveness on the battlefield. It protects against the long-range lasers of the Automatons, the claws and stings of the Terminids, and the armor set also provides certain mission-enhancing bonuses.",
     "pageTitle": "helldiver",
     "pageAdditionalTitle": "armor kits",
@@ -20,38 +22,39 @@
     "titles": "[\"PRICE:\",\"DESCRIPTION:\",\"EFFECT:\",\"ARMOR RATING:\",\"SPEED:\",\"STAMINA REGEN:\"]"
   },
   "BoostersPage": {
-    "metadataTitle": "HELLDIVERS.HELP: Boosters",
+    "metadataTitle": "HELLDIVERS 2: Boosters",
     "metadataDescription": "To facilitate the advancement of democracy and freedom in the galaxy the leadership of Super Earth, with the help of scientists, was able to develop amplifiers.",
     "pageTitle": "boosters",
     "pageDescription": "To facilitate the advancement of democracy and freedom in the galaxy the leadership of Super Earth, with the help of scientists, was able to develop amplifiers.",
     "pageAdditionalDescription": "Boosters are powerful tools that grant various bonuses during a mission to your entire team of Helldivers. Choose them wisely and consult with your battle comrades so that the opponents of democracy don't stand a chance!"
   },
   "CapesPage": {
-    "metadataTitle": "HELLDIVERS.HELP: Capes",
+    "metadataTitle": "HELLDIVERS 2: Capes",
     "metadataDescription": "The cape is the adornment of the Helldiver. It is a distinctive sign that they are all heroes, and heroes can't help but wear capes. It is as important an attribute to any Helldiver as a hat is to every self-respecting cowboy. So wear your cape with honor and dignity, lest you dishonor your comrades, democracy, and Super Earth.",
-    "pageTitle": "capes"
+    "pageTitle": "capes",
+    "pageDescription": "The cape is the adornment of the Helldiver. It is a distinctive sign that they are all heroes, and heroes can't help but wear capes. It is as important an attribute to any Helldiver as a hat is to every self-respecting cowboy. So wear your cape with honor and dignity, lest you dishonor your comrades, democracy, and Super Earth."
   },
   "EnemiesPage": {
-    "metadataTitle": "HELLDIVERS.HELP. Enemies: All factions and their characteristics",
+    "metadataTitle": "HELLDIVERS 2. Enemies: All factions and their characteristics",
     "metadataDescription": "A complete guide to the enemies in Helldivers 2. Learn weaknesses and tactics for fighting against Terminids, Automatons, and Illuminate. Prepare for battles with the enemies of democracy!"
   },
   "MissionsPage": {
-    "metadataTitle": "HELLDIVERS.HELP: Missions",
+    "metadataTitle": "HELLDIVERS 2: Missions",
     "metadataDescription": "Missions are what every Helldiver is in the business of accomplishing. It's the very purpose of their existence, after all, mission fulfillment is to help people, provide additional resources for Super Earth, and promote democracy in the galaxy."
   },
   "NewsPage": {
-    "metadataTitle": "HELLDIVERS.HELP: Updates, Events and Patches",
+    "metadataTitle": "HELLDIVERS 2: Updates, Events and Patches",
     "metadataDescription": "All the latest Helldivers 2 news: patches, updates, events and more. Stay up to date with all the changes in the game and get ready for new challenges!"
   },
   "PlanetsPage": {
-    "metadataTitle": "HELLDIVERS.HELP: Planets",
+    "metadataTitle": "HELLDIVERS 2: Planets",
     "metadataDescription": "The Glossary of Planets contains information about the worlds involved in the galactic conflict. Each planet has its own characteristics, challenges, and strategic importance. Explore the unique characteristics of these celestial bodies to better understand the dynamics of the ongoing struggle for freedom, prosperity, and managed democracy.",
     "pageTitle": "planet",
     "pageAdditionalTitle": "glossary",
     "pageDescription": "The Glossary of Planets contains information about the worlds involved in the galactic conflict. Each planet has its own characteristics, challenges, and strategic importance. Explore the unique characteristics of these celestial bodies to better understand the dynamics of the ongoing struggle for freedom, prosperity, and managed democracy."
   },
   "ShipModulesPage": {
-    "metadataTitle": "HELLDIVERS.HELP: Ship modules",
+    "metadataTitle": "HELLDIVERS 2: Ship modules",
     "metadataDescription": "The ship is your only safe place in the galaxy besides Super Earth. It is the place from which you embark on missions and to which you return, exhausted, tired, but satisfied with your progress. Your ship, just like you, needs improvements. Yes, each of these improvements is quite expensive, but the effects you get in return are worth it. You can turn your turrets into deadly firing units, or you can increase the frequency of attacking stratagems by showering democracy's enemies with a hail of bombs. The important thing to remember is that your ship is just as much a battle buddy as the other Hell Troopers!",
     "pageTitle": "ship",
     "pageAdditionalTitle": "modules",
@@ -59,7 +62,7 @@
     "pageAdditionalDescription": "Your destroyer, just like you, needs improvements. Yes, each of these improvements is quite expensive, but the effects you get in return are worth it. You can turn your turrets into deadly firing units, or you can increase the frequency of attacking stratagems, showering democracy's enemies with a hail of bombs. The important thing to remember is that your ship is just as much a battle buddy as the other Helldivers!"
   },
   "StratagemsPage": {
-    "metadataTitle": "HELLDIVERS.HELP: Stratagems",
+    "metadataTitle": "HELLDIVERS 2: Stratagems",
     "metadataDescription": "Every Helldiver knows that on ruthless battlefields, survival depends not only on firepower, but also on strategy, cunning, and the judicious use of stratagems. These very useful 'things' in galactic warfare assert our dominance over the alien threat and uphold the values of freedom and guided democracy.",
     "pageTitle": "stratagems",
     "pageDescription": "Every Helldiver knows that on ruthless battlefields, survival depends not only on firepower, but also on strategy, cunning, and the judicious use of stratagems.",
@@ -69,14 +72,14 @@
     "blockTitles": "[\"Available at:\",\"level\",\"Price:\",\"Call-in time:\",\"sec.\",\"Uses:\",\"Unlimited\",\"Cooldown:\"]"
   },
   "StratagemTrainingPage": {
-    "metadataTitle": "HELLDIVERS.HELP: Stratagem Training",
+    "metadataTitle": "HELLDIVERS 2: Stratagem Training",
     "metadataDescription": "Improve your skill at rapid stratagem entry in constant training to advance a managed democracy in the galaxy as effectively as possible and kill the hated enemies of Super Earth more swiftly.",
     "pageTitle": "STRATAGEM",
     "pageAdditionalTitle": "HERO",
     "text": "[\"START\",\"Use the arrow buttons or swap to the correct side to enter stratagems\",\"Use WASD or arrows on your keyboard to enter stratagems\",\"Buttons\",\"Swipe\",\"Round\",\"Score\",\"SWIPE HERE\",\"Your record:\",\"Game over\",\"FINAL SCORE\",\"MAX RESULT\",\"Round bonus\",\"Time bonus\",\"Perfection bonus\",\"Total score\",\"Get ready\"]"
   },
   "WeaponryPage": {
-    "metadataTitle": "Helldivers.HELP. Weapons: A complete list of weapons and their characteristics",
+    "metadataTitle": "Helldivers 2. Weapons: A complete list of weapons and their characteristics",
     "metadataDescription": "All about Helldivers 2 weapons: detailed descriptions and specifications. Rifles, shotguns, support weapons and other weapons.",
     "pageTitle": "helldiver",
     "pageAdditionalTitle": "weaponry",
@@ -96,14 +99,14 @@
     "pageDescription": "Welcome to the Helldivers 2 Manual! Get ready to plunge into the exciting world of global war with hostile invaders: Automatons and Terminids. In this manual you will find all the necessary information to make it easier to navigate the features of your equipment, enemies and planets of the galaxy and emerge victorious from all the missions you complete."
   },
   "ResourcesPage": {
-    "metadataTitle": "HELLDIVERS.HELP: Resources",
+    "metadataTitle": "HELLDIVERS 2: Resources",
     "metadataDescription": "Resources are the fuel to increase your personal effectiveness in the struggle to advance managed democracy, freedom and prosperity throughout the galaxy.",
     "pageTitle": "galaxy",
     "pageAdditionalTitle": "resources",
     "pageDescription": "Resources are the fuel to increase your personal effectiveness in the struggle to promote managed democracy, freedom and prosperity throughout the galaxy."
   },
   "ProgressionPage": {
-    "metadataTitle": "HELLDIVERS.HELP. Progression: Ranks, Levels and Titles",
+    "metadataTitle": "HELLDIVERS 2. Progression: Ranks, Levels and Titles",
     "metadataDescription": "When you go into battle, remember that your courage and dedication will be recognized. Because of your diligence and loyalty to the cause of Super Earth, you will be promoted and honored for your heroic feats in advancing a managed democracy.",
     "pageTitle": "helldiver",
     "pageAdditionalTitle": "progression",
@@ -112,7 +115,7 @@
     "firstSectionTitle": "TITLES"
   },
   "AchievementsPage": {
-    "metadataTitle":  "HELLDIVERS.HELP: Achievements",
+    "metadataTitle":  "HELLDIVERS 2: Achievements",
     "metadataDescription": "Full list of Helldivers 2 achievements: find out how to get all the trophies. Detailed description of each achievement and tips on how to complete them.",
     "pageTitle": "achievements",
     "pageAdditionalTitle": "",
@@ -123,14 +126,14 @@
     "fourthSectionTitle": "LONG WAY"
   },
   "PlayerCardsPage": {
-    "metadataTitle": "HELLDIVERS.HELP: Player Cards",
+    "metadataTitle": "HELLDIVERS 2: Player Cards",
     "metadataDescription": "Each Helldiver can add a touch of personality by choosing one of the player's unique cards. They will better highlight your armor and you among the comrades.",
     "pageTitle": "player",
     "pageAdditionalTitle": "cards",
     "pageDescription": "Each Helldiver can add a touch of personality by choosing one of the player's unique cards. They will better highlight your armor and you among the comrades."
   },
   "EmotesPage": {
-    "metadataTitle": "HELLDIVERS.HELP: Emotes and victory poses.",
+    "metadataTitle": "HELLDIVERS 2: Emotes and victory poses.",
     "metadataDescription": "During battles, any Helldiver accumulates a certain amount of impressions or experiences. They can easily be released in emotions! And celebrate victory and successful return with a beautiful victory pose. Show everyone your muscles or hug your favorite comrade, the main thing is to keep your sanity to continue spreading democracy throughout the galaxy.",
     "pageTitle": "helldiver",
     "pageAdditionalTitle": "emotes",
@@ -261,5 +264,9 @@
     "names": "[\"AR-23 Liberator\",\"AR-23P Liberator Penetrator\",\"AR-23C Liberator Concussive\",\"AR-23A Liberator Carbine\",\"AR-61 Tenderizer\",\"StA-52 Assault Rifle\",\"BR-14 Adjudicator\",\"R-2124 Constitution\",\"R-63 Diligence\",\"R-63CS Diligence Counter Sniper\",\"PLAS-39 Accelerator Rifle\",\"SMG-32 Reprimand\",\"SMG-37 Defender\",\"SMG-72 Pummeler\",\"StA-11 SMG\",\"MP-98 Knight\",\"SG-8 Punisher\",\"SG-8S Slugger\",\"SG-451 Cookout\",\"SG-20 Halt\",\"SG-225 Breaker\",\"SG-225IE Breaker Incendiary\",\"SG-225SP Breaker Spray&Pray\",\"CB-9 Exploding Crossbow\",\"R-36 Eruptor\",\"LAS-5 Scythe\",\"LAS-16 Sickle\",\"LAS-17 Double-Edge Sickle\",\"PLAS-1 Scorcher\",\"PLAS-101 Purifier\",\"SG-8P Punisher Plasma\",\"ARC-12 Blitzer\",\"JAR-5 Dominator\",\"FLAM-66 Torcher\",\"P-2 Peacemaker\",\"P-4 Senator\",\"P-11 Stim Pistol\",\"P-19 Redeemer\",\"P-72 Crisper\",\"P-113 Verdict\",\"GP-31 Grenade Pistol\",\"GP-31 Ultimatum\",\"SG-22 Bushwhacker\",\"LAS-7 Dagger\",\"PLAS-15 Loyalist\",\"CQC-5 Combat Hatchet\",\"CQC-19 Stun Lance\",\"CQC-30 Stun Baton\",\"G-3 Smoke\",\"G-4 Gas\",\"G-6 Frag\",\"G-10 Incendiary\",\"G-12 High Explosive\",\"G-13 Incendiary Impact\",\"G-16 Impact\",\"G-23 Stun\",\"G-50 Seeker\",\"G-123 Thermite\",\"K-2 Throwing Knife\"]",
     "descriptions": "[\"The SEAF standard assault rifle, balancing power, fire rate, and weight for a reliable weapon against smaller targets.\",\"A modified Liberator fitted with a scope and firing armor-piercing rounds, to help users take down armored targets.\",\"A modified Liberator featuring concussive rounds which do less damage but stagger enemies.\",\"A compact version of the Liberator designed for increased viability in close quarters. Has an increased fire rate at the cost of higher spread.\",\"A high-caliber assault rifle with a restrictive magazine size but more stopping power.\",\"An assault rifle with a high-capacity drum magazine, good for providing sustained fire. Produced by Stäl Arms.\",\"An accurate, armor-penetrating rifle, the BR-14 Adjudicator delivers righteous judgement to medium-sized enemies, though its restrictive magazine limits its effectiveness against large groups.\",\"This ceremonial rifle is modeled after antique relics from pre-Democratic times. It is traditionally gifted to every citizen upon turning 16 to encourage service.\",\"This high-caliber marksman rifle trades magazine capacity and rate of fire for powerful, accurate shots.\",\"A modified Diligence rifle offering increased damage at the cost of some maneuverability. Fires a single bullet at a time.\",\"A high-precision burst-fire plasma rifle that must be charged to fire.\",\"A heavy-duty submachine gun that fires large-caliber rounds, with a slower rate of fire to manage the high recoil. Ideal for use at close to medium range.\",\"A high-caliber submachine gun which can be fired with one hand. Has a relatively low rate of fire.\",\"Fires concussive rounds that stagger enemies. Slower rate of fire than other SMGs.\",\"A submachine gun with a helical feed magazine, which gives the weapon a higher ammo capacity whilst making it more front-heavy. Produced by Stäl Arms.\",\"A submachine gun with an extremely high rate of fire, which can be operated with one hand. Ideal for multitasking.\",\"A powerful dual magazine pump-action shotgun, with limited armor penetration. Ideal for small and fast targets.\",\"A Modified Punisher shotgun firing heavy, high-damage slugs. Perfect for punching holes in big targets.\",\"A pump shotgun that fires a burst of incendiary phosphorus pellets, setting targets ablaze.\",\"A humane compliance weapon with two separate magazines: one for armor-penetrating flechette rounds and one for stun rounds.\",\"A fully-automatic shotgun with a high rate of fire, excellent for controlling crowds. Requires frequent reloading.\",\"A modified breaker shotgun firing incendiary projectiles. Generates heat during use, so limited to burst fire.\",\"A modified breaker shotgun firing birdshot, small pellets which saturate and area to clear up smaller targets.\",\"Fires powerful exploding bolts which do maximum damage upon direct impact. Gravity must be accounted for when aiming.\",\"This bolt-action rifle fires jet-assisted shells that explode shrapnel in all directions upon impact. Not recommended for close-quarters use.\",\"A laser rifle firing a continuous beam. Does not need reloading, but if it overheats a new heat sink must be fitted.\",\"A laser rifle, firing in short bursts. Does not need reloading, but if it overheats a new heat sink must be fitted.\",\"A LAS-16 Sickle model with all overheating protections conveniently removed, allowing for far longer burst of fire. Does more damage when overheated, at the cost of slightly burning the user.\",\"A plasma rifle, firing a bolt of superheated gas which explodes on impact. Avoid standing in proximity to the blast.\",\"A plasma rifle firing a bolt of superheated gas, which can be charged by holding down the trigger. Charging up a shot fully makes the bolt explode on impact.\",\"A modified Punisher shotgun firing exploding plasma rounds. Fire carefully - exploding plasma can injure squadmates.\",\"This shotgun blasts a wide burst of high-voltage electricity that arcs between all units—enemy or otherwise—within range.\",\"Firing jet-propelled rounds, the Dominator trades fire rate and magazine capacity for increased damage per projectile.\",\"A lightweight flamethrower. Shoots pressurized fuel through a dispersion nozzle into an open flame\",\"The SEAF standard pistol - offering a high rate of fire, generous capacity, and fast reloading.\",\"A high-damage revolver, which can be reloaded with single rounds. A heavy-hitting and reliable sidearm\",\"Fires a ballistic dart at near-supersonic speeds, allowing the user to stim allies from a distance. Might sting.\",\"A fully-automatic pistol with an extremely high fire rate, allowing for efficient crowd control.\",\"A compact handgun-style flamethrower, able to project a jet of fire over short distances.\",\"The gas-operated, semiautomatic P-113 chambers the 14mm 'Rapid Deliberation', the largest centerfire cartridge of any magazine-fed pistol.\",\"A pistol that fires grenades. Must be reloaded between shots.\",\"A pistol front-loaded with a single, powerful explosive. The weight of the projectile limits the weapon's range.\",\"A triple-barreled, break-action, sawed-off shotgun. Switch firing modes to fire all three barrels at once.\",\"A laser pistol that fires a continuous beam. Does not require ammo but can overheat and need to change batteries.\",\"A plasma pistol that charges each shot until the trigger is released. Plasma projectiles explode on impact.\",\"A heavily-hitting one-handed melee weapon.\",\"A melee weapon tipped with electrified prongs that temporarily stun targets. Can be wielded one-handed.\",\"A lightweight melee weapon that temporarily stuns enemies. Can be wielded one-handed.\",\"A 'compliance weapon' to modify enemy behavior. Creates a thick smoke screen to block targets' line of sight.\",\"A grenade that releases a cloud of toxic gas, effective at blinding and slowing both organic and inorganic enemies.\",\"An antipersonnel fragmentation grenade. Creates damage over a large area when detonated.\",\"An incendiary grenade which ignites any targets and terrain within the blast radius. use with caution.\",\"A high explosive grenade which damages lightly armored targets. Creates high damage over a small area when detonated.\",\"Detonates on impact, covering the immediate vicinity in self-igniting white phosphorus.\",\"A high explosive grenade which detonates on first impact.\",\"Temporarily stuns all targets within the effective radius.\",\"This grenade delivery drone follows the user until it detects an enemy nearby, then flies toward it and explodes on impact. Has a limited battery life.\",\"A thermite grenade designed to adhere to surfaces before burning at 2000°C. Capable of burning through some armor.\",\"Delivers silent justice to Freedom's enemies.\"]",
     "types": "[\"Primary\",\"Secondary\",\"Throwable\"]"
+  },
+  "capes": {
+    "names": "[]",
+    "descriptions": "[]"
   }
 }
