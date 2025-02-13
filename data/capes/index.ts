@@ -3,7 +3,7 @@ import { obtainingTypes } from "@/data/obtainingTypes";
 export const capes = [
   {
     id: 1,
-    imagePath: "/static/Coats/EnemiesBreakerImage.webp",
+    imagePath: "/static/capes/Foesmasher.png",
     name: "Крушитель врагов",
     description:
       "Эти прочные, водонепроницаемые и утепленные плащи пользуются популярностью у туристов в качестве материала для палаток.",
@@ -15,7 +15,7 @@ export const capes = [
   },
   {
     id: 2,
-    imagePath: "/static/Coats/IndependenceBringerImage.webp",
+    imagePath: "/static/capes/IndependenceBringer.png",
     name: "Вестник независимости",
     description:
       "Этот укороченный плаз символизирует краткость галактических конфликтов, за что надо благодарить эффективность Адских Десантников.",
@@ -27,7 +27,7 @@ export const capes = [
   },
   {
     id: 3,
-    imagePath: "/static/Coats/WillHeraldImage.webp",
+    imagePath: "/static/capes/LibertyHerald.png",
     name: "Вестник воли",
     description:
       "Две полоски служат напоминанием о двух столпах успешной военной кампании: атаке и дальнейшей атаке.",
@@ -39,7 +39,7 @@ export const capes = [
   },
   {
     id: 4,
-    imagePath: "/static/Coats/InspiratorImage.webp",
+    imagePath: "/static/capes/Tideturner.png",
     name: "Вдохновитель",
     description:
       "Некоторые говорят, что одного вида этого плаща, величественно колышущегося на ветру, достаточно чтобы вдохновить отряд на победу.",
@@ -51,7 +51,7 @@ export const capes = [
   },
   {
     id: 5,
-    imagePath: "/static/Coats/StarsAndVotingImage.webp",
+    imagePath: "/static/capes/StarsAndSuffrage.png",
     name: "Плащ звезд и голосования",
     description:
       "Символ звездного обещания Супер-Земли на тему того, что однажды все звезды будут освещать массы счастливых избирателей.",
@@ -63,7 +63,7 @@ export const capes = [
   },
   {
     id: 6,
-    imagePath: "/static/Coats/UnblemishedAllegianceImage.webp",
+    imagePath: "/static/capes/UnblemishedAllegiance.png",
     name: "Непорочная верность",
     description:
       "На последних этапах производства каждому такому плащу патриотический школьный хор поет гимн Супер-Земли.",
@@ -75,7 +75,7 @@ export const capes = [
   },
   {
     id: 7,
-    imagePath: "/static/Coats/DoomsdayImage.webp",
+    imagePath: "/static/capes/JudgementDay.png",
     name: "Судный день",
     description:
       "Череп Адского Десантника вселяет страх в сердца врагов, пытающихся подкрасться к владельцу этого плаща.",
@@ -87,7 +87,7 @@ export const capes = [
   },
   {
     id: 8,
-    imagePath: "/static/Coats/HonorCrestImage.webp",
+    imagePath: "/static/capes/CrestingHonor.png",
     name: "Гребень чести",
     description:
       "Этот оттенок желтого полностью совпадает с цветом «Золотых врат» министерства единства, которые ведут в зал единогласного решения.",
@@ -99,7 +99,7 @@ export const capes = [
   },
   {
     id: 9,
-    imagePath: "/static/Coats/TrueCitizenMantieImage.webp",
+    imagePath: "/static/capes/MantleOfTrueCitizenship.png",
     name: "Мантия истинного гражданства",
     description:
       "Очень легкий плащ контрастирует с тяжелой ношей, которую подразумевает владение этим плащом: жить согласно идеалам истинного гражданина.",
@@ -111,7 +111,7 @@ export const capes = [
   },
   {
     id: 10,
-    imagePath: "/static/Coats/FlaminSamaritanImage.webp",
+    imagePath: "/static/capes/BlazingSamaritan.png",
     name: "Пылающий самаритянин",
     description:
       "Этот плащ окрашен в красный, белый и зеленый цвета 676-го демократического полка, до конца сражавшегося на склонах холма Свободы.",
@@ -123,7 +123,7 @@ export const capes = [
   },
   {
     id: 11,
-    imagePath: "/static/Coats/EternalLibertyLightImage.webp",
+    imagePath: "/static/capes/LightOfEternalLiberty.png",
     name: "Свет вечной свободы",
     description:
       "Говорят, безупречное правосудие этого плаща ослепляет врагов свободы своим великолепным светом.",
@@ -135,7 +135,7 @@ export const capes = [
   },
   {
     id: 12,
-    imagePath: "/static/Coats/TyrantsHunterImage.webp",
+    imagePath: "/static/capes/TyrantHunter.png",
     name: "Охотник на тиранов",
     description:
       "Искромсанный подол плаща предвещает неугасимую свирепость, с которой его носитель обрашится на врагов свободы.",
@@ -147,7 +147,7 @@ export const capes = [
   },
   {
     id: 13,
-    imagePath: "/static/Coats/GratefulDescendantsImage.webp",
+    imagePath: "/static/capes/CloakOfPosterityGrattitude.png",
     name: "Плащ благодарных потомков",
     description:
       "Воплощение благодарности бесконечного множества потомков, чье освобожденное существование мы стараемся обеспечить.",
@@ -159,7 +159,7 @@ export const capes = [
   },
   {
     id: 14,
-    imagePath: "/static/Coats/IntegrityBastionImage.webp",
+    imagePath: "/static/capes/DrapeOfGlory.png",
     name: "Бастион целостности",
     description:
       "В основе дизайна — сигнальный плащ ВССЗ, облегчавший воздушным командам поиски павших героев.",
@@ -171,7 +171,19 @@ export const capes = [
   },
   {
     id: 15,
-    imagePath: "/static/Coats/BotslayerImage.webp",
+    imagePath: "/static/capes/BastionOfIntegrity.png",
+    name: "Бастион целостности",
+    description:
+      "В основе дизайна — сигнальный плащ ВССЗ, облегчавший воздушным командам поиски павших героев.",
+    price: 30,
+    armorRating: 100,
+    speed: 100,
+    staminaRegen: 100,
+    warbondIcon: obtainingTypes[6].icon,
+  },
+  {
+    id: 16,
+    imagePath: "/static/capes/Botslayer.png",
     name: "Убийца ботов",
     description:
       "Плащ, внедряющий протокол страха в процессоры всех автоматонов, сканирующих его.",
@@ -182,8 +194,8 @@ export const capes = [
     warbondIcon: obtainingTypes[7].icon,
   },
   {
-    id: 16,
-    imagePath: "/static/Coats/GreatMartyrImage.webp",
+    id: 17,
+    imagePath: "/static/capes/MartyrisRex.png",
     name: "Великий мученик",
     description:
       "Говорят, только истинные демократы могут накинуть этот плащ на свои плечи.",
@@ -194,8 +206,8 @@ export const capes = [
     warbondIcon: obtainingTypes[7].icon,
   },
   {
-    id: 17,
-    imagePath: "/static/Coats/OblivionAgentImage.webp",
+    id: 18,
+    imagePath: "/static/capes/AgentOfOblivion.png",
     name: "Агент забвения",
     description:
       "0.05% от прибыли жертвуется национальному парку Суперстоун в рамках кампании министерства единства «Зеленая галактика».",
@@ -206,8 +218,8 @@ export const capes = [
     warbondIcon: obtainingTypes[7].icon,
   },
   {
-    id: 18,
-    imagePath: "/static/Coats/TrueEqualityHarbingerImage.webp",
+    id: 19,
+    imagePath: "/static/capes/HarbingerOfTrueEquality.png",
     name: "Предвестник истинного равенства",
     description:
       "Владельцы этого плаща знают, что даже враги Свободы достойны равенства. Посмертно.",
@@ -218,8 +230,8 @@ export const capes = [
     warbondIcon: obtainingTypes[8].icon,
   },
   {
-    id: 19,
-    imagePath: "/static/Coats/EagleFuryImage.webp",
+    id: 20,
+    imagePath: "/static/capes/EagleFury.png",
     name: "Ярость орла",
     description:
       "Один из первых поступивших в массовое производство плащей. Он оказался последним, что видели бесчисленные враги свободы.",
@@ -230,8 +242,8 @@ export const capes = [
     warbondIcon: obtainingTypes[8].icon,
   },
   {
-    id: 20,
-    imagePath: "/static/Coats/LibertyGobelinImage.webp",
+    id: 211,
+    imagePath: "/static/capes/FreedomTapestry.png",
     name: "Гобелен свободы",
     description:
       "Путь всех узревших этот плащ поразит красота Свободы или пули Воли.",
@@ -242,8 +254,8 @@ export const capes = [
     warbondIcon: obtainingTypes[8].icon,
   },
   {
-    id: 21,
-    imagePath: "/static/Coats/DissidentNightmareImage.webp",
+    id: 22,
+    imagePath: "/static/capes/DissidentNightmare.png",
     name: "Кошмар диссидента",
     description:
       "После тщательного тестирования в Центрах патриотической реабилитации этот дизайн оказался самым пугающим для пораженных раздором индивидуумов.",
@@ -254,8 +266,8 @@ export const capes = [
     warbondIcon: obtainingTypes[9].icon,
   },
   {
-    id: 22,
-    imagePath: "/static/Coats/EternalGloryImage.webp",
+    id: 23,
+    imagePath: "/static/capes/PinionsOfEverlastingGlory.png",
     name: "Вечная слава",
     description:
       "Обеспечивает включение в бессмертные ряды тех, кто записан в цифровом архиве доблестных дел Супер-Земли.",
@@ -266,8 +278,8 @@ export const capes = [
     warbondIcon: obtainingTypes[9].icon,
   },
   {
-    id: 23,
-    imagePath: "/static/Coats/VunerableBulletinOrderImage.webp",
+    id: 24,
+    imagePath: "/static/capes/OrderOfTheVeneratedBallot.png",
     name: "Орден достопочтенного бюллетеня",
     description:
       "Украшен эмблемой Ордена достопочтенного бюллетеня, утвержденного министерством патриотического клуба для граждан, поклявшихся хранить святость голосования.",
@@ -278,8 +290,8 @@ export const capes = [
     warbondIcon: obtainingTypes[9].icon,
   },
   {
-    id: 24,
-    imagePath: "/static/Coats/CrimsonFangMarkImage.webp",
+    id: 25,
+    imagePath: "/static/capes/MarkOfTheCrimsonFang.png",
     name: "Маска багряного клыка",
     description:
       "Метка самых послушных из всех послушных тех, кто готов впиться в вены тирании и ввести сладкое противоядие Свободы.",
@@ -290,8 +302,8 @@ export const capes = [
     warbondIcon: obtainingTypes[10].icon,
   },
   {
-    id: 25,
-    imagePath: "/static/Coats/HangmanVeilImage.webp",
+    id: 26,
+    imagePath: "/static/capes/ExecutionerCanopy.png",
     name: "Покров палача",
     description:
       "Укрывает плечи тех, кто наносит последний и самый значимый удар Правосудия.",
@@ -302,8 +314,212 @@ export const capes = [
     warbondIcon: obtainingTypes[10].icon,
   },
   {
-    id: 26,
-    imagePath: "/static/Coats/FallenHeroRevengeImage.webp",
+    id: 27,
+    imagePath: "/static/capes/PurifyingEclipse.png",
+    name: "Месть павшего героя",
+    description:
+      "Наши павшие герои живут в этом плаще и направляют руку владельца в сердца их убийц.",
+    price: 0,
+    armorRating: 100,
+    speed: 100,
+    staminaRegen: 100,
+    warbondIcon: "",
+  },
+  {
+    id: 28,
+    imagePath: "/static/capes/TheBreach.png",
+    name: "Месть павшего героя",
+    description:
+      "Наши павшие герои живут в этом плаще и направляют руку владельца в сердца их убийц.",
+    price: 0,
+    armorRating: 100,
+    speed: 100,
+    staminaRegen: 100,
+    warbondIcon: "",
+  },
+  {
+    id: 29,
+    imagePath: "/static/capes/StandartOfSafeDistance.png",
+    name: "Месть павшего героя",
+    description:
+      "Наши павшие герои живут в этом плаще и направляют руку владельца в сердца их убийц.",
+    price: 0,
+    armorRating: 100,
+    speed: 100,
+    staminaRegen: 100,
+    warbondIcon: "",
+  },
+  {
+    id: 30,
+    imagePath: "/static/capes/PatientZeroRememberance.png",
+    name: "Месть павшего героя",
+    description:
+      "Наши павшие герои живут в этом плаще и направляют руку владельца в сердца их убийц.",
+    price: 0,
+    armorRating: 100,
+    speed: 100,
+    staminaRegen: 100,
+    warbondIcon: "",
+  },
+  {
+    id: 31,
+    imagePath: "/static/capes/PrideOfTheWhistleblower.png",
+    name: "Месть павшего героя",
+    description:
+      "Наши павшие герои живут в этом плаще и направляют руку владельца в сердца их убийц.",
+    price: 0,
+    armorRating: 100,
+    speed: 100,
+    staminaRegen: 100,
+    warbondIcon: "",
+  },
+  {
+    id: 32,
+    imagePath: "/static/capes/ProofOfTheFaultlessVirtue.png",
+    name: "Месть павшего героя",
+    description:
+      "Наши павшие герои живут в этом плаще и направляют руку владельца в сердца их убийц.",
+    price: 0,
+    armorRating: 100,
+    speed: 100,
+    staminaRegen: 100,
+    warbondIcon: "",
+  },
+  {
+    id: 33,
+    imagePath: "/static/capes/CoverOfDarkness.png",
+    name: "Месть павшего героя",
+    description:
+      "Наши павшие герои живут в этом плаще и направляют руку владельца в сердца их убийц.",
+    price: 0,
+    armorRating: 100,
+    speed: 100,
+    staminaRegen: 100,
+    warbondIcon: "",
+  },
+  {
+    id: 34,
+    imagePath: "/static/capes/RebarResolve.png",
+    name: "Месть павшего героя",
+    description:
+      "Наши павшие герои живут в этом плаще и направляют руку владельца в сердца их убийц.",
+    price: 0,
+    armorRating: 100,
+    speed: 100,
+    staminaRegen: 100,
+    warbondIcon: "",
+  },
+  {
+    id: 35,
+    imagePath: "/static/capes/HolderOfTheYellowLine.png",
+    name: "Месть павшего героя",
+    description:
+      "Наши павшие герои живут в этом плаще и направляют руку владельца в сердца их убийц.",
+    price: 0,
+    armorRating: 100,
+    speed: 100,
+    staminaRegen: 100,
+    warbondIcon: "",
+  },
+  {
+    id: 36,
+    imagePath: "/static/capes/StoneWroughtPerseverance.png",
+    name: "Месть павшего героя",
+    description:
+      "Наши павшие герои живут в этом плаще и направляют руку владельца в сердца их убийц.",
+    price: 0,
+    armorRating: 100,
+    speed: 100,
+    staminaRegen: 100,
+    warbondIcon: "",
+  },
+  {
+    id: 37,
+    imagePath: "/static/capes/StrengthInOurArms.png",
+    name: "Месть павшего героя",
+    description:
+      "Наши павшие герои живут в этом плаще и направляют руку владельца в сердца их убийц.",
+    price: 0,
+    armorRating: 100,
+    speed: 100,
+    staminaRegen: 100,
+    warbondIcon: "",
+  },
+  {
+    id: 38,
+    imagePath: "/static/capes/DefenderOfOurDream.png",
+    name: "Месть павшего героя",
+    description:
+      "Наши павшие герои живут в этом плаще и направляют руку владельца в сердца их убийц.",
+    price: 0,
+    armorRating: 100,
+    speed: 100,
+    staminaRegen: 100,
+    warbondIcon: "",
+  },
+  {
+    id: 39,
+    imagePath: "/static/capes/FreLiberam.png",
+    name: "Месть павшего героя",
+    description:
+      "Наши павшие герои живут в этом плаще и направляют руку владельца в сердца их убийц.",
+    price: 0,
+    armorRating: 100,
+    speed: 100,
+    staminaRegen: 100,
+    warbondIcon: "",
+  },
+  {
+    id: 40,
+    imagePath: "/static/capes/PerDemocrasum.png",
+    name: "Месть павшего героя",
+    description:
+      "Наши павшие герои живут в этом плаще и направляют руку владельца в сердца их убийц.",
+    price: 0,
+    armorRating: 100,
+    speed: 100,
+    staminaRegen: 100,
+    warbondIcon: "",
+  },
+  {
+    id: 41,
+    imagePath: "/static/capes/VisionOfFreedom.png",
+    name: "Месть павшего героя",
+    description:
+      "Наши павшие герои живут в этом плаще и направляют руку владельца в сердца их убийц.",
+    price: 0,
+    armorRating: 100,
+    speed: 100,
+    staminaRegen: 100,
+    warbondIcon: "",
+  },
+  {
+    id: 42,
+    imagePath: "/static/capes/EyeOfFreedom.png",
+    name: "Месть павшего героя",
+    description:
+      "Наши павшие герои живут в этом плаще и направляют руку владельца в сердца их убийц.",
+    price: 0,
+    armorRating: 100,
+    speed: 100,
+    staminaRegen: 100,
+    warbondIcon: "",
+  },
+  {
+    id: 43,
+    imagePath: "/static/capes/EmblemOfFreedom.png",
+    name: "Месть павшего героя",
+    description:
+      "Наши павшие герои живут в этом плаще и направляют руку владельца в сердца их убийц.",
+    price: 0,
+    armorRating: 100,
+    speed: 100,
+    staminaRegen: 100,
+    warbondIcon: "",
+  },
+  {
+    id: 44,
+    imagePath: "/static/capes/FallenHeroVengeneance.png",
     name: "Месть павшего героя",
     description:
       "Наши павшие герои живут в этом плаще и направляют руку владельца в сердца их убийц.",
