@@ -2,19 +2,19 @@ import React from "react";
 
 import { toSlug } from "@/utils/generalFunctions";
 
-import { armorKits } from "@/data/armor";
+import { capes } from "@/data/capes";
 
 import ThePageContent from "@/widgets/pageContents/ThePageContent";
-import TheSpecificArmorContent from "@/widgets/pageContents/TheSpecificArmorContent";
+import TheSpecificCapeContent from "@/widgets/pageContents/TheSpecificCapeContent";
 
 export function generateStaticParams() {
-  return armorKits.map((armor) => ({ armorName: toSlug(armor.devName) }));
+  return capes.map((cape) => ({ capeName: toSlug(cape.devName) }));
 }
 
 const Page = () => {
   return (
     <ThePageContent>
-      <TheSpecificArmorContent />
+      <TheSpecificCapeContent />
     </ThePageContent>
   );
 };

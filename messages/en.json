@@ -34,6 +34,9 @@
     "pageTitle": "capes",
     "pageDescription": "The cape is the adornment of the Helldiver. It is a distinctive sign that they are all heroes, and heroes can't help but wear capes. It is as important an attribute to any Helldiver as a hat is to every self-respecting cowboy. So wear your cape with honor and dignity, lest you dishonor your comrades, democracy, and Super Earth."
   },
+  "SpecificCapePage": {
+    "titles": "[\"PRICE:\",\"DESCRIPTION:\",\"ARMOR RATING:\",\"SPEED:\",\"STAMINA REGEN:\"]"
+  },
   "EnemiesPage": {
     "metadataTitle": "HELLDIVERS 2. Enemies: All factions and their characteristics",
     "metadataDescription": "A complete guide to the enemies in Helldivers 2. Learn weaknesses and tactics for fighting against Terminids, Automatons, and Illuminate. Prepare for battles with the enemies of democracy!"

@@ -1,0 +1,51 @@
+.capeInfoSection {
+    @apply relative w-[calc(100%-480px)] h-auto;
+}
+
+.capeInfoSection-top {
+    @apply relative flex items-center gap-x-[15px];
+}
+
+.capeInfoSection-top > h1 {
+    @apply text-theme text-[2.5rem] font-primary font-bold;
+}
+
+.capeInfoSection-top-right {
+    @apply flex items-center gap-x-[15px] mt-[11px] text-white font-primary;
+}
+
+.capeInfoSection-top-right-divider {
+    @apply text-[1.5rem] font-medium;
+}
+
+.capeInfoSection-top-right-text {
+    @apply text-[1.5rem] font-medium;
+}
+
+.capeInfoSection-mainInfoContainer {
+    @apply relative grid justify-items-start gap-y-[20px] mt-[30px] w-full h-auto;
+}
+
+.capeInfoSection-mainInfoContainer-blockWithNumber {
+    @apply flex items-center gap-x-[15px];
+}
+
+.capeInfoSection-mainInfoContainer-blockWithText {
+    @apply grid gap-y-[5px];
+}
+
+.blockTitle {
+    @apply text-theme text-[1.5rem] font-primary font-semibold;
+}
+
+.blockText {
+    @apply text-white text-[1.5rem] font-primary font-medium brightness-[0.7];
+}
+
+.blockWhiteText {
+    @apply text-white text-[1.5rem] font-primary font-medium;
+}
+
+.blockNumber {
+    @apply mt-[4px] text-white text-[1.625rem] font-secondary font-bold;
+}

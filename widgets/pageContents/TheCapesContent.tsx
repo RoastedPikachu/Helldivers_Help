@@ -30,7 +30,7 @@ const TheCoatsContent = () => {
             key={coat.id}
             id={coat.id}
             imagePath={coat.imagePath}
-            name={coat.name}
+            devName={coat.devName}
           />
         ))}
       </EntitySection>

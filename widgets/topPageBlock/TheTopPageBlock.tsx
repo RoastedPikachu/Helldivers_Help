@@ -3,22 +3,27 @@ import React, { useMemo } from "react";
 
 import { useParams, usePathname } from "next/navigation";
 
+import { useTranslations } from "next-intl";
+
 import { Observer, observer } from "mobx-react-lite";
+
+import { fromSlug, getIntlArray } from "@/utils/generalFunctions";
+
+import { weapons } from "@/data/weapons";
+import { armorKits } from "@/data/armor";
+import { capes } from "@/data/capes";
 
 import { mobileStore } from "@/store/MobileStore";
 
 import { Breadcrumb, ConfigProvider } from "antd";
+
+import Link from "next/link";
 
 import TheHeader from "@/widgets/header/TheHeader";
 
 import RunningLine from "@/shared/runningLine/RunningLine";
 
 import "./TheTopPageBlock.css";
-import Link from "next/link";
-import { fromSlug, getIntlArray } from "@/utils/generalFunctions";
-import { weapons } from "@/data/weapons";
-import { useTranslations } from "next-intl";
-import { armorKits } from "@/data/armor";
 
 const TheTopPageBlock = observer(() => {
   const pathname = usePathname();
@@ -33,6 +38,7 @@ const TheTopPageBlock = observer(() => {
   const t6 = useTranslations("PlayerCardsPage");
   const t7 = useTranslations("BoostersPage");
   const t8 = useTranslations("CapesPage");
+  const t9 = useTranslations("capes");
 
   const isRunningLineShowed = useMemo(() => {
     if (mobileStore.isMobileDevice) {
@@ -116,7 +122,11 @@ const TheTopPageBlock = observer(() => {
         ];
       }
 
-      if (pathname.includes("equipment") && Object.entries(params).length > 1) {
+      if (
+        pathname.includes("equipment") &&
+        pathname.includes("armor") &&
+        Object.entries(params).length > 1
+      ) {
         return [
           {
             title: (
@@ -136,6 +146,36 @@ const TheTopPageBlock = observer(() => {
                 (armor) =>
                   armor.devName.toLowerCase() ===
                   fromSlug(params.armorName as string),
+              )!.id - 1
+            ],
+          },
+        ];
+      }
+
+      if (
+        pathname.includes("equipment") &&
+        pathname.includes("capes") &&
+        Object.entries(params).length > 1
+      ) {
+        return [
+          {
+            title: (
+              <Link href={"/equipment"}>{t2("pageTitle").toUpperCase()}</Link>
+            ),
+          },
+          {
+            title: (
+              <Link href={"/equipment/capes"}>
+                {t8("pageTitle").toUpperCase()}
+              </Link>
+            ),
+          },
+          {
+            title: getIntlArray(t9("names"))[
+              capes.find(
+                (cape) =>
+                  cape.devName.toLowerCase() ===
+                  fromSlug(params.capeName as string),
               )!.id - 1
             ],
           },
