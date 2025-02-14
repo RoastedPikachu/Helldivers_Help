@@ -79,13 +79,15 @@ const WeaponInfoSection: React.FC<WeaponInfoSectionProps> = ({
           </p>
         </div>
 
-        <div className="weaponInfoSection-mainInfoContainer-blockWithNumber">
-          <h3 className="blockTitle">{getIntlArray(t1("titles"))[2]}</h3>
+        {currentWeapon && currentWeapon.damage && (
+          <div className="weaponInfoSection-mainInfoContainer-blockWithNumber">
+            <h3 className="blockTitle">{getIntlArray(t1("titles"))[2]}</h3>
 
-          <p className="blockNumber">
-            {currentWeapon ? currentWeapon.damage : "Weapon damage"}
-          </p>
-        </div>
+            <p className="blockNumber">
+              {currentWeapon ? currentWeapon.damage : "Weapon damage"}
+            </p>
+          </div>
+        )}
 
         {currentWeapon && currentWeapon.roundsPerMag && (
           <div className="weaponInfoSection-mainInfoContainer-blockWithNumber">
