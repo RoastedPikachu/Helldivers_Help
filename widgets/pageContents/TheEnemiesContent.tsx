@@ -10,9 +10,8 @@ import Link from "next/link";
 import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 
-const TheEquipmentContent = () => {
-  const t = useTranslations("EquipmentPage");
-
+const TheEnemiesContent = () => {
+  const t = useTranslations("EnemiesPage");
   return (
     <main>
       <ThePageTitle title={t("pageTitle")} additionalTitle={""} />
@@ -20,42 +19,42 @@ const TheEquipmentContent = () => {
       <PageDescription description={t("pageDescription")} />
 
       <section className="relative grid gap-x-[20px] grid-cols-3 mt-[30px]">
-        <Link href={"/equipment/armor"}>
-          <div className="relative flex justify-between items-center py-[10px] px-[20px] w-auto h-auto bg-[url('/static/EquipmentBackground.png')] bg-cover border-2 border-theme rounded-[10px] duration-300 ease-in-out hover:brightness-[1.15]">
+        <Link href={"/enemies/terminids"}>
+          <div className="relative flex justify-between items-center py-[10px] px-[20px] w-auto h-auto bg-[url('/static/EnemyBackground.png')] bg-cover border-2 border-theme rounded-[10px] duration-300 ease-in-out hover:brightness-[1.15]">
             <p className="mt-[-5px] text-white text-[2rem] font-primary font-bold">
               {getIntlArray(t("links"))[0]}
             </p>
 
             <img
-              src={"/static/ArmorIcon.svg"}
+              src={"/static/TerminidsIcon.svg"}
               alt=""
               className="w-[52px] h-[52px]"
             />
           </div>
         </Link>
 
-        <Link href={"/equipment/boosters"}>
-          <div className="relative flex justify-between items-center py-[10px] px-[20px] w-auto h-auto bg-[url('/static/EquipmentBackground.png')] bg-cover border-2 border-theme rounded-[10px] duration-300 ease-in-out hover:brightness-[1.15]">
+        <Link href={"/enemies/automatons"}>
+          <div className="relative flex justify-between items-center py-[10px] px-[20px] w-auto h-auto bg-[url('/static/EnemyBackground.png')] bg-cover border-2 border-theme rounded-[10px] duration-300 ease-in-out hover:brightness-[1.15]">
             <p className="mt-[-5px] text-white text-[2rem] font-primary font-bold">
               {getIntlArray(t("links"))[1]}
             </p>
 
             <img
-              src={"/static/BoosterIcon.png"}
+              src={"/static/AutomatonsIcon.svg"}
               alt=""
               className="w-[52px] h-[52px]"
             />
           </div>
         </Link>
 
-        <Link href={"/equipment/capes"}>
-          <div className="relative flex justify-between items-center py-[10px] px-[20px] w-auto h-auto bg-[url('/static/EquipmentBackground.png')] bg-cover border-2 border-theme rounded-[10px] duration-300 ease-in-out hover:brightness-[1.15]">
+        <Link href={"/enemies/illuminates"}>
+          <div className="relative flex justify-between items-center py-[10px] px-[20px] w-auto h-auto bg-[url('/static/EnemyBackground.png')] bg-cover border-2 border-theme rounded-[10px] duration-300 ease-in-out hover:brightness-[1.15]">
             <p className="mt-[-5px] text-white text-[2rem] font-primary font-bold">
               {getIntlArray(t("links"))[2]}
             </p>
 
             <img
-              src={"/static/CapeIcon.svg"}
+              src={"/static/IlluminatesIcon.svg"}
               alt=""
               className="w-[52px] h-[52px]"
             />
@@ -66,4 +65,4 @@ const TheEquipmentContent = () => {
   );
 };
 
-export default TheEquipmentContent;
+export default TheEnemiesContent;

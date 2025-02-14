@@ -39,7 +39,10 @@
   },
   "EnemiesPage": {
     "metadataTitle": "HELLDIVERS 2. Enemies: All factions and their characteristics",
-    "metadataDescription": "A complete guide to the enemies in Helldivers 2. Learn weaknesses and tactics for fighting against Terminids, Automatons, and Illuminate. Prepare for battles with the enemies of democracy!"
+    "metadataDescription": "A complete guide to the enemies in Helldivers 2. Learn weaknesses and tactics for fighting against Terminids, Automatons, and Illuminate. Prepare for battles with the enemies of democracy!",
+    "pageTitle": "enemies",
+    "pageDescription": "This bestiary reveals the truth about the horrors that threaten Super Earth and its ideals! You'll find detailed information about every enemy you'll face in the never-ending struggle for democracy.",
+    "links": "[\"Terminids\",\"Automatons\",\"Illuminates\"]"
   },
   "MissionsPage": {
     "metadataTitle": "HELLDIVERS 2: Missions",

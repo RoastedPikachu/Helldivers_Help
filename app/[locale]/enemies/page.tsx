@@ -4,7 +4,7 @@ import { getTranslations } from "next-intl/server";
 
 import ThePageContent from "@/widgets/pageContents/ThePageContent";
 
-import TheBreadcrumbs from "@/shared/breadcrumbs/TheBreadcrumbs";
+import TheEnemiesContent from "@/widgets/pageContents/TheEnemiesContent";
 
 export async function generateMetadata({ params: { locale } }: any) {
   const t = await getTranslations("EnemiesPage");
@@ -18,7 +18,7 @@ export async function generateMetadata({ params: { locale } }: any) {
 const Page = () => {
   return (
     <ThePageContent>
-      <TheBreadcrumbs />
+      <TheEnemiesContent />
     </ThePageContent>
   );
 };
