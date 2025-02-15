@@ -7,7 +7,7 @@ import { enemiesStore } from "@/store/EnemiesStore";
 import { toSlug } from "@/utils/generalFunctions";
 
 import ThePageContent from "@/widgets/pageContents/ThePageContent";
-import TheEnemyContent from "@/widgets/pageContents/enemyContent/TheEnemyContent";
+import TheSpecificEnemyContent from "@/widgets/pageContents/TheSpecificEnemyContent";
 
 import "./EnemyAdditionalInfo.css";
 
@@ -28,7 +28,7 @@ export function generateStaticParams() {
 const Page: React.FC<{ params: any }> = ({ params }) => {
   return (
     <ThePageContent>
-      <TheEnemyContent />
+      <TheSpecificEnemyContent />
     </ThePageContent>
   );
 };

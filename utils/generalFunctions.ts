@@ -1,5 +1,3 @@
-import { enemiesStore } from "@/store/EnemiesStore";
-
 export function getRandomEntityInArray(entities: any, currentEntity: any) {
   let nextEntity = entities[Math.floor(Math.random() * entities.length)];
 
@@ -56,12 +54,6 @@ export const simulateKeyPress = (keyCode: number) => {
   });
 
   document.dispatchEvent(event);
-};
-
-export const getEnemyFractionPageLink = () => {
-  return enemiesStore.currentEnemy.fraction === "Терминиды"
-    ? "/enemy/terminids"
-    : "/enemy/automatons";
 };
 
 export const getUserLocale = () => {

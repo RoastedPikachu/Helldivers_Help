@@ -1,23 +1,33 @@
 import React from "react";
 
-import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
 import ThePageContent from "@/widgets/pageContents/ThePageContent";
 import TheEnemyFractionContent from "@/widgets/pageContents/TheEnemyFractionContent";
 
 export function generateStaticParams() {
-  return [{ fractionName: "terminids" }, { fractionName: "automatons" }];
+  return [
+    { fractionName: "terminids" },
+    { fractionName: "automatons" },
+    { fractionName: "illuminates" },
+  ];
 }
 
-export const metadata: Metadata = {
-  title: `HELLDIVERS 2: Фракции`,
-  description: "",
-};
+export async function generateMetadata({
+  params: { locale, fractionName },
+}: any) {
+  const t = await getTranslations(fractionName);
 
-const Page: React.FC<{ params: any }> = ({ params }) => {
+  return {
+    title: t("metadataTitle"),
+    description: t("metadataDescription"),
+  };
+}
+
+const Page = () => {
   return (
     <ThePageContent>
-      <TheEnemyFractionContent searchbarParams={params} />
+      <TheEnemyFractionContent />
     </ThePageContent>
   );
 };

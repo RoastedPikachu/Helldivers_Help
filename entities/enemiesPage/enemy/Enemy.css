@@ -1,3 +1,0 @@
-.rootWidgetLink {
-    @apply relative grid justify-items-center px-[30px] mlarge:px-[15px] py-[30px] mlarge:py-[15px] w-full h-auto mlarge:h-[290px] mmedium:h-[270px] msmall:h-[250px] bg-[#00293a] border-2 border-[--theme-color] rounded-[10px] overflow-hidden cursor-pointer;
-}

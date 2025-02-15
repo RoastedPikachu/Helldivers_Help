@@ -1,4 +1,31 @@
 {
+  "FractionsPage": {
+    "metadataTitle": "HELLDIVERS 2: Factions",
+    "metadataDescription": "In the eternal struggle for democracy, the Helldivers face a host of terrible foes who are members of one faction or another, each with their own unique adversaries, traits, and goals. Learn more about those who threaten Super Earth and its ideals!"
+  },
+  "terminids": {
+    "metadataTitle": "HELLDIVERS 2: Terminids",
+    "metadataDescription": "In a battle against the Terminids, the Helldivers must be prepared for danger at any moment. These insect-like creatures: swift hunters, fierce warriors, cunning stalkers, terrible bile spewers - each has its own set of deadly techniques.",
+    "pageTitle": "terminids",
+    "pageDescription": "In a battle with the Terminids, the Helldivers must be ready for danger at a moment's notice. These insect-like creatures: swift Hunters, fierce Warriors, cunning Stalkers, terrible Bile Spewers - each has its own set of deadly techniques.",
+    "pageAdditionalDescription": "Bile Spewers and Chargers a special threat, and Brood Commanders and Bile Titans require powerful weaponry and elaborate tactics to kill them.",
+    "names": "[\"Scavenger\",\"Bile Spitter\",\"Pouncer\",\"Shrieker\",\"Hunter\",\"Warrior\",\"Bile Warrior\",\"Hive Guard\",\"Stalker\",\"Brood Commander\",\"Nursing Spewer\",\"Bile Spewer\",\"Charger\",\"Charger Behemoth\",\"Spore Charger\",\"Impaler\",\"Bile Titan\"]"
+  },
+  "automatons": {
+    "metadataTitle": "HELLDIVERS 2: Automatons",
+    "metadataDescription": "The Automatons epitomize a threat to the entire democratic world, representing a fearsome force on the battlefield. From the lumbering monster Hulk to the weak and archaic Tank, the Automatons are a technological power in need of freedom.",
+    "pageTitle": "automatons",
+    "pageDescription": "The Automatons epitomize a threat to all democratic humanity, representing a fearsome force on the battlefield. From the lumbering monster Hulk to the weak and archaic Tank, the Automatons are a technological power in need of freedom.",
+    "pageAdditionalDescription": "To counter the threat posed by the automatons, the Helldivers must capitalize on their inherent weaknesses and exploit their vulnerabilities at every opportunity. Defeating the mechanical horde can be accomplished with the right strategy, determination, different tactics, and powerful weaponry.",
+    "names": "[\"Trooper\",\"Commissar\",\"Jet Brigade Trooper\",\"Berserker\",\"Scout Strider\",\"Reinforced Scout Strider\",\"Devastator\",\"Heavy Devastator\",\"Rocket Devastator\",\"Annihilator Tank\",\"Barrager Tank\",\"Schredder Tank\",\"Factory Strider\",\"Gunship\",\"Dropship\"]"
+  },
+  "illuminates": {
+    "metadataTitle": "HELLDIVERS 2: Illuminates",
+    "metadataDescription": "The Illuminates personify a new threat to every inhabitant of the galaxy, posing a menace we have never before encountered. These squid-like creatures undermine peaceful existence from within, turning fine citizens into votelesses. Hideous overseers and watchers patrol and ravage cities founded on democratic principles, and deadly harvesters kill anyone caught in their wiping ray.",
+    "pageDescription": "",
+    "pageAdditionalDescription": "",
+    "names": "[\"Voteless\",\"Watcher\",\"Overseer\",\"Elevated Overseer\",\"Harvester\"]"
+  },
   "EquipmentPage": {
     "metadataTitle": "HELLDIVERS 2: Equipment",
     "metadataDescription": "Helldiver equipment is the key to survival and success in every mission. Armor protects, boosters give you a tactical advantage, and the right cape accentuates your personality on the battlefield.",

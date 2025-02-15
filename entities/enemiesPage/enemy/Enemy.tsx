@@ -1,74 +1,48 @@
 "use client";
 import React from "react";
 
+import { useParams } from "next/navigation";
+
+import { useTranslations } from "next-intl";
+
+import { getIntlArray, toSlug } from "@/utils/generalFunctions";
+
 import Link from "next/link";
 
-import { enemiesStore } from "@/store/EnemiesStore";
-
-import {
-  getSpecificAutomatonStyle,
-  getSpecificTerminidStyle,
-} from "@/utils/enemyTypeFunctions";
-import { toSlug } from "@/utils/generalFunctions";
-
-import "./Enemy.css";
+import "./enemy.css";
 
 interface EnemyTypeProps {
   id: number;
-  iconPath: string;
-  imageStyleScale: string;
+  imagePath: string;
   fraction: string;
-  imagePlugStyles: string;
-  title: string;
-  engTitle: string;
+  devName: string;
 }
 
-const Enemy: React.FC<EnemyTypeProps> = ({
-  id,
-  iconPath,
-  imageStyleScale,
-  imagePlugStyles,
-  fraction,
-  title,
-  engTitle,
-}) => {
-  const getEnemyFraction = () => {
-    return fraction === "Терминиды" ? "terminids" : "automatons";
-  };
+const Enemy: React.FC<EnemyTypeProps> = ({ id, imagePath, devName }) => {
+  const params = useParams();
 
-  const handleCurrentEnemyTypeChange = () => {
-    fraction === "Терминиды"
-      ? enemiesStore.changeCurrentEnemy(
-          enemiesStore.terminids.find((enemy) => enemy.id === id)!,
-        )
-      : enemiesStore.changeCurrentEnemy(
-          enemiesStore.automatons.find((enemy) => enemy.id === id)!,
-        );
+  const t = useTranslations(params.fractionName);
+
+  const getEnemyBackground = () => {
+    switch (params.fractionName) {
+      case "terminids":
+        return "bg-[url('/static/terminids/TerminidsBackground.webp')]";
+      case "automatons":
+        return "bg-[url('/static/automatons/AutomatonsBackground.webp')]";
+      case "illuminates":
+        return "bg-[url('/static/illuminates/IlluminatesBackground.webp')]";
+    }
   };
   return (
     <Link
-      href={`/enemy/${getEnemyFraction()}/${toSlug(engTitle)}`}
-      onClick={() => handleCurrentEnemyTypeChange()}
-      className="rootWidgetLink"
+      href={`/enemy/${params.fractionName}/${toSlug(devName)}`}
+      className="enemy"
     >
-      {iconPath ? (
-        <img
-          src={`${iconPath}`}
-          alt=""
-          style={{ transform: imageStyleScale }}
-          className={`w-[200px] mlarge:w-[180px] mmedium:w-[160px] msmall:w-[140px] h-[300px] mlarge:h-[235px] mmedium:h-[215px] msmall:h-[195px] ${fraction === "Автоматоны" ? getSpecificAutomatonStyle(id) : getSpecificTerminidStyle(id)}`}
-        />
-      ) : (
-        <p
-          className={`${imagePlugStyles} text-[#2cc388] text-center font-['Insignia'] font-bold`}
-        >
-          ?
-        </p>
-      )}
+      <div className={`enemyCard ${getEnemyBackground()}`}>
+        <img src={`${imagePath}`} alt="" />
+      </div>
 
-      <p className="mt-[20px] mlarge:mt-[-5px] mmedium:mt-[-5px] msmall:mt-0 text-[#ffffff] text-[1.75rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] text-center font-['Exo2'] font-bold">
-        {title}
-      </p>
+      <p className="enemy-text">{getIntlArray(t("names" as never))[id - 1]}</p>
     </Link>
   );
 };

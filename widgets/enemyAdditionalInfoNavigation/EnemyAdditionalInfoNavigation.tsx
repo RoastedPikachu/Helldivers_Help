@@ -4,11 +4,7 @@ import Link from "next/link";
 
 import { observer, Observer } from "mobx-react-lite";
 
-import { enemiesStore } from "@/store/EnemiesStore";
-
-import { Enemy } from "@/utils/generalInterfaces";
-
-import { getEnemyFractionPageLink, toSlug } from "@/utils/generalFunctions";
+import { toSlug } from "@/utils/generalFunctions";
 
 import "./EnemyAdditionalInfoNavigation.css";
 

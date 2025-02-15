@@ -1,0 +1,19 @@
+.enemy {
+    @apply relative grid justify-items-center gap-y-[10px] w-full h-auto;
+}
+
+.enemyCard {
+    @apply w-full h-auto max-h-[280px] bg-cover border-2 border-theme rounded-[10px] overflow-hidden duration-300 ease-in-out;
+}
+
+.enemyCard > img {
+    @apply w-full h-[280px] bg-cover;
+}
+
+.enemyCard:hover {
+    @apply brightness-[1.15];
+}
+
+.enemy-text {
+    @apply w-auto max-w-[calc(100%-20px)] mlarge:max-w-[calc(100%-10px)] text-theme text-[1.125rem] mlarge:text-[0.9rem] mmedium:text-[0.775rem] msmall:text-[0.675rem] text-center font-ru-primary font-bold;
+}
