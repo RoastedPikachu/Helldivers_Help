@@ -191,11 +191,16 @@ export const playerCards = [
   {
     id: 38,
     image: "/static/playerCards/ServantsOfFreedom1.webp",
-    price: 0,
+    price: 2,
   },
   {
     id: 39,
     image: "/static/playerCards/ServantsOfFreedom2.webp",
-    price: 0,
+    price: 6,
+  },
+  {
+    id: 40,
+    image: "/static/playerCards/SuperStore3.webp",
+    price: 35,
   },
 ] as PlayerCard[];
