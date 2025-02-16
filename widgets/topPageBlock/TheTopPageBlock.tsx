@@ -194,7 +194,7 @@ const TheTopPageBlock = observer(() => {
           {
             title: (
               <Link href={"/customization"}>
-                {`${t2("pageTitle")} ${t2("pageAdditionalTitle")}`.toUpperCase()}
+                {`${t2("pageTitle")}`.toUpperCase()}
               </Link>
             ),
           },
