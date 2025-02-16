@@ -14,6 +14,7 @@ import { mobileStore } from "@/store/MobileStore";
 import MobileHeaderContent from "@/widgets/mobileHeaderContent/MobileHeaderContent";
 
 import "./TheHeader.css";
+import { getIntlArray } from "@/utils/generalFunctions";
 
 const TheHeader = observer(() => {
   const t = useTranslations("Header");
@@ -44,22 +45,18 @@ const TheHeader = observer(() => {
 
                 <nav className="headerNavBlock">
                   <Link href="/news" className="headerNavBlock_Link mr-[50px]">
-                    {t("Link1")}
-                  </Link>
-
-                  <Link href="/code" className="headerNavBlock_Link mr-[50px]">
-                    {t("Link2")}
+                    {getIntlArray(t("links"))[0]}
                   </Link>
 
                   <Link href="/war" className="headerNavBlock_Link mr-[50px]">
-                    {t("Link3")}
+                    {getIntlArray(t("links"))[1]}
                   </Link>
 
                   <Link
                     href="/stratagemTraining"
                     className="headerNavBlock_Link col-span-2"
                   >
-                    {t("Link4")}
+                    {getIntlArray(t("links"))[2]}
                   </Link>
                 </nav>
               </header>

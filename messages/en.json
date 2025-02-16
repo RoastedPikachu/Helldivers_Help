@@ -235,10 +235,7 @@
     "names": "[\"Trivial\",\"Easy\",\"Medium\",\"Challenging\",\"Hard\",\"Extreme\",\"Suicide Mission\",\"Impossible\",\"Helldive\",\"Super Helldive\"]"
   },
   "Header": {
-    "Link1": "News",
-    "Link2": "CODE",
-    "Link3": "GALAXY WAR",
-    "Link4": "STRATAGEM TRAINING"
+    "links": "[\"NEWS\",\"GALAXY WAR\",\"STRATAGEM TRAINING\"]"
   },
   "Footer": {
     "firstLinkTitle": "LINKS",
