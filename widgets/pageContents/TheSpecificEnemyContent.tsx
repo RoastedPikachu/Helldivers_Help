@@ -15,8 +15,6 @@ import Link from "next/link";
 
 import EnemyInfoSection from "@/widgets/enemy/enemyInfoSection/EnemyInfoSection";
 
-import "./enemyContent/TheEnemyContent.css";
-
 const TheSpecificEnemyContent = () => {
   const params = useParams();
 

@@ -1,8 +1,8 @@
 import React from "react";
 
-import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
-import { toSlug } from "@/utils/generalFunctions";
+import { fromSlug, getIntlArray, toSlug } from "@/utils/generalFunctions";
 
 import { terminids } from "@/data/enemies/terminids";
 import { automatons } from "@/data/enemies/automatons";
@@ -13,10 +13,41 @@ import TheSpecificEnemyContent from "@/widgets/pageContents/TheSpecificEnemyCont
 
 import "./EnemyAdditionalInfo.css";
 
-export const metadata: Metadata = {
-  title: `HELLDIVERS 2: Противник`,
-  description: "",
+const getCorrectEnemyArray = (fractionName: string) => {
+  switch (fractionName) {
+    case "terminids":
+      return terminids;
+    case "automatons":
+      return automatons;
+    case "illuminates":
+      return illuminates;
+  }
 };
+
+export async function generateMetadata({
+  params: { locale, fractionName, enemyName },
+}: any) {
+  const t = await getTranslations(fractionName);
+
+  return {
+    title: `HELLDIVERS 2: ${
+      getIntlArray(t("names"))[
+        getCorrectEnemyArray(fractionName)!.find(
+          (enemy) =>
+            enemy.devName.toLowerCase() === fromSlug(enemyName as string),
+        ).id - 1
+      ]
+    }`,
+    description: `HELLDIVERS 2: ${
+      getIntlArray(t("descriptions"))[
+        getCorrectEnemyArray(fractionName)!.find(
+          (enemy) =>
+            enemy.devName.toLowerCase() === fromSlug(enemyName as string),
+        ).id - 1
+      ]
+    }`,
+  };
+}
 
 const getEnemyFractionName = (fractionIndex: number) => {
   switch (fractionIndex) {

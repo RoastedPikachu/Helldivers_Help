@@ -19,8 +19,8 @@ export async function generateMetadata({
   const t = await getTranslations(fractionName);
 
   return {
-    title: t("metadataTitle"),
-    description: t("metadataDescription"),
+    title: `HELLDIVERS 2: ${t("metadataTitle")}`,
+    description: `HELLDIVERS 2: ${t("metadataDescription")}`,
   };
 }
 
