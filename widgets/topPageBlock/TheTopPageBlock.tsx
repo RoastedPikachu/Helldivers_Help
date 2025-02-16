@@ -24,6 +24,9 @@ import TheHeader from "@/widgets/header/TheHeader";
 import RunningLine from "@/shared/runningLine/RunningLine";
 
 import "./TheTopPageBlock.css";
+import { terminids } from "@/data/enemies/terminids";
+import { automatons } from "@/data/enemies/automatons";
+import { illuminates } from "@/data/enemies/illuminates";
 
 const TheTopPageBlock = observer(() => {
   const pathname = usePathname();
@@ -39,6 +42,7 @@ const TheTopPageBlock = observer(() => {
   const t7 = useTranslations("BoostersPage");
   const t8 = useTranslations("CapesPage");
   const t9 = useTranslations("capes");
+  const t10 = useTranslations("EnemiesPage");
 
   const isRunningLineShowed = useMemo(() => {
     if (mobileStore.isMobileDevice) {
@@ -197,6 +201,64 @@ const TheTopPageBlock = observer(() => {
           {
             title:
               `${t6("pageTitle")} ${t6("pageAdditionalTitle")}`.toUpperCase(),
+          },
+        ];
+      }
+
+      if (
+        pathname.includes("enemies") &&
+        Object.entries(params).length > 1 &&
+        Object.entries(params).length < 3
+      ) {
+        const t11 = useTranslations(params.fractionName);
+
+        return [
+          {
+            title: (
+              <Link href={"/enemies"}>{t10("pageTitle").toUpperCase()}</Link>
+            ),
+          },
+          {
+            title: t11("pageTitle" as never).toUpperCase(),
+          },
+        ];
+      }
+
+      if (pathname.includes("enemies") && Object.entries(params).length === 3) {
+        const t11 = useTranslations(params.fractionName);
+
+        const getCorrectEnemyArray = () => {
+          switch (params.fractionName) {
+            case "terminids":
+              return terminids;
+            case "automatons":
+              return automatons;
+            case "illuminates":
+              return illuminates;
+          }
+        };
+
+        return [
+          {
+            title: (
+              <Link href={"/enemies"}>{t10("pageTitle").toUpperCase()}</Link>
+            ),
+          },
+          {
+            title: (
+              <Link href={`/enemies/${params.fractionName}`}>
+                {t11("pageTitle" as never).toUpperCase()}
+              </Link>
+            ),
+          },
+          {
+            title: getIntlArray(t11("names" as never))[
+              getCorrectEnemyArray()!.find(
+                (enemy) =>
+                  enemy.devName.toLowerCase() ===
+                  fromSlug(params.enemyName as string),
+              )!.id - 1
+            ],
           },
         ];
       }
