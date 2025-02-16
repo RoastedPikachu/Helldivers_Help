@@ -14,7 +14,6 @@ import "./enemy.css";
 interface EnemyTypeProps {
   id: number;
   imagePath: string;
-  fraction: string;
   devName: string;
 }
 
@@ -35,7 +34,7 @@ const Enemy: React.FC<EnemyTypeProps> = ({ id, imagePath, devName }) => {
   };
   return (
     <Link
-      href={`/enemy/${params.fractionName}/${toSlug(devName)}`}
+      href={`/enemies/${params.fractionName}/${toSlug(devName)}`}
       className="enemy"
     >
       <div className={`enemyCard ${getEnemyBackground()}`}>

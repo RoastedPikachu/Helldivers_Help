@@ -5,7 +5,6 @@ import { useParams } from "next/navigation";
 
 import { useTranslations } from "next-intl";
 
-import { fractions } from "@/data/fractions";
 import { terminids } from "@/data/enemies/terminids";
 import { automatons } from "@/data/enemies/automatons";
 import { illuminates } from "@/data/enemies/illuminates";
@@ -30,7 +29,6 @@ const TheEnemyFractionContent = () => {
             key={enemy.id}
             id={enemy.id}
             imagePath={enemy.imagePath}
-            fraction={fractions["2"]}
             devName={enemy.devName}
           />
         ));
@@ -40,7 +38,6 @@ const TheEnemyFractionContent = () => {
             key={enemy.id}
             id={enemy.id}
             imagePath={enemy.imagePath}
-            fraction={fractions["2"]}
             devName={enemy.devName}
           />
         ));
@@ -50,7 +47,6 @@ const TheEnemyFractionContent = () => {
             key={enemy.id}
             id={enemy.id}
             imagePath={enemy.imagePath}
-            fraction={fractions["3"]}
             devName={enemy.devName}
           />
         ));
