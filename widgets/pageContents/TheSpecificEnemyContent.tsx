@@ -46,7 +46,7 @@ const TheSpecificEnemyContent = () => {
     }
   };
 
-  const getPreviousEnemyName = () => {
+  const getPreviousEnemyLink = () => {
     if (Object.entries(currentEnemy).length) {
       const enemyArr = getCorrectEnemyArray()!.filter(
         (enemy) => enemy.typeIndex === currentEnemy.typeIndex,
@@ -66,7 +66,7 @@ const TheSpecificEnemyContent = () => {
     return "";
   };
 
-  const getNextEnemyName = () => {
+  const getNextEnemyLink = () => {
     if (Object.entries(currentEnemy).length) {
       const enemyArr = getCorrectEnemyArray()!.filter(
         (enemy) => enemy.typeIndex === currentEnemy.typeIndex,
@@ -81,6 +81,50 @@ const TheSpecificEnemyContent = () => {
       }
 
       return enemyArr.find((enemy, index) => index === targetIndex)!.devName;
+    }
+
+    return "";
+  };
+
+  const getPreviousEnemyName = () => {
+    if (Object.entries(currentEnemy).length) {
+      const enemyArr = getCorrectEnemyArray()!.filter(
+        (enemy) => enemy.typeIndex === currentEnemy.typeIndex,
+      );
+
+      let targetIndex: number;
+
+      if (enemyArr.indexOf(currentEnemy) - 1 < 0) {
+        targetIndex = enemyArr.length - 1;
+      } else {
+        targetIndex = enemyArr.indexOf(currentEnemy) - 1;
+      }
+
+      return getIntlArray(t("names" as never))[
+        enemyArr.find((enemy, index) => index === targetIndex)!.id - 1
+      ];
+    }
+
+    return "";
+  };
+
+  const getNextEnemyName = () => {
+    if (Object.entries(currentEnemy).length) {
+      const enemyArr = getCorrectEnemyArray()!.filter(
+        (enemy) => enemy.typeIndex === currentEnemy.typeIndex,
+      );
+
+      let targetIndex: number;
+
+      if (enemyArr.indexOf(currentEnemy) + 1 === enemyArr.length) {
+        targetIndex = 0;
+      } else {
+        targetIndex = enemyArr.indexOf(currentEnemy) + 1;
+      }
+
+      return getIntlArray(t("names" as never))[
+        enemyArr.find((enemy, index) => index === targetIndex)!.id - 1
+      ];
     }
 
     return "";
@@ -128,7 +172,7 @@ const TheSpecificEnemyContent = () => {
 
       <div className="col-span-3 flex justify-between items-center mt-[50px] mlarge:mt-[30px] h-[55px]">
         <Link
-          href={`/enemies/${params.fractionName}/${toSlug(getPreviousEnemyName())}`}
+          href={`/enemies/${params.fractionName}/${toSlug(getPreviousEnemyLink())}`}
           className="flex items-center py-[7.5px] mlarge:py-[5px] px-[25px] mlarge:px-[10px] mlarge:w-[42.5%] msmall:max-w-[calc(42.5%+10px)] mlarge:h-[60px] bg-primary-bg border-2 border-theme rounded-[10px]"
         >
           <img
@@ -143,7 +187,7 @@ const TheSpecificEnemyContent = () => {
         </Link>
 
         <Link
-          href={`/enemies/${params.fractionName}/${toSlug(getNextEnemyName())}`}
+          href={`/enemies/${params.fractionName}/${toSlug(getNextEnemyLink())}`}
           className="flex items-center py-[7.5px] mlarge:py-[5px] px-[25px] mlarge:px-[10px] mlarge:w-[42.5%] msmall:max-w-[calc(42.5%+10px)] mlarge:h-[60px] bg-primary-bg border-2 border-theme rounded-[10px]"
         >
           <p className="mlarge:w-full text-theme text-[1.375rem] mlarge:text-[1rem] mmedium:text-[0.875rem] font-primary font-semibold mr-[10px] mlarge:mr-[5px] mlarge:text-left">

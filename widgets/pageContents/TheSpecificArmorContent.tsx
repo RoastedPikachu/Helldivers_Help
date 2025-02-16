@@ -12,6 +12,7 @@ import { armorKits } from "@/data/armor";
 import Link from "next/link";
 
 import ArmorInfoSection from "@/widgets/armor/armorInfoSection/ArmorInfoSection";
+import { capes } from "@/data/capes";
 
 const TheSpecificArmorContent = () => {
   const params = useParams();
@@ -20,7 +21,7 @@ const TheSpecificArmorContent = () => {
 
   const [currentArmor, setCurrentArmor] = useState({} as any);
 
-  const getPreviousArmorName = () => {
+  const getPreviousArmorLink = () => {
     if (Object.entries(currentArmor).length) {
       const armorArr = armorKits.filter(
         (armor) => armor.typeIndex === currentArmor.typeIndex,
@@ -40,7 +41,7 @@ const TheSpecificArmorContent = () => {
     return "";
   };
 
-  const getNextArmorName = () => {
+  const getNextArmorLink = () => {
     if (Object.entries(currentArmor).length) {
       const armorArr = armorKits.filter(
         (armor) => armor.typeIndex === currentArmor.typeIndex,
@@ -55,6 +56,50 @@ const TheSpecificArmorContent = () => {
       }
 
       return armorArr.find((armor, index) => index === targetIndex)!.devName;
+    }
+
+    return "";
+  };
+
+  const getPreviousArmorName = () => {
+    if (Object.entries(currentArmor).length) {
+      const armorArr = armorKits.filter(
+        (armor) => armor.typeIndex === currentArmor.typeIndex,
+      );
+
+      let targetIndex: number;
+
+      if (armorArr.indexOf(currentArmor) - 1 < 0) {
+        targetIndex = armorArr.length - 1;
+      } else {
+        targetIndex = armorArr.indexOf(currentArmor) - 1;
+      }
+
+      return getIntlArray(t("names" as never))[
+        armorArr.find((armor, index) => index === targetIndex)!.id - 1
+      ];
+    }
+
+    return "";
+  };
+
+  const getNextArmorName = () => {
+    if (Object.entries(currentArmor).length) {
+      const armorArr = armorKits.filter(
+        (armor) => armor.typeIndex === currentArmor.typeIndex,
+      );
+
+      let targetIndex: number;
+
+      if (armorArr.indexOf(currentArmor) + 1 === armorArr.length) {
+        targetIndex = 0;
+      } else {
+        targetIndex = armorArr.indexOf(currentArmor) + 1;
+      }
+
+      return getIntlArray(t("names" as never))[
+        armorArr.find((armor, index) => index === targetIndex)!.id - 1
+      ];
     }
 
     return "";
@@ -96,7 +141,7 @@ const TheSpecificArmorContent = () => {
 
       <div className="col-span-3 flex justify-between items-center mt-[50px] mlarge:mt-[30px] h-[55px]">
         <Link
-          href={`/equipment/armor/${toSlug(getPreviousArmorName())}`}
+          href={`/equipment/armor/${toSlug(getPreviousArmorLink())}`}
           className="flex items-center py-[7.5px] mlarge:py-[5px] px-[25px] mlarge:px-[10px] mlarge:w-[42.5%] msmall:max-w-[calc(42.5%+10px)] mlarge:h-[60px] bg-primary-bg border-2 border-theme rounded-[10px]"
         >
           <img
@@ -111,7 +156,7 @@ const TheSpecificArmorContent = () => {
         </Link>
 
         <Link
-          href={`/equipment/armor/${toSlug(getNextArmorName())}`}
+          href={`/equipment/armor/${toSlug(getNextArmorLink())}`}
           className="flex items-center py-[7.5px] mlarge:py-[5px] px-[25px] mlarge:px-[10px] mlarge:w-[42.5%] msmall:max-w-[calc(42.5%+10px)] mlarge:h-[60px] bg-primary-bg border-2 border-theme rounded-[10px]"
         >
           <p className="mlarge:w-full text-theme text-[1.375rem] mlarge:text-[1rem] mmedium:text-[0.875rem] font-primary font-semibold mr-[10px] mlarge:mr-[5px] mlarge:text-left">

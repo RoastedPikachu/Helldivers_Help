@@ -20,7 +20,7 @@ const TheSpecificCapeContent = () => {
 
   const [currentCape, setCurrentCape] = useState({} as any);
 
-  const getPreviousCapeName = () => {
+  const getPreviousCapeLink = () => {
     if (Object.entries(currentCape).length) {
       let targetIndex: number;
 
@@ -36,7 +36,7 @@ const TheSpecificCapeContent = () => {
     return "";
   };
 
-  const getNextCapeName = () => {
+  const getNextCapeLink = () => {
     if (Object.entries(currentCape).length) {
       let targetIndex: number;
 
@@ -47,6 +47,42 @@ const TheSpecificCapeContent = () => {
       }
 
       return capes.find((cape, index) => index === targetIndex)!.devName;
+    }
+
+    return "";
+  };
+
+  const getPreviousCapeName = () => {
+    if (Object.entries(currentCape).length) {
+      let targetIndex: number;
+
+      if (capes.indexOf(currentCape) - 1 < 0) {
+        targetIndex = capes.length - 1;
+      } else {
+        targetIndex = capes.indexOf(currentCape) - 1;
+      }
+
+      return getIntlArray(t("names" as never))[
+        capes.find((cape, index) => index === targetIndex)!.id - 1
+      ];
+    }
+
+    return "";
+  };
+
+  const getNextCapeName = () => {
+    if (Object.entries(currentCape).length) {
+      let targetIndex: number;
+
+      if (capes.indexOf(currentCape) + 1 === capes.length) {
+        targetIndex = 0;
+      } else {
+        targetIndex = capes.indexOf(currentCape) + 1;
+      }
+
+      return getIntlArray(t("names" as never))[
+        capes.find((cape, index) => index === targetIndex)!.id - 1
+      ];
     }
 
     return "";
@@ -84,7 +120,7 @@ const TheSpecificCapeContent = () => {
 
       <div className="col-span-3 flex justify-between items-center mt-[50px] mlarge:mt-[30px] h-[55px]">
         <Link
-          href={`/equipment/capes/${toSlug(getPreviousCapeName())}`}
+          href={`/equipment/capes/${toSlug(getPreviousCapeLink())}`}
           className="flex items-center py-[7.5px] mlarge:py-[5px] px-[25px] mlarge:px-[10px] mlarge:w-[42.5%] msmall:max-w-[calc(42.5%+10px)] mlarge:h-[60px] bg-primary-bg border-2 border-theme rounded-[10px]"
         >
           <img
@@ -99,7 +135,7 @@ const TheSpecificCapeContent = () => {
         </Link>
 
         <Link
-          href={`/equipment/capes/${toSlug(getNextCapeName())}`}
+          href={`/equipment/capes/${toSlug(getNextCapeLink())}`}
           className="flex items-center py-[7.5px] mlarge:py-[5px] px-[25px] mlarge:px-[10px] mlarge:w-[42.5%] msmall:max-w-[calc(42.5%+10px)] mlarge:h-[60px] bg-primary-bg border-2 border-theme rounded-[10px]"
         >
           <p className="mlarge:w-full text-theme text-[1.375rem] mlarge:text-[1rem] mmedium:text-[0.875rem] font-primary font-semibold mr-[10px] mlarge:mr-[5px] mlarge:text-left">

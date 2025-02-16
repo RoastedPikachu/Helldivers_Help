@@ -21,7 +21,7 @@ const TheSpecificWeaponContent = () => {
 
   const [currentWeapon, setCurrentWeapon] = useState({} as any);
 
-  const getPreviousWeaponName = () => {
+  const getPreviousWeaponLink = () => {
     if (Object.entries(currentWeapon).length) {
       const weaponArr = weapons.filter(
         (weapon) => weapon.typeIndex === currentWeapon.typeIndex,
@@ -41,7 +41,7 @@ const TheSpecificWeaponContent = () => {
     return "";
   };
 
-  const getNextWeaponName = () => {
+  const getNextWeaponLink = () => {
     if (Object.entries(currentWeapon).length) {
       const weaponArr = weapons.filter(
         (weapon) => weapon.typeIndex === currentWeapon.typeIndex,
@@ -56,6 +56,50 @@ const TheSpecificWeaponContent = () => {
       }
 
       return weaponArr.find((weapon, index) => index === targetIndex)!.devName;
+    }
+
+    return "";
+  };
+
+  const getPreviousWeaponName = () => {
+    if (Object.entries(currentWeapon).length) {
+      const weaponArr = weapons.filter(
+        (weapon) => weapon.typeIndex === currentWeapon.typeIndex,
+      );
+
+      let targetIndex: number;
+
+      if (weaponArr.indexOf(currentWeapon) === 0) {
+        targetIndex = weaponArr.length - 1;
+      } else {
+        targetIndex = weaponArr.indexOf(currentWeapon) - 1;
+      }
+
+      return getIntlArray(t("names" as never))[
+        weaponArr.find((weapon, index) => index === targetIndex)!.id - 1
+      ];
+    }
+
+    return "";
+  };
+
+  const getNextWeaponName = () => {
+    if (Object.entries(currentWeapon).length) {
+      const weaponArr = weapons.filter(
+        (weapon) => weapon.typeIndex === currentWeapon.typeIndex,
+      );
+
+      let targetIndex: number;
+
+      if (weaponArr.indexOf(currentWeapon) + 1 === weaponArr.length) {
+        targetIndex = 0;
+      } else {
+        targetIndex = weaponArr.indexOf(currentWeapon) + 1;
+      }
+
+      return getIntlArray(t("names" as never))[
+        weaponArr.find((weapon, index) => index === targetIndex)!.id - 1
+      ];
     }
 
     return "";
@@ -98,7 +142,7 @@ const TheSpecificWeaponContent = () => {
 
       <div className="col-span-3 flex justify-between items-center mt-[50px] mlarge:mt-[30px] h-[55px]">
         <Link
-          href={`/weaponry/${toSlug(getPreviousWeaponName())}`}
+          href={`/weaponry/${toSlug(getPreviousWeaponLink())}`}
           className="flex items-center py-[7.5px] mlarge:py-[5px] px-[25px] mlarge:px-[10px] mlarge:w-[42.5%] msmall:max-w-[calc(42.5%+10px)] mlarge:h-[60px] bg-primary-bg border-2 border-theme rounded-[10px]"
         >
           <img
@@ -113,7 +157,7 @@ const TheSpecificWeaponContent = () => {
         </Link>
 
         <Link
-          href={`/weaponry/${toSlug(getNextWeaponName())}`}
+          href={`/weaponry/${toSlug(getNextWeaponLink())}`}
           className="flex items-center py-[7.5px] mlarge:py-[5px] px-[25px] mlarge:px-[10px] mlarge:w-[42.5%] msmall:max-w-[calc(42.5%+10px)] mlarge:h-[60px] bg-primary-bg border-2 border-theme rounded-[10px]"
         >
           <p className="mlarge:w-full text-theme text-[1.375rem] mlarge:text-[1rem] mmedium:text-[0.875rem] font-primary font-semibold mr-[10px] mlarge:mr-[5px] mlarge:text-left">
