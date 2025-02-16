@@ -11,11 +11,11 @@
 }
 
 .newsItem-head {
-    @apply relative flex justify-between items-center mb-[20px] w-full h-[30px];
+    @apply relative flex justify-between items-center mb-[20px] w-full h-[30px] overflow-hidden;
 }
 
 .newsItem-head-title {
-    @apply h-[40px] text-white text-[1.5rem] font-semibold duration-300 ease-in-out;
+    @apply max-w-[85%] h-[40px] text-white text-[1.5rem] font-semibold duration-300 ease-in-out;
 }
 
 .newsItem-head-date {

@@ -1,4 +1,9 @@
+"use client";
 import React from "react";
+
+import { useTranslations } from "next-intl";
+
+import { getIntlArray } from "@/utils/generalFunctions";
 
 import Link from "next/link";
 
@@ -6,18 +11,17 @@ import "./newsItem.css";
 
 interface NewsItemProps {
   id: number;
-  title: string;
-  createdAt: string;
+  createdAt: Date;
   cover: string;
 }
 
-const NewsItem: React.FC<NewsItemProps> = ({ id, title, createdAt, cover }) => {
-  const formatDate = () => {
-    const date = new Date(createdAt);
+const NewsItem: React.FC<NewsItemProps> = ({ id, createdAt, cover }) => {
+  const t = useTranslations("news");
 
-    const day = date.getDate();
-    const month = date.getMonth();
-    const year = date.getFullYear();
+  const formatDate = () => {
+    const day = createdAt.getDate();
+    const month = createdAt.getMonth();
+    const year = createdAt.getFullYear();
 
     const monthNames = [
       "января",
@@ -42,12 +46,14 @@ const NewsItem: React.FC<NewsItemProps> = ({ id, title, createdAt, cover }) => {
     <Link href={`/news/${id}`}>
       <div className="newsItem">
         <span className="newsItem-head">
-          <h4 className="newsItem-head-title">{title}</h4>
+          <h4 className="newsItem-head-title">
+            {getIntlArray(t("titles"))[id - 1]}
+          </h4>
 
           <p className="newsItem-head-date">{formatDate()}</p>
         </span>
 
-        <img src={cover} alt={title} className="newsItem-cover" />
+        <img src={cover} alt={""} className="newsItem-cover" />
       </div>
     </Link>
   );

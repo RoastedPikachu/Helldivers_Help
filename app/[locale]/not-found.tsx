@@ -1,10 +1,11 @@
 "use client";
 import React from "react";
 
+import { useTranslations } from "next-intl";
+
 import Link from "next/link";
 
 import "./NotFoundPage.css";
-import { useTranslations } from "next-intl";
 
 const NotFound = () => {
   const t = useTranslations("NotFoundPage");

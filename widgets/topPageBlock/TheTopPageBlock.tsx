@@ -12,6 +12,10 @@ import { fromSlug, getIntlArray } from "@/utils/generalFunctions";
 import { weapons } from "@/data/weapons";
 import { armorKits } from "@/data/armor";
 import { capes } from "@/data/capes";
+import { terminids } from "@/data/enemies/terminids";
+import { automatons } from "@/data/enemies/automatons";
+import { illuminates } from "@/data/enemies/illuminates";
+import { news } from "@/data/news";
 
 import { mobileStore } from "@/store/MobileStore";
 
@@ -24,9 +28,6 @@ import TheHeader from "@/widgets/header/TheHeader";
 import RunningLine from "@/shared/runningLine/RunningLine";
 
 import "./TheTopPageBlock.css";
-import { terminids } from "@/data/enemies/terminids";
-import { automatons } from "@/data/enemies/automatons";
-import { illuminates } from "@/data/enemies/illuminates";
 
 const TheTopPageBlock = observer(() => {
   const pathname = usePathname();
@@ -43,6 +44,8 @@ const TheTopPageBlock = observer(() => {
   const t8 = useTranslations("CapesPage");
   const t9 = useTranslations("capes");
   const t10 = useTranslations("EnemiesPage");
+  const t12 = useTranslations("NewsPage");
+  const t13 = useTranslations("news");
 
   const isRunningLineShowed = useMemo(() => {
     if (mobileStore.isMobileDevice) {
@@ -258,6 +261,20 @@ const TheTopPageBlock = observer(() => {
                   enemy.devName.toLowerCase() ===
                   fromSlug(params.enemyName as string),
               )!.id - 1
+            ],
+          },
+        ];
+      }
+
+      if (pathname.includes("news") && Object.entries(params).length > 1) {
+        return [
+          {
+            title: <Link href={"/news"}>{t12("pageTitle").toUpperCase()}</Link>,
+          },
+          {
+            title: getIntlArray(t13("titles" as never))[
+              news!.find((newsItem) => newsItem.id === Number(params.id))!.id -
+                1
             ],
           },
         ];

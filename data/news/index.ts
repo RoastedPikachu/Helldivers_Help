@@ -1,0 +1,74 @@
+export const news = [
+  {
+    id: 1,
+    typeIndex: 0,
+    createdAt: new Date("12.13.2024"),
+    cover: "/static/newsCovers/OmensOfTyranny.webp",
+  },
+  {
+    id: 2,
+    typeIndex: 0,
+    createdAt: new Date("12.13.2024"),
+    cover: "/static/newsCovers/OmensOfTyranny.webp",
+  },
+  {
+    id: 3,
+    typeIndex: 0,
+    createdAt: new Date("12.13.2024"),
+    cover: "/static/newsCovers/UrbanLegends.webp",
+  },
+  {
+    id: 4,
+    typeIndex: 0,
+    createdAt: new Date("12.17.2024"),
+    cover: "/static/newsCovers/OmensOfTyranny.webp",
+  },
+  {
+    id: 5,
+    typeIndex: 0,
+    createdAt: new Date("12.18.2024"),
+    cover: "/static/newsCovers/OmensOfTyranny.webp",
+  },
+  {
+    id: 6,
+    typeIndex: 0,
+    createdAt: new Date("12.18.2024"),
+    cover: "/static/newsCovers/Killzone.webp",
+  },
+  {
+    id: 7,
+    typeIndex: 0,
+    createdAt: new Date("01.14.2025"),
+    cover: "/static/newsCovers/OmensOfTyranny.webp",
+  },
+  {
+    id: 8,
+    typeIndex: 0,
+    createdAt: new Date("02.04.2025"),
+    cover: "/static/newsCovers/OmensOfTyranny.webp",
+  },
+  {
+    id: 9,
+    typeIndex: 0,
+    createdAt: new Date("02.04.2025"),
+    cover: "/static/newsCovers/ServantsOfFreedom.webp",
+  },
+  {
+    id: 10,
+    typeIndex: 0,
+    createdAt: new Date("02.11.2025"),
+    cover: "/static/newsCovers/OmensOfTyranny.webp",
+  },
+  {
+    id: 11,
+    typeIndex: 0,
+    createdAt: new Date("02.12.2025"),
+    cover: "/static/newsCovers/OmensOfTyranny.webp",
+  },
+  {
+    id: 12,
+    typeIndex: 1,
+    createdAt: new Date("12.13.2025"),
+    cover: "/static/newsCovers/SiteUpdate.webp",
+  },
+];
