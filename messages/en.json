@@ -1,4 +1,10 @@
 {
+  "NotFoundPage": {
+    "pageTitle": "Oops!",
+    "errorText": "Error",
+    "pageDescription": "It looks like the page you were looking for was not found.",
+    "linkText": "Back to main page"
+  },
   "FractionsPage": {
     "metadataTitle": "HELLDIVERS 2: Factions",
     "metadataDescription": "In the eternal struggle for democracy, the Helldivers face a host of terrible foes who are members of one faction or another, each with their own unique adversaries, traits, and goals. Learn more about those who threaten Super Earth and its ideals!"
