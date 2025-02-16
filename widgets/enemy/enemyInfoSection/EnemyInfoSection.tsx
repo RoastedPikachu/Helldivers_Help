@@ -44,10 +44,10 @@ const EnemyInfoSection: React.FC<EnemyInfoSectionProps> = ({
           </p>
         </div>
 
-        <div className="enemyInfoSection-mainInfoContainer-blockWithNumber">
+        <div className="enemyInfoSection-mainInfoContainer-blockWithText">
           <h3 className="blockTitle">{getIntlArray(t1("titles"))[0]}</h3>
 
-          <p className="blockNumber">
+          <p className="blockText">
             {
               getIntlArray(t("tactics" as never))[
                 currentEnemy ? currentEnemy.id - 1 : 0
