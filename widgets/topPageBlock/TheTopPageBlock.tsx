@@ -304,7 +304,7 @@ const TheTopPageBlock = observer(() => {
           >
             <Breadcrumb
               items={getItems()}
-              className="topPageSection-breadcrumb"
+              className={`topPageSection-breadcrumb ${pathname.includes("news") ? "ml-[calc((100%-900px)/2)] w-[900px]" : "deskWide:ml-[calc((100%-1440px)/2)] w-full"}`}
             />
           </ConfigProvider>
         </section>
