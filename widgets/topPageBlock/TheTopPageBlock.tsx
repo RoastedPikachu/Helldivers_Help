@@ -284,10 +284,31 @@ const TheTopPageBlock = observer(() => {
   return (
     <Observer>
       {() => (
-        <section className="topPageSection">
-          <TheHeader />
+        <>
+          <section className="topPageSection">
+            <TheHeader />
 
-          {isRunningLineShowed && <RunningLine />}
+            {isRunningLineShowed && <RunningLine />}
+
+            <ConfigProvider
+              theme={{
+                components: {
+                  Breadcrumb: {
+                    itemColor: "#9e9e9e",
+                    linkColor: "#9e9e9e",
+                    linkHoverColor: "#ffffff",
+                    lastItemColor: "#ffffff",
+                    separatorColor: "#ffffff",
+                  },
+                },
+              }}
+            >
+              <Breadcrumb
+                items={getItems()}
+                className={`topPageSection-breadcrumb mt-[20px] ${pathname.includes("news") ? "ml-[calc((100%-900px)/2)] w-[900px]" : "deskWide:ml-[calc((100%-1440px)/2)] w-full"} desktop`}
+              />
+            </ConfigProvider>
+          </section>
 
           <ConfigProvider
             theme={{
@@ -304,10 +325,10 @@ const TheTopPageBlock = observer(() => {
           >
             <Breadcrumb
               items={getItems()}
-              className={`topPageSection-breadcrumb ${pathname.includes("news") ? "ml-[calc((100%-900px)/2)] w-[900px]" : "deskWide:ml-[calc((100%-1440px)/2)] w-full"}`}
+              className={`topPageSection-breadcrumb pt-[135px] mobile`}
             />
           </ConfigProvider>
-        </section>
+        </>
       )}
     </Observer>
   );

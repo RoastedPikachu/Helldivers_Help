@@ -32,7 +32,7 @@ const TheSpecificNewsContent = () => {
       <img
         src={currentNews ? currentNews.cover : ""}
         alt={""}
-        className="mt-[20px] w-full h-[450px] border-[2px] border-[--color-theme] rounded-[10px] object-cover duration-300 ease-in-out overflow-hidden"
+        className="mt-[20px] w-full h-[450px] border-[2px] border-theme rounded-[10px] object-cover duration-300 ease-in-out overflow-hidden"
       />
 
       <p

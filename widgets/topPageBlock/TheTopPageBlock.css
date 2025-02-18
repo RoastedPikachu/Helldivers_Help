@@ -3,5 +3,5 @@
 }
 
 .topPageSection-breadcrumb {
-    @apply mt-[20px] max-w-[1440px] text-[1.25rem] font-primary;
+    @apply relative mlarge:mx-[5%] mlarge:w-[90%] max-w-[1440px] text-[1.25rem] mlarge:text-[0.975rem] mmedium:text-[0.875rem] msmall:text-[0.75rem] font-primary;
 }

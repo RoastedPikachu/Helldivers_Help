@@ -51,7 +51,7 @@ const ArmorInfoSection: React.FC<ArmorInfoSectionProps> = ({
                 <img
                   src="/static/Resources/MedalIcon.svg"
                   alt=""
-                  className="w-[30px] h-[30px]"
+                  className="w-[30px] mmedium:w-[25px] msmall:w-[20px] h-[30px] mmedium:h-[25px] msmall:h-[20px]"
                 />
               ) : (
                 currentArmor &&
@@ -59,7 +59,7 @@ const ArmorInfoSection: React.FC<ArmorInfoSectionProps> = ({
                   <img
                     src="/static/Resources/SuperCreditIcon.svg"
                     alt=""
-                    className="w-[30px] h-[30px]"
+                    className="w-[30px] mmedium:w-[25px] msmall:w-[20px] h-[30px] mmedium:h-[25px] msmall:h-[20px]"
                   />
                 )
               )}
@@ -82,19 +82,27 @@ const ArmorInfoSection: React.FC<ArmorInfoSectionProps> = ({
         <div className="armorInfoSection-mainInfoContainer-blockWithText">
           <h3 className="blockTitle">{getIntlArray(t1("titles"))[2]}</h3>
 
-          <div className="relative flex items-center gap-x-[20px]">
-            <img
-              src={currentArmor ? currentArmor.bonus?.icon : ""}
-              alt={
-                currentArmor
+          <div className="relative flex mlarge:block items-center gap-x-[20px]">
+            <div className="flex items-center gap-x-[10px] mlarge:mt-[5px] mlarge:mb-[10px]">
+              <img
+                src={currentArmor ? currentArmor.bonus?.icon : ""}
+                alt={
+                  currentArmor
+                    ? getIntlArray(t2("names"))[currentArmor.bonus?.id - 1]
+                    : "Armor effect"
+                }
+                className="w-[110px] mlarge:w-[40px] h-[110px] mlarge:h-[40px]"
+              />
+
+              <p className="blockWhiteText mobile">
+                {currentArmor
                   ? getIntlArray(t2("names"))[currentArmor.bonus?.id - 1]
-                  : "Armor effect"
-              }
-              className="w-[110px] h-[110px]"
-            />
+                  : "Armor effect"}
+              </p>
+            </div>
 
             <div>
-              <p className="blockWhiteText">
+              <p className="blockWhiteText desktop">
                 {currentArmor
                   ? getIntlArray(t2("names"))[currentArmor.bonus?.id - 1]
                   : "Armor effect"}

@@ -53,6 +53,10 @@ main {
   @apply mt-[10px] mlarge:mt-[145px] deskWide:ml-[calc((100%-1440px)/2)] pb-[100px] mlarge:pb-[30px] px-[5%] deskWide:px-0 w-full max-w-[1440px] h-auto min-h-[780px] mlarge:min-h-[700px] msmall:min-h-[600px] overflow-hidden;
 }
 
+.mainWithBreadcrumb {
+  @apply mlarge:mt-[20px];
+}
+
 .pageTitle {
   @apply text-theme text-[2.5rem] mlarge:text-[1.75rem] mmedium:text-[1.625rem] msmall:text-[1.5rem] font-primary font-bold;
 }
