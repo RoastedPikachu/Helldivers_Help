@@ -122,7 +122,7 @@ const TheSpecificArmorContent = () => {
             alt={
               getIntlArray(t("names"))[currentArmor ? currentArmor.id - 1 : 0]
             }
-            className="w-full h-[calc(100vw/0.53)]"
+            className="w-full h-[calc((100vw-10%)/0.53)]"
           />
         </div>
 

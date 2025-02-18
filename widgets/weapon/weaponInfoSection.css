@@ -1,29 +1,29 @@
 .weaponInfoSection {
-    @apply relative w-[calc(100%-480px)] h-auto;
+    @apply relative w-[calc(100%-480px)] mlarge:w-full h-auto;
 }
 
 .weaponInfoSection-top {
-    @apply relative flex items-center gap-x-[15px];
+    @apply relative flex items-center gap-x-[15px] mlarge:gap-x-[10px] mmedium:gap-x-[5px] mlarge:mt-[10px];
 }
 
 .weaponInfoSection-top > h1 {
-    @apply text-theme text-[2.5rem] font-primary font-bold;
+    @apply text-theme text-[2.5rem] mlarge:text-[1.375rem] mmedium:text-[1.25rem] msmall:text-[1.125rem] font-primary font-bold;
 }
 
 .weaponInfoSection-top-right {
-    @apply flex items-center gap-x-[15px] mt-[11px] text-white font-primary;
+    @apply flex items-center gap-x-[15px] mlarge:gap-x-[10px] mmedium:gap-x-[5px] mt-[11px] mlarge:mt-[2px] mmedium:mt-[4px] msmall:mt-[2px] text-white font-primary;
 }
 
 .weaponInfoSection-top-right-divider {
-    @apply text-[1.5rem] font-medium;
+    @apply text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-medium;
 }
 
 .weaponInfoSection-top-right-text {
-    @apply text-[1.5rem] font-medium;
+    @apply text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-medium;
 }
 
 .weaponInfoSection-mainInfoContainer {
-    @apply relative grid justify-items-start gap-y-[20px] mt-[30px] w-full h-auto;
+    @apply relative grid justify-items-start gap-y-[20px] mlarge:gap-y-[10px] msmall:gap-y-[5px] mt-[30px] mlarge:mt-[15px] msmall:mt-[5px] w-full h-auto;
 }
 
 .weaponInfoSection-mainInfoContainer-blockWithNumber {
@@ -35,17 +35,17 @@
 }
 
 .blockTitle {
-    @apply text-theme text-[1.5rem] font-primary font-semibold;
+    @apply text-theme text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-primary font-semibold;
 }
 
 .blockText {
-    @apply text-white text-[1.5rem] font-primary font-medium brightness-[0.7];
+    @apply text-white text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-primary font-medium brightness-[0.7];
 }
 
 .blockWhiteText {
-    @apply text-white text-[1.5rem] font-primary font-medium;
+    @apply text-white text-[1.5rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-primary font-medium;
 }
 
 .blockNumber {
-    @apply mt-[4px] text-white text-[1.625rem] font-secondary font-bold;
+    @apply mt-[4px] mlarge:mt-[2px] text-white text-[1.625rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-secondary font-bold;
 }

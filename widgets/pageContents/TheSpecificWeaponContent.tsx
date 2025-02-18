@@ -117,7 +117,7 @@ const TheSpecificWeaponContent = () => {
   return (
     <main className="relative h-auto">
       <section className="flex mlarge:block items-start gap-x-[120px]">
-        <div className="w-[80%] h-[300px] border-2 border-theme rounded-[12.5px] overflow-hidden mobile">
+        <div className="w-full h-[calc((100vw-10%)*2)] border-2 border-theme rounded-[12.5px] overflow-hidden mobile">
           <img
             src={currentWeapon ? currentWeapon.imagePath : ""}
             alt={
