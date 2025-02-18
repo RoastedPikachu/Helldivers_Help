@@ -2,8 +2,8 @@
     @apply relative mt-[-20px] w-[calc(100%-450px)] h-auto;
 }
 
-.galaxyMap_Wrapper {
-    @apply relative flex justify-center items-center mt-[25px] w-full h-[600px] mlarge:h-[90vw] bg-[#000000] border-2 border-[#2cc388] rounded-t-[10px] overflow-hidden;
+.galaxyMap-wrapper {
+    @apply relative flex justify-center items-center mt-[25px] w-full h-[600px] mlarge:h-[90vw] bg-[#000000] border-2 border-theme rounded-t-[10px] overflow-hidden;
 }
 
 .galaxyMap_Wrapper_BlankBlock {
@@ -11,7 +11,7 @@
 }
 
 .galaxyMap_Wrapper_BlankBlock_Text {
-    @apply text-[#ffffff] text-[3rem] font-[--font-primary] font-semibold;
+    @apply text-white text-[3rem] font-primary font-semibold;
 }
 
 .galaxyMap_Wrapper_BlankBlock_Icon {

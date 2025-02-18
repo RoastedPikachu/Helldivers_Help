@@ -3,11 +3,11 @@
 }
 
 .emote-contentContainer {
-    @apply relative w-full h-[390px] mlarge:h-[280px] mmedium:h-[260px] msmall:h-[220px] bg-cover border-2 border-theme rounded-[10px] overflow-hidden;
+    @apply relative w-full h-[440px] mlarge:h-[280px] mmedium:h-[260px] msmall:h-[220px] object-cover border-2 border-theme rounded-[10px] overflow-hidden;
 }
 
 .emote-contentContainer-video {
-    @apply min-w-full min-h-full;
+    @apply w-full h-full object-fill;
 }
 
 .emote-contentContainer-priceBlock {

@@ -25,7 +25,7 @@ const TheEmotesContent = () => {
 
       <EntitySection
         title={""}
-        gridStyles={"mt-[50px] mlarge:mt-[30px] grid-cols-5 mlarge:grid-cols-2"}
+        gridStyles={"mt-[50px] mlarge:mt-[30px] grid-cols-4 mlarge:grid-cols-2"}
       >
         {emotes
           .filter((emote) => emote.type === "emote")
