@@ -60,7 +60,7 @@ const TheEnemyFractionContent = () => {
 
       <PageDescription description={t("pageAdditionalDescription" as never)} />
 
-      <section className="pageGridSection grid-cols-4 mlarge:grid-cols-1 mt-[50px] mlarge:mt-[30px]">
+      <section className="pageGridSection grid-cols-4 mlarge:grid-cols-2 mt-[50px] mlarge:mt-[30px]">
         {getEnemyArray()}
       </section>
     </main>

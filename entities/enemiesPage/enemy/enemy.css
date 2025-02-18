@@ -7,7 +7,7 @@
 }
 
 .enemyCard > img {
-    @apply w-full h-[280px] bg-cover;
+    @apply w-full h-[280px] mlarge:h-[calc((100vw*0.41)*0.93)] bg-cover;
 }
 
 .enemyCard:hover {
