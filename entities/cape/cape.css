@@ -1,5 +1,5 @@
 .capeWidget {
-    @apply relative grid justify-items-center gap-y-[10px] w-full h-[500px];
+    @apply relative grid justify-items-center gap-y-[10px] w-full h-[500px] mlarge:h-[360px] mmedium:h-[340px] msmall:h-[310px];
 }
 
 .capeWidgetCard {
