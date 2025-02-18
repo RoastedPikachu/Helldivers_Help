@@ -147,10 +147,10 @@ const TheSpecificArmorContent = () => {
           <img
             src="/static/GeneralIcons/LeftArrowIcon.svg"
             alt=""
-            className="mlarge:w-[35px] mmedium:w-[32.5px] msmall:w-[30px] mlarge:h-[35px] mmedium:h-[32.5px] msmall:h-[30px]"
+            className="mlarge:absolute mlarge:w-[35px] mmedium:w-[32.5px] msmall:w-[30px] mlarge:h-[35px] mmedium:h-[32.5px] msmall:h-[30px]"
           />
 
-          <p className="mlarge:w-full text-theme text-[1.375rem] mlarge:text-[1rem] mmedium:text-[0.825rem] font-primary font-semibold ml-[10px] mlarge:ml-[5px] mlarge:text-right">
+          <p className="mlarge:w-full text-theme text-[1.375rem] mlarge:text-[0.975rem] mmedium:text-[0.825rem] font-primary font-semibold ml-[10px] mlarge:ml-[5px] mlarge:text-right">
             {getPreviousArmorName()}
           </p>
         </Link>
@@ -159,14 +159,14 @@ const TheSpecificArmorContent = () => {
           href={`/equipment/armor/${toSlug(getNextArmorLink())}`}
           className="flex items-center py-[7.5px] mlarge:py-[5px] px-[25px] mlarge:px-[10px] mlarge:w-[47.5%] msmall:max-w-[calc(42.5%+10px)] mlarge:h-[60px] bg-primary-bg border-2 border-theme rounded-[10px]"
         >
-          <p className="mlarge:w-full text-theme text-[1.375rem] mlarge:text-[1rem] mmedium:text-[0.825rem] font-primary font-semibold mr-[10px] mlarge:mr-[5px] mlarge:text-left">
+          <p className="mlarge:w-full text-theme text-[1.375rem] mlarge:text-[0.975rem] mmedium:text-[0.825rem] font-primary font-semibold mr-[10px] mlarge:mr-[5px] mlarge:text-left">
             {getNextArmorName()}
           </p>
 
           <img
             src="/static/GeneralIcons/LeftArrowIcon.svg"
             alt=""
-            className="mlarge:w-[35px] mmedium:w-[32.5px] msmall:w-[30px] mlarge:h-[35px] mmedium:h-[32.5px] msmall:h-[30px] rotate-180"
+            className="mlarge:absolute right-[30px] mlarge:w-[35px] mmedium:w-[32.5px] msmall:w-[30px] mlarge:h-[35px] mmedium:h-[32.5px] msmall:h-[30px] rotate-180"
           />
         </Link>
       </div>
