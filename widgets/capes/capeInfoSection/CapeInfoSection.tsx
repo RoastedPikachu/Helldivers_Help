@@ -37,7 +37,7 @@ const CapeInfoSection: React.FC<CapeInfoSectionProps> = ({ currentCape }) => {
                 <img
                   src="/static/Resources/MedalIcon.svg"
                   alt=""
-                  className="w-[30px] h-[30px]"
+                  className="w-[30px] mmedium:w-[25px] msmall:w-[20px] h-[30px] mmedium:h-[25px] msmall:h-[20px]"
                 />
               ) : (
                 currentCape &&
@@ -45,7 +45,7 @@ const CapeInfoSection: React.FC<CapeInfoSectionProps> = ({ currentCape }) => {
                   <img
                     src="/static/Resources/SuperCreditIcon.svg"
                     alt=""
-                    className="w-[30px] h-[30px]"
+                    className="w-[30px] mmedium:w-[25px] msmall:w-[20px] h-[30px] mmedium:h-[25px] msmall:h-[20px]"
                   />
                 )
               )}
