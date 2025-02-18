@@ -46,8 +46,8 @@ const ArmorKit: React.FC<ArmorKitProps> = ({
             <Image
               src={bonus?.icon}
               alt={bonus?.name}
-              width={40}
-              height={40}
+              width={0}
+              height={0}
               className="armorKitCard-bonusIcon"
             />
           </Tooltip>

@@ -1,5 +1,5 @@
 .armorKit {
-    @apply relative grid justify-items-center gap-y-[10px] w-full h-[500px];
+    @apply relative grid justify-items-center gap-y-[10px] w-full h-[500px] mlarge:h-[360px] mmedium:h-[340px] msmall:h-[310px];
 }
 
 .armorKitCard {
@@ -11,7 +11,7 @@
 }
 
 .armorKitCard-bonusIcon {
-    @apply absolute top-[15px] left-[15px];
+    @apply absolute top-[15px] mlarge:top-[10px] left-[15px] mlarge:left-[10px] w-[40px] mlarge:w-[30px] mmedium:w-[27.5px] msmall:w-[25px] h-[40px] mlarge:h-[30px] mmedium:h-[27.5px] msmall:h-[25px];
 }
 
 .armorKitCard-image {
