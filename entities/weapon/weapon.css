@@ -11,5 +11,5 @@
 }
 
 .weaponWidget-text {
-    @apply text-theme text-[1.25rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] text-left font-ru-primary font-bold brightness-125;
+    @apply text-theme text-[1.25rem] mlarge:text-[0.9rem] mmedium:text-[0.825rem] msmall:text-[0.75rem] text-center font-ru-primary font-bold brightness-125;
 }

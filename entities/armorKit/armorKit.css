@@ -19,5 +19,5 @@
 }
 
 .armorKit-text {
-    @apply w-auto max-w-[calc(100%-20px)] mlarge:max-w-[calc(100%-10px)] text-theme text-[1.125rem] mlarge:text-[0.9rem] mmedium:text-[0.775rem] msmall:text-[0.675rem] text-center font-ru-primary font-bold;
+    @apply w-auto max-w-[calc(100%-20px)] mlarge:max-w-[calc(100%-10px)] text-theme text-[1.125rem] mlarge:text-[0.9rem] mmedium:text-[0.825rem] msmall:text-[0.75rem] text-center font-ru-primary font-bold;
 }
