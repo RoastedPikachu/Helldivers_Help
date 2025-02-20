@@ -53,7 +53,7 @@ const TheHeader = observer(() => {
                   </Link>
 
                   <Link
-                    href="/stratagemTraining"
+                    href="/stratagemtraining"
                     className="headerNavBlock_Link col-span-2"
                   >
                     {getIntlArray(t("links"))[2]}

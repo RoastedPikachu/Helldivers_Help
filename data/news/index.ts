@@ -67,6 +67,18 @@ export const news = [
   },
   {
     id: 12,
+    typeIndex: 0,
+    createdAt: new Date("02.18.2025"),
+    cover: "/static/newsCovers/OmensOfTyranny.webp",
+  },
+  {
+    id: 13,
+    typeIndex: 0,
+    createdAt: new Date("02.19.2025"),
+    cover: "/static/newsCovers/OmensOfTyranny.webp",
+  },
+  {
+    id: 14,
     typeIndex: 1,
     createdAt: new Date("12.13.2025"),
     cover: "/static/newsCovers/SiteUpdate.webp",

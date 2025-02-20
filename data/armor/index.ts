@@ -77,7 +77,7 @@ export const armorKits: ArmorKit[] = [
   },
   {
     id: 7,
-    imagePath: "/static/armor/Fs37RavagerImage.webp",
+    imagePath: "/static/armor/FS37.webp",
     typeIndex: 0,
     devName: "FS-37 Ravager",
     obtainingMethodIndex: 6,

@@ -18,6 +18,7 @@ const NewsSection = () => {
         <div className="newsSection-itemsContainer">
           {news
             .filter((news) => news.typeIndex === 0)
+            .sort((a, b) => Number(b.createdAt) - Number(a.createdAt))
             .map((news) => (
               <NewsItem
                 key={news.id}
@@ -36,6 +37,7 @@ const NewsSection = () => {
         <div className="newsSection-itemsContainer">
           {news
             .filter((news) => news.typeIndex === 1)
+            .sort((a, b) => Number(b.createdAt) - Number(a.createdAt))
             .map((news) => (
               <NewsItem
                 key={news.id}
