@@ -193,21 +193,7 @@
     "pageDescription": "During the battles, any Helldiver accumulates a certain share of impressions or experiences. They can be easily thrown out in emotions! You can celebrate the victory and successful return with a beautiful victory pose. Show everyone your muscles or hug your beloved comrade, the main thing is to keep your mind for the further continuation of the spread of democracy throughout the galaxy."
   },
   "Pages": {
-    "1Link": "Weaponry",
-    "2Link": "Armor",
-    "3Link": "Coats",
-    "4Link": "Stratagems",
-    "5Link": "Boosters",
-    "6Link": "Resources",
-    "7Link": "Ship modules",
-    "8Link": "Progression",
-    "9Link": "Achievements",
-    "10Link": "Terminids",
-    "11Link": "Automatons",
-    "12Link": "Missions",
-    "13Link": "Planets",
-    "14Link": "Player cards",
-    "15Link": "Emotes"
+    "links": "[\"Weaponry\",\"Equipment\",\"Customization\",\"Enemies\",\"Stratagems\",\"Ship modules\",\"Emotes\",\"Resources\",\"Progression\",\"Achievements\",\"Planets\"]"
   },
   "Achievements": {
     "titles": "[\"The Real Deal\",\"Strapping Young Lad\",\"Bug Stomper\",\"Bot Scrapper\",\"They Don't Call It Tacticool For Nothin'\",\"They Mostly Come At Night...\",\"Extracting The Countryside\",\"Spread Managed Democracy\",\"Job's Done\",\"In The Nick Of Time\",\"The Long Arm Of Justice\",\"Cool Guys Don't Loo- AAAAH!\",\"Nothing Is Bigger Than Freedom\",\"The Taller They Are...\",\"Eat This!\",\"Stalking Is Illegal\",\"Hot Potato!\",\"Get Some!\",\"That Which Does Not Kill You...\",\"Democracy Ain't Done With You Yet\",\"Promote Synergy\",\"Extractamundo!\",\"It's The Only Way To Be Sure...\",\"The Power Of Democracy\",\"Kill It With Fire!\",\"Science Is Done By Quantity\",\"Samples Are A Diver's Best Friend\",\"Hold My Liber-Tea!\",\"Let's Call It A Draw\",\"Caught Them By Supplies!\",\"Hell Dive\",\"Hold My Primary, I'm Going In!\",\"Gone In 360 Seconds!\",\"For The Greater Good!\",\"Patriot\",\"Doing Your Part\",\"Fully Operational\",\"Ship It!\",\"The Epitome of Super Earth\"]",
@@ -249,7 +235,7 @@
     "names": "[\"Trivial\",\"Easy\",\"Medium\",\"Challenging\",\"Hard\",\"Extreme\",\"Suicide Mission\",\"Impossible\",\"Helldive\",\"Super Helldive\"]"
   },
   "Header": {
-    "links": "[\"NEWS\",\"GALAXY WAR\",\"STRATAGEM TRAINING\"]"
+    "links": "[\"NEWS\",\"GALAXY WAR\",\"STRATAGEM HERO\"]"
   },
   "Footer": {
     "firstLinkTitle": "LINKS",

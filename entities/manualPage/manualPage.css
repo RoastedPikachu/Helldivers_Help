@@ -1,7 +1,11 @@
 .manualPageBlock {
-    @apply px-[30px] pt-[20px] pb-[30px] w-full h-[200px] bg-[url('/static/SuperEarthBg.webp')] border-2 border-[--color-theme] rounded-[10px] cursor-pointer;
+    @apply px-[20px] mmedium:px-[15px] py-[15px] mmedium:py-[12.5px] w-full h-auto bg-[url('/static/PageBackground.png')] bg-cover border-2 border-theme rounded-[10px] cursor-pointer duration-300 ease-in-out;
 }
 
-.manualPageBlock_Title {
-    @apply mt-[15px] text-[--color-white] text-[1.75rem] text-center font-primary font-bold;
+.manualPageBlock:hover {
+    @apply brightness-[1.15];
+}
+
+.manualPageBlock-title {
+    @apply text-theme text-[1.5rem] mlarge:text-[1rem] mmedium:text-[0.9375rem] text-left font-primary font-bold;
 }

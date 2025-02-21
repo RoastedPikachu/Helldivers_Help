@@ -1,13 +1,13 @@
 "use client";
-import React, { useEffect, useState } from "react";
-
-import Link from "next/link";
+import React from "react";
 
 import { useTranslations } from "next-intl";
 
-import { getUserLocale } from "@/utils/generalFunctions";
+import { getIntlArray } from "@/utils/generalFunctions";
 
-import "./ManualPage.css";
+import Link from "next/link";
+
+import "./manualPage.css";
 
 interface ManualSectionProps {
   id: number;
@@ -18,19 +18,15 @@ interface ManualSectionProps {
 const ManualPage: React.FC<ManualSectionProps> = ({ id, link, image }) => {
   const t = useTranslations("Pages");
 
-  const [userLocale, setUserLocale] = useState("");
-
-  useEffect(() => {
-    setUserLocale(getUserLocale()!);
-  }, []);
-
   return (
-    <Link href={link} locale={userLocale}>
+    <Link href={link}>
       <div className="manualPageBlock">
-        <img src={image} alt="" className="w-full h-full" />
-      </div>
+        {/*<img src={image} alt="" className="w-full h-full" />*/}
 
-      <p className="manualPageBlock_Title">{t(`${id}Link`)}</p>
+        <p className="manualPageBlock-title">
+          {getIntlArray(t("links"))[id - 1]}
+        </p>
+      </div>
     </Link>
   );
 };
