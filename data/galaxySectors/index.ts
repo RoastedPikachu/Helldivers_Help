@@ -1,8 +1,6 @@
-import { GalaxySectorsObject } from "@/utils/dataInterfaces";
-
-export const galaxySectors: GalaxySectorsObject = {
+export const galaxySectors: any = {
   akira: {
-    name: "Акира",
+    devName: "Akira",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/AkiraSectorImage.svg",
     terminidsInactiveImage:
@@ -13,7 +11,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/AkiraSectorImage.svg",
   },
   alstrad: {
-    name: "Алстрад",
+    devName: "Alstrad",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/AlstradSectorImage.svg",
     terminidsInactiveImage:
@@ -24,7 +22,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/AlstradSectorImage.svg",
   },
   altus: {
-    name: "Алтус",
+    devName: "Altus",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/AltusSectorImage.svg",
     terminidsInactiveImage:
@@ -35,7 +33,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/AltusSectorImage.svg",
   },
   andromeda: {
-    name: "Андромеда",
+    devName: "Andromeda",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/AndromedaSectorImage.svg",
     terminidsInactiveImage:
@@ -46,7 +44,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/AndromedaSectorImage.svg",
   },
   arturion: {
-    name: "Артурион",
+    devName: "Arturion",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/ArturionSectorImage.svg",
     terminidsInactiveImage:
@@ -57,7 +55,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/ArturionSectorImage.svg",
   },
   barnard: {
-    name: "Барнард",
+    devName: "Barnard",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/BarnardSectorImage.svg",
     terminidsInactiveImage:
@@ -68,7 +66,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/BarnardSectorImage.svg",
   },
   borgus: {
-    name: "Боргус",
+    devName: "Borgus",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/BorgusSectorImage.svg",
     terminidsInactiveImage:
@@ -79,7 +77,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/BorgusSectorImage.svg",
   },
   cancri: {
-    name: "Канкри",
+    devName: "Cancri",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/CancriSectorImage.svg",
     terminidsInactiveImage:
@@ -90,7 +88,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/CancriSectorImage.svg",
   },
   cantolus: {
-    name: "Кантолус",
+    devName: "Cantolus",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/CantolusSectorImage.svg",
     terminidsInactiveImage:
@@ -101,7 +99,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/CantolusSectorImage.svg",
   },
   celeste: {
-    name: "Целесте",
+    devName: "Celeste",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/CelesteSectorImage.svg",
     terminidsInactiveImage:
@@ -112,7 +110,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/CelesteSectorImage.svg",
   },
   draco: {
-    name: "Драко",
+    devName: "Draco",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/DracoSectorImage.svg",
     terminidsInactiveImage:
@@ -123,7 +121,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/DracoSectorImage.svg",
   },
   falstaff: {
-    name: "Фальстаф",
+    devName: "Falstaff",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/FalstaffSectorImage.svg",
     terminidsInactiveImage:
@@ -134,7 +132,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/FalstaffSectorImage.svg",
   },
   farsight: {
-    name: "Фарсайт",
+    devName: "Farsight",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/FarsightSectorImage.svg",
     terminidsInactiveImage:
@@ -145,7 +143,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/FarsightSectorImage.svg",
   },
   ferris: {
-    name: "Феррис",
+    devName: "Ferris",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/FerrisSectorImage.svg",
     terminidsInactiveImage:
@@ -156,7 +154,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/FerrisSectorImage.svg",
   },
   gallux: {
-    name: "Галлукс",
+    devName: "Gallux",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/GalluxSectorImage.svg",
     terminidsInactiveImage:
@@ -167,7 +165,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/GalluxSectorImage.svg",
   },
   gellert: {
-    name: "Геллерт",
+    devName: "Gellert",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/GellertSectorImage.svg",
     terminidsInactiveImage:
@@ -178,7 +176,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/GellertSectorImage.svg",
   },
   gothmar: {
-    name: "Готмар",
+    devName: "Gothmar",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/GothmarSectorImage.svg",
     terminidsInactiveImage:
@@ -189,7 +187,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/GothmarSectorImage.svg",
   },
   guang: {
-    name: "Гуан",
+    devName: "Guang",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/GuangSectorImage.svg",
     terminidsInactiveImage:
@@ -200,7 +198,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/GuangSectorImage.svg",
   },
   hanzo: {
-    name: "Ханзо",
+    devName: "Hanzo",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/HanzoSectorImage.svg",
     terminidsInactiveImage:
@@ -211,7 +209,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/HanzoSectorImage.svg",
   },
   hawking: {
-    name: "Хокинг",
+    devName: "Hawking",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/HawkingSectorImage.svg",
     terminidsInactiveImage:
@@ -222,7 +220,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/HawkingSectorImage.svg",
   },
   hydra: {
-    name: "Гидра",
+    devName: "Hydra",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/HydraSectorImage.svg",
     terminidsInactiveImage:
@@ -233,7 +231,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/HydraSectorImage.svg",
   },
   idun: {
-    name: "Идун",
+    devName: "Idun",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/IdunSectorImage.svg",
     terminidsInactiveImage:
@@ -244,7 +242,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/IdunSectorImage.svg",
   },
   iptus: {
-    name: "Иптус",
+    devName: "Iptus",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/IptusSectorImage.svg",
     terminidsInactiveImage:
@@ -255,7 +253,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/IptusSectorImage.svg",
   },
   jinXi: {
-    name: "Цзинь Си",
+    devName: "Jin Xi",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/JinXiSectorImage.svg",
     terminidsInactiveImage:
@@ -266,7 +264,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/JinXiSectorImage.svg",
   },
   kelvin: {
-    name: "Кельвин",
+    devName: "Kelvin",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/KelvinSectorImage.svg",
     terminidsInactiveImage:
@@ -277,7 +275,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/KelvinSectorImage.svg",
   },
   korpus: {
-    name: "Корпус",
+    devName: "Korpus",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/KorpusSectorImage.svg",
     terminidsInactiveImage:
@@ -288,7 +286,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/KorpusSectorImage.svg",
   },
   lestrade: {
-    name: "Эстрада",
+    devName: "Lestrade",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/LestradeSectorImage.svg",
     terminidsInactiveImage:
@@ -299,7 +297,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/LestradeSectorImage.svg",
   },
   lacaille: {
-    name: "Лакайлли",
+    devName: "Lacaille",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/LacailleSectorImage.svg",
     terminidsInactiveImage:
@@ -310,7 +308,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/LacailleSectorImage.svg",
   },
   leo: {
-    name: "Лео",
+    devName: "Leo",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/LeoSectorImage.svg",
     terminidsInactiveImage:
@@ -321,7 +319,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/LeoSectorImage.svg",
   },
   marspira: {
-    name: "Марспира",
+    devName: "Marspira",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/MarspiraSectorImage.svg",
     terminidsInactiveImage:
@@ -332,7 +330,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/MarspiraSectorImage.svg",
   },
   meridian: {
-    name: "Меридиан",
+    devName: "Meridian",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/MeridianSectorImage.svg",
     terminidsInactiveImage:
@@ -343,7 +341,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/MeridianSectorImage.svg",
   },
   mirin: {
-    name: "Мирин",
+    devName: "Mirin",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/MirinSectorImage.svg",
     terminidsInactiveImage:
@@ -354,7 +352,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/MirinSectorImage.svg",
   },
   morgon: {
-    name: "Моргон",
+    devName: "Morgon",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/MorgonSectorImage.svg",
     terminidsInactiveImage:
@@ -365,7 +363,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/MorgonSectorImage.svg",
   },
   nanos: {
-    name: "Нанос",
+    devName: "Nanos",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/NanosSectorImage.svg",
     terminidsInactiveImage:
@@ -376,7 +374,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/NanosSectorImage.svg",
   },
   omega: {
-    name: "Омега",
+    devName: "Omega",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/OmegaSectorImage.svg",
     terminidsInactiveImage:
@@ -387,7 +385,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/OmegaSectorImage.svg",
   },
   orion: {
-    name: "Орион",
+    devName: "Orion",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/OrionSectorImage.svg",
     terminidsInactiveImage:
@@ -398,7 +396,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/OrionSectorImage.svg",
   },
   quintus: {
-    name: "Квинтус",
+    devName: "Quintus",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/QuintusSectorImage.svg",
     terminidsInactiveImage:
@@ -409,7 +407,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/QuintusSectorImage.svg",
   },
   rictus: {
-    name: "Риктус",
+    devName: "Rictus",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/RictusSectorImage.svg",
     terminidsInactiveImage:
@@ -420,7 +418,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/RictusSectorImage.svg",
   },
   rigel: {
-    name: "Ригель",
+    devName: "Rigel",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/RigelSectorImage.svg",
     terminidsInactiveImage:
@@ -431,7 +429,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/RigelSectorImage.svg",
   },
   sagan: {
-    name: "Саган",
+    devName: "Sagan",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/SaganSectorImage.svg",
     terminidsInactiveImage:
@@ -442,7 +440,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/SaganSectorImage.svg",
   },
   saleria: {
-    name: "Салерия",
+    devName: "Saleria",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/SaleriaSectorImage.svg",
     terminidsInactiveImage:
@@ -453,7 +451,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/SaleriaSectorImage.svg",
   },
   severin: {
-    name: "Северин",
+    devName: "Severin",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/SeverinSectorImage.svg",
     terminidsInactiveImage:
@@ -464,14 +462,14 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/SeverinSectorImage.svg",
   },
   sol: {
-    name: "Солнечная система",
+    devName: "Sol System",
     terminidsActiveImage: "",
     terminidsInactiveImage: "",
     automatonsActiveImage: "",
     automatonsInactiveImage: "",
   },
   sten: {
-    name: "Стен",
+    devName: "Sten",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/StenSectorImage.svg",
     terminidsInactiveImage:
@@ -482,7 +480,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/StenSectorImage.svg",
   },
   talus: {
-    name: "Талус",
+    devName: "Talus",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/TalusSectorImage.svg",
     terminidsInactiveImage:
@@ -493,7 +491,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/TalusSectorImage.svg",
   },
   tanis: {
-    name: "Танис",
+    devName: "Tanis",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/TanisSectorImage.svg",
     terminidsInactiveImage:
@@ -504,7 +502,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/TanisSectorImage.svg",
   },
   tarragon: {
-    name: "Таррагон",
+    devName: "Tarragon",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/TarragonSectorImage.svg",
     terminidsInactiveImage:
@@ -515,7 +513,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/TarragonSectorImage.svg",
   },
   theseus: {
-    name: "Тезей",
+    devName: "Theseus",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/TheseusSectorImage.svg",
     terminidsInactiveImage:
@@ -526,7 +524,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/TheseusSectorImage.svg",
   },
   trigon: {
-    name: "Тригон",
+    devName: "Trigon",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/TrigonSectorImage.svg",
     terminidsInactiveImage:
@@ -537,7 +535,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/TrigonSectorImage.svg",
   },
   umlaut: {
-    name: "Умлаут",
+    devName: "Umlaut",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/UmlautSectorImage.svg",
     terminidsInactiveImage:
@@ -548,7 +546,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/UmlautSectorImage.svg",
   },
   ursa: {
-    name: "Урса",
+    devName: "Ursa",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/UrsaSectorImage.svg",
     terminidsInactiveImage:
@@ -559,7 +557,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/UrsaSectorImage.svg",
   },
   valdis: {
-    name: "Валдис",
+    devName: "Valdis",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/ValdisSectorImage.svg",
     terminidsInactiveImage:
@@ -570,7 +568,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/ValdisSectorImage.svg",
   },
   xiTauri: {
-    name: "Си Таури",
+    devName: "Xi Tauri",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/XiTauriSectorImage.svg",
     terminidsInactiveImage:
@@ -581,7 +579,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/XiTauriSectorImage.svg",
   },
   xzar: {
-    name: "Кзар",
+    devName: "Xzar",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/XzarSectorImage.svg",
     terminidsInactiveImage:
@@ -592,7 +590,7 @@ export const galaxySectors: GalaxySectorsObject = {
       "/static/GalaxyMap/automatons/inactive/XzarSectorImage.svg",
   },
   ymir: {
-    name: "Имир",
+    devName: "Ymir",
     terminidsActiveImage:
       "/static/GalaxyMap/terminids/active/YmirSectorImage.svg",
     terminidsInactiveImage:

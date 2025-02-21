@@ -8,6 +8,8 @@ import { getIntlArray } from "@/utils/generalFunctions";
 import { planetsStore } from "@/store/PlanetsStore";
 import { slidersStore } from "@/store/SlidersStore";
 
+import { Tooltip } from "antd";
+
 import WeatherConditionAdditionalInfoModalWindow from "@/entities/planetsPage/weatherConditionAdditionalInfo/WeatherConditionAdditionalInfoModalWindow";
 
 import "./planet.css";
@@ -26,6 +28,7 @@ const Planet: React.FC<PlanetProps> = ({
   sector,
 }) => {
   const t = useTranslations("planets");
+  const t1 = useTranslations("weatherConditions");
 
   const [targetWeatherConditionId, setTargetWeatherConditionId] = useState(0);
 
@@ -57,22 +60,34 @@ const Planet: React.FC<PlanetProps> = ({
             key={weatherCondition.id}
             className="planetWidget-weatherConditions-container-imageWrapper"
           >
-            <img
-              src={`${weatherCondition.iconPath}`}
-              alt=""
-              onMouseEnter={() =>
-                setTargetWeatherConditionId(weatherCondition.id)
+            <Tooltip
+              placement="bottom"
+              title={
+                getIntlArray(t1("names"))[weatherCondition.id - 1] +
+                "\n" +
+                getIntlArray(t1("descriptions"))[weatherCondition.id - 1]
               }
-              onMouseLeave={() => setTargetWeatherConditionId(0)}
-              className="planetWidget-weatherConditions-container-imageWrapper-image"
-            />
+              arrow={true}
+              overlayStyle={{ whiteSpace: "pre-line" }}
+              overlayInnerStyle={{ textAlign: "center" }}
+            >
+              <img
+                src={`${weatherCondition.iconPath}`}
+                alt=""
+                onMouseEnter={() =>
+                  setTargetWeatherConditionId(weatherCondition.id)
+                }
+                onMouseLeave={() => setTargetWeatherConditionId(0)}
+                className="planetWidget-weatherConditions-container-imageWrapper-image"
+              />
+            </Tooltip>
 
-            <WeatherConditionAdditionalInfoModalWindow
-              isVisible={targetWeatherConditionId === weatherCondition.id}
-              borderStyle={"border-theme"}
-              name={weatherCondition.name}
-              description={weatherCondition.description}
-            />
+            {/*<WeatherConditionAdditionalInfoModalWindow*/}
+            {/*  isVisible={targetWeatherConditionId === weatherCondition.id}*/}
+            {/*  borderStyle={"border-theme"}*/}
+            {/*  name={weatherCondition.name}*/}
+            {/*  description={weatherCondition.description}*/}
+            {/*/>*/}
           </div>
         ))}
       </div>

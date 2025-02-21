@@ -26,17 +26,18 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import "@/app/modalsSlider.css";
+import { planets } from "@/data/planets";
 
 const ThePlanetsContent = observer(() => {
   const t = useTranslations("PlanetsPage");
   const t1 = useTranslations("sectors");
 
-  const getTargetPlanetArray = () => {
-    return Object.values(planetsStore.planets).filter(
-      (planetValue) =>
-        planetValue.sector.name === planetsStore.currentPlanetInfo.sector,
-    );
-  };
+  // const getTargetPlanetArray = () => {
+  //   return Object.values(planetsStore.planets).filter(
+  //     (planetValue) =>
+  //       planetValue.sector.name === planetsStore.currentPlanetInfo.sector,
+  //   );
+  // };
   return (
     <Observer>
       {() => (
@@ -48,29 +49,31 @@ const ThePlanetsContent = observer(() => {
 
           <PageDescription description={t("pageDescription")} />
 
-          <ModalSlider
-            closeFunction={() => planetsStore.clearCurrentPlanetInfo()}
-            currentEntityId={planetsStore.currentPlanetInfo.id}
-          >
-            {getTargetPlanetArray()?.map((planet) => (
-              <SwiperSlide key={planet.id}>
-                <PlanetAdditionalInfoModalWindow
-                  imagePath={planet.biome?.imagePath}
-                  weatherConditions={planet.weatherConditions}
-                  biomeDescription={planet.biome?.description}
-                />
-              </SwiperSlide>
-            ))}
-          </ModalSlider>
+          {/*<ModalSlider*/}
+          {/*  closeFunction={() => planetsStore.clearCurrentPlanetInfo()}*/}
+          {/*  currentEntityId={planetsStore.currentPlanetInfo.id}*/}
+          {/*>*/}
+          {/*  {getTargetPlanetArray()?.map((planet) => (*/}
+          {/*    <SwiperSlide key={planet.id}>*/}
+          {/*      <PlanetAdditionalInfoModalWindow*/}
+          {/*        imagePath={planet.biome?.imagePath}*/}
+          {/*        weatherConditions={planet.weatherConditions}*/}
+          {/*        biomeDescription={planet.biome?.description}*/}
+          {/*      />*/}
+          {/*    </SwiperSlide>*/}
+          {/*  ))}*/}
+          {/*</ModalSlider>*/}
 
-          {Object.values(galaxySectors).map((value, i) => (
+          {Object.values(galaxySectors).map((value: any, i) => (
             <EntitySection
               key={i + 1}
-              title={getIntlArray(t("data"))[i]}
+              title={getIntlArray(t1("data"))[i]}
               gridStyles={"grid-cols-3 mlarge:grid-cols-1"}
             >
-              {Object.values(planetsStore.planets)
-                .filter((planetValue) => planetValue.sector.name === value.name)
+              {Object.values(planets)
+                .filter(
+                  (planetValue) => planetValue.sector.devName === value.devName,
+                )
                 .map((planet) => (
                   <Planet
                     key={planet.id}
