@@ -1,9 +1,13 @@
 .planetWidget {
-    @apply relative px-[30px] mlarge:px-[15px] pt-[20px] mlarge:pt-[10px] pb-[30px] mlarge:pb-[15px] w-full h-auto min-h-[120px] mlarge:min-h-[100px] msmall:min-h-[90px] bg-[#00293a] border-2 border-theme rounded-[10px] mlarge:rounded-[7.5px] cursor-pointer;
+    @apply relative px-[30px] mlarge:px-[15px] pt-[20px] mlarge:pt-[10px] pb-[30px] mlarge:pb-[15px] w-full h-auto min-h-[120px] mlarge:min-h-[100px] msmall:min-h-[90px] bg-primary-bg border-2 border-theme rounded-[10px] mlarge:rounded-[7.5px] cursor-pointer;
 }
 
 .planetWidget-image {
-    @apply absolute top-0 left-0 w-full h-full rounded-[7.5px] mlarge:rounded-[5px];
+    @apply absolute top-0 left-0 w-full h-full rounded-[7.5px] mlarge:rounded-[5px] duration-300 ease-in-out;
+}
+
+.planetWidget-image:hover {
+    @apply brightness-[1.15];
 }
 
 .planetWidget-title {

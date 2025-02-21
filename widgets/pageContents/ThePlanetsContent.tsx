@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 
 import { useTranslations } from "next-intl";
 
@@ -38,6 +38,16 @@ const ThePlanetsContent = observer(() => {
   //       planetValue.sector.name === planetsStore.currentPlanetInfo.sector,
   //   );
   // };
+
+  useEffect(() => {
+    console.log(
+      Object.values(galaxySectors).map((value: any, i) =>
+        planets.filter(
+          (planetValue) => planetValue.sector.devName === value.devName,
+        ),
+      ),
+    );
+  }, []);
   return (
     <Observer>
       {() => (
@@ -70,7 +80,7 @@ const ThePlanetsContent = observer(() => {
               title={getIntlArray(t1("data"))[i]}
               gridStyles={"grid-cols-3 mlarge:grid-cols-1"}
             >
-              {Object.values(planets)
+              {planets
                 .filter(
                   (planetValue) => planetValue.sector.devName === value.devName,
                 )
