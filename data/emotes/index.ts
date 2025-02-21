@@ -6,7 +6,7 @@ export const emotes = [
   {
     id: 1,
     videoPath: "/static/Emotes/Salute.mp4",
-    videoPreviewPath: "/static/EmotesVideoPreviews/Salute.png",
+    videoPreviewPath: "/static/EmotesVideoPreviews/Salute.webp",
     price: 0,
     type: "emote",
     warbondIcon: obtainingTypes[0].icon,
@@ -14,7 +14,7 @@ export const emotes = [
   {
     id: 2,
     videoPath: "/static/Emotes/ExplosiveHandshake.mp4",
-    videoPreviewPath: "/static/EmotesVideoPreviews/ExplosiveHandshake.png",
+    videoPreviewPath: "/static/EmotesVideoPreviews/ExplosiveHandshake.webp",
     price: 20,
     type: "emote",
     warbondIcon: obtainingTypes[5].icon,
@@ -22,7 +22,7 @@ export const emotes = [
   {
     id: 3,
     videoPath: "/static/Emotes/RockPaperScissors.mp4",
-    videoPreviewPath: "/static/EmotesVideoPreviews/RockPaperScissors.png",
+    videoPreviewPath: "/static/EmotesVideoPreviews/RockPaperScissors.webp",
     price: 50,
     type: "emote",
     warbondIcon: obtainingTypes[5].icon,
@@ -30,7 +30,7 @@ export const emotes = [
   {
     id: 4,
     videoPath: "/static/Emotes/Hug.mp4",
-    videoPreviewPath: "/static/EmotesVideoPreviews/Hug.png",
+    videoPreviewPath: "/static/EmotesVideoPreviews/Hug.webp",
     price: 20,
     type: "emote",
     warbondIcon: obtainingTypes[5].icon,
@@ -38,7 +38,7 @@ export const emotes = [
   {
     id: 5,
     videoPath: "/static/Emotes/ExplosiveHandshake.mp4",
-    videoPreviewPath: "/static/EmotesVideoPreviews/ExplosiveHandshake.png",
+    videoPreviewPath: "/static/EmotesVideoPreviews/ExplosiveHandshake.webp",
     price: 8,
     type: "emote",
     warbondIcon: obtainingTypes[5].icon,
@@ -46,7 +46,7 @@ export const emotes = [
   {
     id: 6,
     videoPath: "/static/Emotes/ScoutHandshake.mp4",
-    videoPreviewPath: "/static/EmotesVideoPreviews/ScoutHandshake.png",
+    videoPreviewPath: "/static/EmotesVideoPreviews/ScoutHandshake.webp",
     price: 35,
     type: "emote",
     warbondIcon: obtainingTypes[5].icon,
@@ -54,7 +54,7 @@ export const emotes = [
   {
     id: 7,
     videoPath: "/static/Emotes/ScoutHandshake.mp4",
-    videoPreviewPath: "/static/EmotesVideoPreviews/ScoutHandshake.png",
+    videoPreviewPath: "/static/EmotesVideoPreviews/ScoutHandshake.webp",
     price: 70,
     type: "emote",
     warbondIcon: obtainingTypes[5].icon,
@@ -62,7 +62,7 @@ export const emotes = [
   {
     id: 8,
     videoPath: "/static/Emotes/Hug.mp4",
-    videoPreviewPath: "/static/EmotesVideoPreviews/Hug.png",
+    videoPreviewPath: "/static/EmotesVideoPreviews/Hug.webp",
     price: 35,
     type: "emote",
     warbondIcon: obtainingTypes[10].icon,
@@ -70,7 +70,7 @@ export const emotes = [
   {
     id: 9,
     videoPath: "/static/Emotes/ScoutHandshake.mp4",
-    videoPreviewPath: "/static/EmotesVideoPreviews/ScoutHandshake.png",
+    videoPreviewPath: "/static/EmotesVideoPreviews/ScoutHandshake.webp",
     price: 70,
     type: "emote",
     warbondIcon: obtainingTypes[10].icon,
@@ -78,7 +78,7 @@ export const emotes = [
   {
     id: 10,
     videoPath: "/static/Emotes/AtEase.mp4",
-    videoPreviewPath: "/static/EmotesVideoPreviews/AtEase.png",
+    videoPreviewPath: "/static/EmotesVideoPreviews/AtEase.webp",
     price: 50,
     type: "emote",
     warbondIcon: obtainingTypes[10].icon,
@@ -86,7 +86,7 @@ export const emotes = [
   {
     id: 11,
     videoPath: "/static/Emotes/ThisIsDemocracy.mp4",
-    videoPreviewPath: "/static/EmotesVideoPreviews/ThisIsDemocracy.png",
+    videoPreviewPath: "/static/EmotesVideoPreviews/ThisIsDemocracy.webp",
     price: 50,
     type: "emote",
     warbondIcon: obtainingTypes[10].icon,
@@ -94,7 +94,7 @@ export const emotes = [
   {
     id: 12,
     videoPath: "/static/Emotes/RaiseWeapon.mp4",
-    videoPreviewPath: "/static/EmotesVideoPreviews/RaiseWeapon.png",
+    videoPreviewPath: "/static/EmotesVideoPreviews/RaiseWeapon.webp",
     price: 55,
     type: "emote",
     warbondIcon: obtainingTypes[10].icon,
