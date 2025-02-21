@@ -20,7 +20,7 @@ const Emote: React.FC<EmoteProps> = ({
   videoPath,
   price,
 }) => {
-  const t = useTranslations("Emotes");
+  const t = useTranslations("emotes");
 
   const videoRef = useRef<HTMLVideoElement>();
 
@@ -50,18 +50,20 @@ const Emote: React.FC<EmoteProps> = ({
           className="emote-contentContainer-video"
         ></video>
 
-        <div className="emote-contentContainer-priceBlock">
-          <p className="emote-contentContainer-priceBlock-text">{price}</p>
+        {price && (
+          <div className="emote-contentContainer-priceBlock">
+            <p className="emote-contentContainer-priceBlock-text">{price}</p>
 
-          <img
-            src="/static/Resources/MedalIcon.svg"
-            alt=""
-            className="emote-contentContainer-priceBlock-icon"
-          />
-        </div>
+            <img
+              src="/static/Resources/MedalIcon.svg"
+              alt=""
+              className="emote-contentContainer-priceBlock-icon"
+            />
+          </div>
+        )}
       </div>
 
-      <p className="emote-title">{getIntlArray(t("data"))[id - 1]}</p>
+      <p className="emote-title">{getIntlArray(t("names"))[id - 1]}</p>
     </div>
   );
 };
