@@ -231,8 +231,8 @@ const ShipModule: React.FC<ShipModuleProps> = ({
                 {currentSlideStratagems.map((stratagem: Stratagem, index) => (
                   <ShipModuleStratagem
                     key={index + 1}
+                    id={stratagem.id}
                     iconPath={stratagem.iconPath}
-                    name={stratagem.name}
                   />
                 ))}
               </div>
