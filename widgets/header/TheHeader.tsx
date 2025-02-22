@@ -15,9 +15,21 @@ import MobileHeaderContent from "@/widgets/mobileHeaderContent/MobileHeaderConte
 
 import "./TheHeader.css";
 import { getIntlArray } from "@/utils/generalFunctions";
+import { ConfigProvider, Select } from "antd";
+import { useParams } from "next/navigation";
+import { useRouter } from "@/navigation";
 
 const TheHeader = observer(() => {
+  const router = useRouter();
+
+  const params = useParams();
+
   const t = useTranslations("Header");
+
+  const changeLanguage = (value: string) => {
+    console.log(value.toLowerCase());
+    router.push("/", { locale: value });
+  };
 
   useEffect(() => {
     mobileStore.changeIsMobileDeviceStatus();
@@ -54,10 +66,36 @@ const TheHeader = observer(() => {
 
                   <Link
                     href="/stratagemtraining"
-                    className="headerNavBlock_Link col-span-2"
+                    className="headerNavBlock_Link col-span-2 mr-[50px]"
                   >
                     {getIntlArray(t("links"))[2]}
                   </Link>
+
+                  <ConfigProvider
+                    theme={{
+                      token: {
+                        colorPrimary: "#ffe500",
+                        colorBorder: "#ffe500",
+                      },
+                      components: {
+                        Select: {
+                          selectorBg: "#1e1e1e",
+                          optionActiveBg: "transparent",
+                          optionSelectedBg: "transparent",
+                        },
+                      },
+                    }}
+                  >
+                    <Select
+                      defaultValue={params.locale as string}
+                      options={[
+                        { value: "ru", label: "ru" },
+                        { value: "en", label: "en" },
+                      ]}
+                      onChange={changeLanguage}
+                      className="headerNavBlock_ChangeLanguageButton"
+                    />
+                  </ConfigProvider>
                 </nav>
               </header>
             )

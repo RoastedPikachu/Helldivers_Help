@@ -53,8 +53,11 @@
     "links": "[\"Armor\",\"Boosters\",\"Capes\"]"
   },
   "CustomizationPage": {
-    "pageTitle": "комплекты брони",
-    "pageAdditionalTitle": "адского десантника"
+      "metadataTitle": "HELLDIVERS 2: Customization",
+      "metadataDescription": "Give your Helldiver a distinctive charm! Pick up everything you need to fight with style. Customize everything, and show your unique dedication to Freedom!",
+      "pageTitle": "customization",
+      "pageDescription": "Give your Helldiver a distinctive charm! Pick up everything you need to fight with style. Customize everything, and show your unique dedication to Freedom!",
+      "links": "[\"Player Cards\"]"
   },
   "ArmorPage": {
     "metadataTitle": "HELLDIVERS 2: Armor",

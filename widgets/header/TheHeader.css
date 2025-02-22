@@ -29,3 +29,19 @@ header {
 .headerNavBlock_Link:hover {
     @apply text-theme;
 }
+
+.headerNavBlock_ChangeLanguageButton {
+    @apply text-theme;
+}
+
+.headerNavBlock_ChangeLanguageButton .ant-select-selection-item {
+    @apply mb-[2px] !text-theme text-[1rem] font-primary;
+}
+
+.headerNavBlock_ChangeLanguageButton .ant-select-selection {
+    @apply text-theme;
+}
+
+.headerNavBlock_ChangeLanguageButton .ant-select-arrow {
+    @apply text-theme;
+}
