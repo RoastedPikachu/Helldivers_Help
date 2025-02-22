@@ -4,6 +4,7 @@ import React from "react";
 import { planetsStore } from "@/store/PlanetsStore";
 
 import "./MajorOrder.css";
+import { planets } from "@/data/planets";
 
 interface MajorOrderProps {
   title: string;
@@ -63,13 +64,13 @@ const MajorOrder: React.FC<MajorOrderProps> = ({
                   <div
                     className={`rootMajorOrderWidget_PlanetsBlock_TextWrapper_Block ${completedPlanets[index] ? "bg-[linear-gradient(90deg,hsla(202,99%,62%,1)_0%,hsla(0,0%,0%,1)_100%)] border-[#3db8fe]" : "bg-[linear-gradient(90deg,hsla(4,90%,58%,1)_0%,hsla(0,0%,0%,1)_100%)] border-[#f44336]"}`}
                   ></div>
-                  <p className="rootMajorOrderWidget_PlanetsBlock_TextWrapper_Block_PlanetName">
-                    {
-                      Object.values(planetsStore.planets).find(
-                        (value, index) => index === targetPlanet + 1,
-                      )?.name
-                    }
-                  </p>
+                  {/*<p className="rootMajorOrderWidget_PlanetsBlock_TextWrapper_Block_PlanetName">*/}
+                  {/*  {*/}
+                  {/*    planets.find(*/}
+                  {/*      (value, index) => index === targetPlanet + 1,*/}
+                  {/*    )*/}
+                  {/*  }*/}
+                  {/*</p>*/}
 
                   <p
                     className={`rootMajorOrderWidget_PlanetsBlock_TextWrapper_Block_BoolText ${completedPlanets[index] ? "text-[#3db8fe]" : "text-[#f44336]"}`}

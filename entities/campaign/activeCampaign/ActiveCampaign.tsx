@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
-import { planetsStore } from "@/store/PlanetsStore";
+import { planets } from "@/data/planets";
 
 import { timeFromNow } from "@/utils/timeFunctions";
 
@@ -130,9 +130,7 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
   };
 
   useEffect(() => {
-    setTargetCampaignPlanet({
-      ...Object.values(planetsStore.planets)[planetIndex + 1],
-    });
+    setTargetCampaignPlanet(planets[planetIndex + 1]);
 
     if (!isNaN(getPlanetRegenPerHourPercent())) {
       setRegenPerHour(getPlanetRegenPerHourPercent());
