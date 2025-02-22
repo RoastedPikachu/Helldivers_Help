@@ -2442,7 +2442,7 @@ class StratagemStore {
       callTime: 10,
       useCount: 0,
       reloadTime: 480,
-      keyCodes: [83, 87, 68, 87, 65, 87],
+      keyCodes: [83, 87, 65, 87, 68, 87],
       directions: [
         {
           id: 1,

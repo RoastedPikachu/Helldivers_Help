@@ -1,6 +1,9 @@
+"use client";
 import React from "react";
 
 import { useTranslations } from "next-intl";
+
+import { getIntlArray } from "@/utils/generalFunctions";
 
 import { emotes } from "@/data/emotes";
 
@@ -41,7 +44,7 @@ const TheEmotesContent = () => {
       </EntitySection>
 
       <EntitySection
-        title={"ПОБЕДНЫЕ ПОЗЫ"}
+        title={getIntlArray(t("sectionTitles"))[0]}
         gridStyles={"mt-[50px] mlarge:mt-[30px] grid-cols-6 mlarge:grid-cols-2"}
       >
         {emotes

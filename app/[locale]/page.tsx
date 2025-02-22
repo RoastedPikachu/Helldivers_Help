@@ -13,7 +13,6 @@ import ThePageTitle from "@/shared/ThePageTitle";
 import PageDescription from "@/shared/PageDescription";
 
 import ManualPage from "@/entities/manualPage/ManualPage";
-import Link from "next/link";
 
 export async function generateMetadata({ params: { locale } }: any) {
   const t = await getTranslations("HomePage");

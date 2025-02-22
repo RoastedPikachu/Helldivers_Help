@@ -363,11 +363,9 @@ class StratagemTrainingStore {
 
     this.setCurrentRoundBonus(this.currentRoundBonus + 25);
 
-    const { currentStratagem } = stratagemStore;
+    const currentStratagem = stratagemStore.currentStratagem;
 
-    const stratagemsArray = Object.values(stratagemStore.stratagems)
-      .map((shipModule) => [...shipModule])
-      .flat();
+    const stratagemsArray = stratagemStore.stratagems;
 
     stratagemStore.setCurrentStratagem(
       getRandomEntity(stratagemsArray, currentStratagem),

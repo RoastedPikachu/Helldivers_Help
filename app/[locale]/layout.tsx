@@ -15,7 +15,7 @@ import "@/app/globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return locales.map((locale) => ({ locale: locale }));
 }
 
 export const metadata: Metadata = {
