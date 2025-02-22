@@ -832,17 +832,17 @@ class StratagemStore {
     },
     {
       id: 20,
-      iconPath: "/static/stratagems/OrbitalLaserIcon.png",
-      videoPath: "/static/stratagemVideos/OrbitalLaserVideo.mp4",
+      iconPath: "/static/stratagems/OrbitalNapalmBarrage.png",
+      videoPath: "/static/stratagemVideos/OrbitalNapalmBarrage.mp4",
       videoPreviewPath:
-        "/static/stratagemVideoPreviews/OrbitalLaserPreview.webp",
+        "/static/stratagemVideoPreviews/OrbitalNapalmBarrage.webp",
       type: stratagemTypes.orbital,
       price: 10000,
-      obtainingLevel: 15,
-      callTime: 1,
-      useCount: 3,
-      reloadTime: 300,
-      keyCodes: [68, 83, 87, 68, 83],
+      obtainingLevel: 18,
+      callTime: 7,
+      useCount: 0,
+      reloadTime: 240,
+      keyCodes: [68, 68, 83, 65, 68, 87],
       directions: [
         {
           id: 1,
@@ -851,22 +851,27 @@ class StratagemStore {
         },
         {
           id: 2,
-          orientation: 3,
-          isPressed: false,
-        },
-        {
-          id: 3,
-          orientation: 1,
-          isPressed: false,
-        },
-        {
-          id: 4,
           orientation: 2,
           isPressed: false,
         },
         {
-          id: 5,
+          id: 3,
           orientation: 3,
+          isPressed: false,
+        },
+        {
+          id: 4,
+          orientation: 4,
+          isPressed: false,
+        },
+        {
+          id: 5,
+          orientation: 2,
+          isPressed: false,
+        },
+        {
+          id: 6,
+          orientation: 1,
           isPressed: false,
         },
       ],
