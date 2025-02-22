@@ -3,7 +3,7 @@
 }
 
 .emote-contentContainer {
-    @apply relative w-full h-[240px] mlarge:h-[220px] mmedium:h-[195px] msmall:h-[170px] bg-cover border-2 border-theme rounded-[10px] overflow-hidden;
+    @apply relative w-full h-[230px] mlarge:h-[220px] mmedium:h-[195px] msmall:h-[170px] bg-cover border-2 border-theme rounded-[10px] overflow-hidden;
 }
 
 .emote-contentContainer-video {
