@@ -17,6 +17,7 @@ import { automatons } from "@/data/enemies/automatons";
 import { illuminates } from "@/data/enemies/illuminates";
 import { news } from "@/data/news";
 
+import { localeStore } from "@/store/LocaleStore";
 import { mobileStore } from "@/store/MobileStore";
 
 import { Breadcrumb, ConfigProvider } from "antd";
@@ -60,7 +61,7 @@ const TheTopPageBlock = observer(() => {
         return [
           {
             title: (
-              <Link href={"/weaponry"}>
+              <Link href={`/${localeStore.locale}/weaponry`}>
                 {`${t("pageTitle")} ${t("pageAdditionalTitle")}`.toUpperCase()}
               </Link>
             ),
@@ -85,7 +86,9 @@ const TheTopPageBlock = observer(() => {
         return [
           {
             title: (
-              <Link href={"/equipment"}>{t2("pageTitle").toUpperCase()}</Link>
+              <Link href={`/${localeStore.locale}/equipment`}>
+                {t2("pageTitle").toUpperCase()}
+              </Link>
             ),
           },
           {
@@ -103,7 +106,9 @@ const TheTopPageBlock = observer(() => {
         return [
           {
             title: (
-              <Link href={"/equipment"}>{t2("pageTitle").toUpperCase()}</Link>
+              <Link href={`/${localeStore.locale}/equipment`}>
+                {t2("pageTitle").toUpperCase()}
+              </Link>
             ),
           },
           {
@@ -120,7 +125,9 @@ const TheTopPageBlock = observer(() => {
         return [
           {
             title: (
-              <Link href={"/equipment"}>{t2("pageTitle").toUpperCase()}</Link>
+              <Link href={`/${localeStore.locale}/equipment`}>
+                {t2("pageTitle").toUpperCase()}
+              </Link>
             ),
           },
           {
@@ -137,12 +144,14 @@ const TheTopPageBlock = observer(() => {
         return [
           {
             title: (
-              <Link href={"/equipment"}>{t2("pageTitle").toUpperCase()}</Link>
+              <Link href={`/${localeStore.locale}/equipment`}>
+                {t2("pageTitle").toUpperCase()}
+              </Link>
             ),
           },
           {
             title: (
-              <Link href={"/equipment/armor"}>
+              <Link href={`/${localeStore.locale}/equipment/armor`}>
                 {`${t3("pageTitle")} ${t3("pageAdditionalTitle")}`.toUpperCase()}
               </Link>
             ),
@@ -167,12 +176,14 @@ const TheTopPageBlock = observer(() => {
         return [
           {
             title: (
-              <Link href={"/equipment"}>{t2("pageTitle").toUpperCase()}</Link>
+              <Link href={`/${localeStore.locale}/equipment`}>
+                {t2("pageTitle").toUpperCase()}
+              </Link>
             ),
           },
           {
             title: (
-              <Link href={"/equipment/capes"}>
+              <Link href={`/${localeStore.locale}/equipment/capes`}>
                 {t8("pageTitle").toUpperCase()}
               </Link>
             ),
@@ -196,7 +207,7 @@ const TheTopPageBlock = observer(() => {
         return [
           {
             title: (
-              <Link href={"/customization"}>
+              <Link href={`/${localeStore.locale}/customization`}>
                 {`${t2("pageTitle")}`.toUpperCase()}
               </Link>
             ),
@@ -218,7 +229,9 @@ const TheTopPageBlock = observer(() => {
         return [
           {
             title: (
-              <Link href={"/enemies"}>{t10("pageTitle").toUpperCase()}</Link>
+              <Link href={`/${localeStore.locale}/enemies`}>
+                {t10("pageTitle").toUpperCase()}
+              </Link>
             ),
           },
           {
@@ -244,12 +257,16 @@ const TheTopPageBlock = observer(() => {
         return [
           {
             title: (
-              <Link href={"/enemies"}>{t10("pageTitle").toUpperCase()}</Link>
+              <Link href={`/${localeStore.locale}/enemies`}>
+                {t10("pageTitle").toUpperCase()}
+              </Link>
             ),
           },
           {
             title: (
-              <Link href={`/enemies/${params.fractionName}`}>
+              <Link
+                href={`/${localeStore.locale}/enemies/${params.fractionName}`}
+              >
                 {t11("pageTitle" as never).toUpperCase()}
               </Link>
             ),
@@ -269,7 +286,11 @@ const TheTopPageBlock = observer(() => {
       if (pathname.includes("news") && Object.entries(params).length > 1) {
         return [
           {
-            title: <Link href={"/news"}>{t12("pageTitle").toUpperCase()}</Link>,
+            title: (
+              <Link href={`/${localeStore.locale}/news`}>
+                {t12("pageTitle").toUpperCase()}
+              </Link>
+            ),
           },
           {
             title: getIntlArray(t13("titles" as never))[

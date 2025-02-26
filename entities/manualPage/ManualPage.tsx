@@ -5,6 +5,8 @@ import { useTranslations } from "next-intl";
 
 import { getIntlArray } from "@/utils/generalFunctions";
 
+import { localeStore } from "@/store/LocaleStore";
+
 import Link from "next/link";
 
 import "./manualPage.css";
@@ -19,7 +21,7 @@ const ManualPage: React.FC<ManualSectionProps> = ({ id, link, image }) => {
   const t = useTranslations("Pages");
 
   return (
-    <Link href={link}>
+    <Link href={`/${localeStore.locale}${link}`}>
       <div className="manualPageBlock">
         {/*<img src={image} alt="" className="w-full h-full" />*/}
 

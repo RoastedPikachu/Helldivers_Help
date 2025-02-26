@@ -1,34 +1,41 @@
 "use client";
 import React, { useEffect } from "react";
 
+import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
+
 import MediaQuery from "react-responsive";
 
 import { Observer, observer } from "mobx-react-lite";
 
 import { useTranslations } from "next-intl";
 
-import Link from "next/link";
+import { getIntlArray } from "@/utils/generalFunctions";
 
+import { localeStore } from "@/store/LocaleStore";
 import { mobileStore } from "@/store/MobileStore";
+
+import { ConfigProvider, Select } from "antd";
+
+import Link from "next/link";
 
 import MobileHeaderContent from "@/widgets/mobileHeaderContent/MobileHeaderContent";
 
 import "./TheHeader.css";
-import { getIntlArray } from "@/utils/generalFunctions";
-import { ConfigProvider, Select } from "antd";
-import { useParams } from "next/navigation";
-import { useRouter } from "@/navigation";
 
 const TheHeader = observer(() => {
   const router = useRouter();
 
-  const params = useParams();
+  const pathname = usePathname();
 
   const t = useTranslations("Header");
 
   const changeLanguage = (value: string) => {
-    console.log(value.toLowerCase());
-    router.push("/", { locale: value });
+    localeStore.setLocale(value);
+
+    const clearPathname = pathname.slice(value.length + 1);
+
+    router.push(`/${value}${clearPathname}`);
   };
 
   useEffect(() => {
@@ -43,7 +50,10 @@ const TheHeader = observer(() => {
               <MobileHeaderContent />
             ) : (
               <header>
-                <Link href="/" className="headerLogoLink">
+                <Link
+                  href={`/${localeStore.locale}`}
+                  className="headerLogoLink"
+                >
                   <img
                     src="/static/GeneralIcons/HelldiversHelmet.svg"
                     alt=""
@@ -56,16 +66,22 @@ const TheHeader = observer(() => {
                 </Link>
 
                 <nav className="headerNavBlock">
-                  <Link href="/news" className="headerNavBlock_Link mr-[50px]">
+                  <Link
+                    href={`/${localeStore.locale}/news`}
+                    className="headerNavBlock_Link mr-[50px]"
+                  >
                     {getIntlArray(t("links"))[0]}
                   </Link>
 
-                  <Link href="/war" className="headerNavBlock_Link mr-[50px]">
+                  <Link
+                    href={`/${localeStore.locale}/war`}
+                    className="headerNavBlock_Link mr-[50px]"
+                  >
                     {getIntlArray(t("links"))[1]}
                   </Link>
 
                   <Link
-                    href="/stratagemtraining"
+                    href={`/${localeStore.locale}/stratagemtraining`}
                     className="headerNavBlock_Link col-span-2 mr-[50px]"
                   >
                     {getIntlArray(t("links"))[2]}
@@ -87,7 +103,7 @@ const TheHeader = observer(() => {
                     }}
                   >
                     <Select
-                      defaultValue={params.locale as string}
+                      defaultValue={localeStore.locale}
                       options={[
                         { value: "ru", label: "ru" },
                         { value: "en", label: "en" },
