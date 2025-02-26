@@ -280,7 +280,7 @@ export const weapons = [
   },
   {
     id: 24,
-    imagePath: "/static/Weaponry/primary/Cb9.webp",
+    imagePath: "/static/Weaponry/primary/CB9.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
     devName: "CB-9 Exploding Crossbow",

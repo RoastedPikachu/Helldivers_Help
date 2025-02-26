@@ -31,7 +31,11 @@ header {
 }
 
 .headerNavBlock_ChangeLanguageButton {
-    @apply text-theme;
+    @apply mlarge:absolute mlarge:right-[2.5%] mmedium:w-[55px] text-theme;
+}
+
+.headerNavBlock_ChangeLanguageButton .ant-select-selector {
+    @apply mmedium:!px-[7.5px];
 }
 
 .headerNavBlock_ChangeLanguageButton .ant-select-selection-item {

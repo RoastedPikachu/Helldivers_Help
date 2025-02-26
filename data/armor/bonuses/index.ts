@@ -21,7 +21,7 @@ export const armorBonuses: { [key: string]: ArmorBonus } = {
   },
   medKit: {
     id: 3,
-    icon: "/static/armorBonuses/MedKit.svg",
+    icon: "/static/armorBonuses/Aptechka.svg",
     name: "Аптечка",
     description:
       "Увеличивает первоначальный размер инвентаря и количество переносимых стимов на +2. Увеличивает время действия стима на 2.0 сек.",

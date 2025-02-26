@@ -1,16 +1,26 @@
 "use client";
 import React, { useState } from "react";
 
+import { usePathname, useRouter } from "next/navigation";
+
 import { useTranslations } from "next-intl";
 
-import Link from "next/link";
+import { getIntlArray } from "@/utils/generalFunctions";
+
+import { localeStore } from "@/store/LocaleStore";
 
 import { pages } from "@/data/pages/pages";
 
+import { ConfigProvider, Select } from "antd";
+
+import Link from "next/link";
+
 import "./MobileHeaderContent.css";
-import { getIntlArray } from "@/utils/generalFunctions";
 
 const MobileHeaderContent = () => {
+  const router = useRouter();
+  const pathname = usePathname();
+
   const t = useTranslations("Header");
   const t1 = useTranslations("Pages");
 
@@ -18,6 +28,14 @@ const MobileHeaderContent = () => {
     isAdditionalHeaderInfoOpened,
     changeIsAdditionalHeaderInfoOpenedStatus,
   ] = useState(false);
+
+  const changeLanguage = (value: string) => {
+    localeStore.setLocale(value);
+
+    const clearPathname = pathname.slice(value.length + 1);
+
+    router.push(`/${value}${clearPathname}`);
+  };
 
   return (
     <header>
@@ -45,6 +63,32 @@ const MobileHeaderContent = () => {
         <Link href="/" className="headerLogoLink_Text">
           HELLDIVERS <b className="headerLogoLink_Text_Bold">help</b>
         </Link>
+
+        <ConfigProvider
+          theme={{
+            token: {
+              colorPrimary: "#ffe500",
+              colorBorder: "#ffe500",
+            },
+            components: {
+              Select: {
+                selectorBg: "#1e1e1e",
+                optionActiveBg: "transparent",
+                optionSelectedBg: "transparent",
+              },
+            },
+          }}
+        >
+          <Select
+            defaultValue={localeStore.locale}
+            options={[
+              { value: "ru", label: "ru" },
+              { value: "en", label: "en" },
+            ]}
+            onChange={changeLanguage}
+            className="headerNavBlock_ChangeLanguageButton"
+          />
+        </ConfigProvider>
       </div>
 
       <div
