@@ -28,6 +28,7 @@ const ArmorKit: React.FC<ArmorKitProps> = ({
 }) => {
   const t = useTranslations("armor");
   const t1 = useTranslations("armorBonuses");
+
   return (
     <Link href={`/equipment/armor/${toSlug(devName)}`}>
       <div className="armorKit">

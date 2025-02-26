@@ -34,6 +34,8 @@ const Title: React.FC<RankProps> = ({ id, iconPath, fromLevel, xpCount }) => {
         return getIntlArray(t("obtainingMethods"))[5];
       case 28:
         return getIntlArray(t("obtainingMethods"))[6];
+      case 29:
+        return getIntlArray(t("obtainingMethods"))[7];
     }
   };
 

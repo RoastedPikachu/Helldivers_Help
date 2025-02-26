@@ -169,4 +169,10 @@ export const titles = [
     fromLevel: "",
     xpCount: 0,
   },
+  {
+    id: 29,
+    iconPath: "/static/Ranks/ServantOfFreedom.svg",
+    fromLevel: "",
+    xpCount: 0,
+  },
 ] as Rank[];

@@ -7,7 +7,7 @@ import { locales } from "@/i18n";
 export default createMiddleware({
   locales,
   localePrefix,
-  defaultLocale: "ru",
+  defaultLocale: "en",
 });
 
 export const config = {

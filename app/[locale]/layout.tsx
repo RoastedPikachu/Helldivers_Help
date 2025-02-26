@@ -81,7 +81,7 @@ export default async function RootLayout({
         <Script src="/static/googleAnalytics/index.js" strategy="lazyOnload" />
         <Script src="/static/metric/index.js" strategy="lazyOnload" />
 
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
       </body>
