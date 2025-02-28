@@ -86,7 +86,15 @@ const TheFooter = () => {
                 target="_blank"
                 className="footerBottom_Link"
               >
-                Arrowhead game Studios and Sony.
+                Arrowhead game Studios
+              </a>
+              &nbsp;&nbsp;and
+              <a
+                href="https://www.playstation.com/en-us/"
+                target="_blank"
+                className="footerBottom_Link"
+              >
+                Sony.
               </a>
               <p className="ml-[10px]">
                 Trademarks belong to their respective owners.
