@@ -1,13 +1,11 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import { useTranslations } from "next-intl";
 
 import { IResource, ResourceTableTitle } from "@/utils/generalInterfaces";
 
 import { resources } from "@/data/resources";
-
-import Link from "next/link";
 
 import ResourceTable from "@/widgets/resourceTable/ResourceTable";
 
@@ -23,8 +21,6 @@ const TheResourcesContent = () => {
   const t1 = useTranslations("resources");
 
   const [currentResource, setCurrentResource] = useState({} as IResource);
-
-  const [additionalDescription, setAdditionalDescription] = useState("" as any);
 
   const handleResourceBlockClick = (id: number) => {
     setCurrentResource(resources.find((resource) => resource.id === id)!);
@@ -67,51 +63,6 @@ const TheResourcesContent = () => {
       ];
     }
   };
-
-  useEffect(() => {
-    navigator.language === "ru-RU"
-      ? setAdditionalDescription(
-          <p>
-            Они позволяют улучшать{" "}
-            <Link href={"/shipModules"} className="pageDescription-link">
-              корабль
-            </Link>
-            , покупать новое{" "}
-            <Link href={"/armorKits"} className="pageDescription-link">
-              снаряжение
-            </Link>{" "}
-            и{" "}
-            <Link href={"/weaponry"} className="pageDescription-link">
-              вооружение
-            </Link>
-            , а также открывать{" "}
-            <Link href={"/warbonds"} className="pageDescription-link">
-              боевые заслуги
-            </Link>
-            .
-          </p>,
-        )
-      : setAdditionalDescription(
-          <p>
-            They allow you to upgrade your{" "}
-            <Link href={"/shipModules"} className="pageDescription-link">
-              ship
-            </Link>
-            , buy new{" "}
-            <Link href={"/armorKits"} className="pageDescription-link">
-              equipment,
-            </Link>{" "}
-            <Link href={"/weaponry"} className="pageDescription-link">
-              weapons
-            </Link>
-            , and{" "}
-            <Link href={"/warbonds"} className="pageDescription-link">
-              warbonds
-            </Link>
-            .
-          </p>,
-        );
-  }, []);
   return (
     <main>
       <ThePageTitle
@@ -121,7 +72,7 @@ const TheResourcesContent = () => {
 
       <PageDescription description={t("pageDescription")} />
 
-      <PageDescription description={additionalDescription} />
+      <PageDescription description={t("pageAdditionalDescription")} />
 
       <section
         id="ResourceInfo"
