@@ -11,7 +11,7 @@ const TheWarbondsContent = () => {
     <main>
       <EntitySection
         title={""}
-        gridStyles={"mt-[50px] mlarge:mt-0 grid-cols-1"}
+        gridStyles={"mt-[30px] mlarge:mt-0 grid-cols-1"}
       >
         {warbonds.map((warbond) => (
           <WarbondBanner

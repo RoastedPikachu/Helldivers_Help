@@ -197,6 +197,10 @@
     "pageDescription": "During the battles, any Helldiver accumulates a certain share of impressions or experiences. They can be easily thrown out in emotions! You can celebrate the victory and successful return with a beautiful victory pose. Show everyone your muscles or hug your beloved comrade, the main thing is to keep your mind for the further continuation of the spread of democracy throughout the galaxy.",
     "sectionTitles": "[\"VICTORY POSES\"]"
   },
+  "WarbondsPage": {
+    "metadataTitle": "HELLDIVERS 2: Warbonds",
+    "metadataDescription": "Your warbonds in Helldivers 2! Earn medals for successful missions and spend them on combat achievements. Buy them, earn rewards and prove your loyalty to Super Earth!"
+  },
   "Pages": {
     "links": "[\"Weaponry\",\"Equipment\",\"Customization\",\"Enemies\",\"Stratagems\",\"Ship modules\",\"Emotes\",\"Warbonds\",\"Resources\",\"Progression\",\"Achievements\",\"Planets\"]"
   },
