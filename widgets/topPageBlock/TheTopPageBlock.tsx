@@ -29,6 +29,7 @@ import TheHeader from "@/widgets/header/TheHeader";
 import RunningLine from "@/shared/runningLine/RunningLine";
 
 import "./TheTopPageBlock.css";
+import { warbonds } from "@/data/warbonds";
 
 const TheTopPageBlock = observer(() => {
   const pathname = usePathname();
@@ -47,6 +48,8 @@ const TheTopPageBlock = observer(() => {
   const t10 = useTranslations("EnemiesPage");
   const t12 = useTranslations("NewsPage");
   const t13 = useTranslations("news");
+  const t14 = useTranslations("WarbondsPage");
+  const t15 = useTranslations("data");
 
   const isRunningLineShowed = useMemo(() => {
     if (mobileStore.isMobileDevice) {
@@ -300,6 +303,24 @@ const TheTopPageBlock = observer(() => {
           },
         ];
       }
+
+      if (pathname.includes("warbonds") && Object.entries(params).length > 1) {
+        return [
+          {
+            title: (
+              <Link href={`/${localeStore.locale}/warbonds`}>
+                {t14("pageTitle").toUpperCase()}
+              </Link>
+            ),
+          },
+          {
+            title: getIntlArray(t15("warbonds" as never))[
+              warbonds!.find((warbond) => warbond.title === params.warbondName)!
+                .id - 1
+            ],
+          },
+        ];
+      }
     }
   };
   return (
@@ -326,7 +347,7 @@ const TheTopPageBlock = observer(() => {
             >
               <Breadcrumb
                 items={getItems()}
-                className={`topPageSection-breadcrumb mt-[20px] ${pathname.includes("news") ? "ml-[calc((100%-900px)/2)] w-[900px]" : "deskWide:ml-[calc((100%-1440px)/2)] w-full"} desktop`}
+                className={`topPageSection-breadcrumb mt-[20px] ${pathname.includes("news") ? "ml-[calc((100%-900px)/2)] w-[900px]" : pathname.includes("warbonds") ? "ml-[calc((100%-1024px)/2)] w-[1024px]" : "deskWide:ml-[calc((100%-1440px)/2)] w-full"} desktop`}
               />
             </ConfigProvider>
           </section>

@@ -199,7 +199,8 @@
   },
   "WarbondsPage": {
     "metadataTitle": "HELLDIVERS 2: Warbonds",
-    "metadataDescription": "Your warbonds in Helldivers 2! Earn medals for successful missions and spend them on combat achievements. Buy them, earn rewards and prove your loyalty to Super Earth!"
+    "metadataDescription": "Your warbonds in Helldivers 2! Earn medals for successful missions and spend them on combat achievements. Buy them, earn rewards and prove your loyalty to Super Earth!",
+    "pageTitle": "Warbonds"
   },
   "Pages": {
     "links": "[\"Weaponry\",\"Equipment\",\"Customization\",\"Enemies\",\"Stratagems\",\"Ship modules\",\"Emotes\",\"Warbonds\",\"Resources\",\"Progression\",\"Achievements\",\"Planets\"]"
