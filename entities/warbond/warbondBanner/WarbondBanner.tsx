@@ -11,7 +11,7 @@ import { getIntlArray } from "@/utils/generalFunctions";
 
 import { Warbond } from "@/data/warbonds";
 
-import "./WarbondBanner.css";
+import "./warbondBanner.css";
 
 const WarbondBanner: React.FC<Warbond> = ({ id, title, image }) => {
   const pathname = usePathname();

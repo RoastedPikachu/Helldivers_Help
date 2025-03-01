@@ -3,6 +3,7 @@ import React from "react";
 import { warbonds } from "@/data/warbonds";
 
 import EntitySection from "@/widgets/EntitySection";
+
 import WarbondBanner from "@/entities/warbond/warbondBanner/WarbondBanner";
 
 const TheWarbondsContent = () => {
@@ -10,7 +11,7 @@ const TheWarbondsContent = () => {
     <main>
       <EntitySection
         title={""}
-        gridStyles={"mt-[50px] mlarge:mt-[30px] grid-cols-1"}
+        gridStyles={"mt-[50px] mlarge:mt-0 grid-cols-1"}
       >
         {warbonds.map((warbond) => (
           <WarbondBanner

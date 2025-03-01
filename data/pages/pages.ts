@@ -32,21 +32,26 @@ export const pages = [
   },
   {
     id: 8,
-    link: "/resources",
+    link: "/warbonds",
     image: "/static/SES.webp",
   },
   {
     id: 9,
-    link: "/progression",
+    link: "/resources",
     image: "/static/SES.webp",
   },
   {
     id: 10,
-    link: "/achievements",
+    link: "/progression",
     image: "/static/SES.webp",
   },
   {
     id: 11,
+    link: "/achievements",
+    image: "/static/SES.webp",
+  },
+  {
+    id: 12,
     link: "/planets",
     image: "/static/SES.webp",
   },

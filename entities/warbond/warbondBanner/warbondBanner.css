@@ -1,0 +1,15 @@
+.warbondBanner {
+    @apply relative w-full h-auto;
+}
+
+.warbondBanner-link {
+    @apply block mx-auto w-[1000px] mlarge:w-full h-[500px] mlarge:h-[calc(90vw*0.51)] border-2 border-[--color-border-grey] hover:border-[--color-theme] hover:brightness-110 duration-300 ease-in-out;
+}
+
+.warbondBanner-link-image {
+    @apply w-full h-full;
+}
+
+.warbondBanner-title {
+    @apply mt-[15px] mlarge:mt-[10px] mx-auto text-theme text-[1.25rem] mlarge:text-[1rem] mmedium:text-[0.9375rem] text-center;
+}
