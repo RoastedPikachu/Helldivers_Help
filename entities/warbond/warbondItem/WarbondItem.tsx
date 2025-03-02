@@ -55,11 +55,21 @@ const WarbondItem: React.FC<WarbondItem> = ({
     } else if (image?.includes("Hellpod")) {
       return verticalBlockStyles;
     } else if (image?.includes("shuttles")) {
+      if (image?.includes("square")) {
+        return squareBlockStyles;
+      }
+
       return horizontalBlockStyles;
     } else if (image?.includes("mechs")) {
       return fullBlockStyles;
     } else if (image?.includes("titles")) {
       return smallBlockStyles;
+    } else if (image?.includes("stratagems")) {
+      if (image?.includes("square")) {
+        return squareBlockStyles;
+      }
+
+      return horizontalBlockStyles;
     }
   };
 

@@ -1285,6 +1285,205 @@ const TheWarbondContent = () => {
         </div>
       </div>
     ),
+    chemicalagents: (
+      <div className="warbondContainer">
+        <div className="warbondContainer-page">
+          <div className="warbondContainer-page-top">
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_1</p>
+
+            <div className="warbondContainer-page-right">
+              <p className="warbondContainer-page-right-text">
+                Всего предметов: 8
+              </p>
+
+              <div className="warbondContainer-page-right-itemsBought">
+                {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
+                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="relative w-full h-[539px]">
+            <WarbondItem
+              positionStyle={"top-0 left-0"}
+              price={40}
+              image={"/static/warbonds/armor/AF50Body.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 left-[416px]"}
+              price={30}
+              image={"/static/warbonds/armor/AF50Helmet.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-[179px] left-[416px]"}
+              price={8}
+              image={"/static/warbonds/coats/ChemicalAgents1.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 left-0"}
+              price={7}
+              image={"/static/warbonds/SuperCredits.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 left-[208px]"}
+              price={30}
+              image={"/static/warbonds/weapons/horizontal/G4.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-0"}
+              price={8}
+              image={"/static/warbonds/emotes/horizontal/ChemicalAgents1.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-[208px]"}
+              price={2}
+              image={"/static/playerCards/ChemicalAgents1.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-0"}
+              price={20}
+              image={"/static/warbonds/hellpods/ChemicalAgentsHellpod.webp"}
+            />
+          </div>
+        </div>
+
+        <div className="relative w-full h-auto">
+          <div className="relative flex justify-between items-center mb-[15px] w-full h-auto">
+            <p className="text-white text-[1.5rem] text-left font-primary font-medium">
+              СТРАНИЦА_2
+            </p>
+
+            <div className="flex items-center gap-x-[10px]">
+              <p className="text-white text-[1.5rem] text-left font-primary font-medium">
+                Всего предметов: 7
+              </p>
+
+              <div className="flex flex-wrap justify-start gap-[5px] w-[95px] h-auto">
+                {[0, 1, 2, 3, 4, 5, 6].map((item, index) => (
+                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="relative w-full h-[539px]">
+            <WarbondItem
+              positionStyle={"top-0 left-0"}
+              price={85}
+              image={
+                "/static/warbonds/stratagems/horizontal/ChemicalAgentsStratagem1.webp"
+              }
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-[416px]"}
+              price={12}
+              image={"/static/warbonds/SuperCredits.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-[416px]"}
+              price={5}
+              image={"/static/playerCards/ChemicalAgents2.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 left-0"}
+              price={50}
+              image={
+                "/static/warbonds/shuttles/square/ChemicalAgentsShuttle.webp"
+              }
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-0"}
+              price={45}
+              image={"/static/warbonds/armor/AF02Body.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-[208px]"}
+              price={20}
+              image={"/static/warbonds/coats/ChemicalAgents2.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-0"}
+              price={35}
+              image={"/static/warbonds/armor/AF02Helmet.webp"}
+            />
+          </div>
+        </div>
+
+        <div className="relative w-full h-auto">
+          <div className="relative flex justify-between items-center mb-[15px] w-full h-auto">
+            <p className="text-white text-[1.5rem] text-left font-primary font-medium">
+              СТРАНИЦА_3
+            </p>
+
+            <div className="flex items-center gap-x-[10px]">
+              <p className="text-white text-[1.5rem] text-left font-primary font-medium">
+                Всего предметов: 6
+              </p>
+
+              <div className="flex flex-wrap justify-start gap-[5px] w-[95px] h-auto">
+                {[0, 1, 2, 3, 4, 5].map((item, index) => (
+                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="relative w-full h-[539px]">
+            <WarbondItem
+              positionStyle={"top-0 left-0"}
+              price={32}
+              image={"/static/warbonds/SuperCredits.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 left-[208px]"}
+              price={20}
+              image={"/static/warbonds/titles/ChemicalAgentsTitle.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 left-0"}
+              price={110}
+              image={
+                "/static/warbonds/stratagems/square/ChemicalAgentsStratagem2.webp"
+              }
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 left-[416px]"}
+              price={80}
+              image={"/static/warbonds/weapons/vertical/P11.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 left-[416px]"}
+              price={70}
+              image={"/static/warbonds/emotes/default/ChemicalAgents2.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-0"}
+              price={50}
+              image={"/static/warbonds/mechs/ChemicalAgentsMech.webp"}
+            />
+          </div>
+        </div>
+      </div>
+    ),
   };
 
   const getTargetWarbond = () => {
