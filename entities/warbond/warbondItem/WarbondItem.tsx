@@ -94,7 +94,7 @@ const WarbondItem: React.FC<WarbondItem> = ({
         <img
           src="/static/warbonds/DecorationStripes.png"
           alt="Изображение: Декорация блока предмета"
-          className="absolute top-0 left-0 w-[10px] h-[351px] z-10"
+          className="absolute top-0 left-0 w-[10px] h-[533px] z-10"
         />
 
         <img src={image} alt="" className={`${getImageStyles()} z-5`} />
