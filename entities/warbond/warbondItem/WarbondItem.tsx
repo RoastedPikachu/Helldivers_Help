@@ -22,6 +22,8 @@ const WarbondItem: React.FC<WarbondItem> = ({
 
     const squareBlockStyles = "w-[400px] h-[351px]";
 
+    const fullBlockStyles = "w-[400px] h-full";
+
     if (image?.includes("boosters")) {
       return image?.includes("vertical")
         ? verticalBlockStyles
@@ -37,7 +39,7 @@ const WarbondItem: React.FC<WarbondItem> = ({
     } else if (image?.includes("emotes")) {
       if (image?.includes("horizontal")) {
         return horizontalBlockStyles;
-      } else if (image?.includes("huge")) {
+      } else if (image?.includes("square")) {
         return squareBlockStyles;
       } else {
         return smallBlockStyles;
@@ -50,6 +52,14 @@ const WarbondItem: React.FC<WarbondItem> = ({
       } else if (image?.includes("vertical")) {
         return verticalBlockStyles;
       }
+    } else if (image?.includes("Hellpod")) {
+      return verticalBlockStyles;
+    } else if (image?.includes("shuttles")) {
+      return horizontalBlockStyles;
+    } else if (image?.includes("mechs")) {
+      return fullBlockStyles;
+    } else if (image?.includes("titles")) {
+      return smallBlockStyles;
     }
   };
 
@@ -62,6 +72,8 @@ const WarbondItem: React.FC<WarbondItem> = ({
       return "absolute bottom-0 mx-auto w-[50%]";
     } else if (image?.includes("Emote")) {
       return "absolute bottom-0 mx-auto w-auto h-[80%]";
+    } else if (image?.includes("Hellpod")) {
+      return "absolute bottom-0 left-0 w-[95%]";
     }
 
     return "w-auto";
