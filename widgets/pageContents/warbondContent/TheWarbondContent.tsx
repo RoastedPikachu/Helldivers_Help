@@ -26,13 +26,16 @@ const TheWarbondContent = () => {
 
               <div className="warbondContainer-page-right-itemsBought">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={1}
@@ -40,7 +43,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[208px]"}
+              positionStyle={"top-0 left-[208px] mlarge:left-[20%]"}
               price={2}
               image={"/static/warbonds/weapons/vertical/G6.webp"}
             />
@@ -54,7 +57,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-[416px]"}
+              positionStyle={"top-0 right-[416px] mlarge:right-[40%]"}
               price={1}
               image={"/static/warbonds/SuperCredits.webp"}
             />
@@ -66,13 +69,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[208px]"}
+              positionStyle={"bottom-0 right-[208px] mlarge:right-[20%]"}
               price={3}
               image={"/static/warbonds/armor/SC34Body.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-[179px] right-0"}
+              positionStyle={"bottom-[179px] mlarge:bottom-[33%] right-0"}
               price={2}
               image={"/static/warbonds/armor/SC34Helmet.webp"}
             />
@@ -96,13 +99,16 @@ const TheWarbondContent = () => {
 
               <div className="warbondContainer-page-right-itemsBought">
                 {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={2}
@@ -112,13 +118,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[208px]"}
+              positionStyle={"bottom-0 left-[208px] mlarge:left-[20%]"}
               price={5}
               image={"/static/warbonds/weapons/vertical/P19.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-[208px]"}
+              positionStyle={"top-0 right-[208px] mlarge:right-[20%]"}
               price={6}
               image={"/static/warbonds/armor/FS05Body.webp"}
             />
@@ -130,7 +136,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-[179px] right-0"}
+              positionStyle={"top-[179px] mlarge:top-[33%] right-0"}
               price={3}
               image={"/static/warbonds/coats/HelldiversMobilize2.webp"}
             />
@@ -142,7 +148,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[416px]"}
+              positionStyle={"bottom-0 right-[416px] mlarge:right-[40%]"}
               price={2}
               image={"/static/warbonds/SuperCredits.webp"}
             />
@@ -166,13 +172,16 @@ const TheWarbondContent = () => {
 
               <div className="warbondContainer-page-right-itemsBought">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={2}
@@ -180,7 +189,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[208px]"}
+              positionStyle={"top-0 left-[208px] mlarge:left-[20%]"}
               price={15}
               image={"/static/warbonds/boosters/vertical/Booster.webp"}
             />
@@ -194,7 +203,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-[416px]"}
+              positionStyle={"top-0 right-[416px] mlarge:right-[40%]"}
               price={3}
               image={"/static/warbonds/SuperCredits.webp"}
             />
@@ -206,13 +215,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[208px]"}
+              positionStyle={"bottom-0 right-[208px] mlarge:right-[20%]"}
               price={10}
               image={"/static/warbonds/armor/CE35Body.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-[179px] right-0"}
+              positionStyle={"bottom-[179px] mlarge:bottom-[33%] right-0"}
               price={7}
               image={"/static/warbonds/armor/CE35Helmet.webp"}
             />
@@ -236,13 +245,16 @@ const TheWarbondContent = () => {
 
               <div className="warbondContainer-page-right-itemsBought">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={20}
@@ -252,13 +264,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[208px]"}
+              positionStyle={"bottom-0 left-[208px] mlarge:left-[20%]"}
               price={20}
               image={"/static/warbonds/boosters/vertical/Booster.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-[208px]"}
+              positionStyle={"top-0 right-[208px] mlarge:right-[20%]"}
               price={15}
               image={"/static/warbonds/armor/CM09Body.webp"}
             />
@@ -270,7 +282,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-[179px] right-0"}
+              positionStyle={"top-[179px] mlarge:top-[33%] right-0"}
               price={8}
               image={"/static/warbonds/coats/HelldiversMobilize4.webp"}
             />
@@ -282,7 +294,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[416px]"}
+              positionStyle={"bottom-0 right-[416px] mlarge:right-[40%]"}
               price={6}
               image={"/static/warbonds/SuperCredits.webp"}
             />
@@ -306,15 +318,18 @@ const TheWarbondContent = () => {
 
               <div className="warbondContainer-page-right-itemsBought">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
-              positionStyle={"top-0 left-[208px]"}
+              positionStyle={"top-0 left-[208px] mlarge:left-[20%]"}
               price={4}
               image={"/static/playerCards/HelldiversMobilize5.webp"}
             />
@@ -334,7 +349,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-[416px]"}
+              positionStyle={"top-0 right-[416px] mlarge:right-[40%]"}
               price={10}
               image={"/static/warbonds/SuperCredits.webp"}
             />
@@ -346,13 +361,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[208px]"}
+              positionStyle={"bottom-0 right-[208px] mlarge:right-[20%]"}
               price={25}
               image={"/static/warbonds/armor/DP40Body.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-[179px] right-0"}
+              positionStyle={"bottom-[179px] mlarge:bottom-[33%] right-0"}
               price={20}
               image={"/static/warbonds/armor/DP40Helmet.webp"}
             />
@@ -376,13 +391,16 @@ const TheWarbondContent = () => {
 
               <div className="warbondContainer-page-right-itemsBought">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={10}
@@ -392,13 +410,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[208px]"}
+              positionStyle={"bottom-0 left-[208px] mlarge:left-[20%]"}
               price={40}
               image={"/static/warbonds/boosters/vertical/Booster.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-[208px]"}
+              positionStyle={"top-0 right-[208px] mlarge:right-[20%]"}
               price={35}
               image={"/static/warbonds/armor/FS23Body.webp"}
             />
@@ -410,7 +428,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-[179px] right-0"}
+              positionStyle={"top-[179px] mlarge:top-[33%] right-0"}
               price={15}
               image={"/static/warbonds/coats/HelldiversMobilize6.webp"}
             />
@@ -422,7 +440,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[416px]"}
+              positionStyle={"bottom-0 right-[416px] mlarge:right-[40%]"}
               price={15}
               image={"/static/warbonds/SuperCredits.webp"}
             />
@@ -446,15 +464,18 @@ const TheWarbondContent = () => {
 
               <div className="warbondContainer-page-right-itemsBought">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
-              positionStyle={"top-0 left-[208px]"}
+              positionStyle={"top-0 left-[208px] mlarge:left-[20%]"}
               price={7}
               image={"/static/playerCards/HelldiversMobilize7.webp"}
             />
@@ -474,7 +495,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-[416px]"}
+              positionStyle={"top-0 right-[416px] mlarge:right-[40%]"}
               price={15}
               image={"/static/warbonds/SuperCredits.webp"}
             />
@@ -486,13 +507,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[208px]"}
+              positionStyle={"bottom-0 right-[208px] mlarge:right-[20%]"}
               price={50}
               image={"/static/warbonds/armor/SC30Body.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-[179px] right-0"}
+              positionStyle={"bottom-[179px] mlarge:bottom-[33%] right-0"}
               price={35}
               image={"/static/warbonds/armor/SC30Helmet.webp"}
             />
@@ -516,13 +537,16 @@ const TheWarbondContent = () => {
 
               <div className="warbondContainer-page-right-itemsBought">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={50}
@@ -532,13 +556,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[208px]"}
+              positionStyle={"bottom-0 left-[208px] mlarge:left-[20%]"}
               price={25}
               image={"/static/warbonds/weapons/vertical/G3.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-[208px]"}
+              positionStyle={"top-0 right-[208px] mlarge:right-[20%]"}
               price={60}
               image={"/static/warbonds/armor/SA04Body.webp"}
             />
@@ -550,7 +574,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-[179px] right-0"}
+              positionStyle={"top-[179px] mlarge:top-[33%] right-0"}
               price={25}
               image={"/static/warbonds/coats/HelldiversMobilize8.webp"}
             />
@@ -562,7 +586,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[416px]"}
+              positionStyle={"bottom-0 right-[416px] mlarge:right-[40%]"}
               price={20}
               image={"/static/warbonds/SuperCredits.webp"}
             />
@@ -586,15 +610,18 @@ const TheWarbondContent = () => {
 
               <div className="warbondContainer-page-right-itemsBought">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
-              positionStyle={"top-0 left-[208px]"}
+              positionStyle={"top-0 left-[208px] mlarge:left-[20%]"}
               price={15}
               image={"/static/playerCards/HelldiversMobilize9.webp"}
             />
@@ -614,7 +641,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-[416px]"}
+              positionStyle={"top-0 right-[416px] mlarge:right-[40%]"}
               price={25}
               image={"/static/warbonds/SuperCredits.webp"}
             />
@@ -626,13 +653,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[208px]"}
+              positionStyle={"bottom-0 right-[208px] mlarge:right-[20%]"}
               price={70}
               image={"/static/warbonds/armor/CM14Body.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-[179px] right-0"}
+              positionStyle={"bottom-[179px] mlarge:bottom-[33%] right-0"}
               price={50}
               image={"/static/warbonds/armor/CM14Helmet.webp"}
             />
@@ -656,13 +683,16 @@ const TheWarbondContent = () => {
 
               <div className="warbondContainer-page-right-itemsBought">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={50}
@@ -678,7 +708,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-[208px]"}
+              positionStyle={"top-0 right-[208px] mlarge:right-[20%]"}
               price={100}
               image={"/static/warbonds/armor/DP11Body.webp"}
             />
@@ -690,19 +720,19 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-[179px] right-0"}
+              positionStyle={"top-[179px] mlarge:top-[33%] right-0"}
               price={40}
               image={"/static/warbonds/coats/HelldiversMobilize10.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[208px]"}
+              positionStyle={"bottom-0 left-[208px] mlarge:left-[20%]"}
               price={20}
               image={"/static/playerCards/HelldiversMobilize10.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[416px]"}
+              positionStyle={"bottom-0 right-[416px] mlarge:right-[40%]"}
               price={50}
               image={"/static/warbonds/SuperCredits.webp"}
             />
@@ -729,13 +759,16 @@ const TheWarbondContent = () => {
 
               <div className="warbondContainer-page-right-itemsBought">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={2}
@@ -743,13 +776,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[208px]"}
+              positionStyle={"top-0 left-[208px] mlarge:left-[20%]"}
               price={15}
               image={"/static/warbonds/weapons/vertical/P4.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-[416px]"}
+              positionStyle={"top-0 right-[416px] mlarge:right-[40%]"}
               price={7}
               image={"/static/warbonds/SuperCredits.webp"}
             />
@@ -769,13 +802,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[208px]"}
+              positionStyle={"bottom-0 right-[208px] mlarge:right-[20%]"}
               price={18}
               image={"/static/warbonds/armor/SA25Body.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-[179px] right-0"}
+              positionStyle={"bottom-[179px] mlarge:bottom-[33%] right-0"}
               price={12}
               image={"/static/warbonds/armor/SA25Helmet.webp"}
             />
@@ -799,13 +832,16 @@ const TheWarbondContent = () => {
 
               <div className="warbondContainer-page-right-itemsBought">
                 {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={15}
@@ -815,13 +851,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[208px]"}
+              positionStyle={"top-0 left-[208px] mlarge:left-[20%]"}
               price={25}
               image={"/static/warbonds/weapons/vertical/G10.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-[208px]"}
+              positionStyle={"top-0 right-[208px] mlarge:right-[20%]"}
               price={45}
               image={"/static/warbonds/armor/SA12Body.webp"}
             />
@@ -833,7 +869,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-[179px] right-0"}
+              positionStyle={"top-[179px] mlarge:top-[33%] right-0"}
               price={16}
               image={"/static/warbonds/coats/SteeledVeteransCoat3.webp"}
             />
@@ -845,13 +881,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[208px]"}
+              positionStyle={"bottom-0 left-[208px] mlarge:left-[20%]"}
               price={16}
               image={"/static/warbonds/coats/SteeledVeteransCoat2.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[416px]"}
+              positionStyle={"bottom-0 right-[416px] mlarge:right-[40%]"}
               price={12}
               image={"/static/warbonds/SuperCredits.webp"}
             />
@@ -875,13 +911,16 @@ const TheWarbondContent = () => {
 
               <div className="warbondContainer-page-right-itemsBought">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={16}
@@ -889,13 +928,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[208px]"}
+              positionStyle={"top-0 left-[208px] mlarge:left-[20%]"}
               price={75}
               image={"/static/warbonds/boosters/vertical/Booster.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-[416px]"}
+              positionStyle={"top-0 right-[416px] mlarge:right-[40%]"}
               price={32}
               image={"/static/warbonds/SuperCredits.webp"}
             />
@@ -915,13 +954,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[208px]"}
+              positionStyle={"bottom-0 right-[208px] mlarge:right-[20%]"}
               price={64}
               image={"/static/warbonds/armor/SA32Body.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-[179px] right-0"}
+              positionStyle={"bottom-[179px] mlarge:bottom-[33%] right-0"}
               price={48}
               image={"/static/warbonds/armor/SA32Helmet.webp"}
             />
@@ -948,13 +987,16 @@ const TheWarbondContent = () => {
 
               <div className="warbondContainer-page-right-itemsBought">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={2}
@@ -962,13 +1004,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[208px]"}
+              positionStyle={"top-0 left-[208px] mlarge:left-[20%]"}
               price={18}
               image={"/static/warbonds/boosters/vertical/Booster.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-[416px]"}
+              positionStyle={"top-0 right-[416px] mlarge:right-[40%]"}
               price={7}
               image={"/static/warbonds/SuperCredits.webp"}
             />
@@ -988,13 +1030,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[416px]"}
+              positionStyle={"bottom-0 left-[416px] mlarge:left-[40%]"}
               price={18}
               image={"/static/warbonds/armor/EX03Body.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-[179px] right-0"}
+              positionStyle={"bottom-[179px] mlarge:bottom-[33%] right-0"}
               price={12}
               image={"/static/warbonds/armor/EX03Helmet.webp"}
             />
@@ -1009,24 +1051,25 @@ const TheWarbondContent = () => {
 
         <div className="relative w-full h-auto">
           <div className="relative flex justify-between items-center mb-[15px] w-full h-auto">
-            <p className="text-white text-[1.5rem] text-left font-primary font-medium">
-              СТРАНИЦА_2
-            </p>
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_2</p>
 
             <div className="flex items-center gap-x-[10px]">
-              <p className="text-white text-[1.5rem] text-left font-primary font-medium">
+              <p className="warbondContainer-page-right-text">
                 Всего предметов: 8
               </p>
 
               <div className="flex flex-wrap justify-start gap-[5px] w-[95px] h-auto">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={15}
@@ -1036,7 +1079,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[416px]"}
+              positionStyle={"top-0 left-[416px] mlarge:left-[40%]"}
               price={45}
               image={"/static/warbonds/armor/EX13Body.webp"}
             />
@@ -1048,7 +1091,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-[179px] right-0"}
+              positionStyle={"top-[179px] mlarge:top-[33%] right-0"}
               price={20}
               image={"/static/warbonds/coats/CuttingEdgeCoat2.webp"}
             />
@@ -1060,13 +1103,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[208px]"}
+              positionStyle={"bottom-0 left-[208px] mlarge:left-[20%]"}
               price={25}
               image={"/static/warbonds/weapons/vertical/G23.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[416px]"}
+              positionStyle={"bottom-0 right-[416px] mlarge:right-[40%]"}
               price={12}
               image={"/static/warbonds/SuperCredits.webp"}
             />
@@ -1081,24 +1124,25 @@ const TheWarbondContent = () => {
 
         <div className="relative w-full h-auto">
           <div className="relative flex justify-between items-center mb-[15px] w-full h-auto">
-            <p className="text-white text-[1.5rem] text-left font-primary font-medium">
-              СТРАНИЦА_3
-            </p>
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_3</p>
 
             <div className="flex items-center gap-x-[10px]">
-              <p className="text-white text-[1.5rem] text-left font-primary font-medium">
+              <p className="warbondContainer-page-right-text">
                 Всего предметов: 8
               </p>
 
               <div className="flex flex-wrap justify-start gap-[5px] w-[95px] h-auto">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={16}
@@ -1106,13 +1150,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[208px]"}
+              positionStyle={"top-0 left-[208px] mlarge:left-[20%]"}
               price={60}
               image={"/static/warbonds/weapons/vertical/LAS7.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-[416px]"}
+              positionStyle={"top-0 right-[416px] mlarge:right-[40%]"}
               price={32}
               image={"/static/warbonds/SuperCredits.webp"}
             />
@@ -1132,13 +1176,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[416px]"}
+              positionStyle={"bottom-0 left-[416px] mlarge:left-[40%]"}
               price={64}
               image={"/static/warbonds/armor/EX00Body.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-[179px] right-0"}
+              positionStyle={"bottom-[179px] mlarge:bottom-[33%] right-0"}
               price={48}
               image={"/static/warbonds/armor/EX00Helmet.webp"}
             />
@@ -1165,13 +1209,16 @@ const TheWarbondContent = () => {
 
               <div className="warbondContainer-page-right-itemsBought">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={7}
@@ -1185,7 +1232,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[208px]"}
+              positionStyle={"top-0 left-[208px] mlarge:left-[20%]"}
               price={8}
               image={
                 "/static/warbonds/emotes/horizontal/DemocraticDetonation1.webp"
@@ -1193,19 +1240,21 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-[179px] left-[416px]"}
+              positionStyle={
+                "bottom-[179px] mlarge:bottom-[33%] left-[416px] mlarge:left-[40%]"
+              }
               price={12}
               image={"/static/warbonds/armor/CE27Helmet.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[416px]"}
+              positionStyle={"bottom-0 left-[416px] mlarge:left-[40%]"}
               price={8}
               image={"/static/warbonds/coats/DemocraticDetonation1.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-[208px]"}
+              positionStyle={"top-0 right-[208px] mlarge:right-[20%]"}
               price={2}
               image={"/static/playerCards/DemocraticDetonation1.webp"}
             />
@@ -1226,24 +1275,25 @@ const TheWarbondContent = () => {
 
         <div className="relative w-full h-auto">
           <div className="relative flex justify-between items-center mb-[15px] w-full h-auto">
-            <p className="text-white text-[1.5rem] text-left font-primary font-medium">
-              СТРАНИЦА_2
-            </p>
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_2</p>
 
             <div className="flex items-center gap-x-[10px]">
-              <p className="text-white text-[1.5rem] text-left font-primary font-medium">
+              <p className="warbondContainer-page-right-text">
                 Всего предметов: 8
               </p>
 
               <div className="flex flex-wrap justify-start gap-[5px] w-[95px] h-auto">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={5}
@@ -1257,25 +1307,27 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[208px]"}
+              positionStyle={"top-0 left-[208px] mlarge:left-[20%]"}
               price={45}
               image={"/static/warbonds/armor/CE07Body.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-[208px]"}
+              positionStyle={"top-0 right-[208px] mlarge:right-[20%]"}
               price={35}
               image={"/static/warbonds/armor/CE07Helmet.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-[179px] right-[208px]"}
+              positionStyle={
+                "top-[179px] mlarge:top-[33%] right-[208px] mlarge:right-[20%]"
+              }
               price={20}
               image={"/static/warbonds/coats/DemocraticDetonation2.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[416px]"}
+              positionStyle={"bottom-0 left-[416px] mlarge:left-[40%]"}
               price={12}
               image={"/static/warbonds/SuperCredits.webp"}
             />
@@ -1298,24 +1350,25 @@ const TheWarbondContent = () => {
 
         <div className="relative w-full h-auto">
           <div className="relative flex justify-between items-center mb-[15px] w-full h-auto">
-            <p className="text-white text-[1.5rem] text-left font-primary font-medium">
-              СТРАНИЦА_3
-            </p>
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_3</p>
 
             <div className="flex items-center gap-x-[10px]">
-              <p className="text-white text-[1.5rem] text-left font-primary font-medium">
+              <p className="warbondContainer-page-right-text">
                 Всего предметов: 8
               </p>
 
               <div className="flex flex-wrap justify-start gap-[5px] w-[95px] h-auto">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={32}
@@ -1331,13 +1384,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[208px]"}
+              positionStyle={"bottom-0 left-[208px] mlarge:left-[20%]"}
               price={60}
               image={"/static/warbonds/weapons/vertical/GP31D.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[416px]"}
+              positionStyle={"top-0 left-[416px] mlarge:left-[40%]"}
               price={64}
               image={"/static/warbonds/armor/FS55Body.webp"}
             />
@@ -1349,13 +1402,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-[179px] right-0"}
+              positionStyle={"top-[179px] mlarge:top-[33%] right-0"}
               price={30}
               image={"/static/warbonds/coats/DemocraticDetonation3.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[416px]"}
+              positionStyle={"bottom-0 right-[416px] mlarge:right-[40%]"}
               price={32}
               image={"/static/warbonds/SuperCredits.webp"}
             />
@@ -1382,13 +1435,16 @@ const TheWarbondContent = () => {
 
               <div className="warbondContainer-page-right-itemsBought">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={18}
@@ -1396,13 +1452,15 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[416px]"}
+              positionStyle={"top-0 left-[416px] mlarge:left-[40%]"}
               price={12}
               image={"/static/warbonds/armor/CW36Helmet.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-[179px] left-[416px]"}
+              positionStyle={
+                "top-[179px] mlarge:top-[33%] left-[416px] mlarge:left-[40%]"
+              }
               price={8}
               image={"/static/warbonds/coats/PolarPatriotsCoat1.webp"}
             />
@@ -1422,13 +1480,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[208px]"}
+              positionStyle={"bottom-0 left-[208px] mlarge:left-[20%]"}
               price={20}
               image={"/static/warbonds/weapons/horizontal/AR61.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[208px]"}
+              positionStyle={"bottom-0 right-[208px] mlarge:right-[20%]"}
               price={2}
               image={"/static/playerCards/PolarPatriots1.webp"}
             />
@@ -1443,24 +1501,25 @@ const TheWarbondContent = () => {
 
         <div className="relative w-full h-auto">
           <div className="relative flex justify-between items-center mb-[15px] w-full h-auto">
-            <p className="text-white text-[1.5rem] text-left font-primary font-medium">
-              СТРАНИЦА_2
-            </p>
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_2</p>
 
             <div className="flex items-center gap-x-[10px]">
-              <p className="text-white text-[1.5rem] text-left font-primary font-medium">
+              <p className="warbondContainer-page-right-text">
                 Всего предметов: 8
               </p>
 
               <div className="flex flex-wrap justify-start gap-[5px] w-[95px] h-auto">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={60}
@@ -1468,7 +1527,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[416px]"}
+              positionStyle={"top-0 left-[416px] mlarge:left-[40%]"}
               price={15}
               image={
                 "/static/warbonds/emotes/horizontal/PolarPatriotsEmote2.webp"
@@ -1488,19 +1547,21 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-[179px] left-[208px]"}
+              positionStyle={
+                "bottom-[179px] mlarge:bottom-[33%] left-[208px] mlarge:left-[20%]"
+              }
               price={35}
               image={"/static/warbonds/armor/CW22Helmet.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[208px]"}
+              positionStyle={"bottom-0 left-[208px] mlarge:left-[20%]"}
               price={20}
               image={"/static/warbonds/coats/PolarPatriotsCoat2.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[208px]"}
+              positionStyle={"bottom-0 right-[208px] mlarge:right-[20%]"}
               price={45}
               image={"/static/warbonds/armor/CW22Body.webp"}
             />
@@ -1515,24 +1576,25 @@ const TheWarbondContent = () => {
 
         <div className="relative w-full h-auto">
           <div className="relative flex justify-between items-center mb-[15px] w-full h-auto">
-            <p className="text-white text-[1.5rem] text-left font-primary font-medium">
-              СТРАНИЦА_3
-            </p>
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_3</p>
 
             <div className="flex items-center gap-x-[10px]">
-              <p className="text-white text-[1.5rem] text-left font-primary font-medium">
+              <p className="warbondContainer-page-right-text">
                 Всего предметов: 8
               </p>
 
               <div className="flex flex-wrap justify-start gap-[5px] w-[95px] h-auto">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={64}
@@ -1540,13 +1602,15 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[416px]"}
+              positionStyle={"top-0 left-[416px] mlarge:left-[40%]"}
               price={48}
               image={"/static/warbonds/armor/CW4Helmet.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-[179px] left-[416px]"}
+              positionStyle={
+                "top-[179px] mlarge:top-[33%] left-[416px] mlarge:left-[40%]"
+              }
               price={30}
               image={"/static/warbonds/coats/PolarPatriotsCoat3.webp"}
             />
@@ -1566,13 +1630,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[416px]"}
+              positionStyle={"bottom-0 left-[416px] mlarge:left-[40%]"}
               price={32}
               image={"/static/warbonds/SuperCredits.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[208px]"}
+              positionStyle={"bottom-0 right-[208px] mlarge:right-[20%]"}
               price={16}
               image={"/static/playerCards/PolarPatriots3.webp"}
             />
@@ -1599,13 +1663,16 @@ const TheWarbondContent = () => {
 
               <div className="warbondContainer-page-right-itemsBought">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={40}
@@ -1613,13 +1680,15 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[416px]"}
+              positionStyle={"top-0 left-[416px] mlarge:left-[40%]"}
               price={30}
               image={"/static/warbonds/armor/PH09Helmet.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-[179px] left-[416px]"}
+              positionStyle={
+                "top-[179px] mlarge:top-[33%] left-[416px] mlarge:left-[40%]"
+              }
               price={8}
               image={"/static/warbonds/coats/ViperCommandos1.webp"}
             />
@@ -1631,13 +1700,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[416px]"}
+              positionStyle={"bottom-0 left-[416px] mlarge:left-[40%]"}
               price={7}
               image={"/static/warbonds/SuperCredits.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-[208px]"}
+              positionStyle={"top-0 right-[208px] mlarge:right-[20%]"}
               price={2}
               image={"/static/playerCards/ViperCommandos1.webp"}
             />
@@ -1658,24 +1727,25 @@ const TheWarbondContent = () => {
 
         <div className="relative w-full h-auto">
           <div className="relative flex justify-between items-center mb-[15px] w-full h-auto">
-            <p className="text-white text-[1.5rem] text-left font-primary font-medium">
-              СТРАНИЦА_2
-            </p>
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_2</p>
 
             <div className="flex items-center gap-x-[10px]">
-              <p className="text-white text-[1.5rem] text-left font-primary font-medium">
+              <p className="warbondContainer-page-right-text">
                 Всего предметов: 8
               </p>
 
               <div className="flex flex-wrap justify-start gap-[5px] w-[95px] h-auto">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={15}
@@ -1683,7 +1753,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[416px]"}
+              positionStyle={"top-0 left-[416px] mlarge:left-[40%]"}
               price={12}
               image={"/static/warbonds/SuperCredits.webp"}
             />
@@ -1701,19 +1771,23 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-[179px] left-[208px]"}
+              positionStyle={
+                "bottom-[179px] mlarge:bottom-[33%] left-[208px] mlarge:left-[20%]"
+              }
               price={20}
               image={"/static/warbonds/coats/ViperCommandos2.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-[179px] left-[416px]"}
+              positionStyle={
+                "bottom-[179px] mlarge:bottom-[33%] left-[416px] mlarge:left-[40%]"
+              }
               price={35}
               image={"/static/warbonds/armor/PH202Helmet.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[208px]"}
+              positionStyle={"bottom-0 left-[208px] mlarge:left-[20%]"}
               price={50}
               image={
                 "/static/warbonds/shuttles/horizontal/ViperCommandosShuttle.webp"
@@ -1730,24 +1804,25 @@ const TheWarbondContent = () => {
 
         <div className="relative w-full h-auto">
           <div className="relative flex justify-between items-center mb-[15px] w-full h-auto">
-            <p className="text-white text-[1.5rem] text-left font-primary font-medium">
-              СТРАНИЦА_3
-            </p>
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_3</p>
 
             <div className="flex items-center gap-x-[10px]">
-              <p className="text-white text-[1.5rem] text-left font-primary font-medium">
+              <p className="warbondContainer-page-right-text">
                 Всего предметов: 6
               </p>
 
               <div className="flex flex-wrap justify-start gap-[5px] w-[95px] h-auto">
                 {[0, 1, 2, 3, 4, 5].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"bottom-0 left-0"}
               price={70}
@@ -1761,19 +1836,19 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[208px]"}
+              positionStyle={"top-0 left-[208px] mlarge:left-[20%]"}
               price={32}
               image={"/static/warbonds/SuperCredits.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[416px]"}
+              positionStyle={"top-0 left-[416px] mlarge:left-[40%]"}
               price={60}
               image={"/static/warbonds/weapons/vertical/K2.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[416px]"}
+              positionStyle={"bottom-0 left-[416px] mlarge:left-[40%]"}
               price={80}
               image={"/static/warbonds/boosters/default/Booster.webp"}
             />
@@ -1800,13 +1875,16 @@ const TheWarbondContent = () => {
 
               <div className="warbondContainer-page-right-itemsBought">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={7}
@@ -1820,19 +1898,19 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[208px]"}
+              positionStyle={"top-0 left-[208px] mlarge:left-[20%]"}
               price={2}
               image={"/static/playerCards/FreedomsFlame1.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[208px]"}
+              positionStyle={"bottom-0 left-[208px] mlarge:left-[20%]"}
               price={20}
               image={"/static/warbonds/weapons/horizontal/SG451.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-[208px]"}
+              positionStyle={"top-0 right-[208px] mlarge:right-[20%]"}
               price={18}
               image={"/static/warbonds/armor/I09Body.webp"}
             />
@@ -1844,7 +1922,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-[179px] right-0"}
+              positionStyle={"top-[179px] mlarge:top-[33%] right-0"}
               price={8}
               image={"/static/warbonds/coats/FreedomsFlame1.webp"}
             />
@@ -1859,24 +1937,25 @@ const TheWarbondContent = () => {
 
         <div className="relative w-full h-auto">
           <div className="relative flex justify-between items-center mb-[15px] w-full h-auto">
-            <p className="text-white text-[1.5rem] text-left font-primary font-medium">
-              СТРАНИЦА_2
-            </p>
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_2</p>
 
             <div className="flex items-center gap-x-[10px]">
-              <p className="text-white text-[1.5rem] text-left font-primary font-medium">
+              <p className="warbondContainer-page-right-text">
                 Всего предметов: 8
               </p>
 
               <div className="flex flex-wrap justify-start gap-[5px] w-[95px] h-auto">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={15}
@@ -1884,13 +1963,15 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[416px]"}
+              positionStyle={"bottom-0 left-[416px] mlarge:left-[40%]"}
               price={20}
               image={"/static/warbonds/coats/FreedomsFlame2.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-[188px] left-[416px]"}
+              positionStyle={
+                "bottom-[179px] mlarge:bottom-[33%] left-[416px] mlarge:left-[40%]"
+              }
               price={35}
               image={"/static/warbonds/armor/I102Helmet.webp"}
             />
@@ -1902,7 +1983,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-[208px]"}
+              positionStyle={"top-0 right-[208px] mlarge:left-[40%]"}
               price={40}
               image={"/static/warbonds/weapons/horizontal/FLAM66.webp"}
             />
@@ -1914,7 +1995,9 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-[188px] right-[208px]"}
+              positionStyle={
+                "bottom-[179px] mlarge:bottom-[33%] right-[208px] mlarge:right-[20%]"
+              }
               price={12}
               image={"/static/warbonds/SuperCredits.webp"}
             />
@@ -1931,24 +2014,25 @@ const TheWarbondContent = () => {
 
         <div className="relative w-full h-auto">
           <div className="relative flex justify-between items-center mb-[15px] w-full h-auto">
-            <p className="text-white text-[1.5rem] text-left font-primary font-medium">
-              СТРАНИЦА_3
-            </p>
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_3</p>
 
             <div className="flex items-center gap-x-[10px]">
-              <p className="text-white text-[1.5rem] text-left font-primary font-medium">
+              <p className="warbondContainer-page-right-text">
                 Всего предметов: 6
               </p>
 
               <div className="flex flex-wrap justify-start gap-[5px] w-[95px] h-auto">
                 {[0, 1, 2, 3, 4, 5].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={40}
@@ -1956,13 +2040,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[416px]"}
+              positionStyle={"top-0 left-[416px] mlarge:left-[40%]"}
               price={60}
               image={"/static/warbonds/boosters/default/Booster.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[416px]"}
+              positionStyle={"bottom-0 left-[416px] mlarge:left-[40%]"}
               price={45}
               image={"/static/warbonds/weapons/vertical/P72.webp"}
             />
@@ -1974,7 +2058,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[208px]"}
+              positionStyle={"bottom-0 right-[208px] mlarge:right-[20%]"}
               price={20}
               image={"/static/warbonds/titles/FreedomsFlameTitle.webp"}
             />
@@ -2001,13 +2085,16 @@ const TheWarbondContent = () => {
 
               <div className="warbondContainer-page-right-itemsBought">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={40}
@@ -2015,13 +2102,15 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[416px]"}
+              positionStyle={"top-0 left-[416px] mlarge:left-[40%]"}
               price={30}
               image={"/static/warbonds/armor/AF50Helmet.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-[179px] left-[416px]"}
+              positionStyle={
+                "top-[179px] mlarge:top-[33%] left-[416px] mlarge:left-[40%]"
+              }
               price={8}
               image={"/static/warbonds/coats/ChemicalAgents1.webp"}
             />
@@ -2033,7 +2122,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[208px]"}
+              positionStyle={"bottom-0 left-[208px] mlarge:left-[20%]"}
               price={30}
               image={"/static/warbonds/weapons/horizontal/G4.webp"}
             />
@@ -2045,7 +2134,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[208px]"}
+              positionStyle={"bottom-0 right-[208px] mlarge:right-[20%]"}
               price={2}
               image={"/static/playerCards/ChemicalAgents1.webp"}
             />
@@ -2060,24 +2149,25 @@ const TheWarbondContent = () => {
 
         <div className="relative w-full h-auto">
           <div className="relative flex justify-between items-center mb-[15px] w-full h-auto">
-            <p className="text-white text-[1.5rem] text-left font-primary font-medium">
-              СТРАНИЦА_2
-            </p>
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_2</p>
 
             <div className="flex items-center gap-x-[10px]">
-              <p className="text-white text-[1.5rem] text-left font-primary font-medium">
+              <p className="warbondContainer-page-right-text">
                 Всего предметов: 7
               </p>
 
               <div className="flex flex-wrap justify-start gap-[5px] w-[95px] h-auto">
                 {[0, 1, 2, 3, 4, 5, 6].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={85}
@@ -2087,13 +2177,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-[416px]"}
+              positionStyle={"top-0 right-[416px] mlarge:right-[40%]"}
               price={12}
               image={"/static/warbonds/SuperCredits.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[416px]"}
+              positionStyle={"bottom-0 right-[416px] mlarge:right-[40%]"}
               price={5}
               image={"/static/playerCards/ChemicalAgents2.webp"}
             />
@@ -2113,7 +2203,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[208px]"}
+              positionStyle={"bottom-0 right-[208px] mlarge:right-[20%]"}
               price={20}
               image={"/static/warbonds/coats/ChemicalAgents2.webp"}
             />
@@ -2128,24 +2218,25 @@ const TheWarbondContent = () => {
 
         <div className="relative w-full h-auto">
           <div className="relative flex justify-between items-center mb-[15px] w-full h-auto">
-            <p className="text-white text-[1.5rem] text-left font-primary font-medium">
-              СТРАНИЦА_3
-            </p>
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_3</p>
 
             <div className="flex items-center gap-x-[10px]">
-              <p className="text-white text-[1.5rem] text-left font-primary font-medium">
+              <p className="warbondContainer-page-right-text">
                 Всего предметов: 6
               </p>
 
               <div className="flex flex-wrap justify-start gap-[5px] w-[95px] h-auto">
                 {[0, 1, 2, 3, 4, 5].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={32}
@@ -2153,7 +2244,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[208px]"}
+              positionStyle={"top-0 left-[208px] mlarge:left-[20%]"}
               price={20}
               image={"/static/warbonds/titles/ChemicalAgentsTitle.webp"}
             />
@@ -2167,13 +2258,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[416px]"}
+              positionStyle={"top-0 left-[416px] mlarge:left-[40%]"}
               price={80}
               image={"/static/warbonds/weapons/vertical/P11.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[416px]"}
+              positionStyle={"bottom-0 left-[416px] mlarge:left-[40%]"}
               price={70}
               image={"/static/warbonds/emotes/default/ChemicalAgents2.webp"}
             />
@@ -2200,21 +2291,24 @@ const TheWarbondContent = () => {
 
               <div className="warbondContainer-page-right-itemsBought">
                 {[0, 1, 2, 3, 4].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
-              positionStyle={"bottom-0 left-[416px]"}
+              positionStyle={"bottom-0 left-[416px] mlarge:left-[40%]"}
               price={20}
               image={"/static/warbonds/weapons/square/SG20.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[416px]"}
+              positionStyle={"top-0 left-[416px] mlarge:left-[40%]"}
               price={7}
               image={"/static/warbonds/SuperCredits.webp"}
             />
@@ -2241,24 +2335,25 @@ const TheWarbondContent = () => {
 
         <div className="relative w-full h-auto">
           <div className="relative flex justify-between items-center mb-[15px] w-full h-auto">
-            <p className="text-white text-[1.5rem] text-left font-primary font-medium">
-              СТРАНИЦА_2
-            </p>
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_2</p>
 
             <div className="flex items-center gap-x-[10px]">
-              <p className="text-white text-[1.5rem] text-left font-primary font-medium">
+              <p className="warbondContainer-page-right-text">
                 Всего предметов: 7
               </p>
 
               <div className="flex flex-wrap justify-start gap-[5px] w-[95px] h-auto">
                 {[0, 1, 2, 3, 4, 5, 6].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={40}
@@ -2266,13 +2361,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-[416px]"}
+              positionStyle={"top-0 right-[416px] mlarge:right-[40%]"}
               price={12}
               image={"/static/warbonds/SuperCredits.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[416px]"}
+              positionStyle={"bottom-0 right-[416px] mlarge:right-[40%]"}
               price={5}
               image={"/static/playerCards/TruthEnforcers1.webp"}
             />
@@ -2292,7 +2387,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[208px]"}
+              positionStyle={"bottom-0 right-[208px] mlarge:right-[20%]"}
               price={20}
               image={"/static/warbonds/coats/TruthEnforcers1.webp"}
             />
@@ -2307,24 +2402,25 @@ const TheWarbondContent = () => {
 
         <div className="relative w-full h-auto">
           <div className="relative flex justify-between items-center mb-[15px] w-full h-auto">
-            <p className="text-white text-[1.5rem] text-left font-primary font-medium">
-              СТРАНИЦА_3
-            </p>
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_3</p>
 
             <div className="flex items-center gap-x-[10px]">
-              <p className="text-white text-[1.5rem] text-left font-primary font-medium">
+              <p className="warbondContainer-page-right-text">
                 Всего предметов: 8
               </p>
 
               <div className="flex flex-wrap justify-start gap-[5px] w-[95px] h-auto">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={15}
@@ -2338,19 +2434,19 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[208px]"}
+              positionStyle={"top-0 left-[208px] mlarge:left-[20%]"}
               price={65}
               image={"/static/warbonds/armor/UF16Body.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[208px]"}
+              positionStyle={"bottom-0 left-[208px] mlarge:left-[20%]"}
               price={45}
               image={"/static/warbonds/armor/UF16Helmet.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[416px]"}
+              positionStyle={"bottom-0 left-[416px] mlarge:left-[40%]"}
               price={30}
               image={"/static/warbonds/coats/TruthEnforcers2.webp"}
             />
@@ -2362,7 +2458,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-[208px]"}
+              positionStyle={"top-0 right-[208px] mlarge:right-[20%]"}
               price={50}
               image={"/static/warbonds/emotes/default/TruthEnforcers1.webp"}
             />
@@ -2389,13 +2485,16 @@ const TheWarbondContent = () => {
 
               <div className="warbondContainer-page-right-itemsBought">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={40}
@@ -2409,19 +2508,19 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[208px]"}
+              positionStyle={"bottom-0 left-[208px] mlarge:left-[20%]"}
               price={8}
               image={"/static/warbonds/coats/UrbanLegends1.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[416px]"}
+              positionStyle={"top-0 left-[416px] mlarge:left-[40%]"}
               price={2}
               image={"/static/playerCards/UrbanLegends1.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[416px]"}
+              positionStyle={"bottom-0 left-[416px] mlarge:left-[40%]"}
               price={7}
               image={"/static/warbonds/SuperCredits.webp"}
             />
@@ -2435,7 +2534,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[208px]"}
+              positionStyle={"bottom-0 right-[208px] mlarge:right-[20%]"}
               price={30}
               image={"/static/warbonds/weapons/vertical/CQC19.webp"}
             />
@@ -2450,24 +2549,25 @@ const TheWarbondContent = () => {
 
         <div className="relative w-full h-auto">
           <div className="relative flex justify-between items-center mb-[15px] w-full h-auto">
-            <p className="text-white text-[1.5rem] text-left font-primary font-medium">
-              СТРАНИЦА_2
-            </p>
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_2</p>
 
             <div className="flex items-center gap-x-[10px]">
-              <p className="text-white text-[1.5rem] text-left font-primary font-medium">
+              <p className="warbondContainer-page-right-text">
                 Всего предметов: 8
               </p>
 
               <div className="flex flex-wrap justify-start gap-[5px] w-[95px] h-auto">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={55}
@@ -2475,7 +2575,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[208px]"}
+              positionStyle={"top-0 left-[208px] mlarge:left-[20%]"}
               price={85}
               image={
                 "/static/warbonds/stratagems/default/UrbanLegendsStratagem2.webp"
@@ -2491,19 +2591,19 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[416px]"}
+              positionStyle={"top-0 left-[416px] mlarge:left-[40%]"}
               price={45}
               image={"/static/warbonds/armor/SR18Body.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[208px]"}
+              positionStyle={"bottom-0 right-[208px] mlarge:right-[20%]"}
               price={20}
               image={"/static/warbonds/coats/UrbanLegends2.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[416px]"}
+              positionStyle={"bottom-0 left-[416px] mlarge:left-[40%]"}
               price={35}
               image={"/static/warbonds/armor/SR18Helmet.webp"}
             />
@@ -2524,24 +2624,25 @@ const TheWarbondContent = () => {
 
         <div className="relative w-full h-auto">
           <div className="relative flex justify-between items-center mb-[15px] w-full h-auto">
-            <p className="text-white text-[1.5rem] text-left font-primary font-medium">
-              СТРАНИЦА_3
-            </p>
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_3</p>
 
             <div className="flex items-center gap-x-[10px]">
-              <p className="text-white text-[1.5rem] text-left font-primary font-medium">
+              <p className="warbondContainer-page-right-text">
                 Всего предметов: 6
               </p>
 
               <div className="flex flex-wrap justify-start gap-[5px] w-[95px] h-auto">
                 {[0, 1, 2, 3, 4, 5].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={55}
@@ -2555,13 +2656,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[208px]"}
+              positionStyle={"bottom-0 left-[208px] mlarge:left-[20%]"}
               price={50}
               image={"/static/warbonds/emotes/default/UrbanLegends1.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-[416px]"}
+              positionStyle={"top-0 right-[416px] mlarge:right-[40%]"}
               price={110}
               image={
                 "/static/warbonds/stratagems/vertical/UrbanLegendsStratagem3.webp"
@@ -2569,7 +2670,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[416px]"}
+              positionStyle={"bottom-0 left-[416px] mlarge:left-[40%]"}
               price={20}
               image={"/static/warbonds/titles/UrbanLegendsTitle.webp"}
             />
@@ -2596,13 +2697,16 @@ const TheWarbondContent = () => {
 
               <div className="warbondContainer-page-right-itemsBought">
                 {[0, 1, 2, 3, 4, 5].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={30}
@@ -2616,13 +2720,13 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[208px]"}
+              positionStyle={"bottom-0 left-[208px] mlarge:left-[20%]"}
               price={45}
               image={"/static/warbonds/armor/full/IE3Body.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-[208px]"}
+              positionStyle={"top-0 right-[208px] mlarge:right-[20%]"}
               price={2}
               image={"/static/playerCards/ServantsOfFreedom1.webp"}
             />
@@ -2643,24 +2747,25 @@ const TheWarbondContent = () => {
 
         <div className="relative w-full h-auto">
           <div className="relative flex justify-between items-center mb-[15px] w-full h-auto">
-            <p className="text-white text-[1.5rem] text-left font-primary font-medium">
-              СТРАНИЦА_2
-            </p>
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_2</p>
 
             <div className="flex items-center gap-x-[10px]">
-              <p className="text-white text-[1.5rem] text-left font-primary font-medium">
+              <p className="warbondContainer-page-right-text">
                 Всего предметов: 6
               </p>
 
               <div className="flex flex-wrap justify-start gap-[5px] w-[95px] h-auto">
                 {[0, 1, 2, 3, 4, 5].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={12}
@@ -2668,7 +2773,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[208px]"}
+              positionStyle={"top-0 left-[208px] mlarge:left-[20%]"}
               price={45}
               image={"/static/warbonds/armor/IE12Helmet.webp"}
             />
@@ -2680,7 +2785,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[416px]"}
+              positionStyle={"bottom-0 left-[416px] mlarge:left-[40%]"}
               price={55}
               image={"/static/warbonds/armor/full/IE12Body.webp"}
             />
@@ -2701,24 +2806,25 @@ const TheWarbondContent = () => {
 
         <div className="relative w-full h-auto">
           <div className="relative flex justify-between items-center mb-[15px] w-full h-auto">
-            <p className="text-white text-[1.5rem] text-left font-primary font-medium">
-              СТРАНИЦА_3
-            </p>
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_3</p>
 
             <div className="flex items-center gap-x-[10px]">
-              <p className="text-white text-[1.5rem] text-left font-primary font-medium">
+              <p className="warbondContainer-page-right-text">
                 Всего предметов: 5
               </p>
 
               <div className="flex flex-wrap justify-start gap-[5px] w-[95px] h-auto">
                 {[0, 1, 2, 3, 4].map((item, index) => (
-                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                  <div
+                    key={index + 1}
+                    className="w-[15px] mlarge:w-[10px] h-[15px] mlarge:h-[10px] bg-white"
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[539px]">
+          <div className="relative w-full h-[539px] mlarge:h-[calc(90vw*0.53)]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
               price={55}
@@ -2732,7 +2838,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[208px]"}
+              positionStyle={"bottom-0 left-[208px] mlarge:left-[20%]"}
               price={110}
               image={
                 "/static/warbonds/stratagems/horizontal/ServantsOfFreedomStratagem1.webp"
@@ -2740,7 +2846,7 @@ const TheWarbondContent = () => {
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[416px]"}
+              positionStyle={"top-0 left-[416px] mlarge:left-[40%]"}
               price={25}
               image={
                 "/static/warbonds/titles/vertical/ServantsOfFreedomTitle.webp"

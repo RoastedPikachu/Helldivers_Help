@@ -1,5 +1,5 @@
 .warbondContainer {
-    @apply relative grid gap-y-[15px] mx-auto w-[1024px] h-auto;
+    @apply relative grid gap-y-[15px] mx-auto w-[1024px] mlarge:w-full h-auto;
 }
 
 .warbondContainer-page {
@@ -7,21 +7,21 @@
 }
 
 .warbondContainer-page-top {
-    @apply relative flex justify-between items-center mb-[15px] w-full h-auto;
+    @apply relative flex justify-between items-center mb-[15px] mlarge:mb-[10px] w-full h-auto;
 }
 
 .warbondContainer-page-top-title {
-    @apply text-[--color-white] text-[1.5rem] text-left font-primary font-medium;
+    @apply text-white text-[1.5rem] mlarge:text-[1rem] text-left font-primary font-medium;
 }
 
 .warbondContainer-page-right {
-    @apply flex items-center gap-x-[10px];
+    @apply flex items-center gap-x-[10px] mmedium:gap-x-[7.5px] msmall:gap-x-[5px];
 }
 
 .warbondContainer-page-right-text {
-    @apply text-[--color-white] text-[1.5rem] text-left font-primary font-medium;
+    @apply text-white text-[1.5rem] mlarge:text-[0.8375rem] mmedium:text-[0.75rem] msmall:text-[0.6935rem] text-left font-primary font-medium;
 }
 
 .warbondContainer-page-right-itemsBought {
-    @apply flex flex-wrap justify-start gap-[5px] w-[95px] h-auto;
+    @apply flex flex-wrap justify-start gap-[5px] mlarge:gap-[3px] w-[95px] mlarge:w-[62px] h-auto;
 }

@@ -1,5 +1,5 @@
 .warbondItem {
-    @apply absolute p-[8px] bg-[--color-black] border-[1px] border-[--color-border-blue] hover:border-[--color-theme] duration-300 ease-in-out cursor-pointer;
+    @apply absolute p-[8px] mlarge:p-[4px] bg-[--color-black] border-[1px] border-[--color-border-blue] hover:border-theme duration-300 ease-in-out cursor-pointer;
 }
 
 .warbondItem-innerBlock {
@@ -7,9 +7,9 @@
 }
 
 .warbondItem-innerBlock-price {
-    @apply absolute top-[8px] right-[3px] flex items-center gap-x-[10px] w-auto h-[35px] z-10;
+    @apply absolute top-[8px] mlarge:top-[-6px] right-[3px] mlarge:right-[1px] flex items-center gap-x-[10px] mlarge:gap-x-[2.5px] w-auto h-[35px] z-10;
 }
 
 .warbondItem-innerBlock-price-text {
-    @apply text-[--color-white] text-[1.625rem] text-left font-primary font-medium;
+    @apply text-white text-[1.625rem] mlarge:text-[1rem] mmedium:text-[0.9375rem] msmall:text-[0.875rem] text-left font-primary font-medium;
 }
