@@ -1,5 +1,7 @@
 import React from "react";
 
+import { usePathname } from "next/navigation";
+
 import "./WarbondItem.css";
 
 interface WarbondItem {
@@ -13,6 +15,8 @@ const WarbondItem: React.FC<WarbondItem> = ({
   price,
   image,
 }) => {
+  const pathname = usePathname();
+
   const getItemSize = () => {
     const smallBlockStyles =
       "w-[192px] mlarge:w-[19%] h-[172px] mlarge:h-[32%]";
@@ -148,7 +152,9 @@ const WarbondItem: React.FC<WarbondItem> = ({
     return "w-auto";
   };
   return (
-    <div className={`warbondItem ${positionStyle} ${getItemSize()}`}>
+    <div
+      className={`warbondItem ${positionStyle} ${getItemSize()} ${pathname.includes("helldiversmobilize") ? "border-[#BCBDBF]" : "border-[--color-border-blue]"}`}
+    >
       <div className="warbondItem-innerBlock-price">
         <img
           src="/static/Resources/MedalIcon.svg"
@@ -159,12 +165,16 @@ const WarbondItem: React.FC<WarbondItem> = ({
         <p className="warbondItem-innerBlock-price-text">{price}</p>
       </div>
 
-      <div className="warbondItem-innerBlock">
-        <img
-          src="/static/warbonds/DecorationStripes.png"
-          alt="Изображение: Декорация блока предмета"
-          className="absolute top-0 left-0 w-[10px] mlarge:w-[7.5px] h-[533px] z-10"
-        />
+      <div
+        className={`warbondItem-innerBlock ${pathname.includes("helldiversmobilize") ? "bg-black" : "bg-gradient-to-b from-[#003f48] to-[#086c88]"}`}
+      >
+        {!pathname.includes("helldiversmobilize") && (
+          <img
+            src="/static/warbonds/DecorationStripes.png"
+            alt="Изображение: Декорация блока предмета"
+            className="absolute top-0 left-0 w-[10px] mlarge:w-[7.5px] h-[533px] z-10"
+          />
+        )}
 
         <img src={image} alt="" className={`${getImageStyles()} z-5`} />
       </div>
