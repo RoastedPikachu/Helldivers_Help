@@ -25,9 +25,13 @@ const WarbondItem: React.FC<WarbondItem> = ({
     const fullBlockStyles = "w-[400px] h-full";
 
     if (image?.includes("boosters")) {
-      return image?.includes("vertical")
-        ? verticalBlockStyles
-        : smallBlockStyles;
+      if (image?.includes("vertical")) {
+        return verticalBlockStyles;
+      } else if (image?.includes("horizontal")) {
+        return horizontalBlockStyles;
+      }
+
+      return smallBlockStyles;
     } else if (image?.includes("armor")) {
       if (image?.includes("Body")) {
         return squareBlockStyles;
@@ -52,6 +56,8 @@ const WarbondItem: React.FC<WarbondItem> = ({
       } else if (image?.includes("vertical")) {
         return verticalBlockStyles;
       }
+
+      return squareBlockStyles;
     } else if (image?.includes("Hellpod")) {
       return verticalBlockStyles;
     } else if (image?.includes("shuttles")) {
