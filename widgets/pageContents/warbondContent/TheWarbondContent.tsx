@@ -471,52 +471,52 @@ const TheWarbondContent = () => {
           <div className="relative w-full h-[539px]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
-              price={18}
-              image={"/static/warbonds/armor/CW36Body.webp"}
-            />
-
-            <WarbondItem
-              positionStyle={"top-0 left-[416px]"}
-              price={12}
-              image={"/static/warbonds/armor/CW36Helmet.webp"}
-            />
-
-            <WarbondItem
-              positionStyle={"top-[179px] left-[416px]"}
-              price={8}
-              image={"/static/warbonds/coats/PolarPatriotsCoat1.webp"}
-            />
-
-            <WarbondItem
-              positionStyle={"top-0 right-0"}
-              price={8}
-              image={
-                "/static/warbonds/emotes/horizontal/PolarPatriotsEmote1.webp"
-              }
-            />
-
-            <WarbondItem
-              positionStyle={"bottom-0 left-0"}
               price={7}
               image={"/static/warbonds/SuperCredits.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[208px]"}
-              price={20}
-              image={"/static/warbonds/weapons/horizontal/AR61.webp"}
+              positionStyle={"bottom-0 left-0"}
+              price={18}
+              image={"/static/warbonds/armor/CE27Body.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[208px]"}
+              positionStyle={"top-0 left-[208px]"}
+              price={8}
+              image={
+                "/static/warbonds/emotes/horizontal/DemocraticDetonation1.webp"
+              }
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-[179px] left-[416px]"}
+              price={12}
+              image={"/static/warbonds/armor/CE27Helmet.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 left-[416px]"}
+              price={8}
+              image={"/static/warbonds/coats/DemocraticDetonation1.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-[208px]"}
               price={2}
-              image={"/static/playerCards/PolarPatriotsCard1.webp"}
+              image={"/static/playerCards/DemocraticDetonation1.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-0"}
+              price={15}
+              image={"/static/warbonds/weapons/vertical/G123.webp"}
             />
 
             <WarbondItem
               positionStyle={"bottom-0 right-0"}
-              price={15}
-              image={"/static/warbonds/boosters/vertical/Booster.webp"}
+              price={20}
+              image={"/static/warbonds/weapons/horizontal/BR14.webp"}
             />
           </div>
         </div>
@@ -543,52 +543,52 @@ const TheWarbondContent = () => {
           <div className="relative w-full h-[539px]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
+              price={5}
+              image={"/static/playerCards/DemocraticDetonation2.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 left-0"}
               price={60}
-              image={"/static/warbonds/weapons/horizontal/SMG72.webp"}
+              image={"/static/warbonds/weapons/horizontal/R36.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-0 left-[416px]"}
-              price={15}
-              image={
-                "/static/warbonds/emotes/horizontal/PolarPatriotsEmote2.webp"
-              }
+              positionStyle={"top-0 left-[208px]"}
+              price={45}
+              image={"/static/warbonds/armor/CE07Body.webp"}
             />
 
             <WarbondItem
-              positionStyle={"top-0 right-0"}
+              positionStyle={"top-0 right-[208px]"}
+              price={35}
+              image={"/static/warbonds/armor/CE07Helmet.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-[179px] right-[208px]"}
+              price={20}
+              image={"/static/warbonds/coats/DemocraticDetonation2.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 left-[416px]"}
               price={12}
               image={"/static/warbonds/SuperCredits.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-0"}
-              price={25}
-              image={"/static/warbonds/weapons/vertical/G13.webp"}
-            />
-
-            <WarbondItem
-              positionStyle={"bottom-[179px] left-[208px]"}
-              price={35}
-              image={"/static/warbonds/armor/CW22Helmet.webp"}
-            />
-
-            <WarbondItem
-              positionStyle={"bottom-0 left-[208px]"}
-              price={20}
-              image={"/static/warbonds/coats/PolarPatriotsCoat2.webp"}
-            />
-
-            <WarbondItem
-              positionStyle={"bottom-0 right-[208px]"}
-              price={45}
-              image={"/static/warbonds/armor/CW22Body.webp"}
-            />
-
-            <WarbondItem
               positionStyle={"bottom-0 right-0"}
-              price={5}
-              image={"/static/playerCards/PolarPatriotsCard2.webp"}
+              price={15}
+              image={
+                "/static/warbonds/emotes/horizontal/DemocraticDetonation2.webp"
+              }
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-0"}
+              price={55}
+              image={"/static/warbonds/boosters/vertical/Booster.webp"}
             />
           </div>
         </div>
@@ -615,52 +615,52 @@ const TheWarbondContent = () => {
           <div className="relative w-full h-[539px]">
             <WarbondItem
               positionStyle={"top-0 left-0"}
-              price={64}
-              image={"/static/warbonds/armor/CW4Body.webp"}
-            />
-
-            <WarbondItem
-              positionStyle={"top-0 left-[416px]"}
-              price={48}
-              image={"/static/warbonds/armor/CW4Helmet.webp"}
-            />
-
-            <WarbondItem
-              positionStyle={"top-[179px] left-[416px]"}
-              price={30}
-              image={"/static/warbonds/coats/PolarPatriotsCoat3.webp"}
-            />
-
-            <WarbondItem
-              positionStyle={"top-0 right-0"}
-              price={80}
-              image={"/static/warbonds/weapons/horizontal/PLAS101.webp"}
-            />
-
-            <WarbondItem
-              positionStyle={"bottom-0 left-0"}
               price={32}
               image={
-                "/static/warbonds/emotes/horizontal/PolarPatriotsEmote3.webp"
+                "/static/warbonds/emotes/horizontal/DemocraticDetonation3.webp"
               }
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 left-[416px]"}
+              positionStyle={"bottom-0 left-0"}
+              price={16}
+              image={"/static/playerCards/DemocraticDetonation3.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 left-[208px]"}
+              price={60}
+              image={"/static/warbonds/weapons/vertical/GP31D.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 left-[416px]"}
+              price={64}
+              image={"/static/warbonds/armor/FS55Body.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-0"}
+              price={48}
+              image={"/static/warbonds/armor/FS55Helmet.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-[179px] right-0"}
+              price={30}
+              image={"/static/warbonds/coats/DemocraticDetonation3.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-[416px]"}
               price={32}
               image={"/static/warbonds/SuperCredits.webp"}
             />
 
             <WarbondItem
-              positionStyle={"bottom-0 right-[208px]"}
-              price={16}
-              image={"/static/playerCards/PolarPatriotsCard3.webp"}
-            />
-
-            <WarbondItem
               positionStyle={"bottom-0 right-0"}
-              price={60}
-              image={"/static/warbonds/weapons/vertical/P113.webp"}
+              price={80}
+              image={"/static/warbonds/weapons/horizontal/CB9.webp"}
             />
           </div>
         </div>
