@@ -33,7 +33,7 @@ HELLDIVERS.HELP is a helper site for every Helldivers who fights to promote Demo
 
 ### v1.3.0
 
-#### 📌 Что нового?
+#### 📌 What's new?
 &nbsp;&nbsp;✅ News section - always be up to date with the latest news.
 
 &nbsp;&nbsp;✅ Illuminates faction page - explore new enemies.
@@ -46,12 +46,12 @@ HELLDIVERS.HELP is a helper site for every Helldivers who fights to promote Demo
 
 &nbsp;&nbsp;✅ Improved navigation - added page paths for greater convenience.
 
-#### 🖼️ Обновление изображений:
+#### 🖼️ Image updates:
 &nbsp;&nbsp;🎨 All images have become more pleasing to the eye - the visual part of the site is now many times better.
 
 &nbsp;&nbsp;🚀 Optimized the size of pictures - the site loads much faster.
 
-#### 🔧 Исправления и доработки:
+#### 🔧 Fixes and improvements:
 &nbsp;&nbsp;☑️ Fixed ship modules page - now everything is displayed correctly.
 
 &nbsp;&nbsp;☑️ Fixed various bugs for more stable operation.
@@ -60,7 +60,7 @@ HELLDIVERS.HELP is a helper site for every Helldivers who fights to promote Demo
 
 ### v1.2.0
 
-#### 🔥 Изменения:
+#### 🔥 Changes:
 &nbsp;&nbsp;🎮 Stratagem training functionality has been added, echoing the Stratagem Hero game. Now every Helldiver will be able to pump up the skill of quickly entering stratagems, so that nothing distracts them in the middle of the battle for Democracy and Super Earth!
 
 &nbsp;&nbsp;🗺️ Added an interactive map to the war page - now you can view galactic warfare from a new angle!
@@ -77,7 +77,7 @@ HELLDIVERS.HELP is a helper site for every Helldivers who fights to promote Demo
 
 &nbsp;&nbsp;🖼️ Continuing to replace armor images with better ones - the process is almost complete, except for pre-order sets. 😢
 
-#### 🔧 Исправления:
+#### 🔧 Fixes:
 &nbsp;&nbsp;🎯 Fixed the display of the main order to kill a certain number of enemies.
 
 &nbsp;&nbsp;📜 Removed unnecessary scroll on the enemy information page.
@@ -86,7 +86,7 @@ HELLDIVERS.HELP is a helper site for every Helldivers who fights to promote Demo
 
 ### v1.1.0
 
-#### 🔥 Изменения:
+#### 🔥 Changes:
 &nbsp;&nbsp;📱 Added mobile version of the site - now it is more convenient to use on smartphones!
 
 &nbsp;&nbsp;❌ You can now close a slider by clicking outside its window - more convenient than ever!
@@ -97,7 +97,7 @@ HELLDIVERS.HELP is a helper site for every Helldivers who fights to promote Demo
 
 &nbsp;&nbsp;🔗 Added a link to the Discord channel in the footer of the site - join the community!
 
-#### 🔧 Исправления:
+#### 🔧 Fixes:
 &nbsp;&nbsp;📊 Fixed incorrect display of tables on the missions page.
 
 &nbsp;&nbsp;🖥️ Removed the second scrollbar from the planets page.
