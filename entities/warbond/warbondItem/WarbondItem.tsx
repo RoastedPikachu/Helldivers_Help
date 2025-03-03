@@ -34,11 +34,19 @@ const WarbondItem: React.FC<WarbondItem> = ({
       return smallBlockStyles;
     } else if (image?.includes("armor")) {
       if (image?.includes("Body")) {
+        if (image?.includes("full")) {
+          return fullBlockStyles;
+        }
+
         return squareBlockStyles;
       } else if (image?.includes("Helmet")) {
         return smallBlockStyles;
       }
     } else if (image?.includes("Card")) {
+      if (image?.includes("ServantsOfFreedom")) {
+        return smallBlockStyles;
+      }
+
       return verticalBlockStyles;
     } else if (image?.includes("emotes")) {
       if (image?.includes("horizontal")) {
@@ -49,12 +57,18 @@ const WarbondItem: React.FC<WarbondItem> = ({
         return smallBlockStyles;
       }
     } else if (image?.includes("SuperCredits") || image?.includes("coats")) {
+      if (image?.includes("vertical")) {
+        return verticalBlockStyles;
+      }
+
       return smallBlockStyles;
     } else if (image?.includes("weapons")) {
       if (image?.includes("horizontal")) {
         return horizontalBlockStyles;
       } else if (image?.includes("vertical")) {
         return verticalBlockStyles;
+      } else if (image?.includes("full")) {
+        return fullBlockStyles;
       }
 
       return squareBlockStyles;
@@ -69,6 +83,10 @@ const WarbondItem: React.FC<WarbondItem> = ({
     } else if (image?.includes("mechs")) {
       return fullBlockStyles;
     } else if (image?.includes("titles")) {
+      if (image?.includes("vertical")) {
+        return verticalBlockStyles;
+      }
+
       return smallBlockStyles;
     } else if (image?.includes("stratagems")) {
       if (image?.includes("square")) {
@@ -87,6 +105,10 @@ const WarbondItem: React.FC<WarbondItem> = ({
 
   const getImageStyles = () => {
     if (image?.includes("Card")) {
+      if (image?.includes("ServantsOfFreedom")) {
+        return "absolute bottom-0 mx-auto h-[90%]";
+      }
+
       return "absolute bottom-0 left-0 w-[95%]";
     } else if (image?.includes("Body") || image?.includes("Helmet")) {
       return "absolute bottom-0 mx-auto w-[80%]";
