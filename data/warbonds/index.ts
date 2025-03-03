@@ -52,6 +52,11 @@ export const warbonds: Warbond[] = [
   },
   {
     id: 10,
+    image: "/static/warbonds/UrbanLegends.webp",
+    title: "urbanlegends",
+  },
+  {
+    id: 11,
     image: "/static/warbonds/ServantsOfFreedom.webp",
     title: "servantsoffreedom",
   },

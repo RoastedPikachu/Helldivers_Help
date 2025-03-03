@@ -73,9 +73,15 @@ const WarbondItem: React.FC<WarbondItem> = ({
     } else if (image?.includes("stratagems")) {
       if (image?.includes("square")) {
         return squareBlockStyles;
+      } else if (image?.includes("vertical")) {
+        return verticalBlockStyles;
+      } else if (image?.includes("default")) {
+        return smallBlockStyles;
       }
 
       return horizontalBlockStyles;
+    } else if (image?.includes("cars")) {
+      return squareBlockStyles;
     }
   };
 
