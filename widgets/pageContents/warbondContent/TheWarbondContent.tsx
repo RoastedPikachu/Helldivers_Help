@@ -13,6 +13,709 @@ const TheWarbondContent = () => {
   const params = useParams();
 
   const warbondsHtmlContent = {
+    helldiversmobilize: (
+      <div className="warbondContainer">
+        <div className="warbondContainer-page">
+          <div className="warbondContainer-page-top">
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_1</p>
+
+            <div className="warbondContainer-page-right">
+              <p className="warbondContainer-page-right-text">
+                Всего предметов: 8
+              </p>
+
+              <div className="warbondContainer-page-right-itemsBought">
+                {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
+                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="relative w-full h-[539px]">
+            <WarbondItem
+              positionStyle={"top-0 left-0"}
+              price={1}
+              image={"/static/playerCards/HelldiversMobilize1.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 left-[208px]"}
+              price={2}
+              image={"/static/warbonds/weapons/vertical/G6.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 left-0"}
+              price={1}
+              image={
+                "/static/warbonds/emotes/horizontal/HelldiversMobilize1.webp"
+              }
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-[416px]"}
+              price={1}
+              image={"/static/warbonds/SuperCredits.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-0"}
+              price={4}
+              image={"/static/warbonds/weapons/horizontal/SG8.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-[208px]"}
+              price={3}
+              image={"/static/warbonds/armor/SC34Body.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-[179px] right-0"}
+              price={2}
+              image={"/static/warbonds/armor/SC34Helmet.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-0"}
+              price={2}
+              image={"/static/warbonds/coats/HelldiversMobilize1.webp"}
+            />
+          </div>
+        </div>
+
+        <div className="warbondContainer-page">
+          <div className="warbondContainer-page-top">
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_2</p>
+
+            <div className="warbondContainer-page-right">
+              <p className="warbondContainer-page-right-text">
+                Всего предметов: 9
+              </p>
+
+              <div className="warbondContainer-page-right-itemsBought">
+                {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => (
+                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="relative w-full h-[539px]">
+            <WarbondItem
+              positionStyle={"top-0 left-0"}
+              price={2}
+              image={
+                "/static/warbonds/emotes/horizontal/HelldiversMobilize2.webp"
+              }
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 left-[208px]"}
+              price={5}
+              image={"/static/warbonds/weapons/vertical/P19.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-[208px]"}
+              price={6}
+              image={"/static/warbonds/armor/FS05Body.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-0"}
+              price={5}
+              image={"/static/warbonds/armor/FS05Helmet.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-[179px] right-0"}
+              price={3}
+              image={"/static/warbonds/coats/HelldiversMobilize2.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 left-0"}
+              price={1}
+              image={"/static/playerCards/HelldiversMobilize2.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-[416px]"}
+              price={2}
+              image={"/static/warbonds/SuperCredits.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-0"}
+              price={8}
+              image={"/static/warbonds/weapons/horizontal/R63.webp"}
+            />
+          </div>
+        </div>
+
+        <div className="warbondContainer-page">
+          <div className="warbondContainer-page-top">
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_3</p>
+
+            <div className="warbondContainer-page-right">
+              <p className="warbondContainer-page-right-text">
+                Всего предметов: 8
+              </p>
+
+              <div className="warbondContainer-page-right-itemsBought">
+                {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
+                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="relative w-full h-[539px]">
+            <WarbondItem
+              positionStyle={"top-0 left-0"}
+              price={2}
+              image={"/static/playerCards/HelldiversMobilize3.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 left-[208px]"}
+              price={15}
+              image={"/static/warbonds/boosters/vertical/Booster.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 left-0"}
+              price={8}
+              image={
+                "/static/warbonds/emotes/horizontal/HelldiversMobilize3.webp"
+              }
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-[416px]"}
+              price={3}
+              image={"/static/warbonds/SuperCredits.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-0"}
+              price={15}
+              image={"/static/warbonds/weapons/horizontal/SMG37.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-[208px]"}
+              price={10}
+              image={"/static/warbonds/armor/CE35Body.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-[179px] right-0"}
+              price={7}
+              image={"/static/warbonds/armor/CE35Helmet.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-0"}
+              price={5}
+              image={"/static/warbonds/coats/HelldiversMobilize3.webp"}
+            />
+          </div>
+        </div>
+
+        <div className="warbondContainer-page">
+          <div className="warbondContainer-page-top">
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_4</p>
+
+            <div className="warbondContainer-page-right">
+              <p className="warbondContainer-page-right-text">
+                Всего предметов: 8
+              </p>
+
+              <div className="warbondContainer-page-right-itemsBought">
+                {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
+                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="relative w-full h-[539px]">
+            <WarbondItem
+              positionStyle={"top-0 left-0"}
+              price={20}
+              image={
+                "/static/warbonds/emotes/horizontal/HelldiversMobilize4.webp"
+              }
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 left-[208px]"}
+              price={20}
+              image={"/static/warbonds/boosters/vertical/Booster.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-[208px]"}
+              price={15}
+              image={"/static/warbonds/armor/CM09Body.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-0"}
+              price={12}
+              image={"/static/warbonds/armor/CM09Helmet.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-[179px] right-0"}
+              price={8}
+              image={"/static/warbonds/coats/HelldiversMobilize4.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 left-0"}
+              price={2}
+              image={"/static/playerCards/HelldiversMobilize4.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-[416px]"}
+              price={6}
+              image={"/static/warbonds/SuperCredits.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-0"}
+              price={20}
+              image={"/static/warbonds/weapons/horizontal/SG225.webp"}
+            />
+          </div>
+        </div>
+
+        <div className="warbondContainer-page">
+          <div className="warbondContainer-page-top">
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_5</p>
+
+            <div className="warbondContainer-page-right">
+              <p className="warbondContainer-page-right-text">
+                Всего предметов: 8
+              </p>
+
+              <div className="warbondContainer-page-right-itemsBought">
+                {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
+                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="relative w-full h-[539px]">
+            <WarbondItem
+              positionStyle={"top-0 left-[208px]"}
+              price={4}
+              image={"/static/playerCards/HelldiversMobilize5.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 left-0"}
+              price={20}
+              image={"/static/warbonds/weapons/vertical/G16.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 left-0"}
+              price={20}
+              image={
+                "/static/warbonds/emotes/horizontal/HelldiversMobilize5.webp"
+              }
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-[416px]"}
+              price={10}
+              image={"/static/warbonds/SuperCredits.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-0"}
+              price={30}
+              image={"/static/warbonds/weapons/horizontal/LAS5.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-[208px]"}
+              price={25}
+              image={"/static/warbonds/armor/DP40Body.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-[179px] right-0"}
+              price={20}
+              image={"/static/warbonds/armor/DP40Helmet.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-0"}
+              price={12}
+              image={"/static/warbonds/coats/HelldiversMobilize5.webp"}
+            />
+          </div>
+        </div>
+
+        <div className="warbondContainer-page">
+          <div className="warbondContainer-page-top">
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_6</p>
+
+            <div className="warbondContainer-page-right">
+              <p className="warbondContainer-page-right-text">
+                Всего предметов: 8
+              </p>
+
+              <div className="warbondContainer-page-right-itemsBought">
+                {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
+                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="relative w-full h-[539px]">
+            <WarbondItem
+              positionStyle={"top-0 left-0"}
+              price={10}
+              image={
+                "/static/warbonds/emotes/horizontal/HelldiversMobilize6.webp"
+              }
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 left-[208px]"}
+              price={40}
+              image={"/static/warbonds/boosters/vertical/Booster.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-[208px]"}
+              price={35}
+              image={"/static/warbonds/armor/FS23Body.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-0"}
+              price={25}
+              image={"/static/warbonds/armor/FS23Helmet.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-[179px] right-0"}
+              price={15}
+              image={"/static/warbonds/coats/HelldiversMobilize6.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 left-0"}
+              price={6}
+              image={"/static/playerCards/HelldiversMobilize6.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-[416px]"}
+              price={15}
+              image={"/static/warbonds/SuperCredits.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-0"}
+              price={40}
+              image={"/static/warbonds/weapons/horizontal/AR23P.webp"}
+            />
+          </div>
+        </div>
+
+        <div className="warbondContainer-page">
+          <div className="warbondContainer-page-top">
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_7</p>
+
+            <div className="warbondContainer-page-right">
+              <p className="warbondContainer-page-right-text">
+                Всего предметов: 8
+              </p>
+
+              <div className="warbondContainer-page-right-itemsBought">
+                {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
+                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="relative w-full h-[539px]">
+            <WarbondItem
+              positionStyle={"top-0 left-[208px]"}
+              price={7}
+              image={"/static/playerCards/HelldiversMobilize7.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 left-0"}
+              price={75}
+              image={"/static/warbonds/boosters/vertical/Booster.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 left-0"}
+              price={35}
+              image={
+                "/static/warbonds/emotes/horizontal/HelldiversMobilize7.webp"
+              }
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-[416px]"}
+              price={15}
+              image={"/static/warbonds/SuperCredits.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-0"}
+              price={40}
+              image={"/static/warbonds/weapons/horizontal/R63CS.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-[208px]"}
+              price={50}
+              image={"/static/warbonds/armor/SC30Body.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-[179px] right-0"}
+              price={35}
+              image={"/static/warbonds/armor/SC30Helmet.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-0"}
+              price={15}
+              image={"/static/warbonds/coats/HelldiversMobilize7.webp"}
+            />
+          </div>
+        </div>
+
+        <div className="warbondContainer-page">
+          <div className="warbondContainer-page-top">
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_8</p>
+
+            <div className="warbondContainer-page-right">
+              <p className="warbondContainer-page-right-text">
+                Всего предметов: 8
+              </p>
+
+              <div className="warbondContainer-page-right-itemsBought">
+                {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
+                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="relative w-full h-[539px]">
+            <WarbondItem
+              positionStyle={"top-0 left-0"}
+              price={50}
+              image={
+                "/static/warbonds/emotes/horizontal/HelldiversMobilize8.webp"
+              }
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 left-[208px]"}
+              price={25}
+              image={"/static/warbonds/weapons/vertical/G3.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-[208px]"}
+              price={60}
+              image={"/static/warbonds/armor/SA04Body.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-0"}
+              price={40}
+              image={"/static/warbonds/armor/SA04Helmet.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-[179px] right-0"}
+              price={25}
+              image={"/static/warbonds/coats/HelldiversMobilize8.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 left-0"}
+              price={10}
+              image={"/static/playerCards/HelldiversMobilize8.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-[416px]"}
+              price={20}
+              image={"/static/warbonds/SuperCredits.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-0"}
+              price={60}
+              image={"/static/warbonds/weapons/horizontal/SG8S.webp"}
+            />
+          </div>
+        </div>
+
+        <div className="warbondContainer-page">
+          <div className="warbondContainer-page-top">
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_9</p>
+
+            <div className="warbondContainer-page-right">
+              <p className="warbondContainer-page-right-text">
+                Всего предметов: 8
+              </p>
+
+              <div className="warbondContainer-page-right-itemsBought">
+                {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
+                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="relative w-full h-[539px]">
+            <WarbondItem
+              positionStyle={"top-0 left-[208px]"}
+              price={15}
+              image={"/static/playerCards/HelldiversMobilize9.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 left-0"}
+              price={70}
+              image={"/static/warbonds/boosters/vertical/Booster.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 left-0"}
+              price={30}
+              image={
+                "/static/warbonds/emotes/horizontal/HelldiversMobilize9.webp"
+              }
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-[416px]"}
+              price={25}
+              image={"/static/warbonds/SuperCredits.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-0"}
+              price={60}
+              image={"/static/warbonds/weapons/horizontal/SG225P.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-[208px]"}
+              price={70}
+              image={"/static/warbonds/armor/CM14Body.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-[179px] right-0"}
+              price={50}
+              image={"/static/warbonds/armor/CM14Helmet.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-0"}
+              price={30}
+              image={"/static/warbonds/coats/HelldiversMobilize9.webp"}
+            />
+          </div>
+        </div>
+
+        <div className="warbondContainer-page">
+          <div className="warbondContainer-page-top">
+            <p className="warbondContainer-page-top-title">СТРАНИЦА_10</p>
+
+            <div className="warbondContainer-page-right">
+              <p className="warbondContainer-page-right-text">
+                Всего предметов: 8
+              </p>
+
+              <div className="warbondContainer-page-right-itemsBought">
+                {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => (
+                  <div key={index + 1} className="w-[15px] h-[15px] bg-white" />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="relative w-full h-[539px]">
+            <WarbondItem
+              positionStyle={"top-0 left-0"}
+              price={50}
+              image={
+                "/static/warbonds/emotes/horizontal/HelldiversMobilize10.webp"
+              }
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 left-0"}
+              price={150}
+              image={"/static/warbonds/boosters/vertical/Booster.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-[208px]"}
+              price={100}
+              image={"/static/warbonds/armor/DP11Body.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-0 right-0"}
+              price={75}
+              image={"/static/warbonds/armor/DP11Helmet.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"top-[179px] right-0"}
+              price={40}
+              image={"/static/warbonds/coats/HelldiversMobilize10.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 left-[208px]"}
+              price={20}
+              image={"/static/playerCards/HelldiversMobilize10.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-[416px]"}
+              price={50}
+              image={"/static/warbonds/SuperCredits.webp"}
+            />
+
+            <WarbondItem
+              positionStyle={"bottom-0 right-0"}
+              price={75}
+              image={"/static/warbonds/weapons/horizontal/PLAS1.webp"}
+            />
+          </div>
+        </div>
+      </div>
+    ),
     steeledveterans: (
       <div className="warbondContainer">
         <div className="warbondContainer-page">

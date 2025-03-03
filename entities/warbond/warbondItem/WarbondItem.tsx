@@ -112,12 +112,10 @@ const WarbondItem: React.FC<WarbondItem> = ({
       return "absolute bottom-0 left-0 w-[95%]";
     } else if (image?.includes("Body") || image?.includes("Helmet")) {
       return "absolute bottom-0 mx-auto w-[80%]";
-    } else if (image?.includes("Coat")) {
+    } else if (image?.includes("coats")) {
       return "absolute bottom-0 mx-auto w-[50%]";
-    } else if (image?.includes("Emote")) {
+    } else if (image?.includes("emotes")) {
       return "absolute bottom-0 mx-auto w-auto h-[80%]";
-    } else if (image?.includes("Hellpod")) {
-      return "absolute bottom-0 left-0 w-[95%]";
     }
 
     return "w-auto";
