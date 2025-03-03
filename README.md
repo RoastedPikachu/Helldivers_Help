@@ -1,107 +1,107 @@
 ![HelldiversHelpRepositoryImage.png](public%2Fstatic%2FHelldiversHelpRepositoryImage.png)
 
-## Что такое HELLDIVERS.HELP?
+## What is HELLDIVERS.HELP?
 
-HELLDIVERS.HELP - это сайт-помощник каждому Адскому Десантнику, который сражается за продвижение демократии, свободы и процветания по всей галактике.
+HELLDIVERS.HELP is a helper site for every Helldivers who fights to promote Democracy, Freedom and Prosperity throughout the galaxy.
 
-## Технологии, использованные в проекте:
+## Technologies used in the project:
 
-### Фундамент приложения:
+### Most important:
 
-- Next.js (14 версии);
-- React (18 версии);
+- Next.js (v14);
+- React (v18);
 - TypeScript;
-- MobX (6 версии)
+- MobX (v6)
 
-### Сервер:
+### Server:
 - **Nginx**;
-- **Pm2** - для постоянной работы Next.js билда
+- **Pm2** - for the Next.js build to run continuously
 
-### Полезные библиотеки: 
+### Useful libraries: 
 
-- **Tailwind CSS** - для легкой и удобной стилизации;
-- **Ant Design** - для унификации и ускорения разработки компонентов;
-- **ESlint** - для отлова ошибок;
-- **Axios** - для удобства работы с запросами на сервер;
-- **Swiper** - для красивых каруселей изображений;
-- **mobx-persist-store** - для сохранения состояния stor-а между перезагрузками вкладок;
-- **next-pwa** - для интеграции PWA;
-- **react-fast-marquee** - для реализации бегущей строки с советами;
-- **react-zoom-pan-pinch** - для реализации интерактивной карты
+- **Tailwind CSS** - for easy and convenient styling;
+- **Ant Design** - to unify and accelerate component development;
+- **ESlint** - to catch errors;
+- **Axios** - for easy handling of requests to the server;
+- **Swiper** - for beautiful carousels of images;
+- **mobx-persist-store** - to save the store state between tab reloads;
+- **next-pwa** - for PWA integration;
+- **react-fast-marquee** - to implement a ticker with tips;
+- **react-zoom-pan-pinch** - for the implementation of the interactive map
 
-## Список обновлений:
+## Updates list:
 
 ### v1.3.0
 
 #### 📌 Что нового?
-&nbsp;&nbsp;✅ Раздел новостей – всегда будьте в курсе последних событий.
+&nbsp;&nbsp;✅ News section - always be up to date with the latest news.
 
-&nbsp;&nbsp;✅ Страница фракции Просветленных – изучайте новых врагов.
+&nbsp;&nbsp;✅ Illuminates faction page - explore new enemies.
 
-&nbsp;&nbsp;✅ Полная актуализация контента – новые враги у Автоматонов и Терминидов, свежий арсенал оружия, брони и стратагем.
+&nbsp;&nbsp;✅ Full content update - new enemies in Automatons and Terminids, fresh arsenal of weapons, armor and stratagems.
 
-&nbsp;&nbsp;✅ Полный перевод на английский – теперь ещё больше Адских десантников смогут воспользоваться сайтом.
+&nbsp;&nbsp;✅ Full English translation - now even more Helldivers will be able to use the site.
 
-&nbsp;&nbsp;✅ Редизайн в стиле Helldivers 2 – для более правильного погружения в атмосферу войны.
+&nbsp;&nbsp;✅ Helldivers 2 style redesign - for a more proper immersive war experience.
 
-&nbsp;&nbsp;✅ Улучшенная навигация – добавлены пути страниц для большего удобства.
+&nbsp;&nbsp;✅ Improved navigation - added page paths for greater convenience.
 
 #### 🖼️ Обновление изображений:
-&nbsp;&nbsp;🎨 Все изображения стали более приятными глазу – теперь визуальная часть сайта стала в разы лучше.
+&nbsp;&nbsp;🎨 All images have become more pleasing to the eye - the visual part of the site is now many times better.
 
-&nbsp;&nbsp;🚀 Оптимизирован размер картинок – сайт загружается намного быстрее.
+&nbsp;&nbsp;🚀 Optimized the size of pictures - the site loads much faster.
 
 #### 🔧 Исправления и доработки:
-&nbsp;&nbsp;☑️ Исправлена страница модулей корабля – теперь всё отображается корректно.
+&nbsp;&nbsp;☑️ Fixed ship modules page - now everything is displayed correctly.
 
-&nbsp;&nbsp;☑️ Исправлены различные ошибки для более стабильной работы.
+&nbsp;&nbsp;☑️ Fixed various bugs for more stable operation.
 
-&nbsp;&nbsp;⚠️ Страница галактической войны временно на переработке – готовим для вас кое-что особенное!
+&nbsp;&nbsp;⚠️ The galactic war page is temporarily on rework - cooking up something special for you!
 
 ### v1.2.0
 
 #### 🔥 Изменения:
-&nbsp;&nbsp;🎮 Добавлен функционал тренировки стратагем, повторяющий игру Stratagem Hero. Теперь каждый Адский Десантник сможет прокачать навык быстрого ввода стратагем, чтобы ничего не отвлекало в разгаре битвы за Демократию и Супер-Землю!
+&nbsp;&nbsp;🎮 Stratagem training functionality has been added, echoing the Stratagem Hero game. Now every Helldiver will be able to pump up the skill of quickly entering stratagems, so that nothing distracts them in the middle of the battle for Democracy and Super Earth!
 
-&nbsp;&nbsp;🗺️ Добавлена интерактивная карта на страницу войны – теперь вы сможете рассматривать галактическую войну с нового ракурса!
+&nbsp;&nbsp;🗺️ Added an interactive map to the war page - now you can view galactic warfare from a new angle!
 
-&nbsp;&nbsp;🎟️ Добавлен весь контент из нового боевого пропуска, а также информация о новой миссии с Темной жидкостью и новом мехе EXO-48.
+&nbsp;&nbsp;🎟️ All content from the new battle pass has been added, as well as information on the new mission with Dark Liquid and the new EXO-48 mech.
 
-&nbsp;&nbsp;🔗 Добавлены ссылки на наш Patreon и GitHub репозиторий – теперь вы можете поддержать разработку сайта напрямую.
+&nbsp;&nbsp;🔗 Added links to our Patreon and GitHub repository - now you can support site development directly.
 
-&nbsp;&nbsp;🎨 Изменён внешний вид кнопки начала страницы.
+&nbsp;&nbsp;🎨 Changed appearance of the page start button.
 
-&nbsp;&nbsp;🔍 Обновлена иконка сайта в поисковиках – теперь она корректно отображается, в том числе в Яндексе.
+&nbsp;&nbsp;🔍 Updated the site icon in search engines - now it is displayed correctly, including in Yandex.
 
-&nbsp;&nbsp;🛠️ Изменено пользовательское взаимодействие с раскрывающейся информацией (например, на странице миссий и стратагем).
+&nbsp;&nbsp;🛠️ Changed user interaction with dropdowns (such as on the missions and stratagems page).
 
-&nbsp;&nbsp;🖼️ Продолжаем заменять изображения брони на более качественные – процесс почти завершён, за исключением сетов из предзаказов. 😢
+&nbsp;&nbsp;🖼️ Continuing to replace armor images with better ones - the process is almost complete, except for pre-order sets. 😢
 
 #### 🔧 Исправления:
-&nbsp;&nbsp;🎯 Исправлено отображение главного приказа на убийство определённого количества противников.
+&nbsp;&nbsp;🎯 Fixed the display of the main order to kill a certain number of enemies.
 
-&nbsp;&nbsp;📜 Убран ненужный скролл на странице с информацией о противнике.
+&nbsp;&nbsp;📜 Removed unnecessary scroll on the enemy information page.
 
-&nbsp;&nbsp;🛠️ Другие мелкие исправления, улучшающие стабильность и удобство сайта.
+&nbsp;&nbsp;🛠️ Other minor fixes that improve the stability and usability of the site.
 
 ### v1.1.0
 
 #### 🔥 Изменения:
-&nbsp;&nbsp;📱 Добавлена мобильная версия сайта – теперь удобнее пользоваться на смартфонах!
+&nbsp;&nbsp;📱 Added mobile version of the site - now it is more convenient to use on smartphones!
 
-&nbsp;&nbsp;❌ Теперь можно закрывать слайдер кликом вне его окна – удобнее, чем когда-либо!
+&nbsp;&nbsp;❌ You can now close a slider by clicking outside its window - more convenient than ever!
 
-&nbsp;&nbsp;🎯 Добавлены второстепенные миссии на страницу миссий – больше заданий, больше вызовов!
+&nbsp;&nbsp;🎯 Added secondary missions to the missions page - more missions, more challenges!
 
-&nbsp;&nbsp;🔫 Добавлено оружие поддержки на страницу вооружения – расширяйте арсенал для победы!
+&nbsp;&nbsp;🔫 Added support weapons to the weapons page - expand your arsenal for victory!
 
-&nbsp;&nbsp;🔗 Добавлена ссылка на Discord-канал в footer сайта – присоединяйтесь к сообществу!
+&nbsp;&nbsp;🔗 Added a link to the Discord channel in the footer of the site - join the community!
 
 #### 🔧 Исправления:
-&nbsp;&nbsp;📊 Исправлено некорректное отображение таблиц на странице миссий.
+&nbsp;&nbsp;📊 Fixed incorrect display of tables on the missions page.
 
-&nbsp;&nbsp;🖥️ Убран второй скроллбар со страницы планет.
+&nbsp;&nbsp;🖥️ Removed the second scrollbar from the planets page.
 
-&nbsp;&nbsp;🌦️ Исправлена проблема с отсутствующими изображениями погодных условий.
+&nbsp;&nbsp;🌦️ Fixed an issue with missing weather condition images.
 
 
