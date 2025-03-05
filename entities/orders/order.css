@@ -1,0 +1,103 @@
+.order {
+    @apply relative w-[500px] h-auto border-2 border-theme;
+}
+
+.order-timeLeft {
+    @apply flex justify-between items-center py-[5px] px-[5px];
+}
+
+.order-timeLeft-text {
+    @apply text-theme text-[1.25rem] text-left font-primary font-normal;
+}
+
+.order-timeLeft-timeBlock {
+    @apply relative flex items-center px-[10px] h-[20px] bg-theme;
+}
+
+.order-timeLeft-timeBlock-text {
+    @apply h-[25px] text-black text-[1.125rem] text-center font-primary font-normal;
+}
+
+.order-title {
+    @apply py-[10px] px-[20px] w-full h-auto bg-gradient-to-l from-[#121c26] to-transparent;
+}
+
+.order-title-text {
+    @apply text-white text-[1.5rem] text-right font-primary font-medium;
+}
+
+.order-task {
+    @apply grid justify-items-end gap-y-[5px] py-[15px] px-[20px] w-full bg-gradient-to-l from-[#213148] to-transparent;
+}
+
+.order-task-description {
+    @apply text-[#c7d8e2] text-[1rem] text-right font-primary font-normal;
+}
+
+.order-task-point {
+    @apply flex justify-end items-start gap-x-[10px] w-full h-auto;
+}
+
+.order-task-point-text {
+    @apply max-w-[90%] text-white text-[1rem] text-right font-primary font-normal;
+}
+
+.order-task-point-checkbox {
+    @apply w-[20px] h-[20px];
+}
+
+.inactive {
+    @apply bg-[#414e4f] border-[1px] border-[#747d8c];
+}
+
+.active {
+    @apply bg-[#6ce98d] border-2 border-[#747d8c];
+}
+
+.order-task-progressionScale {
+    @apply relative flex items-center gap-x-[4px] py-[5px] px-[5px] w-full h-auto bg-black;
+}
+
+.order-task-progressionScale-text {
+    @apply absolute left-[15px] top-[-2px] text-[#476D76] text-[1.25rem] text-left font-primary font-medium z-10;
+}
+
+.order-task-progressionScale-item {
+    @apply flex items-center h-[20px];
+}
+
+.completed {
+    @apply bg-[#7ec7da];
+}
+
+.incompleted {
+    @apply bg-[#3f5e63];
+}
+
+.order-reward {
+    @apply relative flex justify-end items-end gap-x-[10px] py-[15px] px-[20px] w-full h-[90px] bg-gradient-to-l from-[#121c26] to-transparent;
+}
+
+.order-reward-textBlock {
+    @apply h-[60px];
+}
+
+.order-reward-textBlock-title {
+    @apply mt-[10px] text-[#c7d8e2] text-[1.25rem] text-right font-primary font-medium;
+}
+
+.order-reward-textBlock-description {
+    @apply mt-[-5px] text-white text-[1.25rem] text-right font-primary font-medium;
+}
+
+.order-reward-imageWrapper {
+    @apply relative flex justify-center items-center w-[60px] h-[60px] bg-black border-[1px] border-[#BCBDBF];
+}
+
+.order-reward-imageWrapper-image {
+    @apply mt-[-10px] w-[32.5px] h-[32.5px];
+}
+
+.order-reward-imageWrapper-number {
+    @apply absolute bottom-0 text-white text-[1.25rem] text-center font-secondary font-medium;
+}

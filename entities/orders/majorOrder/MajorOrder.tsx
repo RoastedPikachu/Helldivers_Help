@@ -3,19 +3,18 @@ import React from "react";
 
 import { planetsStore } from "@/store/PlanetsStore";
 
-import "./MajorOrder.css";
-import { planets } from "@/data/planets";
+import "../order.css";
 
 interface MajorOrderProps {
-  title: string;
-  expiresIn: number;
-  description: string;
-  targetPlanets: any[];
-  targetCount: number;
-  targetKillsCount: number;
-  completedPlanets: number[];
-  currentKillsCount: number;
-  reward: number;
+  title?: string;
+  expiresIn?: number;
+  description?: string;
+  targetPlanets?: any[];
+  targetCount?: number;
+  targetKillsCount?: number;
+  completedPlanets?: number[];
+  currentKillsCount?: number;
+  reward?: number;
 }
 
 const MajorOrder: React.FC<MajorOrderProps> = ({
@@ -29,85 +28,73 @@ const MajorOrder: React.FC<MajorOrderProps> = ({
   currentKillsCount,
   reward,
 }) => {
-  const getProgressWidth = () => {
-    if (targetCount && !targetPlanets.length) {
-      return (completedPlanets[0] / targetCount) * 100;
-    }
-    return (currentKillsCount / targetKillsCount) * 100;
-  };
+  // const getProgressWidth = () => {
+  //   if (targetCount && !targetPlanets.length) {
+  //     return (completedPlanets[0] / targetCount) * 100;
+  //   }
+  //   return (currentKillsCount / targetKillsCount) * 100;
+  // };
 
   return (
     <>
-      {title && (
-        <div className="rootMajorOrderWidget">
-          <div className="rootMajorOrderWidget_Top">
-            <h3 className="rootMajorOrderWidget_Top_Title">Главный приказ</h3>
+      <div className="order">
+        <div className="order-timeLeft">
+          <p className="order-timeLeft-text">До конца главного приказа: </p>
 
-            <p className="rootMajorOrderWidget_Top_TimeLeft">
-              {Math.floor(expiresIn / 24)}д {Math.floor(expiresIn % 24)}ч
-            </p>
-          </div>
-
-          <p className="rootMajorOrderWidget_Description">{description}</p>
-
-          <h4 className="rootMajorOrderWidget_TaskTitle">Задача:</h4>
-
-          <p className="rootMajorOrderWidget_TaskDescription">{title}</p>
-
-          {targetPlanets.length && targetKillsCount === 0 && (
-            <div className="rootMajorOrderWidget_PlanetsBlock">
-              {targetPlanets.map((targetPlanet: any, index) => (
-                <div
-                  key={targetPlanet}
-                  className={`rootMajorOrderWidget_PlanetsBlock_TextWrapper ${completedPlanets[index] ? "border-[#3db8fe]" : "border-[#f44336]"}`}
-                >
-                  <div
-                    className={`rootMajorOrderWidget_PlanetsBlock_TextWrapper_Block ${completedPlanets[index] ? "bg-[linear-gradient(90deg,hsla(202,99%,62%,1)_0%,hsla(0,0%,0%,1)_100%)] border-[#3db8fe]" : "bg-[linear-gradient(90deg,hsla(4,90%,58%,1)_0%,hsla(0,0%,0%,1)_100%)] border-[#f44336]"}`}
-                  ></div>
-                  {/*<p className="rootMajorOrderWidget_PlanetsBlock_TextWrapper_Block_PlanetName">*/}
-                  {/*  {*/}
-                  {/*    planets.find(*/}
-                  {/*      (value, index) => index === targetPlanet + 1,*/}
-                  {/*    )*/}
-                  {/*  }*/}
-                  {/*</p>*/}
-
-                  <p
-                    className={`rootMajorOrderWidget_PlanetsBlock_TextWrapper_Block_BoolText ${completedPlanets[index] ? "text-[#3db8fe]" : "text-[#f44336]"}`}
-                  >
-                    {completedPlanets[index] ? "Под контролем" : "В процессе"}
-                  </p>
-                </div>
-              ))}
-            </div>
-          )}
-
-          {(targetCount && !targetPlanets.length) ||
-            (targetKillsCount !== 0 && (
-              <div className="rootMajorOrderWidget_LiberationProgress">
-                <div
-                  style={{ width: `${getProgressWidth()}%` }}
-                  className="rootMajorOrderWidget_LiberationProgress_ProgressBar mix-blend-[#000000]"
-                ></div>
-
-                {targetKillsCount !== 0 && (
-                  <p className="absolute top-[1.5px] right-[20px] text-[#2cc388] text-[1.125rem] font-['Insignia'] font-bold mix-blend-difference">
-                    {currentKillsCount.toLocaleString("ru")} /{" "}
-                    {targetKillsCount.toLocaleString("ru")}
-                  </p>
-                )}
-              </div>
-            ))}
-
-          <div className="rootMajorOrderWidget_Bottom">
-            <p className="rootMajorOrderWidget_Bottom_LeftText">Награда:</p>
-
-            <p className="rootMajorOrderWidget_Bottom_NumberText">{reward}</p>
-
-            <p className="rootMajorOrderWidget_Bottom_RightText">Медалей</p>
+          <div className="order-timeLeft-timeBlock">
+            <p className="order-timeLeft-timeBlock-text">15 Ч. 55 МИН.</p>
           </div>
         </div>
-      )}
+
+        <div className="order-title">
+          <h3 className="order-title-text">ГЛАВНЫЙ ПРИКАЗ</h3>
+        </div>
+
+        <div className="order-task">
+          <p className="order-task-description">
+            Задержите приближение сингулярности к Морадешу или защитите комплекс
+            переплавки глубинных пород на Клаорелле от автоматонов.
+          </p>
+
+          <p className="order-task-description">Настройка 1</p>
+
+          <div className="flex justify-end items-start gap-x-[10px] w-full h-auto">
+            <p className="order-task-point-text">
+              Удерживайте позицию (КЛАОРЕЛЛ), пока не закончится действие
+              приказа.
+            </p>
+
+            {/*<div className="order-task-point-checkbox inactive" />*/}
+            <div className="order-task-point-checkbox active" />
+          </div>
+
+          <p className="order-task-description">Настройка 2</p>
+
+          <div className="order-task-progressionScale">
+            <p className="order-task-progressionScale-text">2 (25,0%)</p>
+
+            <div className="order-task-progressionScale-item completed w-[25%]" />
+          </div>
+        </div>
+
+        <div className="order-reward">
+          <div className="order-reward-textBlock">
+            <p className="order-reward-textBlock-title">НАГРАДА</p>
+
+            <p className="order-reward-textBlock-description">МЕДАЛЬ ЗАСЛУГИ</p>
+          </div>
+
+          <div className="order-reward-imageWrapper">
+            <img
+              src="/static/Resources/MedalIcon.svg"
+              alt=""
+              className="order-reward-imageWrapper-image"
+            />
+
+            <p className="order-reward-imageWrapper-number">15</p>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
