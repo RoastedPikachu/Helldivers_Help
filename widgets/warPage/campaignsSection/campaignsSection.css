@@ -1,0 +1,7 @@
+.campaignsSection {
+    @apply mt-[-20px] mlarge:mt-0 mlarge:ml-0 w-full;
+}
+
+.campaignsSection_ActiveCampaigns {
+    @apply grid grid-cols-4 gap-y-[30px] mt-[25px] w-full mlarge:w-full;
+}

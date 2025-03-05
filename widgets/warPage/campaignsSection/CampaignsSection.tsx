@@ -8,7 +8,7 @@ import ActiveCampaignError from "@/entities/campaign/activeCampaignError/ActiveC
 import ActiveCampaign from "@/entities/campaign/activeCampaign/ActiveCampaign";
 import ActiveCampaignBlank from "@/entities/campaign/activeCampaignBlank/ActiveCampaignBlank";
 
-import "./CampaignsSection.css";
+import "./campaignsSection.css";
 
 const CampaignsSection = () => {
   const [isActiveCampaignsLoaded, changeActiveCampaignsLoadStatus] =

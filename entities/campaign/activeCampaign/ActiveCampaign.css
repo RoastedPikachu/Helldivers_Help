@@ -1,5 +1,5 @@
 .rootActiveCampaignWidget {
-   @apply relative w-[450px] mlarge:w-full h-auto bg-[#00293a] border-2 rounded-[10px];
+   @apply relative w-full mlarge:w-full h-auto bg-[#00293a] border-2 rounded-[10px];
 }
 
 .rootActiveCampaignWidget_Top {

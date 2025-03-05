@@ -15,6 +15,7 @@ import CampaignsSection from "@/widgets/warPage/campaignsSection/CampaignsSectio
 import SectionTitle from "@/shared/sectionTitle/SectionTitle";
 
 import "./TheWarContent.css";
+import OrdersSection from "@/widgets/warPage/ordersSection/OrdersSection";
 
 const DynamicGalaxyMap = dynamic(
   () => import("@/widgets/warPage/galaxyMap/GalaxyMap"),
@@ -45,28 +46,27 @@ const TheWarContent = observer(() => {
     <Observer>
       {() => (
         <main className="flex mlarge:block justify-center items-center mlarge:mt-[115px]">
-          <div className="relative grid justify-items-center">
-            <p className="text-theme text-[2.5rem] mlarge:text-[2rem] mmedium:text-[1.875rem] msmall:text-[1.75rem] text-center font-primary">
-              {t("title1")}
-            </p>
+          {/*<div className="relative grid justify-items-center">*/}
+          {/*  <p className="text-theme text-[2.5rem] mlarge:text-[2rem] mmedium:text-[1.875rem] msmall:text-[1.75rem] text-center font-primary">*/}
+          {/*    {t("title1")}*/}
+          {/*  </p>*/}
 
-            <p className="mt-[20px] mlarge:mt-[30px] text-theme text-[2rem] mlarge:text-[1.5rem] mmedium:text-[1.375rem] msmall:text-[1.25rem] text-center font-primary">
-              {t("title2")}
-            </p>
-          </div>
-          {/*{!mobileStore.isMobileDevice ? (*/}
-          {/*  <>*/}
-          {/*    <aside className="galaxyMap">*/}
-          {/*      <DynamicGalaxyMap />*/}
+          {/*  <p className="mt-[20px] mlarge:mt-[30px] text-theme text-[2rem] mlarge:text-[1.5rem] mmedium:text-[1.375rem] msmall:text-[1.25rem] text-center font-primary">*/}
+          {/*    {t("title2")}*/}
+          {/*  </p>*/}
+          {/*</div>*/}
 
-          {/*      <MajorOrderSection />*/}
-          {/*    </aside>*/}
+          {/*<aside className="galaxyMap">*/}
+          {/*  <DynamicGalaxyMap />*/}
+          {/*  <MajorOrderSection />*/}
+          {/*</aside>*/}
 
-          {/*    <CampaignsSection />*/}
-          {/*  </>*/}
-          {/*) : (*/}
-          {/*  getSpecificContentPage()*/}
-          {/*)}*/}
+          {!mobileStore.isMobileDevice ? (
+            <OrdersSection />
+          ) : (
+            // <CampaignsSection />
+            getSpecificContentPage()
+          )}
 
           {/*{mobileStore.isMobileDevice && (*/}
           {/*  <div className="fixed flex justify-between items-center left-0 bottom-[30px] px-[15px] mx-[calc((100%-320px)/2)] mmedium:mx-[calc((100%-300px)/2)] msmall:mx-[calc((100%-280px)/2)] w-[320px] mmedium:w-[300px] msmall:w-[280px] h-[50px] mmedium:h-[45px] msmall:h-[40px] bg-[#00293a] border-2 border-[#2cc388] rounded-[10px]">*/}
