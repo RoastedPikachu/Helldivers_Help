@@ -1,0 +1,3 @@
+.ordersSection {
+    @apply relative grid gap-y-[20px] w-full h-auto;
+}

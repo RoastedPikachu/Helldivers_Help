@@ -14,8 +14,9 @@ import CampaignsSection from "@/widgets/warPage/campaignsSection/CampaignsSectio
 
 import SectionTitle from "@/shared/sectionTitle/SectionTitle";
 
-import "./TheWarContent.css";
 import OrdersSection from "@/widgets/warPage/ordersSection/OrdersSection";
+
+import "./TheWarContent.css";
 
 const DynamicGalaxyMap = dynamic(
   () => import("@/widgets/warPage/galaxyMap/GalaxyMap"),

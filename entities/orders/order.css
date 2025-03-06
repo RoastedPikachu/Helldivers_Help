@@ -1,5 +1,5 @@
 .order {
-    @apply relative w-[500px] h-auto border-2 border-theme;
+    @apply relative w-[400px] h-auto;
 }
 
 .order-timeLeft {
@@ -7,7 +7,7 @@
 }
 
 .order-timeLeft-text {
-    @apply text-theme text-[1.25rem] text-left font-primary font-normal;
+    @apply text-theme text-[1.125rem] text-left font-primary font-normal;
 }
 
 .order-timeLeft-timeBlock {
@@ -28,6 +28,10 @@
 
 .order-task {
     @apply grid justify-items-end gap-y-[5px] py-[15px] px-[20px] w-full bg-gradient-to-l from-[#213148] to-transparent;
+}
+
+.order-task-icon {
+    @apply w-[80px] h-[80px];
 }
 
 .order-task-description {
@@ -55,15 +59,15 @@
 }
 
 .order-task-progressionScale {
-    @apply relative flex items-center gap-x-[4px] py-[5px] px-[5px] w-full h-auto bg-black;
+    @apply relative flex items-center gap-x-[3px] py-[3px] px-[3px] w-full h-auto bg-black;
 }
 
 .order-task-progressionScale-text {
-    @apply absolute left-[15px] top-[-2px] text-[#476D76] text-[1.25rem] text-left font-primary font-medium z-10;
+    @apply absolute left-[15px] top-[-2px] text-[#476D76] text-[1rem] text-left font-primary font-medium z-10;
 }
 
 .order-task-progressionScale-item {
-    @apply flex items-center h-[20px];
+    @apply flex items-center h-[15px];
 }
 
 .completed {
