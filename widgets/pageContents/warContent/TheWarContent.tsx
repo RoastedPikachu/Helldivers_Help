@@ -17,6 +17,7 @@ import SectionTitle from "@/shared/sectionTitle/SectionTitle";
 import OrdersSection from "@/widgets/warPage/ordersSection/OrdersSection";
 
 import "./TheWarContent.css";
+import NewsSection from "@/widgets/warPage/newsSection/NewsSection";
 
 const DynamicGalaxyMap = dynamic(
   () => import("@/widgets/warPage/galaxyMap/GalaxyMap"),
@@ -46,7 +47,7 @@ const TheWarContent = observer(() => {
   return (
     <Observer>
       {() => (
-        <main className="flex mlarge:block justify-center items-center mlarge:mt-[115px]">
+        <main className="flex mlarge:block items-start gap-x-[20px] mlarge:mt-[115px]">
           {/*<div className="relative grid justify-items-center">*/}
           {/*  <p className="text-theme text-[2.5rem] mlarge:text-[2rem] mmedium:text-[1.875rem] msmall:text-[1.75rem] text-center font-primary">*/}
           {/*    {t("title1")}*/}
@@ -63,7 +64,11 @@ const TheWarContent = observer(() => {
           {/*</aside>*/}
 
           {!mobileStore.isMobileDevice ? (
-            <OrdersSection />
+            <>
+              <NewsSection />
+
+              <OrdersSection />
+            </>
           ) : (
             // <CampaignsSection />
             getSpecificContentPage()

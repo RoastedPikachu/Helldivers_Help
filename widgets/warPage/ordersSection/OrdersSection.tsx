@@ -74,7 +74,7 @@ const OrdersSection = () => {
   useEffect(() => {
     getMajorOrder();
 
-    let majorOrderInterval = setInterval(() => getMajorOrder(), 60000) as any;
+    let majorOrderInterval = setInterval(() => getMajorOrder(), 300000) as any;
 
     return () => {
       majorOrderInterval = null;
