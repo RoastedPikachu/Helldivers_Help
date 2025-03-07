@@ -121,3 +121,127 @@
 .rootActiveCampaignWidget_Bottom_Wrapper_Block_NumberText {
     @apply ml-[10px] text-[1.375rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-[--font-secondary] font-bold;
 }
+
+.activeCampaign {
+    @apply relative p-[2px] w-full h-auto;
+}
+
+.activeCampaign-timeLeft {
+    @apply ml-auto px-[5px] w-[80px] bg-theme;
+}
+
+.activeCampaign-timeLeft-data {
+    @apply text-black text-[1rem] text-center font-primary font-bold;
+}
+
+.innerWrapper {
+    @apply relative p-[2px] w-full h-auto border-2 border-theme;
+}
+
+.topInnerWrapper {
+    @apply relative w-full h-[158px] border-2 border-[#cbcbcd];
+}
+
+.bottomInnerWrapper {
+    @apply relative mt-[2px] w-full h-auto border-2 border-[#969593];
+}
+
+.activeCampaign-header {
+    @apply flex justify-start items-center gap-x-[5px] py-[3px] px-[5px] w-full h-auto bg-black;
+}
+
+.activeCampaign-header-icon {
+    @apply w-[45px] h-[45px];
+}
+
+.activeCampaign-header-textBlock {
+    @apply grid mt-[-3px] w-auto h-auto;
+}
+
+.activeCampaign-header-textBlock-planetName {
+    @apply text-[1.125rem] text-left font-primary font-bold;
+}
+
+.activeCampaign-header-textBlock-planetSector {
+    @apply mt-[-5px] text-[0.75rem] text-left font-primary font-bold brightness-90;
+}
+
+.activeCampaign-biome {
+    @apply relative grid justify-items-center h-[100px];
+}
+
+.activeCampaign-biome-image {
+    @apply w-full h-full bg-cover;
+}
+
+.activeCampaign-biome-invasionBlock {
+    @apply absolute flex justify-center items-center gap-x-[5px] mt-[5px] px-[10px] w-[85%] bg-[rgba(0,0,0,0.7)] border-x-[4px] border-[#c277ff];
+}
+
+.activeCampaign-biome-invasionBlock-text {
+    @apply text-[#c277ff] text-[0.875rem] text-left font-primary font-bold;
+}
+
+.activeCampaign-progressionScale {
+    @apply relative p-[2px] w-full h-[34px] bg-black;
+}
+
+.activeCampaign-progressionScale-content {
+    @apply relative flex items-center gap-x-[3px] p-[3px] h-full bg-black border-2;
+}
+
+.activeCampaign-progressionScale-content-liberated {
+    @apply h-full bg-[#6bb7ea];
+}
+
+.activeCampaign-progressionScale-content-leftToLiberate {
+    @apply h-full;
+}
+
+.activeCampaign-currentStatus {
+    @apply relative flex justify-between py-[2px] px-[10px] w-full h-auto bg-black border-y-[2px] border-[#969593];
+}
+
+.activeCampaign-currentStatus-percentage {
+    @apply text-white text-[1rem] text-left font-primary font-medium;
+}
+
+.activeCampaign-statistics {
+    @apply relative flex items-center justify-between py-[2px] px-[10px] w-full h-[30px];
+}
+
+.activeCampaign-statistics-helldiversCount {
+    @apply flex items-center gap-x-[5px] h-full;
+}
+
+.activeCampaign-statistics-helldiversCount-icon {
+    @apply w-[18px] h-[18px];
+}
+
+.activeCampaign-statistics-helldiversCount-number {
+    @apply text-theme text-[1rem] text-left font-primary font-bold;
+}
+
+.activeCampaign-statistics-superEarthPercentage {
+    @apply flex items-center h-full;
+}
+
+.activeCampaign-statistics-superEarthPercentage-icon {
+    @apply ml-[15px] w-[24px] h-[24px];
+}
+
+.activeCampaign-statistics-superEarthPercentage-number {
+    @apply text-[#6bb7ea] text-[1rem] text-left font-primary font-bold;
+}
+
+.activeCampaign-statistics-enemyPercentage {
+    @apply flex items-center gap-x-[5px] h-full;
+}
+
+.activeCampaign-statistics-enemyPercentage-icon {
+    @apply w-[22px] h-[22px];
+}
+
+.activeCampaign-statistics-enemyPercentage-number {
+    @apply text-[1rem] text-left font-primary font-bold;
+}

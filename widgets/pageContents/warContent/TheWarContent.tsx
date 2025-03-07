@@ -65,9 +65,10 @@ const TheWarContent = observer(() => {
 
           {!mobileStore.isMobileDevice ? (
             <>
-              <NewsSection />
+              <CampaignsSection />
+              {/*<NewsSection />*/}
 
-              <OrdersSection />
+              {/*<OrdersSection />*/}
             </>
           ) : (
             // <CampaignsSection />

@@ -92,19 +92,21 @@ const CampaignsSection = () => {
 
         {isActiveCampaignsLoaded &&
           !isActiveCampaignsReceiveError &&
-          activeCampaigns.map((activeCampaign) => (
-            <ActiveCampaign
-              key={activeCampaign.planetIndex}
-              planetIndex={activeCampaign.planetIndex}
-              fraction={activeCampaign.faction}
-              isDefense={activeCampaign.defense}
-              expiresIn={activeCampaign?.expireDateTime}
-              percentage={activeCampaign.percentage}
-              playersCount={activeCampaign.players}
-              planetRegenArray={planetRegenArray}
-              impactMultiplier={impactMultiplier}
-            />
-          ))}
+          activeCampaigns
+            .slice(1, 2)
+            .map((activeCampaign) => (
+              <ActiveCampaign
+                key={activeCampaign.planetIndex}
+                planetName={activeCampaign.name}
+                fraction={activeCampaign.faction}
+                isDefense={activeCampaign.defense}
+                expiresIn={activeCampaign?.expireDateTime}
+                percentage={activeCampaign.percentage}
+                playersCount={activeCampaign.players}
+                planetRegenArray={planetRegenArray}
+                impactMultiplier={impactMultiplier}
+              />
+            ))}
       </div>
     </section>
   );

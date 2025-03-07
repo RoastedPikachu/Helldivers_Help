@@ -3,5 +3,5 @@
 }
 
 .campaignsSection_ActiveCampaigns {
-    @apply grid grid-cols-4 gap-y-[30px] mt-[25px] w-full mlarge:w-full;
+    @apply grid grid-cols-4 gap-x-[30px] gap-y-[30px] mt-[25px] w-full mlarge:w-full;
 }
