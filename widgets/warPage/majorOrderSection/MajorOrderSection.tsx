@@ -78,29 +78,29 @@ const MajorOrderSection = () => {
   }, []);
   return (
     <section className="majorOrderSection">
-      <SectionTitle text={"ПРИКАЗЫ"} />
+      {/*<SectionTitle text={"ПРИКАЗЫ"} />*/}
 
-      {isMajorOrderReceiveError && <MajorOrderError />}
+      {/*{isMajorOrderReceiveError && <MajorOrderError />}*/}
 
-      {!isMajorOrderLoaded && !isMajorOrderReceiveError && <MajorOrderBlank />}
+      {/*{!isMajorOrderLoaded && !isMajorOrderReceiveError && <MajorOrderBlank />}*/}
 
-      {isMajorOrderLoaded && !isMajorOrderReceiveError && isNoMajorOrder && (
-        <NoMajorOrder />
-      )}
+      {/*{isMajorOrderLoaded && !isMajorOrderReceiveError && isNoMajorOrder && (*/}
+      {/*  <NoMajorOrder />*/}
+      {/*)}*/}
 
-      {isMajorOrderLoaded && !isNoMajorOrder && (
-        <MajorOrder
-          title={majorOrder.title}
-          expiresIn={majorOrder.expiresIn}
-          description={majorOrder.description}
-          targetPlanets={majorOrder.targetPlanets}
-          targetCount={majorOrder.targetCount}
-          targetKillsCount={majorOrder.targetKillsCount}
-          completedPlanets={majorOrder.completedPlanets}
-          currentKillsCount={majorOrder.currentKillsCount}
-          reward={majorOrder.reward}
-        />
-      )}
+      {/*{isMajorOrderLoaded && !isNoMajorOrder && (*/}
+      {/*  <MajorOrder*/}
+      {/*    title={majorOrder.title}*/}
+      {/*    expiresIn={majorOrder.expiresIn}*/}
+      {/*    description={majorOrder.description}*/}
+      {/*    targetPlanets={majorOrder.targetPlanets}*/}
+      {/*    targetCount={majorOrder.targetCount}*/}
+      {/*    targetKillsCount={majorOrder.targetKillsCount}*/}
+      {/*    completedPlanets={majorOrder.completedPlanets}*/}
+      {/*    currentKillsCount={majorOrder.currentKillsCount}*/}
+      {/*    reward={majorOrder.reward}*/}
+      {/*  />*/}
+      {/*)}*/}
     </section>
   );
 };
