@@ -31,6 +31,21 @@ HELLDIVERS.HELP is a helper site for every Helldivers who fights to promote Demo
 
 ## Updates list:
 
+### v1.3.1 
+
+#### 📌 What's new?
+&nbsp;&nbsp;✅ We've finally turned the page on galactic warfare.
+
+&nbsp;&nbsp;✅ Warbonds Page - you can now track your achievements and awards for your participation in the war.
+
+&nbsp;&nbsp;✅ Redesigned active campaigns page - new design for easier tracking of ongoing battles.
+
+&nbsp;&nbsp;✅ Military report - the most up-to-date news from the battlefields is now available in real time.
+
+&nbsp;&nbsp;✅ Updated appearance of the major order - now it looks more stylish and in line with the spirit of war.
+
+&nbsp;&nbsp;⚠️ The galactic war map - still undergoing redesign. We are doing our best to get it back on the site as soon as possible!
+
 ### v1.3.0
 
 #### 📌 What's new?
