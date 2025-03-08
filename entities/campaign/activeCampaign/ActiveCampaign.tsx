@@ -356,7 +356,7 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
               <div className="activeCampaign-statistics-superEarthPercentage">
                 <div className="my-[15%] w-[2px] h-[70%] bg-[#333333]" />
 
-                <p className="ml-[20px] text-white text-[0.75rem] text-center font-primary font-medium">
+                <p className="ml-[10px] text-white text-[0.675rem] text-center font-primary font-medium">
                   {getIntlArray(t2("texts"))[3]}
                 </p>
               </div>
