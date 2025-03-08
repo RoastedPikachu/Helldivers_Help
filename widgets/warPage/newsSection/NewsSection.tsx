@@ -2,15 +2,22 @@ import React, { useEffect, useState } from "react";
 
 import { useParams } from "next/navigation";
 
+import { useTranslations } from "next-intl";
+
 import axios from "axios";
+
+import { getIntlArray } from "@/utils/generalFunctions";
+
+import NewsItem from "@/entities/war/newsItem/NewsItem";
 
 import SectionTitle from "@/shared/sectionTitle/SectionTitle";
 
 import "./newsSection.css";
-import NewsItem from "@/entities/war/newsItem/NewsItem";
 
 const NewsSection = () => {
   const params = useParams();
+
+  const t = useTranslations("WarPage");
 
   const [news, setNews] = useState({} as any);
 
@@ -58,7 +65,7 @@ const NewsSection = () => {
   }, []);
   return (
     <section className="newsSection">
-      <SectionTitle text={"НОВОСТИ"} />
+      <SectionTitle text={getIntlArray(t("sectionTitles"))[0]} />
 
       {news.length &&
         news.map((newsItem: any) => (

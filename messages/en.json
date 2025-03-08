@@ -1,5 +1,6 @@
 {
   "WarPage": {
+    "sectionTitles": "[\"NEWS\",\"ORDERS\"]",
     "title1": "This page of the site is currently undergoing a redesign.",
     "title2": "We apologize for the inconvenience."
   },
@@ -325,5 +326,9 @@
   "weatherConditions": {
     "names": "[\"Extreme Cold\",\"Thick Fog\",\"Rainstorms\",\"Intense Heat\",\"Tremors\",\"Blizzards\",\"Meteor Storms\",\"Sandstorms\",\"Ion Storms\",\"Acid Storms\",\"Volcanic Activity\",\"Fire Tornados\"]",
     "descriptions": "[\"Periods of freezing temperatures reduce rate of fire and delay heat buildup in weapons.\",\"Dense fog lightly reduces visibility for both enemy and friendly units,\",\"Torrential rainstorms reduce visibility.\",\"Periods of high temperatures increase stamina drain and speed up heat buildups in weapons.\",\"Frequent earthquakes stun players and enemies alike.\",\"Intense blizzards reduce mobility and moderately reduce visibility for both enemy and friendly units.\",\"Meteors impact the surface causing massive damage.\",\"Dense sandstorms reduce mobility and greatly reduce visibility for both enemy and friendly units.\",\"Ion storms intermittently disable Stratagems.\",\"Corrosive acid storms temporarily reduce armor effectiveness for both enemy and friendly units.\",\"Volcanos throw burning rocks around this planet.\",\"Planet is ravaged by deadly fire tornados.\"]"
+  },
+  "orders": {
+    "texts": "[\"Ends in:\",\"MAJOR ORDER\",\"REWARD\",\"WARBOND MEDAL\",\"Waiting for the major order\",\"Await further orders from Super Earth High Command\",\"PERSONAL ORDER\",\"Kill\"]",
+    "tasks": "[\"Automatons\",\"Shredder Tank\",\"Terminids\",\"Bile Titan\"]"
   }
 }

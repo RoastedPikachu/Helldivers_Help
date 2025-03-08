@@ -2,20 +2,24 @@ import React, { useEffect, useState } from "react";
 
 import { useParams } from "next/navigation";
 
+import { useTranslations } from "next-intl";
+
 import axios from "axios";
 
-import { Order } from "@/utils/componentInterfaces";
+import { getIntlArray } from "@/utils/generalFunctions";
 
 import MajorOrder from "@/entities/orders/majorOrder/MajorOrder";
 import PersonalOrder from "@/entities/orders/personalOrder/PersonalOrder";
+import NoMajorOrder from "@/entities/orders/noMajorOrder/NoMajorOrder";
 
 import SectionTitle from "@/shared/sectionTitle/SectionTitle";
 
 import "./ordersSection.css";
-import NoMajorOrder from "@/entities/orders/noMajorOrder/NoMajorOrder";
 
 const OrdersSection = () => {
   const params = useParams();
+
+  const t = useTranslations("WarPage");
 
   const [majorOrder, setMajorOrder] = useState({} as any);
 
@@ -23,7 +27,7 @@ const OrdersSection = () => {
     // "https://api.helldivers2.dev/raw/api/v2/Assignment/War/801"
     // "https://api.diveharder.com/raw/items"
     axios
-      .get("https://api.helldivers2.dev/raw/api/v2/Assignment/War/801", {
+      .get("https://api.helldivers2.dev/api/v1/assignments", {
         headers: {
           "Accept-Language": params.locale === "ru" ? "ru-RU" : "en-EN",
           "X-Super-Client": "Helldivers Help",
@@ -31,8 +35,6 @@ const OrdersSection = () => {
         },
       })
       .then((response) => {
-        console.log(response);
-
         if (response.data.length === 0) {
           return;
         }
@@ -44,26 +46,7 @@ const OrdersSection = () => {
         if (data == undefined) {
           // changeMajorOrderExistenceStatus(true);
         } else {
-          const orderPlanets =
-            data.setting.tasks[0].values[2] !== 0
-              ? [...data.setting.tasks.map((task: any) => task.values[2])]
-              : [];
-
-          setMajorOrder({
-            title: data.setting.taskDescription,
-            expiresIn: data.expiresIn / 60 / 60,
-            description: data.setting.overrideBrief,
-            targetPlanets: orderPlanets,
-            targetCount: data.setting.tasks[0].values[0],
-            targetKillsCount:
-              data.setting.tasks[0].values[2] > 100000
-                ? data.setting.tasks[0].values[2]
-                : 0,
-            completedPlanets: data.progress,
-            currentKillsCount:
-              data.setting.tasks[0].values[2] > 100000 ? data.progress[0] : 0,
-            reward: data.setting.reward.amount,
-          });
+          setMajorOrder(data);
         }
       })
       .catch((error) => {
@@ -82,9 +65,13 @@ const OrdersSection = () => {
   }, []);
   return (
     <section className="ordersSection">
-      <SectionTitle text={"ПРИКАЗЫ"} />
+      <SectionTitle text={getIntlArray(t("sectionTitles"))[1]} />
 
-      {Object.entries(majorOrder).length ? <MajorOrder /> : <NoMajorOrder />}
+      {Object.entries(majorOrder).length ? (
+        <MajorOrder order={majorOrder} />
+      ) : (
+        <NoMajorOrder />
+      )}
 
       <PersonalOrder />
     </section>
