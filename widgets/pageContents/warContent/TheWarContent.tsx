@@ -34,10 +34,10 @@ const TheWarContent = observer(() => {
         return <CampaignsSection />;
       case 2:
         return (
-          <div className="flex items-start gap-x-[20px]">
-            <NewsSection />
-
+          <div className="flex mlarge:grid items-start gap-x-[20px]">
             <OrdersSection />
+
+            {!mobileStore.isMobileDevice && <NewsSection />}
           </div>
           // <section className="relative mlarge:mt-[25px] w-full h-auto">
           //   <div className="w-full h-[90vw]">
@@ -46,7 +46,7 @@ const TheWarContent = observer(() => {
           // </section>
         );
       case 3:
-        return <MajorOrderSection />;
+        return mobileStore.isMobileDevice && <NewsSection />;
     }
   };
   return (
@@ -65,7 +65,16 @@ const TheWarContent = observer(() => {
               onClick={() => setTargetContentPage(2)}
               className="text-white text-[1.5rem] mlarge:text-[1rem] text-left font-primary font-bold cursor-pointer duration-300 ease-in-out hover:text-theme"
             >
-              Военная сводка и приказы
+              {mobileStore.isMobileDevice
+                ? "Приказы"
+                : "Военная сводка и приказы"}
+            </button>
+
+            <button
+              onClick={() => setTargetContentPage(3)}
+              className="hidden mlarge:block text-white text-[1.5rem] mlarge:text-[1rem] text-left font-primary font-bold cursor-pointer duration-300 ease-in-out hover:text-theme"
+            >
+              Военная сводка
             </button>
           </div>
           {/*<div className="relative grid justify-items-center">*/}

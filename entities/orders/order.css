@@ -1,5 +1,5 @@
 .order {
-    @apply relative w-[400px] h-auto;
+    @apply relative w-[400px] mlarge:w-full h-auto;
 }
 
 .order-timeLeft {

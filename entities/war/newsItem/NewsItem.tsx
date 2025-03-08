@@ -54,10 +54,10 @@ const NewsItem: React.FC<NewsItemProps> = ({ text, date }) => {
       <div className="flex justify-between items-center py-[10px] px-[20px] w-full h-auto bg-[#121c26]">
         <h3
           dangerouslySetInnerHTML={{ __html: getTitle() }}
-          className="text-theme text-[1.25rem] text-left font-primary font-semibold"
+          className="text-theme text-[1.25rem] mlarge:text-[1.125rem] text-left font-primary font-semibold"
         />
 
-        <p className="text-theme text-[1rem] text-right font-primary font-medium">
+        <p className="text-theme text-[1rem] mlarge:text-[0.875rem] text-right font-primary font-medium">
           {formatDate()}
         </p>
       </div>
@@ -65,7 +65,7 @@ const NewsItem: React.FC<NewsItemProps> = ({ text, date }) => {
       <div className="py-[15px] px-[20px] w-full bg-[#213148]">
         <p
           dangerouslySetInnerHTML={{ __html: getText() }}
-          className="text-white text-[1rem] text-left font-primary font-normal"
+          className="text-white text-[1rem] mlarge:text-[0.875rem] text-left font-primary font-normal"
         ></p>
       </div>
     </div>
