@@ -73,7 +73,7 @@ const OrdersSection = () => {
         <NoMajorOrder />
       )}
 
-      <PersonalOrder />
+      {/*<PersonalOrder />*/}
     </section>
   );
 };

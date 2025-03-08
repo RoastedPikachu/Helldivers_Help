@@ -25,9 +25,11 @@ const CampaignsSection = () => {
   ] = useState(false);
 
   const [activeCampaigns, setActiveCampaigns] = useState([] as any[]);
-  const [planetRegenArray, setPlanetRegenArray] = useState([] as any);
+  const [planetRegenArray, setPlanetRegenArray] = useState([] as any[]);
+  const [events, setEvents] = useState([] as any[]);
 
   const [impactMultiplier, setImpactMultiplier] = useState(0);
+  const [totalPlayers, setTotalPlayers] = useState(0);
 
   const getActiveCampaigns = () => {
     let result = [] as any[];
@@ -39,6 +41,11 @@ const CampaignsSection = () => {
         changeActiveCampaignsLoadStatus(true);
 
         setActiveCampaigns(response.data);
+        setTotalPlayers(
+          response.data
+            .map((campaign: any) => campaign.players)
+            .reduce((acc: number, value: number) => (acc += value), 0),
+        );
       })
       .catch(() => {
         changeActiveCampaignsReceiveErrorStatus(false);
@@ -56,6 +63,7 @@ const CampaignsSection = () => {
 
         setImpactMultiplier(response.data.impactMultiplier);
         setPlanetRegenArray(response.data.planetStatus);
+        setEvents(response.data.planetEvents);
       })
       .catch(() => {
         changePlanetsAdditionalDataReceiveErrorStatus(true);
@@ -66,10 +74,10 @@ const CampaignsSection = () => {
     getActiveCampaigns();
     getPlanetsAdditionalData();
 
-    let campaignInterval = setInterval(() => getActiveCampaigns(), 1000) as any;
+    let campaignInterval = setInterval(() => getActiveCampaigns(), 500) as any;
     let planetsAdditionalDataInterval = setInterval(
       () => getPlanetsAdditionalData(),
-      1000,
+      500,
     ) as any;
 
     return () => {
@@ -92,21 +100,18 @@ const CampaignsSection = () => {
 
         {isActiveCampaignsLoaded &&
           !isActiveCampaignsReceiveError &&
-          activeCampaigns
-            .slice(1, 2)
-            .map((activeCampaign) => (
-              <ActiveCampaign
-                key={activeCampaign.planetIndex}
-                planetName={activeCampaign.name}
-                fraction={activeCampaign.faction}
-                isDefense={activeCampaign.defense}
-                expiresIn={activeCampaign?.expireDateTime}
-                percentage={activeCampaign.percentage}
-                playersCount={activeCampaign.players}
-                planetRegenArray={planetRegenArray}
-                impactMultiplier={impactMultiplier}
-              />
-            ))}
+          activeCampaigns.map((activeCampaign) => (
+            <ActiveCampaign
+              key={activeCampaign.planetIndex}
+              campaign={activeCampaign}
+              event={events.find(
+                (event) => event.planetIndex === activeCampaign.planetIndex,
+              )}
+              totalPlayers={totalPlayers}
+              planetRegenArray={planetRegenArray}
+              impactMultiplier={impactMultiplier}
+            />
+          ))}
       </div>
     </section>
   );
