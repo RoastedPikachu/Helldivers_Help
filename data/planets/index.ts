@@ -9,6 +9,7 @@ export const planets = [
     biome: biomes.swamp,
     weatherConditions: [weatherConditions.thickFog],
     image: "/static/GalaxyMap/planets/Алараф.svg",
+    devName: "Alaraph",
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ export const planets = [
       weatherConditions.blizzards,
     ],
     image: "/static/GalaxyMap/planets/Алатфар_XI.svg",
+    devName: "Alathfar XI",
   },
   {
     id: 3,
@@ -26,6 +28,7 @@ export const planets = [
     biome: biomes.tundra,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Эндар.svg",
+    devName: "Andar",
   },
   {
     id: 4,
@@ -33,6 +36,7 @@ export const planets = [
     biome: biomes.newJungle,
     weatherConditions: [weatherConditions.rainstorms],
     image: "/static/GalaxyMap/planets/Асперот-прайм.svg",
+    devName: "Asperoth Prime",
   },
   {
     id: 5,
@@ -43,6 +47,7 @@ export const planets = [
       weatherConditions.sandstorms,
     ],
     image: "/static/GalaxyMap/planets/Кейд.svg",
+    devName: "Keid",
   },
   {
     id: 6,
@@ -53,6 +58,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Клака_5.svg",
+    devName: "Klaka-5",
   },
   {
     id: 7,
@@ -63,6 +69,7 @@ export const planets = [
       weatherConditions.fireTornadoes,
     ],
     image: "/static/GalaxyMap/planets/Порт-кнет.svg",
+    devName: "Kneth Port",
   },
   {
     id: 8,
@@ -70,6 +77,7 @@ export const planets = [
     biome: biomes.canyon,
     weatherConditions: [weatherConditions.tremors],
     image: "/static/GalaxyMap/planets/Краз.svg",
+    devName: "Kraz",
   },
   {
     id: 9,
@@ -80,6 +88,7 @@ export const planets = [
       weatherConditions.sandstorms,
     ],
     image: "/static/GalaxyMap/planets/Клен_Дахт_II.svg",
+    devName: "Klen Dahth II",
   },
   {
     id: 10,
@@ -90,6 +99,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Следопыт_V.svg",
+    devName: "Pathfinder V",
   },
   {
     id: 11,
@@ -100,6 +110,7 @@ export const planets = [
       weatherConditions.meteorStorms,
     ],
     image: "/static/GalaxyMap/planets/Вдовья_гавань.svg",
+    devName: "Widow's Harbor",
   },
   {
     id: 12,
@@ -107,6 +118,7 @@ export const planets = [
     biome: biomes.rainForest,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Новая_гавань.svg",
+    devName: "New Haven",
   },
   {
     id: 13,
@@ -117,6 +129,7 @@ export const planets = [
       weatherConditions.tremors,
     ],
     image: "/static/GalaxyMap/planets/Пилен_V.svg",
+    devName: "Pilen V",
   },
   {
     id: 14,
@@ -127,6 +140,7 @@ export const planets = [
       weatherConditions.acidStorms,
     ],
     image: "/static/GalaxyMap/planets/Чарбол_VII.svg",
+    devName: "Charbal-VII",
   },
   {
     id: 15,
@@ -134,6 +148,7 @@ export const planets = [
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Харон-прайм.svg",
+    devName: "Charon Prime",
   },
   {
     id: 16,
@@ -144,6 +159,7 @@ export const planets = [
       weatherConditions.blizzards,
     ],
     image: "/static/GalaxyMap/planets/Марфарк.svg",
+    devName: "Marfark",
   },
   {
     id: 17,
@@ -151,6 +167,7 @@ export const planets = [
     biome: biomes.tundra,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Мартале.svg",
+    devName: "Martale",
   },
   {
     id: 18,
@@ -161,6 +178,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Матар-бэй.svg",
+    devName: "Matar Bay",
   },
   {
     id: 19,
@@ -171,6 +189,7 @@ export const planets = [
       weatherConditions.blizzards,
     ],
     image: "/static/GalaxyMap/planets/Арктур.svg",
+    devName: "Arkturus",
   },
   {
     id: 20,
@@ -181,6 +200,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Киррик.svg",
+    devName: "Kirrik",
   },
   {
     id: 21,
@@ -191,6 +211,7 @@ export const planets = [
       weatherConditions.tremors,
     ],
     image: "/static/GalaxyMap/planets/Мортакс-прайм.svg",
+    devName: "Mortax Prime",
   },
   {
     id: 22,
@@ -201,6 +222,7 @@ export const planets = [
       weatherConditions.acidStorms,
     ],
     image: "/static/GalaxyMap/planets/Станция_«Уилфорд».svg",
+    devName: "Wilford Station",
   },
   {
     id: 23,
@@ -208,6 +230,7 @@ export const planets = [
     biome: biomes.canyon,
     weatherConditions: [weatherConditions.tremors],
     image: "/static/GalaxyMap/planets/Первопроходец_II.svg",
+    devName: "Pioneer II",
   },
   {
     id: 24,
@@ -215,6 +238,7 @@ export const planets = [
     biome: biomes.iceMoss,
     weatherConditions: [weatherConditions.extremeCold],
     image: "/static/GalaxyMap/planets/Денеб_II.svg",
+    devName: "Deneb Secundus",
   },
   {
     id: 25,
@@ -225,6 +249,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Электра-бэй.svg",
+    devName: "Electra Bay",
   },
   {
     id: 26,
@@ -232,6 +257,7 @@ export const planets = [
     biome: biomes.canyon,
     weatherConditions: [weatherConditions.tremors],
     image: "/static/GalaxyMap/planets/Гидропад_прайм.svg",
+    devName: "Hydrofall Prime",
   },
   {
     id: 27,
@@ -242,6 +268,7 @@ export const planets = [
       weatherConditions.acidStorms,
     ],
     image: "/static/GalaxyMap/planets/Дерроуспорт.svg",
+    devName: "Darrowsport",
   },
   {
     id: 28,
@@ -249,6 +276,7 @@ export const planets = [
     biome: biomes.newJungle,
     weatherConditions: [weatherConditions.rainstorms],
     image: "/static/GalaxyMap/planets/Форнскогур_II.svg",
+    devName: "Fornskogur II",
   },
   {
     id: 29,
@@ -256,6 +284,7 @@ export const planets = [
     biome: biomes.tundra,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Мидасбург.svg",
+    devName: "Midasburg",
   },
   {
     id: 30,
@@ -263,6 +292,7 @@ export const planets = [
     biome: biomes.swamp,
     weatherConditions: [weatherConditions.thickFog],
     image: "/static/GalaxyMap/planets/Вуаль.svg",
+    devName: "Veil",
   },
   {
     id: 31,
@@ -273,6 +303,7 @@ export const planets = [
       weatherConditions.fireTornadoes,
     ],
     image: "/static/GalaxyMap/planets/Марр_IV.svg",
+    devName: "Marre IV",
   },
   {
     id: 32,
@@ -280,6 +311,7 @@ export const planets = [
     biome: biomes.ethereal,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Урсика_XI.svg",
+    devName: "Ursica XI",
   },
   {
     id: 33,
@@ -290,6 +322,7 @@ export const planets = [
       weatherConditions.acidStorms,
     ],
     image: "/static/GalaxyMap/planets/Дарий_II.svg",
+    devName: "Darius II",
   },
   {
     id: 34,
@@ -300,6 +333,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Ахернар_II.svg",
+    devName: "Achernar Secundus",
   },
   {
     id: 35,
@@ -307,6 +341,7 @@ export const planets = [
     biome: biomes.canyon,
     weatherConditions: [weatherConditions.tremors],
     image: "/static/GalaxyMap/planets/Ахирд_III.svg",
+    devName: "Achird III",
   },
   {
     id: 36,
@@ -317,6 +352,7 @@ export const planets = [
       weatherConditions.tremors,
     ],
     image: "/static/GalaxyMap/planets/Цербер_IIIc.svg",
+    devName: "Cerberus IIIc",
   },
   {
     id: 37,
@@ -324,6 +360,7 @@ export const planets = [
     biome: biomes.rainForest,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Водопады_процветания.svg",
+    devName: "Prosperity Falls",
   },
   {
     id: 38,
@@ -331,6 +368,7 @@ export const planets = [
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Форт_безопасности.svg",
+    devName: "Fort Sanctuary",
   },
   {
     id: 39,
@@ -338,6 +376,7 @@ export const planets = [
     biome: biomes.ethereal,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Сейшельский_пляж.svg",
+    devName: "Seyshel Beach",
   },
   {
     id: 40,
@@ -345,6 +384,7 @@ export const planets = [
     biome: biomes.canyon,
     weatherConditions: [weatherConditions.tremors],
     image: "/static/GalaxyMap/planets/Эффлувия.svg",
+    devName: "Effluvia",
   },
   {
     id: 41,
@@ -352,6 +392,7 @@ export const planets = [
     biome: biomes.iceMoss,
     weatherConditions: [weatherConditions.extremeCold],
     image: "/static/GalaxyMap/planets/Залив_мучеников.svg",
+    devName: "Martyr's Bay",
   },
   {
     id: 42,
@@ -359,6 +400,7 @@ export const planets = [
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Пик_свободы.svg",
+    devName: "Freedom Peak",
   },
   {
     id: 43,
@@ -369,6 +411,7 @@ export const planets = [
       weatherConditions.blizzards,
     ],
     image: "/static/GalaxyMap/planets/Кельвинор.svg",
+    devName: "Kelvinor",
   },
   {
     id: 44,
@@ -379,6 +422,7 @@ export const planets = [
       weatherConditions.sandstorms,
     ],
     image: "/static/GalaxyMap/planets/Виридия-прайм.svg",
+    devName: "Viridia Prime",
   },
   {
     id: 45,
@@ -389,6 +433,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Обари.svg",
+    devName: "Obari",
   },
   {
     id: 46,
@@ -396,6 +441,7 @@ export const planets = [
     biome: biomes.ethereal,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Сульфура.svg",
+    devName: "Sulfura",
   },
   {
     id: 47,
@@ -406,6 +452,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Нублария_I.svg",
+    devName: "Nublaria I",
   },
   {
     id: 48,
@@ -413,6 +460,7 @@ export const planets = [
     biome: biomes.iceMoss,
     weatherConditions: [weatherConditions.extremeCold],
     image: "/static/GalaxyMap/planets/Кракату.svg",
+    devName: "Krakatwo",
   },
   {
     id: 49,
@@ -420,6 +468,7 @@ export const planets = [
     biome: biomes.newJungle,
     weatherConditions: [weatherConditions.rainstorms],
     image: "/static/GalaxyMap/planets/Айвис.svg",
+    devName: "Ivis",
   },
   {
     id: 50,
@@ -430,6 +479,7 @@ export const planets = [
       weatherConditions.acidStorms,
     ],
     image: "/static/GalaxyMap/planets/Слиф.svg",
+    devName: "Slif",
   },
   {
     id: 51,
@@ -440,6 +490,7 @@ export const planets = [
       weatherConditions.sandstorms,
     ],
     image: "/static/GalaxyMap/planets/Морадеш.svg",
+    devName: "Moradesh",
   },
   {
     id: 52,
@@ -448,6 +499,7 @@ export const planets = [
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Кримсика.svg",
+    devName: "Crimsica",
   },
   {
     id: 53,
@@ -455,6 +507,7 @@ export const planets = [
     biome: biomes.iceMoss,
     weatherConditions: [weatherConditions.extremeCold],
     image: "/static/GalaxyMap/planets/Эстану.svg",
+    devName: "Estanu",
   },
   {
     id: 54,
@@ -462,6 +515,7 @@ export const planets = [
     biome: biomes.canyon,
     weatherConditions: [weatherConditions.tremors],
     image: "/static/GalaxyMap/planets/Фори-прайм.svg",
+    devName: "Fori Prime",
   },
   {
     id: 55,
@@ -472,6 +526,7 @@ export const planets = [
       weatherConditions.acidStorms,
     ],
     image: "/static/GalaxyMap/planets/Эскер.svg",
+    devName: "Esker",
   },
   {
     id: 56,
@@ -482,6 +537,7 @@ export const planets = [
       weatherConditions.tremors,
     ],
     image: "/static/GalaxyMap/planets/Пески_эрсона.svg",
+    devName: "Erson Sands",
   },
   {
     id: 57,
@@ -489,6 +545,7 @@ export const planets = [
     biome: biomes.swamp,
     weatherConditions: [weatherConditions.thickFog],
     image: "/static/GalaxyMap/planets/Сокорро_III.svg",
+    devName: "Socorro III",
   },
   {
     id: 58,
@@ -496,6 +553,7 @@ export const planets = [
     biome: biomes.newJungle,
     weatherConditions: [weatherConditions.rainstorms],
     image: "/static/GalaxyMap/planets/Буровой_камень.svg",
+    devName: "Bore Rock",
   },
   {
     id: 59,
@@ -506,6 +564,7 @@ export const planets = [
       weatherConditions.fireTornadoes,
     ],
     image: "/static/GalaxyMap/planets/Гранд_Эррант.svg",
+    devName: "Grand Errant",
   },
   {
     id: 60,
@@ -513,6 +572,7 @@ export const planets = [
     biome: biomes.newJungle,
     weatherConditions: [weatherConditions.rainstorms],
     image: "/static/GalaxyMap/planets/Феркад_II.svg",
+    devName: "Pherkad Secundus",
   },
   {
     id: 61,
@@ -523,6 +583,7 @@ export const planets = [
       weatherConditions.tremors,
     ],
     image: "/static/GalaxyMap/planets/Полярис-прайм.svg",
+    devName: "Polaris Prime",
   },
   {
     id: 62,
@@ -533,6 +594,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Поллукс-31.svg",
+    devName: "Pollux 31",
   },
   {
     id: 63,
@@ -540,6 +602,7 @@ export const planets = [
     biome: biomes.canyon,
     weatherConditions: [weatherConditions.tremors],
     image: "/static/GalaxyMap/planets/Праса.svg",
+    devName: "Prasa",
   },
   {
     id: 64,
@@ -550,6 +613,7 @@ export const planets = [
       weatherConditions.tremors,
     ],
     image: "/static/GalaxyMap/planets/Зея_ругозия.svg",
+    devName: "Zea Rugosia",
   },
   {
     id: 65,
@@ -560,6 +624,7 @@ export const planets = [
       weatherConditions.blizzards,
     ],
     image: "/static/GalaxyMap/planets/Хадар.svg",
+    devName: "Hadar",
   },
   {
     id: 66,
@@ -567,6 +632,7 @@ export const planets = [
     biome: biomes.newJungle,
     weatherConditions: [weatherConditions.rainstorms],
     image: "/static/GalaxyMap/planets/Хальдус.svg",
+    devName: "Haldus",
   },
   {
     id: 67,
@@ -577,6 +643,7 @@ export const planets = [
       weatherConditions.fireTornadoes,
     ],
     image: "/static/GalaxyMap/planets/Хартон_II.svg",
+    devName: "Herthon Secundus",
   },
   {
     id: 68,
@@ -584,6 +651,7 @@ export const planets = [
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Кхарст.svg",
+    devName: "Kharst",
   },
   {
     id: 69,
@@ -594,6 +662,7 @@ export const planets = [
       weatherConditions.meteorStorms,
     ],
     image: "/static/GalaxyMap/planets/Расп.svg",
+    devName: "Rasp",
   },
   {
     id: 70,
@@ -601,6 +670,7 @@ export const planets = [
     biome: biomes.swamp,
     weatherConditions: [weatherConditions.thickFog],
     image: "/static/GalaxyMap/planets/Башир.svg",
+    devName: "Bashyr",
   },
   {
     id: 71,
@@ -608,6 +678,7 @@ export const planets = [
     biome: biomes.ethereal,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Акубенс-прайм.svg",
+    devName: "Acubens Prime",
   },
   {
     id: 72,
@@ -618,6 +689,7 @@ export const planets = [
       weatherConditions.fireTornadoes,
     ],
     image: "/static/GalaxyMap/planets/Эдхара.svg",
+    devName: "Adhara",
   },
   {
     id: 73,
@@ -628,6 +700,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Афойя-бэй.svg",
+    devName: "Afoyay Bay",
   },
   {
     id: 74,
@@ -638,6 +711,7 @@ export const planets = [
       weatherConditions.fireTornadoes,
     ],
     image: "/static/GalaxyMap/planets/Блистика.svg",
+    devName: "Blistica",
   },
   {
     id: 75,
@@ -645,6 +719,7 @@ export const planets = [
     biome: biomes.rainForest,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Минхир.svg",
+    devName: "Minchir",
   },
   {
     id: 76,
@@ -655,6 +730,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Минтория.svg",
+    devName: "Mintoria",
   },
   {
     id: 77,
@@ -665,6 +741,7 @@ export const planets = [
       weatherConditions.meteorStorms,
     ],
     image: "/static/GalaxyMap/planets/Зосма.svg",
+    devName: "Zosma",
   },
   {
     id: 78,
@@ -675,6 +752,7 @@ export const planets = [
       weatherConditions.sandstorms,
     ],
     image: "/static/GalaxyMap/planets/Зания-прайм.svg",
+    devName: "Zzaniah Prime",
   },
   {
     id: 79,
@@ -685,6 +763,7 @@ export const planets = [
       weatherConditions.blizzards,
     ],
     image: "/static/GalaxyMap/planets/Окул_VI.svg",
+    devName: "Okul VI",
   },
   {
     id: 80,
@@ -692,6 +771,7 @@ export const planets = [
     biome: biomes.swamp,
     weatherConditions: [weatherConditions.thickFog],
     image: "/static/GalaxyMap/planets/Солгаст.svg",
+    devName: "Solghast",
   },
   {
     id: 81,
@@ -699,6 +779,7 @@ export const planets = [
     biome: biomes.tundra,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Дилувия.svg",
+    devName: "Diluvia",
   },
   {
     id: 82,
@@ -706,6 +787,7 @@ export const planets = [
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Луга_элизия.svg",
+    devName: "Elysian Meadows",
   },
   {
     id: 83,
@@ -713,6 +795,7 @@ export const planets = [
     biome: biomes.swamp,
     weatherConditions: [weatherConditions.thickFog],
     image: "/static/GalaxyMap/planets/Пещера_альдеридж.svg",
+    devName: "Alderidge Cove",
   },
   {
     id: 84,
@@ -723,6 +806,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Беллатрикс.svg",
+    devName: "Bellatrix",
   },
   {
     id: 85,
@@ -733,6 +817,7 @@ export const planets = [
       weatherConditions.acidStorms,
     ],
     image: "/static/GalaxyMap/planets/Ботейн.svg",
+    devName: "Botein",
   },
   {
     id: 86,
@@ -743,6 +828,7 @@ export const planets = [
       weatherConditions.blizzards,
     ],
     image: "/static/GalaxyMap/planets/Хандарк.svg",
+    devName: "Khandark",
   },
   {
     id: 87,
@@ -753,6 +839,7 @@ export const planets = [
       weatherConditions.blizzards,
     ],
     image: "/static/GalaxyMap/planets/Новый_Стокгольм.svg",
+    devName: "New Stockholm",
   },
   {
     id: 88,
@@ -760,6 +847,7 @@ export const planets = [
     biome: biomes.swamp,
     weatherConditions: [weatherConditions.thickFog],
     image: "/static/GalaxyMap/planets/Айн-5.svg",
+    devName: "Ain-5",
   },
   {
     id: 89,
@@ -767,6 +855,7 @@ export const planets = [
     biome: biomes.rainForest,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Алаирт_III.svg",
+    devName: "Alairt III",
   },
   {
     id: 90,
@@ -774,6 +863,7 @@ export const planets = [
     biome: biomes.ethereal,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Аламак_VII.svg",
+    devName: "Alamak VII",
   },
   {
     id: 91,
@@ -784,6 +874,7 @@ export const planets = [
       weatherConditions.sandstorms,
     ],
     image: "/static/GalaxyMap/planets/Хезе-бэй.svg",
+    devName: "Heze Bay",
   },
   {
     id: 92,
@@ -791,6 +882,7 @@ export const planets = [
     biome: biomes.canyon,
     weatherConditions: [weatherConditions.tremors],
     image: "/static/GalaxyMap/planets/Кума.svg",
+    devName: "Kuma",
   },
   {
     id: 93,
@@ -798,6 +890,7 @@ export const planets = [
     biome: biomes.ethereal,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Мордия-9.svg",
+    devName: "Mordia 9",
   },
   {
     id: 94,
@@ -805,6 +898,7 @@ export const planets = [
     biome: biomes.swamp,
     weatherConditions: [weatherConditions.thickFog],
     image: "/static/GalaxyMap/planets/Скиттер.svg",
+    devName: "Skitter",
   },
   {
     id: 95,
@@ -815,6 +909,7 @@ export const planets = [
       weatherConditions.meteorStorms,
     ],
     image: "/static/GalaxyMap/planets/Эйфория_III.svg",
+    devName: "Euphoria III",
   },
   {
     id: 96,
@@ -822,6 +917,7 @@ export const planets = [
     biome: biomes.canyon,
     weatherConditions: [weatherConditions.tremors],
     image: "/static/GalaxyMap/planets/Колодцы_Вернена.svg",
+    devName: "Vernen Wells",
   },
   {
     id: 97,
@@ -829,6 +925,7 @@ export const planets = [
     biome: biomes.swamp,
     weatherConditions: [weatherConditions.thickFog],
     image: "/static/GalaxyMap/planets/Перевал_асов.svg",
+    devName: "Aesir Pass",
   },
   {
     id: 98,
@@ -839,6 +936,7 @@ export const planets = [
       weatherConditions.fireTornadoes,
     ],
     image: "/static/GalaxyMap/planets/Менкент.svg",
+    devName: "Menkent",
   },
   {
     id: 99,
@@ -849,6 +947,7 @@ export const planets = [
       weatherConditions.acidStorms,
     ],
     image: "/static/GalaxyMap/planets/Призрак.svg",
+    devName: "Wraith",
   },
   {
     id: 100,
@@ -859,6 +958,7 @@ export const planets = [
       weatherConditions.tremors,
     ],
     image: "/static/GalaxyMap/planets/Мирадеш.svg",
+    devName: "Myradesh",
   },
   {
     id: 101,
@@ -866,6 +966,7 @@ export const planets = [
     biome: biomes.swamp,
     weatherConditions: [weatherConditions.thickFog],
     image: "/static/GalaxyMap/planets/Атрама.svg",
+    devName: "Atrama",
   },
   {
     id: 102,
@@ -876,6 +977,7 @@ export const planets = [
       weatherConditions.fireTornadoes,
     ],
     image: "/static/GalaxyMap/planets/Утроба.svg",
+    devName: "Maw",
   },
   {
     id: 103,
@@ -883,6 +985,7 @@ export const planets = [
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Провидение.svg",
+    devName: "Providence",
   },
   {
     id: 104,
@@ -893,6 +996,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Примортия.svg",
+    devName: "Primordia",
   },
   {
     id: 105,
@@ -900,6 +1004,7 @@ export const planets = [
     biome: biomes.newJungle,
     weatherConditions: [weatherConditions.rainstorms],
     image: "/static/GalaxyMap/planets/Кракабос.svg",
+    devName: "Krakabos",
   },
   {
     id: 106,
@@ -907,6 +1012,7 @@ export const planets = [
     biome: biomes.ethereal,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Иридика.svg",
+    devName: "Iridica",
   },
   {
     id: 107,
@@ -914,6 +1020,7 @@ export const planets = [
     biome: biomes.swamp,
     weatherConditions: [weatherConditions.thickFog],
     image: "/static/GalaxyMap/planets/Ратч.svg",
+    devName: "Ratch",
   },
   {
     id: 108,
@@ -921,6 +1028,7 @@ export const planets = [
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Валгаард.svg",
+    devName: "Valgaard",
   },
   {
     id: 109,
@@ -931,6 +1039,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Акамар_IV.svg",
+    devName: "Acamar IV",
   },
   {
     id: 110,
@@ -938,6 +1047,7 @@ export const planets = [
     biome: biomes.newJungle,
     weatherConditions: [weatherConditions.rainstorms],
     image: "/static/GalaxyMap/planets/Гакрукс.svg",
+    devName: "Gacrux",
   },
   {
     id: 111,
@@ -948,6 +1058,7 @@ export const planets = [
       weatherConditions.fireTornadoes,
     ],
     image: "/static/GalaxyMap/planets/Гар-харен.svg",
+    devName: "Gar Haren",
   },
   {
     id: 112,
@@ -955,6 +1066,7 @@ export const planets = [
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Гатрия.svg",
+    devName: "Gatria",
   },
   {
     id: 113,
@@ -962,6 +1074,7 @@ export const planets = [
     biome: biomes.swamp,
     weatherConditions: [weatherConditions.thickFog],
     image: "/static/GalaxyMap/planets/Пандион_XXIV.svg",
+    devName: "Pandion-XXIV",
   },
   {
     id: 114,
@@ -972,6 +1085,7 @@ export const planets = [
       weatherConditions.sandstorms,
     ],
     image: "/static/GalaxyMap/planets/Факт-бэй.svg",
+    devName: "Phact Bay",
   },
   {
     id: 115,
@@ -979,6 +1093,7 @@ export const planets = [
     biome: biomes.iceMoss,
     weatherConditions: [weatherConditions.extremeCold],
     image: "/static/GalaxyMap/planets/Игла.svg",
+    devName: "Igla",
   },
   {
     id: 116,
@@ -989,6 +1104,7 @@ export const planets = [
       weatherConditions.blizzards,
     ],
     image: "/static/GalaxyMap/planets/Новая_кируна.svg",
+    devName: "New Kiruna",
   },
   {
     id: 117,
@@ -996,6 +1112,7 @@ export const planets = [
     biome: biomes.tundra,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Форт_правосудия.svg",
+    devName: "Fort Justice",
   },
   {
     id: 118,
@@ -1006,6 +1123,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Загемский_рай.svg",
+    devName: "Zagema Paradise",
   },
   {
     id: 119,
@@ -1013,6 +1131,7 @@ export const planets = [
     biome: biomes.canyon,
     weatherConditions: [weatherConditions.tremors],
     image: "/static/GalaxyMap/planets/Эмерия.svg",
+    devName: "Emeria",
   },
   {
     id: 120,
@@ -1023,6 +1142,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Вольтерра.svg",
+    devName: "Volterra",
   },
   {
     id: 121,
@@ -1030,6 +1150,7 @@ export const planets = [
     biome: biomes.tundra,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Горн.svg",
+    devName: "Horn",
   },
   {
     id: 122,
@@ -1040,6 +1161,7 @@ export const planets = [
       weatherConditions.sandstorms,
     ],
     image: "/static/GalaxyMap/planets/Карамур.svg",
+    devName: "Caramoor",
   },
   {
     id: 123,
@@ -1050,6 +1172,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Альта_V.svg",
+    devName: "Alta V",
   },
   {
     id: 124,
@@ -1057,6 +1180,7 @@ export const planets = [
     biome: biomes.iceMoss,
     weatherConditions: [weatherConditions.extremeCold],
     image: "/static/GalaxyMap/planets/Инари.svg",
+    devName: "Inari",
   },
   {
     id: 125,
@@ -1064,6 +1188,7 @@ export const planets = [
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Энулиале.svg",
+    devName: "Enuliale",
   },
   {
     id: 126,
@@ -1074,6 +1199,7 @@ export const planets = [
       weatherConditions.blizzards,
     ],
     image: "/static/GalaxyMap/planets/Эпсилон-финсис_VI.svg",
+    devName: "Epsilon Phoencis VI",
   },
   {
     id: 127,
@@ -1081,6 +1207,7 @@ export const planets = [
     biome: biomes.newJungle,
     weatherConditions: [weatherConditions.rainstorms],
     image: "/static/GalaxyMap/planets/Нанбатея_II.svg",
+    devName: "Nabatea Secundus",
   },
   {
     id: 128,
@@ -1091,6 +1218,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Нави_VII.svg",
+    devName: "Navi VII",
   },
   {
     id: 129,
@@ -1101,6 +1229,7 @@ export const planets = [
       weatherConditions.sandstorms,
     ],
     image: "/static/GalaxyMap/planets/Диаспора_X.svg",
+    devName: "Diaspora X",
   },
   {
     id: 130,
@@ -1111,6 +1240,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Самоцветные_утесы.svg",
+    devName: "Gemstone Bluffs",
   },
   {
     id: 131,
@@ -1118,6 +1248,7 @@ export const planets = [
     biome: biomes.tundra,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Омикрон.svg",
+    devName: "Omicron",
   },
   {
     id: 132,
@@ -1125,6 +1256,7 @@ export const planets = [
     biome: biomes.swamp,
     weatherConditions: [weatherConditions.thickFog],
     image: "/static/GalaxyMap/planets/Пента.svg",
+    devName: "Penta",
   },
   {
     id: 133,
@@ -1135,6 +1267,7 @@ export const planets = [
       weatherConditions.tremors,
     ],
     image: "/static/GalaxyMap/planets/Чухи.svg",
+    devName: "Choohe",
   },
   {
     id: 134,
@@ -1145,6 +1278,7 @@ export const planets = [
       weatherConditions.acidStorms,
     ],
     image: "/static/GalaxyMap/planets/Хорт-бэй.svg",
+    devName: "Chort Bay",
   },
   {
     id: 135,
@@ -1152,6 +1286,7 @@ export const planets = [
     biome: biomes.iceMoss,
     weatherConditions: [weatherConditions.extremeCold],
     image: "/static/GalaxyMap/planets/Лесат.svg",
+    devName: "Lesath",
   },
   {
     id: 136,
@@ -1159,6 +1294,7 @@ export const planets = [
     biome: biomes.swamp,
     weatherConditions: [weatherConditions.thickFog],
     image: "/static/GalaxyMap/planets/Хака.svg",
+    devName: "Haka",
   },
   {
     id: 137,
@@ -1166,6 +1302,7 @@ export const planets = [
     biome: biomes.iceMoss,
     weatherConditions: [weatherConditions.extremeCold],
     image: "/static/GalaxyMap/planets/Порт-галье.svg",
+    devName: "Halies Port",
   },
   {
     id: 138,
@@ -1176,6 +1313,7 @@ export const planets = [
       weatherConditions.sandstorms,
     ],
     image: "/static/GalaxyMap/planets/Пропус.svg",
+    devName: "Propus",
   },
   {
     id: 139,
@@ -1183,6 +1321,7 @@ export const planets = [
     biome: biomes.tundra,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Рас-альгети.svg",
+    devName: "Ras Algethi",
   },
   {
     id: 140,
@@ -1190,6 +1329,7 @@ export const planets = [
     biome: biomes.newJungle,
     weatherConditions: [weatherConditions.rainstorms],
     image: "/static/GalaxyMap/planets/Барабос.svg",
+    devName: "Barabos",
   },
   {
     id: 141,
@@ -1200,6 +1340,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Фенмейр.svg",
+    devName: "Fenmire",
   },
   {
     id: 142,
@@ -1210,6 +1351,7 @@ export const planets = [
       weatherConditions.sandstorms,
     ],
     image: "/static/GalaxyMap/planets/Мастия.svg",
+    devName: "Mastia",
   },
   {
     id: 143,
@@ -1220,6 +1362,7 @@ export const planets = [
       weatherConditions.meteorStorms,
     ],
     image: "/static/GalaxyMap/planets/Курия.svg",
+    devName: "Curia",
   },
   {
     id: 144,
@@ -1227,6 +1370,7 @@ export const planets = [
     biome: biomes.swamp,
     weatherConditions: [weatherConditions.thickFog],
     image: "/static/GalaxyMap/planets/Тарш.svg",
+    devName: "Tarsh",
   },
   {
     id: 145,
@@ -1234,6 +1378,7 @@ export const planets = [
     biome: biomes.ethereal,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Эморат.svg",
+    devName: "Emorath",
   },
   {
     id: 146,
@@ -1241,6 +1386,7 @@ export const planets = [
     biome: biomes.tundra,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Илдуна-прайм.svg",
+    devName: "Ilduna Prime",
   },
   {
     id: 147,
@@ -1248,6 +1394,7 @@ export const planets = [
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Хребет_свободы.svg",
+    devName: "Liberty Ridge",
   },
   {
     id: 148,
@@ -1258,6 +1405,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Болдрик-прайм.svg",
+    devName: "Baldrick Prime",
   },
   {
     id: 149,
@@ -1269,6 +1417,7 @@ export const planets = [
       weatherConditions.fireTornadoes,
     ],
     image: "/static/GalaxyMap/planets/Хеллмейр.svg",
+    devName: "Hellmire",
   },
   {
     id: 150,
@@ -1276,6 +1425,7 @@ export const planets = [
     biome: biomes.swamp,
     weatherConditions: [weatherConditions.thickFog],
     image: "/static/GalaxyMap/planets/Нивель_43.svg",
+    devName: "Nivel 43",
   },
   {
     id: 151,
@@ -1287,6 +1437,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Ошоне.svg",
+    devName: "Oshaune",
   },
   {
     id: 152,
@@ -1297,6 +1448,7 @@ export const planets = [
       weatherConditions.sandstorms,
     ],
     image: "/static/GalaxyMap/planets/Загон-прайм.svg",
+    devName: "Zagon Prime",
   },
   {
     id: 153,
@@ -1304,6 +1456,7 @@ export const planets = [
     biome: biomes.iceMoss,
     weatherConditions: [weatherConditions.extremeCold],
     image: "/static/GalaxyMap/planets/Юкория.svg",
+    devName: "Eukoria",
   },
   {
     id: 154,
@@ -1311,6 +1464,7 @@ export const planets = [
     biome: biomes.canyon,
     weatherConditions: [weatherConditions.tremors],
     image: "/static/GalaxyMap/planets/Мириум.svg",
+    devName: "Myrium",
   },
   {
     id: 155,
@@ -1321,6 +1475,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Регнус.svg",
+    devName: "Regnus",
   },
   {
     id: 156,
@@ -1331,6 +1486,7 @@ export const planets = [
       weatherConditions.blizzards,
     ],
     image: "/static/GalaxyMap/planets/Мог.svg",
+    devName: "Mog",
   },
   {
     id: 157,
@@ -1341,6 +1497,7 @@ export const planets = [
       weatherConditions.blizzards,
     ],
     image: "/static/GalaxyMap/planets/Юльхейм.svg",
+    devName: "Julheim",
   },
   {
     id: 158,
@@ -1351,6 +1508,7 @@ export const planets = [
       weatherConditions.meteorStorms,
     ],
     image: "/static/GalaxyMap/planets/Дольф.svg",
+    devName: "Dolph",
   },
   {
     id: 159,
@@ -1358,6 +1516,7 @@ export const planets = [
     biome: biomes.ethereal,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Беквам_III.svg",
+    devName: "Bekvam III",
   },
   {
     id: 160,
@@ -1365,6 +1524,7 @@ export const planets = [
     biome: biomes.tundra,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Дума_тюр.svg",
+    devName: "Duma Tyr",
   },
   {
     id: 161,
@@ -1375,6 +1535,7 @@ export const planets = [
       weatherConditions.tremors,
     ],
     image: "/static/GalaxyMap/planets/Гидробиус.svg",
+    devName: "Hydrobius",
   },
   {
     id: 162,
@@ -1385,6 +1546,7 @@ export const planets = [
       weatherConditions.fireTornadoes,
     ],
     image: "/static/GalaxyMap/planets/Карлия.svg",
+    devName: "Karlia",
   },
   {
     id: 163,
@@ -1392,6 +1554,7 @@ export const planets = [
     biome: biomes.newJungle,
     weatherConditions: [weatherConditions.rainstorms],
     image: "/static/GalaxyMap/planets/Сиэсс.svg",
+    devName: "Seasse",
   },
   {
     id: 164,
@@ -1399,6 +1562,7 @@ export const planets = [
     biome: biomes.canyon,
     weatherConditions: [weatherConditions.tremors],
     image: "/static/GalaxyMap/planets/Сиэсс.svg",
+    devName: "Senge 23",
   },
   {
     id: 165,
@@ -1406,6 +1570,7 @@ export const planets = [
     biome: biomes.swamp,
     weatherConditions: [weatherConditions.thickFog],
     image: "/static/GalaxyMap/planets/Сетия.svg",
+    devName: "Setia",
   },
   {
     id: 166,
@@ -1416,6 +1581,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Форт_единения.svg",
+    devName: "Fort Union",
   },
   {
     id: 167,
@@ -1423,6 +1589,7 @@ export const planets = [
     biome: biomes.canyon,
     weatherConditions: [weatherConditions.tremors],
     image: "/static/GalaxyMap/planets/Астерра.svg",
+    devName: "Azterra",
   },
   {
     id: 168,
@@ -1433,6 +1600,7 @@ export const planets = [
       weatherConditions.meteorStorms,
     ],
     image: "/static/GalaxyMap/planets/Терек.svg",
+    devName: "Terrek",
   },
   {
     id: 169,
@@ -1440,6 +1608,7 @@ export const planets = [
     biome: biomes.swamp,
     weatherConditions: [weatherConditions.thickFog],
     image: "/static/GalaxyMap/planets/Сиррус.svg",
+    devName: "Cirrus",
   },
   {
     id: 170,
@@ -1450,6 +1619,7 @@ export const planets = [
       weatherConditions.blizzards,
     ],
     image: "/static/GalaxyMap/planets/Хиит.svg",
+    devName: "Heeth",
   },
   {
     id: 171,
@@ -1457,6 +1627,7 @@ export const planets = [
     biome: biomes.rainForest,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Вельд.svg",
+    devName: "Veld",
   },
   {
     id: 172,
@@ -1464,6 +1635,7 @@ export const planets = [
     biome: biomes.tundra,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Ангельский_риск.svg",
+    devName: "Angel's Venture",
   },
   {
     id: 173,
@@ -1474,6 +1646,7 @@ export const planets = [
       weatherConditions.acidStorms,
     ],
     image: "/static/GalaxyMap/planets/Ленг_II.svg",
+    devName: "Leng Secundus",
   },
   {
     id: 174,
@@ -1484,6 +1657,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Сферион.svg",
+    devName: "Spherion",
   },
   {
     id: 175,
@@ -1491,6 +1665,7 @@ export const planets = [
     biome: biomes.iceMoss,
     weatherConditions: [weatherConditions.extremeCold],
     image: "/static/GalaxyMap/planets/Стор_та-прайм.svg",
+    devName: "Stor Tha Prime",
   },
   {
     id: 176,
@@ -1498,6 +1673,7 @@ export const planets = [
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Стаут.svg",
+    devName: "Stout",
   },
   {
     id: 177,
@@ -1508,6 +1684,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Термодон.svg",
+    devName: "Termadon",
   },
   {
     id: 178,
@@ -1515,6 +1692,7 @@ export const planets = [
     biome: biomes.tundra,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Керт_II.svg",
+    devName: "Kerth Secundus",
   },
   {
     id: 179,
@@ -1522,6 +1700,7 @@ export const planets = [
     biome: biomes.newJungle,
     weatherConditions: [weatherConditions.rainstorms],
     image: "/static/GalaxyMap/planets/Парш.svg",
+    devName: "Parsh",
   },
   {
     id: 180,
@@ -1529,6 +1708,7 @@ export const planets = [
     biome: biomes.rainForest,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Вальмокс.svg",
+    devName: "Valmox",
   },
   {
     id: 181,
@@ -1539,6 +1719,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Иро.svg",
+    devName: "Iro",
   },
   {
     id: 182,
@@ -1546,6 +1727,7 @@ export const planets = [
     biome: biomes.iceMoss,
     weatherConditions: [weatherConditions.extremeCold],
     image: "/static/GalaxyMap/planets/Графмер.svg",
+    devName: "Grafmere",
   },
   {
     id: 183,
@@ -1556,6 +1738,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Оазис.svg",
+    devName: "Oasis",
   },
   {
     id: 184,
@@ -1563,6 +1746,7 @@ export const planets = [
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Генезис-прайм.svg",
+    devName: "Genesis Prime",
   },
   {
     id: 185,
@@ -1573,6 +1757,7 @@ export const planets = [
       weatherConditions.blizzards,
     ],
     image: "/static/GalaxyMap/planets/Хесоэ-прайм.svg",
+    devName: "Hesoe Prime",
   },
   {
     id: 186,
@@ -1583,6 +1768,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Хорт.svg",
+    devName: "Hort",
   },
   {
     id: 187,
@@ -1593,6 +1779,7 @@ export const planets = [
       weatherConditions.meteorStorms,
     ],
     image: "/static/GalaxyMap/planets/Арди-4.svg",
+    devName: "Ardi-4",
   },
   {
     id: 188,
@@ -1603,6 +1790,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Роуг_5.svg",
+    devName: "Rogue 5",
   },
   {
     id: 189,
@@ -1613,6 +1801,7 @@ export const planets = [
       weatherConditions.acidStorms,
     ],
     image: "/static/GalaxyMap/planets/Рирга-бэй.svg",
+    devName: "Rirga Bay",
   },
   {
     id: 190,
@@ -1623,6 +1812,7 @@ export const planets = [
       weatherConditions.blizzards,
     ],
     image: "/static/GalaxyMap/planets/Борея.svg",
+    devName: "Borea",
   },
   {
     id: 191,
@@ -1630,6 +1820,7 @@ export const planets = [
     biome: biomes.iceMoss,
     weatherConditions: [weatherConditions.extremeCold],
     image: "/static/GalaxyMap/planets/Станция_«Осло».svg",
+    devName: "Oslo Station",
   },
   {
     id: 192,
@@ -1637,6 +1828,7 @@ export const planets = [
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Гюнвальд.svg",
+    devName: "Gunvald",
   },
   {
     id: 193,
@@ -1647,6 +1839,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Риф.svg",
+    devName: "Reaf",
   },
   {
     id: 194,
@@ -1657,6 +1850,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Ирулта.svg",
+    devName: "Irulta",
   },
   {
     id: 195,
@@ -1667,6 +1861,7 @@ export const planets = [
       weatherConditions.sandstorms,
     ],
     image: "/static/GalaxyMap/planets/Аванпост_32.svg",
+    devName: "Outpost 32",
   },
   {
     id: 196,
@@ -1674,6 +1869,7 @@ export const planets = [
     biome: biomes.canyon,
     weatherConditions: [weatherConditions.tremors],
     image: "/static/GalaxyMap/planets/Калипсо.svg",
+    devName: "Calypso",
   },
   {
     id: 197,
@@ -1684,6 +1880,7 @@ export const planets = [
       weatherConditions.sandstorms,
     ],
     image: "/static/GalaxyMap/planets/Дирген.svg",
+    devName: "Durgen",
   },
   {
     id: 198,
@@ -1694,6 +1891,7 @@ export const planets = [
       weatherConditions.meteorStorms,
     ],
     image: "/static/GalaxyMap/planets/Майя.svg",
+    devName: "Maia",
   },
   {
     id: 199,
@@ -1701,6 +1899,7 @@ export const planets = [
     biome: biomes.rainForest,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Малевелон_крик.svg",
+    devName: "Malevelon Creek",
   },
   {
     id: 200,
@@ -1708,6 +1907,7 @@ export const planets = [
     biome: biomes.ethereal,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Тибит.svg",
+    devName: "Tibit",
   },
   {
     id: 201,
@@ -1715,6 +1915,7 @@ export const planets = [
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Убанея.svg",
+    devName: "Ubanea",
   },
   {
     id: 202,
@@ -1722,6 +1923,7 @@ export const planets = [
     biome: biomes.superEarth,
     weatherConditions: [],
     image: "",
+    devName: "Super Earth",
   },
   {
     id: 203,
@@ -1729,6 +1931,7 @@ export const planets = [
     biome: null,
     weatherConditions: [],
     image: "",
+    devName: "Mars",
   },
   {
     id: 204,
@@ -1739,6 +1942,7 @@ export const planets = [
       weatherConditions.tremors,
     ],
     image: "/static/GalaxyMap/planets/Азур_II.svg",
+    devName: "Azur Secundus",
   },
   {
     id: 205,
@@ -1746,6 +1950,7 @@ export const planets = [
     biome: biomes.tundra,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Трандор.svg",
+    devName: "Trandor",
   },
   {
     id: 206,
@@ -1753,6 +1958,7 @@ export const planets = [
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Оверго-прайм.svg",
+    devName: "Overgoe Prime",
   },
   {
     id: 207,
@@ -1763,6 +1969,7 @@ export const planets = [
       weatherConditions.fireTornadoes,
     ],
     image: "/static/GalaxyMap/planets/Партион.svg",
+    devName: "Partion",
   },
   {
     id: 208,
@@ -1770,6 +1977,7 @@ export const planets = [
     biome: biomes.rainForest,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Пикок.svg",
+    devName: "Peacock",
   },
   {
     id: 209,
@@ -1777,6 +1985,7 @@ export const planets = [
     biome: biomes.ethereal,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Шаллус.svg",
+    devName: "Shallus",
   },
   {
     id: 210,
@@ -1784,6 +1993,7 @@ export const planets = [
     biome: biomes.tundra,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Шелт.svg",
+    devName: "Shelt",
   },
   {
     id: 211,
@@ -1794,6 +2004,7 @@ export const planets = [
       weatherConditions.fireTornadoes,
     ],
     image: "/static/GalaxyMap/planets/Имбер.svg",
+    devName: "Imber",
   },
   {
     id: 212,
@@ -1804,6 +2015,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Елливаре.svg",
+    devName: "Gaellivare",
   },
   {
     id: 213,
@@ -1814,6 +2026,7 @@ export const planets = [
       weatherConditions.blizzards,
     ],
     image: "/static/GalaxyMap/planets/Вог-сойот.svg",
+    devName: "Vog-Sojoth",
   },
   {
     id: 214,
@@ -1824,6 +2037,7 @@ export const planets = [
       weatherConditions.meteorStorms,
     ],
     image: "/static/GalaxyMap/planets/Клаорелл.svg",
+    devName: "Claorell",
   },
   {
     id: 215,
@@ -1831,6 +2045,7 @@ export const planets = [
     biome: biomes.newJungle,
     weatherConditions: [weatherConditions.rainstorms],
     image: "/static/GalaxyMap/planets/Класа.svg",
+    devName: "Clasa",
   },
   {
     id: 216,
@@ -1838,6 +2053,7 @@ export const planets = [
     biome: biomes.tundra,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Демиург.svg",
+    devName: "Demiurg",
   },
   {
     id: 217,
@@ -1845,6 +2061,7 @@ export const planets = [
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Йед-приор.svg",
+    devName: "Yed Prior",
   },
   {
     id: 218,
@@ -1852,6 +2069,7 @@ export const planets = [
     biome: biomes.ethereal,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Зефия.svg",
+    devName: "Zefia",
   },
   {
     id: 219,
@@ -1859,6 +2077,7 @@ export const planets = [
     biome: biomes.newJungle,
     weatherConditions: [weatherConditions.rainstorms],
     image: "/static/GalaxyMap/planets/ВИТЗ.svg",
+    devName: "EITB",
   },
   {
     id: 220,
@@ -1869,6 +2088,7 @@ export const planets = [
       weatherConditions.sandstorms,
     ],
     image: "/static/GalaxyMap/planets/Осупсам.svg",
+    devName: "Osupsam",
   },
   {
     id: 221,
@@ -1876,6 +2096,7 @@ export const planets = [
     biome: biomes.rainForest,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Бринк-2.svg",
+    devName: "Brink-2",
   },
   {
     id: 222,
@@ -1883,6 +2104,7 @@ export const planets = [
     biome: biomes.tundra,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Бунда_II.svg",
+    devName: "Bunda Secundus",
   },
   {
     id: 223,
@@ -1893,6 +2115,7 @@ export const planets = [
       weatherConditions.tremors,
     ],
     image: "/static/GalaxyMap/planets/Канопус.svg",
+    devName: "Canopus",
   },
   {
     id: 224,
@@ -1903,6 +2126,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Вир.svg",
+    devName: "Kuper",
   },
   {
     id: 225,
@@ -1910,6 +2134,7 @@ export const planets = [
     biome: biomes.rainForest,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Купер.svg",
+    devName: "Caph",
   },
   {
     id: 226,
@@ -1917,6 +2142,7 @@ export const planets = [
     biome: biomes.newJungle,
     weatherConditions: [weatherConditions.rainstorms],
     image: "/static/GalaxyMap/planets/Каф.svg",
+    devName: "Castor",
   },
   {
     id: 227,
@@ -1924,6 +2150,7 @@ export const planets = [
     biome: biomes.canyon,
     weatherConditions: [weatherConditions.tremors],
     image: "/static/GalaxyMap/planets/Кастор.svg",
+    devName: "Lastofe",
   },
   {
     id: 228,
@@ -1931,6 +2158,7 @@ export const planets = [
     biome: biomes.canyon,
     weatherConditions: [weatherConditions.tremors],
     image: "/static/GalaxyMap/planets/Кастор.svg",
+    devName: "Tien Kwan",
   },
   {
     id: 229,
@@ -1945,6 +2173,7 @@ export const planets = [
       weatherConditions.meteorStorms,
     ],
     image: "/static/GalaxyMap/planets/Тьен-кван.svg",
+    devName: "Varylia 5",
   },
   {
     id: 230,
@@ -1955,6 +2184,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Ластоф.svg",
+    devName: "Choepessa IV",
   },
   {
     id: 231,
@@ -1962,6 +2192,7 @@ export const planets = [
     biome: biomes.iceMoss,
     weatherConditions: [weatherConditions.extremeCold],
     image: "/static/GalaxyMap/planets/Хепесса_IV.svg",
+    devName: "Troost",
   },
   {
     id: 232,
@@ -1969,6 +2200,7 @@ export const planets = [
     biome: biomes.swamp,
     weatherConditions: [weatherConditions.thickFog],
     image: "/static/GalaxyMap/planets/Труст.svg",
+    devName: "Ustotu",
   },
   {
     id: 233,
@@ -1979,6 +2211,7 @@ export const planets = [
       weatherConditions.tremors,
     ],
     image: "/static/GalaxyMap/planets/Устоту.svg",
+    devName: "Vandalon IV",
   },
   {
     id: 234,
@@ -1989,6 +2222,7 @@ export const planets = [
       weatherConditions.blizzards,
     ],
     image: "/static/GalaxyMap/planets/Вандалон_IV.svg",
+    devName: "Erata Prime",
   },
   {
     id: 235,
@@ -1999,6 +2233,7 @@ export const planets = [
       weatherConditions.sandstorms,
     ],
     image: "/static/GalaxyMap/planets/Верилия-5.svg",
+    devName: "Meridia",
   },
   {
     id: 236,
@@ -2010,6 +2245,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Меридия.svg",
+    devName: "Fenrir III",
   },
   {
     id: 237,
@@ -2021,6 +2257,7 @@ export const planets = [
       weatherConditions.meteorStorms,
     ],
     image: "/static/GalaxyMap/planets/Фенрир_III.svg",
+    devName: "Turing",
   },
   {
     id: 238,
@@ -2029,6 +2266,7 @@ export const planets = [
     biome: biomes.ethereal,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Тьюринг.svg",
+    devName: "Skaash",
   },
   {
     id: 239,
@@ -2040,6 +2278,7 @@ export const planets = [
       weatherConditions.acidStorms,
     ],
     image: "/static/GalaxyMap/planets/Эрата-прайм.svg",
+    devName: "Acrab XI",
   },
   {
     id: 240,
@@ -2047,6 +2286,7 @@ export const planets = [
     biome: biomes.iceMoss,
     weatherConditions: [weatherConditions.extremeCold],
     image: "/static/GalaxyMap/planets/Скааш.svg",
+    devName: "Acrux IX",
   },
   {
     id: 241,
@@ -2054,6 +2294,7 @@ export const planets = [
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Акраб_XI.svg",
+    devName: "Gemma",
   },
   {
     id: 242,
@@ -2061,6 +2302,7 @@ export const planets = [
     biome: biomes.rainForest,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Акрукс_IX.svg",
+    devName: "Merak",
   },
   {
     id: 243,
@@ -2068,6 +2310,7 @@ export const planets = [
     biome: biomes.rainForest,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Гемма.svg",
+    devName: "Aurora Bay",
   },
   {
     id: 244,
@@ -2075,6 +2318,7 @@ export const planets = [
     biome: biomes.tundra,
     weatherConditions: [],
     image: "/static/GalaxyMap/planets/Залив_авроры.svg",
+    devName: "Merga IV",
   },
   {
     id: 245,
@@ -2082,6 +2326,7 @@ export const planets = [
     biome: biomes.iceMoss,
     weatherConditions: [weatherConditions.extremeCold],
     image: "/static/GalaxyMap/planets/Мекбуда.svg",
+    devName: "Mekbuda",
   },
   {
     id: 246,
@@ -2089,6 +2334,7 @@ export const planets = [
     biome: biomes.swamp,
     weatherConditions: [weatherConditions.thickFog],
     image: "/static/GalaxyMap/planets/Мерак.svg",
+    devName: "Vindemitarix Prime",
   },
   {
     id: 247,
@@ -2096,6 +2342,7 @@ export const planets = [
     biome: biomes.canyon,
     weatherConditions: [weatherConditions.tremors],
     image: "/static/GalaxyMap/planets/Марга_IV.svg",
+    devName: "Cyberstan",
   },
   {
     id: 248,
@@ -2103,6 +2350,7 @@ export const planets = [
     biome: biomes.cyberstan,
     weatherConditions: [weatherConditions.extremeCold],
     image: "/static/GalaxyMap/planets/Киберстан.svg",
+    devName: "Shete",
   },
   {
     id: 249,
@@ -2113,6 +2361,7 @@ export const planets = [
       weatherConditions.acidStorms,
     ],
     image: "/static/GalaxyMap/planets/Шете.svg",
+    devName: "Siemnot",
   },
   {
     id: 250,
@@ -2120,6 +2369,7 @@ export const planets = [
     biome: biomes.rainForest,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Симнот.svg",
+    devName: "Sirius",
   },
   {
     id: 251,
@@ -2130,6 +2380,7 @@ export const planets = [
       weatherConditions.meteorStorms,
     ],
     image: "/static/GalaxyMap/planets/Сириус.svg",
+    devName: "Skat Bay",
   },
   {
     id: 252,
@@ -2137,6 +2388,7 @@ export const planets = [
     biome: biomes.swamp,
     weatherConditions: [weatherConditions.thickFog],
     image: "/static/GalaxyMap/planets/Скат-бэй.svg",
+    devName: "Pöpli IX",
   },
   {
     id: 253,
@@ -2147,6 +2399,7 @@ export const planets = [
       weatherConditions.fireTornadoes,
     ],
     image: "/static/GalaxyMap/planets/Пепли_IX.svg",
+    devName: "Draupnir",
   },
   {
     id: 254,
@@ -2157,6 +2410,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Дропнир.svg",
+    devName: "Mort",
   },
   {
     id: 255,
@@ -2164,6 +2418,7 @@ export const planets = [
     biome: biomes.swamp,
     weatherConditions: [weatherConditions.thickFog],
     image: "/static/GalaxyMap/planets/Морт.svg",
+    devName: "Ingmar",
   },
   {
     id: 256,
@@ -2171,6 +2426,7 @@ export const planets = [
     biome: biomes.crimsonMoor,
     weatherConditions: [weatherConditions.ionStorms],
     image: "/static/GalaxyMap/planets/Ингмар.svg",
+    devName: "Mantes",
   },
   {
     id: 257,
@@ -2181,6 +2437,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Мантес.svg",
+    devName: "Meissa",
   },
   {
     id: 258,
@@ -2191,6 +2448,7 @@ export const planets = [
       weatherConditions.rainstorms,
     ],
     image: "/static/GalaxyMap/planets/Мейсса.svg",
+    devName: "Wasat",
   },
   {
     id: 259,
@@ -2201,6 +2459,7 @@ export const planets = [
       weatherConditions.acidStorms,
     ],
     image: "/static/GalaxyMap/planets/Васат.svg",
+    devName: "Vega Bay",
   },
   {
     id: 260,
@@ -2211,6 +2470,7 @@ export const planets = [
       weatherConditions.blizzards,
     ],
     image: "/static/GalaxyMap/planets/Вега-бэй.svg",
+    devName: "Wezen",
   },
   {
     id: 261,
@@ -2221,6 +2481,7 @@ export const planets = [
       weatherConditions.fireTornadoes,
     ],
     image: "/static/GalaxyMap/planets/Везен.svg",
+    devName: "X-45",
   },
   {
     id: 262,
@@ -2228,5 +2489,6 @@ export const planets = [
     biome: biomes.newJungle,
     weatherConditions: [weatherConditions.rainstorms],
     image: "/static/GalaxyMap/planets/Экс-45.svg",
+    devName: "",
   },
 ];
