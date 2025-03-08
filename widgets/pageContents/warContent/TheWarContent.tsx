@@ -52,18 +52,18 @@ const TheWarContent = observer(() => {
   return (
     <Observer>
       {() => (
-        <main className="grid justify-items-center gap-x-[20px] mlarge:mt-[115px]">
-          <div className="flex justify-start items-center gap-x-[20px] mb-[10px] w-full">
+        <main className="grid justify-items-center gap-x-[20px]">
+          <div className="flex mlarge:grid justify-start items-center gap-x-[20px] gap-y-[10px] mb-[10px] w-full">
             <button
               onClick={() => setTargetContentPage(1)}
-              className="text-white text-[1.5rem] text-left font-primary font-bold cursor-pointer duration-300 ease-in-out hover:text-theme"
+              className="text-white text-[1.5rem] mlarge:text-[1rem] text-left font-primary font-bold cursor-pointer duration-300 ease-in-out hover:text-theme"
             >
               Активные сражения
             </button>
 
             <button
               onClick={() => setTargetContentPage(2)}
-              className="text-white text-[1.5rem] text-left font-primary font-bold cursor-pointer duration-300 ease-in-out hover:text-theme"
+              className="text-white text-[1.5rem] mlarge:text-[1rem] text-left font-primary font-bold cursor-pointer duration-300 ease-in-out hover:text-theme"
             >
               Военная сводка и приказы
             </button>

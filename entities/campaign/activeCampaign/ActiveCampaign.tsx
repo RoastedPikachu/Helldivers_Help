@@ -3,136 +3,187 @@ import React, { useState, useEffect } from "react";
 
 import { planets } from "@/data/planets";
 
-import { timeFromNow } from "@/utils/timeFunctions";
+import { calculateTimePercentage, timeFromNow } from "@/utils/timeFunctions";
 
 import WeatherConditionAdditionalInfoModalWindow from "@/entities/planetsPage/weatherConditionAdditionalInfo/WeatherConditionAdditionalInfoModalWindow";
 
 import "./ActiveCampaign.css";
+import { useParams } from "next/navigation";
+import { getIntlArray } from "@/utils/generalFunctions";
+import { useTranslations } from "next-intl";
 
 interface ActiveCampaignProps {
-  planetName: string;
-  fraction: string;
-  isDefense: boolean;
-  expiresIn: Date;
-  percentage: number;
-  playersCount: number;
+  campaign: any;
+  event: any;
+  totalPlayers: number;
   planetRegenArray: any[];
   impactMultiplier: number;
 }
 
 const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
-  planetName,
-  fraction,
-  isDefense,
-  expiresIn,
-  percentage,
-  playersCount,
+  campaign,
+  event,
+  totalPlayers,
   planetRegenArray,
   impactMultiplier,
 }) => {
-  const [targetCampaignPlanet, setTargetCampaignPlanet] = useState({} as any);
+  const params = useParams();
+
+  const t = useTranslations("planets");
+  const t1 = useTranslations("sectors");
+  const t2 = useTranslations("WarPage");
+
+  const [targetPlanet, setTargetPlanet] = useState({} as any);
   const [targetWeatherConditionId, setTargetWeatherConditionId] = useState(0);
 
   const [regenPerHour, setRegenPerHour] = useState(0);
 
+  const getStatusIcon = () => {
+    if (campaign?.faction.toLowerCase() === "illuminates") {
+      return "/static/GeneralIcons/InvasionIcon.png";
+    } else if (campaign?.defense) {
+      return "/static/GeneralIcons/DefendIcon.svg";
+    }
+
+    return "/static/GeneralIcons/AttackIcon.svg";
+  };
+
+  const getStatusText = () => {
+    if (params.locale === "ru") {
+      if (campaign?.faction.toLowerCase() === "illuminates") {
+        return "ВТОРЖЕНИЕ";
+      } else if (campaign?.defense) {
+        return "ОБОРОНА";
+      }
+
+      return "ОСВОБОЖДЕНИЕ";
+    } else {
+      if (campaign?.faction.toLowerCase() === "illuminates") {
+        return "INVASION";
+      } else if (campaign?.defense) {
+        return "DEFENSE";
+      }
+
+      return "LIBERATION";
+    }
+  };
+
+  const getBottomStatusText = () => {
+    if (params.locale === "ru") {
+      if (campaign?.faction.toLowerCase() === "illuminates") {
+        return "ОГРАЖДЕНО";
+      } else if (campaign?.defense) {
+        return "ЗАЩИЩЕНО";
+      }
+
+      return "ОСВОБОЖДЕНО";
+    } else {
+      if (campaign?.faction.toLowerCase() === "illuminates") {
+        return "PROTECTED";
+      } else if (campaign?.defense) {
+        return "DEFENDED";
+      }
+
+      return "LIBERATED";
+    }
+  };
+
   const getFractionIcon = () => {
-    if (fraction.toLowerCase() == "terminids") {
+    if (campaign?.faction.toLowerCase() == "terminids") {
       return "/static/GeneralIcons/TerminidsIcon.svg";
-    } else if (fraction.toLowerCase() == "illuminates") {
+    } else if (campaign?.faction.toLowerCase() == "illuminates") {
       return "/static/GeneralIcons/SuperEarthIcon.svg";
     }
     return "/static/GeneralIcons/AutomatonsIcon.svg";
   };
 
+  const getTargetPlanet = () => {
+    setTargetPlanet(
+      planets.find(
+        (item) => item.devName.toLowerCase() === campaign.name.toLowerCase(),
+      ),
+    );
+  };
+
   const getFractionColor = () => {
-    if (fraction.toLowerCase() == "terminids") {
+    if (campaign?.faction.toLowerCase() == "terminids") {
       return "#ffc000";
-    } else if (fraction.toLowerCase() == "illuminates") {
+    } else if (campaign?.faction.toLowerCase() == "illuminates") {
       return "#6bb7ea";
     }
     return "#ff6161";
   };
 
   const getEnemyBorderColor = () => {
-    if (fraction.toLowerCase() == "terminids") {
+    if (campaign?.faction.toLowerCase() == "terminids") {
       return "border-[#ffc000]";
     }
     return "border-[#ff6161]";
   };
 
   const getFractionTextColor = () => {
-    if (fraction.toLowerCase() == "terminids") {
+    if (campaign?.faction.toLowerCase() == "terminids") {
       return "text-[#ffc000]";
-    } else if (fraction.toLowerCase() == "illuminates") {
+    } else if (campaign?.faction.toLowerCase() == "illuminates") {
       return "text-[#6bb7ea]";
     }
     return "text-[#ff6161]";
   };
 
   const getFractionBgColor = () => {
-    if (fraction.toLowerCase() == "terminids") {
+    if (campaign?.faction.toLowerCase() == "terminids") {
       return "bg-[#ffc000]";
-    } else if (fraction.toLowerCase() == "illuminates") {
+    } else if (campaign?.faction.toLowerCase() == "illuminates") {
       return "bg-[#ac47fe]";
     }
     return "bg-[#ff6161]";
   };
 
   const getFractionBorderColor = () => {
-    if (fraction.toLowerCase() == "terminids") {
+    if (campaign?.faction.toLowerCase() == "terminids") {
       return "border-[#ffc000]";
-    } else if (fraction.toLowerCase() == "illuminates") {
+    } else if (campaign?.faction.toLowerCase() == "illuminates") {
       return "border-[#ac47fe]";
     }
     return "border-[#ff6161]";
   };
 
-  const getLiberationWidth = (isEnemy: boolean) => {
-    if (isEnemy) {
-      if (isDefense) {
-        const expiresInPartsArray = timeFromNow(expiresIn).split(":");
-
-        if (!isNaN(regenPerHour)) {
-          return (
-            ((24 * 60 -
-              (Number(expiresInPartsArray[0]) * 60 +
-                Number(expiresInPartsArray[1]))) /
-              60) *
-            regenPerHour
-          );
-        }
-      } else {
-        return 100 - percentage;
-      }
-    }
-
-    return percentage;
+  const getLiberationWidth = () => {
+    return calculateTimePercentage(
+      campaign.expireDateTime,
+      event?.expireTime,
+      event?.startTime,
+    );
   };
 
   const getLiberationPerHourPercent = () => {
     const liberationSymbol =
       Number(getHelldiversRegen().toFixed(3)) > regenPerHour ? "+" : "";
 
+    if (Number(getHelldiversRegen().toFixed(3)) - regenPerHour < 0) {
+      const result = 0;
+
+      return result.toFixed(3);
+    }
+
     return `${liberationSymbol}${(Number(getHelldiversRegen().toFixed(3)) - regenPerHour).toFixed(3)}`;
   };
 
   const getHelldiversRegen = () => {
-    return Number(playersCount * impactMultiplier * 0.003 - 0.08);
+    return Number(campaign.players * impactMultiplier * 0.003 - 0.08);
   };
 
-  // const getPlanetRegenPerHourPercent = () => {
-  //   const planetRegenPerHourPercent = isDefense
-  //     ? 4.2
-  //     : +(
-  //         ((planetRegenArray.find((planet) => planet.index === planetIndex)
-  //           ?.regenPerSecond *
-  //           3600) /
-  //           1000000) *
-  //         100
-  //       ).toFixed(1);
-  //
-  //   return !isNaN(planetRegenPerHourPercent) ? planetRegenPerHourPercent : NaN;
-  // };
+  const getPlanetRegenPerHourPercent = () => {
+    const planetRegenPerHourPercent = +(
+      ((planetRegenArray.find((planet) => planet.index === campaign.planetIndex)
+        ?.regenPerSecond *
+        3600) /
+        1000000) *
+      100
+    ).toFixed(1);
+
+    return !isNaN(planetRegenPerHourPercent) ? planetRegenPerHourPercent : NaN;
+  };
 
   const getSpecificRegenPerHourString = () => {
     const percent = isNaN(regenPerHour)
@@ -141,23 +192,46 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
         ? `${regenPerHour}.0`
         : regenPerHour;
 
-    const symbol = isDefense || percent == 0 ? "" : "- ";
+    return Number(percent).toFixed(2);
+  };
 
-    return symbol + percent;
+  const getTimeLeft = () => {
+    const seconds = Math.floor(campaign.expireDateTime / 1000);
+
+    const hours = Math.floor(seconds / 3600);
+    const remainingSeconds = seconds % 3600;
+    const minutes = Math.floor(remainingSeconds / 60);
+
+    return `${hours} ч ${minutes} мин`;
   };
 
   useEffect(() => {
-    console.log(planetName);
-    // setTargetCampaignPlanet(planets[planetIndex + 1]);
-
-    // if (!isNaN(getPlanetRegenPerHourPercent())) {
-    //   setRegenPerHour(getPlanetRegenPerHourPercent());
-    // }
+    getTargetPlanet();
+    if (!isNaN(getPlanetRegenPerHourPercent())) {
+      setRegenPerHour(getPlanetRegenPerHourPercent());
+    }
   }, []);
   return (
     <div className="activeCampaign">
-      <div className="activeCampaign-timeLeft">
-        <p className="activeCampaign-timeLeft-data">1h 46m</p>
+      <div className="activeCampaign-top">
+        <div className="activeCampaign-top-status">
+          <img
+            src={getStatusIcon()}
+            alt=""
+            className="activeCampaign-top-status-icon"
+          />
+
+          <p className="activeCampaign-top-status-text">{getStatusText()}</p>
+        </div>
+
+        {(campaign.defense ||
+          campaign?.faction.toLowerCase() === "illuminates") && (
+          <div className="activeCampaign-top-timeLeft">
+            <p className="activeCampaign-top-timeLeft-data">
+              {timeFromNow(campaign.expireDateTime)}
+            </p>
+          </div>
+        )}
       </div>
 
       <div className="innerWrapper">
@@ -173,32 +247,46 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
               <h4
                 className={`activeCampaign-header-textBlock-planetName ${getFractionTextColor()}`}
               >
-                BASHYR
+                {getIntlArray(t("names"))[targetPlanet.id - 1]?.toUpperCase()}
               </h4>
 
               <p
                 className={`activeCampaign-header-textBlock-planetSector ${getFractionTextColor()}`}
               >
-                GALLUX SECTOR
+                {params &&
+                  params.locale === "ru" &&
+                  getIntlArray(t2("texts"))[0]}{" "}
+                {getIntlArray(t1("data"))[
+                  targetPlanet.sector?.id - 1
+                ]?.toUpperCase()}{" "}
+                {params &&
+                  params.locale === "en" &&
+                  getIntlArray(t2("texts"))[0]}
               </p>
             </div>
           </div>
 
           <div className="activeCampaign-biome">
-            <div className="activeCampaign-biome-invasionBlock">
-              <img
-                src="/static/GeneralIcons/IlluminatesIcon.svg"
-                alt=""
-                className="w-[12px] h-[12px]"
-              />
+            {campaign?.faction.toLowerCase() === "illuminates" && (
+              <div className="activeCampaign-biome-invasionBlock">
+                <img
+                  src="/static/GeneralIcons/IlluminatesIcon.svg"
+                  alt=""
+                  className="w-[12px] h-[12px]"
+                />
 
-              <p className="activeCampaign-biome-invasionBlock-text">
-                ОБНАРУЖЕНО ВТОРЖЕНИЕ
-              </p>
-            </div>
+                <p className="activeCampaign-biome-invasionBlock-text">
+                  {getIntlArray(t2("texts"))[2]}
+                </p>
+              </div>
+            )}
 
             <img
-              src="/static/Biomes/SwampImage.webp"
+              src={
+                Object.entries(targetPlanet).length
+                  ? targetPlanet.biome.imagePath
+                  : ""
+              }
               alt=""
               className="activeCampaign-biome-image"
             />
@@ -208,28 +296,50 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
         <div className="bottomInnerWrapper">
           <div className="activeCampaign-progressionScale">
             <div
-              className={`activeCampaign-progressionScale-content ${getFractionBorderColor()}`}
+              className={`activeCampaign-progressionScale-content ${getFractionBorderColor()} ${
+                campaign.defense ||
+                campaign?.faction.toLowerCase() === "illuminates"
+                  ? "grid gap-y-[3px]"
+                  : "flex"
+              }`}
             >
-              <div
-                style={{ width: `30%` }}
-                className="activeCampaign-progressionScale-content-liberated"
-              />
+              {campaign.percentage > 0 && (
+                <div
+                  style={{ width: `${campaign.percentage}%` }}
+                  className="activeCampaign-progressionScale-content-liberated"
+                />
+              )}
 
               <div
-                style={{ width: `70%` }}
+                style={{
+                  width: `${
+                    campaign.defense ||
+                    campaign?.faction.toLowerCase() === "illuminates"
+                      ? getLiberationWidth()
+                      : 100 - campaign.percentage
+                  }%`,
+                }}
                 className={`activeCampaign-progressionScale-content-leftToLiberate ${getFractionBgColor()}`}
               />
             </div>
           </div>
 
           <div className="activeCampaign-currentStatus">
-            <p className="activeCampaign-currentStatus-percentage">
-              40.8505% PROTECTED
+            <p
+              className={`activeCampaign-currentStatus-percentage ${campaign.percentage === 0 ? "w-full text-[#969593] text-center font-bold" : "text-white text-left font-medium"}`}
+            >
+              {campaign.percentage === 0
+                ? getIntlArray(t2("texts"))[1]
+                : `${campaign.percentage.toFixed(4)}% ${getBottomStatusText()}`}
             </p>
           </div>
 
           <div className="activeCampaign-statistics">
             <div className="activeCampaign-statistics-helldiversCount">
+              <p className="activeCampaign-statistics-helldiversCount-percentageOfTotal">
+                {((campaign.players / totalPlayers) * 100).toFixed(0)}%
+              </p>
+
               <img
                 src="/static/GeneralIcons/HelldiverIcon.svg"
                 alt=""
@@ -237,39 +347,61 @@ const ActiveCampaign: React.FC<ActiveCampaignProps> = ({
               />
 
               <p className="activeCampaign-statistics-helldiversCount-number">
-                3,242
+                {campaign.players}
               </p>
             </div>
 
-            <div className="activeCampaign-statistics-superEarthPercentage">
-              <div className="my-[15%] w-[1px] h-[70%] bg-[#333333]" />
+            {(campaign.defense ||
+              campaign?.faction.toLowerCase() === "illuminates") && (
+              <div className="activeCampaign-statistics-superEarthPercentage">
+                <div className="my-[15%] w-[2px] h-[70%] bg-[#333333]" />
 
-              <img
-                src="/static/GeneralIcons/SuperEarthIcon.svg"
-                alt=""
-                className="activeCampaign-statistics-superEarthPercentage-icon"
-              />
+                <p className="ml-[20px] text-white text-[0.75rem] text-center font-primary font-medium">
+                  {getIntlArray(t2("texts"))[3]}
+                </p>
+              </div>
+            )}
 
-              <p className="activeCampaign-statistics-superEarthPercentage-number">
-                2.966%
-              </p>
+            {!(
+              campaign.defense ||
+              campaign?.faction.toLowerCase() === "illuminates"
+            ) && (
+              <>
+                <div className="activeCampaign-statistics-superEarthPercentage">
+                  <div className="my-[15%] w-[2px] h-[70%] bg-[#333333]" />
 
-              <div className="ml-[18px] my-[15%] w-[1px] h-[70%] bg-[#333333]" />
-            </div>
+                  <img
+                    src="/static/GeneralIcons/SuperEarthIcon.svg"
+                    alt=""
+                    className={`activeCampaign-statistics-superEarthPercentage-icon ${Number(getLiberationPerHourPercent()) === 0 ? "brightness-50" : ""}`}
+                  />
 
-            <div className="activeCampaign-statistics-enemyPercentage">
-              <img
-                src={getFractionIcon()}
-                alt=""
-                className="activeCampaign-statistics-enemyPercentage-icon"
-              />
+                  <p
+                    className={`activeCampaign-statistics-superEarthPercentage-number ${Number(getLiberationPerHourPercent()) === 0 ? "brightness-50" : ""}`}
+                  >
+                    {getLiberationPerHourPercent()}%
+                  </p>
 
-              <p
-                className={`activeCampaign-statistics-enemyPercentage-number ${getFractionTextColor()}`}
-              >
-                1.50%
-              </p>
-            </div>
+                  <div className="ml-[18px] my-[15%] w-[2px] h-[70%] bg-[#333333]" />
+                </div>
+
+                <div
+                  className={`activeCampaign-statistics-enemyPercentage ${Number(getSpecificRegenPerHourString()) === 0 ? "brightness-50" : ""}`}
+                >
+                  <img
+                    src={getFractionIcon()}
+                    alt=""
+                    className="activeCampaign-statistics-enemyPercentage-icon"
+                  />
+
+                  <p
+                    className={`activeCampaign-statistics-enemyPercentage-number ${getFractionTextColor()}`}
+                  >
+                    {getSpecificRegenPerHourString()}%
+                  </p>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>

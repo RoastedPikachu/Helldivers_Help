@@ -103,7 +103,6 @@ const MajorOrder: React.FC<MajorOrderProps> = ({ order }) => {
                   </b>
                 </p>
 
-                {/*<div className="order-task-point-checkbox inactive" />*/}
                 <div
                   className={`order-task-point-checkbox ${taskProgress[index] === task.values[2] ? "active" : "inactive"}`}
                 />

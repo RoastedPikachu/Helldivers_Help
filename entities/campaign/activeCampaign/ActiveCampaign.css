@@ -119,18 +119,34 @@
 }
 
 .rootActiveCampaignWidget_Bottom_Wrapper_Block_NumberText {
-    @apply ml-[10px] text-[1.375rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-[--font-secondary] font-bold;
+    @apply ml-[10px] text-[1.375rem] mlarge:text-[1.125rem] mmedium:text-[1rem] msmall:text-[0.875rem] font-secondary font-bold;
 }
 
 .activeCampaign {
     @apply relative p-[2px] w-full h-auto;
 }
 
-.activeCampaign-timeLeft {
-    @apply ml-auto px-[5px] w-[80px] bg-theme;
+.activeCampaign-top {
+    @apply relative flex items-center pl-[5px] pt-[2px] w-full h-auto bg-[#161515];
 }
 
-.activeCampaign-timeLeft-data {
+.activeCampaign-top-status {
+    @apply flex items-center gap-x-[10px] w-auto h-auto;
+}
+
+.activeCampaign-top-status-icon {
+    @apply w-[15px] h-[15px];
+}
+
+.activeCampaign-top-status-text {
+    @apply text-white text-[0.9375rem] text-left font-primary font-medium;
+}
+
+.activeCampaign-top-timeLeft {
+    @apply ml-auto px-[10px] w-auto bg-theme;
+}
+
+.activeCampaign-top-timeLeft-data {
     @apply text-black text-[1rem] text-center font-primary font-bold;
 }
 
@@ -187,7 +203,7 @@
 }
 
 .activeCampaign-progressionScale-content {
-    @apply relative flex items-center gap-x-[3px] p-[3px] h-full bg-black border-2;
+    @apply relative items-center gap-x-[3px] p-[3px] h-full bg-black border-2;
 }
 
 .activeCampaign-progressionScale-content-liberated {
@@ -203,7 +219,7 @@
 }
 
 .activeCampaign-currentStatus-percentage {
-    @apply text-white text-[1rem] text-left font-primary font-medium;
+    @apply text-[1rem] font-primary;
 }
 
 .activeCampaign-statistics {
@@ -212,6 +228,10 @@
 
 .activeCampaign-statistics-helldiversCount {
     @apply flex items-center gap-x-[5px] h-full;
+}
+
+.activeCampaign-statistics-helldiversCount-percentageOfTotal {
+    @apply mt-[3px] text-theme text-[0.9375rem] text-left font-secondary font-medium;
 }
 
 .activeCampaign-statistics-helldiversCount-icon {
