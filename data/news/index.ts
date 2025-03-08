@@ -80,7 +80,13 @@ export const news = [
   {
     id: 14,
     typeIndex: 1,
-    createdAt: new Date("12.13.2025"),
+    createdAt: new Date("03.01.2025"),
+    cover: "/static/newsCovers/SiteUpdate.webp",
+  },
+  {
+    id: 15,
+    typeIndex: 1,
+    createdAt: new Date("03.08.2025"),
     cover: "/static/newsCovers/SiteUpdate.webp",
   },
 ];
