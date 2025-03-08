@@ -1,6 +1,7 @@
 {
   "WarPage": {
-    "sectionTitles": "[\"NEWS\",\"ORDERS\"]",
+    "sectionTitles": "[\"MILITARY REPORT\",\"ORDERS\",\"ACTIVE CAMPAIGNS\"]",
+    "texts": "[\"SECTOR\",\"HOLDING FOR REINFORCEMENTS\",\"INVASION DETECTED\",\"NEED MORE REINFORCEMENTS\"]",
     "title1": "This page of the site is currently undergoing a redesign.",
     "title2": "We apologize for the inconvenience."
   },
