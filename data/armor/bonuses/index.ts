@@ -100,4 +100,17 @@ export const armorBonuses: { [key: string]: ArmorBonus } = {
     description:
       "Дает 50% сопротивления урону от огня, газа, кислоты и электричества.",
   },
+  integratedExplosives: {
+    id: 15,
+    icon: "/static/armorBonuses/IntegratedExplosives.svg",
+    name: "Встроенная взрывчатка",
+    description: "Броня взрывается через 1,5 сек. после гибели владельца.",
+  },
+  gunslinger: {
+    id: 16,
+    icon: "/static/armorBonuses/IntegratedExplosives.svg",
+    name: "Стрелок",
+    description:
+      "Ускоряет перезарядку оружия на 40%. Скорость, с которой доп. оружие извлекается или убирается в кобуру, увеличена на 50%. Отдача доп. оружия уменьшена на 70%.",
+  },
 };
