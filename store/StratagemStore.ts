@@ -2614,6 +2614,92 @@ class StratagemStore {
     },
     {
       id: 63,
+      iconPath: "/static/stratagems/PortableHellbomb.png",
+      videoPath: "/static/stratagemVideos/PortableHellbombVideo.mp4",
+      videoPreviewPath:
+        "/static/stratagemVideoPreviews/PortableHellbombPreview.webp",
+      type: stratagemTypes.warbonds,
+      price: 110,
+      obtainingLevel: 100,
+      callTime: 10,
+      useCount: 0,
+      reloadTime: 300,
+      keyCodes: [83, 68, 87, 87, 87],
+      directions: [
+        {
+          id: 1,
+          orientation: 3,
+          isPressed: false,
+        },
+        {
+          id: 2,
+          orientation: 2,
+          isPressed: false,
+        },
+        {
+          id: 3,
+          orientation: 1,
+          isPressed: false,
+        },
+        {
+          id: 4,
+          orientation: 1,
+          isPressed: false,
+        },
+        {
+          id: 5,
+          orientation: 1,
+          isPressed: false,
+        },
+      ],
+    },
+    {
+      id: 64,
+      iconPath: "/static/stratagems/HoverPack.png",
+      videoPath: "/static/stratagemVideos/HoverPackVideo.mp4",
+      videoPreviewPath: "/static/stratagemVideoPreviews/HoverPackPreview.webp",
+      type: stratagemTypes.warbonds,
+      price: 110,
+      obtainingLevel: 100,
+      callTime: 10,
+      useCount: 0,
+      reloadTime: 480,
+      keyCodes: [83, 87, 87, 83, 65, 68],
+      directions: [
+        {
+          id: 1,
+          orientation: 3,
+          isPressed: false,
+        },
+        {
+          id: 2,
+          orientation: 1,
+          isPressed: false,
+        },
+        {
+          id: 3,
+          orientation: 1,
+          isPressed: false,
+        },
+        {
+          id: 4,
+          orientation: 3,
+          isPressed: false,
+        },
+        {
+          id: 5,
+          orientation: 4,
+          isPressed: false,
+        },
+        {
+          id: 6,
+          orientation: 2,
+          isPressed: false,
+        },
+      ],
+    },
+    {
+      id: 65,
       iconPath: "/static/stratagems/ReinforceIcon.png",
       type: stratagemTypes.mission,
       keyCodes: [87, 83, 68, 65, 87],
@@ -2646,7 +2732,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 64,
+      id: 66,
       iconPath: "/static/stratagems/SOSBeaconIcon.png",
       type: stratagemTypes.mission,
       keyCodes: [87, 83, 68, 87],
@@ -2674,7 +2760,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 65,
+      id: 67,
       iconPath: "/static/stratagems/ResupplyIcon.png",
       type: stratagemTypes.mission,
       keyCodes: [83, 83, 87, 68],
@@ -2702,7 +2788,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 66,
+      id: 68,
       iconPath: "/static/stratagems/SuperEarthFlagIcon.png",
       type: stratagemTypes.mission,
       keyCodes: [83, 87, 83, 87],
@@ -2730,7 +2816,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 67,
+      id: 69,
       iconPath: "/static/stratagems/UploadDataIcon.png",
       type: stratagemTypes.mission,
       keyCodes: [65, 68, 87, 87, 87],
@@ -2763,7 +2849,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 68,
+      id: 70,
       iconPath: "/static/stratagems/UploadDataIcon.png",
       type: stratagemTypes.mission,
       keyCodes: [83, 83, 83, 87, 87],
@@ -2796,7 +2882,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 69,
+      id: 71,
       iconPath: "/static/stratagems/HellbombIcon.png",
       type: stratagemTypes.mission,
       keyCodes: [83, 87, 65, 83, 87, 68, 83, 87],
@@ -2844,7 +2930,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 70,
+      id: 72,
       iconPath: "/static/stratagems/SEAFArtilleryIcon.png",
       type: stratagemTypes.mission,
       keyCodes: [68, 87, 87, 83],
@@ -2872,7 +2958,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 71,
+      id: 73,
       iconPath: "/static/stratagems/SeismicProbeIcon.png",
       type: stratagemTypes.mission,
       keyCodes: [87, 87, 65, 68, 83, 83],
@@ -2910,7 +2996,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 72,
+      id: 74,
       iconPath: "/static/stratagems/DarkFluidIcon.png",
       type: stratagemTypes.mission,
       keyCodes: [87, 65, 68, 68, 83, 87, 87],
