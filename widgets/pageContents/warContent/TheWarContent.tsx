@@ -18,6 +18,7 @@ import OrdersSection from "@/widgets/warPage/ordersSection/OrdersSection";
 
 import "./TheWarContent.css";
 import NewsSection from "@/widgets/warPage/newsSection/NewsSection";
+import TheGalaxyMap from "@/features/galaxyMap/TheGalaxyMap";
 
 const DynamicGalaxyMap = dynamic(
   () => import("@/widgets/warPage/galaxyMap/GalaxyMap"),
@@ -53,30 +54,30 @@ const TheWarContent = observer(() => {
     <Observer>
       {() => (
         <main className="grid justify-items-center gap-x-[20px]">
-          <div className="flex mlarge:grid justify-start items-center gap-x-[20px] gap-y-[10px] mb-[10px] w-full">
-            <button
-              onClick={() => setTargetContentPage(1)}
-              className="text-white text-[1.5rem] mlarge:text-[1rem] text-left font-primary font-bold cursor-pointer duration-300 ease-in-out hover:text-theme"
-            >
-              Активные сражения
-            </button>
+          {/*<div className="flex mlarge:grid justify-start items-center gap-x-[20px] gap-y-[10px] mb-[10px] w-full">*/}
+          {/*  <button*/}
+          {/*    onClick={() => setTargetContentPage(1)}*/}
+          {/*    className="text-white text-[1.5rem] mlarge:text-[1rem] text-left font-primary font-bold cursor-pointer duration-300 ease-in-out hover:text-theme"*/}
+          {/*  >*/}
+          {/*    Активные сражения*/}
+          {/*  </button>*/}
 
-            <button
-              onClick={() => setTargetContentPage(2)}
-              className="text-white text-[1.5rem] mlarge:text-[1rem] text-left font-primary font-bold cursor-pointer duration-300 ease-in-out hover:text-theme"
-            >
-              {mobileStore.isMobileDevice
-                ? "Приказы"
-                : "Военная сводка и приказы"}
-            </button>
+          {/*  <button*/}
+          {/*    onClick={() => setTargetContentPage(2)}*/}
+          {/*    className="text-white text-[1.5rem] mlarge:text-[1rem] text-left font-primary font-bold cursor-pointer duration-300 ease-in-out hover:text-theme"*/}
+          {/*  >*/}
+          {/*    {mobileStore.isMobileDevice*/}
+          {/*      ? "Приказы"*/}
+          {/*      : "Военная сводка и приказы"}*/}
+          {/*  </button>*/}
 
-            <button
-              onClick={() => setTargetContentPage(3)}
-              className="hidden mlarge:block text-white text-[1.5rem] mlarge:text-[1rem] text-left font-primary font-bold cursor-pointer duration-300 ease-in-out hover:text-theme"
-            >
-              Военная сводка
-            </button>
-          </div>
+          {/*  <button*/}
+          {/*    onClick={() => setTargetContentPage(3)}*/}
+          {/*    className="hidden mlarge:block text-white text-[1.5rem] mlarge:text-[1rem] text-left font-primary font-bold cursor-pointer duration-300 ease-in-out hover:text-theme"*/}
+          {/*  >*/}
+          {/*    Военная сводка*/}
+          {/*  </button>*/}
+          {/*</div>*/}
           {/*<div className="relative grid justify-items-center">*/}
           {/*  <p className="text-theme text-[2.5rem] mlarge:text-[2rem] mmedium:text-[1.875rem] msmall:text-[1.75rem] text-center font-primary">*/}
           {/*    {t("title1")}*/}
@@ -89,7 +90,8 @@ const TheWarContent = observer(() => {
           {/*  <DynamicGalaxyMap />*/}
           {/*  <MajorOrderSection />*/}
           {/*</aside>*/}
-          {getSpecificContentPage()}
+          {/*{getSpecificContentPage()}*/}
+          <TheGalaxyMap />
           {/*{mobileStore.isMobileDevice && (*/}
           {/*  <div className="fixed flex justify-between items-center left-0 bottom-[30px] px-[15px] mx-[calc((100%-320px)/2)] mmedium:mx-[calc((100%-300px)/2)] msmall:mx-[calc((100%-280px)/2)] w-[320px] mmedium:w-[300px] msmall:w-[280px] h-[50px] mmedium:h-[45px] msmall:h-[40px] bg-[#00293a] border-2 border-[#2cc388] rounded-[10px]">*/}
           {/*    <button*/}
