@@ -1542,6 +1542,47 @@ class StratagemStore {
     },
     {
       id: 38,
+      iconPath: "/static/stratagems/GrenadierBattlement.png",
+      videoPath: "/static/stratagemVideos/GrenadierBattlementVideo.mp4",
+      videoPreviewPath:
+        "/static/stratagemVideoPreviews/GrenadierBattlementPreview.webp",
+      type: stratagemTypes.bridge,
+      price: 10000,
+      obtainingLevel: 15,
+      callTime: 8,
+      useCount: 0,
+      reloadTime: 120,
+      keyCodes: [83, 68, 83, 65, 68],
+      directions: [
+        {
+          id: 1,
+          orientation: 3,
+          isPressed: false,
+        },
+        {
+          id: 2,
+          orientation: 2,
+          isPressed: false,
+        },
+        {
+          id: 3,
+          orientation: 3,
+          isPressed: false,
+        },
+        {
+          id: 4,
+          orientation: 4,
+          isPressed: false,
+        },
+        {
+          id: 5,
+          orientation: 2,
+          isPressed: false,
+        },
+      ],
+    },
+    {
+      id: 39,
       iconPath: "/static/stratagems/AntiPersonnelMinefieldIcon.png",
       videoPath: "/static/stratagemVideos/AntiPersonnelMinefieldVideo.mp4",
       videoPreviewPath:
@@ -1577,7 +1618,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 39,
+      id: 40,
       iconPath: "/static/stratagems/SupplyPackIcon.png",
       videoPath: "/static/stratagemVideos/SupplyPackVideo.mp4",
       videoPreviewPath: "/static/stratagemVideoPreviews/SupplyPackPreview.webp",
@@ -1622,7 +1663,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 40,
+      id: 41,
       iconPath: "/static/stratagems/GrenadeLauncherIcon.png",
       videoPath: "/static/stratagemVideos/GrenadeLauncherVideo.mp4",
       videoPreviewPath:
@@ -1663,7 +1704,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 41,
+      id: 42,
       iconPath: "/static/stratagems/LaserCannonIcon.png",
       videoPath: "/static/stratagemVideos/LaserCannonVideo.mp4",
       videoPreviewPath:
@@ -1704,7 +1745,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 42,
+      id: 43,
       iconPath: "/static/stratagems/IncendiaryMinesIcon.png",
       videoPath: "/static/stratagemVideos/IncendiaryMinesVideo.mp4",
       videoPreviewPath:
@@ -1740,7 +1781,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 43,
+      id: 44,
       iconPath: "/static/stratagems/GuardDogRoverIcon.png",
       videoPath: "/static/stratagemVideos/GuardDogRoverVideo.mp4",
       videoPreviewPath:
@@ -1786,7 +1827,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 44,
+      id: 45,
       iconPath: "/static/stratagems/BallisticShieldBackpackIcon.png",
       videoPath: "/static/stratagemVideos/BallisticShieldBackpackVideo.mp4",
       videoPreviewPath:
@@ -1832,7 +1873,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 45,
+      id: 46,
       iconPath: "/static/stratagems/ArcThrowerIcon.png",
       videoPath: "/static/stratagemVideos/ArcThrowerVideo.mp4",
       videoPreviewPath: "/static/stratagemVideoPreviews/ArcThrowerPreview.webp",
@@ -1877,7 +1918,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 46,
+      id: 47,
       iconPath: "/static/stratagems/AntiTankMines.png",
       videoPath: "/static/stratagemVideos/AntiTankMines.mp4",
       videoPreviewPath: "/static/stratagemVideoPreviews/AntiTankMines.webp",
@@ -1912,7 +1953,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 47,
+      id: 48,
       iconPath: "/static/stratagems/QuasarCannonIcon.png",
       videoPath: "/static/stratagemVideos/QuasarCannonVideo.mp4",
       videoPreviewPath:
@@ -1953,7 +1994,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 48,
+      id: 49,
       iconPath: "/static/stratagems/ShieldGeneratorPackIcon.png",
       videoPath: "/static/stratagemVideos/ShieldGeneratorPackVideo.mp4",
       videoPreviewPath:
@@ -1999,7 +2040,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 49,
+      id: 50,
       iconPath: "/static/stratagems/MachineGunSentryIcon.png",
       videoPath: "/static/stratagemVideos/MachineGunSentryVideo.mp4",
       videoPreviewPath:
@@ -2040,7 +2081,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 50,
+      id: 51,
       iconPath: "/static/stratagems/GatlingSentryIcon.png",
       videoPath: "/static/stratagemVideos/GatlingSentryVideo.mp4",
       videoPreviewPath:
@@ -2076,7 +2117,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 51,
+      id: 52,
       iconPath: "/static/stratagems/MortarSentryIcon.png",
       videoPath: "/static/stratagemVideos/MortarSentryVideo.mp4",
       videoPreviewPath:
@@ -2117,7 +2158,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 52,
+      id: 53,
       iconPath: "/static/stratagems/GuardDogIcon.png",
       videoPath: "/static/stratagemVideos/GuardDogVideo.mp4",
       videoPreviewPath: "/static/stratagemVideoPreviews/GuardDogPreview.webp",
@@ -2162,7 +2203,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 53,
+      id: 54,
       iconPath: "/static/stratagems/AutocannonSentryIcon.png",
       videoPath: "/static/stratagemVideos/AutocannonSentryVideo.mp4",
       videoPreviewPath:
@@ -2208,7 +2249,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 54,
+      id: 55,
       iconPath: "/static/stratagems/RocketSentryIcon.png",
       videoPath: "/static/stratagemVideos/RocketSentryVideo.mp4",
       videoPreviewPath:
@@ -2249,7 +2290,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 55,
+      id: 56,
       iconPath: "/static/stratagems/EMSMortarSentryIcon.png",
       videoPath: "/static/stratagemVideos/EMSMortarSentryVideo.mp4",
       videoPreviewPath:
@@ -2290,7 +2331,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 56,
+      id: 57,
       iconPath: "/static/stratagems/PatriotExosuitIcon.png",
       videoPath: "/static/stratagemVideos/PatriotExosuitVideo.mp4",
       videoPreviewPath:
@@ -2341,7 +2382,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 57,
+      id: 58,
       iconPath: "/static/stratagems/EmancipatorExosuitIcon.png",
       videoPath: "/static/stratagemVideos/EmancipatorExosuitVideo.mp4",
       videoPreviewPath:
@@ -2392,7 +2433,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 58,
+      id: 59,
       iconPath: "/static/stratagems/Sterilizer.png",
       videoPath: "/static/stratagemVideos/Sterilizer.mp4",
       videoPreviewPath: "/static/stratagemVideoPreviews/Sterilizer.webp",
@@ -2432,7 +2473,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 59,
+      id: 60,
       iconPath: "/static/stratagems/DogBreath.png",
       videoPath: "/static/stratagemVideos/DogBreath.mp4",
       videoPreviewPath: "/static/stratagemVideoPreviews/DogBreath.webp",
@@ -2477,7 +2518,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 60,
+      id: 61,
       iconPath: "/static/stratagems/DirectionalShield.png",
       videoPath: "/static/stratagemVideos/DirectionalShield.mp4",
       videoPreviewPath: "/static/stratagemVideoPreviews/DirectionalShield.webp",
@@ -2522,7 +2563,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 61,
+      id: 62,
       iconPath: "/static/stratagems/FlameSentry.png",
       videoPath: "/static/stratagemVideos/FlameSentry.mp4",
       videoPreviewPath: "/static/stratagemVideoPreviews/FlameSentry.webp",
@@ -2567,7 +2608,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 62,
+      id: 63,
       iconPath: "/static/stratagems/AntiTankEmplacement.png",
       videoPath: "/static/stratagemVideos/AntiTankEmplacement.mp4",
       videoPreviewPath:
@@ -2613,7 +2654,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 63,
+      id: 64,
       iconPath: "/static/stratagems/PortableHellbomb.png",
       videoPath: "/static/stratagemVideos/PortableHellbombVideo.mp4",
       videoPreviewPath:
@@ -2654,7 +2695,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 64,
+      id: 65,
       iconPath: "/static/stratagems/HoverPack.png",
       videoPath: "/static/stratagemVideos/HoverPackVideo.mp4",
       videoPreviewPath: "/static/stratagemVideoPreviews/HoverPackPreview.webp",
@@ -2699,7 +2740,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 65,
+      id: 66,
       iconPath: "/static/stratagems/ReinforceIcon.png",
       type: stratagemTypes.mission,
       keyCodes: [87, 83, 68, 65, 87],
@@ -2732,7 +2773,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 66,
+      id: 67,
       iconPath: "/static/stratagems/SOSBeaconIcon.png",
       type: stratagemTypes.mission,
       keyCodes: [87, 83, 68, 87],
@@ -2760,7 +2801,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 67,
+      id: 68,
       iconPath: "/static/stratagems/ResupplyIcon.png",
       type: stratagemTypes.mission,
       keyCodes: [83, 83, 87, 68],
@@ -2788,7 +2829,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 68,
+      id: 69,
       iconPath: "/static/stratagems/SuperEarthFlagIcon.png",
       type: stratagemTypes.mission,
       keyCodes: [83, 87, 83, 87],
@@ -2816,7 +2857,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 69,
+      id: 70,
       iconPath: "/static/stratagems/UploadDataIcon.png",
       type: stratagemTypes.mission,
       keyCodes: [65, 68, 87, 87, 87],
@@ -2849,7 +2890,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 70,
+      id: 71,
       iconPath: "/static/stratagems/UploadDataIcon.png",
       type: stratagemTypes.mission,
       keyCodes: [83, 83, 83, 87, 87],
@@ -2882,7 +2923,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 71,
+      id: 72,
       iconPath: "/static/stratagems/HellbombIcon.png",
       type: stratagemTypes.mission,
       keyCodes: [83, 87, 65, 83, 87, 68, 83, 87],
@@ -2930,7 +2971,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 72,
+      id: 73,
       iconPath: "/static/stratagems/SEAFArtilleryIcon.png",
       type: stratagemTypes.mission,
       keyCodes: [68, 87, 87, 83],
@@ -2958,7 +2999,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 73,
+      id: 74,
       iconPath: "/static/stratagems/SeismicProbeIcon.png",
       type: stratagemTypes.mission,
       keyCodes: [87, 87, 65, 68, 83, 83],
@@ -2996,7 +3037,7 @@ class StratagemStore {
       ],
     },
     {
-      id: 74,
+      id: 75,
       iconPath: "/static/stratagems/DarkFluidIcon.png",
       type: stratagemTypes.mission,
       keyCodes: [87, 65, 68, 68, 83, 87, 87],
