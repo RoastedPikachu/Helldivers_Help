@@ -1,0 +1,7 @@
+.ant-form-item-required {
+    @apply text-white !text-[1rem] font-primary;
+}
+
+.ant-input::placeholder {
+    @apply text-[#ffffff] !important;
+}

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
@@ -15,7 +15,7 @@ import { getIntlArray } from "@/utils/generalFunctions";
 import { localeStore } from "@/store/LocaleStore";
 import { mobileStore } from "@/store/MobileStore";
 
-import { ConfigProvider, Select } from "antd";
+import { ConfigProvider, Dropdown, Select } from "antd";
 
 import Link from "next/link";
 
@@ -30,6 +30,8 @@ const TheHeader = observer(() => {
 
   const t = useTranslations("Header");
 
+  const [isDropdownOpened, changeIsDropdownOpenedStatus] = useState(false);
+
   const changeLanguage = (value: string) => {
     localeStore.setLocale(value);
 
@@ -37,6 +39,17 @@ const TheHeader = observer(() => {
 
     router.push(`/${value}${clearPathname}`);
   };
+
+  const dropdownItems = [
+    {
+      key: "1",
+      label: <Link href="/auth/signin">Войти</Link>,
+    },
+    {
+      key: "2",
+      label: <Link href="/auth/signup">Зарегистрироваться</Link>,
+    },
+  ];
 
   useEffect(() => {
     mobileStore.changeIsMobileDeviceStatus();
@@ -112,6 +125,22 @@ const TheHeader = observer(() => {
                       className="headerNavBlock_ChangeLanguageButton"
                     />
                   </ConfigProvider>
+
+                  <Dropdown
+                    menu={{ items: dropdownItems }}
+                    overlayStyle={{ width: "180px" }}
+                    trigger={["click"]}
+                    placement="bottomRight"
+                    onOpenChange={(open) => changeIsDropdownOpenedStatus(open)}
+                  >
+                    <button className="flex justify-center items-center ml-[20px] w-[40px] h-[40px] bg-black border-[1px] border-theme rounded-[7.5px] overflow-hidden">
+                      <img
+                        src="/static/GeneralIcons/HelldiversHelmet.svg"
+                        alt=""
+                        className="w-[30px] h-[30px]"
+                      />
+                    </button>
+                  </Dropdown>
                 </nav>
               </header>
             )
