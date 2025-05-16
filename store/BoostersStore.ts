@@ -79,6 +79,11 @@ class BoostersStore {
       iconPath: "/static/boosters/icons/SampleExtricator.webp",
       price: 65,
     },
+    {
+      id: 16,
+      iconPath: "/static/boosters/icons/SampleScanner.webp",
+      price: 65,
+    },
   ] as Booster[];
 
   constructor() {
