@@ -245,6 +245,18 @@ export const armorKits: ArmorKit[] = [
   },
   {
     id: 21,
+    imagePath: "/static/armor/RE1861.webp",
+    typeIndex: 0,
+    devName: "RE-1861 Parade Commander",
+    obtainingMethodIndex: 17,
+    price: 100,
+    armorRating: 50,
+    speed: 550,
+    staminaRegen: 125,
+    bonus: armorBonuses.gunslinger,
+  },
+  {
+    id: 22,
     imagePath: "/static/armor/B01.webp",
     typeIndex: 1,
     devName: "B-01 Tactical",
@@ -256,7 +268,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.extraPadding,
   },
   {
-    id: 22,
+    id: 23,
     imagePath: "/static/armor/B22.webp",
     typeIndex: 1,
     devName: "B-22 Model Citizen",
@@ -268,7 +280,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.fortification,
   },
   {
-    id: 23,
+    id: 24,
     imagePath: "/static/armor/B24.webp",
     typeIndex: 1,
     devName: "B-24 Enforcer",
@@ -280,7 +292,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.fortification,
   },
   {
-    id: 24,
+    id: 25,
     imagePath: "/static/armor/DP00.webp",
     typeIndex: 1,
     devName: "DP-00 Tactical",
@@ -292,7 +304,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.democracyProtects,
   },
   {
-    id: 25,
+    id: 26,
     imagePath: "/static/armor/DP11.webp",
     typeIndex: 1,
     devName: "DP-11 Champion of the People",
@@ -304,7 +316,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.democracyProtects,
   },
   {
-    id: 26,
+    id: 27,
     imagePath: "/static/armor/DP40.webp",
     typeIndex: 1,
     devName: "DP-40 Hero of the Federation",
@@ -316,7 +328,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.democracyProtects,
   },
   {
-    id: 27,
+    id: 28,
     imagePath: "/static/armor/DP53.webp",
     typeIndex: 1,
     devName: "DP-53 Savior of the Free",
@@ -328,7 +340,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.democracyProtects,
   },
   {
-    id: 28,
+    id: 29,
     imagePath: "/static/armor/CW9.webp",
     typeIndex: 1,
     devName: "CW-9 White Wolf",
@@ -340,7 +352,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.extraPadding,
   },
   {
-    id: 29,
+    id: 30,
     imagePath: "/static/armor/CE27.webp",
     typeIndex: 1,
     devName: "CE-27 Ground Breaker",
@@ -352,7 +364,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.engineerKit,
   },
   {
-    id: 30,
+    id: 31,
     imagePath: "/static/armor/CE35.webp",
     typeIndex: 1,
     devName: "CE-35 Trench Engineer",
@@ -364,7 +376,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.engineerKit,
   },
   {
-    id: 31,
+    id: 32,
     imagePath: "/static/armor/CE81.webp",
     typeIndex: 1,
     devName: "CE-81 Juggernaut",
@@ -376,7 +388,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.engineerKit,
   },
   {
-    id: 32,
+    id: 33,
     imagePath: "/static/armor/SC15.webp",
     typeIndex: 1,
     devName: "SC-15 Drone Master",
@@ -388,7 +400,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.engineerKit,
   },
   {
-    id: 33,
+    id: 34,
     imagePath: "/static/armor/CM09.webp",
     typeIndex: 1,
     devName: "CM-09 Bonesnapper",
@@ -400,7 +412,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.medKit,
   },
   {
-    id: 34,
+    id: 35,
     imagePath: "/static/armor/CM10.webp",
     typeIndex: 1,
     devName: "CM-10 Clinician",
@@ -412,7 +424,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.medKit,
   },
   {
-    id: 35,
+    id: 36,
     imagePath: "/static/armor/CM14.webp",
     typeIndex: 1,
     devName: "CM-14 Physician",
@@ -424,7 +436,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.medKit,
   },
   {
-    id: 36,
+    id: 37,
     imagePath: "/static/armor/Tr7AmbassadorOfTheBrandImage.webp",
     typeIndex: 1,
     devName: "TR-7 Ambassador of the Brand",
@@ -436,7 +448,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.extraPadding,
   },
   {
-    id: 37,
+    id: 38,
     imagePath: "/static/armor/Tr9CavalierOfDemocracyImage.webp",
     typeIndex: 1,
     devName: "TR-9 Cavalier of Democracy",
@@ -448,7 +460,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.democracyProtects,
   },
   {
-    id: 38,
+    id: 39,
     imagePath: "/static/armor/TR40.webp",
     typeIndex: 1,
     devName: "TR-40 Gold Eagle",
@@ -460,7 +472,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.extraPadding,
   },
   {
-    id: 39,
+    id: 40,
     imagePath: "/static/armor/TR117.webp",
     typeIndex: 1,
     devName: "TR-117 Alpha Commander",
@@ -472,7 +484,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.medKit,
   },
   {
-    id: 40,
+    id: 41,
     imagePath: "/static/armor/SA04.webp",
     typeIndex: 1,
     devName: "SA-04 Combat Technician",
@@ -484,7 +496,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.scout,
   },
   {
-    id: 41,
+    id: 42,
     imagePath: "/static/armor/SA12.webp",
     typeIndex: 1,
     devName: "SA-12 Servo Assisted",
@@ -496,7 +508,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.servoAssisted,
   },
   {
-    id: 42,
+    id: 43,
     imagePath: "/static/armor/SA25.webp",
     typeIndex: 1,
     devName: "SA-25 Steel Trooper",
@@ -508,7 +520,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.servoAssisted,
   },
   {
-    id: 43,
+    id: 44,
     imagePath: "/static/armor/EX03.webp",
     typeIndex: 1,
     devName: "EX-03 Prototype 3",
@@ -520,7 +532,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.electricalCondult,
   },
   {
-    id: 44,
+    id: 45,
     imagePath: "/static/armor/EX16.webp",
     typeIndex: 1,
     devName: "EX-16 Prototype 16",
@@ -532,7 +544,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.electricalCondult,
   },
   {
-    id: 45,
+    id: 46,
     imagePath: "/static/armor/FS34.webp",
     typeIndex: 1,
     devName: "FS-34 Exterminator",
@@ -544,7 +556,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.fortification,
   },
   {
-    id: 46,
+    id: 47,
     imagePath: "/static/armor/PH56.webp",
     typeIndex: 1,
     devName: "PH-56 Jaguar",
@@ -556,7 +568,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.peakPhisique,
   },
   {
-    id: 47,
+    id: 48,
     imagePath: "/static/armor/I92.webp",
     typeIndex: 1,
     devName: "I-92 Fire Fighter",
@@ -568,7 +580,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.inflammable,
   },
   {
-    id: 48,
+    id: 49,
     imagePath: "/static/armor/I102.webp",
     typeIndex: 1,
     devName: "I-102 Draconaught",
@@ -580,7 +592,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.inflammable,
   },
   {
-    id: 49,
+    id: 50,
     imagePath: "/static/armor/AF02.webp",
     typeIndex: 1,
     devName: "AF-02 Haz-Master",
@@ -592,7 +604,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.advancedFiltration,
   },
   {
-    id: 50,
+    id: 51,
     imagePath: "/static/armor/AF91.webp",
     typeIndex: 1,
     devName: "AF-91 Field Chemist",
@@ -604,7 +616,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.advancedFiltration,
   },
   {
-    id: 51,
+    id: 52,
     imagePath: "/static/armor/UF50.webp",
     typeIndex: 1,
     devName: "UF-50 Bloodhound",
@@ -616,7 +628,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.unflinching,
   },
   {
-    id: 52,
+    id: 53,
     imagePath: "/static/armor/UF84.webp",
     typeIndex: 1,
     devName: "UF-84 Doubt Killer",
@@ -628,7 +640,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.unflinching,
   },
   {
-    id: 53,
+    id: 54,
     imagePath: "/static/armor/AC1.webp",
     typeIndex: 1,
     devName: "AC-1 Dutiful",
@@ -640,7 +652,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.acclimated,
   },
   {
-    id: 54,
+    id: 55,
     imagePath: "/static/armor/IE3.webp",
     typeIndex: 1,
     devName: "IE-3 Martyr",
@@ -652,7 +664,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.integratedExplosives,
   },
   {
-    id: 55,
+    id: 56,
     imagePath: "/static/armor/IE12.webp",
     typeIndex: 1,
     devName: "IE-12 Righteous",
@@ -664,7 +676,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.integratedExplosives,
   },
   {
-    id: 56,
+    id: 57,
     imagePath: "/static/armor/GS17.webp",
     typeIndex: 1,
     devName: "GS-17 Frontier Marshall",
@@ -676,7 +688,19 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.gunslinger,
   },
   {
-    id: 57,
+    id: 58,
+    imagePath: "/static/armor/RE2310.webp",
+    typeIndex: 1,
+    devName: "RE-2310 Honorary Guard",
+    obtainingMethodIndex: 18,
+    price: 75,
+    armorRating: 100,
+    speed: 500,
+    staminaRegen: 100,
+    bonus: armorBonuses.fortification,
+  },
+  {
+    id: 59,
     imagePath: "/static/armor/FS05.webp",
     typeIndex: 2,
     devName: "FS-05 Marksman",
@@ -688,7 +712,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.fortification,
   },
   {
-    id: 58,
+    id: 60,
     imagePath: "/static/armor/FS11.webp",
     typeIndex: 2,
     devName: "FS-11 Executioner",
@@ -700,7 +724,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.fortification,
   },
   {
-    id: 59,
+    id: 61,
     imagePath: "/static/armor/FS23.webp",
     typeIndex: 2,
     devName: "FS-23 Battle Master",
@@ -712,7 +736,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.fortification,
   },
   {
-    id: 60,
+    id: 62,
     imagePath: "/static/armor/FS55.webp",
     typeIndex: 2,
     devName: "FS-55 Devastator",
@@ -724,7 +748,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.fortification,
   },
   {
-    id: 61,
+    id: 63,
     imagePath: "/static/armor/FS61.webp",
     typeIndex: 2,
     devName: "FS-61 Dreadnought",
@@ -736,7 +760,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.servoAssisted,
   },
   {
-    id: 62,
+    id: 64,
     imagePath: "/static/armor/SA32.webp",
     typeIndex: 2,
     devName: "SA-32 Dynamo",
@@ -748,7 +772,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.servoAssisted,
   },
   {
-    id: 63,
+    id: 65,
     imagePath: "/static/armor/CW22.webp",
     typeIndex: 2,
     devName: "CW-22 Kodiak",
@@ -760,7 +784,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.fortification,
   },
   {
-    id: 64,
+    id: 66,
     imagePath: "/static/armor/CW36.webp",
     typeIndex: 2,
     devName: "CW-36 Winter Warrior",
@@ -772,7 +796,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.servoAssisted,
   },
   {
-    id: 65,
+    id: 67,
     imagePath: "/static/armor/Tr62KnightImage.webp",
     typeIndex: 2,
     devName: "TR-62 Knight",
@@ -784,7 +808,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.servoAssisted,
   },
   {
-    id: 66,
+    id: 68,
     imagePath: "/static/armor/B27.webp",
     typeIndex: 2,
     devName: "B-27 Fortified Commando",
@@ -796,7 +820,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.extraPadding,
   },
   {
-    id: 67,
+    id: 69,
     imagePath: "/static/armor/CE64.webp",
     typeIndex: 2,
     devName: "CE-64 Grenadier",
@@ -808,7 +832,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.engineerKit,
   },
   {
-    id: 68,
+    id: 70,
     imagePath: "/static/armor/CE101.webp",
     typeIndex: 2,
     devName: "CE-101 Guerilla Gorilla",
@@ -820,7 +844,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.engineerKit,
   },
   {
-    id: 69,
+    id: 71,
     imagePath: "/static/armor/CM17.webp",
     typeIndex: 2,
     devName: "CM-17 Butcher",
@@ -832,7 +856,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.medKit,
   },
   {
-    id: 70,
+    id: 72,
     imagePath: "/static/armor/PH202.webp",
     typeIndex: 2,
     devName: "PH-202 Twigsnapper",
@@ -844,7 +868,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.peakPhisique,
   },
   {
-    id: 71,
+    id: 73,
     imagePath: "/static/armor/I44.webp",
     typeIndex: 2,
     devName: "I-44 Salamander",
@@ -856,7 +880,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.inflammable,
   },
   {
-    id: 72,
+    id: 74,
     imagePath: "/static/armor/AF52.webp",
     typeIndex: 2,
     devName: "AF-52 Lockdown",
@@ -868,7 +892,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.inflammable,
   },
   {
-    id: 73,
+    id: 75,
     imagePath: "/static/armor/SR18.webp",
     typeIndex: 2,
     devName: "SR-18 Roadblock",
@@ -880,7 +904,7 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.siegeReady,
   },
   {
-    id: 74,
+    id: 76,
     imagePath: "/static/armor/SR64.webp",
     typeIndex: 2,
     devName: "SR-64 Cinderblock",
@@ -892,12 +916,24 @@ export const armorKits: ArmorKit[] = [
     bonus: armorBonuses.siegeReady,
   },
   {
-    id: 75,
+    id: 77,
     imagePath: "/static/armor/GS66.webp",
     typeIndex: 2,
     devName: "GS-66 Lawmaker",
     obtainingMethodIndex: 17,
     price: 375,
+    armorRating: 150,
+    speed: 450,
+    staminaRegen: 50,
+    bonus: armorBonuses.gunslinger,
+  },
+  {
+    id: 78,
+    imagePath: "/static/armor/RE854.webp",
+    typeIndex: 2,
+    devName: "RE-824 Bearer of the Standart",
+    obtainingMethodIndex: 18,
+    price: 600,
     armorRating: 150,
     speed: 450,
     staminaRegen: 50,
