@@ -88,6 +88,18 @@ export const weapons = [
   },
   {
     id: 8,
+    imagePath: "/static/Weaponry/primary/R2.webp",
+    weaponType: weaponTypes.primary,
+    typeIndex: 1,
+    devName: "R-2 Amendment",
+    price: 0,
+    damage: 200,
+    roundsPerMag: 20,
+    recoil: 29,
+    fireRate: 480,
+  },
+  {
+    id: 9,
     imagePath: "/static/Weaponry/primary/R2124.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -99,7 +111,7 @@ export const weapons = [
     fireRate: 60,
   },
   {
-    id: 9,
+    id: 10,
     imagePath: "/static/Weaponry/primary/R63.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -111,7 +123,7 @@ export const weapons = [
     fireRate: 350,
   },
   {
-    id: 10,
+    id: 11,
     imagePath: "/static/Weaponry/primary/R63CS.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -123,7 +135,7 @@ export const weapons = [
     fireRate: 350,
   },
   {
-    id: 11,
+    id: 12,
     imagePath: "/static/Weaponry/primary/R6.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -135,7 +147,7 @@ export const weapons = [
     fireRate: 100,
   },
   {
-    id: 12,
+    id: 13,
     imagePath: "/static/Weaponry/primary/PLAS39.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -147,7 +159,7 @@ export const weapons = [
     fireRate: 550,
   },
   {
-    id: 13,
+    id: 14,
     imagePath: "/static/Weaponry/primary/SMG32.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -159,7 +171,7 @@ export const weapons = [
     fireRate: 490,
   },
   {
-    id: 14,
+    id: 15,
     imagePath: "/static/Weaponry/primary/SMG37.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -171,7 +183,7 @@ export const weapons = [
     fireRate: 520,
   },
   {
-    id: 15,
+    id: 16,
     imagePath: "/static/Weaponry/primary/SMG72.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -183,7 +195,7 @@ export const weapons = [
     fireRate: 475,
   },
   {
-    id: 16,
+    id: 17,
     imagePath: "/static/Weaponry/primary/STA11.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -195,7 +207,7 @@ export const weapons = [
     fireRate: 1050,
   },
   {
-    id: 17,
+    id: 18,
     imagePath: "/static/Weaponry/primary/MP98.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -207,7 +219,7 @@ export const weapons = [
     fireRate: 1380,
   },
   {
-    id: 18,
+    id: 19,
     imagePath: "/static/Weaponry/primary/SG8.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -219,7 +231,7 @@ export const weapons = [
     fireRate: 80,
   },
   {
-    id: 19,
+    id: 20,
     imagePath: "/static/Weaponry/primary/SG8S.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -231,7 +243,7 @@ export const weapons = [
     fireRate: 80,
   },
   {
-    id: 20,
+    id: 21,
     imagePath: "/static/Weaponry/primary/SG451.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -243,7 +255,7 @@ export const weapons = [
     fireRate: 80,
   },
   {
-    id: 21,
+    id: 22,
     imagePath: "/static/Weaponry/primary/SG20.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -255,7 +267,7 @@ export const weapons = [
     fireRate: 80,
   },
   {
-    id: 22,
+    id: 23,
     imagePath: "/static/Weaponry/primary/SG225.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -267,7 +279,7 @@ export const weapons = [
     fireRate: 300,
   },
   {
-    id: 23,
+    id: 24,
     imagePath: "/static/Weaponry/primary/SG225IE.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -279,7 +291,7 @@ export const weapons = [
     fireRate: 300,
   },
   {
-    id: 24,
+    id: 25,
     imagePath: "/static/Weaponry/primary/SG225SP.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -291,7 +303,7 @@ export const weapons = [
     fireRate: 330,
   },
   {
-    id: 25,
+    id: 26,
     imagePath: "/static/Weaponry/primary/CB9.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -303,7 +315,7 @@ export const weapons = [
     fireRate: 50,
   },
   {
-    id: 26,
+    id: 27,
     imagePath: "/static/Weaponry/primary/R36.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -315,7 +327,7 @@ export const weapons = [
     fireRate: 25,
   },
   {
-    id: 27,
+    id: 28,
     imagePath: "/static/Weaponry/primary/LAS5.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -326,7 +338,7 @@ export const weapons = [
     recoil: 0,
   },
   {
-    id: 28,
+    id: 29,
     imagePath: "/static/Weaponry/primary/LAS16.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -338,7 +350,7 @@ export const weapons = [
     fireRate: 750,
   },
   {
-    id: 29,
+    id: 30,
     imagePath: "/static/Weaponry/primary/LAS17.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -350,7 +362,7 @@ export const weapons = [
     fireRate: 700,
   },
   {
-    id: 30,
+    id: 31,
     imagePath: "/static/Weaponry/primary/PLAS1.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -362,7 +374,7 @@ export const weapons = [
     fireRate: 350,
   },
   {
-    id: 31,
+    id: 32,
     imagePath: "/static/Weaponry/primary/PLAS101.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -374,7 +386,7 @@ export const weapons = [
     fireRate: 1000,
   },
   {
-    id: 32,
+    id: 33,
     imagePath: "/static/Weaponry/primary/SG8P.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -386,7 +398,7 @@ export const weapons = [
     fireRate: 80,
   },
   {
-    id: 33,
+    id: 34,
     imagePath: "/static/Weaponry/primary/ARC12.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -398,7 +410,7 @@ export const weapons = [
     fireRate: 45,
   },
   {
-    id: 34,
+    id: 35,
     imagePath: "/static/Weaponry/primary/JAR5.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -410,7 +422,7 @@ export const weapons = [
     fireRate: 250,
   },
   {
-    id: 35,
+    id: 36,
     imagePath: "/static/Weaponry/primary/FLAM66.webp",
     weaponType: weaponTypes.primary,
     typeIndex: 1,
@@ -421,7 +433,7 @@ export const weapons = [
     recoil: 2,
   },
   {
-    id: 36,
+    id: 37,
     imagePath: "/static/Weaponry/secondary/P2.webp",
     weaponType: weaponTypes.secondary,
     typeIndex: 2,
@@ -433,7 +445,7 @@ export const weapons = [
     fireRate: 900,
   },
   {
-    id: 37,
+    id: 38,
     imagePath: "/static/Weaponry/secondary/P4.webp",
     weaponType: weaponTypes.secondary,
     typeIndex: 2,
@@ -445,7 +457,7 @@ export const weapons = [
     fireRate: 200,
   },
   {
-    id: 38,
+    id: 39,
     imagePath: "/static/Weaponry/secondary/P11.webp",
     weaponType: weaponTypes.secondary,
     typeIndex: 2,
@@ -457,7 +469,7 @@ export const weapons = [
     fireRate: 70,
   },
   {
-    id: 39,
+    id: 40,
     imagePath: "/static/Weaponry/secondary/P19.webp",
     weaponType: weaponTypes.secondary,
     typeIndex: 2,
@@ -469,7 +481,7 @@ export const weapons = [
     fireRate: 1100,
   },
   {
-    id: 40,
+    id: 41,
     imagePath: "/static/Weaponry/secondary/P72.webp",
     weaponType: weaponTypes.secondary,
     typeIndex: 2,
@@ -480,7 +492,7 @@ export const weapons = [
     recoil: 2,
   },
   {
-    id: 41,
+    id: 42,
     imagePath: "/static/Weaponry/secondary/P113.webp",
     weaponType: weaponTypes.secondary,
     typeIndex: 2,
@@ -492,7 +504,7 @@ export const weapons = [
     fireRate: 450,
   },
   {
-    id: 42,
+    id: 43,
     imagePath: "/static/Weaponry/secondary/GP31.webp",
     weaponType: weaponTypes.secondary,
     typeIndex: 2,
@@ -504,7 +516,7 @@ export const weapons = [
     fireRate: 900,
   },
   {
-    id: 43,
+    id: 44,
     imagePath: "/static/Weaponry/secondary/GP31U.webp",
     weaponType: weaponTypes.secondary,
     typeIndex: 2,
@@ -516,7 +528,7 @@ export const weapons = [
     fireRate: 900,
   },
   {
-    id: 44,
+    id: 45,
     imagePath: "/static/Weaponry/secondary/SG22.webp",
     weaponType: weaponTypes.secondary,
     typeIndex: 2,
@@ -528,7 +540,7 @@ export const weapons = [
     fireRate: 650,
   },
   {
-    id: 45,
+    id: 46,
     imagePath: "/static/Weaponry/secondary/LAS7.webp",
     weaponType: weaponTypes.secondary,
     typeIndex: 2,
@@ -539,7 +551,7 @@ export const weapons = [
     recoil: 0,
   },
   {
-    id: 46,
+    id: 47,
     imagePath: "/static/Weaponry/secondary/LAS58.webp",
     weaponType: weaponTypes.secondary,
     typeIndex: 2,
@@ -551,7 +563,7 @@ export const weapons = [
     fireRate: 750,
   },
   {
-    id: 47,
+    id: 48,
     imagePath: "/static/Weaponry/secondary/PLAS15.webp",
     weaponType: weaponTypes.secondary,
     typeIndex: 2,
@@ -563,7 +575,16 @@ export const weapons = [
     fireRate: 1000,
   },
   {
-    id: 48,
+    id: 49,
+    imagePath: "/static/Weaponry/secondary/CQC2.webp",
+    weaponType: weaponTypes.secondary,
+    typeIndex: 2,
+    devName: "CQC-2 Saber",
+    price: 40,
+    recoil: 6,
+  },
+  {
+    id: 50,
     imagePath: "/static/Weaponry/secondary/CQC5.webp",
     weaponType: weaponTypes.secondary,
     typeIndex: 2,
@@ -572,7 +593,7 @@ export const weapons = [
     recoil: 8,
   },
   {
-    id: 49,
+    id: 51,
     imagePath: "/static/Weaponry/secondary/CQC19.webp",
     weaponType: weaponTypes.secondary,
     typeIndex: 2,
@@ -581,7 +602,7 @@ export const weapons = [
     recoil: 8,
   },
   {
-    id: 50,
+    id: 52,
     imagePath: "/static/Weaponry/secondary/CQC30.webp",
     weaponType: weaponTypes.secondary,
     typeIndex: 2,
@@ -590,7 +611,7 @@ export const weapons = [
     recoil: 8,
   },
   {
-    id: 51,
+    id: 53,
     imagePath: "/static/Weaponry/grenades/G3.webp",
     weaponType: weaponTypes.grenade,
     typeIndex: 3,
@@ -600,7 +621,7 @@ export const weapons = [
     radius: 5,
   },
   {
-    id: 52,
+    id: 54,
     imagePath: "/static/Weaponry/grenades/G4.webp",
     weaponType: weaponTypes.grenade,
     typeIndex: 3,
@@ -612,7 +633,7 @@ export const weapons = [
     radius: 7,
   },
   {
-    id: 53,
+    id: 55,
     imagePath: "/static/Weaponry/grenades/G6.webp",
     weaponType: weaponTypes.grenade,
     typeIndex: 3,
@@ -624,7 +645,7 @@ export const weapons = [
     radius: 10,
   },
   {
-    id: 54,
+    id: 56,
     imagePath: "/static/Weaponry/grenades/G10.webp",
     weaponType: weaponTypes.grenade,
     typeIndex: 3,
@@ -636,7 +657,7 @@ export const weapons = [
     radius: 7,
   },
   {
-    id: 55,
+    id: 57,
     imagePath: "/static/Weaponry/grenades/G12.webp",
     weaponType: weaponTypes.grenade,
     typeIndex: 3,
@@ -648,7 +669,7 @@ export const weapons = [
     radius: 7,
   },
   {
-    id: 56,
+    id: 58,
     imagePath: "/static/Weaponry/grenades/G13.webp",
     weaponType: weaponTypes.grenade,
     typeIndex: 3,
@@ -659,7 +680,7 @@ export const weapons = [
     radius: 7,
   },
   {
-    id: 57,
+    id: 59,
     imagePath: "/static/Weaponry/grenades/G16.webp",
     weaponType: weaponTypes.grenade,
     typeIndex: 3,
@@ -670,7 +691,7 @@ export const weapons = [
     radius: 7,
   },
   {
-    id: 58,
+    id: 60,
     imagePath: "/static/Weaponry/grenades/G23.webp",
     weaponType: weaponTypes.grenade,
     typeIndex: 3,
@@ -681,7 +702,7 @@ export const weapons = [
     radius: 10,
   },
   {
-    id: 59,
+    id: 61,
     imagePath: "/static/Weaponry/grenades/G50.webp",
     weaponType: weaponTypes.grenade,
     typeIndex: 3,
@@ -692,7 +713,7 @@ export const weapons = [
     radius: 7,
   },
   {
-    id: 60,
+    id: 62,
     imagePath: "/static/Weaponry/grenades/G123.webp",
     weaponType: weaponTypes.grenade,
     typeIndex: 3,
@@ -703,7 +724,18 @@ export const weapons = [
     radius: 3,
   },
   {
-    id: 61,
+    id: 63,
+    imagePath: "/static/Weaponry/grenades/G124.webp",
+    weaponType: weaponTypes.grenade,
+    typeIndex: 3,
+    devName: "G-124 Pyrotech",
+    price: 65,
+    damage: 50,
+    penetration: 3,
+    radius: 5,
+  },
+  {
+    id: 64,
     imagePath: "/static/Weaponry/grenades/K2.webp",
     weaponType: weaponTypes.grenade,
     typeIndex: 3,
