@@ -1,0 +1,11 @@
+.adminPages {
+    @apply grid grid-cols-4 gap-x-[30px] gap-y-[20px] w-full h-auto;
+}
+
+.adminPages-link {
+    @apply p-[20px] border-2 border-white rounded-[20px] text-[1.75rem] text-theme text-center font-primary font-medium duration-300 ease-in-out;
+}
+
+.adminPages-link:hover {
+    @apply border-theme brightness-110;
+}

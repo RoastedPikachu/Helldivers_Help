@@ -13,3 +13,16 @@ model User {
   password String
   name     String?
 }
+
+model Achievement {
+  id                      Int     @id @default(autoincrement())
+  iconPath                String
+  type                    String
+  isCompleted             Boolean
+  ruTitle                 String
+  enTitle                 String
+  ruDescription           String
+  enDescription           String
+  ruAccomplishmentWay     String
+  enAccomplishmentWay     String
+}
