@@ -50,6 +50,10 @@ const TheAchievementsContent = () => {
                   key={achievement.id}
                   id={achievement.id}
                   iconPath={achievement.iconPath}
+                  ruTitle={achievement.ruTitle}
+                  enTitle={achievement.enTitle}
+                  ruDescription={achievement.ruDescription}
+                  enDescription={achievement.enDescription}
                 />
               ))
           : achievementsStore.achievements

@@ -26,3 +26,13 @@ model Achievement {
   ruAccomplishmentWay     String
   enAccomplishmentWay     String
 }
+
+model Booster {
+  id              Int     @id @default(autoincrement())
+  iconPath        String
+  price           Int
+  ruTitle         String
+  enTitle         String
+  ruDescription   String
+  enDescription   String
+}
