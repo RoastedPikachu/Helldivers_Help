@@ -6,45 +6,37 @@ import axios from "axios";
 import ThePageContent from "@/widgets/pageContents/ThePageContent";
 
 const Page = () => {
-  const [iconPath, setIconPath] = useState("");
+  const [image, setImage] = useState("");
   const [price, setPrice] = useState("");
   const [ruTitle, setRuTitle] = useState("");
   const [enTitle, setEnTitle] = useState("");
-  const [ruDescription, setRuDescription] = useState("");
-  const [enDescription, setEnDescription] = useState("");
 
-  const addBooster = () => {
+  const addPlayerCard = () => {
     const emptyFields: string[] = [];
 
-    if (!iconPath.trim()) emptyFields.push("iconPath");
+    if (!image.trim()) emptyFields.push("image");
     if (!price.trim()) emptyFields.push("price");
     if (!ruTitle.trim()) emptyFields.push("ruTitle");
     if (!enTitle.trim()) emptyFields.push("enTitle");
-    if (!ruDescription.trim()) emptyFields.push("ruDescription");
-    if (!enDescription.trim()) emptyFields.push("enDescription");
 
     if (emptyFields.length > 0) {
       alert(
         `Следующие поля обязательны для заполнения:\n${emptyFields.join("\n")}`,
       );
     } else {
-      const response = axios.post("/api/admin/boosters", {
-        iconPath,
+      const response = axios.post("/api/admin/playercards", {
+        image,
         price: Number(price),
         ruTitle,
         enTitle,
-        ruDescription,
-        enDescription,
       });
 
       console.debug(response);
 
-      setIconPath("");
+      setImage("");
       setPrice("");
       setRuTitle("");
       setEnTitle("");
-      setRuDescription("");
-      setEnDescription("");
     }
   };
   return (
@@ -53,9 +45,9 @@ const Page = () => {
         <form className="grid justify-items-center grid-rows-7 gap-y-[20px]">
           <input
             type="text"
-            placeholder="Введите ссылку на иконку"
-            onChange={(e) => setIconPath(e.target.value)}
-            value={iconPath}
+            placeholder="Введите ссылку на изображение карточки"
+            onChange={(e) => setImage(e.target.value)}
+            value={image}
             className="p-[10px] w-[800px] outline-none"
           />
 
@@ -83,25 +75,9 @@ const Page = () => {
             className="p-[10px] w-[800px] outline-none"
           />
 
-          <input
-            type="text"
-            placeholder="Введите Ru описание"
-            onChange={(e) => setRuDescription(e.target.value)}
-            value={ruDescription}
-            className="p-[10px] w-[800px] outline-none"
-          />
-
-          <input
-            type="text"
-            placeholder="Введите En описание"
-            onChange={(e) => setEnDescription(e.target.value)}
-            value={enDescription}
-            className="p-[10px] w-[800px] outline-none"
-          />
-
           <button
             type="button"
-            onClick={() => addBooster()}
+            onClick={() => addPlayerCard()}
             className="flex justify-center items-center w-[200px] h-[50px] bg-transparent border-2 border-theme rounded-[10px] text-theme"
           >
             Добавить

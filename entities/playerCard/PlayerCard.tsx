@@ -1,7 +1,9 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { useTranslations } from "next-intl";
+
+import { localeStore } from "@/store/LocaleStore";
 
 import { getIntlArray } from "@/utils/generalFunctions";
 
@@ -11,11 +13,29 @@ interface PlayerCardProps {
   id: number;
   image: string;
   price: number;
+  ruTitle: string;
+  enTitle: string;
 }
 
-const PlayerCard: React.FC<PlayerCardProps> = ({ id, image, price }) => {
+const PlayerCard: React.FC<PlayerCardProps> = ({
+  id,
+  image,
+  price,
+  ruTitle,
+  enTitle,
+}) => {
   const t = useTranslations("PlayerCards");
 
+  const [title, setTitle] = useState("");
+
+  useEffect(() => {
+    console.log(localeStore.locale);
+    if (localeStore.locale === "ru") {
+      setTitle(ruTitle as string);
+    } else {
+      setTitle(enTitle as string);
+    }
+  }, []);
   return (
     <div className="playerCard">
       <div className="playerCard-imageContainer">
@@ -42,7 +62,7 @@ const PlayerCard: React.FC<PlayerCardProps> = ({ id, image, price }) => {
         )}
       </div>
 
-      <p className="playerCard-title">{getIntlArray(t("data"))[id - 1]}</p>
+      <p className="playerCard-title">{title}</p>
     </div>
   );
 };

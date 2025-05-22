@@ -36,3 +36,11 @@ model Booster {
   ruDescription   String
   enDescription   String
 }
+
+model PlayerCard {
+  id        Int     @id @default(autoincrement())
+  image     String
+  price     Int
+  ruTitle   String
+  enTitle   String
+}

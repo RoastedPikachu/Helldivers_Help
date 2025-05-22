@@ -203,4 +203,34 @@ export const playerCards = [
     image: "/static/playerCards/SuperStore3.webp",
     price: 35,
   },
+  {
+    id: 41,
+    image: "/static/playerCards/BorderlineJustice1.webp",
+    price: 2,
+  },
+  {
+    id: 42,
+    image: "/static/playerCards/BorderlineJustice2.webp",
+    price: 7,
+  },
+  {
+    id: 43,
+    image: "/static/playerCards/SuperStore4.webp",
+    price: 40,
+  },
+  {
+    id: 44,
+    image: "/static/playerCards/MastersOfCeremony1.webp",
+    price: 2,
+  },
+  {
+    id: 45,
+    image: "/static/playerCards/MastersOfCeremony2.webp",
+    price: 2,
+  },
+  {
+    id: 46,
+    image: "/static/playerCards/SuperStore5.webp",
+    price: 75,
+  },
 ] as PlayerCard[];
