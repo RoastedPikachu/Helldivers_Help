@@ -37,7 +37,6 @@ const CampaignsSection = () => {
     axios
       .get("https://helldiverstrainingmanual.com/api/v1/war/campaign")
       .then((response) => {
-        console.log(response);
         changeActiveCampaignsReceiveErrorStatus(false);
         changeActiveCampaignsLoadStatus(true);
 
