@@ -1,0 +1,39 @@
+.banner {
+    @apply relative mb-[40px] mlarge:mb-[30px] mmedium:mb-[20px] py-[20px] mlarge:py-[10px] px-[30px] mlarge:px-[15px] w-full h-[400px] mlarge:h-[300px] mmedium:h-[250px] msmall:h-[200px] bg-[url('/static/MainPageBanner.webp')] mlarge:bg-[url('/static/MainPageBanner.webp')] bg-no-repeat bg-cover border-2 border-theme rounded-[10px];
+}
+
+.banner-title {
+    @apply text-white text-[3rem] mlarge:text-[2rem] mmedium:text-[1.75rem] msmall:text-[1.5rem] font-secondary font-bold brightness-125;
+}
+
+.banner-title-bold {
+    @apply text-theme font-bold;
+}
+
+.banner-description {
+    @apply w-[35%] mlarge:w-[80%] mmedium:w-[90%] text-white text-[2rem] mlarge:text-[1.25rem] mmedium:text-[1.125rem] msmall:text-[1rem] font-['Exo2'] font-semibold brightness-125;
+}
+
+.pagesSection {
+    @apply relative grid grid-cols-5 mlarge:grid-cols-2 gap-y-[30px] mlarge:gap-y-[20px] gap-x-[30px] mlarge:gap-x-[20px] mt-[50px] mlarge:mt-[30px] w-full h-auto z-[20];
+}
+
+.reccomendationsSection {
+    @apply relative grid justify-items-start mt-[60px] w-full h-auto z-20;
+}
+
+.reccomendationsSection-title {
+    @apply relative text-theme text-[2.75rem] mlarge:text-[1.75rem] mmedium:text-[1.625rem] msmall:text-[1.5rem] font-primary font-bold;
+}
+
+.reccomendationsSection-banner {
+    @apply mt-[30px] w-[33%] h-auto;
+}
+
+.reccomendationsSection-banner > img {
+    @apply bg-cover rounded-[15px] duration-300 ease-in-out;
+}
+
+.reccomendationsSection-banner > img:hover {
+    @apply brightness-110;
+}

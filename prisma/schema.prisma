@@ -44,3 +44,33 @@ model PlayerCard {
   ruTitle   String
   enTitle   String
 }
+
+model Stratagem {
+  id                Int        @id @default(autoincrement())
+  iconPath          String
+  videoPath         String
+  videoPreviewPath  String
+  type              String
+  price             Int
+  obtainingLevel    Int
+  callTime          Int
+  useCount          Int
+  reloadTime        Int
+  keyCodes          KeyCode[]
+  directions        Direction[]
+}
+
+model KeyCode {
+  id          Int       @id @default(autoincrement())
+  code        Int
+  stratagem   Stratagem @relation(fields: [stratagemId], references: [id])
+  stratagemId Int
+}
+
+model Direction {
+  id          Int      @id @default(autoincrement())
+  orientation Int
+  isPressed   Boolean  @default(false)
+  stratagem   Stratagem @relation(fields: [stratagemId], references: [id])
+  stratagemId Int
+}

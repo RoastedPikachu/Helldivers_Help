@@ -108,9 +108,23 @@ export const armorBonuses: { [key: string]: ArmorBonus } = {
   },
   gunslinger: {
     id: 16,
-    icon: "/static/armorBonuses/IntegratedExplosives.svg",
+    icon: "/static/armorBonuses/Gunslinger.svg",
     name: "Стрелок",
     description:
       "Ускоряет перезарядку оружия на 40%. Скорость, с которой доп. оружие извлекается или убирается в кобуру, увеличена на 50%. Отдача доп. оружия уменьшена на 70%.",
+  },
+  reinforcedEpaulletes: {
+    id: 17,
+    icon: "/static/armorBonuses/ReinforcedEpaulletes.svg",
+    name: "Армированные эполеты",
+    description:
+      "Повышает скорость перезарядки основного оружия на 30%. С вероятность 50% владелец сможет избежать серьезных травм конечностей. Увеличивает урон в ближнем бою на 50%.",
+  },
+  ballisticPadding: {
+    id: 18,
+    icon: "/static/armorBonuses/BallisticPadding.svg",
+    name: "Баллистическая подкладка",
+    description:
+      "Обеспечивает 25% ед. сопротивления урону в грудь. Дает 25% сопротивления урону от взрыва. Предотвращает урон от кровотечения при кровотечении из груди.",
   },
 };

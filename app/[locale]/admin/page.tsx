@@ -6,7 +6,8 @@ import TheAdminContent from "@/widgets/pageContents/adminContent/TheAdminContent
 const Page = () => {
   return (
     <ThePageContent>
-      <TheAdminContent />
+      {/*<TheAdminContent />*/}
+      <div></div>
     </ThePageContent>
   );
 };
